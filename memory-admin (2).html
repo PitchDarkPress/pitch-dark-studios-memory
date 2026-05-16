@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pitch Dark Studios — Memory</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap');
+
+  :root {
+    --bg: #0a0806;
+    --ink: #e8e0d0;
+    --gold: #c9923a;
+    --gold-dim: #7a5520;
+    --dark: #111009;
+    --panel: #13110d;
+    --border: #2a2419;
+    --success: #4a7a4a;
+    --danger: #7a3a3a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark);
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  header .tagline {
+    font-size: 0.65rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  #token-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  #token-bar input {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    padding: 6px 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.85rem;
+    width: 220px;
+    letter-spacing: 0.05em;
+  }
+
+  #token-bar input:focus { outline: 1px solid var(--gold-dim); }
+
+  button {
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.15s;
+  }
+
+  button:hover { background: var(--gold-dim); color: var(--ink); }
+  button.primary { border-color: var(--gold); }
+  button.primary:hover { background: var(--gold); color: var(--bg); }
+  button.danger { border-color: var(--danger); color: #c87070; }
+  button.danger:hover { background: var(--danger); color: var(--ink); }
+
+  .main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: calc(100vh - 65px);
+  }
+
+  /* SIDEBAR */
+  #sidebar {
+    width: 280px;
+    min-width: 280px;
+    border-right: 1px solid var(--border);
+    background: var(--dark);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sidebar-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #sidebar-header span {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+
+  #tree { flex: 1; padding: 8px 0; }
+
+  .tree-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--ink);
+    opacity: 0.7;
+    transition: all 0.1s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tree-item:hover { opacity: 1; background: rgba(201,146,58,0.05); }
+  .tree-item.active { opacity: 1; color: var(--gold); background: rgba(201,146,58,0.08); }
+  .tree-item.folder { opacity: 1; color: var(--gold-dim); font-weight: 700; margin-top: 6px; }
+  .tree-item.folder:hover { color: var(--gold); }
+  .tree-item.file { padding-left: 28px; }
+  .tree-item.file.depth-2 { padding-left: 44px; }
+  .tree-item .icon { font-size: 0.65rem; flex-shrink: 0; }
+
+  /* EDITOR PANEL */
+  #editor-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #file-path-bar {
+    padding: 10px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.7rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+    background: var(--panel);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+  }
+
+  #file-path-bar .actions { display: flex; gap: 8px; }
+
+  #editor {
+    flex: 1;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 28px 32px;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+  }
+
+  #editor::placeholder { color: var(--gold-dim); opacity: 0.5; }
+
+  /* STATUS BAR */
+  #status-bar {
+    border-top: 1px solid var(--border);
+    padding: 8px 24px;
+    font-size: 0.68rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+    background: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #status-msg { transition: all 0.3s; }
+  #status-msg.ok { color: #6aaa6a; }
+  #status-msg.err { color: #c87070; }
+  #status-msg.busy { color: var(--gold); }
+
+  /* SESSION PANEL */
+  #session-panel {
+    width: 300px;
+    min-width: 300px;
+    border-left: 1px solid var(--border);
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #session-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #session-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .session-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 4px;
+  }
+
+  #division-select {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9rem;
+    padding: 7px 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #division-select:focus { outline: 1px solid var(--gold-dim); }
+
+  #session-note {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 10px;
+    resize: none;
+    height: 200px;
+    outline: none;
+    width: 100%;
+  }
+
+  #session-note:focus { border-color: var(--gold-dim); }
+
+  .session-actions { display: flex; flex-direction: column; gap: 8px; }
+
+  /* NEW FILE */
+  #new-file-bar {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 6px;
+  }
+
+  #new-file-bar input {
+    flex: 1;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.72rem;
+    padding: 6px 8px;
+    outline: none;
+  }
+
+  #new-file-bar input:focus { border-color: var(--gold-dim); }
+
+  /* EMPTY STATE */
+  #empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0.3;
+    padding: 40px;
+    text-align: center;
+  }
+
+  #empty-state .big { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); }
+  #empty-state p { font-size: 0.75rem; line-height: 1.8; letter-spacing: 0.05em; }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold-dim); }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Pitch Dark Studios — Memory</h1>
+    <div class="tagline">Publish and Be Damned</div>
+  </div>
+  <div id="token-bar">
+    <input type="password" id="token-input" placeholder="GitHub token..." />
+    <button class="primary" onclick="saveToken()">Connect</button>
+    <button onclick="loadTree()">Refresh</button>
+  </div>
+</header>
+
+<div class="main">
+
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <div id="sidebar-header">
+      <span>Repository</span>
+      <button onclick="loadTree()" style="padding:3px 8px;font-size:0.6rem;">↻</button>
+    </div>
+    <div id="tree">
+      <div class="tree-item" style="opacity:0.3;font-size:0.72rem;padding:20px 16px;">Connect to load files</div>
+    </div>
+    <div id="new-file-bar">
+      <input type="text" id="new-file-path" placeholder="path/to/new-file.md" />
+      <button onclick="newFile()">+ New</button>
+    </div>
+  </div>
+
+  <!-- EDITOR -->
+  <div id="editor-panel">
+    <div id="file-path-bar">
+      <span id="current-path">No file selected</span>
+      <div class="actions">
+        <button class="primary" onclick="saveFile()">Save to GitHub</button>
+        <button onclick="copyForClaude()">Copy for Claude</button>
+      </div>
+    </div>
+    <div id="empty-state">
+      <div class="big">◈</div>
+      <p>Select a file from the repository<br>to view or edit its contents.</p>
+    </div>
+    <textarea id="editor" class="hidden" placeholder="File contents will appear here..."></textarea>
+    <div id="status-bar">
+      <span id="status-msg">Ready</span>
+      <span id="char-count"></span>
+    </div>
+  </div>
+
+  <!-- SESSION PANEL -->
+  <div id="session-panel">
+    <div id="session-header">
+      <span>Session Notes</span>
+      <span id="today-date"></span>
+    </div>
+    <div id="session-content">
+      <div>
+        <div class="session-label">Division</div>
+        <select id="division-select">
+          <option value="core">Core</option>
+          <option value="the-room">The Room</option>
+          <option value="proauthorist">Proauthorist</option>
+          <option value="pitch-dark-press">Pitch Dark Press</option>
+          <option value="inkyswot">InkySwot</option>
+          <option value="pitch-dark-publishing">Pitch Dark Publishing</option>
+          <option value="pitch-dark-broadcasting">Pitch Dark Broadcasting</option>
+          <option value="rd">R&D</option>
+        </select>
+      </div>
+      <div>
+        <div class="session-label">Session Note</div>
+        <textarea id="session-note" placeholder="Paste the session note Claude wrote here, then save it to GitHub..."></textarea>
+      </div>
+      <div class="session-actions">
+        <button class="primary" onclick="saveSessionNote()">Save Session Note</button>
+        <button onclick="loadLatestSession()">Load Latest Session</button>
+      </div>
+      <div>
+        <div class="session-label">Quick Load for Claude</div>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px;">
+          <button onclick="quickLoad('current-state')">Load Current State</button>
+          <button onclick="quickLoad('future')">Load Future</button>
+          <button onclick="quickLoad('locked-decisions')">Load Locked Decisions</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const REPO = 'PitchDarkPress/pitch-dark-studios-memory';
+const API = 'https://api.github.com';
+let currentFile = null;
+let currentSha = null;
+
+// ── TOKEN ──────────────────────────────────────────────
+function getToken() {
+  return localStorage.getItem('pdp_lip_token') || localStorage.getItem('pds_memory_token') || '';
+}
+
+function saveToken() {
+  const t = document.getElementById('token-input').value.trim();
+  if (t) {
+    localStorage.setItem('pds_memory_token', t);
+    localStorage.setItem('pdp_lip_token', t);
+    setStatus('Token saved', 'ok');
+    loadTree();
+  }
+}
+
+function headers() {
+  return {
+    'Authorization': `token ${getToken()}`,
+    'Accept': 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json'
+  };
+}
+
+// ── DATE ──────────────────────────────────────────────
+function todayStr() {
+  return new Date().toISOString().split('T')[0];
+}
+
+document.getElementById('today-date').textContent = todayStr();
+
+// ── STATUS ────────────────────────────────────────────
+function setStatus(msg, type = '') {
+  const el = document.getElementById('status-msg');
+  el.textContent = msg;
+  el.className = type;
+}
+
+// ── TREE ──────────────────────────────────────────────
+async function loadTree() {
+  setStatus('Loading repository...', 'busy');
+  try {
+    const data = await apiGet(`/repos/${REPO}/git/trees/main?recursive=1`);
+    renderTree(data.tree);
+    setStatus('Repository loaded', 'ok');
+  } catch(e) {
+    setStatus('Failed to load — check token', 'err');
+  }
+}
+
+function renderTree(items) {
+  const tree = document.getElementById('tree');
+  tree.innerHTML = '';
+
+  // Group by top-level folder
+  const structure = {};
+  items.forEach(item => {
+    if (item.type === 'blob' && item.path.endsWith('.md')) {
+      const parts = item.path.split('/');
+      const top = parts.length === 1 ? '__root__' : parts[0];
+      if (!structure[top]) structure[top] = [];
+      structure[top].push(item);
+    }
+  });
+
+  // Render root files first
+  if (structure['__root__']) {
+    structure['__root__'].forEach(item => {
+      tree.appendChild(makeFileItem(item.path, item.path, 0));
+    });
+  }
+
+  // Render folders
+  const folders = Object.keys(structure).filter(k => k !== '__root__').sort();
+  folders.forEach(folder => {
+    const folderEl = document.createElement('div');
+    folderEl.className = 'tree-item folder';
+    folderEl.innerHTML = `<span class="icon">▸</span> ${folder}`;
+    folderEl.dataset.folder = folder;
+    folderEl.onclick = () => toggleFolder(folder);
+    tree.appendChild(folderEl);
+
+    const group = document.createElement('div');
+    group.id = `folder-${folder}`;
+    structure[folder].sort((a,b) => a.path.localeCompare(b.path)).forEach(item => {
+      const depth = item.path.split('/').length - 1;
+      group.appendChild(makeFileItem(item.path, item.path.split('/').slice(1).join('/'), depth));
+    });
+    tree.appendChild(group);
+  });
+}
+
+function toggleFolder(folder) {
+  const group = document.getElementById(`folder-${folder}`);
+  const el = document.querySelector(`[data-folder="${folder}"]`);
+  if (group.style.display === 'none') {
+    group.style.display = '';
+    el.querySelector('.icon').textContent = '▾';
+  } else {
+    group.style.display = 'none';
+    el.querySelector('.icon').textContent = '▸';
+  }
+}
+
+function makeFileItem(fullPath, label, depth) {
+  const el = document.createElement('div');
+  el.className = `tree-item file${depth >= 2 ? ' depth-2' : ''}`;
+  el.innerHTML = `<span class="icon">◦</span> ${label}`;
+  el.onclick = () => loadFile(fullPath);
+  el.dataset.path = fullPath;
+  return el;
+}
+
+// ── FILE OPS ──────────────────────────────────────────
+async function loadFile(path) {
+  setStatus('Loading...', 'busy');
+  try {
+    const data = await apiGet(`/repos/${REPO}/contents/${path}`);
+    const content = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
+    currentFile = path;
+    currentSha = data.sha;
+
+    document.getElementById('empty-state').classList.add('hidden');
+    const editor = document.getElementById('editor');
+    editor.classList.remove('hidden');
+    editor.value = content;
+    document.getElementById('current-path').textContent = path;
+    updateCharCount();
+
+    // Highlight active
+    document.querySelectorAll('.tree-item').forEach(el => {
+      el.classList.toggle('active', el.dataset.path === path);
+    });
+
+    setStatus(`Loaded: ${path}`, 'ok');
+  } catch(e) {
+    setStatus('Failed to load file', 'err');
+  }
+}
+
+async function saveFile() {
+  if (!currentFile) { setStatus('No file selected', 'err'); return; }
+  setStatus('Saving...', 'busy');
+  try {
+    const content = document.getElementById('editor').value;
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+    await apiPut(`/repos/${REPO}/contents/${currentFile}`, {
+      message: `Update ${currentFile} — ${todayStr()}`,
+      content: encoded,
+      sha: currentSha
+    });
+    // Refresh sha
+    const data = await apiGet(`/repos/${REPO}/contents/${currentFile}`);
+    currentSha = data.sha;
+    setStatus('Saved to GitHub ✓', 'ok');
+  } catch(e) {
+    setStatus('Save failed — ' + (e.message || 'check token'), 'err');
+  }
+}
+
+function copyForClaude() {
+  const path = document.getElementById('current-path').textContent;
+  const content = document.getElementById('editor').value;
+  const text = `File: ${path}\n\n${content}`;
+  navigator.clipboard.writeText(text).then(() => {
+    setStatus('Copied to clipboard — paste into Claude', 'ok');
+  });
+}
+
+// ── NEW FILE ──────────────────────────────────────────
+async function newFile() {
+  const path = document.getElementById('new-file-path').value.trim();
+  if (!path) { setStatus('Enter a file path first', 'err'); return; }
+  const fullPath = path.endsWith('.md') ? path : path + '.md';
+  setStatus('Creating...', 'busy');
+  try {
+    const content = `# ${fullPath.split('/').pop().replace('.md','').replace(/-/g,' ')}\n\n*Created: ${todayStr()}*\n\nNothing recorded yet.\n`;
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+    await apiPut(`/repos/${REPO}/contents/${fullPath}`, {
+      message: `Create ${fullPath}`,
+      content: encoded
+    });
+    document.getElementById('new-file-path').value = '';
+    setStatus('File created ✓', 'ok');
+    await loadTree();
+    await loadFile(fullPath);
+  } catch(e) {
+    setStatus('Failed to create file', 'err');
+  }
+}
+
+// ── SESSION NOTES ─────────────────────────────────────
+async function saveSessionNote() {
+  const division = document.getElementById('division-select').value;
+  const note = document.getElementById('session-note').value.trim();
+  if (!note) { setStatus('Session note is empty', 'err'); return; }
+
+  const path = `${division}/sessions/${todayStr()}.md`;
+  setStatus('Saving session note...', 'busy');
+
+  try {
+    // Check if file exists
+    let sha = null;
+    let existing = '';
+    try {
+      const data = await apiGet(`/repos/${REPO}/contents/${path}`);
+      sha = data.sha;
+      existing = decodeURIComponent(escape(atob(data.content.replace(/\n/g, '')))) + '\n\n---\n\n';
+    } catch(e) { /* new file */ }
+
+    const content = existing + note;
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+    const body = { message: `Session note: ${division} ${todayStr()}`, content: encoded };
+    if (sha) body.sha = sha;
+
+    await apiPut(`/repos/${REPO}/contents/${path}`, body);
+    setStatus('Session note saved ✓', 'ok');
+    document.getElementById('session-note').value = '';
+    await loadTree();
+  } catch(e) {
+    setStatus('Failed to save session note', 'err');
+  }
+}
+
+async function loadLatestSession() {
+  const division = document.getElementById('division-select').value;
+  setStatus('Finding latest session...', 'busy');
+  try {
+    const data = await apiGet(`/repos/${REPO}/contents/${division}/sessions`);
+    const files = data.filter(f => f.name.endsWith('.md')).sort((a,b) => b.name.localeCompare(a.name));
+    if (files.length === 0) { setStatus('No sessions found', 'err'); return; }
+    await loadFile(files[0].path);
+  } catch(e) {
+    setStatus('No sessions found yet', 'err');
+  }
+}
+
+async function quickLoad(fileType) {
+  const division = document.getElementById('division-select').value;
+  const path = `${division}/${fileType}.md`;
+  await loadFile(path);
+}
+
+// ── API HELPERS ───────────────────────────────────────
+async function apiGet(path) {
+  const res = await fetch(`${API}${path}`, { headers: headers() });
+  if (!res.ok) throw new Error(res.statusText);
+  return res.json();
+}
+
+async function apiPut(path, body) {
+  const res = await fetch(`${API}${path}`, {
+    method: 'PUT',
+    headers: headers(),
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.message || res.statusText);
+  }
+  return res.json();
+}
+
+// ── CHAR COUNT ────────────────────────────────────────
+function updateCharCount() {
+  const content = document.getElementById('editor').value;
+  document.getElementById('char-count').textContent = `${content.length} chars`;
+}
+
+document.getElementById('editor').addEventListener('input', updateCharCount);
+
+// ── INIT ──────────────────────────────────────────────
+window.addEventListener('load', () => {
+  const token = getToken();
+  if (token) {
+    document.getElementById('token-input').value = '••••••••••••••••';
+    loadTree();
+  }
+});
+</script>
+</body>
+</html>
