@@ -1,5 +1,12 @@
-# current state
+# Pitch Dark Studios Memory — Current State
 
-*Created: 2026-05-16*
+*Last updated: 2026-05-16*
 
-Nothing recorded yet.
+- Live at: pitchdarkpress.github.io/pitch-dark-studios-memory
+- Admin panel: pitchdarkpress.github.io/pitch-dark-studios-memory (index.html)
+- Repository: github.com/PitchDarkPress/pitch-dark-studios-memory
+- Status: Live and operational
+
+## Planned Features
+- New Project button with choice of NEW PROJECT or IMPORT
+- Import existing Word documents into the database
