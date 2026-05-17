@@ -1,5 +1,5 @@
 # InkySwot — Locked Decisions
-*Last updated: 14 May 2026*
+*Last updated: 17 May 2026*
 
 These decisions are final. Do not revisit, suggest alternatives,
 or work around them unless Kev explicitly asks you to, or unless
