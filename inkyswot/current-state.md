@@ -1,5 +1,5 @@
 # InkySwot — Current State
-*Last updated: 14 May 2026*
+*Last updated: 17 May 2026*
 
 ## What InkySwot Is
 Web-based story world-building and production platform. The world's first
