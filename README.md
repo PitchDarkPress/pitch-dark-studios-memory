@@ -1,5 +1,6 @@
 # Pitch Dark Studios — Memory Database
 ## README
+*Last updated: 18 May 2026*
 
 ---
 
@@ -20,8 +21,10 @@ British English throughout. No exceptions.
 Treat Kev as an equal — not a user, not a student.
 
 When something needs fixing — fix it before moving on.
-No snag lists. No deferred problems. No fixes on fixes. Keep the code clean.
-Explain what you are about to do. Wait for the go-ahead. Then do it.
+No snag lists. No deferred problems. No fixes on fixes.
+Keep the code clean.
+Explain what you are about to do. Wait for the go-ahead.
+Then do it.
 If a bug persists — rebuild from scratch.
 NEVER try to move on if a problem has not been resolved.
 
@@ -57,8 +60,10 @@ Runs Pitch Dark Studios — the hub from which everything flows:
 - InkySwot (writing platform)
 - Pitch Dark Broadcasting
 - Pitch Dark Publishing
+- Pitch Dark Art
 
-Proauthorist exists independently but is central to everything Kev does.
+Proauthorist exists independently but is central to
+everything Kev does.
 https://www.proauthorist.com/
 
 Motto: Publish and Be Damned.
@@ -66,26 +71,32 @@ Identity: Creative Privateer.
 
 Handles everything himself — writing, editing, cover design,
 formatting, web development, coding.
+Alone. By choice. No partners. No committee.
+No permission sought.
 
 Wife: Sara Martin. Writer. Professional voice artist.
+Not connected to the ecosystem and not involved in
+its operation.
 
 Coined the term Proauthorism in February 2026.
-Proauthorism: transparent, declared human-AI creative collaboration
-where humans retain authorship and authority.
+Proauthorism: transparent, declared human-AI creative
+collaboration where humans retain authorship and authority.
 
 Kev is not a beginner. He is not learning.
 He knows what he wants. He makes all final decisions.
 Do not suggest things he has already decided.
 Do not revisit locked decisions unless Kev asks you to.
+Do not suggest bringing in others or seeking feedback.
+Trust him.
 
 ---
 
 ## SECTION 3 — THE DATABASE
 
-This database exists because context files were getting so large
-that every new session spent most of its time just loading them.
-The database solves that — lightweight, structured, fetched fresh
-each session, only what is needed.
+This database exists because context files were getting so
+large that every new session spent most of its time just
+loading them. The database solves that — lightweight,
+structured, fetched fresh each session, only what is needed.
 
 It lives here:
 https://github.com/PitchDarkPress/pitch-dark-studios-memory
@@ -104,18 +115,36 @@ The database is divided into divisions, each with its own folder:
 - pitch-dark-press/ — the publishing imprint
 - pitch-dark-broadcasting/ — broadcasting division
 - pitch-dark-publishing/ — publishing division
+- pitch-dark-art/ — art platform
+- pitch-dark-studios/ — the hub website
 - proauthorist/ — Proauthorism hub
-- the-room/ — Pitch Dark Studios interior
+- the-room/ — technical base for all division rooms
 - memories/ — cross-project running state
 - rd/ — research and development
 
 Each division contains some or all of these files:
-- current-state.md — where things are right now
+- current-state.md — active work only. Lean. Current.
 - build-list.md — confirmed build order
 - locked-decisions.md — what cannot be changed
+- completed.md — finished and signed off work
 - future.md — ideas not yet in play
+- room.md — Three.js room specification (where applicable)
 - ada.md — Ada specification (InkySwot only)
-- sessions/ — dated session notes e.g. 2026-05-17.md
+- sessions/ — dated session notes
+
+KEEPING FILES LEAN — NON-NEGOTIABLE
+
+Files must never become dumping grounds.
+At the end of every session:
+- Completed work moves from current-state.md to completed.md
+- Locked decisions move to locked-decisions.md
+- Session notes are edited down to only what the next
+  Claude needs to pick up and continue
+- current-state.md stays lean — active work only
+
+If a file is getting long, that is a signal to edit it
+down, not to keep adding. The Jacob Marley problem must
+never return.
 
 SESSION NOTES
 At the end of each session a note is written summarising
@@ -168,12 +197,23 @@ Then wait for Kev to confirm.
 Before this session ends you must write a session note.
 It must be complete and comprehensive.
 It must cover everything that was done — every decision,
-every change, every problem encountered and how it was resolved,
-every locked decision confirmed, every open question identified.
+every change, every problem encountered and how it was
+resolved, every locked decision confirmed, every open
+question identified.
 Nothing omitted. Nothing summarised vaguely.
-The next Claude who reads this note must be able to pick up
-exactly where this session left off without asking Kev
+The next Claude who reads this note must be able to pick
+up exactly where this session left off without asking Kev
 to repeat a single thing.
+
+Then — before saving the session note — edit it down.
+Move completed work to completed.md.
+Move locked decisions to locked-decisions.md.
+Keep the session note as a clean handover only.
 
 Kev will paste this note into the database.
 It is the handover document. Treat it as such.
+
+When saving session notes — always check the division
+selector before clicking Save Session Note.
+Switching tabs can reset the division selection.
+Always look immediately before saving. Every time.
