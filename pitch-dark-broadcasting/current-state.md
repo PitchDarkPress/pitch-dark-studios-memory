@@ -186,4 +186,90 @@ No expensive hardware required to start.
 ### Paid Tier
 - Ad-free option
 - Greater facilities
-- Broadcaster gets %
+- Broadcaster gets % of advertising revenue
+- Revenue share increases with listener numbers
+  (encourages broadcasters to grow their audience)
+
+### Advertising
+- Voice ads on all stations at 15 minute intervals
+- Countdown and alert before ads on live shows
+- Banner ads across platform
+- All advertising IP address targeted
+- Outsourced to large advertising partner
+- Broadcasters can increase ad frequency to increase
+  their revenue share
+- Broadcasters can pay to remove ads from their portal
+- Broadcasters get commission on advertising sales
+
+### Broadcaster Tiers
+Broadcasting suites at multiple levels.
+Free option with limitations.
+Paid options with expanded capability.
+
+---
+
+## PLATFORM FEATURES — FULL LIST
+
+Content:
+- iTunes and Amazon Music account access for content
+  (access only — content not uploaded, keeps server
+  load down)
+- Show recording for rebroadcast / listen again
+  (data kept on user's computer — keeps server load down)
+- Listen again service — drag and drop scheduling
+- Central music pool — no royalties paid by broadcaster
+- Show picks and sharing between stations
+
+Community:
+- Make / unfriend other broadcasters
+- Block broadcasters
+- Report broadcasters
+- Friend requests in Control Room panel
+- Newsletter to all broadcasters
+- Show and station rating by listeners
+
+Contact (all internet-based — no 3/4G cost to listener):
+- Phone in (through app)
+- Text (through app)
+- Email: stationname@pitchdarkbroadcasting.com
+- Skype integration
+- All contact data downloadable by broadcaster
+
+Customisation:
+- Multiple skins for broadcasting page and player
+- Broadcaster can create own skins
+- Third party skin code released
+- Customisable news / weather / social feeds on
+  broadcasting page (paid additions)
+- Station profile — changeable name ONCE
+
+Admin (Pitch Dark Broadcasting level):
+- Full admin panel covering all platform operations
+- User management / bans / content control /
+  advertising management / database / diagnostics
+
+---
+
+## THE ROOM
+
+Three.js coming soon room — spec locked.
+See room.md for full specification.
+
+Hero: 1940s ribbon microphone on stand.
+Music stand with opening page of The Sun Also Rises.
+Red ON AIR light floating in mid air — no fixture.
+Sound: Speeches of Winston Churchill.
+
+---
+
+## NEXT ACTIONS
+
+1. This platform is a major build. Scope and timeline
+   to be defined before any build work begins.
+2. Technology stack decision needed — this is not
+   a single HTML file. Full backend required.
+3. pitchdarkbroadcasting.com/radio domain and
+   hosting to be confirmed.
+4. The Room build follows The Room base completion.
+5. Define MVP — what is the minimum viable version
+   that can launch and prove the concept?
