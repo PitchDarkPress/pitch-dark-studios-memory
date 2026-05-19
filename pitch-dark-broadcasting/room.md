@@ -24,8 +24,13 @@ The prose as the script. Spare. Direct. No waste.
 
 ## ATMOSPHERE
 
-Corner: A red ON AIR light. Hanging in mid air. As if floating.
-Glowing. No visible fixture. Just the light itself, suspended.
+Red ON AIR light hanging in mid air. Floating.
+No visible fixture. Just the red glow suspended
+in darkness.
+
+In a dark corner — an old fashioned broadcasting
+camera. Its red light is on. Silent. Waiting.
+The TV division hinting at itself.
 
 No window. No outside world. This room is sealed.
 What happens here stays here.
