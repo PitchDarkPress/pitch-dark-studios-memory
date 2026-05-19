@@ -108,3 +108,33 @@ Two exits:
 2. Into the platform itself.
 
 The room stays. Always. There to have fun with.
+
+---
+ADDITION — 2026-05-19
+
+## UPDATED ROOM CONCEPT — 19 May 2026
+
+Previous spec superseded. Full replacement below.
+
+HERO OBJECT
+A large, old, very comfortable dark brown leather
+armchair. Centre of the space. Under a warm light.
+Slightly battered — lived in for many years.
+A tartan cushion on it.
+A footstool in front of it.
+
+TO THE SIDE
+A small occasional table.
+On it: a lamp — the primary light source for the chair.
+A small stack of books.
+A cup of tea. Steam rising from it.
+
+ATMOSPHERE
+Warm. Still. Private.
+The room of someone who reads deeply and slowly.
+No machinery. No industry. Just the act of reading.
+
+SOUND
+Nothing.
+Silence is the point.
+The room breathes but does not speak.
