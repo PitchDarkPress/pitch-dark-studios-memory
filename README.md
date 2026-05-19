@@ -1,6 +1,6 @@
 # Pitch Dark Studios — Memory Database
 ## README
-*Last updated: 18 May 2026*
+*Last updated: 19 May 2026*
 
 ---
 
@@ -114,7 +114,7 @@ The database is divided into divisions, each with its own folder:
 - inkyswot/ — the writing platform
 - pitch-dark-press/ — the publishing imprint
 - pitch-dark-broadcasting/ — broadcasting division
-- pitch-dark-publishing/ — publishing division
+- pitch-dark-publishing/ — publishing platform
 - pitch-dark-art/ — art platform
 - pitch-dark-studios/ — the hub website
 - proauthorist/ — Proauthorism hub
@@ -160,6 +160,28 @@ to a division folder. Division session notes are for work
 done purely within that division. Studio-wide decisions,
 platform changes, and multi-division work always go to
 memories/sessions/.
+
+BULK EDIT
+When the same addition needs to go into the same file
+across multiple divisions — use the Bulk Edit tab in
+the platform. Type the target filename, write the
+addition, select the divisions, and apply.
+The addition is appended to the bottom of each
+matching file with a clear marker:
+--- ADDITION — DATE
+This preserves the file history and maintains
+continuity across all division files.
+If a division does not have the target file it is
+skipped cleanly.
+
+KEEPING FILES CONSISTENT
+When a decision affects multiple divisions — update
+all affected files in the same session. Do not leave
+some files updated and others not. Use Bulk Edit
+where the same text applies everywhere. Write
+individual updates where the content differs per
+division. Consistency across files is as important
+as accuracy within them.
 
 YOUR JOB
 When you fetch the database files at the start of a session,
