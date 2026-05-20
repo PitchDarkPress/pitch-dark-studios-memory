@@ -1,6 +1,8 @@
+File: README.md
+
 # Pitch Dark Studios — Memory Database
 ## README
-*Last updated: 19 May 2026*
+*Last updated: 20 May 2026*
 
 ---
 
@@ -239,3 +241,62 @@ When saving session notes — always check the division
 selector before clicking Save Session Note.
 Switching tabs can reset the division selection.
 Always look immediately before saving. Every time.
+
+---
+
+## SECTION 6 — FILE LABELLING AND REPO MAP
+
+CRITICAL — READ BEFORE UPLOADING ANY FILE.
+
+This database produces files that must go to specific
+repositories. Never mix them up.
+
+| File | Repository | Upload as |
+|------|-----------|-----------|
+| memory-db-index.html | PitchDarkPress/pitch-dark-studios-memory | index.html |
+| room-index.html (ChatGPT) | pitch-dark-studio-the-room | index.html |
+
+Files are labelled with their destination before download.
+Rename to index.html only after confirming the correct repo.
+
+THIS REPO IS PUBLIC
+Raw file URLs work for direct ChatGPT access:
+https://raw.githubusercontent.com/PitchDarkPress/pitch-dark-studios-memory/main/[path]
+
+Always include this line when handing a raw URL to ChatGPT:
+"This GitHub repo is public. Please fetch the Raw File URL directly."
+
+---
+
+## SECTION 7 — GLB ASSETS
+
+GLB 3D asset files are stored in this repo for use in
+The Room and future division rooms.
+
+STRUCTURE
+- Assets: division/assets/glb/filename.glb
+- Credits: division/assets/credits.md
+
+NAMING CONVENTION
+No spaces. No brackets. No special characters.
+Use underscores only. Example: office_desk_18mb.glb
+Rename immediately after upload if needed — use the
+Rename button in the asset manager.
+
+SOURCING
+- Sketchfab — sketchfab.com — filter by Free
+- Poly Pizza — poly.pizza — mostly CC0, no attribution needed
+- Quaternius — quaternius.com — free packs, no attribution needed
+- KhronosGroup — github.com/KhronosGroup/glTF-Sample-Models
+
+CC BY 4.0 OBLIGATIONS (Sketchfab)
+Must credit: artist name, original URL, licence.
+Confirmed location for credits in The Room: terminal screen
+scroll, displayed under the Shakespeare quotes.
+
+CHATGPT HANDOVER WORKFLOW
+1. Upload GLB via asset manager
+2. Open viewer, fill in credits (or paste Sketchfab credit line to auto-fill)
+3. Tick required fields, click Copy All
+4. Paste into ChatGPT — raw URL and public repo notice included automatically
+5. ChatGPT fetches file directly from public repo
