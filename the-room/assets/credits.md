@@ -8,3 +8,4 @@
 | ibm_3350_madrid.glb | IBM 3350 "Madrid" | maxdragonn | Sketchfab | Creative Commons Attribution | https://skfb.ly/oxsIC | No — still evaluating |
 | note_book_2k.glb | Note Book [2K] | Lyndschoko | Sketchfab | Creative Commons Attribution | https://skfb.ly/ptsuP | No — still evaluating |
 | animated_fire.glb | Animated fire | Yannick Deharo | Sketchfab | Creative Commons Attribution | https://skfb.ly/6AXQL | No — still evaluating |
+| lincoln_-_traditional_ethanol_fireplace.glb | Lincoln - Traditional Ethanol Fireplace | planika | Sketchfab | Creative Commons Attribution-NoDerivs | https://skfb.ly/6vBYB | No — still evaluating |
