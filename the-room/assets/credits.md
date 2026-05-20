@@ -7,3 +7,4 @@
 | 70s_retro_computer_asset_-_old_commodore_pet.glb | 70's Retro Computer Asset - Old Commodore PET | Smoothie 3D | Sketchfab | Creative Commons Attribution | https://skfb.ly/oyT7R | No — still evaluating |
 | ibm_3350_madrid.glb | IBM 3350 "Madrid" | maxdragonn | Sketchfab | Creative Commons Attribution | https://skfb.ly/oxsIC | No — still evaluating |
 | note_book_2k.glb | Note Book [2K] | Lyndschoko | Sketchfab | Creative Commons Attribution | https://skfb.ly/ptsuP | No — still evaluating |
+| animated_fire.glb | Animated fire | Yannick Deharo | Sketchfab | Creative Commons Attribution | https://skfb.ly/6AXQL | No — still evaluating |
