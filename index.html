@@ -1130,7 +1130,7 @@ function buildPrompt(division) {
     ...division.files.map(f => `${BASE}/${division.id}/${f}.md`)
   ];
   const fetches = all.map((url, i) => i === 0 ? `Please fetch and read this file first: ${url}` : `then fetch and read: ${url}`).join(' — ');
-  return `I am Kev, running Pitch Dark Studios. Today we are working on ${division.label}. ${fetches} — then fetch the latest session note from ${BASE}/${division.id}/sessions/ — then confirm what you know about ${division.label} and we will begin.`;
+  return `I am Kev, running Pitch Dark Studios. Today we are working on ${division.label}. ${fetches} — then fetch https://api.github.com/repos/PitchDarkPress/pitch-dark-studios-memory/contents/${division.id}/sessions and find the latest session note by sorting the filenames, fetch and read it — then confirm what you know about ${division.label} and we will begin.`;
 }
 
 function buildDivisionTabs() {
