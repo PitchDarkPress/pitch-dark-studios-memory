@@ -128,6 +128,7 @@ Live at: pitchdarkpress.github.io/pitch-dark-studios-memory
 Moving to: memory.pitchdarkstudios.com (DNS pending)
 Platform: GitHub Pages. Admin panel fully operational.
 One current-state.md per division. Overwritten not appended.
+Session notes kept as archive only — not part of briefing.
 
 ---
 
@@ -186,17 +187,15 @@ Sound: Engine sounds. Something is always running in R&D.
 
 ## CURRENT STATUS & NEXT ACTIONS
 
-Database simplified — 22 May 2026.
-New model: one current-state.md per division.
-Files overwritten not appended.
-Session notes kept as archive only.
-Admin panel being simplified to match.
+Database fully rebuilt — 22 May 2026.
+New model complete: one current-state.md per division.
+All divisions consolidated. Redundant files deleted.
+Admin panel updated — division tabs now load Core +
+division into one combined paste. Bulk Edit and old
+session system removed. Session Notes tab is archive only.
 
 NEXT
-1. Update Core file in admin panel with this version
-2. Complete InkySwot current-state.md
-3. Rebuild each remaining division into single current-state.md
-4. Delete all redundant division files
-5. Update admin panel — combine Core + division into one paste
-6. Update README to reflect new system
-7. Clean up session notes archive
+1. Update README to reflect new system
+2. Clean up session notes archive
+3. Move database to memory.pitchdarkstudios.com when DNS ready
+4. Continue active division work
