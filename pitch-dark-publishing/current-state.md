@@ -1,5 +1,28 @@
 # Pitch Dark Publishing — Current State
-*Last updated: 19 May 2026*
+*Last updated: 22 May 2026*
+
+---
+
+## NOTE TO NEW CLAUDE
+
+You will be given two files at the start of every session:
+the Core file and this division file. Read both before
+responding.
+
+This file contains everything specific to Pitch Dark Publishing.
+The Core file contains studio-wide identity, branding,
+people, and structure.
+
+At the end of every session, ask Kev:
+"Shall I update the files now?"
+If yes, rewrite this file incorporating everything
+discussed and decided. Overwrite — do not append.
+If the session touched studio-wide information,
+rewrite Core too.
+
+Kev will copy the rewritten file, paste it into
+the admin panel, and save it to GitHub.
+That is the complete system.
 
 ---
 
@@ -8,57 +31,46 @@
 A digital publishing platform. Anyone with an internet
 connected device can create and publish professional
 quality content — from hobby to fully professional.
-
 No gatekeepers. No prior experience required.
 Egalitarian to its core. Proauthorist in its DNA.
 
 This is the Wix model applied to publishing —
 templates, drag and drop, professional output.
-But with the Pitch Dark Studios philosophy behind it.
+With the Pitch Dark Studios philosophy behind it.
+
+Not a publishing imprint. A platform.
+Pitch Dark Press is the imprint.
+Pitch Dark Publishing is the platform that enables
+others to do what Pitch Dark Press does.
 
 ---
 
 ## CORE PRODUCTS
 
-These are the four main elements. Everything else
-is candy floss — added later to keep the platform
-growing.
+Four main elements. Everything else is candy floss —
+added later to keep the platform growing.
+Build order to be decided.
 
-1. NEWSPAPERS
-   Online and print-ready newspapers.
+1. NEWSPAPERS — online and print-ready.
    From local community papers to national publications.
+2. MAGAZINES — any genre, any frequency, any scale.
+3. COMIC BOOKS — panels, speech bubbles, artwork integration.
+4. PICTURE BOOKS — children's picture books and illustrated works.
 
-2. MAGAZINES
-   Online and print-ready magazines.
-   Any genre, any frequency, any scale.
-
-3. COMIC BOOKS
-   Full comic book creation and publishing.
-   Panels, speech bubbles, artwork integration.
-
-4. PICTURE BOOKS
-   Children's picture books and illustrated works.
-   Full design and publishing suite.
-
----
-
-## ADDITIONAL PRODUCTS (future candy floss)
-
-These will be switchable on/off per user:
-- Birthday cards
-- Menus
-- Price lists
-- And more as the platform grows
+Additional products — switchable on/off per user:
+Birthday cards / greetings cards / menus / price lists /
+flyers and posters / brochures / catalogues /
+annual reports / newsletters / event programmes /
+CVs and portfolios / wedding stationery / business cards.
+Each added when core platform is established and generating
+revenue. Never all at once.
 
 ---
 
-## HOW IT WORKS
+## THE PLATFORM MODEL
 
 Template-based — the Wix model for publishing.
-Users choose a template, customise it, publish it.
-Templates available for all core products.
-All templates professional quality from day one.
-
+Professional quality templates from day one.
 On/off model — users activate only what they need.
 A newspaper creator does not see comic book tools.
 Clean. Focused. Never overwhelming.
@@ -68,45 +80,121 @@ Clean. Focused. Never overwhelming.
 ## INTEGRATION
 
 Pitch Dark Art — design visuals in PD Art, publish
-them in PD Publishing. The two platforms will
-eventually link directly.
+in PD Publishing. The two platforms will link directly.
 
-Pitch Dark Press — the publishing imprint that already
-exists. PD Publishing is the platform that enables
-others to do what Pitch Dark Press does.
+InkySwot — write in InkySwot, publish in PD Publishing.
+The full creative pipeline within one ecosystem:
+Idea → World building → Writing → Publishing.
 
----
-
-## CURRENT STATUS
-
-Division approved. In planning phase.
-Not yet built.
-No URL assigned yet — will be under
-pitchdarkpublishing.com or similar.
+Pitch Dark Press — the imprint that already exists.
+PD Publishing is the platform version of what PDP does.
 
 ---
 
 ## THE ROOM
 
-Coming soon page — Three.js room. Spec locked.
-See room.md for full specification.
+Three.js coming soon room. Spec locked.
+Built on The Room base architecture.
+Single upload-ready index.html. Vanilla JavaScript only.
+GitHub Pages deployment. No frameworks. No build system.
 
-Hero: London newspaper box. Dark green. Gold lettering.
-Atmosphere: Gas lamp standing alone in the darkness
-at a distance. No explanation. It simply exists there.
-Sound: City ambient sounds.
-Corner detail: to be decided.
+UPDATED SPEC — 19 May 2026. Previous spec superseded.
+
+Hero: A large, old, very comfortable dark brown leather
+armchair. Centre of the space. Under a warm light.
+Slightly battered — lived in for many years.
+A tartan cushion on it. A footstool in front of it.
+
+To the side: a small occasional table.
+On it: a lamp — the primary light source for the chair.
+A small stack of books.
+A cup of tea. Steam rising from it.
+
+Atmosphere: Warm. Still. Private.
+The room of someone who reads deeply and slowly.
+No machinery. No industry. Just the act of reading.
+
+Sound: Nothing. Silence is the point.
+The room breathes but does not speak.
+
+Room principles (inherited from The Room bible):
+1. No flashy game mechanics
+2. No HUD clutter
+3. No exposition
+4. No over-animation
+5. Silence matters — sound is ambient, never demanding
+6. Objects imply stories without explaining them
+7. Atmosphere takes priority over realism
+8. The room must feel inhabited instead of generated
+9. The room must feel older than the technology creating it
+10. Presence over mechanics
+
+Exit — this room is permanent. Part of division identity. Forever.
+If platform not yet built: one exit — pitchdarkstudios.com
+If platform is live: two exits —
+1. Back to Pitch Dark Studios — pitchdarkstudios.com
+2. Into the platform itself.
 
 Room not yet built. Waiting for The Room base
-architecture to be completed.
+architecture to be completed by ChatGPT.
 
 ---
 
-## NEXT ACTIONS
+## FUTURE IDEAS (not on build list)
 
-1. Define the MVP — which of the four core products
-   launches first?
-2. Decide on technology stack.
-3. Assign domain.
-4. Begin template design for launch product.
-5. Plan PD Art integration timeline.
+Print on demand integration — design in PD Publishing,
+order physical copies through POD partner.
+
+Distribution network — digital distribution to Amazon /
+Apple Books / Google Play / Kobo and others.
+
+PD Art deep integration — direct platform-to-platform link.
+
+Rights Marketplace — sell or license content to others.
+
+Education Tier — schools and universities.
+Student journalism. School yearbooks. Creative anthologies.
+
+Community features — publication rating and discovery /
+follow favourite publishers / creator profiles.
+
+---
+
+## LOCKED DECISIONS
+
+Name: Pitch Dark Publishing. A platform not an imprint.
+Philosophy: egalitarian, no gatekeepers, Proauthorist.
+Core four products locked — newspapers, magazines,
+comic books, picture books.
+Platform model: template-based, on/off, never overwhelming.
+Integration with PD Art and InkySwot — locked.
+The Room spec — locked (updated 19 May 2026).
+Branding: inherits full Pitch Dark Studios core branding.
+
+---
+
+## OPEN DECISIONS
+
+MVP — which core product launches first?
+Technology stack — to be decided.
+Domain — pitchdarkpublishing.com or similar.
+Print on demand partner — to be selected.
+Distribution partner — to be selected.
+Publishing room corner detail — to be decided.
+Launch timeline — dependent on above.
+
+---
+
+## CURRENT STATUS & NEXT ACTIONS
+
+Division approved. In planning phase. Not yet built.
+All database files consolidated into this single file
+22 May 2026.
+
+NEXT
+1. Define MVP — which core product launches first?
+2. Decide technology stack
+3. Assign domain
+4. Begin template design for launch product
+5. Plan PD Art integration timeline
+6. Build The Room once base architecture is complete
