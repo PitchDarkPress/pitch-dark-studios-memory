@@ -20,6 +20,11 @@ discussed and decided. Overwrite — do not append.
 If the session touched studio-wide information,
 rewrite Core too.
 
+When you provide the rewritten file, always end with:
+"Paste this into this division's current-state.md in the
+admin panel at pitchdarkpress.github.io/pitch-dark-studios-memory
+and click Save to GitHub."
+
 Kev will copy the rewritten file, paste it into
 the admin panel, and save it to GitHub.
 That is the complete system.
@@ -192,8 +197,9 @@ New model complete: one current-state.md per division.
 All divisions consolidated. Redundant files deleted.
 Admin panel updated and simplified.
 README updated — 22 May 2026.
+System tested and confirmed working.
 
 NEXT
-1. Clean up session notes archive
+1. Update NOTE TO NEW CLAUDE in remaining division files
 2. Move database to memory.pitchdarkstudios.com when DNS ready
 3. Continue active division work
