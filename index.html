@@ -486,22 +486,6 @@ function renderTree(items) {
       structure[top].push(item);
     }
   });
-  if (structure['__root__']) {
-    const readmeItem = structure['__root__'].find(i => i.path === 'README.md');
-    if (readmeItem) {
-      const folderEl = document.createElement('div');
-      folderEl.className = 'tree-item folder';
-      folderEl.innerHTML = '<span class="icon">\u25B8</span> README';
-      folderEl.dataset.folder = '__readme__';
-      folderEl.onclick = () => toggleFolder('__readme__');
-      tree.appendChild(folderEl);
-      const group = document.createElement('div');
-      group.id = 'folder-__readme__';
-      group.style.display = 'none';
-      group.appendChild(makeFileItem('README.md', 'readme.md', 1));
-      tree.appendChild(group);
-    }
-  }
   Object.keys(structure).filter(k => k !== '__root__' && k !== '_trash').sort().forEach(folder => {
     const folderEl = document.createElement('div');
     folderEl.className = 'tree-item folder';
