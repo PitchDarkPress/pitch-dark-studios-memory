@@ -190,12 +190,10 @@ Sound: Engine sounds. Something is always running in R&D.
 Database fully rebuilt — 22 May 2026.
 New model complete: one current-state.md per division.
 All divisions consolidated. Redundant files deleted.
-Admin panel updated — division tabs now load Core +
-division into one combined paste. Bulk Edit and old
-session system removed. Session Notes tab is archive only.
+Admin panel updated and simplified.
+README updated — 22 May 2026.
 
 NEXT
-1. Update README to reflect new system
-2. Clean up session notes archive
-3. Move database to memory.pitchdarkstudios.com when DNS ready
-4. Continue active division work
+1. Clean up session notes archive
+2. Move database to memory.pitchdarkstudios.com when DNS ready
+3. Continue active division work
