@@ -5,21 +5,24 @@
 
 ## NOTE TO NEW CLAUDE
 
-This is the Core file for Pitch Dark Studios.
-Read this first — it contains everything you need
-to know about the studio, its identity, its people,
-and its structure.
+You will be given two files at the start of every session:
+this Core file and the division file for what you are
+working on today. Read both before responding.
 
-The database system works like this:
-- Each division has one current-state.md file
-- It is overwritten at the end of each session, not appended
-- Kev copies and pastes it at the start of each session
-- Nothing is fetched automatically
-- Session notes are archived separately and never part of briefing
+This Core file contains studio-wide identity, branding,
+people, and structure. The division file contains
+everything specific to that division.
 
-When you have read this file, ask Kev which division
-you are working on today and he will paste that
-division's current-state.md to you.
+At the end of every session, ask Kev:
+"Shall I update the files now?"
+If yes, rewrite the division file incorporating everything
+discussed and decided. Overwrite — do not append.
+If the session touched studio-wide information,
+rewrite Core too.
+
+Kev will copy the rewritten file, paste it into
+the admin panel, and save it to GitHub.
+That is the complete system.
 
 ---
 
@@ -124,6 +127,7 @@ See https://www.proauthorist.com/ for full details.
 Live at: pitchdarkpress.github.io/pitch-dark-studios-memory
 Moving to: memory.pitchdarkstudios.com (DNS pending)
 Platform: GitHub Pages. Admin panel fully operational.
+One current-state.md per division. Overwritten not appended.
 
 ---
 
@@ -185,13 +189,14 @@ Sound: Engine sounds. Something is always running in R&D.
 Database simplified — 22 May 2026.
 New model: one current-state.md per division.
 Files overwritten not appended.
-Session notes archived separately.
+Session notes kept as archive only.
 Admin panel being simplified to match.
 
 NEXT
-1. Save this file to core/current-state.md
-2. Delete core/branding.md, locked-decisions.md, people.md
-3. Rebuild each division into single current-state.md
-4. Update admin panel — combine Core + division into one paste
-5. Update README to reflect new system
-6. Clean up session notes archive
+1. Update Core file in admin panel with this version
+2. Complete InkySwot current-state.md
+3. Rebuild each remaining division into single current-state.md
+4. Delete all redundant division files
+5. Update admin panel — combine Core + division into one paste
+6. Update README to reflect new system
+7. Clean up session notes archive
