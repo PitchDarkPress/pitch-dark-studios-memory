@@ -1,8 +1,6 @@
-File: README.md
-
 # Pitch Dark Studios — Memory Database
 ## README
-*Last updated: 20 May 2026*
+*Last updated: 22 May 2026*
 
 ---
 
@@ -57,13 +55,7 @@ Writer, former professional actor and voice artist.
 Based in Devon, England.
 Left-handed. Has dyslexia.
 
-Runs Pitch Dark Studios — the hub from which everything flows:
-- Pitch Dark Press (publishing imprint)
-- InkySwot (writing platform)
-- Pitch Dark Broadcasting
-- Pitch Dark Publishing
-- Pitch Dark Art
-
+Runs Pitch Dark Studios — the hub from which everything flows.
 Proauthorist exists independently but is central to
 everything Kev does.
 https://www.proauthorist.com/
@@ -80,6 +72,9 @@ Wife: Sara Martin. Writer. Professional voice artist.
 Not connected to the ecosystem and not involved in
 its operation.
 
+Nell — Kev and Sara's Labrador. Passed away May 2026.
+Remembered with love. Do not refer to her as living.
+
 Coined the term Proauthorism in February 2026.
 Proauthorism: transparent, declared human-AI creative
 collaboration where humans retain authorship and authority.
@@ -95,24 +90,26 @@ Trust him.
 
 ## SECTION 3 — THE DATABASE
 
-This database exists because context files were getting so
-large that every new session spent most of its time just
-loading them. The database solves that — lightweight,
-structured, fetched fresh each session, only what is needed.
+This database exists so that every Claude session starts
+with the exact context needed — no more, no less.
 
 It lives here:
 https://github.com/PitchDarkPress/pitch-dark-studios-memory
 
-It is a GitHub repository. Files are written in markdown.
-The admin platform lives here:
-https://memory.pitchdarkstudios.com
-(Currently at pitchdarkpress.github.io/pitch-dark-studios-memory
-until DNS is moved.)
+Admin panel:
+https://pitchdarkpress.github.io/pitch-dark-studios-memory
+(Moving to memory.pitchdarkstudios.com — DNS pending.)
 
 STRUCTURE
 
-The database is divided into divisions, each with its own folder:
-- core/ — branding, locked decisions, people
+One file per division. That is all.
+
+Each division has a single current-state.md file containing
+everything about that division — what it is, where it stands,
+locked decisions, open questions, and next actions.
+
+Divisions:
+- core/ — studio-wide identity, branding, people, structure
 - inkyswot/ — the writing platform
 - pitch-dark-press/ — the publishing imprint
 - pitch-dark-broadcasting/ — broadcasting division
@@ -121,182 +118,86 @@ The database is divided into divisions, each with its own folder:
 - pitch-dark-studios/ — the hub website
 - proauthorist/ — Proauthorism hub
 - the-room/ — technical base for all division rooms
-- memories/ — cross-project running state
 - rd/ — research and development
 
-Each division contains some or all of these files:
-- current-state.md — active work only. Lean. Current.
-- build-list.md — confirmed build order
-- locked-decisions.md — what cannot be changed
-- completed.md — finished and signed off work
-- future.md — ideas not yet in play
-- room.md — Three.js room specification (where applicable)
-- ada.md — Ada specification (InkySwot only)
-- sessions/ — dated session notes
+Session notes are kept as an archive in each division's
+sessions/ folder. They are never part of the briefing.
+They exist for reference only.
 
-KEEPING FILES LEAN — NON-NEGOTIABLE
+HOW SESSIONS WORK
 
-Files must never become dumping grounds.
-At the end of every session:
-- Completed work moves from current-state.md to completed.md
-- Locked decisions move to locked-decisions.md
-- Session notes are edited down to only what the next
-  Claude needs to pick up and continue
-- current-state.md stays lean — active work only
+At the start of every session, Kev pastes two files:
+1. core/current-state.md — studio-wide context
+2. The division's current-state.md — what you are working on
 
-If a file is getting long, that is a signal to edit it
-down, not to keep adding. The Jacob Marley problem must
-never return.
+These are combined automatically by the admin panel.
+One click. One paste. That is it.
 
-SESSION NOTES
-At the end of each session a note is written summarising
-what was done and what comes next. It is saved to the
-division's sessions folder. You must read the latest
-session note at the start of every division session so
-you know exactly where things were left.
+At the end of every session, ask Kev:
+"Shall I update the files now?"
+If yes — rewrite the division file with everything
+discussed and decided. Overwrite, do not append.
+If the session touched studio-wide information,
+rewrite Core too.
+Kev pastes the rewritten file into the admin panel
+and saves it to GitHub.
 
-CROSS-SESSION NOTES
-If a session spans multiple divisions or affects the whole
-studio — save the session note to memories/sessions/ not
-to a division folder. Division session notes are for work
-done purely within that division. Studio-wide decisions,
-platform changes, and multi-division work always go to
-memories/sessions/.
+FILES STAY LEAN — NON-NEGOTIABLE
 
-BULK EDIT
-When the same addition needs to go into the same file
-across multiple divisions — use the Bulk Edit tab in
-the platform. Type the target filename, write the
-addition, select the divisions, and apply.
-The addition is appended to the bottom of each
-matching file with a clear marker:
---- ADDITION — DATE
-This preserves the file history and maintains
-continuity across all division files.
-If a division does not have the target file it is
-skipped cleanly.
-
-KEEPING FILES CONSISTENT
-When a decision affects multiple divisions — update
-all affected files in the same session. Do not leave
-some files updated and others not. Use Bulk Edit
-where the same text applies everywhere. Write
-individual updates where the content differs per
-division. Consistency across files is as important
-as accuracy within them.
+Each current-state.md is overwritten not appended.
+Old information that is no longer relevant is replaced.
+The file stays roughly the same size forever.
+If it is growing, edit it down.
 
 YOUR JOB
-When you fetch the database files at the start of a session,
-read them properly. They are not decoration. They tell you
-everything you need to know. Do not ask Kev to repeat
-information that is in the files.
 
----
-
-## SECTION 4 — THE DIVISION
-
-This section is generated dynamically by the platform
-based on which division is being worked on today.
-It will be included in the opening prompt automatically.
-
-It covers:
-- Overview of the division
-- Where we are (current-state.md)
-- Where it needs to go (build-list.md)
-- Locked decisions (locked-decisions.md)
-- Known open questions
-- What has been done so far (latest session note)
-- Future ideas to bear in mind (future.md)
-
-YOUR FIRST RESPONSE
+Read the files you are given. They tell you everything.
+Do not ask Kev to repeat information that is in the files.
 Do not summarise what you have just read.
-Do not list what you know.
-Simply say you are ready and state the single next step.
+Simply confirm you are ready and state the single next step.
 Then wait for Kev to confirm.
 
 ---
 
-## SECTION 5 — END OF EVERY SESSION — NON-NEGOTIABLE
-
-Before this session ends you must write a session note.
-It must be complete and comprehensive.
-It must cover everything that was done — every decision,
-every change, every problem encountered and how it was
-resolved, every locked decision confirmed, every open
-question identified.
-Nothing omitted. Nothing summarised vaguely.
-The next Claude who reads this note must be able to pick
-up exactly where this session left off without asking Kev
-to repeat a single thing.
-
-Then — before saving the session note — edit it down.
-Move completed work to completed.md.
-Move locked decisions to locked-decisions.md.
-Keep the session note as a clean handover only.
-
-Kev will paste this note into the database.
-It is the handover document. Treat it as such.
-
-When saving session notes — always check the division
-selector before clicking Save Session Note.
-Switching tabs can reset the division selection.
-Always look immediately before saving. Every time.
-
----
-
-## SECTION 6 — FILE LABELLING AND REPO MAP
+## SECTION 4 — FILE LABELLING AND REPO MAP
 
 CRITICAL — READ BEFORE UPLOADING ANY FILE.
 
-This database produces files that must go to specific
-repositories. Never mix them up.
-
 | File | Repository | Upload as |
 |------|-----------|-----------|
-| memory-db-index.html | PitchDarkPress/pitch-dark-studios-memory | index.html |
+| index.html (admin panel) | PitchDarkPress/pitch-dark-studios-memory | index.html |
 | room-index.html (ChatGPT) | pitch-dark-studio-the-room | index.html |
 
-Files are labelled with their destination before download.
-Rename to index.html only after confirming the correct repo.
-
-THIS REPO IS PUBLIC
-Raw file URLs work for direct ChatGPT access:
-https://raw.githubusercontent.com/PitchDarkPress/pitch-dark-studios-memory/main/[path]
-
-Always include this line when handing a raw URL to ChatGPT:
-"This GitHub repo is public. Please fetch the Raw File URL directly."
+THIS REPO IS PUBLIC.
 
 ---
 
-## SECTION 7 — GLB ASSETS
+## SECTION 5 — GLB ASSETS
 
 GLB 3D asset files are stored in this repo for use in
 The Room and future division rooms.
 
 STRUCTURE
-- Assets: division/assets/glb/filename.glb
-- Credits: division/assets/credits.md
+Assets: division/assets/glb/filename.glb
+Credits: division/assets/credits.md
 
 NAMING CONVENTION
 No spaces. No brackets. No special characters.
 Use underscores only. Example: office_desk_18mb.glb
-Rename immediately after upload if needed — use the
-Rename button in the asset manager.
 
 SOURCING
-- Sketchfab — sketchfab.com — filter by Free
-- Poly Pizza — poly.pizza — mostly CC0, no attribution needed
-- Quaternius — quaternius.com — free packs, no attribution needed
-- KhronosGroup — github.com/KhronosGroup/glTF-Sample-Models
+Sketchfab — sketchfab.com — filter by Free
+Poly Pizza — poly.pizza — mostly CC0
+Quaternius — quaternius.com — free packs
+KhronosGroup — github.com/KhronosGroup/glTF-Sample-Models
 
 CC BY 4.0 OBLIGATIONS (Sketchfab)
 Must credit: artist name, original URL, licence.
-Confirmed location for credits in The Room: terminal screen
-scroll, displayed under the Shakespeare quotes.
+Credits location in The Room: terminal screen scroll,
+displayed under the Shakespeare quotes.
 
 CHATGPT HANDOVER WORKFLOW
 1. Upload GLB via asset manager
-2. Open viewer, fill in credits (or paste Sketchfab credit line to auto-fill)
+2. Open viewer, fill in credits
 3. Tick required fields, click Copy All
-4. Paste into ChatGPT — raw URL and public repo notice included automatically
-5. ChatGPT fetches file directly from public repo
+4. Paste into ChatGPT
