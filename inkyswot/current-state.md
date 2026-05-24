@@ -35,13 +35,15 @@ JetBrains Mono 300/400/500
 All Google Fonts.
 
 PRICING
-One tier. No feature gates. No second class writers.
-Monthly: £7.95 / 150 prompts per day / everything included
-Annual: £79.50 / two months free / same everything
+Paid only. No free tier. No exceptions.
+Monthly: £9.95 / 150 prompts per day / everything included
+Annual: £99.50 / two months free / same everything
 Top-up: £1.99 for 500 prompts / available, never pushed
 Lifetime: by invitation / Kev, Sara, early testers / everything forever
-Free tier: 1 project / localStorage / 20 AI calls per day /
-JSON export / £1.99 per Store publication
+14-day money back guarantee / no questions asked
+Publication fee: £1 GBP per publication / base currency GBP /
+Stripe handles international conversion /
+Paid users: one free publication per week / £1 after that
 Ada's contextual observations are FREE — do not count against
 prompt allowance. Ada conversational responses count.
 Lifetime members: infinity symbol in header instead of number.
@@ -147,6 +149,9 @@ Non-negotiable before launch.
 
 CURRENT STATUS & NEXT ACTIONS
 v4.7 pre-Step 1 rebuild. Autumn 2026 launch target.
+Pricing locked — 24 May 2026.
+Security system designed — 24 May 2026.
+UX map reviewed — gaps identified — 24 May 2026.
 
 NEXT
 1. Begin Step 1 — v4.0 app shell rebuild
