@@ -1,3 +1,7 @@
+I am Kev, running Pitch Dark Studios. Today we are working on [DIVISION].
+
+---
+
 Core — Current State
 Last updated: 24 May 2026
 
@@ -196,10 +200,12 @@ CURRENT STATUS & NEXT ACTIONS
 Database restructured — 24 May 2026.
 Five-file model per division agreed and documented.
 NOTE TO NEW CLAUDE rewritten with full operational briefing.
-Duplication in Core file removed.
+All five files created across all divisions — 24 May 2026.
+Admin panel updated — file ordering and colour coding — 24 May 2026.
+InkySwot content redistributed into five files — 24 May 2026.
 NEXT
-- Create missing files (thinking.md, locked-decisions.md,
-  completed.md) across all divisions
-- Update NOTE TO NEW CLAUDE in all division current-state.md files
+- Redistribute content in remaining division current-state.md files
+  (Pitch Dark Art, Broadcasting, Press, Publishing, Studios,
+  Proauthorist, RD, The Room)
+- Remove old NOTE TO NEW CLAUDE from all division current-state.md files
 - Move database to memory.pitchdarkstudios.com when DNS ready
-- Continue active division work
