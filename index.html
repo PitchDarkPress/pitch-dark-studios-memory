@@ -66,6 +66,7 @@
 
   .main { display: flex; flex: 1; overflow: hidden; height: calc(100vh - 65px); }
 
+  /* ── SIDEBAR ── */
   #sidebar { width: 380px; min-width: 380px; border-right: 1px solid var(--border); background: var(--dark); overflow-y: auto; display: flex; flex-direction: column; }
   #sidebar-header { padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
   #sidebar-header span { font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6aaa6a; }
@@ -80,6 +81,7 @@
   .tree-item.file.depth-2 { padding-left: 44px; }
   .tree-item .icon { font-size: 0.65rem; flex-shrink: 0; }
 
+  /* ── EDITOR PANEL ── */
   #editor-panel { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
 
   #file-path-bar { padding: 10px 24px; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--gold-dim); letter-spacing: 0.1em; background: var(--panel); display: flex; justify-content: space-between; align-items: center; min-height: 40px; flex-shrink: 0; }
@@ -95,19 +97,18 @@
   #status-msg.err { color: #c87070; }
   #status-msg.busy { color: var(--gold); }
 
+  /* ── RIGHT PANEL ── */
   #session-panel { width: 380px; min-width: 380px; border-left: 1px solid var(--border); background: var(--dark); display: flex; flex-direction: column; overflow: hidden; height: 100%; }
   #glb-permanent { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
   #glb-permanent-header { padding: 10px 16px; background: var(--dark); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; border-bottom: 1px solid var(--border); }
   #glb-permanent-header span { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
   #glb-permanent-controls { padding: 8px 12px; border-bottom: 1px solid var(--border); background: var(--panel); display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
 
-
-
-
   #new-file-bar { padding: 12px 16px; border-top: 1px solid var(--border); display: flex; gap: 6px; }
   #new-file-bar input { flex: 1; background: var(--panel); border: 1px solid var(--border); color: var(--ink); font-family: 'Courier Prime', monospace; font-size: 0.85rem; padding: 6px 8px; outline: none; }
   #new-file-bar input:focus { border-color: var(--gold-dim); }
 
+  /* ── MODALS ── */
   #modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 100; align-items: center; justify-content: center; }
   #modal-overlay.active { display: flex; }
   #modal { background: var(--dark); border: 1px solid var(--gold-dim); padding: 36px 40px; width: 560px; max-width: 90vw; }
@@ -136,10 +137,12 @@
 
   .hidden { display: none !important; }
 
+  /* ── DIVISION TABS ── */
   .div-tab { padding: 6px 14px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--border); background: var(--panel); color: var(--ink); cursor: pointer; border-radius: 4px 4px 0 0; transition: all 0.15s; font-family: 'Courier Prime', monospace; opacity: 0.6; }
   .div-tab:hover { border-color: var(--gold-dim); color: var(--gold); opacity: 1; }
   .div-tab.active { border-color: var(--gold); color: var(--gold); background: var(--bg); opacity: 1; border-bottom: 1px solid var(--bg); }
 
+  /* ── GLB PANEL ── */
   #glb-list { flex: 1; overflow-y: auto; padding: 0; }
   .glb-row { display: flex; flex-direction: column; padding: 8px 12px; border-bottom: 1px solid var(--border); gap: 5px; }
   .glb-row:hover { background: rgba(201,146,58,0.04); }
@@ -147,6 +150,8 @@
   .glb-row-btns { display: flex; gap: 5px; }
   .glb-row-btn { font-size: 0.68rem; padding: 3px 8px; flex-shrink: 0; white-space: nowrap; }
   #glb-empty { padding: 16px; font-size: 0.72rem; color: var(--gold-dim); text-align: center; opacity: 0.6; line-height: 1.8; }
+
+  /* ── GLB MODAL ── */
   #glb-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 200; align-items: center; justify-content: center; }
   #glb-modal.active { display: flex; }
   #glb-modal-inner { background: var(--dark); border: 1px solid var(--gold-dim); width: 560px; max-width: 92vw; overflow: hidden; }
@@ -193,6 +198,7 @@
 
 <div class="main">
 
+  <!-- ── SIDEBAR ── -->
   <div id="sidebar">
     <div id="sidebar-header">
       <span>Repository</span>
@@ -221,6 +227,7 @@
     </div>
   </div>
 
+  <!-- ── NEW PROJECT MODAL ── -->
   <div id="modal-overlay">
     <div id="modal">
       <h2 id="modal-title">New Project</h2>
@@ -250,6 +257,7 @@
           <option value="pitch-dark-art">Pitch Dark Art</option>
           <option value="pitch-dark-studios">Pitch Dark Studios</option>
           <option value="rd">R&amp;D</option>
+          <option value="test">Test</option>
         </select>
         <label>Project Name (e.g. my-new-novel)</label>
         <input type="text" id="np-name" placeholder="project-name" />
@@ -271,6 +279,7 @@
           <option value="pitch-dark-art">Pitch Dark Art</option>
           <option value="pitch-dark-studios">Pitch Dark Studios</option>
           <option value="rd">R&amp;D</option>
+          <option value="test">Test</option>
         </select>
         <label>File Name in Database (e.g. my-novel)</label>
         <input type="text" id="imp-name" placeholder="file-name" />
@@ -290,7 +299,7 @@
     </div>
   </div>
 
-  <!-- RENAME MODAL -->
+  <!-- ── RENAME MODAL ── -->
   <div id="rename-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:300;align-items:center;justify-content:center;">
     <div style="background:var(--dark);border:1px solid var(--gold-dim);width:520px;max-width:90vw;padding:32px 36px;">
       <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);margin-bottom:8px;">Rename Asset</div>
@@ -305,7 +314,7 @@
     </div>
   </div>
 
-  <!-- GLB VIEWER MODAL -->
+  <!-- ── GLB VIEWER MODAL ── -->
   <div id="glb-modal">
     <div id="glb-modal-inner">
       <div id="glb-modal-bar">
@@ -340,6 +349,7 @@
     </div>
   </div>
 
+  <!-- ── EDITOR PANEL ── -->
   <div id="editor-panel">
     <div id="notification-bar" style="display:none;padding:16px 24px;font-size:1.2rem;font-weight:700;letter-spacing:0.15em;text-align:center;text-transform:uppercase;"></div>
     <div id="file-path-bar">
@@ -355,6 +365,8 @@
         </div>
       </div>
     </div>
+
+    <!-- ── SESSION BRIEFING TABS ── -->
     <div id="instructions-panel">
       <div style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:#6aaa6a;padding:12px 24px 0;">Starting a new chat — select division — click to copy</div>
       <div id="division-tabs" style="display:flex;flex-wrap:wrap;gap:4px;padding:10px 24px 0;"></div>
@@ -366,6 +378,7 @@
         <div id="opening-prompt" style="background:var(--panel);border:1px solid var(--border);padding:10px 14px;font-size:0.82rem;line-height:1.6;color:var(--ink);cursor:pointer;white-space:pre-wrap;max-height:300px;overflow-y:auto;" onclick="copyOpeningPrompt()" title="Click to copy"></div>
       </div>
     </div>
+
     <div id="empty-state"></div>
     <textarea id="editor" class="hidden" placeholder="File contents will appear here..."></textarea>
     <div id="status-bar">
@@ -374,9 +387,8 @@
     </div>
   </div>
 
+  <!-- ── RIGHT PANEL — GLB ASSETS ── -->
   <div id="session-panel">
-
-    <!-- GLB ASSETS — PERMANENT LOWER SECTION -->
     <div id="glb-permanent">
       <div id="glb-permanent-header">
         <span>&#x25FB; GLB Assets</span>
@@ -400,16 +412,18 @@
         <span id="glb-status" style="font-size:0.8rem;">Ready</span>
       </div>
     </div>
-
   </div>
+
 </div>
 
 <script>
+// ── CONSTANTS ──────────────────────────────────────────
 const REPO = 'PitchDarkPress/pitch-dark-studios-memory';
 const API  = 'https://api.github.com';
 let currentFile = null;
 let currentSha  = null;
 
+// ── TOKEN ──────────────────────────────────────────────
 function getToken() {
   return localStorage.getItem('pdp_lip_token') || localStorage.getItem('pds_memory_token') || '';
 }
@@ -436,6 +450,7 @@ function todayStr() {
   return new Date().toISOString().split('T')[0];
 }
 
+// ── STATUS / NOTIFICATIONS ─────────────────────────────
 let notifTimer = null;
 function setStatus(msg, type = '') {
   const bar = document.getElementById('notification-bar');
@@ -465,6 +480,7 @@ function setSaveStatus(state) {
   }
 }
 
+// ── REPOSITORY TREE ────────────────────────────────────
 async function loadTree() {
   setStatus('Loading repository...', 'busy');
   try {
@@ -519,6 +535,7 @@ function makeFileItem(fullPath, label, depth) {
   return el;
 }
 
+// ── FILE OPERATIONS ────────────────────────────────────
 async function loadFile(path) {
   setStatus('Loading...', 'busy');
   try {
@@ -581,6 +598,7 @@ async function deleteFile() {
   } catch(e) { setStatus('Failed to trash file — ' + (e.message || 'check token'), 'err'); }
 }
 
+// ── TRASH ──────────────────────────────────────────────
 async function loadTrash() {
   try {
     const data = await apiGet(`/repos/${REPO}/contents/_trash`);
@@ -656,6 +674,7 @@ function toggleTrash() {
   if (!isVisible) { loadTrash(); actions.style.display = 'flex'; } else { actions.style.display = 'none'; }
 }
 
+// ── EDITOR HELPERS ─────────────────────────────────────
 function selectAll() { const editor = document.getElementById('editor'); editor.focus(); editor.select(); }
 
 function copyForClaude() {
@@ -704,7 +723,16 @@ function setNewFileStatus(msg, type) {
   if (type === 'ok' || type === 'err') { setTimeout(() => { el.style.display = 'none'; }, 4000); }
 }
 
+function updateCharCount() {
+  document.getElementById('char-count').textContent = `${document.getElementById('editor').value.length} chars`;
+}
 
+document.getElementById('editor').addEventListener('input', () => {
+  updateCharCount();
+  if (currentFile) setSaveStatus('unsaved');
+});
+
+// ── API HELPERS ────────────────────────────────────────
 async function apiGet(path) {
   const res = await fetch(`${API}${path}`, { headers: headers() });
   if (!res.ok) throw new Error(res.statusText);
@@ -717,15 +745,7 @@ async function apiPut(path, body) {
   return res.json();
 }
 
-function updateCharCount() {
-  document.getElementById('char-count').textContent = `${document.getElementById('editor').value.length} chars`;
-}
-
-document.getElementById('editor').addEventListener('input', () => {
-  updateCharCount();
-  if (currentFile) setSaveStatus('unsaved');
-});
-
+// ── NEW PROJECT MODAL ──────────────────────────────────
 let importFileContent = null;
 
 function openNewProjectModal() {
@@ -809,6 +829,7 @@ document.getElementById('modal-overlay').addEventListener('click', (e) => {
   if (e.target === document.getElementById('modal-overlay')) closeModal();
 });
 
+// ── CLOCK ──────────────────────────────────────────────
 function updateClock() {
   const now = new Date();
   document.getElementById('clock-time').textContent = now.toTimeString().split(' ')[0];
@@ -817,12 +838,13 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
+// ── IMAGE COUNTER ──────────────────────────────────────
 let imageCount = parseInt(sessionStorage.getItem('pds_image_count') || '0');
 document.getElementById('image-count').textContent = imageCount;
 function incrementImages() { imageCount++; sessionStorage.setItem('pds_image_count', imageCount); document.getElementById('image-count').textContent = imageCount; }
 function resetImages() { imageCount = 0; sessionStorage.setItem('pds_image_count', 0); document.getElementById('image-count').textContent = 0; }
 
-// ── DIVISION TABS ─────────────────────────────────────
+// ── DIVISION TABS ──────────────────────────────────────
 const DIVISIONS = [
   { id: 'core',                    label: 'Core'         },
   { id: 'inkyswot',                label: 'InkySwot'     },
@@ -834,17 +856,34 @@ const DIVISIONS = [
   { id: 'proauthorist',            label: 'Proauthorist' },
   { id: 'rd',                      label: 'R&D'          },
   { id: 'the-room',                label: 'The Room'     },
+  { id: 'test',                    label: 'Test'         },
 ];
 
+// Fetches Core + division current-state.md + locked-decisions.md
+// and assembles them into a single session briefing block.
 async function buildPrompt(division) {
   setStatus('Loading context...', 'busy');
   try {
+    // Always load Core
     const coreData = await apiGet(`/repos/${REPO}/contents/core/current-state.md`);
     const coreContent = decodeURIComponent(escape(atob(coreData.content.replace(/\n/g, ''))));
+
+    // Load division current-state.md
     const divData = await apiGet(`/repos/${REPO}/contents/${division.id}/current-state.md`);
     const divContent = decodeURIComponent(escape(atob(divData.content.replace(/\n/g, ''))));
+
+    // Load locked-decisions.md if it exists — silently skip if not
+    let lockedContent = '';
+    try {
+      const lockedData = await apiGet(`/repos/${REPO}/contents/${division.id}/locked-decisions.md`);
+      lockedContent = decodeURIComponent(escape(atob(lockedData.content.replace(/\n/g, ''))));
+    } catch(e) {
+      lockedContent = '';
+    }
+
+    const lockedSection = lockedContent ? `\n\n---\n\n${lockedContent}` : '';
     setStatus('Context ready — click to copy', 'ok');
-    return `I am Kev, running Pitch Dark Studios. Today we are working on ${division.label}.\n\n---\n\n${coreContent}\n\n---\n\n${divContent}`;
+    return `I am Kev, running Pitch Dark Studios. Today we are working on ${division.label}.\n\n---\n\n${coreContent}\n\n---\n\n${divContent}${lockedSection}`;
   } catch(e) {
     setStatus('Failed to load context — check token', 'err');
     return null;
@@ -885,9 +924,7 @@ function copyOpeningPrompt() {
   navigator.clipboard.writeText(document.getElementById('opening-prompt').textContent).then(() => setStatus('Copied — paste into new Claude chat \u2713', 'ok'));
 }
 
-
-
-// ── FOLDER MANAGER ───────────────────────────────────
+// ── FOLDER MANAGER ─────────────────────────────────────
 const FOLDERS_KEY = 'pds_glb_folders';
 
 function getFolders() {
@@ -953,7 +990,7 @@ function getCurrentFolder() {
   return sel ? sel.value : 'the-room';
 }
 
-// ── GLB ASSET VIEWER ─────────────────────────────────
+// ── GLB ASSET VIEWER ───────────────────────────────────
 let glbAssets = [];
 
 async function loadGlbAssets() {
@@ -1112,6 +1149,7 @@ async function handleGlbUpload(input) {
   reader.readAsDataURL(file);
 }
 
+// ── GLB MODAL ──────────────────────────────────────────
 function parseCreditLine() {
   const raw = document.getElementById('paste-credit').value.trim();
   if (!raw) { setStatus('Paste a credit line first', 'err'); return; }
@@ -1213,9 +1251,7 @@ document.addEventListener('click', (e) => {
   if (e.target === document.getElementById('glb-modal')) closeGlbModal();
 });
 
-
-
-
+// ── INIT ───────────────────────────────────────────────
 window.addEventListener('load', () => {
   const token = getToken();
   if (token) { document.getElementById('token-input').value = '\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022'; loadTree(); }
