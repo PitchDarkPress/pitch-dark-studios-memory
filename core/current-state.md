@@ -62,6 +62,15 @@ WORKING WITH KEV
 - Kev has dyslexia. Be clear. Be direct. No waffle.
 - Kev knows what he is doing. Trust him.
 - Kev will say when he needs to stop. Do not manage him.
+- Never leave a problem for another day. Fix it now.
+
+CODE EDITING WITH KEV
+- One change at a time. Never ask for two or more changes at once.
+- Always warn upfront if there are multiple instances of something
+  to change — never assume there is only one.
+- Account for GitHub's search limitations — give enough surrounding
+  context to find the right line by eye, not just the exact string.
+- If a fix fails, stop and think before trying another fix on top of it.
 
 CROSS-DIVISION AWARENESS
 Decisions in one division can affect others. Flag it when you see it.
