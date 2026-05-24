@@ -1,48 +1,16 @@
-# InkySwot — Current State
-*Last updated: 22 May 2026*
+InkySwot — Current State
+Last updated: 24 May 2026
 
 ---
 
-## NOTE TO NEW CLAUDE
-
-You will be given two files at the start of every session:
-the Core file and this division file. Read both before
-responding.
-
-This file contains everything specific to InkySwot.
-The Core file contains studio-wide identity, branding,
-people, and structure.
-
-At the end of every session, ask Kev:
-"Shall I update the files now?"
-If yes, rewrite this file incorporating everything
-discussed and decided. Overwrite — do not append.
-If the session touched studio-wide information,
-rewrite Core too.
-
-When you provide the rewritten file, always end with:
-"Paste this into this division's current-state.md in the
-admin panel at pitchdarkpress.github.io/pitch-dark-studios-memory
-and click Save to GitHub."
-
-Kev will copy the rewritten file, paste it into
-the admin panel, and save it to GitHub.
-That is the complete system.
-
----
-
-## WHAT INKYSWOT IS
-
+WHAT INKYSWOT IS
 Web-based story world-building and production platform.
 The world's first Digital Creative Workstation (DCW)
 for writers. Single HTML file.
 Live at: inkyswot-app.vercel.app
 DNS to app.inkyswot.com pending (UK Cheapest).
 
----
-
-## IDENTITY & BRANDING
-
+IDENTITY & BRANDING
 Name: InkySwot (capital I, capital S. Always.)
 Tagline: Publish and be prepared.
 App hero text: PUBLISH AND BE DAMNED (no full stop)
@@ -53,50 +21,34 @@ Said as three letters: D.C.W.
 Newsletter: The InkySwot Bugle
 AI position: AI welcome. AI optional. Always writer-led.
 
----
-
-## COLOURS
-
+COLOURS
 #0f0d0a / #18120d / #221a14
 Ink: #e8e0d0 / #b0a090 / #706050
 Gold: #c9923a / #e8b060
 Rule: #221709 / #352815
 Light: #fafaf8 / #1a1410 / #b07820
 
----
-
-## FONTS
-
+FONTS
 Playfair Display 900
 Crimson Pro 300/400/600
 JetBrains Mono 300/400/500
 All Google Fonts.
 
----
-
-## PRICING
-
+PRICING
 One tier. No feature gates. No second class writers.
-
 Monthly: £7.95 / 150 prompts per day / everything included
 Annual: £79.50 / two months free / same everything
 Top-up: £1.99 for 500 prompts / available, never pushed
 Lifetime: by invitation / Kev, Sara, early testers / everything forever
-
 Free tier: 1 project / localStorage / 20 AI calls per day /
 JSON export / £1.99 per Store publication
-
 Ada's contextual observations are FREE — do not count against
 prompt allowance. Ada conversational responses count.
-
 Lifetime members: infinity symbol in header instead of number.
 Server-side flag: is_lifetime: true in Supabase.
 Must be before F12 blocker.
 
----
-
-## TECHNICAL
-
+TECHNICAL
 Version: v4.7 — pre-Step 1 rebuild.
 Autumn 2026 launch target.
 Repo: PitchDarkPress/inkyswot-app
@@ -105,36 +57,24 @@ API: claude-haiku-4-5-20251001
 Key: inkyswot-app-2 — Vercel Environment Variables ONLY.
 NEVER IN GITHUB.
 
----
-
-## BUILD RULES
-
+BUILD RULES
 Fix before moving on. No snag lists. No deferred problems.
 No patches on patches. One step at a time.
 Explain before doing. Wait for confirmation.
 Persistent bugs: rebuild from scratch. Never overwhelm.
 
----
-
-## WHAT IS BUILT AND WORKING
-
+WHAT IS BUILT AND WORKING
 Landing page / My Projects / Trash / New Project modal /
 Overview / Characters / Relationships / Factions & Orgs /
 Language & Dialogue / Locations / Buildings / Read Aloud /
 AI Expand / AI ON/OFF toggle / Light-dark mode /
 Voice selector / Help section in sidebar.
 
----
-
-## WHAT SHOWS AS COMING SOON (in nav, not yet built)
-
+WHAT SHOWS AS COMING SOON (in nav, not yet built)
 Objects & Artefacts / Rules & Lore / Plot / Library /
 Chapters / DCW / Tutorial / Manual / FAQs / What's New.
 
----
-
-## WHAT IS NOT YET IN THE APP (Step 1 work)
-
+WHAT IS NOT YET IN THE APP (Step 1 work)
 Style Field (tone/voice dropdown + free text on Overview)
 Three-field genre (replaces single dropdown)
 Sandbox
@@ -142,10 +82,7 @@ Import option in New Project modal
 Three-panel layout (left sidebar / centre / right white
 panel / timeline strip below)
 
----
-
-## BUILD ORDER — CONFIRMED
-
+BUILD ORDER — CONFIRMED
 Step 1 — v4.0 App Shell Rebuild (NOT YET STARTED)
 Step 2 — Walk the Platform
 Step 3 — Sign Off Layout and Journey (Gate)
@@ -166,126 +103,50 @@ Step 17 — PWA Manifest
 Step 18 — Beta
 Step 19 — Launch
 
----
-
-## ADA
-
+ADA
 Name: Ada. Named after Ada Lovelace — the first programmer.
 Female. Fixed. Not a user setting.
 The writer's assistant — no artificial boundaries.
-
 INTERNAL POSITIONING — NEVER USE PUBLICLY:
 'ChatGPT knows the world. Ada knows your world.'
-
 Position: Header. Between project name and prompt counter.
 Visible when AI ON. Hidden when AI OFF.
-
 Visual states:
 SLEEPING — idle. Dim. Small zzz animation floating upward.
 ACTIVE — gold underline, slow pulse.
 HIDDEN — when AI is OFF.
-
 Ada asks once, early: 'What would you like me to call you?'
 Remembers forever. Never asks again.
-
 Voice: Google UK English Female — browser speechSynthesis.
 Free. No API. No external cost.
 Ada's voice never changes.
 Note: Sara Martin will NOT be voicing Ada. Alternative TBD.
-
 Personality: Warm and friendly by default.
 Stern when required — says what needs to be said once,
 without drama, then leaves it to the writer.
 Never patronises. Never overwhelms.
 Never performs enthusiasm.
 Speaks when worth saying. Silent otherwise.
-
 Ada navigates, searches, monitors prompts, raises support
 tickets. Ada's observations are FREE.
-
 Ada is Step 12 in the build order.
 
----
-
-## SECURITY
-
+SECURITY
 API key: inkyswot-app-2 — Vercel Environment Variables ONLY.
 Never in GitHub. Never in client code.
-
 Spam prevention:
 Email verification code: unique, 20 min expiry, max 3 requests,
 3 failures = account lock + spam flag.
 Free tier: 20 AI calls per day.
 Store: £1.99 per publication on free accounts.
-
 Prompt counter security:
 Step 5: Lifetime flag server-side in Supabase.
 Step 6: F12 blocker.
 Step 7: Prompt counter moves to Supabase.
 Non-negotiable before launch.
 
----
-
-## LOCKED DECISIONS
-
-Format list: Novel / Short Story / Novella / Flash Fiction /
-Screenplay / Teleplay / Radio Drama / Audio Drama /
-Stage Play / Picture Book / Children's Book / Graphic Novel /
-Poetry Collection / Non-Fiction / Memoir / Essay Collection /
-Literary Journal / Cookbook / Other
-
-Genre: Three fields — primary + two sub-genres.
-All three feed AI context. Not a dropdown. Not a tag cloud.
-
-Signup: Email + password → Email verification →
-Platform code → Platform access.
-
-Data: InkySwot never sells user data. Ever.
-GDPR compliant. Deletion within 30 days.
-
-REMOVED — NOT BEING BUILT:
-Cover thumbnail on Overview.
-AI-generated cover concepts — post-launch only.
-
----
-
-## OPEN DECISIONS
-
-Writing panel tagline — undecided.
-Chapters screen spec — superseded, new spec needed.
-Export Suite full spec — needed before Step 14.
-Manuscript storage 5MB decision — pending.
-Sandbox v4.0 position — pending.
-Proauthorism credit in app — undecided.
-Beta programme structure — undecided.
-Store full anti-spam strategy — needed before Step 15.
-Six user flow gaps — resolve in Step 2.
-Ada voice alternative — to be decided.
-Cloudflare adoption — recommended pre-launch.
-
----
-
-## FUTURE IDEAS (not on build list)
-
-Online Newspapers and Magazines Platform — logged.
-Rights Marketplace — logged.
-Collaboration Mode — post-launch.
-Version History and Snapshots — post-launch.
-AI Voice Profiles — post-launch.
-Full voice interaction for Ada — post-launch.
-Braille support — post-launch.
-Multi-voice audiobook production — post-launch.
-Platform Comparison Chart — ongoing content.
-YouTube Literary Quote Videos — logged.
-YouTube Ambient Writing Music — logged.
-
----
-
-## CURRENT STATUS & NEXT ACTIONS
-
+CURRENT STATUS & NEXT ACTIONS
 v4.7 pre-Step 1 rebuild. Autumn 2026 launch target.
-All database files consolidated into this single file
-22 May 2026.
 
 NEXT
 1. Begin Step 1 — v4.0 app shell rebuild
