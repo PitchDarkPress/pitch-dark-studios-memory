@@ -883,7 +883,7 @@ async function buildPrompt(division) {
 
     const lockedSection = lockedContent ? `\n\n---\n\n${lockedContent}` : '';
     setStatus('Context ready — click to copy', 'ok');
-    return `I am Kev, running Pitch Dark Studios. Today we are working on ${division.label}.\n\n---\n\n${coreContent}\n\n---\n\n${divContent}${lockedSection}`;
+ return `${coreContent}\n\n---\n\n${divContent}${lockedSection}`;
   } catch(e) {
     setStatus('Failed to load context — check token', 'err');
     return null;
