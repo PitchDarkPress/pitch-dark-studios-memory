@@ -419,9 +419,8 @@
 <script>
 // ── CONSTANTS ──────────────────────────────────────────
 const REPO = 'PitchDarkPress/pitch-dark-studios-memory';
-const FILE_ORDER = ['current-state.md', 'locked-decisions.md', 'completed.md', 'thinking.md', 'future.md', 'ada.md', 'security.md', 'build-list.md'];
-const FILE_RED  = ['completed.md', 'thinking.md', 'future.md'];
-const FILE_GOLD = ['ada.md', 'security.md', 'build-list.md'];
+const FILE_ORDER = ['current-state.md', 'locked-decisions.md', 'completed.md', 'thinking.md', 'future.md'];
+const FILE_RED = ['completed.md', 'thinking.md', 'future.md'];
 const API  = 'https://api.github.com';
 let currentFile = null;
 let currentSha  = null;
@@ -538,12 +537,10 @@ function toggleFolder(folder) {
 function makeFileItem(fullPath, label, depth) {
   const el = document.createElement('div');
   const filename = fullPath.split('/').pop();
-  const isSession = fullPath.includes('/sessions/');
+  const isRed = FILE_RED.includes(filename);
   el.className = `tree-item file${depth >= 2 ? ' depth-2' : ''}`;
   el.innerHTML = `<span class="icon">\u25E6</span> ${label}`;
-  if (FILE_RED.includes(filename))       el.style.color = '#e06060';
-  else if (FILE_GOLD.includes(filename)) el.style.color = '#c9923a';
-  else if (isSession)                    el.style.color = '#6090c0';
+  if (isRed) el.style.color = '#e06060';
   el.onclick = () => loadFile(fullPath);
   el.dataset.path = fullPath;
   return el;
@@ -882,9 +879,12 @@ async function buildPrompt(division) {
     const coreData = await apiGet(`/repos/${REPO}/contents/core/current-state.md`);
     const coreContent = decodeURIComponent(escape(atob(coreData.content.replace(/\n/g, ''))));
 
-    // Load division current-state.md
-    const divData = await apiGet(`/repos/${REPO}/contents/${division.id}/current-state.md`);
-    const divContent = decodeURIComponent(escape(atob(divData.content.replace(/\n/g, ''))));
+    // Load division current-state.md (skip if Core — same file as core)
+    let divContent = '';
+    if (division.id !== 'core') {
+      const divData = await apiGet(`/repos/${REPO}/contents/${division.id}/current-state.md`);
+      divContent = decodeURIComponent(escape(atob(divData.content.replace(/\n/g, ''))));
+    }
 
     // Load locked-decisions.md if it exists — silently skip if not
     let lockedContent = '';
