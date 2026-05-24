@@ -526,10 +526,16 @@ function toggleFolder(folder) {
   else { group.style.display = 'none'; el.querySelector('.icon').textContent = '\u25B8'; }
 }
 
+const FILE_ORDER = ['current-state.md', 'locked-decisions.md', 'completed.md', 'thinking.md', 'future.md'];
+const FILE_RED = ['completed.md', 'thinking.md', 'future.md'];
+
 function makeFileItem(fullPath, label, depth) {
   const el = document.createElement('div');
+  const filename = fullPath.split('/').pop();
+  const isRed = FILE_RED.includes(filename);
   el.className = `tree-item file${depth >= 2 ? ' depth-2' : ''}`;
   el.innerHTML = `<span class="icon">\u25E6</span> ${label}`;
+  if (isRed) el.style.color = '#c87070';
   el.onclick = () => loadFile(fullPath);
   el.dataset.path = fullPath;
   return el;
@@ -883,7 +889,7 @@ async function buildPrompt(division) {
 
     const lockedSection = lockedContent ? `\n\n---\n\n${lockedContent}` : '';
     setStatus('Context ready — click to copy', 'ok');
- return `${coreContent}\n\n---\n\n${divContent}${lockedSection}`;
+    return `I am Kev, running Pitch Dark Studios. Today we are working on ${division.label}.\n\n---\n\n${coreContent}\n\n---\n\n${divContent}${lockedSection}`;
   } catch(e) {
     setStatus('Failed to load context — check token', 'err');
     return null;
