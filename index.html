@@ -419,6 +419,8 @@
 <script>
 // ── CONSTANTS ──────────────────────────────────────────
 const REPO = 'PitchDarkPress/pitch-dark-studios-memory';
+const FILE_ORDER = ['current-state.md', 'locked-decisions.md', 'completed.md', 'thinking.md', 'future.md'];
+const FILE_RED = ['completed.md', 'thinking.md', 'future.md'];
 const API  = 'https://api.github.com';
 let currentFile = null;
 let currentSha  = null;
@@ -512,7 +514,13 @@ function renderTree(items) {
     const group = document.createElement('div');
     group.id = `folder-${folder}`;
     group.style.display = 'none';
-    structure[folder].sort((a,b) => a.path.localeCompare(b.path)).forEach(item => {
+    structure[folder].sort((a,b) => {
+      const ai = FILE_ORDER.indexOf(a.path.split('/').pop());
+      const bi = FILE_ORDER.indexOf(b.path.split('/').pop());
+      const ao = ai === -1 ? 99 : ai;
+      const bo = bi === -1 ? 99 : bi;
+      return ao !== bo ? ao - bo : a.path.localeCompare(b.path);
+    }).forEach(item => {
       group.appendChild(makeFileItem(item.path, item.path.split('/').slice(1).join('/'), item.path.split('/').length - 1));
     });
     tree.appendChild(group);
@@ -526,16 +534,13 @@ function toggleFolder(folder) {
   else { group.style.display = 'none'; el.querySelector('.icon').textContent = '\u25B8'; }
 }
 
-const FILE_ORDER = ['current-state.md', 'locked-decisions.md', 'completed.md', 'thinking.md', 'future.md'];
-const FILE_RED = ['completed.md', 'thinking.md', 'future.md'];
-
 function makeFileItem(fullPath, label, depth) {
   const el = document.createElement('div');
   const filename = fullPath.split('/').pop();
   const isRed = FILE_RED.includes(filename);
   el.className = `tree-item file${depth >= 2 ? ' depth-2' : ''}`;
   el.innerHTML = `<span class="icon">\u25E6</span> ${label}`;
-  if (isRed) el.style.color = '#c87070';
+  if (isRed) el.style.color = '#e06060';
   el.onclick = () => loadFile(fullPath);
   el.dataset.path = fullPath;
   return el;
