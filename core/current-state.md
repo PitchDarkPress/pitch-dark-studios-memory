@@ -1,7 +1,3 @@
-I am Kev, running Pitch Dark Studios. Today we are working on [DIVISION].
-
----
-
 Core — Current State
 Last updated: 24 May 2026
 
