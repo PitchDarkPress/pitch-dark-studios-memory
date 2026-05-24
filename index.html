@@ -691,7 +691,7 @@ function selectAll() { const editor = document.getElementById('editor'); editor.
 function copyForClaude() {
   const path = document.getElementById('current-path').textContent;
   const content = document.getElementById('editor').value;
-  navigator.clipboard.writeText(`File: ${path}\n\n${content}`).then(() => setStatus('Copied to clipboard — paste into Claude', 'ok'));
+  navigator.clipboard.writeText(`File: ${path}\n\n${content}`).then(() => setStatus('Copied to clipboard — paste to AI', 'ok'));
 }
 
 function clearEditor() {
