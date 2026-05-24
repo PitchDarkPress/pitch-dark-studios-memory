@@ -1,18 +1,16 @@
-InkySwot — Thinking
+InkySwot — Future Ideas
 Last updated: 24 May 2026
 
 ---
 
-OPEN DECISIONS — NEED RESOLVING BEFORE BUILD STEPS NOTED
-
-Writing panel tagline — undecided.
-Chapters screen spec — superseded, new spec needed before Step 10.
-Export Suite full spec — needed before Step 14.
-Manuscript storage 5MB decision — pending before Step 14.
-Sandbox v4.0 position — pending before Step 1.
-Proauthorism credit in app — undecided.
-Beta programme structure — undecided before Step 18.
-Store full anti-spam strategy — needed before Step 15.
-Six user flow gaps — resolve in Step 2.
-Ada voice alternative — to be decided before Step 12.
-Cloudflare adoption — recommended pre-launch.
+Online Newspapers and Magazines Platform — logged.
+Rights Marketplace — logged.
+Collaboration Mode — post-launch.
+Version History and Snapshots — post-launch.
+AI Voice Profiles — post-launch.
+Full voice interaction for Ada — post-launch.
+Braille support — post-launch.
+Multi-voice audiobook production — post-launch.
+Platform Comparison Chart — ongoing content.
+YouTube Literary Quote Videos — logged.
+YouTube Ambient Writing Music — logged.
