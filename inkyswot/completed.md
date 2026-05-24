@@ -1,5 +1,1 @@
-# completed
-
-*Created: 2026-05-24*
-
-Nothing recorded yet.
+Database restructured — InkySwot content redistributed into five files — 24 May 2026.
