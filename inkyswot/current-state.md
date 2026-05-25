@@ -142,6 +142,25 @@ Never in GitHub. Never in client code.
 Prompt counter security: Steps 5-7 in build list.
 Non-negotiable before launch.
 
+SPECIALIST FILES — INKYSWOT ONLY
+These files exist in addition to the standard five.
+They must be fetched when the session calls for them.
+Always tell Kev before fetching.
+
+ada.md — Full Ada specification: personality, behaviour,
+navigation, voice, visual states, support, presence page.
+Fetch when: working on Ada in any capacity.
+
+security.md — Full security system: the seven layers,
+threat levels, behaviour pattern detection, device key
+model, anti-spam architecture.
+Fetch when: working on security, anti-spam, or signup flow.
+
+build-list.md — Detailed spec for all 19 build steps.
+Step names only are in current-state.md — the full detail
+is here.
+Fetch when: working on any specific build step.
+
 UX MAP — USER JOURNEY
 Last reviewed: 24 May 2026
 Two distinct journeys. Both end at WRITE.
