@@ -1,5 +1,6 @@
+File: inkyswot/locked-decisions.md
 InkySwot — Locked Decisions
-Last updated: 24 May 2026
+Last updated: 25 May 2026
 
 ---
 
@@ -86,3 +87,9 @@ Why: Ada Lovelace is the first programmer. Appropriate and meaningful.
 Cover thumbnail on Overview — REMOVED. Not being built.
 AI-generated cover concepts — post-launch only. Not being built now.
 Why: scope control. Focus on core platform first.
+
+AUTHENTICATION
+Email + password only. No SSO. No third party authentication.
+Why: keeps security model clean. No third party dependency.
+Consistent with email verification layer.
+Locked: 25 May 2026.
