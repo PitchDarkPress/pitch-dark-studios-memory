@@ -1,5 +1,5 @@
 InkySwot — Current State
-Last updated: 24 May 2026
+Last updated: 25 May 2026
 
 ---
 
@@ -134,29 +134,91 @@ tickets. Ada's observations are FREE.
 Ada is Step 12 in the build order.
 
 SECURITY
-API key: inkyswot-app-2 — Vercel Environment Variables ONLY.
+Full security system documented in security.md.
+Core principle: paid only removes the primary abuse vector.
+Seven-layer system locked 24 May 2026 — see security.md.
+API key: Vercel Environment Variables ONLY.
 Never in GitHub. Never in client code.
-Spam prevention:
-Email verification code: unique, 20 min expiry, max 3 requests,
-3 failures = account lock + spam flag.
-Free tier: 20 AI calls per day.
-Store: £1.99 per publication on free accounts.
-Prompt counter security:
-Step 5: Lifetime flag server-side in Supabase.
-Step 6: F12 blocker.
-Step 7: Prompt counter moves to Supabase.
+Prompt counter security: Steps 5-7 in build list.
 Non-negotiable before launch.
+
+UX MAP — USER JOURNEY
+Last reviewed: 24 May 2026
+Two distinct journeys. Both end at WRITE.
+
+JOURNEY 1 — NEW PROJECT
+Landing Page
+→ Sign Up or Log In
+→ DECIDE: New Project or Import Project
+→ New Project selected
+→ Project Setup: Title / Format / Genre / Style/Tone
+→ Create Project
+→ Workspace Opens
+→ Two parallel tracks available:
+   TRACK A — Build World:
+   Character / Location / Building / Faction / Lore / Timeline
+   → Add to Database
+   → Write
+   TRACK B — Write directly
+   → Write
+Both tracks feed into WRITE.
+
+JOURNEY 2 — IMPORT PROJECT
+Landing Page
+→ Sign Up or Log In
+→ DECIDE: New Project or Import Project
+→ Import Project selected
+→ Import Manuscript
+→ Workspace Opens
+→ Highlight Entity/s in manuscript
+→ Categorise: Character / Location / Building /
+  Faction / Lore / Timeline
+→ Add to Database
+→ Write
+
+THE DCW — NOT YET ON THE MAP
+The Digital Creative Workstation is the full platform
+vision. It is not yet represented in the UX map.
+Where it sits in the user journey has not been decided.
+This is a significant open question.
+
+UX MAP GAPS — STATUS
+Gap 1: Free-to-paid upgrade trigger
+RESOLVED — paid only, no free tier, no upgrade moment.
+
+Gap 2: Publishing fee presentation
+RESOLVED — £1 GBP per publication, upfront, transparent
+to all users at the point of publishing.
+
+Gap 3: Export Suite conversion moment
+RESOLVED — export is the same for all users. No upgrade
+wall at export. The platform earns loyalty through quality
+not through restricting access to export formats.
+
+Gap 4: Font import in Publishing Suite Templates
+NOT RESOLVED — TBD before Step 14.
+
+Gap 5: Document types in New Project modal
+NOT RESOLVED — full list of document types needed.
+Affects what changes in the workspace based on selection.
+
+Gap 6: Import/migration route for existing writers
+NOT RESOLVED — format TBD, what happens to imported
+content TBD. Critical for Step 1.
 
 CURRENT STATUS & NEXT ACTIONS
 v4.7 pre-Step 1 rebuild. Autumn 2026 launch target.
 Pricing locked — 24 May 2026.
 Security system designed — 24 May 2026.
 UX map reviewed — gaps identified — 24 May 2026.
+Working on UX map implementation — 25 May 2026.
 
 NEXT
-1. Begin Step 1 — v4.0 app shell rebuild
-2. Three-panel layout
-3. All existing screens carried across
-4. Style Field added to Overview
-5. Three-field genre implemented
-6. Import option in New Project modal
+1. Resolve remaining UX map gaps (4, 5, 6)
+2. Place DCW in the user journey
+3. Begin Step 1 — v4.0 app shell rebuild
+4. Three-panel layout
+5. All existing screens carried across
+6. Style Field added to Overview
+7. Three-field genre implemented
+8. Import option in New Project modal
