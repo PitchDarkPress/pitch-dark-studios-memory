@@ -1,4 +1,4 @@
-InkySwot — Current State
+File: inkyswot/current-state.md
 Last updated: 25 May 2026
 
 ---
@@ -12,7 +12,7 @@ DNS to app.inkyswot.com pending (UK Cheapest).
 
 IDENTITY & BRANDING
 Name: InkySwot (capital I, capital S. Always.)
-Tagline: Publish and be prepared.
+Tagline: Publish and be damned.
 App hero text: PUBLISH AND BE DAMNED (no full stop)
 Landing line: The world's first Digital Creative Workstation
 for writers (no full stop)
@@ -59,6 +59,11 @@ API: claude-haiku-4-5-20251001
 Key: inkyswot-app-2 — Vercel Environment Variables ONLY.
 NEVER IN GITHUB.
 
+FILES IN REPO
+index.html — the app workspace
+login.html — the login / sign up gate
+inkylogin-bg.png — login page background image (currently unused)
+
 BUILD RULES
 Fix before moving on. No snag lists. No deferred problems.
 No patches on patches. One step at a time.
@@ -66,11 +71,29 @@ Explain before doing. Wait for confirmation.
 Persistent bugs: rebuild from scratch. Never overwhelm.
 
 WHAT IS BUILT AND WORKING
-Landing page / My Projects / Trash / New Project modal /
+Landing page (inkyswot.com) — ticker, clocks, Log In / Sign Up buttons.
+Login page (app.inkyswot.com/login.html) — members access gate,
+fixed panel, Log In and Sign Up tabs. Stubbed — not yet wired to Supabase.
+My Projects / Trash / New Project modal /
 Overview / Characters / Relationships / Factions & Orgs /
 Language & Dialogue / Locations / Buildings / Read Aloud /
 AI Expand / AI ON/OFF toggle / Light-dark mode /
 Voice selector / Help section in sidebar.
+
+LANDING PAGE — inkyswot.com
+Ticker strip — InkySwot promo lines, seamless scroll, 15s speed.
+World clocks — Tokyo / Sydney / New York / London (centre) /
+Frankfurt / Dubai / Hong Kong. Singapore removed.
+Log In and Sign Up buttons — top right of ticker strip.
+Both currently link to app.inkyswot.com/login.html.
+
+LOGIN PAGE — app.inkyswot.com/login.html
+Separate file — login.html — in PitchDarkPress/inkyswot-app repo.
+Full screen dark panel. Fixed size — never moves between tabs.
+Log In tab: Email / Password / Enter button / Forgot password.
+Sign Up tab: Email / Password / Confirm Password / Request Admission.
+Authentication stubbed — wires to Supabase in Step 4.
+Both forms submit to index.html for now.
 
 WHAT SHOWS AS COMING SOON (in nav, not yet built)
 Objects & Artefacts / Rules & Lore / Plot / Library /
@@ -141,6 +164,8 @@ API key: Vercel Environment Variables ONLY.
 Never in GitHub. Never in client code.
 Prompt counter security: Steps 5-7 in build list.
 Non-negotiable before launch.
+Signup route: Email + password → email verification code → platform access.
+No SSO. No third party authentication. Email and password only.
 
 SPECIALIST FILES — INKYSWOT ONLY
 These files exist in addition to the standard five.
@@ -163,12 +188,14 @@ is here.
 Ask for when: working on any specific build step.
 
 UX MAP — USER JOURNEY
-Last reviewed: 24 May 2026
+Last reviewed: 25 May 2026
 Two distinct journeys. Both end at WRITE.
 
 JOURNEY 1 — NEW PROJECT
-Landing Page
-→ Sign Up or Log In
+Landing Page (inkyswot.com)
+→ Click Log In or Sign Up
+→ Login page (app.inkyswot.com/login.html)
+→ Log In or Sign Up
 → DECIDE: New Project or Import Project
 → New Project selected
 → Project Setup: Title / Format / Genre / Style/Tone
@@ -184,8 +211,10 @@ Landing Page
 Both tracks feed into WRITE.
 
 JOURNEY 2 — IMPORT PROJECT
-Landing Page
-→ Sign Up or Log In
+Landing Page (inkyswot.com)
+→ Click Log In or Sign Up
+→ Login page (app.inkyswot.com/login.html)
+→ Log In or Sign Up
 → DECIDE: New Project or Import Project
 → Import Project selected
 → Import Manuscript
@@ -230,8 +259,8 @@ CURRENT STATUS & NEXT ACTIONS
 v4.7 pre-Step 1 rebuild. Autumn 2026 launch target.
 Pricing locked — 24 May 2026.
 Security system designed — 24 May 2026.
-UX map reviewed — gaps identified — 24 May 2026.
-Working on UX map implementation — 25 May 2026.
+Landing page updated — 25 May 2026.
+Login page built — 25 May 2026.
 
 NEXT
 1. Resolve remaining UX map gaps (4, 5, 6)
