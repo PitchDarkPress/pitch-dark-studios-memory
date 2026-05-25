@@ -19,21 +19,21 @@ FILES YOU RECEIVE AT THE START OF EVERY SESSION
 
 Read all three before responding. Do not respond until you have.
 
-FILES YOU FETCH DURING A SESSION
-You can fetch any file directly from GitHub using this pattern:
-https://raw.githubusercontent.com/PitchDarkPress/pitch-dark-studios-memory/main/[division]/[filename].md
+FILES YOU MAY NEED DURING A SESSION
+Claude cannot fetch files directly. When a file is needed
+mid-session, ask Kev to open it in the admin panel and
+paste it into the chat when required.
 
-Always tell Kev which file you are fetching and why before you fetch it.
-Example: "I'm going to fetch future.md because we're discussing
-something that may already be logged there."
-
-Fetch these files when the session calls for them:
+Ask for these files when the session calls for them:
 - thinking.md — when conversation moves into creative or
   strategic territory
 - future.md — when planning, or when an idea surfaces that
   might already be logged
 - completed.md — when building, so you never suggest
   rebuilding something already done
+- Any specialist files listed in the division's current-state.md
+
+Always tell Kev which file you need and why before asking.
 
 THE FIVE FILES PER DIVISION
 1. current-state.md — active work only. Lean. Overwrite each session.
@@ -71,6 +71,18 @@ CODE EDITING WITH KEV
 - Account for GitHub's search limitations — give enough surrounding
   context to find the right line by eye, not just the exact string.
 - If a fix fails, stop and think before trying another fix on top of it.
+
+SPECIALIST FILES
+Some divisions have specialist files beyond the standard five.
+These are division-specific reference documents — detailed specs
+for major features, systems, or components.
+Every division that has specialist files must list them in its
+current-state.md under a SPECIALIST FILES section, with:
+- The filename
+- What it contains in one line
+- When to fetch it
+This applies to every Pitch Dark Studios platform and division.
+Without this, future Claude sessions will not know the files exist.
 
 CROSS-DIVISION AWARENESS
 Decisions in one division can affect others. Flag it when you see it.
