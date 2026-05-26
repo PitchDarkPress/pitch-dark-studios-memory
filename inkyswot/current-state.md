@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 25 May 2026
+Last updated: 26 May 2026
 
 ---
 
@@ -59,10 +59,14 @@ API: claude-haiku-4-5-20251001
 Key: inkyswot-app-2 — Vercel Environment Variables ONLY.
 NEVER IN GITHUB.
 
-FILES IN REPO
+FILES IN REPO — inkyswot-app
 index.html — the app workspace
-login.html — the login / sign up gate
+login.html — the login / sign up gate (single tabbed page)
 inkylogin-bg.png — login page background image (currently unused)
+
+FILES IN REPO — inkyswot (landing page)
+index.html — the landing page
+CNAME — www.inkyswot.com
 
 BUILD RULES
 Fix before moving on. No snag lists. No deferred problems.
@@ -74,6 +78,7 @@ WHAT IS BUILT AND WORKING
 Landing page (inkyswot.com) — ticker, clocks, Log In / Sign Up buttons.
 Login page (app.inkyswot.com/login.html) — members access gate,
 fixed panel, Log In and Sign Up tabs. Stubbed — not yet wired to Supabase.
+Both forms show "not yet open" message on submit — no routing to app.
 My Projects / Trash / New Project modal /
 Overview / Characters / Relationships / Factions & Orgs /
 Language & Dialogue / Locations / Buildings / Read Aloud /
@@ -85,15 +90,16 @@ Ticker strip — InkySwot promo lines, seamless scroll, 15s speed.
 World clocks — Tokyo / Sydney / New York / London (centre) /
 Frankfurt / Dubai / Hong Kong. Singapore removed.
 Log In and Sign Up buttons — top right of ticker strip.
-Both currently link to app.inkyswot.com/login.html.
+Both link to app.inkyswot.com/login.html.
 
 LOGIN PAGE — app.inkyswot.com/login.html
-Separate file — login.html — in PitchDarkPress/inkyswot-app repo.
+Single file with two tabs — Log In and Sign Up.
 Full screen dark panel. Fixed size — never moves between tabs.
 Log In tab: Email / Password / Enter button / Forgot password.
 Sign Up tab: Email / Password / Confirm Password / Request Admission.
+Both tabs show "not yet open" message on submit.
 Authentication stubbed — wires to Supabase in Step 4.
-Both forms submit to index.html for now.
+Do not add routing to index.html until Step 4 is complete.
 
 WHAT SHOWS AS COMING SOON (in nav, not yet built)
 Objects & Artefacts / Rules & Lore / Plot / Library /
@@ -261,6 +267,8 @@ Pricing locked — 24 May 2026.
 Security system designed — 24 May 2026.
 Landing page updated — 25 May 2026.
 Login page built — 25 May 2026.
+Login page text sizes increased — 26 May 2026.
+Both forms stubbed with "not yet open" message — 26 May 2026.
 
 NEXT
 1. Resolve remaining UX map gaps (4, 5, 6)
