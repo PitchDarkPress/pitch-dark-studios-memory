@@ -1,5 +1,5 @@
 Core — Current State
-Last updated: 24 May 2026
+Last updated: 26 May 2026
 
 NOTE TO NEW CLAUDE
 
@@ -65,12 +65,17 @@ WORKING WITH KEV
 - Never leave a problem for another day. Fix it now.
 
 CODE EDITING WITH KEV
+- Always give Kev the complete file, ready to paste in full.
+- Never give partial code, snippets, or find-and-replace instructions.
+- Always tell Kev exactly which repo and which file to open
+  before giving the code.
+- One file at a time. Wait for confirmation before moving to the next.
 - One change at a time. Never ask for two or more changes at once.
 - Always warn upfront if there are multiple instances of something
   to change — never assume there is only one.
-- Account for GitHub's search limitations — give enough surrounding
-  context to find the right line by eye, not just the exact string.
 - If a fix fails, stop and think before trying another fix on top of it.
+- Never put fixes on top of fixes. If something isn't working,
+  step back and find the real cause.
 
 SPECIALIST FILES
 Some divisions have specialist files beyond the standard five.
@@ -220,6 +225,7 @@ NOTE TO NEW CLAUDE rewritten with full operational briefing.
 All five files created across all divisions — 24 May 2026.
 Admin panel updated — file ordering and colour coding — 24 May 2026.
 InkySwot content redistributed into five files — 24 May 2026.
+Code editing rules updated — 26 May 2026.
 NEXT
 - Redistribute content in remaining division current-state.md files
   (Pitch Dark Art, Broadcasting, Press, Publishing, Studios,
