@@ -1,5 +1,5 @@
 File: inkyswot/build-list.md
-Last updated: 26 May 2026
+Last updated: 27 May 2026
 Build order locked 14 May 2026.
 Principle: get every user-facing element right in the single HTML
 file first. Walk it. Sign it off. Then go deep with infrastructure.
@@ -18,13 +18,23 @@ DCW strip placeholder (below panels, above footer — toggleable)
 Manuscript Format screen (new — first step in project setup,
 before Overview. Writer chooses format before anything else.
 Format drives toolbar, workspace, and AI context.)
-All existing screens carried across and confirmed in correct position
+All existing screens carried across and confirmed in correct position.
+All stubbed screens built to same pattern as existing screens:
+Subplots / Themes & Motifs / Events & Timeline /
+Research & Reference / Notes & Scratchpad / Sandbox /
+Chapters / The Treatment /
+Timeline (DCW) / Storyboard (DCW) /
+Tutorial / Manual / FAQs / What's New
+Pattern: same two-panel layout (list left, detail right),
+same AI Generate and Expand buttons, same auto-save,
+same field structure. Existing screens demonstrate the pattern.
 Style Field: tone/voice dropdown + free text on Overview
 Genre: three fields — primary + two sub-genres
 New Project modal: Start Fresh / Import Existing Work
-Format-aware formatting toolbar (adapts to manuscript type.
+Format-aware formatting toolbar shell (adapts to manuscript type.
 Prose group / Script group / Verse group / Hybrid group.
-Each group shows only relevant tools.)
+Each group shows only relevant tools.
+Full toolbar built in Step 10 — shell only here.)
 Button layout: AI Generate / AI Expand / Read in vertical column
 AI ON/OFF theatrical transition (gradual)
 Animated speaker on Read (four frames)
@@ -36,7 +46,6 @@ DCW mockup (inkyswot-daw.html) integrated as placeholder
 STEP 2 — Walk the Platform
 Walk every screen as a zero-knowledge user.
 Resolve outstanding user flow gaps:
-
 Font import placement (confirmed: Publishing Suite Templates)
 Document types in New Project modal
 Ada intervention points must be tested here.
@@ -44,24 +53,29 @@ Ada intervention points must be tested here.
 STEP 3 — Sign Off Layout and Journey
 Gate. Nothing moves to Step 4 until Kev confirms layout
 and journey correct.
+
 STEP 4 — Supabase
 Database and authentication. PostgreSQL.
 Free tier during development and beta.
 Pro ($25/month, ~£20) before launch.
+
 STEP 5 — Lifetime Membership Flag
 Server-side flag in Supabase: is_lifetime: true.
 Bypasses all prompt counting.
 Header shows infinity symbol instead of number.
 Must be confirmed working before Step 6.
+
 STEP 6 — F12 / Security Blocker
 Blocks localStorage manipulation via dev tools.
 Safe because lifetime flag is server-side.
+
 STEP 7 — Server-Side Prompt Tracking
 Prompt counter moves from localStorage to Supabase per user.
 Non-negotiable before launch.
+Current localStorage counter in code is development placeholder only.
+
 STEP 8 — Stripe
 Payment processing. Needs Supabase user accounts.
-
 Monthly subscription: £9.95
 Annual subscription: £99.50 (two months free)
 Prompt top-up: £1.99 for 500 prompts
@@ -70,7 +84,6 @@ Paid users: one free publication per week. £1 after that.
 
 STEP 9 — Resend
 Email delivery. Needs Supabase user accounts.
-
 Signup verification codes (unique, 20 min, max 3 requests)
 Password resets
 The InkySwot Bugle newsletter
@@ -78,25 +91,25 @@ Notifications
 Signup is not live until this step is complete.
 
 STEP 10 — Writing Panel with Accessibility Features
+Full writing panel built here. Step 1 builds the shell only.
 White background — like a page.
-Format-aware toolbar (set in Step 1, fully built here).
+Format-aware toolbar (shell in Step 1, fully built here).
 Formatting: Bold / Italic / Underline / Font / Size /
 Alignment / Lists. Hotkeys. Distraction-free mode.
 Chapter selector. Live word count. Auto-save.
 Accessibility (CRITICAL DIFFERENTIATOR):
-
 Spell checker: 5-8 suggestions, AI phonetic interpretation,
 text-to-speech on hover, option to disable red underlines
 Read Aloud: browser speechSynthesis, zero cost, resume from
 point, click to set read-head
 Inline AI Thesaurus (Ctrl+Shift+T): 3-4 contextual alternatives
 in story tone, speaker icon on each
-
 Collaborative Editing: bidirectional, AI at human pace, cursor to
 flagged word one at a time, user sees everything, both can flag.
 Vital for dyslexic users.
 Note: Writing panel tagline undecided.
 Note: Chapters screen spec superseded — new spec needed before build.
+
 STEP 11 — The Treatment
 Screenplay-style block editor. Needs writing panel.
 Bidirectional sync with all screens.
@@ -104,19 +117,22 @@ Blocks: Character / Location / Building / Object / Faction /
 Plot Thread / Subplot / Theme / Event / Rule / Chapter /
 Action / Dialogue / Note (private, no export) / Section Header.
 AI Expand global.
+
 STEP 12 — Ada
 Needs all screens and writing panel to exist.
 Full specification in ada.md.
+Ada voice alternative to be confirmed before this step.
+
 STEP 13 — Timeline Strip (DCW)
 Full specification in dcw.md.
 Needs Treatment in place.
 Full width below panels. Always present. Toggleable.
 Chapters as ruler across the top.
-Track types: Character / Plot / Subplot / Location /
+Thread types: Character / Plot / Subplot / Location /
 Event / Object / Theme / Tension / Notes.
-Scene blocks colour-coded per track.
+Note: tracks are called THREADS throughout the UI.
+Scene blocks colour-coded per thread.
 Tension curve — three modes:
-
 Manual — writer drags the curve.
 AI-guided — writer sets target, Ada advises how to get there.
 Analysis — Ada reads text and plots curve automatically.
@@ -131,9 +147,9 @@ Claude / ChatGPT / Gemini / EPUB.
 Format Conversion both directions: prose to script / script to prose.
 Screenplay / Radio Drama / Stage Play.
 Full revised spec needed before build.
+
 STEP 15 — Publishing Suite
 After Export Suite.
-
 Cover Creator (three-panel canvas, spine from page count)
 Templates + Google Fonts API + licensing disclaimer
 The Guide (platform-agnostic, honest)
@@ -141,11 +157,15 @@ Store (paid only — full anti-spam strategy needed before build)
 
 STEP 16 — Admin Panel
 Needs Supabase, Stripe, full platform.
+
 STEP 17 — PWA Manifest
 Platform complete. Windows first. Mac second.
+
 STEP 18 — Beta
 All above signed off. Supabase Pro active before beta users invited.
 Ada voice recording at this step.
+Beta programme structure to be defined before this step.
+
 STEP 19 — Launch
 DNS to production. Triple redundancy.
 Testbed at www.inkyswot.com/testbed password protected
@@ -153,7 +173,6 @@ during transition.
 
 ONGOING — Content & Operations
 Run alongside build, continue post-launch:
-
 Platform Comparison Chart
 User Experience Timeline (v1 map built, gaps 4 and 5 to resolve Step 2)
 FAQs / Manual / Videos (YouTube — no build content)
