@@ -25,6 +25,10 @@ InkySwot = always capital I and capital S. Never inkyswot or Inkyswot.
 PUBLISH AND BE DAMNED — no full stop. Ever.
 If a decision is in the files, do not revisit it unless Kev asks.
 GitHub organisation: PitchDarkPress.
+At the start of any build session, ask Kev to paste in
+the current index.html before any work begins.
+The code is the truth. Never assume the files tell the
+whole story.
 
 WHAT INKYSWOT IS
 Web-based story world-building and production platform.
@@ -100,6 +104,8 @@ FILES IN REPO — inkyswot-app
 index.html — the app workspace
 login.html — the login / sign up gate (single tabbed page)
 inkylogin-bg.png — login page background image (currently unused)
+inkyswot-daw.html — DCW mockup. Live at:
+https://inkyswot-app.vercel.app/inkyswot-daw.html
 
 FILES IN REPO — inkyswot (landing page)
 index.html — the landing page
@@ -226,13 +232,13 @@ Footer menu
 DCW — DIGITAL CREATIVE WORKSTATION
 Full spec in dcw.md.
 Timeline strip below all three panels. Always present. Toggleable.
-Chapters as ruler. Tracks for characters, plot, locations,
+Chapters as ruler. Threads for characters, plot, locations,
 events, subplots, themes, tension.
 Tension curve — three modes:
 Manual — writer drags the curve.
 AI-guided — writer sets target, Ada advises how to get there.
 Analysis — Ada reads text and plots curve automatically.
-DCW mockup file: inkyswot-daw.html — built, ready to integrate.
+DCW mockup: https://inkyswot-app.vercel.app/inkyswot-daw.html
 
 ADA
 Full spec in ada.md.
@@ -257,7 +263,7 @@ No SSO. No third party authentication. Email and password only.
 SPECIALIST FILES — INKYSWOT ONLY
 These files exist in addition to current-state.md.
 build-list.md — paste in at the start of any build session.
-The other three files: paste in only when working on that area.
+The other files: paste in only when working on that area.
 Always tell Kev which file you need and why before asking.
 ada.md — Full Ada specification.
 Ask for when: working on Ada in any capacity.
@@ -265,6 +271,8 @@ security.md — Full security system.
 Ask for when: working on security, anti-spam, or signup flow.
 dcw.md — Full DCW specification.
 Ask for when: working on the DCW in any capacity.
+future.md — Future ideas, not yet on the build list.
+Ask for when: discussing post-launch possibilities.
 
 BUILD ORDER — CONFIRMED
 Step 1 — v4.0 App Shell Rebuild (NOT YET STARTED)
@@ -301,7 +309,7 @@ Format-aware toolbar decided — 26 May 2026.
 DCW tension curve spec decided — 26 May 2026.
 Platform layout confirmed — 26 May 2026.
 Nav confirmed complete — 26 May 2026.
-current-state.md revised and corrected — 27 May 2026.
+All nine database files revised and corrected — 27 May 2026.
 
 NEXT
 Resolve UX map gaps 4 and 5
