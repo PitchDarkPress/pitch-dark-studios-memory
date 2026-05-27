@@ -1,6 +1,10 @@
 File: inkyswot/dcw.md
 InkySwot — DCW Specification
 Last updated: 26 May 2026
+MOCKUP FILE
+inkyswot-daw.html — fully working interactive mockup.
+Live at: https://inkyswot-app.vercel.app/inkyswot-daw.html
+Built and ready to integrate at Step 13.
 
 WHAT THE DCW IS
 The Digital Creative Workstation. InkySwot's owned term.
