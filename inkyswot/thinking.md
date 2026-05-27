@@ -1,6 +1,5 @@
 File: inkyswot/thinking.md
-InkySwot — Thinking
-Last updated: 26 May 2026
+Last updated: 27 May 2026
 
 OPEN DECISIONS — NEED RESOLVING BEFORE BUILD STEPS NOTED
 Writing panel tagline — undecided.
@@ -20,13 +19,16 @@ AI disclosure prompts, publication checklist — spec needed
 before Step 14.
 New device verification process — support ticket security
 questions to be designed before launch.
+
 UX MAP GAPS STILL OPEN
 Gap 4 — Font import experience in Publishing Suite Templates.
 Gap 5 — Document types in New Project modal — full list needed.
+
 POST-LAUNCH CONSIDERATIONS
 Gap 6 — AI inference from imported manuscript. Platform reads
 manuscript and pre-fills setup fields where possible.
 Revisit when revenue supports the development cost.
+
 DCW — STILL TO RESOLVE
 Where does the DCW sit in the build order? Currently Step 13.
 The mockup exists and is ready to integrate.
