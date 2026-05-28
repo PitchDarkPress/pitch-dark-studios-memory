@@ -1,11 +1,18 @@
 File: inkyswot/build-list.md
-Last updated: 27 May 2026
+Last updated: 28 May 2026
 Build order locked 14 May 2026.
 Principle: get every user-facing element right in the single HTML
 file first. Walk it. Sign it off. Then go deep with infrastructure.
 Wire things up once, to something confirmed correct.
 
 CURRENT POSITION — Step 1 not yet started.
+Progress since last update:
+Subplots screen built and wired — 28 May 2026.
+Themes & Motifs screen built and wired — 28 May 2026.
+Events & Timeline screen built and wired — 28 May 2026.
+Genre list rebuilt — 48 entries, flat alphabetical — 28 May 2026.
+These are pre-Step 1 additions to the existing v4.7 file.
+Step 1 rebuild has not yet begun.
 
 STEP 1 — v4.0 App Shell Rebuild
 All screens, all navigation, all interactions in the single HTML file.
@@ -20,16 +27,22 @@ before Overview. Writer chooses format before anything else.
 Format drives toolbar, workspace, and AI context.)
 All existing screens carried across and confirmed in correct position.
 All stubbed screens built to same pattern as existing screens:
-Subplots / Themes & Motifs / Events & Timeline /
 Research & Reference / Notes & Scratchpad / Sandbox /
 Chapters / The Treatment /
 Timeline (DCW) / Storyboard (DCW) /
 Tutorial / Manual / FAQs / What's New
+Note: Subplots, Themes & Motifs and Events & Timeline
+already built — carry across and confirm in correct position.
+Note: Research & Reference, Notes & Scratchpad and Sandbox
+are deferred until after Step 10. Build shells only in Step 1.
+They cannot be fully built without the Write screen in place.
 Pattern: same two-panel layout (list left, detail right),
 same AI Generate and Expand buttons, same auto-save,
 same field structure. Existing screens demonstrate the pattern.
 Style Field: tone/voice dropdown + free text on Overview
 Genre: three fields — primary + two sub-genres
+Note: temporary combined genre dropdown built 28 May 2026.
+Replace with three-field system in this step.
 New Project modal: Start Fresh / Import Existing Work
 Format-aware formatting toolbar shell (adapts to manuscript type.
 Prose group / Script group / Verse group / Hybrid group.
@@ -90,28 +103,52 @@ The InkySwot Bugle newsletter
 Notifications
 Signup is not live until this step is complete.
 
-STEP 10 — Writing Panel with Accessibility Features
-Full writing panel built here. Step 1 builds the shell only.
+STEP 10 — Write Screen with Accessibility Features
+The writing panel. Named: Write. Locked 28 May 2026.
+Full Write screen built here. Step 1 builds the shell only.
+Full Write screen spec must be written before this step begins.
+Index Card system full spec must be written before this step begins.
 White background — like a page.
 Format-aware toolbar (shell in Step 1, fully built here).
 Formatting: Bold / Italic / Underline / Font / Size /
-Alignment / Lists. Hotkeys. Distraction-free mode.
+Alignment / Lists. Hotkeys.
 Chapter selector. Live word count. Auto-save.
+Full Screen mode — distraction-free writing. Named: Full Screen.
+When active: all UI steps back. Counter shows waiting suggestions.
+Ada steps back. Patient. Waiting.
+Index Card system:
+— Known entities highlighted in gold on space bar press.
+— Unregistered entities highlighted in a cooler colour.
+— Scan on space bar press only — current page only.
+— Database change triggers full manuscript rescan in background.
+— Click highlighted word — floating Index Card appears.
+— Known entity: card shows full database record, editable.
+— New entity: card is blank with relevant fields.
+— Cards only appear on deliberate click. Never automatically.
+— Multiple cards open simultaneously.
+— Cards grey out when writer returns to manuscript — they wait.
+— Auto-save on every card.
+— AI off: highlighting and cards still work. Ada's suggestions don't.
+— Desktop only. No mobile.
 Accessibility (CRITICAL DIFFERENTIATOR):
 Spell checker: 5-8 suggestions, AI phonetic interpretation,
-text-to-speech on hover, option to disable red underlines
+text-to-speech on hover, option to disable red underlines.
 Read Aloud: browser speechSynthesis, zero cost, resume from
-point, click to set read-head
+point, click to set read-head.
 Inline AI Thesaurus (Ctrl+Shift+T): 3-4 contextual alternatives
-in story tone, speaker icon on each
+in story tone, speaker icon on each.
 Collaborative Editing: bidirectional, AI at human pace, cursor to
 flagged word one at a time, user sees everything, both can flag.
 Vital for dyslexic users.
-Note: Writing panel tagline undecided.
-Note: Chapters screen spec superseded — new spec needed before build.
+Note: Write screen tagline undecided.
+Note: Chapters full spec established 28 May 2026 — see thinking.md.
+Full spec needed before build.
+Note: Library section (Research & Reference, Notes & Scratchpad,
+Sandbox) to be fully built after this step. They are part of the
+same ecosystem as the Write screen.
 
 STEP 11 — The Treatment
-Screenplay-style block editor. Needs writing panel.
+Screenplay-style block editor. Needs Write screen.
 Bidirectional sync with all screens.
 Blocks: Character / Location / Building / Object / Faction /
 Plot Thread / Subplot / Theme / Event / Rule / Chapter /
@@ -119,28 +156,33 @@ Action / Dialogue / Note (private, no export) / Section Header.
 AI Expand global.
 
 STEP 12 — Ada
-Needs all screens and writing panel to exist.
+Needs all screens and Write screen to exist.
 Full specification in ada.md.
+Ada spec must be complete before this step begins.
 Ada voice alternative to be confirmed before this step.
 
-STEP 13 — Timeline Strip (DCW)
+STEP 13 — DCW (Timeline Strip)
 Full specification in dcw.md.
 Needs Treatment in place.
 Full width below panels. Always present. Toggleable.
 Chapters as ruler across the top.
-Thread types: Character / Plot / Subplot / Location /
+Track types: Character / Plot / Subplot / Location /
 Event / Object / Theme / Tension / Notes.
-Note: tracks are called THREADS throughout the UI.
-Scene blocks colour-coded per thread.
+Tracks are called TRACKS throughout the UI.
+Scene blocks colour-coded per track.
 Tension curve — three modes:
 Manual — writer drags the curve.
 AI-guided — writer sets target, Ada advises how to get there.
 Analysis — Ada reads text and plots curve automatically.
+Emotional Maps — curves tracking the rise and fall of specific
+emotions per character across chapters.
+Multiple Maps per character. Colour coded. Toggleable.
+Full spec in dcw.md.
 Minimap — overview of full timeline, scrollable viewport.
 DCW mockup (inkyswot-daw.html) already built — integrate here.
 
 STEP 14 — Export Suite and Format Conversion
-Needs writing panel and Treatment.
+Needs Write screen and Treatment.
 HEADLINE FEATURE — one click exports entire story world.
 Formats: Word / Google Docs / PDF / JSON / Email /
 Claude / ChatGPT / Gemini / EPUB.
