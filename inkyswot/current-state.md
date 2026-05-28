@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 27 May 2026
+Last updated: 28 May 2026
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -125,13 +125,13 @@ Both forms show "not yet open" message on submit — no routing to app.
 My Projects / Trash / New Project modal /
 Overview / Characters / Relationships / Factions & Orgs /
 Language & Dialogue / Locations / Buildings / Objects & Artefacts /
-Rules & Lore / Plot Threads /
+Rules & Lore / Plot Threads / Subplots / Themes & Motifs /
+Events & Timeline /
 AI Expand / AI ON/OFF toggle /
 Read Aloud (with Chrome async cancel() bug fix in place) /
 Light-dark mode / Voice selector
 
 WHAT IS STUBBED (placeholder screen only — to be built in Step 1)
-Subplots / Themes & Motifs / Events & Timeline /
 Research & Reference / Notes & Scratchpad / Sandbox /
 Chapters / The Treatment /
 Timeline (DCW) / Storyboard (DCW) /
@@ -139,6 +139,10 @@ Tutorial / Manual / FAQs / What's New
 All stubbed screens show "Coming Soon" placeholder.
 Build to same pattern as existing screens.
 Full spec for each in build-list.md.
+Note: Research & Reference, Notes & Scratchpad and Sandbox
+are deferred until after the Write screen is built (Step 10).
+They are part of the same ecosystem and cannot be fully
+built without the writing panel in place.
 
 NAV — CONFIRMED COMPLETE
 Navigate: My Projects / Trash
@@ -160,7 +164,8 @@ Import option in New Project modal
 Three-panel layout (left sidebar / main work area / right panel)
 DCW strip (below main panels, above footer)
 Timeline strip
-All stubbed screens (see above) — built to same pattern as existing screens
+Chapters / The Treatment — next to be built
+All remaining stubbed screens
 
 MANUSCRIPT FORMAT LIST — CONFIRMED
 Academic Essay / Thesis / Audio Drama / Audiobook /
@@ -181,6 +186,22 @@ Script — Screenplay / Teleplay / Radio Drama / Audio Drama /
 Stage Play / Comic Script / Game Script
 Verse — Poetry Collection
 Hybrid — Graphic Novel / Audiobook
+
+GENRE LIST — CONFIRMED
+48 entries. Flat alphabetical. No optgroups.
+Academic Essay / Thesis / Adventure / Audio Drama / Audiobook /
+Autobiography / Memoir / Biography / Children's Book /
+Comedy / Humour / Comic Script / Coming of Age / Cookbook /
+Crime & Thriller / Drama / Dystopian / Erotic / Essay Collection /
+Fantasy / Flash Fiction / Game Script / Gothic / Graphic Novel /
+Historical Fiction / History / Horror / Literary Fiction /
+Literary Journal / Non-Fiction / Novel / Novella / Other /
+Paranormal / Personal Essay / Creative Non-Fiction / Picture Book /
+Poetry / Radio Drama / Romance / Science Fiction / Self-Help /
+Short Story / Speculative Fiction / Stage Play / Teleplay /
+Thriller & Suspense / Travel Writing / True Crime /
+Urban & Contemporary / Western
+Locked: 28 May 2026.
 
 LANDING PAGE — inkyswot.com
 Ticker strip — InkySwot promo lines, seamless scroll, 15s speed.
@@ -232,22 +253,51 @@ Footer menu
 DCW — DIGITAL CREATIVE WORKSTATION
 Full spec in dcw.md.
 Timeline strip below all three panels. Always present. Toggleable.
-Chapters as ruler. Threads for characters, plot, locations,
-events, subplots, themes, tension.
+Chapters as ruler across the top.
+Tracks for characters, plot, subplots, locations,
+events, objects, themes, tension, notes.
+Tracks are called TRACKS throughout the UI.
 Tension curve — three modes:
 Manual — writer drags the curve.
 AI-guided — writer sets target, Ada advises how to get there.
 Analysis — Ada reads text and plots curve automatically.
+Emotional Maps — curves tracking the rise and fall of specific
+emotions per character across chapters. New feature — 28 May 2026.
+Full spec in dcw.md.
 DCW mockup: https://inkyswot-app.vercel.app/inkyswot-daw.html
+
+WRITE SCREEN
+Named: Write. Locked 28 May 2026.
+The writing panel — where the writer writes.
+Full Screen mode — distraction-free writing. Named: Full Screen. Locked.
+Desktop only. No mobile.
+Index Card system — floating cards tethered to highlighted
+entities in the manuscript. Full spec to be written before Step 10.
+Entity highlighting — known entities highlighted in gold.
+Unregistered entities highlighted in a cooler colour.
+Cards only appear on deliberate click — never automatically.
+Multiple cards open simultaneously. Cards grey out when
+writer returns to manuscript — they wait, they don't close.
+Auto-save on every card.
+Counter shows waiting suggestions when in Full Screen mode.
+Scan on space bar press only — current page only.
+Database change triggers full manuscript rescan in background.
+AI off — highlighting and cards still work. Ada's suggestions don't.
+Full spec to be written before Step 10.
 
 ADA
 Full spec in ada.md.
 Name: Ada. Named after Ada Lovelace — the first programmer.
 Female. Fixed. Not a user setting.
+Ada is a contextual creative collaborator.
+Not a search engine. Not a writing generator.
+She gives the writer's answer — filtered through everything
+they have already built. Full principle in ada.md.
 Position: Top menu. Between project name and prompt counter.
 Visible when AI ON. Hidden when AI OFF.
 Voice: Google UK English Female — browser speechSynthesis.
-Ada is Step 12 in the build order.
+Ada spec must be complete before any further screens are built.
+Ada build is Step 12 in the build order.
 
 SECURITY
 Full security system documented in security.md.
@@ -284,10 +334,10 @@ Step 6 — F12 / Security Blocker
 Step 7 — Server-Side Prompt Tracking
 Step 8 — Stripe
 Step 9 — Resend
-Step 10 — Writing Panel with Accessibility Features
+Step 10 — Write Screen with Accessibility Features
 Step 11 — The Treatment
 Step 12 — Ada
-Step 13 — Timeline Strip (DCW)
+Step 13 — DCW (Timeline Strip)
 Step 14 — Export Suite and Format Conversion
 Step 15 — Publishing Suite
 Step 16 — Admin Panel
@@ -310,15 +360,24 @@ DCW tension curve spec decided — 26 May 2026.
 Platform layout confirmed — 26 May 2026.
 Nav confirmed complete — 26 May 2026.
 All nine database files revised and corrected — 27 May 2026.
+Genre list rebuilt — 48 entries, flat alphabetical — 28 May 2026.
+Subplots screen built and wired — 28 May 2026.
+Themes & Motifs screen built and wired — 28 May 2026.
+Events & Timeline screen built and wired — 28 May 2026.
+DCW Emotional Maps conceived, specced, mockup built — 28 May 2026.
+DCW tracks confirmed as Tracks — 28 May 2026.
+Ada contextual creative collaborator principle established — 28 May 2026.
+Write screen named and locked — 28 May 2026.
+Full Screen mode named and locked — 28 May 2026.
+Index Card system conceived and specced — 28 May 2026.
+Research & Reference, Notes & Scratchpad, Sandbox deferred
+until after Write screen — 28 May 2026.
 
 NEXT
+Build Chapters screen
+Build The Treatment screen
+Write full Write screen spec before Step 10
+Write full Chapters spec
+Update all specialist files with today's decisions
 Resolve UX map gaps 4 and 5
 Begin Step 1 — v4.0 app shell rebuild
-Three-panel layout
-Manuscript Format screen
-All existing screens carried across
-All stubbed screens built to same pattern
-Style Field added to Overview
-Three-field genre implemented
-Import option in New Project modal
-DCW mockup integrated
