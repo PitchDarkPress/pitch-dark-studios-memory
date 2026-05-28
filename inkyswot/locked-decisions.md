@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 27 May 2026
+Last updated: 28 May 2026
 
 PLATFORM IDENTITY
 InkySwot is a writing platform. Not a content generation engine.
@@ -86,14 +86,38 @@ AI-guided — writer sets target tension, Ada advises how to achieve it.
 Analysis — Ada reads the text and plots the curve automatically.
 Locked: 26 May 2026.
 
-DCW TERMINOLOGY — CURRENT
-Tracks are called THREADS throughout the UI.
-Locked: 27 May 2026.
+DCW TERMINOLOGY — LOCKED
+DCW lanes are called TRACKS throughout the UI.
+THREADS is reserved for a TBD use elsewhere in the platform.
+Corrected: 28 May 2026.
 
-GENRE — THREE FIELDS
+DCW EMOTIONAL MAPS — LOCKED
+Emotional Maps are curves tracking the rise and fall of a specific
+emotion belonging to a specific character across chapters.
+The word Map is deliberate — it names the line now and
+future-proofs a full cartographic emotional view of a character.
+Multiple Maps per character. Colour coded. Toggleable.
+Full spec in dcw.md.
+Locked: 28 May 2026.
+
+GENRE — THREE FIELDS — LOCKED
 One primary genre, two sub-genres. Three fields, not a dropdown.
 All three feed AI context.
+Note: a temporary combined genre dropdown was built on 28 May 2026
+as a development placeholder. The three-field system is the locked
+decision and will be implemented in Step 1.
 Locked: 27 May 2026.
+
+WRITE SCREEN — LOCKED DECISIONS
+The writing panel is called Write. Locked: 28 May 2026.
+Distraction-free mode is called Full Screen. Locked: 28 May 2026.
+Desktop only. No mobile. Locked: 28 May 2026.
+Index Card system — floating cards tethered to highlighted
+entities in the manuscript. Cards only appear on deliberate
+click — never automatically. Locked: 28 May 2026.
+Scan on space bar press only — current page only.
+Database change triggers full manuscript rescan in background.
+Locked: 28 May 2026.
 
 SIGNUP
 Email + password → Email verification → Platform access.
@@ -111,6 +135,11 @@ Locked: 26 May 2026.
 ADA
 Female. Named after Ada Lovelace. Voice fixed as
 Google UK English Female. Sara Martin will NOT voice Ada.
+Ada is a contextual creative collaborator — not a search engine,
+not a writing generator. She gives the writer's answer, filtered
+through everything they have already built.
+Ada spec must be complete before any further screens are built.
+Ada build is Step 12. This does not change.
 Locked: confirmed.
 
 COVER THUMBNAIL — REMOVED
