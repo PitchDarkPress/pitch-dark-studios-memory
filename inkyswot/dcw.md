@@ -1,6 +1,4 @@
 File: inkyswot/dcw.md
-
-InkySwot — DCW Specification
 Last updated: 28 May 2026
 
 MOCKUP FILE
@@ -38,6 +36,7 @@ Viewport indicator shows current scroll position.
 Zoom controls — + and − to expand or compress the timeline.
 
 TRACK TYPES
+Tracks are called TRACKS throughout the UI.
 Character Track — one per character. Blocks show
 scenes and moments where character is active.
 Plot Track — main plot arc across chapters.
