@@ -1,5 +1,5 @@
 File: inkyswot/future.md
-Last updated: 27 May 2026
+Last updated: 28 May 2026
 
 FUTURE IDEAS — NOT LOCKED — TO DISCUSS
 These are logged future possibilities, not on the current build list.
@@ -22,6 +22,13 @@ and pre-fills setup fields. Revisit when revenue supports it.
 Collaborative editing with live cursors (Google Slides-style).
 Smart Entity Assignment — highlight any word, assign as
 Character / Location / etc, enters relevant screen immediately.
+Emotional Map as literal map — the DCW Emotional Map curve
+expands into a full cartographic view of a character's emotional
+journey through the story. High ground for intensity. Low ground
+for numbness. Rivers for flow. Storms for crisis.
+The word Map was chosen with this in mind.
+Not on the current build list. This is the destination the word
+points toward.
 
 PLATFORM — FUTURE PRODUCTS
 Newspaper / magazine platform — separate product.
