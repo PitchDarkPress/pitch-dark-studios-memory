@@ -51,6 +51,8 @@ Research and imagination working together.
 This is a completely different product from anything
 that currently exists.
 
+This is Proauthorism in action.
+
 AI OFF — PLATFORM STILL WORKS
 When the writer switches AI off, Ada disappears completely.
 All AI buttons disappear.
@@ -59,6 +61,19 @@ Research & Reference works as a manual store —
 notes, links, images, documents, tagging, categorisation.
 The writer does their own research, stores it themselves,
 uses it themselves.
+The Index Card system still works — entity highlighting,
+floating cards, database access — all without Ada.
+What the non-AI user loses:
+— Ada's suggestions about unregistered entities.
+— Ada's conflict detection.
+— Ada's research assistance within the card.
+— Ada moving information between cards.
+What they keep:
+— Full entity highlighting.
+— Floating index cards.
+— Database access from within Write.
+— Manual editing of cards.
+— Multiple cards open simultaneously.
 Ada enhances the platform. She does not run it.
 AI welcome. AI optional. Always writer-led.
 This distinction is non-negotiable.
@@ -120,6 +135,69 @@ making observations, or assisting with the writing.
 The writer never has to remind Ada what they found.
 She already knows.
 
+ADA IN THE WRITE SCREEN
+The Write screen is where Ada's contextual intelligence
+is most visible and most powerful.
+
+Entity highlighting:
+Known entities in the manuscript are highlighted in gold.
+Unregistered entities are highlighted in a cooler colour.
+When the writer clicks a highlighted word, a floating
+Index Card appears — the database record for that entity,
+editable in place.
+When an unregistered entity is highlighted, Ada notices.
+She suggests quietly — once, without interruption —
+that the entity might belong in the database.
+One button. The writer goes there, records it, comes back.
+The manuscript remembers where they were.
+
+Conflict detection in Write:
+If the writer types something that contradicts the database —
+a character behaving out of character, a location that
+doesn't match what's been established, a timeline
+that doesn't add up — Ada says so.
+Once. Without drama. Then leaves it to the writer.
+
+Index Cards and Ada:
+Multiple Index Cards can be open simultaneously.
+Ada can see across all open cards.
+She can spot connections between them.
+She can suggest moving information from one card to another.
+She can flag conflicts between cards.
+When research is needed, a research card opens alongside —
+same floating card system, same Ada assistance.
+
+Full Screen mode:
+When the writer enters Full Screen, Ada steps back.
+A small counter shows the number of waiting suggestions.
+The writer returns to them when ready.
+Ada is patient. She waits.
+
+ADA IN CHAPTERS
+Chapters in InkySwot are living synopses — not static summaries.
+They are in constant conversation with the entire project database.
+Ada is present throughout the chapter creation process.
+
+What Ada does in Chapters:
+— Draws on everything in the database to inform
+  and enrich the chapter as the writer builds it.
+— Detects conflicts — if something in the chapter
+  contradicts the database, Ada says so. Once. Without drama.
+— Cross-pollination — when the writer introduces something
+  new that isn't yet in the database, Ada suggests
+  recording it properly. One button. Go there. Record it.
+  Come back. The chapter remembers where they were.
+— The reverse — the database feeds into chapter creation
+  contextually. Ada makes the connection without being asked.
+— Navigation is seamless — between the chapter and any
+  screen in the platform, with Ada holding the thread
+  and returning the writer to exactly where they were.
+
+This is Proauthorism in action.
+The chapter and the database are not two separate things.
+They are the same thing seen from two different angles.
+Ada is the connective tissue.
+
 CONVERSATION
 Knows the entire project.
 Never asks for context.
@@ -176,11 +254,10 @@ FUTURE CAPABILITIES
 See future.md.
 
 BUILD POSITION
-Ada is Step 12 in the confirmed build order.
-Needs all screens and writing panel to exist before build.
+Ada is Step 12 in the confirmed build order. This does not change.
+Needs all screens and the Write screen to exist before build.
 Voice (browser speechSynthesis Google UK English Female)
 is permanent — not a temporary measure.
-The question of whether Ada should move earlier in the
-build order should be revisited — she is central to the
-platform and her spec should be complete before
-any further screens are built.
+Ada's spec must be complete before any further screens are built.
+The build waits until everything is in place.
+Spec early. Build late.
