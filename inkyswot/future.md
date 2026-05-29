@@ -1,5 +1,5 @@
 File: inkyswot/future.md
-Last updated: 28 May 2026
+Last updated: 29 May 2026
 
 FUTURE IDEAS — NOT LOCKED — TO DISCUSS
 These are logged future possibilities, not on the current build list.
@@ -29,6 +29,21 @@ for numbness. Rivers for flow. Storms for crisis.
 The word Map was chosen with this in mind.
 Not on the current build list. This is the destination the word
 points toward.
+Write Screen Customisation Remote — the main writing area
+must be fully customisable by the writer. Background colour,
+text colour, font, size. Critical accessibility feature —
+dyslexic writers in particular benefit from non-white backgrounds
+(blue screen / white text as one proven example).
+Controls delivered via a floating remote control — styled like
+a TV remote. Moveable. Theatrical. Adds to the InkySwot theatre.
+Full detail to be worked out by Kev. Not on current build list.
+Stickies — floating post-it style notes for capturing quick
+thoughts without breaking writing flow. Colour customisable
+by the writer. Moveable. Persistent until dismissed.
+The writer comes back to them when ready.
+Distinct from the Index Card system — Stickies are unstructured,
+instant, and disposable. Index Cards are structured and connect
+to the database. Not on current build list.
 
 PLATFORM — FUTURE PRODUCTS
 Newspaper / magazine platform — separate product.
