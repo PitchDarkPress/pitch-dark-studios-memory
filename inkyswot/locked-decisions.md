@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 28 May 2026
+Last updated: 29 May 2026
 
 PLATFORM IDENTITY
 InkySwot is a writing platform. Not a content generation engine.
@@ -88,8 +88,10 @@ Locked: 26 May 2026.
 
 DCW TERMINOLOGY — LOCKED
 DCW lanes are called TRACKS throughout the UI.
-THREADS is reserved for a TBD use elsewhere in the platform.
-Corrected: 28 May 2026.
+THREADS are the connections between Chapters and DCW Tracks.
+Threads feed into Tracks. The Chapter stores Threads.
+The DCW displays them as Tracks.
+Locked: 29 May 2026.
 
 DCW EMOTIONAL MAPS — LOCKED
 Emotional Maps are curves tracking the rise and fall of a specific
@@ -118,6 +120,40 @@ click — never automatically. Locked: 28 May 2026.
 Scan on space bar press only — current page only.
 Database change triggers full manuscript rescan in background.
 Locked: 28 May 2026.
+
+THREADS — LOCKED
+Threads are the connections between a Chapter and the DCW.
+When a character, location, plot thread or subplot is tagged
+in a Chapter, that connection is a Thread.
+Threads feed directly into DCW Tracks.
+The Chapter stores Threads. The DCW displays them as Tracks.
+Locked: 29 May 2026.
+
+THE PRESS — LOCKED
+Named: The Press. Locked: 29 May 2026.
+Where the writer goes when the book is done.
+Separate section of InkySwot — not part of the project nav.
+Also a standalone pay-per-book product for non-subscribers.
+The Press is an acquisition funnel for InkySwot.
+Replaces and significantly expands Step 15 in the build order.
+Full spec in press.md.
+Key features locked:
+Cover Creator — Fixed Spine System. The spine is built at
+maximum width. Front and back covers slide over it,
+masking whatever is not needed. No recalculating. No rebuilding.
+Book Layout Tool — open book on screen. Flippable pages.
+What the writer sees is what prints.
+Platform Requirements Database — live, maintained, always current.
+Front and Back Matter Assembly — auto-assembled from database.
+Ada writes blurb, bio, acknowledgements. Writer refines.
+Supported formats: Paperback / Hardback / Ebook.
+Audiobook: future.
+Supported platforms: KDP / IngramSpark / Lulu /
+Draft2Digital / Kobo / Apple Books / Barnes & Noble / Other.
+Maintenance commitment: platform requirements database
+monitored and updated whenever any platform changes its specs.
+This is an ongoing operational commitment. Non-negotiable.
+Locked: 29 May 2026.
 
 SIGNUP
 Email + password → Email verification → Platform access.
