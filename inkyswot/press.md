@@ -1,9 +1,8 @@
-File: inkyswot/press.md
 Last updated: 29 May 2026
 
 THE PRESS — FULL SPECIFICATION
-This is a new specialist file.
-Add to the specialist files list in current-state.md.
+This is a specialist file.
+Listed in current-state.md specialist files section.
 
 WHAT THE PRESS IS
 The Press is where the writer goes when the book is done.
@@ -14,6 +13,46 @@ It has its own top-level section in the platform.
 Entry point: the writer declares the book ready.
 From that moment, The Press takes over.
 
+THE PRESS IS ALSO A STANDALONE PRODUCT
+The Press is not only for InkySwot subscribers.
+It is a standalone pay-per-book publishing preparation service.
+A writer who wrote their book anywhere — Word, Scrivener,
+Google Docs, a typewriter — can bring it to The Press
+and get it publication-ready without being an InkySwot subscriber.
+They pay per book. No subscription required.
+This is a completely separate revenue stream.
+
+THE PRESS AS ACQUISITION FUNNEL
+A writer discovers The Press — through word of mouth,
+frustration with KDP's layout tools, or recommendation.
+They pay to get their book to press properly.
+It works beautifully.
+They look around and see the rest of InkySwot.
+They sign up.
+The Press is not just a feature. It is an acquisition tool.
+The complete creative journey — first word to published book —
+exists in one place for subscribers.
+For non-subscribers, The Press is the door in.
+
+PUBLIC-FACING ENTRY POINT
+The Press needs its own public-facing entry point.
+Separate from the subscriber login.
+A writer should be able to reach The Press without
+being an InkySwot subscriber.
+URL to be decided — press.inkyswot.com or similar.
+The Press landing page explains what it does and what it costs.
+Simple. Honest. No jargon.
+
+ACCESS FOR SUBSCRIBERS
+The Press is accessible from two places for subscribers:
+1. The project card on My Projects — a Go to Press button
+   appears when a project is marked Complete or Published.
+   Takes the writer directly to The Press with that project
+   pre-selected.
+2. The header — a permanent Press button visible at all times.
+   Takes the writer to The Press and asks which project
+   they are taking to press.
+
 THE PRESS IS NOT THE EXPORT SUITE
 The Export Suite (Step 14) handles file export —
 Word, PDF, JSON, EPUB, AI platform formats.
@@ -21,6 +60,23 @@ That is for working writers sharing and backing up their work.
 The Press is for publication. The end of the writing journey.
 The beginning of the reader's journey.
 These are two different things and must never be conflated.
+
+PRICING — THE PRESS
+For subscribers:
+The preparation tools are included in the subscription.
+Cover Creator, Book Layout Tool, front and back matter
+assembly, metadata, Ada's help throughout.
+Everything up to the point of export is included.
+Export and submission package: £1 per book.
+As per locked publication fee — see locked-decisions.md.
+
+For non-subscribers:
+Pay per book. No subscription required.
+Full preparation tools available per book.
+Export and submission package included in the per-book fee.
+Per-book fee for non-subscribers: to be confirmed.
+Premium package option — all formats, all platforms,
+fully validated — premium fee. To be confirmed.
 
 FORMAT CHOICES
 When the writer enters The Press they choose their format:
@@ -184,6 +240,8 @@ Errors — wrong margins, images too close to the trim,
 spine content cut off — are only discovered after the fact.
 The Book Layout Tool eliminates this entirely.
 What the writer sees on screen is what prints.
+This feature alone will draw writers to InkySwot
+in significant numbers.
 
 FRONT AND BACK MATTER ASSEMBLY
 The Press assembles front and back matter automatically
@@ -258,13 +316,6 @@ Cover — square format (different from print and ebook).
 Submission to ACX (Audible), Findaway Voices, Author's Republic.
 Full spec to be written when revenue supports the build.
 
-WHAT THE PRESS IS NOT
-Not a design agency. Not a vanity press.
-Not a guarantee of publication success.
-Not financial or legal advice.
-The Guide (honest, platform-agnostic publishing guidance)
-remains a separate feature within The Press — see below.
-
 THE GUIDE
 Honest, platform-agnostic publishing guidance.
 Not a sales tool. Not affiliated with any platform.
@@ -278,22 +329,31 @@ What to expect from the review process.
 Common mistakes and how to avoid them.
 Written by Kev. Updated as the industry changes.
 
+WHAT THE PRESS IS NOT
+Not a design agency. Not a vanity press.
+Not a guarantee of publication success.
+Not financial or legal advice.
+The Guide provides honest context — not advice.
+
 BUILD POSITION
-The Press is a new step in the build order.
-Currently the Publishing Suite is Step 15.
-The Press replaces and significantly expands Step 15.
-Exact position in build order to be confirmed.
+The Press replaces and significantly expands Step 15
+in the build order.
+Exact position to be confirmed.
 Needs Export Suite (Step 14) in place first.
-Needs Cover Creator — complex, may need its own sub-step.
-Needs Book Layout Tool — complex, may need its own sub-step.
+Cover Creator — complex. May need its own sub-step.
+Book Layout Tool — complex. May need its own sub-step.
 Platform requirements database — operational from day one.
-The Guide — can be written in parallel with build.
+The Guide — written in parallel with build.
+Public-facing entry point — needed before launch.
 Full build timeline to be assessed before Step 14 begins.
 
 OPEN DECISIONS
 Build order position — to be confirmed.
 Cover Creator sub-step — to be assessed.
 Book Layout Tool sub-step — to be assessed.
+Per-book fee for non-subscribers — to be confirmed.
+Premium package fee — to be confirmed.
+Public-facing URL — press.inkyswot.com or similar.
 Fixed list of supported platforms at launch — to be confirmed.
 ISBN guidance — does InkySwot help writers obtain ISBNs?
 Price setting guidance — how much help does InkySwot give?
