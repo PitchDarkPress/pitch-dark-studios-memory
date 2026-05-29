@@ -1,5 +1,5 @@
 File: inkyswot/build-list.md
-Last updated: 28 May 2026
+Last updated: 29 May 2026
 Build order locked 14 May 2026.
 Principle: get every user-facing element right in the single HTML
 file first. Walk it. Sign it off. Then go deep with infrastructure.
@@ -10,6 +10,8 @@ Progress since last update:
 Subplots screen built and wired — 28 May 2026.
 Themes & Motifs screen built and wired — 28 May 2026.
 Events & Timeline screen built and wired — 28 May 2026.
+Chapters screen built and wired — 29 May 2026.
+The Treatment shell built and wired — 29 May 2026.
 Genre list rebuilt — 48 entries, flat alphabetical — 28 May 2026.
 These are pre-Step 1 additions to the existing v4.7 file.
 Step 1 rebuild has not yet begun.
@@ -28,11 +30,11 @@ Format drives toolbar, workspace, and AI context.)
 All existing screens carried across and confirmed in correct position.
 All stubbed screens built to same pattern as existing screens:
 Research & Reference / Notes & Scratchpad / Sandbox /
-Chapters / The Treatment /
 Timeline (DCW) / Storyboard (DCW) /
 Tutorial / Manual / FAQs / What's New
-Note: Subplots, Themes & Motifs and Events & Timeline
-already built — carry across and confirm in correct position.
+Note: Subplots, Themes & Motifs, Events & Timeline,
+Chapters and The Treatment already built —
+carry across and confirm in correct position.
 Note: Research & Reference, Notes & Scratchpad and Sandbox
 are deferred until after Step 10. Build shells only in Step 1.
 They cannot be fully built without the Write screen in place.
@@ -94,6 +96,7 @@ Annual subscription: £99.50 (two months free)
 Prompt top-up: £1.99 for 500 prompts
 Publication fee: £1 GBP per publication
 Paid users: one free publication per week. £1 after that.
+The Press per-book fee for non-subscribers — to be confirmed.
 
 STEP 9 — Resend
 Email delivery. Needs Supabase user accounts.
@@ -140,12 +143,11 @@ in story tone, speaker icon on each.
 Collaborative Editing: bidirectional, AI at human pace, cursor to
 flagged word one at a time, user sees everything, both can flag.
 Vital for dyslexic users.
+Library section (Research & Reference, Notes & Scratchpad,
+Sandbox) to be fully built after this step.
 Note: Write screen tagline undecided.
-Note: Chapters full spec established 28 May 2026 — see thinking.md.
+Note: Chapters full spec established 29 May 2026 — see thinking.md.
 Full spec needed before build.
-Note: Library section (Research & Reference, Notes & Scratchpad,
-Sandbox) to be fully built after this step. They are part of the
-same ecosystem as the Write screen.
 
 STEP 11 — The Treatment
 Screenplay-style block editor. Needs Write screen.
@@ -154,6 +156,9 @@ Blocks: Character / Location / Building / Object / Faction /
 Plot Thread / Subplot / Theme / Event / Rule / Chapter /
 Action / Dialogue / Note (private, no export) / Section Header.
 AI Expand global.
+The Treatment assembles itself from the project database.
+Ada renders it in the correct professional format.
+The writer reviews, refines, and makes it their own.
 
 STEP 12 — Ada
 Needs all screens and Write screen to exist.
@@ -169,6 +174,7 @@ Chapters as ruler across the top.
 Track types: Character / Plot / Subplot / Location /
 Event / Object / Theme / Tension / Notes.
 Tracks are called TRACKS throughout the UI.
+Threads are the connections between Chapters and DCW Tracks.
 Scene blocks colour-coded per track.
 Tension curve — three modes:
 Manual — writer drags the curve.
@@ -189,13 +195,51 @@ Claude / ChatGPT / Gemini / EPUB.
 Format Conversion both directions: prose to script / script to prose.
 Screenplay / Radio Drama / Stage Play.
 Full revised spec needed before build.
+Note: Export Suite is for working writers sharing and backing up.
+The Press (Step 15) is for publication. These are different things.
 
-STEP 15 — Publishing Suite
-After Export Suite.
-Cover Creator (three-panel canvas, spine from page count)
-Templates + Google Fonts API + licensing disclaimer
-The Guide (platform-agnostic, honest)
-Store (paid only — full anti-spam strategy needed before build)
+STEP 15 — The Press
+Replaces and significantly expands the former Publishing Suite.
+Full specification in press.md.
+Needs Export Suite (Step 14) in place first.
+Where the writer goes when the book is done.
+Also a standalone pay-per-book product for non-subscribers.
+The Press is an acquisition funnel for InkySwot.
+
+What The Press includes:
+Cover Creator — Fixed Spine System. Three-panel canvas.
+Real-time spine adjustment. 3D book preview.
+Book Layout Tool — open book on screen. Flippable pages.
+Drop content. See exactly what prints before uploading anywhere.
+Front and Back Matter Assembly — auto-assembled from database.
+Ada writes blurb, bio, acknowledgements. Writer refines.
+Platform Requirements Database — live, maintained, always current.
+Validation layer — green lights only before export.
+Metadata — pre-filled from project. Writer completes remainder.
+The Guide — honest, platform-agnostic publishing guidance.
+
+Supported formats:
+Paperback / Hardback / Ebook.
+Audiobook — future. Full spec in press.md.
+
+Supported platforms:
+Print: KDP / IngramSpark / Lulu / Barnes & Noble Press / Other.
+Ebook: KDP / Draft2Digital / Kobo / Apple Books / Other.
+
+Maintenance commitment:
+Platform requirements database monitored and updated
+whenever any platform changes its specs.
+Ongoing operational commitment — not a one-time build.
+
+Public-facing entry point:
+The Press accessible to non-subscribers.
+URL to be confirmed — press.inkyswot.com or similar.
+Pay per book. No subscription required.
+
+Build complexity:
+Cover Creator — may need its own sub-step.
+Book Layout Tool — may need its own sub-step.
+Full timeline to be assessed before Step 14 begins.
 
 STEP 16 — Admin Panel
 Needs Supabase, Stripe, full platform.
@@ -220,3 +264,5 @@ User Experience Timeline (v1 map built, gaps 4 and 5 to resolve Step 2)
 FAQs / Manual / Videos (YouTube — no build content)
 Monthly Newsletter (The InkySwot Bugle)
 Beta Programme (not yet defined — Facebook page natural channel)
+Platform Requirements Database — ongoing maintenance.
+The Guide — written in parallel with build, updated post-launch.
