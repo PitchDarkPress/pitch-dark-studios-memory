@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 28 May 2026
+Last updated: 29 May 2026
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -126,14 +126,13 @@ My Projects / Trash / New Project modal /
 Overview / Characters / Relationships / Factions & Orgs /
 Language & Dialogue / Locations / Buildings / Objects & Artefacts /
 Rules & Lore / Plot Threads / Subplots / Themes & Motifs /
-Events & Timeline /
+Events & Timeline / Chapters / The Treatment /
 AI Expand / AI ON/OFF toggle /
 Read Aloud (with Chrome async cancel() bug fix in place) /
 Light-dark mode / Voice selector
 
 WHAT IS STUBBED (placeholder screen only — to be built in Step 1)
 Research & Reference / Notes & Scratchpad / Sandbox /
-Chapters / The Treatment /
 Timeline (DCW) / Storyboard (DCW) /
 Tutorial / Manual / FAQs / What's New
 All stubbed screens show "Coming Soon" placeholder.
@@ -164,7 +163,6 @@ Import option in New Project modal
 Three-panel layout (left sidebar / main work area / right panel)
 DCW strip (below main panels, above footer)
 Timeline strip
-Chapters / The Treatment — next to be built
 All remaining stubbed screens
 
 MANUSCRIPT FORMAT LIST — CONFIRMED
@@ -235,6 +233,12 @@ Writer uploads manuscript, enters workspace,
 highlights entities, categorises and adds to database,
 then writes.
 
+Third entry path — The Press:
+Non-subscribers access The Press directly.
+Public-facing entry point — press.inkyswot.com or similar.
+Pay per book. No subscription required.
+The Press becomes the door into InkySwot for many writers.
+
 UX MAP GAPS — STATUS
 Gap 1: Free-to-paid upgrade trigger — RESOLVED. Paid only.
 Gap 2: Publishing fee presentation — RESOLVED. £1 GBP upfront.
@@ -249,6 +253,7 @@ Top menu (includes Ada when AI ON)
 Left sidebar / Main work area / Right panel
 DCW strip (below panels, above footer — toggleable)
 Footer menu
+The Press — separate section. Own entry point.
 
 DCW — DIGITAL CREATIVE WORKSTATION
 Full spec in dcw.md.
@@ -257,6 +262,7 @@ Chapters as ruler across the top.
 Tracks for characters, plot, subplots, locations,
 events, objects, themes, tension, notes.
 Tracks are called TRACKS throughout the UI.
+Threads are the connections between Chapters and DCW Tracks.
 Tension curve — three modes:
 Manual — writer drags the curve.
 AI-guided — writer sets target, Ada advises how to get there.
@@ -265,6 +271,21 @@ Emotional Maps — curves tracking the rise and fall of specific
 emotions per character across chapters. New feature — 28 May 2026.
 Full spec in dcw.md.
 DCW mockup: https://inkyswot-app.vercel.app/inkyswot-daw.html
+
+THE PRESS
+Full spec in press.md.
+Where the writer goes when the book is done.
+Separate section — not part of the project nav.
+Also a standalone pay-per-book product for non-subscribers.
+The Press is an acquisition funnel for InkySwot.
+Includes: Cover Creator / Book Layout Tool /
+Front and Back Matter Assembly / Platform Requirements Database /
+Metadata / Validation / The Guide.
+Supports: Paperback / Hardback / Ebook.
+Future: Audiobook.
+Platforms: KDP / IngramSpark / Lulu / Draft2Digital /
+Kobo / Apple Books / Barnes & Noble Press / Other.
+Build position: replaces and expands Step 15.
 
 WRITE SCREEN
 Named: Write. Locked 28 May 2026.
@@ -321,6 +342,9 @@ security.md — Full security system.
 Ask for when: working on security, anti-spam, or signup flow.
 dcw.md — Full DCW specification.
 Ask for when: working on the DCW in any capacity.
+press.md — Full Press specification.
+Ask for when: working on The Press, Cover Creator,
+Book Layout Tool, publishing pipeline, or POD platforms.
 future.md — Future ideas, not yet on the build list.
 Ask for when: discussing post-launch possibilities.
 
@@ -339,7 +363,7 @@ Step 11 — The Treatment
 Step 12 — Ada
 Step 13 — DCW (Timeline Strip)
 Step 14 — Export Suite and Format Conversion
-Step 15 — Publishing Suite
+Step 15 — The Press (replaces Publishing Suite)
 Step 16 — Admin Panel
 Step 17 — PWA Manifest
 Step 18 — Beta
@@ -372,12 +396,18 @@ Full Screen mode named and locked — 28 May 2026.
 Index Card system conceived and specced — 28 May 2026.
 Research & Reference, Notes & Scratchpad, Sandbox deferred
 until after Write screen — 28 May 2026.
+Chapters screen built and wired — 29 May 2026.
+The Treatment shell built and wired — 29 May 2026.
+The Press conceived, named, and fully specced — 29 May 2026.
+press.md created as new specialist file — 29 May 2026.
+Threads named and locked — connections between Chapters
+and DCW Tracks — 29 May 2026.
 
 NEXT
-Build Chapters screen
-Build The Treatment screen
+Update build-list.md — Step 15 becomes The Press
+Update locked-decisions.md — The Press
+Update completed.md
 Write full Write screen spec before Step 10
 Write full Chapters spec
-Update all specialist files with today's decisions
-Resolve UX map gaps 4 and 5
 Begin Step 1 — v4.0 app shell rebuild
+Resolve UX map gaps 4 and 5
