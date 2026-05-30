@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 29 May 2026
+Last updated: 30 May 2026
 
 PLATFORM IDENTITY
 InkySwot is a writing platform. Not a content generation engine.
@@ -155,6 +155,61 @@ monitored and updated whenever any platform changes its specs.
 This is an ongoing operational commitment. Non-negotiable.
 Locked: 29 May 2026.
 
+PLOT MAPPING — LOCKED
+Named: Plot Mapping. The story corkboard — a thinking space for
+sketching a story before committing to it.
+Standalone mockup complete 30 May 2026. Code stored at
+CODE/map-plotter.html. To be built into index.html as a project
+screen, positioned near the start of the project nav.
+Per project — each project has its own Plot Mapping board.
+Saved the same way as everything else for now; moves to Supabase
+at Step 4 with the rest.
+Note types: Character / Location / Plot Thread / Event / Object /
+Subplot / Free Note. Type is chosen when the note is made.
+No change-type after creation — delete and remake if wrong.
+The note tab carries the type label, with a full-stop after it.
+The tab does three jobs: shows the type, click to flip, drag to connect.
+Click the tab — the note flips to its back: DARK THOUGHTS, a private
+panel, the writer's eyes only. Never exported. Never sent to InkySwot.
+The full-stop after the type goes RED when a note has Dark Thoughts.
+Drag from the tab — pulls a thread to another note (no mode needed).
+The Connect button stays as the alternative way to join notes.
+Copy system: a note can be copied to place one beat in several chapters.
+The front is shared across the whole set — edit any copy's front and
+all change. Each back (Dark Thoughts) is independent — its own per copy.
+A copy starts with a blank back. Counter bottom-right reads "n of n",
+showing only when the set has more than one. Renumbers on add/delete.
+Chapter dividers: each chapter boundary has a toggle button on the
+timeline strip — click to raise the divider full height, click to drop
+it. A grip at the top of a raised divider drags it to any height.
+SECTION ? help pill — top-right of the screen, gold border.
+Opens a slide-in guide headed with the section name.
+This is a TEMPLATE pattern for every screen — same pill, same place,
+each screen supplies its own words. The general manual stays separate
+in the Help menu.
+Note: the help pill is intended to float (for theatre) — not yet built.
+Locked: 30 May 2026.
+
+PLOT MAPPING TIMELINE — BELOW CHAPTER 1 — LOCKED ("the lift")
+One Plot Map per project — never multiple maps.
+The backstory is not a separate map; it is the basement of the same one.
+Think of the timeline like a lift. Above the line the chapters climb;
+below it you descend into the Prologue, and below that the Backstories.
+Top to bottom: Chapter 3 / Chapter 2 / Chapter 1 / Prologue /
+Backstory 1 / Backstory 2 / Backstory 3.
+Same board, same notes, same threads — the timeline just has a downstairs.
+Locked: 30 May 2026.
+
+SECTION HELP PILL — TEMPLATE PATTERN — LOCKED
+Every screen carries a help pill, top-right, gold border, reading
+SECTION ? — clicking it opens a slide-in guide headed with that
+screen's name (what it is / how to use it / a tip).
+Same pill, same place, every screen. Each screen supplies its own words.
+This is the in-context help system. The full manual stays separate
+in the Help menu (Tutorial / Manual / FAQs / What's New).
+First built on Plot Mapping (30 May 2026) as the template.
+Locked: 30 May 2026.
+
 SIGNUP
 Email + password → Email verification → Platform access.
 No SSO. No third party authentication. Email and password only.
@@ -190,3 +245,8 @@ Import Project uses the same setup screen as New Project.
 Manual entry. Same fields. No AI inference at this stage.
 Post-launch consideration: AI inference from imported manuscript.
 Locked: 26 May 2026.
+
+OPEN — NOT YET DECIDED
+Plot Mapping: whether a note can span a chapter range in the DCW
+(e.g. a thread running Ch.3–Ch.9), in addition to the
+copy-per-chapter system. Revisit when the DCW is built.
