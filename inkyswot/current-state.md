@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 29 May 2026
+Last updated: 30 May 2026
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -106,6 +106,11 @@ login.html — the login / sign up gate (single tabbed page)
 inkylogin-bg.png — login page background image (currently unused)
 inkyswot-daw.html — DCW mockup. Live at:
 https://inkyswot-app.vercel.app/inkyswot-daw.html
+CODE/ — the code locker (finished and in-progress code, stored
+separately from the .md notes). See CODE/README.md for the index.
+CODE/README.md — locker index, lists each stored file and status.
+CODE/map-plotter.html — Plot Mapping standalone mockup, complete
+30 May 2026. Awaiting integration into index.html.
 
 FILES IN REPO — inkyswot (landing page)
 index.html — the landing page
@@ -131,6 +136,13 @@ AI Expand / AI ON/OFF toggle /
 Read Aloud (with Chrome async cancel() bug fix in place) /
 Light-dark mode / Voice selector
 
+WHAT IS BUILT AS A STANDALONE MOCKUP (not yet in the app)
+Plot Mapping — complete standalone mockup, stored at
+CODE/map-plotter.html. To be folded into index.html in Step 1
+as a project screen near the start of the project nav.
+Full feature list in the PLOT MAPPING section below and in
+locked-decisions.md.
+
 WHAT IS STUBBED (placeholder screen only — to be built in Step 1)
 Research & Reference / Notes & Scratchpad / Sandbox /
 Timeline (DCW) / Storyboard (DCW) /
@@ -153,6 +165,8 @@ Library (Research & Reference / Notes & Scratchpad / Sandbox) /
 Chapters (Chapters / The Treatment) /
 DCW (Timeline / Storyboard)
 Help: Tutorial / Manual / FAQs / What's New
+Note: Plot Mapping to be added to the Project nav near the start
+(exact slot confirmed at integration) — 30 May 2026.
 
 WHAT IS NOT YET IN THE APP (Step 1 work)
 Manuscript Format screen (new — first step before Overview)
@@ -163,6 +177,8 @@ Import option in New Project modal
 Three-panel layout (left sidebar / main work area / right panel)
 DCW strip (below main panels, above footer)
 Timeline strip
+Plot Mapping screen (fold in CODE/map-plotter.html)
+Section help pill (SECTION ?) — template pattern for every screen
 All remaining stubbed screens
 
 MANUSCRIPT FORMAT LIST — CONFIRMED
@@ -232,6 +248,8 @@ Import Project follows same path.
 Writer uploads manuscript, enters workspace,
 highlights entities, categorises and adds to database,
 then writes.
+Note: Plot Mapping sits near the start of the project journey
+(per project) — a thinking space before the writer commits.
 
 Third entry path — The Press:
 Non-subscribers access The Press directly.
@@ -254,6 +272,46 @@ Left sidebar / Main work area / Right panel
 DCW strip (below panels, above footer — toggleable)
 Footer menu
 The Press — separate section. Own entry point.
+
+PLOT MAPPING
+Standalone mockup complete 30 May 2026 — CODE/map-plotter.html.
+The story corkboard — a thinking space for sketching a story
+before committing to it. Per project. Sits near the start of the
+project journey. Saved like everything else now; Supabase at Step 4.
+To be folded into index.html in Step 1.
+Note types: Character / Location / Plot Thread / Event / Object /
+Subplot / Free Note. Type chosen at creation — no change after
+(delete and remake). Double-click the board to add a note.
+The note tab carries the type label with a full-stop after it.
+The tab does three jobs: shows the type; click to flip the note to
+its back (DARK THOUGHTS — a private panel, never exported, never
+sent to InkySwot); drag from the tab to pull a thread to another
+note. The full-stop goes RED when a note has Dark Thoughts.
+Connect button stays as the alternative way to join notes.
+Copy system: copy a note to place one beat in several chapters.
+Front shared across the set (edit one, all change); each back is
+its own; a copy starts blank; "n of n" counter bottom-right, shown
+only for sets greater than one; renumbers on add/delete.
+Chapter timeline along the bottom. Drag a note onto a chapter to
+pin it. Chapter dividers have a toggle button to raise/lower them;
+a grip drags a raised divider to any height.
+Map title in the header — pre-fills from / syncs two-way with the
+Overview title once integrated.
+Timeline extends below Chapter 1 — the "lift": Prologue and
+Backstories live below the line on the same board. One map per
+project, never multiple. See locked-decisions.md.
+Open question: whether a note can also span a chapter range in the
+DCW (e.g. Ch.3–Ch.9). Revisit when the DCW is built.
+
+SECTION HELP PILL — TEMPLATE PATTERN
+First built on the Plot Mapping mockup — 30 May 2026.
+Every screen carries a help pill, top-right, gold border, reading
+SECTION ? — clicking it opens a slide-in guide headed with that
+screen's name (what it is / how to use it / a tip).
+Same pill, same place, every screen; each supplies its own words.
+This is the in-context help system. The full manual stays separate
+in the Help menu (Tutorial / Manual / FAQs / What's New).
+Intended to float (for theatre) — not yet built.
 
 DCW — DIGITAL CREATIVE WORKSTATION
 Full spec in dcw.md.
@@ -347,6 +405,8 @@ Ask for when: working on The Press, Cover Creator,
 Book Layout Tool, publishing pipeline, or POD platforms.
 future.md — Future ideas, not yet on the build list.
 Ask for when: discussing post-launch possibilities.
+CODE/ — the code locker. Finished and in-progress code files,
+indexed in CODE/README.md. Holds map-plotter.html (Plot Mapping).
 
 BUILD ORDER — CONFIRMED
 Step 1 — v4.0 App Shell Rebuild (NOT YET STARTED)
@@ -402,12 +462,24 @@ The Press conceived, named, and fully specced — 29 May 2026.
 press.md created as new specialist file — 29 May 2026.
 Threads named and locked — connections between Chapters
 and DCW Tracks — 29 May 2026.
+Plot Mapping standalone mockup built and complete — 30 May 2026.
+Plot Mapping decided: per project; near start of project journey;
+note tab as type label with red full-stop tell-tale; click-to-flip
+Dark Thoughts (private back, never exported); drag-from-tab threads;
+copy system (front shared, each back its own, "n of n"); chapter
+divider toggles; map title syncs with Overview — 30 May 2026.
+Plot Mapping timeline "lift" locked — extends below Chapter 1 into
+Prologue and Backstories; one map per project — 30 May 2026.
+Section help pill (SECTION ?) template pattern built on Plot
+Mapping — for every screen — 30 May 2026.
+CODE locker created in repo — CODE/README.md and
+CODE/map-plotter.html stored — 30 May 2026.
 
 NEXT
-Update build-list.md — Step 15 becomes The Press
-Update locked-decisions.md — The Press
-Update completed.md
-Write full Write screen spec before Step 10
-Write full Chapters spec
-Begin Step 1 — v4.0 app shell rebuild
-Resolve UX map gaps 4 and 5
+Fold Plot Mapping mockup (CODE/map-plotter.html) into index.html
+as a project screen near the start of the project nav.
+Write full Write screen spec before Step 10.
+Write full Chapters spec.
+Begin Step 1 — v4.0 app shell rebuild.
+Resolve UX map gaps 4 and 5.
+Update completed.md.
