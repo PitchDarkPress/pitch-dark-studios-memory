@@ -1,5 +1,5 @@
 File: inkyswot/build-list.md
-Last updated: 29 May 2026
+Last updated: 30 May 2026
 Build order locked 14 May 2026.
 Principle: get every user-facing element right in the single HTML
 file first. Walk it. Sign it off. Then go deep with infrastructure.
@@ -13,7 +13,12 @@ Events & Timeline screen built and wired — 28 May 2026.
 Chapters screen built and wired — 29 May 2026.
 The Treatment shell built and wired — 29 May 2026.
 Genre list rebuilt — 48 entries, flat alphabetical — 28 May 2026.
-These are pre-Step 1 additions to the existing v4.7 file.
+Plot Mapping screen — standalone mockup built and complete — 30 May 2026.
+  Code stored at CODE/map-plotter.html. Not yet in the app file.
+  To be folded into index.html during Step 1 (see below).
+Section help pill (SECTION ?) pattern designed and built on the
+  Plot Mapping mockup — 30 May 2026. Template for every screen.
+These are pre-Step 1 additions / mockups.
 Step 1 rebuild has not yet begun.
 
 STEP 1 — v4.0 App Shell Rebuild
@@ -55,6 +60,28 @@ AI ON/OFF theatrical transition (gradual)
 Animated speaker on Read (four frames)
 All AI Generate and Expand buttons on all screens
 Help section carried across
+
+Plot Mapping screen — fold the standalone mockup
+(CODE/map-plotter.html) into index.html as a project screen,
+positioned near the start of the project nav.
+Per project. Saved like everything else now; Supabase at Step 4.
+Carries: typed notes (Character / Location / Plot Thread / Event /
+Object / Subplot / Free Note); drag-to-connect threads + Connect
+button; chapter timeline with divider toggles; note tab as type
+label; click-to-flip to Dark Thoughts (private, never exported);
+red full-stop tell-tale; copy system (front shared, each back its
+own, "n of n" counter); map title (syncs with Overview title
+two-way once integrated).
+Timeline extends below Chapter 1 — the "lift": Prologue and
+Backstories live below the line on the same board (see
+locked-decisions.md).
+
+Section help pill (SECTION ?) — template pattern, add to every
+screen. Top-right, gold border. Opens a slide-in guide headed with
+the screen's name (what it is / how to use it / a tip). Each screen
+supplies its own words. Separate from the Help-menu manual.
+Intended to float (theatre) — not yet built.
+
 Cover thumbnail: REMOVED — not being built
 DCW mockup (inkyswot-daw.html) integrated as placeholder
 
@@ -186,6 +213,9 @@ Multiple Maps per character. Colour coded. Toggleable.
 Full spec in dcw.md.
 Minimap — overview of full timeline, scrollable viewport.
 DCW mockup (inkyswot-daw.html) already built — integrate here.
+Open question (from 30 May 2026): whether a note can span a
+chapter range here (e.g. a thread running Ch.3–Ch.9), in addition
+to the Plot Mapping copy-per-chapter system. Resolve at this step.
 
 STEP 14 — Export Suite and Format Conversion
 Needs Write screen and Treatment.
