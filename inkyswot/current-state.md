@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 30 May 2026
+Last updated: 31 May 2026
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -29,6 +29,8 @@ At the start of any build session, ask Kev to paste in
 the current index.html before any work begins.
 The code is the truth. Never assume the files tell the
 whole story.
+Update the files at the end of a session. Rebuild clean —
+never patch on patch. The .md is the single source of truth.
 
 WHAT INKYSWOT IS
 Web-based story world-building and production platform.
@@ -111,6 +113,9 @@ separately from the .md notes). See CODE/README.md for the index.
 CODE/README.md — locker index, lists each stored file and status.
 CODE/map-plotter.html — Plot Mapping standalone mockup, complete
 30 May 2026. Awaiting integration into index.html.
+CODE/home-icons.svg — the four home-page launchpad icons, clean
+SVG line art using stroke="currentColor" so they recolour with Tone.
+Stored 31 May 2026. Awaiting integration into the My Projects screen.
 
 FILES IN REPO — inkyswot (landing page)
 index.html — the landing page
@@ -136,27 +141,8 @@ AI Expand / AI ON/OFF toggle /
 Read Aloud (with Chrome async cancel() bug fix in place) /
 Light-dark mode / Voice selector
 
-WHAT IS BUILT AS A STANDALONE MOCKUP (not yet in the app)
-Plot Mapping — complete standalone mockup, stored at
-CODE/map-plotter.html. To be folded into index.html in Step 1
-as a project screen near the start of the project nav.
-Full feature list in the PLOT MAPPING section below and in
-locked-decisions.md.
-
-WHAT IS STUBBED (placeholder screen only — to be built in Step 1)
-Research & Reference / Notes & Scratchpad / Sandbox /
-Timeline (DCW) / Storyboard (DCW) /
-Tutorial / Manual / FAQs / What's New
-All stubbed screens show "Coming Soon" placeholder.
-Build to same pattern as existing screens.
-Full spec for each in build-list.md.
-Note: Research & Reference, Notes & Scratchpad and Sandbox
-are deferred until after the Write screen is built (Step 10).
-They are part of the same ecosystem and cannot be fully
-built without the writing panel in place.
-
-NAV — CONFIRMED COMPLETE
-Navigate: My Projects / Trash
+NAV — CONFIRMED (updated 31 May 2026)
+Navigate: My Projects / The Press / Plot Mapping
 Project: Overview / Cast (Characters / Relationships /
 Factions & Orgs / Language & Dialogue) /
 World (Locations / Buildings / Objects & Artefacts / Rules & Lore) /
@@ -165,10 +151,59 @@ Library (Research & Reference / Notes & Scratchpad / Sandbox) /
 Chapters (Chapters / The Treatment) /
 DCW (Timeline / Storyboard)
 Help: Tutorial / Manual / FAQs / What's New
-Note: Plot Mapping to be added to the Project nav near the start
-(exact slot confirmed at integration) — 30 May 2026.
+Trash: its own section at the foot of the sidebar.
+Notes on 31 May changes:
+- The Press added to Navigate (it sits outside any single project).
+- Plot Mapping moved up to Navigate (reachable front-of-house).
+  Its link is no longer in the Project section.
+- Trash moved out of Navigate into its own section at the bottom.
+Both The Press and Plot Mapping currently point to the Coming Soon
+placeholder until their real screens are built.
+
+HOME PAGE — MY PROJECTS (new 31 May 2026)
+My Projects is the home page — the screen a writer lands on at
+login and returns to. It is the hub, not a fixed path.
+After login the writer navigates freely from the nav menu;
+there is no forced route. (The only unavoidable sequence is the
+one-time setup when making a NEW project: it cannot show an
+Overview until the project exists.)
+Launchpad: four items live BOTH in the nav menu AND on the
+My Projects home page. Each home-page item has an icon, a title,
+and a two-line strap:
+- Plot Mapping — "Map ideas. See the pattern." — constellation icon
+- The Press — "Publish. Make it permanent." — printing press icon
+- Create First Project — "Begin the work. Claim the page." — typewriter icon
+- Open Project — "Return to what matters." — drawer-chest icon
+Icons stored at CODE/home-icons.svg — clean SVG line art,
+stroke="currentColor" so they recolour with Tone (gold on dark,
+ink on light). No PNGs.
+Straps not yet finally signed off — confirm before building the row.
+Build step still to do: lay out the four-item row on the
+My Projects screen, using the stored icons. Preview before
+touching index.html.
+
+WHAT IS BUILT AS A STANDALONE MOCKUP (not yet in the app)
+Plot Mapping — complete standalone mockup, stored at
+CODE/map-plotter.html. To be folded into index.html in Step 1.
+Full feature list in the PLOT MAPPING section below and in
+locked-decisions.md.
+
+WHAT IS STUBBED (placeholder screen only — to be built in Step 1)
+Research & Reference / Notes & Scratchpad / Sandbox /
+Timeline (DCW) / Storyboard (DCW) /
+Tutorial / Manual / FAQs / What's New /
+The Press / Plot Mapping (nav links — both show Coming Soon
+until their real screens are built)
+All stubbed screens show "Coming Soon" placeholder.
+Build to same pattern as existing screens.
+Full spec for each in build-list.md.
+Note: Research & Reference, Notes & Scratchpad and Sandbox
+are deferred until after the Write screen is built (Step 10).
+They are part of the same ecosystem and cannot be fully
+built without the writing panel in place.
 
 WHAT IS NOT YET IN THE APP (Step 1 work)
+Home-page launchpad row (four items with icons and straps on My Projects)
 Manuscript Format screen (new — first step before Overview)
 Format-aware formatting toolbar (adapts to manuscript type)
 Style Field (tone/voice dropdown + free text on Overview)
@@ -233,29 +268,46 @@ Both tabs show "not yet open" message on submit.
 Authentication stubbed — wires to Supabase in Step 4.
 Do not add routing to index.html until Step 4 is complete.
 
-UX MAP — USER JOURNEY
-Last reviewed: 26 May 2026
-Two entry paths. Both arrive at the same workspace.
+UX MAP — USER JOURNEY (updated 31 May 2026)
+The journey has two shapes joined together.
+BEFORE login it is a fixed path — no nav menu exists yet:
 Landing Page (inkyswot.com)
 → Decide: Sign Up or Log In
 → Login page (app.inkyswot.com/login.html)
-→ Decide: New Project or Import Project
-→ Manuscript Format (chosen first — drives everything)
-→ Overview (Title / Genre / Style / Tone / ETC)
-→ Workspace (three-panel layout)
-→ Write
-Import Project follows same path.
-Writer uploads manuscript, enters workspace,
-highlights entities, categorises and adds to database,
+AFTER login it is an open hub, not a path:
+→ My Projects (home — the launchpad)
+→ from here the nav menu takes the writer anywhere, in any order.
+The four launchpad options (Plot Mapping / The Press /
+Create First Project / Open Project) are reachable both from the
+nav and from the home page.
+The only sequence that survives after login is the one-time setup
+of a NEW project — New Project → Manuscript Format → Overview —
+because the project must exist before it can be navigated. This is
+necessity, not an imposed route. After setup the hub is fully open.
+Import Project follows the same setup path. Writer enters the
+workspace, highlights entities, categorises and adds to database,
 then writes.
-Note: Plot Mapping sits near the start of the project journey
-(per project) — a thinking space before the writer commits.
 
-Third entry path — The Press:
-Non-subscribers access The Press directly.
-Public-facing entry point — press.inkyswot.com or similar.
-Pay per book. No subscription required.
-The Press becomes the door into InkySwot for many writers.
+THE PRESS — TWO DOORS (updated 31 May 2026)
+The Press is one tool with two entry points.
+INSIDE (members): a screen reached from the nav, where a logged-in
+subscriber publishes their book.
+OUTSIDE (public): the same publishing tool behind its own public
+door — press.inkyswot.com — with its own front door reached also
+from the landing page. A non-subscriber signs up here (a lightweight
+Press sign-up), pays per book, and publishes without a platform
+subscription.
+A public Press sign-up makes someone a member of THE PRESS ONLY.
+They get a login to The Press and may use it as often as they wish.
+They have NO access to the platform itself. The paid-only platform
+stays sealed.
+Upsell: gentle, no push. Their email is captured, so they receive
+The InkySwot Bugle (the monthly newsletter) — the slow funnel.
+BUILD NOTE: the public Press must be CLONED, not merely re-skinned,
+because it needs a DIFFERENT payment gateway from the in-platform
+Press. Shared publishing engine; separate sign-up, login, and
+payment for the public version.
+Full spec in press.md. Build position: replaces and expands Step 15.
 
 UX MAP GAPS — STATUS
 Gap 1: Free-to-paid upgrade trigger — RESOLVED. Paid only.
@@ -264,6 +316,9 @@ Gap 3: Export Suite conversion moment — RESOLVED. No upgrade wall.
 Gap 4: Font import in Publishing Suite — NOT RESOLVED. TBD before Step 14.
 Gap 5: Document types in New Project modal — NOT RESOLVED. TBD before Step 1.
 Gap 6: Import/migration route — RESOLVED. Manual entry, same fields.
+Open question (public Press): where a non-sub's book data comes from
+when they have no project on the platform — enter cold, or upload a
+finished manuscript. TBD.
 Post-launch consideration: AI inference from imported manuscript.
 
 PLATFORM LAYOUT — CONFIRMED
@@ -271,14 +326,17 @@ Top menu (includes Ada when AI ON)
 Left sidebar / Main work area / Right panel
 DCW strip (below panels, above footer — toggleable)
 Footer menu
-The Press — separate section. Own entry point.
+The Press — separate section. Own entry point (two doors — see above).
 
 PLOT MAPPING
+ONE Plot Mapper. Per project. The 31 May change was only to move
+its NAV LINK up into Navigate so it is reachable front-of-house
+(a writer can open it to think before committing to a project).
+The tool itself remains per-project, exactly as specced below.
 Standalone mockup complete 30 May 2026 — CODE/map-plotter.html.
 The story corkboard — a thinking space for sketching a story
-before committing to it. Per project. Sits near the start of the
-project journey. Saved like everything else now; Supabase at Step 4.
-To be folded into index.html in Step 1.
+before committing to it. Saved like everything else now;
+Supabase at Step 4. To be folded into index.html in Step 1.
 Note types: Character / Location / Plot Thread / Event / Object /
 Subplot / Free Note. Type chosen at creation — no change after
 (delete and remake). Double-click the board to add a note.
@@ -330,8 +388,8 @@ emotions per character across chapters. New feature — 28 May 2026.
 Full spec in dcw.md.
 DCW mockup: https://inkyswot-app.vercel.app/inkyswot-daw.html
 
-THE PRESS
-Full spec in press.md.
+THE PRESS — CONTENTS
+Full spec in press.md. (Two-door model: see THE PRESS — TWO DOORS above.)
 Where the writer goes when the book is done.
 Separate section — not part of the project nav.
 Also a standalone pay-per-book product for non-subscribers.
@@ -406,7 +464,8 @@ Book Layout Tool, publishing pipeline, or POD platforms.
 future.md — Future ideas, not yet on the build list.
 Ask for when: discussing post-launch possibilities.
 CODE/ — the code locker. Finished and in-progress code files,
-indexed in CODE/README.md. Holds map-plotter.html (Plot Mapping).
+indexed in CODE/README.md. Holds map-plotter.html (Plot Mapping)
+and home-icons.svg (the four home-page launchpad icons).
 
 BUILD ORDER — CONFIRMED
 Step 1 — v4.0 App Shell Rebuild (NOT YET STARTED)
@@ -435,51 +494,42 @@ Pricing locked — 24 May 2026.
 Security system designed — 24 May 2026.
 Landing page updated — 25 May 2026.
 Login page built — 25 May 2026.
-Login page text sizes increased — 26 May 2026.
-Both forms stubbed with "not yet open" message — 26 May 2026.
-UX map reviewed and updated — 26 May 2026.
-Manuscript format list confirmed and grouped — 26 May 2026.
-Format-aware toolbar decided — 26 May 2026.
-DCW tension curve spec decided — 26 May 2026.
-Platform layout confirmed — 26 May 2026.
-Nav confirmed complete — 26 May 2026.
-All nine database files revised and corrected — 27 May 2026.
 Genre list rebuilt — 48 entries, flat alphabetical — 28 May 2026.
-Subplots screen built and wired — 28 May 2026.
-Themes & Motifs screen built and wired — 28 May 2026.
-Events & Timeline screen built and wired — 28 May 2026.
+Subplots / Themes & Motifs / Events & Timeline screens built — 28 May 2026.
 DCW Emotional Maps conceived, specced, mockup built — 28 May 2026.
-DCW tracks confirmed as Tracks — 28 May 2026.
-Ada contextual creative collaborator principle established — 28 May 2026.
-Write screen named and locked — 28 May 2026.
-Full Screen mode named and locked — 28 May 2026.
+Write screen and Full Screen mode named and locked — 28 May 2026.
 Index Card system conceived and specced — 28 May 2026.
-Research & Reference, Notes & Scratchpad, Sandbox deferred
-until after Write screen — 28 May 2026.
 Chapters screen built and wired — 29 May 2026.
 The Treatment shell built and wired — 29 May 2026.
 The Press conceived, named, and fully specced — 29 May 2026.
 press.md created as new specialist file — 29 May 2026.
-Threads named and locked — connections between Chapters
-and DCW Tracks — 29 May 2026.
 Plot Mapping standalone mockup built and complete — 30 May 2026.
-Plot Mapping decided: per project; near start of project journey;
-note tab as type label with red full-stop tell-tale; click-to-flip
-Dark Thoughts (private back, never exported); drag-from-tab threads;
-copy system (front shared, each back its own, "n of n"); chapter
-divider toggles; map title syncs with Overview — 30 May 2026.
-Plot Mapping timeline "lift" locked — extends below Chapter 1 into
-Prologue and Backstories; one map per project — 30 May 2026.
-Section help pill (SECTION ?) template pattern built on Plot
-Mapping — for every screen — 30 May 2026.
-CODE locker created in repo — CODE/README.md and
-CODE/map-plotter.html stored — 30 May 2026.
+Section help pill (SECTION ?) template pattern built — 30 May 2026.
+CODE locker created — README.md and map-plotter.html stored — 30 May 2026.
+
+31 May 2026:
+User journey reworked — open hub after login; My Projects is the
+home page. Fixed path only before login and for one-time new-project setup.
+The Press two-door model locked — one tool, inside (members, via nav)
+and outside (public, own door at press.inkyswot.com, own sign-up,
+CLONED for a different payment gateway). Public Press sign-up = Press
+member only, no platform access, gentle upsell via the Bugle.
+Nav updated — The Press and Plot Mapping added to Navigate;
+Trash moved to its own section at the foot of the sidebar.
+Plot Mapping confirmed ONE mapper, per-project; only its nav link
+moved to Navigate.
+Home-page launchpad decided — four items (Plot Mapping / The Press /
+Create First Project / Open Project) in BOTH the nav and the home
+page, each with icon, title and two-line strap.
+Four launchpad icons made as clean SVG line art (currentColor) and
+stored at CODE/home-icons.svg.
 
 NEXT
-Fold Plot Mapping mockup (CODE/map-plotter.html) into index.html
-as a project screen near the start of the project nav.
+Build the home-page launchpad row on My Projects (preview first,
+then into index.html) — confirm the four straps before building.
+Fold Plot Mapping mockup (CODE/map-plotter.html) into index.html.
 Write full Write screen spec before Step 10.
 Write full Chapters spec.
 Begin Step 1 — v4.0 app shell rebuild.
-Resolve UX map gaps 4 and 5.
+Resolve UX map gaps 4 and 5, and the public-Press data question.
 Update completed.md.
