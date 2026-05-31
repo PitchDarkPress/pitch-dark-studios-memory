@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 30 May 2026
+Last updated: 31 May 2026
 
 PLATFORM IDENTITY
 InkySwot is a writing platform. Not a content generation engine.
@@ -129,11 +129,58 @@ Threads feed directly into DCW Tracks.
 The Chapter stores Threads. The DCW displays them as Tracks.
 Locked: 29 May 2026.
 
+HOME PAGE — MY PROJECTS — LOCKED
+My Projects is the home page. It is the screen a writer lands on
+at login and returns to. It is the hub, not a fixed path.
+After login the writer navigates freely from the nav menu —
+no forced route. The only unavoidable sequence is the one-time
+setup of a NEW project (New Project → Manuscript Format → Overview),
+because the project must exist before it can be navigated.
+LAUNCHPAD: four items live BOTH in the nav menu AND on the
+My Projects home page —
+Plot Mapping / The Press / Create First Project / Open Project.
+Each home-page item carries an icon, a title, and a two-line strap.
+Icons: clean SVG line art using stroke="currentColor" so they
+recolour with Tone (gold on dark, ink on light). No PNGs.
+Stored at CODE/home-icons.svg.
+(Strap wording not yet finally signed off — confirm before building.)
+Locked: 31 May 2026.
+
+USER JOURNEY — TWO SHAPES — LOCKED
+Before login: a fixed path (no nav menu yet) —
+Landing Page → Sign Up / Log In → Login page.
+After login: an open hub — My Projects (home), then the nav menu
+takes the writer anywhere, in any order. No forced route.
+The only surviving sequence is the one-time new-project setup,
+which is necessity, not an imposed path.
+Locked: 31 May 2026.
+
+THE PRESS — TWO DOORS — LOCKED
+The Press is ONE tool with two entry points.
+INSIDE (members): a screen reached from the nav, where a logged-in
+subscriber publishes their book.
+OUTSIDE (public): the same publishing tool behind its own public
+door — press.inkyswot.com — also reachable from the landing page.
+A non-subscriber signs up here (a lightweight Press sign-up),
+pays per book, and publishes without a platform subscription.
+A public Press sign-up makes someone a member of THE PRESS ONLY.
+They get a login to The Press and may use it as often as they wish.
+They have NO access to the platform itself. The paid-only platform
+stays sealed.
+Upsell: gentle, no push. Their email is captured, so they receive
+The InkySwot Bugle — the slow funnel.
+BUILD NOTE: the public Press must be CLONED, not merely re-skinned,
+because it needs a DIFFERENT payment gateway from the in-platform
+Press. Shared publishing engine; separate sign-up, login and payment
+for the public version.
+Locked: 31 May 2026.
+
 THE PRESS — LOCKED
 Named: The Press. Locked: 29 May 2026.
 Where the writer goes when the book is done.
 Separate section of InkySwot — not part of the project nav.
-Also a standalone pay-per-book product for non-subscribers.
+Also a standalone pay-per-book product for non-subscribers (see
+THE PRESS — TWO DOORS above).
 The Press is an acquisition funnel for InkySwot.
 Replaces and significantly expands Step 15 in the build order.
 Full spec in press.md.
@@ -158,10 +205,13 @@ Locked: 29 May 2026.
 PLOT MAPPING — LOCKED
 Named: Plot Mapping. The story corkboard — a thinking space for
 sketching a story before committing to it.
+ONE Plot Mapper. Per project — each project has its own board.
+On 31 May 2026 its NAV LINK was moved up into Navigate so it is
+reachable front-of-house (a writer can open it to think before
+committing to a project). The tool itself stays per-project,
+unchanged. There is no second mapper.
 Standalone mockup complete 30 May 2026. Code stored at
-CODE/map-plotter.html. To be built into index.html as a project
-screen, positioned near the start of the project nav.
-Per project — each project has its own Plot Mapping board.
+CODE/map-plotter.html. To be built into index.html.
 Saved the same way as everything else for now; moves to Supabase
 at Step 4 with the rest.
 Note types: Character / Location / Plot Thread / Event / Object /
@@ -188,7 +238,7 @@ This is a TEMPLATE pattern for every screen — same pill, same place,
 each screen supplies its own words. The general manual stays separate
 in the Help menu.
 Note: the help pill is intended to float (for theatre) — not yet built.
-Locked: 30 May 2026.
+Locked: 30 May 2026. Nav-link move locked: 31 May 2026.
 
 PLOT MAPPING TIMELINE — BELOW CHAPTER 1 — LOCKED ("the lift")
 One Plot Map per project — never multiple maps.
@@ -250,3 +300,7 @@ OPEN — NOT YET DECIDED
 Plot Mapping: whether a note can span a chapter range in the DCW
 (e.g. a thread running Ch.3–Ch.9), in addition to the
 copy-per-chapter system. Revisit when the DCW is built.
+Home-page launchpad: final strap wording for the four items.
+The Press (public door): where a non-subscriber's book data comes
+from when they have no project on the platform — enter cold, or
+upload a finished manuscript. Revisit before building the public Press.
