@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 31 May 2026
+Last updated: 1 June 2026
 
 PLATFORM IDENTITY
 InkySwot is a writing platform. Not a content generation engine.
@@ -239,6 +239,10 @@ each screen supplies its own words. The general manual stays separate
 in the Help menu.
 Note: the help pill is intended to float (for theatre) — not yet built.
 Locked: 30 May 2026. Nav-link move locked: 31 May 2026.
+NOTE (1 June 2026): Plot Mapping and the DCW now FUSE into one
+instrument — see DCW × PLOT MAPPER FUSION below. Everything locked
+above (note types, tab, Dark Thoughts, copy system, dividers, the lift)
+carries forward unchanged into the fused tool.
 
 PLOT MAPPING TIMELINE — BELOW CHAPTER 1 — LOCKED ("the lift")
 One Plot Map per project — never multiple maps.
@@ -249,6 +253,34 @@ Top to bottom: Chapter 3 / Chapter 2 / Chapter 1 / Prologue /
 Backstory 1 / Backstory 2 / Backstory 3.
 Same board, same notes, same threads — the timeline just has a downstairs.
 Locked: 30 May 2026.
+
+DCW × PLOT MAPPER FUSION — LOCKED (1 June 2026)
+The Plot Mapper and the DCW are ONE instrument. Not two screens.
+Float (corkboard thinking) and Pin (timeline structure) are two states
+of the same board. Same notes, same gesture: scatter → arrange → pin.
+The DCW is a full top-down screen in its own right — tracks cascade
+down from the chapter ruler. This SUPERSEDES the old "strip below the
+three panels" model.
+THREE TRACK TYPES:
+  Type 1 — Structural (block-based): Character / Plot / Subplot /
+    Location / Event / Object / Theme / Notes.
+  Type 2 — Curve (a continuous line): Tension / Emotional Maps.
+  Type 3 — Ambient / world (block-based): Atmosphere / Weather / Time.
+TIME IS A BLOCK, not a ruler mode. The horizontal axis is fixed
+reading order; Time blocks declare story-time, so a single chapter can
+hold present / past / future blocks (flashbacks, intercut timelines).
+CARDS HOLD TEXT. A note card is not a label — it opens to hold prose.
+THE CASCADE: zoom is the main control. Book → chapters → scenes →
+words. Open a beat and it unfolds; write at the bottom and it rolls up
+(block, curve and summary all update). Nothing is entered twice.
+THE CARD IS THE BRIDGE from planning to writing. Closed on the board it
+is a beat in context; opened it is the page you write on. The Write
+screen is the DCW opened all the way down.
+A dedicated WRITING card type exists — the keystone. The other types
+describe the story; this one contains it. Working name "Scene." —
+NAME NOT YET LOCKED.
+Full detail in dcw.md. Mockups built 1 June 2026: the scene-level DCW
+and the fusion trial (Plot Mapper cards on the DCW board).
 
 SECTION HELP PILL — TEMPLATE PATTERN — LOCKED
 Every screen carries a help pill, top-right, gold border, reading
@@ -304,3 +336,7 @@ Home-page launchpad: final strap wording for the four items.
 The Press (public door): where a non-subscriber's book data comes
 from when they have no project on the platform — enter cold, or
 upload a finished manuscript. Revisit before building the public Press.
+Card fields: the per-type fields shown on the FRONT of each note card.
+Writing card type: its final name (working name "Scene.").
+Right-hand panel: whether the separate entity detail panel survives
+the fusion, or the card's own front/back makes it redundant.
