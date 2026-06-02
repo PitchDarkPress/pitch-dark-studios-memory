@@ -551,7 +551,15 @@ PLOT MAPPING, DCW, WRITE SCREEN) — to action once dcw.md and
 locked-decisions.md are written.
 
 NEXT
-Write the fusion into dcw.md and locked-decisions.md (today's task).
+Fusion written into dcw.md and locked-decisions.md — done 1 June.
+PENDING FILE UPDATES (do next):
+- completed.md — add one line: 1 June DCW design session held;
+  two mockups built (scene-level DCW + fusion trial).
+- thinking.md — log the open questions: per-type card fields;
+  the writing card's final name (working "Scene."); whether the
+  right-hand panel survives the fusion.
+- build-list.md — note the fusion converges the Plot Mapping and
+  DCW build steps (Plot Mapping fold-in + DCW Step 13).
 Decide per-type fields on the front of each card.
 Build the home-page launchpad row on My Projects (preview first,
 then into index.html) — confirm the four straps before building.
@@ -559,4 +567,3 @@ Write full Write screen spec before Step 10.
 Write full Chapters spec.
 Begin Step 1 — v4.0 app shell rebuild.
 Resolve UX map gaps 4 and 5, and the public-Press data question.
-Update completed.md.
