@@ -330,9 +330,6 @@ Left sidebar / Main work area / Right panel
 DCW strip (below panels, above footer — toggleable)
 Footer menu
 The Press — separate section. Own entry point (two doors — see above).
-PENDING (1 June): the DCW becomes a full top-down screen, not a
-strip. See dcw.md / locked-decisions.md. This "DCW strip" line is
-superseded once that spec is written. Not yet actioned here.
 
 PLOT MAPPING
 ONE Plot Mapper. Per project. The 31 May change was only to move
@@ -395,9 +392,9 @@ Emotional Maps — curves tracking the rise and fall of specific
 emotions per character across chapters. New feature — 28 May 2026.
 Full spec in dcw.md.
 DCW mockup: https://inkyswot-app.vercel.app/inkyswot-daw.html
-PENDING (1 June): major rework — fuses with Plot Mapper, becomes a
-full top-down screen, gains three track types, cards that hold text,
-and the cascade. Full detail being written into dcw.md.
+UPDATED (1 June): reworked — fuses with Plot Mapper, gains three
+track types (Time is a block), cards that hold text, and the cascade.
+The DCW strip is retained (not a top-down screen). Full detail in dcw.md.
 
 THE PRESS — CONTENTS
 Full spec in press.md. (Two-door model: see THE PRESS — TWO DOORS above.)
@@ -545,7 +542,7 @@ the Plot Mapper and the DCW FUSE into one instrument.
 Full detail in dcw.md. Locked calls in locked-decisions.md.
 Key points: three track types (Structural / Curve / Ambient,
 Time is a block); cards hold text; the cascade (beat → scenes →
-words); DCW becomes a full top-down screen, not a strip;
+words); the DCW strip is retained (not a top-down screen);
 the note card is the bridge from planning to writing.
 New keystone card type for writing prose — working name "Scene."
 Open: per-type fields on the front of each card.
