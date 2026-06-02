@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 1 June 2026
+Last updated: 2 June 2026
 
 PLATFORM IDENTITY
 InkySwot is a writing platform. Not a content generation engine.
@@ -99,6 +99,7 @@ emotion belonging to a specific character across chapters.
 The word Map is deliberate — it names the line now and
 future-proofs a full cartographic emotional view of a character.
 Multiple Maps per character. Colour coded. Toggleable.
+In the vertical DCW, curves run DOWN their own column.
 Full spec in dcw.md.
 Locked: 28 May 2026.
 
@@ -113,6 +114,8 @@ Locked: 27 May 2026.
 WRITE SCREEN — LOCKED DECISIONS
 The writing panel is called Write. Locked: 28 May 2026.
 Distraction-free mode is called Full Screen. Locked: 28 May 2026.
+Full Screen is the SHUTTER pushed fully to the page side — the WP
+covering the whole frame. Not a separate mode. Locked: 2 June 2026.
 Desktop only. No mobile. Locked: 28 May 2026.
 Index Card system — floating cards tethered to highlighted
 entities in the manuscript. Cards only appear on deliberate
@@ -211,7 +214,7 @@ reachable front-of-house (a writer can open it to think before
 committing to a project). The tool itself stays per-project,
 unchanged. There is no second mapper.
 Standalone mockup complete 30 May 2026. Code stored at
-CODE/map-plotter.html. To be built into index.html.
+CODE/map-plotter.html. Now fused into the vertical DCW (see below).
 Saved the same way as everything else for now; moves to Supabase
 at Step 4 with the rest.
 Note types: Character / Location / Plot Thread / Event / Object /
@@ -239,7 +242,7 @@ each screen supplies its own words. The general manual stays separate
 in the Help menu.
 Note: the help pill is intended to float (for theatre) — not yet built.
 Locked: 30 May 2026. Nav-link move locked: 31 May 2026.
-NOTE (1 June 2026): Plot Mapping and the DCW now FUSE into one
+NOTE (2 June 2026): Plot Mapping and the DCW are FUSED into one
 instrument — see DCW × PLOT MAPPER FUSION below. Everything locked
 above (note types, tab, Dark Thoughts, copy system, dividers, the lift)
 carries forward unchanged into the fused tool.
@@ -254,33 +257,73 @@ Backstory 1 / Backstory 2 / Backstory 3.
 Same board, same notes, same threads — the timeline just has a downstairs.
 Locked: 30 May 2026.
 
-DCW × PLOT MAPPER FUSION — LOCKED (1 June 2026)
+DCW × PLOT MAPPER FUSION — LOCKED (1–2 June 2026)
 The Plot Mapper and the DCW are ONE instrument. Not two screens.
 Float (corkboard thinking) and Pin (timeline structure) are two states
 of the same board. Same notes, same gesture: scatter → arrange → pin.
-The DCW stays a STRIP below the three main panels — toggleable, not a
-top-down screen. (Top-down was considered on 1 June and dropped; Kev
-has ideas for the strip.)
+
+THE DCW IS A VERTICAL BOARD (REVERSAL — 2 June 2026).
+The horizontal STRIP is RETIRED. The DCW is now a vertical board:
+scenes/chapters run TOP-TO-BOTTOM down the left spine; tracks are
+COLUMNS across the top. (On 1 June the strip was thought to be
+retained and top-down dropped; on 2 June, to fuse the DCW with the
+Writing Panel, the board was turned vertical so both run the same way —
+"two axes can't be one thing." The strip is gone.)
+
+THE SHUTTER (LOCKED — 2 June 2026).
+The DCW and the Writing Panel are ONE manuscript seen at two distances,
+divided by a SHUTTER — a curtain that COVERS and REVEALS without
+resizing either side. Both sides stay full-size underneath; only the
+curtain moves. The WP is ALWAYS ON TOP (it is a writing platform).
+The DCW sits on the LEFT; the WP is revealed from the RIGHT.
+Full Screen = the shutter pushed fully to the page side (not a separate
+mode). A grab-handle on the shutter keeps it findable at the extremes.
+
 THREE TRACK TYPES:
-  Type 1 — Structural (block-based): Character / Plot / Subplot /
-    Location / Event / Object / Theme / Notes.
+  Type 1 — Structural (note cards): Character / Plot / Subplot /
+    Location / Event / Object / Theme / Notes. Wear the Plot Mapper
+    note-card face (type tab, full-stop, knot; red full-stop = Dark
+    Thoughts). Click a card to expand it into a centred overlay.
   Type 2 — Curve (a continuous line): Tension / Emotional Maps.
-  Type 3 — Ambient / world (block-based): Atmosphere / Weather / Time.
-TIME IS A BLOCK, not a ruler mode. The horizontal axis is fixed
-reading order; Time blocks declare story-time, so a single chapter can
-hold present / past / future blocks (flashbacks, intercut timelines).
+    Run vertically DOWN their own column.
+  Type 3 — Ambient / world: Atmosphere / Weather / Time. Bands wearing
+    card furniture (a type tab and body) but NO knot and NO full-stop —
+    the calmer, non-openable cousin to the structural cards.
+TIME IS A BLOCK, not a ruler mode. Vertical reading order is fixed;
+Time blocks declare story-time, so a single chapter can hold present /
+past / future blocks (flashbacks, intercut timelines).
+
+STAVE / CHAPTER DIVIDERS: full-width separator rows across every
+column, a line above and below the label.
+
+TRACK HEADERS: horizontal, centred over their column, auto-wrapping
+(long words hyphenate), each with a downward chevron in the track
+colour pointing at its column. (45° angled headers were tried and
+rejected once the columns were widened — 2 June.)
+
+THE ENTITY PANEL SURVIVES the fusion — a right-hand panel showing the
+selected entity (arc, relationships, appears-in, AI tools). RESOLVED:
+the card's own front/back does NOT make it redundant; the panel stays.
+The minimap rail is REMOVED.
+
+READING TEXT is large (Crimson Pro) and columns are wide. No
+fit-to-screen-by-default — the board scrolls. Magnify/zoom still to be
+wired (the + / − in the footer).
+
 CARDS HOLD TEXT. A note card is not a label — it opens to hold prose.
 THE CASCADE: zoom is the main control. Book → chapters → scenes →
 words. Open a beat and it unfolds; write at the bottom and it rolls up
 (block, curve and summary all update). Nothing is entered twice.
 THE CARD IS THE BRIDGE from planning to writing. Closed on the board it
 is a beat in context; opened it is the page you write on. The Write
-screen is the DCW opened all the way down.
+screen is the DCW opened all the way down (the shutter on the page side).
 A dedicated WRITING card type exists — the keystone. The other types
 describe the story; this one contains it. Working name "Scene." —
-NAME NOT YET LOCKED.
-Full detail in dcw.md. Mockups built 1 June 2026: the scene-level DCW
-and the fusion trial (Plot Mapper cards on the DCW board).
+NAME NOT YET LOCKED. May become TWO types (Dialogue + Descriptive) —
+see OPEN below.
+Full detail in dcw.md. Standalone build in progress:
+CODE/dcw-vertical.html (shutter frame signed off; vertical DCW board
+in; WP side still a placeholder).
 
 SECTION HELP PILL — TEMPLATE PATTERN — LOCKED
 Every screen carries a help pill, top-right, gold border, reading
@@ -328,15 +371,37 @@ Manual entry. Same fields. No AI inference at this stage.
 Post-launch consideration: AI inference from imported manuscript.
 Locked: 26 May 2026.
 
+FILE DISCIPLINE — LOCKED
+When updating any .md file, rewrite the WHOLE file clean and hand it
+back complete. Never a list of patches or "replace this block" edits.
+The .md is the single source of truth; the code is the truth above it.
+Locked: 2 June 2026.
+
 OPEN — NOT YET DECIDED
-Plot Mapping: whether a note can span a chapter range in the DCW
+Plot Mapping: whether a note/card can span a chapter or scene range
 (e.g. a thread running Ch.3–Ch.9), in addition to the
-copy-per-chapter system. Revisit when the DCW is built.
+copy-per-chapter system. Revisit in the fused DCW.
 Home-page launchpad: final strap wording for the four items.
 The Press (public door): where a non-subscriber's book data comes
 from when they have no project on the platform — enter cold, or
 upload a finished manuscript. Revisit before building the public Press.
 Card fields: the per-type fields shown on the FRONT of each note card.
-Writing card type: its final name (working name "Scene.").
-Right-hand panel: whether the separate entity detail panel survives
-the fusion, or the card's own front/back makes it redundant.
+Writing card type: its final name (working name "Scene.") AND whether
+it stays one card or becomes TWO (Dialogue + Descriptive), set into
+script-style layout (slug / action / cue / dialogue) for the compose
+view, with the format-aware engine setting the final output style.
+The planning-to-writing seam: how arranging cards becomes writing prose
+without a mode-wall — ghost-prompts (faint italic shorthand that turns
+solid when written) / Ada priming a provisional line (assisted, never
+instant, writer-led) / no mode-wall (the card is already editable text).
+Likely all three layered. Make it a gradient, not a moment.
+Square the fused model with the existing locked Index Card system.
+DCW magnify/zoom — wire the + / − (the cascade altitude control).
+Loud/quiet (*) markers: loud shows every (*); quiet hides them for
+clean reading but entity names stay gently live — and the way back into
+a card when (*) is hidden.
+The shutter: which side sits ON TOP when the shutter is part-way
+(working assumption: WP always on top).
+Track controls: reorder (drag headers), widen/narrow (drag edges),
+possible solo (Mixcraft-style); undocking the board into a floating
+window; editing entities from within the DCW.
