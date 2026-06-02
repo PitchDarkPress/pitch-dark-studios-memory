@@ -1,10 +1,14 @@
 File: inkyswot/thinking.md
-Last updated: 28 May 2026
+Last updated: 2 June 2026
 
 OPEN DECISIONS — NEED RESOLVING BEFORE BUILD STEPS NOTED
 Write screen tagline — undecided.
-Write screen full spec — needed before Step 10.
-Index Card system full spec — needed before Step 10.
+Write screen full spec — needed before Step 10. Must now reconcile
+with the fused vertical DCW (the Write screen is the DCW opened all
+the way down — the shutter on the page side) and with the existing
+locked Index Card system.
+Index Card system full spec — needed before Step 10. Square with the
+note-card / cascade model in the fused DCW.
 Chapters full spec — framework established 28 May 2026.
 Full spec needed before build. See notes below.
 Export Suite full spec — needed before Step 14.
@@ -41,10 +45,14 @@ Full spec needed before build.
 
 WRITE SCREEN — FRAMEWORK ESTABLISHED 28 MAY 2026
 Named: Write. Locked.
-Full Screen mode named and locked.
+Full Screen mode named and locked. Full Screen is the shutter pushed
+fully to the page side — not a separate mode (2 June 2026).
 Index Card system conceived — full spec needed before Step 10.
 Desktop only. No mobile. Locked.
 Key decisions locked — see locked-decisions.md.
+The Write screen is the fused DCW opened all the way down — same
+manuscript, two distances. The note card is the bridge: closed it is a
+beat in context, opened it is the page you write on.
 Full spec needed before Step 10.
 
 LIBRARY SECTION — DEFERRED
@@ -64,12 +72,51 @@ Gap 6 — AI inference from imported manuscript. Platform reads
 manuscript and pre-fills setup fields where possible.
 Revisit when revenue supports the development cost.
 
-DCW — STILL TO RESOLVE
-DCW confirmed at Step 13 in build order.
-The mockup exists and is ready to integrate.
-Emotional Maps specced and added to dcw.md — 28 May 2026.
-Tracks confirmed as Tracks throughout UI — 28 May 2026.
-Tension curve — partially specced in dcw.md.
-Needs full detail before Step 13.
-Toggle states need finalising — how does the writer
-show/hide the DCW strip from the main workspace?
+DCW — STILL TO RESOLVE (updated 2 June 2026)
+The DCW is now a VERTICAL board fused with the Writing Panel via the
+shutter. The horizontal strip is retired. Full spec in dcw.md; locked
+calls in locked-decisions.md. Build at Step 13.
+Still open:
+- WRITING CARD NAMING: working name "Scene." — not locked. And whether
+  it stays ONE card or becomes TWO (Dialogue + Descriptive), set into
+  script-style layout (slug / action / cue / dialogue) for the compose
+  view, with the format-aware engine setting the final output style.
+- PER-TYPE CARD FIELDS: what shows on the FRONT of each note type.
+- THE PLANNING-TO-WRITING SEAM: how arranging cards becomes writing
+  prose without a mode-wall. Three approaches, likely all layered:
+  (a) no mode-wall — the card is already editable text;
+  (b) ghost-prompts — faint italic shorthand that turns solid when
+      written (the writer's own notes when AI is off);
+  (c) Ada primes a provisional line — assisted, never instant,
+      writer-led (Ada = Step 12).
+  Make it a GRADIENT, not a moment.
+- MAGNIFY / ZOOM: wire the + / − in the footer (the cascade altitude
+  control). The board scrolls; no fit-to-screen-by-default.
+- THE (*) MARKER and LOUD/QUIET: loud shows every (*); quiet hides them
+  for clean reading but entity names stay gently live — and the way
+  back into a card when (*) is hidden (hover / keystroke / click).
+- THE SHUTTER: which side sits ON TOP when part-way (working assumption:
+  WP always on top — effectively settled, but watch in practice).
+- TRACK CONTROLS: reorder (drag headers — grouped vs free interleave?),
+  widen/narrow (drag edges), possible SOLO; undocking the board into a
+  floating window; editing entities from within the DCW.
+- NOTE RANGE: whether a card can span a chapter/scene range
+  (e.g. Ch.3–Ch.9) in addition to the copy-per-chapter system.
+- An idea may still be UNCAUGHT: Kev felt a further refinement forming
+  about how cards transform as you move along the storyline. The funnel
+  + vertical turn may have captured it — watch for more.
+
+DCW — NOW RESOLVED (was open)
+- Strip vs vertical/top-down — RESOLVED: vertical board, strip retired.
+- The shutter between DCW and WP — RESOLVED: covers/reveals without
+  resizing, WP always on top, DCW left / WP right.
+- Toggle states (how the writer shows/hides the DCW) — RESOLVED by the
+  shutter: the shutter IS the show/hide, dragged to any balance.
+- Whether the right-hand entity panel survives — RESOLVED: it survives.
+- Track header angle — RESOLVED: horizontal, centred, chevron beneath
+  (45° tried and rejected once columns widened).
+
+NAV — TO ACTION
+The nav still lists the old DCW sub-entries (Timeline / Storyboard) and
+separate Plot Mapping. Once the fused vertical DCW screen is built,
+collapse these into a single DCW entry. Not yet actioned.
