@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 31 May 2026
+Last updated: 1 June 2026
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -159,6 +159,9 @@ Notes on 31 May changes:
 - Trash moved out of Navigate into its own section at the bottom.
 Both The Press and Plot Mapping currently point to the Coming Soon
 placeholder until their real screens are built.
+PENDING (1 June): Plot Mapping and the DCW fuse into one instrument
+(see dcw.md / locked-decisions.md). Nav will collapse the two into a
+single entry once that spec is written. Not yet actioned here.
 
 HOME PAGE — MY PROJECTS (new 31 May 2026)
 My Projects is the home page — the screen a writer lands on at
@@ -327,6 +330,9 @@ Left sidebar / Main work area / Right panel
 DCW strip (below panels, above footer — toggleable)
 Footer menu
 The Press — separate section. Own entry point (two doors — see above).
+PENDING (1 June): the DCW becomes a full top-down screen, not a
+strip. See dcw.md / locked-decisions.md. This "DCW strip" line is
+superseded once that spec is written. Not yet actioned here.
 
 PLOT MAPPING
 ONE Plot Mapper. Per project. The 31 May change was only to move
@@ -360,6 +366,8 @@ Backstories live below the line on the same board. One map per
 project, never multiple. See locked-decisions.md.
 Open question: whether a note can also span a chapter range in the
 DCW (e.g. Ch.3–Ch.9). Revisit when the DCW is built.
+PENDING (1 June): Plot Mapper and DCW fuse into one instrument.
+The fused spec lives in dcw.md from now on. See locked-decisions.md.
 
 SECTION HELP PILL — TEMPLATE PATTERN
 First built on the Plot Mapping mockup — 30 May 2026.
@@ -387,6 +395,9 @@ Emotional Maps — curves tracking the rise and fall of specific
 emotions per character across chapters. New feature — 28 May 2026.
 Full spec in dcw.md.
 DCW mockup: https://inkyswot-app.vercel.app/inkyswot-daw.html
+PENDING (1 June): major rework — fuses with Plot Mapper, becomes a
+full top-down screen, gains three track types, cards that hold text,
+and the cascade. Full detail being written into dcw.md.
 
 THE PRESS — CONTENTS
 Full spec in press.md. (Two-door model: see THE PRESS — TWO DOORS above.)
@@ -421,6 +432,10 @@ Scan on space bar press only — current page only.
 Database change triggers full manuscript rescan in background.
 AI off — highlighting and cards still work. Ada's suggestions don't.
 Full spec to be written before Step 10.
+PENDING (1 June): the Write screen relates to the fused DCW via the
+note card — a card opens into the writing surface (the cascade).
+New keystone card type for prose, working name "Scene." Reconcile
+with this section when the fused dcw.md is written.
 
 ADA
 Full spec in ada.md.
@@ -524,10 +539,25 @@ page, each with icon, title and two-line strap.
 Four launchpad icons made as clean SVG line art (currentColor) and
 stored at CODE/home-icons.svg.
 
+1 June 2026:
+DCW worked through at length. Major architectural decision —
+the Plot Mapper and the DCW FUSE into one instrument.
+Full detail in dcw.md. Locked calls in locked-decisions.md.
+Key points: three track types (Structural / Curve / Ambient,
+Time is a block); cards hold text; the cascade (beat → scenes →
+words); DCW becomes a full top-down screen, not a strip;
+the note card is the bridge from planning to writing.
+New keystone card type for writing prose — working name "Scene."
+Open: per-type fields on the front of each card.
+Consequential edits flagged inline above (NAV, PLATFORM LAYOUT,
+PLOT MAPPING, DCW, WRITE SCREEN) — to action once dcw.md and
+locked-decisions.md are written.
+
 NEXT
+Write the fusion into dcw.md and locked-decisions.md (today's task).
+Decide per-type fields on the front of each card.
 Build the home-page launchpad row on My Projects (preview first,
 then into index.html) — confirm the four straps before building.
-Fold Plot Mapping mockup (CODE/map-plotter.html) into index.html.
 Write full Write screen spec before Step 10.
 Write full Chapters spec.
 Begin Step 1 — v4.0 app shell rebuild.
