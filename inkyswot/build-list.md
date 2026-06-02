@@ -1,5 +1,5 @@
 File: inkyswot/build-list.md
-Last updated: 30 May 2026
+Last updated: 2 June 2026
 Build order locked 14 May 2026.
 Principle: get every user-facing element right in the single HTML
 file first. Walk it. Sign it off. Then go deep with infrastructure.
@@ -15,28 +15,50 @@ The Treatment shell built and wired — 29 May 2026.
 Genre list rebuilt — 48 entries, flat alphabetical — 28 May 2026.
 Plot Mapping screen — standalone mockup built and complete — 30 May 2026.
   Code stored at CODE/map-plotter.html. Not yet in the app file.
-  To be folded into index.html during Step 1 (see below).
+  Now fused into the vertical DCW (see Step 13 / the fusion note below).
 Section help pill (SECTION ?) pattern designed and built on the
   Plot Mapping mockup — 30 May 2026. Template for every screen.
+DCW × Plot Mapper FUSION decided — one instrument — 1 June 2026.
+DCW STRIP RETIRED — turned into a VERTICAL board + shutter to fuse
+  with the Writing Panel — 2 June 2026. Standalone build in progress:
+  CODE/dcw-vertical.html (shutter frame signed off; vertical board in;
+  WP side still a placeholder).
 These are pre-Step 1 additions / mockups.
 Step 1 rebuild has not yet begun.
+
+THE FUSION — A NOTE ON BUILD SEQUENCING (2 June 2026)
+The Plot Mapper and the DCW are now ONE instrument — a single vertical
+board fused with the Writing Panel via the shutter. This CONVERGES two
+build items that used to be separate:
+- the old "fold Plot Mapping into index.html during Step 1", and
+- the old "DCW (Timeline Strip) at Step 13".
+They are no longer two builds. The fused vertical DCW is built once,
+at Step 13 (it needs The Treatment and the Write screen in place
+first). In Step 1 the app shell carries a PLACEHOLDER for the fused DCW
+(reachable from the nav, showing Coming Soon) rather than folding in the
+old standalone Plot Mapper as a finished screen. The standalone
+map-plotter.html and dcw-vertical.html are the design source the
+Step 13 build draws from.
 
 STEP 1 — v4.0 App Shell Rebuild
 All screens, all navigation, all interactions in the single HTML file.
 Platform layout: top menu / left sidebar / main work area /
-right panel / DCW strip (below panels, above footer) / footer menu.
+right panel / footer menu. (The DCW is no longer a strip below the
+panels — it is the fused vertical board + shutter, built at Step 13.
+Carry a placeholder/nav entry only in Step 1.)
 What goes in during this step:
 
 Three-panel layout shell (left sidebar / main work area / right panel)
-DCW strip placeholder (below panels, above footer — toggleable)
+Fused DCW placeholder (nav entry → Coming Soon until Step 13)
 Manuscript Format screen (new — first step in project setup,
 before Overview. Writer chooses format before anything else.
 Format drives toolbar, workspace, and AI context.)
 All existing screens carried across and confirmed in correct position.
 All stubbed screens built to same pattern as existing screens:
 Research & Reference / Notes & Scratchpad / Sandbox /
-Timeline (DCW) / Storyboard (DCW) /
 Tutorial / Manual / FAQs / What's New
+(The old DCW sub-entries Timeline / Storyboard are superseded by the
+fused vertical DCW — collapse the nav to a single DCW entry.)
 Note: Subplots, Themes & Motifs, Events & Timeline,
 Chapters and The Treatment already built —
 carry across and confirm in correct position.
@@ -61,21 +83,6 @@ Animated speaker on Read (four frames)
 All AI Generate and Expand buttons on all screens
 Help section carried across
 
-Plot Mapping screen — fold the standalone mockup
-(CODE/map-plotter.html) into index.html as a project screen,
-positioned near the start of the project nav.
-Per project. Saved like everything else now; Supabase at Step 4.
-Carries: typed notes (Character / Location / Plot Thread / Event /
-Object / Subplot / Free Note); drag-to-connect threads + Connect
-button; chapter timeline with divider toggles; note tab as type
-label; click-to-flip to Dark Thoughts (private, never exported);
-red full-stop tell-tale; copy system (front shared, each back its
-own, "n of n" counter); map title (syncs with Overview title
-two-way once integrated).
-Timeline extends below Chapter 1 — the "lift": Prologue and
-Backstories live below the line on the same board (see
-locked-decisions.md).
-
 Section help pill (SECTION ?) — template pattern, add to every
 screen. Top-right, gold border. Opens a slide-in guide headed with
 the screen's name (what it is / how to use it / a tip). Each screen
@@ -83,7 +90,6 @@ supplies its own words. Separate from the Help-menu manual.
 Intended to float (theatre) — not yet built.
 
 Cover thumbnail: REMOVED — not being built
-DCW mockup (inkyswot-daw.html) integrated as placeholder
 
 STEP 2 — Walk the Platform
 Walk every screen as a zero-knowledge user.
@@ -138,14 +144,18 @@ The writing panel. Named: Write. Locked 28 May 2026.
 Full Write screen built here. Step 1 builds the shell only.
 Full Write screen spec must be written before this step begins.
 Index Card system full spec must be written before this step begins.
+The Write screen is the fused DCW opened all the way down — the
+shutter pushed fully to the page side. Reconcile the Write spec and the
+Index Card system with the DCW note-card / cascade model (see dcw.md).
 White background — like a page.
 Format-aware toolbar (shell in Step 1, fully built here).
 Formatting: Bold / Italic / Underline / Font / Size /
 Alignment / Lists. Hotkeys.
 Chapter selector. Live word count. Auto-save.
 Full Screen mode — distraction-free writing. Named: Full Screen.
-When active: all UI steps back. Counter shows waiting suggestions.
-Ada steps back. Patient. Waiting.
+Full Screen is the shutter pushed fully to the page side (not a
+separate mode). When active: all UI steps back. Counter shows waiting
+suggestions. Ada steps back. Patient. Waiting.
 Index Card system:
 — Known entities highlighted in gold on space bar press.
 — Unregistered entities highlighted in a cooler colour.
@@ -193,29 +203,41 @@ Full specification in ada.md.
 Ada spec must be complete before this step begins.
 Ada voice alternative to be confirmed before this step.
 
-STEP 13 — DCW (Timeline Strip)
+STEP 13 — DCW (the fused vertical DCW + shutter)
 Full specification in dcw.md.
-Needs Treatment in place.
-Full width below panels. Always present. Toggleable.
-Chapters as ruler across the top.
-Track types: Character / Plot / Subplot / Location /
-Event / Object / Theme / Tension / Notes.
-Tracks are called TRACKS throughout the UI.
-Threads are the connections between Chapters and DCW Tracks.
-Scene blocks colour-coded per track.
-Tension curve — three modes:
-Manual — writer drags the curve.
-AI-guided — writer sets target, Ada advises how to get there.
-Analysis — Ada reads text and plots curve automatically.
-Emotional Maps — curves tracking the rise and fall of specific
-emotions per character across chapters.
-Multiple Maps per character. Colour coded. Toggleable.
-Full spec in dcw.md.
-Minimap — overview of full timeline, scrollable viewport.
-DCW mockup (inkyswot-daw.html) already built — integrate here.
-Open question (from 30 May 2026): whether a note can span a
-chapter range here (e.g. a thread running Ch.3–Ch.9), in addition
-to the Plot Mapping copy-per-chapter system. Resolve at this step.
+Needs The Treatment (Step 11) and the Write screen (Step 10) in place.
+This step builds the fused instrument — it CONVERGES the old Plot
+Mapping fold-in and the old DCW timeline-strip step (see the fusion
+note near the top). Built once, here.
+The DCW is a VERTICAL board (strip retired):
+— Scenes/chapters run top-to-bottom down the left spine.
+— Tracks are columns across the top: horizontal centred headers with
+  a downward chevron, auto-wrap + hyphenation.
+— Full-width stave/chapter divider rows (line above and below).
+Three track types:
+— Structural (note cards) — Character / Plot / Subplot / Location /
+  Event / Object / Theme / Notes. The Plot Mapper note-card face
+  (type tab + full-stop + knot; red full-stop = Dark Thoughts).
+  Click a card to expand. Float ↔ Pin (corkboard ↔ timeline).
+— Curve — Tension and Emotional Maps, running down their own column.
+— Ambient — Atmosphere / Weather / Time (Time is a block). Card
+  furniture but no knot/full-stop.
+Cards hold text; the cascade (book → chapters → scenes → words).
+Tension curve — three modes (Manual / AI-guided / Analysis).
+Emotional Maps — multiple per character, colour coded, toggleable.
+The card is the bridge to writing; the Write screen is the DCW opened
+all the way down (the shutter on the page side).
+THE SHUTTER: DCW + Writing Panel one instrument; curtain covers/reveals
+without resizing; WP always on top; DCW left / WP right; Full Screen =
+page-side extreme; grab-handle keeps it findable.
+Entity panel survives (right-hand side). Minimap rail removed.
+Magnify/zoom (+ / −) — the cascade altitude control.
+Design source: CODE/dcw-vertical.html and CODE/map-plotter.html.
+Open (resolve at this step): whether a card can span a chapter/scene
+range (e.g. Ch.3–Ch.9) in addition to the copy-per-chapter system;
+writing-card naming (Scene vs Dialogue + Descriptive); per-type card
+fields; the planning-to-writing seam (ghost-prompts / Ada primer /
+no mode-wall); track reorder/resize/solo; undocking.
 
 STEP 14 — Export Suite and Format Conversion
 Needs Write screen and Treatment.
