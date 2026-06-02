@@ -258,9 +258,9 @@ DCW × PLOT MAPPER FUSION — LOCKED (1 June 2026)
 The Plot Mapper and the DCW are ONE instrument. Not two screens.
 Float (corkboard thinking) and Pin (timeline structure) are two states
 of the same board. Same notes, same gesture: scatter → arrange → pin.
-The DCW is a full top-down screen in its own right — tracks cascade
-down from the chapter ruler. This SUPERSEDES the old "strip below the
-three panels" model.
+The DCW stays a STRIP below the three main panels — toggleable, not a
+top-down screen. (Top-down was considered on 1 June and dropped; Kev
+has ideas for the strip.)
 THREE TRACK TYPES:
   Type 1 — Structural (block-based): Character / Plot / Subplot /
     Location / Event / Object / Theme / Notes.
