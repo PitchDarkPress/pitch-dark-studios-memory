@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 1 June 2026
+Last updated: 2 June 2026
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -31,6 +31,8 @@ The code is the truth. Never assume the files tell the
 whole story.
 Update the files at the end of a session. Rebuild clean —
 never patch on patch. The .md is the single source of truth.
+When updating a file, always rewrite the WHOLE file clean — never
+hand back a list of patches or "replace this block" edits.
 
 WHAT INKYSWOT IS
 Web-based story world-building and production platform.
@@ -106,7 +108,8 @@ FILES IN REPO — inkyswot-app
 index.html — the app workspace
 login.html — the login / sign up gate (single tabbed page)
 inkylogin-bg.png — login page background image (currently unused)
-inkyswot-daw.html — DCW mockup. Live at:
+inkyswot-daw.html — DCW mockup (OLD horizontal strip — superseded by
+the vertical DCW, 2 June 2026). Live at:
 https://inkyswot-app.vercel.app/inkyswot-daw.html
 CODE/ — the code locker (finished and in-progress code, stored
 separately from the .md notes). See CODE/README.md for the index.
@@ -116,6 +119,10 @@ CODE/map-plotter.html — Plot Mapping standalone mockup, complete
 CODE/home-icons.svg — the four home-page launchpad icons, clean
 SVG line art using stroke="currentColor" so they recolour with Tone.
 Stored 31 May 2026. Awaiting integration into the My Projects screen.
+CODE/dcw-vertical.html — the vertical DCW + shutter frame, in progress
+(2 June 2026). Shutter frame signed off; vertical DCW board in;
+WP side still a placeholder. To be stored in the locker and folded
+into index.html at Step 1 / Step 13. See dcw.md.
 
 FILES IN REPO — inkyswot (landing page)
 index.html — the landing page
@@ -126,6 +133,7 @@ Fix before moving on. No snag lists. No deferred problems.
 No patches on patches. One step at a time.
 Explain before doing. Wait for confirmation.
 Persistent bugs: rebuild from scratch. Never overwhelm.
+When updating files, rewrite the whole file clean — never patch.
 
 WHAT IS BUILT AND WORKING
 Landing page (inkyswot.com) — ticker, clocks, Log In / Sign Up buttons.
@@ -159,9 +167,11 @@ Notes on 31 May changes:
 - Trash moved out of Navigate into its own section at the bottom.
 Both The Press and Plot Mapping currently point to the Coming Soon
 placeholder until their real screens are built.
-PENDING (1 June): Plot Mapping and the DCW fuse into one instrument
-(see dcw.md / locked-decisions.md). Nav will collapse the two into a
-single entry once that spec is written. Not yet actioned here.
+PENDING (2 June): Plot Mapping and the DCW are now one fused
+instrument — a single vertical board (see dcw.md / locked-decisions.md).
+The nav will collapse the two into a single entry once the fused screen
+is built. The old DCW sub-entries (Timeline / Storyboard) are
+superseded by the vertical DCW. Not yet actioned in the nav.
 
 HOME PAGE — MY PROJECTS (new 31 May 2026)
 My Projects is the home page — the screen a writer lands on at
@@ -190,6 +200,9 @@ Plot Mapping — complete standalone mockup, stored at
 CODE/map-plotter.html. To be folded into index.html in Step 1.
 Full feature list in the PLOT MAPPING section below and in
 locked-decisions.md.
+Vertical DCW + shutter frame — in progress (2 June 2026). Shutter
+frame signed off; vertical DCW board in; WP side still placeholder.
+Full detail in dcw.md.
 
 WHAT IS STUBBED (placeholder screen only — to be built in Step 1)
 Research & Reference / Notes & Scratchpad / Sandbox /
@@ -213,9 +226,8 @@ Style Field (tone/voice dropdown + free text on Overview)
 Three-field genre (replaces single dropdown)
 Import option in New Project modal
 Three-panel layout (left sidebar / main work area / right panel)
-DCW strip (below main panels, above footer)
-Timeline strip
-Plot Mapping screen (fold in CODE/map-plotter.html)
+The vertical DCW + shutter (fused DCW + Writing Panel — see dcw.md)
+Plot Mapping screen (folds into the fused DCW)
 Section help pill (SECTION ?) — template pattern for every screen
 All remaining stubbed screens
 
@@ -327,19 +339,21 @@ Post-launch consideration: AI inference from imported manuscript.
 PLATFORM LAYOUT — CONFIRMED
 Top menu (includes Ada when AI ON)
 Left sidebar / Main work area / Right panel
-DCW strip (below panels, above footer — toggleable)
+The DCW is no longer a strip below the panels. It is the vertical
+board, fused with the Writing Panel via the shutter — one instrument
+seen at two distances (see dcw.md). The right-hand entity panel
+survives within the DCW.
 Footer menu
 The Press — separate section. Own entry point (two doors — see above).
 
 PLOT MAPPING
-ONE Plot Mapper. Per project. The 31 May change was only to move
-its NAV LINK up into Navigate so it is reachable front-of-house
-(a writer can open it to think before committing to a project).
-The tool itself remains per-project, exactly as specced below.
-Standalone mockup complete 30 May 2026 — CODE/map-plotter.html.
-The story corkboard — a thinking space for sketching a story
-before committing to it. Saved like everything else now;
-Supabase at Step 4. To be folded into index.html in Step 1.
+The Plot Mapper and the DCW are now ONE fused instrument (2 June 2026)
+— a single vertical board. The standalone Plot Mapper mockup
+(CODE/map-plotter.html, complete 30 May 2026) and its note-card grammar
+live on inside the fused DCW. ONE map per project. Reachable
+front-of-house from Navigate so a writer can think before committing.
+The story corkboard — a thinking space for sketching a story before
+committing to it. Saved like everything else; Supabase at Step 4.
 Note types: Character / Location / Plot Thread / Event / Object /
 Subplot / Free Note. Type chosen at creation — no change after
 (delete and remake). Double-click the board to add a note.
@@ -353,18 +367,13 @@ Copy system: copy a note to place one beat in several chapters.
 Front shared across the set (edit one, all change); each back is
 its own; a copy starts blank; "n of n" counter bottom-right, shown
 only for sets greater than one; renumbers on add/delete.
-Chapter timeline along the bottom. Drag a note onto a chapter to
-pin it. Chapter dividers have a toggle button to raise/lower them;
-a grip drags a raised divider to any height.
-Map title in the header — pre-fills from / syncs two-way with the
-Overview title once integrated.
+The note card is the bridge from planning to writing — clicking a
+card expands it; opening it all the way is the writing surface (the
+cascade: beat → scenes → words). See dcw.md.
 Timeline extends below Chapter 1 — the "lift": Prologue and
-Backstories live below the line on the same board. One map per
-project, never multiple. See locked-decisions.md.
-Open question: whether a note can also span a chapter range in the
-DCW (e.g. Ch.3–Ch.9). Revisit when the DCW is built.
-PENDING (1 June): Plot Mapper and DCW fuse into one instrument.
-The fused spec lives in dcw.md from now on. See locked-decisions.md.
+Backstories live below the line on the same board.
+Open question: whether a note can span a chapter/scene range
+(e.g. Ch.3–Ch.9). Revisit in the fused DCW.
 
 SECTION HELP PILL — TEMPLATE PATTERN
 First built on the Plot Mapping mockup — 30 May 2026.
@@ -378,23 +387,51 @@ Intended to float (for theatre) — not yet built.
 
 DCW — DIGITAL CREATIVE WORKSTATION
 Full spec in dcw.md.
-Timeline strip below all three panels. Always present. Toggleable.
-Chapters as ruler across the top.
-Tracks for characters, plot, subplots, locations,
-events, objects, themes, tension, notes.
-Tracks are called TRACKS throughout the UI.
-Threads are the connections between Chapters and DCW Tracks.
+The DCW is a VERTICAL BOARD. Scenes run top-to-bottom down the left
+spine; tracks are columns across the top. The horizontal STRIP is
+RETIRED (2 June 2026) — see locked-decisions.md.
+The DCW and the Plot Mapper are one fused instrument (1–2 June 2026).
+Tracks for characters, plot, subplots, locations, events, objects,
+themes, tension, notes. Tracks are called TRACKS throughout the UI.
+THREE TRACK TYPES:
+- Structural — note cards (the Plot Mapper face: type tab, full-stop,
+  knot; red full-stop = Dark Thoughts).
+- Curve — Tension and Emotional Maps, running vertically down their
+  own column (bulge one way = high, the other = low).
+- Ambient — Atmosphere, Weather, Time. Bands wearing card furniture
+  (a type tab and body) but NO knot and NO full-stop — the calmer,
+  non-openable cousin. Time is treated as a block/band.
+Stave/chapter dividers: full-width separator rows across every column,
+a line above and below the label.
+Track headers: horizontal, centred over their column, auto-wrapping
+(long words hyphenate), each with a downward chevron in the track
+colour pointing at its column. (45° headers tried and rejected once
+columns were widened — 2 June.)
+Cards hold text. Clicking a card expands it into a centred overlay.
+The cascade: beat → scenes → words.
 Tension curve — three modes:
 Manual — writer drags the curve.
 AI-guided — writer sets target, Ada advises how to get there.
 Analysis — Ada reads text and plots curve automatically.
 Emotional Maps — curves tracking the rise and fall of specific
-emotions per character across chapters. New feature — 28 May 2026.
-Full spec in dcw.md.
-DCW mockup: https://inkyswot-app.vercel.app/inkyswot-daw.html
-UPDATED (1 June): reworked — fuses with Plot Mapper, gains three
-track types (Time is a block), cards that hold text, and the cascade.
-The DCW strip is retained (not a top-down screen). Full detail in dcw.md.
+emotions per character across chapters. Conceived 28 May 2026.
+THE SHUTTER (2 June 2026): the DCW and the Writing Panel are ONE
+instrument seen at two distances, divided by a SHUTTER — a curtain
+that COVERS and REVEALS without resizing either side. Both sides stay
+full-size underneath; only the curtain moves. The WP is ALWAYS ON TOP
+(it is a writing platform). The DCW sits on the LEFT; the WP is
+revealed from the RIGHT. Full Screen = the shutter pushed fully to the
+page side (not a separate mode). A grab-handle on the shutter keeps it
+findable at the extremes.
+The right-hand ENTITY PANEL survives the fusion. The minimap rail is
+REMOVED.
+Reading text is large (Crimson Pro) and columns are wide — no
+fit-to-screen-by-default; the board scrolls. (Magnify/zoom still to be
+wired — the + / − in the footer.)
+Standalone build in progress: CODE/dcw-vertical.html — shutter frame
+signed off, vertical DCW board in, WP side still a placeholder.
+Folds into index.html at Step 1 / Step 13.
+Old DCW strip mockup (superseded): inkyswot-app.vercel.app/inkyswot-daw.html
 
 THE PRESS — CONTENTS
 Full spec in press.md. (Two-door model: see THE PRESS — TWO DOORS above.)
@@ -415,6 +452,8 @@ WRITE SCREEN
 Named: Write. Locked 28 May 2026.
 The writing panel — where the writer writes.
 Full Screen mode — distraction-free writing. Named: Full Screen. Locked.
+Full Screen is the shutter pushed fully to the page side — the WP
+covering the whole frame — not a separate mode (2 June 2026).
 Desktop only. No mobile.
 Index Card system — floating cards tethered to highlighted
 entities in the manuscript. Full spec to be written before Step 10.
@@ -429,10 +468,11 @@ Scan on space bar press only — current page only.
 Database change triggers full manuscript rescan in background.
 AI off — highlighting and cards still work. Ada's suggestions don't.
 Full spec to be written before Step 10.
-PENDING (1 June): the Write screen relates to the fused DCW via the
-note card — a card opens into the writing surface (the cascade).
-New keystone card type for prose, working name "Scene." Reconcile
-with this section when the fused dcw.md is written.
+The Write screen relates to the fused DCW via the note card — a card
+opens into the writing surface (the cascade). New keystone writing
+card type still OPEN — working name "Scene." (and possibly TWO types,
+Dialogue + Descriptive — unreconciled, see dcw.md / handover).
+Must be squared with the existing locked Index Card system.
 
 ADA
 Full spec in ada.md.
@@ -443,6 +483,8 @@ Not a search engine. Not a writing generator.
 She gives the writer's answer — filtered through everything
 they have already built. Full principle in ada.md.
 Position: Top menu. Between project name and prompt counter.
+On the DCW, AI tools appear in the entity panel (Auto-fill /
+Image prompt / Check & improve).
 Visible when AI ON. Hidden when AI OFF.
 Voice: Google UK English Female — browser speechSynthesis.
 Ada spec must be complete before any further screens are built.
@@ -468,7 +510,7 @@ ada.md — Full Ada specification.
 Ask for when: working on Ada in any capacity.
 security.md — Full security system.
 Ask for when: working on security, anti-spam, or signup flow.
-dcw.md — Full DCW specification.
+dcw.md — Full DCW specification (now the fused vertical DCW + shutter).
 Ask for when: working on the DCW in any capacity.
 press.md — Full Press specification.
 Ask for when: working on The Press, Cover Creator,
@@ -476,8 +518,9 @@ Book Layout Tool, publishing pipeline, or POD platforms.
 future.md — Future ideas, not yet on the build list.
 Ask for when: discussing post-launch possibilities.
 CODE/ — the code locker. Finished and in-progress code files,
-indexed in CODE/README.md. Holds map-plotter.html (Plot Mapping)
-and home-icons.svg (the four home-page launchpad icons).
+indexed in CODE/README.md. Holds map-plotter.html (Plot Mapping),
+home-icons.svg (the four home-page launchpad icons), and
+dcw-vertical.html (the vertical DCW + shutter, in progress).
 
 BUILD ORDER — CONFIRMED
 Step 1 — v4.0 App Shell Rebuild (NOT YET STARTED)
@@ -492,7 +535,7 @@ Step 9 — Resend
 Step 10 — Write Screen with Accessibility Features
 Step 11 — The Treatment
 Step 12 — Ada
-Step 13 — DCW (Timeline Strip)
+Step 13 — DCW (the fused vertical DCW + shutter)
 Step 14 — Export Suite and Format Conversion
 Step 15 — The Press (replaces Publishing Suite)
 Step 16 — Admin Panel
@@ -539,28 +582,47 @@ stored at CODE/home-icons.svg.
 1 June 2026:
 DCW worked through at length. Major architectural decision —
 the Plot Mapper and the DCW FUSE into one instrument.
-Full detail in dcw.md. Locked calls in locked-decisions.md.
 Key points: three track types (Structural / Curve / Ambient,
 Time is a block); cards hold text; the cascade (beat → scenes →
-words); the DCW strip is retained (not a top-down screen);
-the note card is the bridge from planning to writing.
+words); the note card is the bridge from planning to writing.
 New keystone card type for writing prose — working name "Scene."
-Open: per-type fields on the front of each card.
-Consequential edits flagged inline above (NAV, PLATFORM LAYOUT,
-PLOT MAPPING, DCW, WRITE SCREEN) — to action once dcw.md and
-locked-decisions.md are written.
+(NB: at this point the DCW strip was still thought to be retained —
+reversed the next day.)
+
+2 June 2026:
+DCW build session. The horizontal STRIP is RETIRED — the DCW is now
+a VERTICAL board (scenes down the spine, tracks as columns).
+The SHUTTER built and signed off: DCW + WP one instrument, curtain
+covers/reveals without resizing, WP always on top, DCW left / WP right,
+Full Screen = page-side extreme, grab-handle keeps it findable.
+Standalone build under way (CODE/dcw-vertical.html — frame + vertical
+DCW; WP still placeholder).
+DCW polish landed: full-width stave divider rows (line above + below);
+bigger reading text across the board (Crimson Pro); columns widened;
+horizontal centred track headers with downward chevrons, auto-wrap +
+hyphenation (45° rejected); click-a-card-to-expand overlay; ambient
+tracks (Atmosphere/Weather/Time) given card furniture but no knot/
+full-stop; minimap rail removed; entity panel kept; scrollbars
+restyled (12px, gold on hover); shutter grab-handle added.
+
+UNRECONCILED / CARRIED (decide next — see dcw.md handover):
+- Writing card naming: "Scene." vs two types (Dialogue + Descriptive).
+- Per-type fields shown on the front of each card.
+- The seam where arranging cards becomes writing prose — ghost-prompts /
+  Ada primer / no mode-wall. Make it a gradient, not a moment.
+- Square the fused model with the existing locked Index Card system
+  and the Write screen.
+- Magnify/zoom for the DCW (wire the + / − in the footer).
+- Whether a card can span a chapter/scene range (e.g. Ch.3–Ch.9).
+- Quiet/loud (*) markers and the way back into a card when (*) hidden.
+- Track reorder/resize/solo (Mixcraft-style); undocking the board.
 
 NEXT
-Fusion written into dcw.md and locked-decisions.md — done 1 June.
-PENDING FILE UPDATES (do next):
-- completed.md — add one line: 1 June DCW design session held;
-  two mockups built (scene-level DCW + fusion trial).
-- thinking.md — log the open questions: per-type card fields;
-  the writing card's final name (working "Scene."); whether the
-  right-hand panel survives the fusion.
-- build-list.md — note the fusion converges the Plot Mapping and
-  DCW build steps (Plot Mapping fold-in + DCW Step 13).
-Decide per-type fields on the front of each card.
+Finish the vertical DCW standalone — bring the WP into the frame
+(one face at a time), then wire magnify.
+Update the remaining files this session: locked-decisions.md, dcw.md,
+completed.md, thinking.md, build-list.md (and confirm press.md,
+security.md, ada.md, future.md need no change).
 Build the home-page launchpad row on My Projects (preview first,
 then into index.html) — confirm the four straps before building.
 Write full Write screen spec before Step 10.
