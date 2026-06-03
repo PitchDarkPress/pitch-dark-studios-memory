@@ -1,5 +1,15 @@
 File: inkyswot/dcw.md
-Last updated: 2 June 2026
+Last updated: 3 June 2026
+
+================================================================
+READ FIRST — 3 JUNE 2026: THIS SPEC IS SUPERSEDED (kept as history)
+The shutter / fused vertical-board model below is RETIRED. The DCW is
+now ONE SCREEN — a linear, screenplay-meets-spreadsheet document with
+an on/off X-ray. See the long dated note at the FOOT of this file
+("3 JUNE 2026 — THE TURN") and the top of current-state.md. The text
+between here and that note is preserved only as the record of how we
+got here. Do NOT build from it.
+================================================================
 
 MOCKUP / BUILD FILES
 inkyswot-daw.html — the ORIGINAL horizontal strip mockup. SUPERSEDED
@@ -295,3 +305,227 @@ At Step 13: the fused vertical DCW + shutter — three track types, cards
 (with text and the cascade), all three tension modes, all Emotional Map
 types per character, the WP behind the shutter, entity panel, magnify.
 Current standalone build: CODE/dcw-vertical.html.
+
+
+================================================================
+3 JUNE 2026 — THE TURN. THE ONE-SCREEN DCW.
+(Everything ABOVE this line is now history. This note is the live
+direction. Nothing here is LOCKED yet — it is detailed thinking from
+the 3 June session, to be confirmed and then folded into a clean
+rewrite of this file once the two open decisions are made.)
+================================================================
+
+WHY WE TURNED
+We spent days trying to make the DCW and the Writing Panel into two
+things that MATCH — the shutter, the fused board, the prose-band
+reported onto the board. Every version broke, because they were never
+two things. The whole knot was self-inflicted: there is nothing to
+match if there is only one object. Kev's words: "I am trying to make
+them both the same and that can never work." Then, later: "There is
+only ONE screen."
+
+THE ONE-SCREEN MODEL — THE X-RAY
+There is ONE screen: the DCW. There is no separate Writing Panel, no
+shutter, no curtain.
+- Think of an X-RAY MACHINE. Switch it ON and you see the BONES — the
+  DCW, the structure, the tagged note lines. Switch it OFF and you see
+  the FLESH — the prose, read straight down as plain text.
+- The switch does NOT produce a second rendering and does NOT call AI.
+  OFF simply HIDES the tags and scaffolding; what remains is the text
+  already written in the cells. Same one document, lights up or down.
+- TWO WAYS to throw the switch: a plain SWITCH, and a WIPE. The wipe is
+  pure THEATRE — not load-bearing, only there for the drama of the
+  thing. Keep it, but nothing depends on it.
+
+THE DCW GOES LINEAR (the screenplay idea, finally placed right)
+The DCW is now a LINEAR, top-to-bottom document — NOT a board of
+columns/tracks. It reads like a screenplay: a column of typed note
+lines, each line tagged by what it is.
+Each line is a CELL the writer fills, in two parts: a TAG + CONTENT.
+Worked example (DCW ON — the bones):
+  Location    A television studio in New York (*)
+  Character   STEVE (*)
+  Direction   into headset (*)
+  Dialogue    Cut to commercial! NOW! (*)
+  Activity    The ON AIR light goes dark. (*)
+  Character   JUNIOR REPORTER JESSICA (*)
+  Direction   looks at her cell phone, eyes wide. (*)
+  Character   JESSICA (*)
+  Dialogue    Oh my God. (*)
+Throw the switch (or wipe) and all of this becomes PROSE — the same
+information, the X-ray off.
+
+★★★ THE KEY INSIGHT — DCW = SCREENPLAY × SPREADSHEET ★★★
+(REMINDER TO KEV: expand on this — it is the most important realisation
+of the session. It is not just a description, it is the BUILD METHOD.)
+The DCW is a cross between a SCREENPLAY and a SPREADSHEET.
+- A spreadsheet is rows of CELLS — each cell typed, addressable, easy
+  to read, write, hide, move.
+- A screenplay is TAGGED LINES — each line knows what it is (slug /
+  cue / dialogue / action).
+- Put them together: the DCW is a column of ROWS, each row =
+  [ TAG | CONTENT | (*)handle ]. A spreadsheet that reads like a script.
+WHY THIS MAKES EVERYTHING EASY:
+- Building the DCW becomes building a structured list of cells — not a
+  bespoke canvas. Ordinary, well-understood, robust.
+- The ON/OFF X-ray is just "show the TAG column, or hide it." Trivial.
+- The BACK-AND-FORTH (bones↔flesh) becomes a DODDLE:
+    bones → flesh = read the cells in order and lay them out.
+    flesh → bones = drop the text back into the right cell.
+  No clever parser holding the platform up, no AI dependency — it is
+  DATA IN CELLS, and cells are the easiest thing in the world to move
+  between two views.
+This is the thing that makes the whole platform buildable. Expand it.
+
+EACH CELL IS A LIVE HANDLE — THE (*)
+The (*) on a line ties it to the world database via the NAV menu.
+Click "STEVE" and the Character entry pops up — amend it / add to it —
+and it updates everywhere. "A television studio in New York" is a
+handle into Locations. A line is not dead text; it is a handle into the
+world. A screenplay that KNOWS what everything in it is.
+(NB: this likely REPLACES, or absorbs, the old locked Index Card
+system and the old "(*) opens a card" marker. To be reconciled.)
+
+WRITE WITH IT OFF, SWITCH ON, IT ASKS
+You can write with the DCW OFF — just plain text, no tags, pure flow
+(the discovery writer's door). When you switch back ON, the DCW ASKS
+what each new piece is, and files it into the right box (Dialogue /
+Action / Character / etc).
+- AI OFF: it asks cold, line by line — the writer tells it.
+- AI ON: Ada makes the asking smarter (suggests "this looks like
+  Dialogue"), but is never required.
+So both temperaments are served by one instrument: plot-first writers
+work with it ON in cells; flow-first writers work with it OFF then sort
+on switch-back. No markup to learn.
+
+AI IS A QUALITY SETTING, NOT A REQUIREMENT (and the cost answer)
+The flesh must exist WITHOUT AI — switching AI off must never break the
+wipe or hide the writer's own book. Therefore:
+- The writer writes the flesh; the bones are how it is tagged.
+- Rendering cells → laid-out prose works with AI OFF (plain/templated,
+  fixed rules). AI ON only makes the prose flow better.
+- RENDER ONCE, then STORE the result. The switch/wipe shows stored
+  text — it never calls AI, so toggling costs nothing. AI only touches
+  a line when that line CHANGES, and only that line.
+Two-way editing (edit the flesh → the bone updates; edit the bone →
+the flesh updates) is the GOAL. bones→flesh is easy (assembly).
+flesh→bones is the known HARD problem (prose is loose; a dumb parser
+catches simple edits, only Ada catches a full rephrase). The
+spreadsheet-of-cells model is what keeps even this tractable — see the
+KEY INSIGHT above.
+
+THE QUIET NOTE — THE VISUAL GRAMMAR OF A NOTE (settled 3 June)
+The old CARD (tab, knot, full-stop, bordered body) is DEAD. Replaced by
+the QUIET NOTE, then by the linear tagged line — but the quiet-note
+grammar is the look that carries through:
+- NO box, NO tab, NO knot, NO side-stem.
+- The TRACK/TAG decides the type — no separate type label on the note.
+- A SUB-TITLE in the track colour.
+- A DESCRIPTION beneath it in NEUTRAL ink (so the eye reads sense, not
+  colour; the flow of the story stays legible across all notes).
+- A SOLID end-line in the track colour closes the note.
+- (Interim steps tried and dropped: a dotted side-stem; a dotted
+  divider between sub-title and description. Both removed — the solid
+  end-line is all the closure needed.)
+- CLICK a note to EXPAND it into a writing surface — the note opens up
+  and you write the prose INSIDE it. The note becomes the page. (This
+  is the live mechanism: "the notes expand to be written in.")
+- DARK THOUGHTS live on the BACK — flip to a private panel, never
+  exported, never sent to InkySwot.
+- DARK-THOUGHTS MARKER: a small GREY-VIOLET dot by the sub-title.
+  Red can NOT be reused for this — red now means FREEFORM (see below).
+
+NAMING, ORDER, FREEFORM (settled 3 June)
+- ENTITY tracks (Character / Location / Emotional Map): the WriterDuet
+  model — FIRST use ASKS for the name; AFTER that a DROPDOWN of names
+  already used PLUS a field to type a new one. The dropdown is the
+  running record; naming a track is what adds it to the list.
+- BUILT-IN single tracks (Plot / Tension / Atmosphere / Weather /
+  Time): the type IS the name. Fixed. No renaming.
+- MAKE-YOUR-OWN track: the writer names it and can RENAME it later, but
+  the COLOUR is fixed BRIGHT RED. There is ONE make-your-own-track
+  tool; an "Ideas column" is simply its most obvious use.
+- IDEA = the free, type-less, GO-ANYWHERE note. Drops into any column.
+  Can be gathered into a make-your-own column if the writer wants.
+- RED = FREEFORM (Ideas + make-your-own tracks). "This one's yours, off
+  the grid." NB: bright red sits close to the locked Danger red
+  (#c43a2a) — consider a distinct shade so red ≠ warning.
+- "SNAP TO DEFAULT" — the tidy control. (Named by Kev; "drag-to-
+  reorder" rejected as ugly mechanic-speak; "Tidy"/"Reset"/"Realign"
+  also considered.) Default track order was Structural · Curve ·
+  Ambient, left to right, with free reordering after. NB: this whole
+  reorder/Snap-to-Default idea was settled while the DCW was still a
+  GRID OF COLUMNS. Under the new LINEAR model it must be RE-TESTED — it
+  may not survive in the same form. See OPEN DECISIONS.
+
+THE NOTE GRAMMAR — THE TAG SET (working list, nothing pruned yet)
+Built from Kev's screenplay-element list merged with the scene-grammar
+list. The two lists barely overlapped (only Character and Note were
+shared) — proof they are the two ENDS of the bridge: Kev's list is
+mostly CONTENT (what you write); the grammar list is mostly STRUCTURE +
+SCENE (what you plot); the SCENE band is the plank that joins them.
+Four levels:
+  STRUCTURE — New Act · End Act · Sequence · Outline · Beat
+  SCENE     — Scene · Where (Location) · When (Time) ·
+              Who (Character / POV) · What (the beat) · Mood
+              (Atmosphere) · Want · Plot · Theme · Seed
+  CONTENT   — Action · Dialogue · Parens · Transition · Shot ·
+              Voice Over / Narrator · Intercut · Montage · Super ·
+              SFX · Text · Lyrics · Image
+  MARGIN    — Note
+Each SCENE/STRUCTURE tag corresponds to what used to be a "track".
+"KEEP EVERYTHING" for now — edit/prune only when using it shows what is
+dead weight. These tags ARE the structural shorthand the writer plots
+in (DCW on) and that render to prose (DCW off).
+
+WHAT THE TURN KILLS (history — do NOT build from the spec above)
+- The horizontal STRIP and the VERTICAL board (tracks as columns).
+- The SHUTTER (curtain covering/revealing DCW vs WP).
+- The fused "one manuscript seen at two distances" model + the
+  prose-band reported onto the board.
+- Full Screen defined as "shutter pushed to the page side" (redefine
+  under the one-screen model — e.g. DCW off + chrome hidden).
+- The note CARD (type tab, knot, full-stop, flip-from-tab).
+- CODE/dcw-vertical.html and CODE/map-plotter.html as BUILD TARGETS
+  (kept only as history).
+SURVIVES, to be re-fitted to the linear model:
+- Tension curve (three modes), Emotional Maps, Ambient (Atmosphere /
+  Weather / Time, Time as a block), the lift (Prologue/Backstory below
+  Ch.1), the (*) database handle, the SECTION ? help pill, Dark
+  Thoughts, the funnel idea (raw → spun → can unspin). HOW these live
+  in a linear, on/off document is exactly what needs working out.
+
+STUDY MOCKUPS BUILT 3 JUNE (studies of the new thinking, not agreed
+builds; store + index in the CODE locker when confirmed):
+- quiet-note thumbnail (the final note grammar).
+- quiet-note board (Plot / Dialogue / Character, colour at the margin).
+- "DCW — as agreed" board: quiet notes, default family order, drag to
+  reorder, Snap to Default, Ideas + freeform red, curves, ambient,
+  stave dividers, expand-to-write overlay, Dark Thoughts back.
+  (NB: built as a column-board — predates the final linear turn.)
+- expand-to-write study: a note opening into a writing surface, the
+  plan striking through as prose fills, the written face on the board.
+
+OPEN DECISIONS — DO THESE FIRST, NEXT SESSION (one at a time)
+1. Does the one-screen DCW REPLACE the Write screen entirely (Step 10 /
+   the locked Index Card system) — since "writing" is just the DCW
+   switched off — OR do both survive as separate things? UNDECIDED.
+2. Lights-OFF result: CLEAN PROSE (cells written as real sentences,
+   tags hidden = flowing text) or a STRIPPED SCRIPT (cell content
+   stacked, just unlabelled)? This decides how cells want to be
+   written. UNDECIDED.
+3. Re-test tracks / curves / ambient / Snap-to-Default against the
+   LINEAR model — do columns survive at all, or does everything become
+   tagged lines?
+4. Confirm two-way flesh↔bone scope; flesh→bone is the hard part.
+5. Reconcile the (*) live-handle with the old locked Index Card system.
+6. Expand the SCREENPLAY × SPREADSHEET insight (the build method).
+
+PROCESS NOTE
+locked-decisions.md was deliberately LEFT UNTOUCHED on 3 June — the
+turn is an hour old and two big calls are parked; we do not unlock
+hard-won decisions or re-lock fresh thinking until the decisions are
+actually made. current-state.md was rewritten (turn captured at top,
+shutter dumped). This file (dcw.md) keeps its old spec as history with
+this note appended; it gets a clean rewrite once decisions 1 and 2 are
+settled.
