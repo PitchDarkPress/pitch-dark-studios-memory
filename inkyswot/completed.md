@@ -1,5 +1,5 @@
 File: inkyswot/completed.md
-Last updated: 2 June 2026
+Last updated: 4 June 2026
 
 Database restructured — InkySwot content redistributed into nine files — 24 May 2026.
 Pricing locked — £9.95/month, £99.50/year, no free tier, 14-day money back — 24 May 2026.
@@ -65,3 +65,16 @@ DCW polish landed — full-width stave divider rows (line above + below); bigger
 Entity-panel question RESOLVED — the right-hand panel survives the fusion — 2 June 2026.
 File discipline locked — rewrite whole files clean, never patch — 2 June 2026.
 current-state.md, locked-decisions.md and dcw.md rewritten clean for the vertical DCW + shutter — 2 June 2026.
+THE TURN (3 June 2026) — the shutter and the two-tool model killed; landed on the one-screen DCW / X-ray (on = bones, off = flesh), linear screenplay-style tagged cells (TAG + CONTENT) with (*) handles, write-off-then-switch-on-and-it-asks, AI as a quality setting (render once, store) — 3 June 2026. [SUPERSEDED 4 June 2026.]
+Quiet-note visual grammar settled — no box/tab/knot/stem; sub-title in colour, neutral description, solid end-line — 3 June 2026. [Survives — now the pop-up's grammar.]
+Study mockups built for the one-screen thinking (quiet-note board, expand-to-write, one-screen studies) — 3 June 2026. [Studies only; superseded as build targets.]
+current-state.md rewritten for the 3 June turn; dcw.md given a history note; locked-decisions.md deliberately left untouched (decisions still parked) — 3 June 2026.
+THE SECOND TURN (4 June 2026) — realised InkySwot IS the DCW (the whole platform, not a screen); The Treatment is the DCW switched on; the spine is a TIMELINE OF EVENTS (Chapter → Scene → Event); only events become prose; the writer "fills in the blanks" — the database, assembled, IS the draft — 4 June 2026.
+Confirmed against the live index.html that The Treatment is an empty placeholder and that Events store characters[]/location and Chapters store characters[]/location/plotthreads[]/subplots[] — the connections the Treatment needs already exist — 4 June 2026.
+The Treatment recognised as the same object as the DCW — Steps 11 and 13 converging — 4 June 2026.
+The entity POP-UP settled — two-step from nav counts (list → record); stable (click open, click close, no vanish-on-click-away, no close-on-text-select); draggable by its header; quiet-note grammar in section colour; copy buttons; copy-and-paste into the WP as PLAIN ink (colour for finding, neutral for reading) — 4 June 2026.
+Nav section live counts decided — each section shows .length (Characters · 5, etc.; zero greyed); clicking opens the pop-up list — 4 June 2026.
+The WP settled as a real document page — Letter proportions, generous margins, page shadow; MAGNIFY/zoom control (70%–200%, view only, page shape fixed); centred page numbers; optional UNNUMBERED title page (numbering starts at 1 after it) with a toggle; title + author from Overview; slim dark gold-on-hover scrollbars throughout — 4 June 2026.
+WP / Treatment mockup built for "A Christmas Carol" — sidebar with counts; Chapter → Scene → Event spine; "— click to write this scene —"; the stable draggable quiet-note pop-up; magnify; page numbers; title page — the live design source for the new model — 4 June 2026.
+current-state.md and locked-decisions.md rewritten clean for the 4 June model (superseded 1–3 June material moved to clearly-fenced history blocks, not deleted) — 4 June 2026.
+completed.md updated — 3 June and 4 June milestones recorded — 4 June 2026.
