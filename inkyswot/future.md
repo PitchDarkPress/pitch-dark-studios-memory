@@ -1,5 +1,5 @@
 File: inkyswot/future.md
-Last updated: 29 May 2026
+Last updated: 4 June 2026
 
 FUTURE IDEAS — NOT LOCKED — TO DISCUSS
 These are logged future possibilities, not on the current build list.
@@ -22,6 +22,7 @@ and pre-fills setup fields. Revisit when revenue supports it.
 Collaborative editing with live cursors (Google Slides-style).
 Smart Entity Assignment — highlight any word, assign as
 Character / Location / etc, enters relevant screen immediately.
+
 Emotional Map as literal map — the DCW Emotional Map curve
 expands into a full cartographic view of a character's emotional
 journey through the story. High ground for intensity. Low ground
@@ -29,6 +30,7 @@ for numbness. Rivers for flow. Storms for crisis.
 The word Map was chosen with this in mind.
 Not on the current build list. This is the destination the word
 points toward.
+
 Write Screen Customisation Remote — the main writing area
 must be fully customisable by the writer. Background colour,
 text colour, font, size. Critical accessibility feature —
@@ -37,6 +39,7 @@ dyslexic writers in particular benefit from non-white backgrounds
 Controls delivered via a floating remote control — styled like
 a TV remote. Moveable. Theatrical. Adds to the InkySwot theatre.
 Full detail to be worked out by Kev. Not on current build list.
+
 Stickies — floating post-it style notes for capturing quick
 thoughts without breaking writing flow. Colour customisable
 by the writer. Moveable. Persistent until dismissed.
@@ -44,6 +47,23 @@ The writer comes back to them when ready.
 Distinct from the Index Card system — Stickies are unstructured,
 instant, and disposable. Index Cards are structured and connect
 to the database. Not on current build list.
+
+Two pre-filled demo books — fully-populated, every-section-complete
+demo PROJECTS of "A Christmas Carol" and "The Wind in the Willows",
+so a new user can land inside a finished world and see at a glance how
+InkySwot works. An empty app never explains a world-building tool; a
+finished one explains itself — click any character, location, scene;
+turn the wheel through real scenes; open one and read it.
+Both books are out of copyright (Dickens 1843; Grahame 1908), so the
+text and characters are free to use. A demo = a normal project,
+pre-filled, ideally READ-ONLY (so a curious user can poke at everything
+without breaking it or hitting a pay wall). Build "A Christmas Carol"
+first as the template (its bones are already in the wheel mockup), then
+"The Wind in the Willows" to the same pattern.
+DEPENDS ON: the app shell and the sections being final — the demo must
+mirror the real thing exactly. Open question for build time: whether
+the in-scene prose is written/adapted by Kev or sample-generated.
+Confirmed feasible 4 June 2026. Not scheduled. Not a lock.
 
 PLATFORM — FUTURE PRODUCTS
 Newspaper / magazine platform — separate product.
