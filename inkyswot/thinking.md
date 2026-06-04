@@ -1,16 +1,92 @@
 File: inkyswot/thinking.md
-Last updated: 2 June 2026
+Last updated: 4 June 2026
 
-OPEN DECISIONS — NEED RESOLVING BEFORE BUILD STEPS NOTED
-Write screen tagline — undecided.
-Write screen full spec — needed before Step 10. Must now reconcile
-with the fused vertical DCW (the Write screen is the DCW opened all
-the way down — the shutter on the page side) and with the existing
-locked Index Card system.
-Index Card system full spec — needed before Step 10. Square with the
-note-card / cascade model in the fused DCW.
-Chapters full spec — framework established 28 May 2026.
-Full spec needed before build. See notes below.
+NOTE (4 June 2026): the DCW model changed twice (3 June one-screen
+X-ray, then 4 June "InkySwot IS the DCW / The Treatment"). The old DCW
+open-questions (writing-card naming, the shutter, track controls, the
+(*) loud/quiet markers, note range, the planning-to-writing seam as
+card mechanics) are SUPERSEDED — they belonged to the column-board /
+card model. They are not repeated here. The live open questions of the
+new model are below, click-to-write first.
+
+================================================================
+THE NEXT MOVE — DECIDE FIRST, ONE AT A TIME
+================================================================
+1. THE CLICK-TO-WRITE (the heart of the writing experience).
+   When the writer clicks an event ("— click to write this scene —"),
+   does a writing space GROW INLINE in the page (read and write
+   straight down, the book as one woven document) — OR does the scene
+   open into a FOCUSED writing surface (drop in, write, return to the
+   spine)? Inline keeps everything woven and visible; focused gives
+   quiet and room but leaves the overview. May want both as a per-event
+   choice. UNDECIDED — decide before building the writing surface.
+
+2. WHERE THE MOOD WORDS LIVE.
+   The chapter/scene mood words (e.g. Cold · Bleak · Biting) were
+   pulled OFF the page on 4 June — Kev wants them but doesn't yet know
+   where they belong. Parked, not lost. Candidates to weigh later: a
+   scene-level mood line that's summonable not printed; part of the
+   pop-up; a margin note. UNDECIDED.
+
+3. EVENT ORDER WITHIN A SCENE.
+   Events currently group by Chapter (the Events screen has a Chapter
+   field) but have NO sequence within a scene. The spine needs "this
+   event before that one." The Events data already stores characters[]
+   and location per event; it just lacks a POSITION. Small but
+   necessary — a line needs order. Decide the mechanism (a position
+   field / drag-to-order / number).
+
+4. THE TAG SET.
+   Working list (4 June): Action · Chapter · Character · Emotion ·
+   Event · Location · Note · Prose · Scene · Time. Sorted by job —
+   SPINE: Chapter · Scene · Event. FLESH: Prose · Action · (Dialogue).
+   REFERENCE: Character · Location · Time · Emotion · Note.
+   Opens:
+   - Is PROSE the same as ACTION, or distinct? (Working split: Action =
+     what they do; Prose = description / narration.)
+   - DIALOGUE is not on the 4 June list but a scene can't be written
+     without spoken lines — confirm its place.
+   - Is EMOTION a per-beat TAG, or the seed of an Emotional Map (a
+     curve over time)?
+
+5. CARRIED PIECES — WHERE THEY LIVE IN THE NEW MODEL.
+   Tension curve (three modes), Emotional Maps, Ambient (Atmosphere /
+   Weather / Time, Time as a block), the "lift" (Prologue / Backstory
+   below Ch.1), Dark Thoughts (private, never exported). All carried
+   from earlier DCW thinking; HOW they sit in a linear timeline-of-
+   events page is open. Fit them when reached (Step 13 holds them).
+
+6. PLOT MAPPING beside THE TREATMENT.
+   Both are views of the one database. The corkboard (a thinking space
+   before committing) is retained; how it relates to The Treatment now
+   that "InkySwot IS the DCW" is open.
+
+7. REWRITE dcw.md for the 4 June model — once click-to-write is decided.
+   (current-state.md and build-list.md already say dcw.md is to be
+   rewritten next session; do NOT rewrite it before the decision.)
+
+8. STORE + INDEX the 4 June WP / Treatment mockup in the CODE locker
+   (the live design source).
+
+================================================================
+THE NEW MODEL IN BRIEF (so the thinking has its ground)
+================================================================
+InkySwot IS the DCW — the whole platform. The Treatment is the DCW
+switched on: a TIMELINE OF EVENTS (Chapter → Scene → Event), assembled
+from the database already built. Only events become prose (only events
+happen); characters/locations/etc. are REACHED INTO via the pop-up.
+The writer "fills in the blanks" — the database, assembled, is the
+draft; the writing is the last layer. The world is reached via a
+stable, draggable, quiet-note POP-UP (nav count → list → record →
+copy → paste PLAIN into the WP). The WP is a real document page
+(magnify, page numbers, optional unnumbered title page). AI is never
+required; Ada improves, never gates.
+
+================================================================
+OTHER OPEN DECISIONS (unchanged by the turn — still live)
+================================================================
+Distraction-free writing — was "Full Screen" (= shutter to page side);
+that definition is RETIRED. Redefine as WP + chrome hidden. Not locked.
 Export Suite full spec — needed before Step 14.
 Manuscript storage 5MB decision — pending before Step 14.
 Sandbox v4.0 position — pending before Step 1.
@@ -18,105 +94,51 @@ Proauthorism credit in app — undecided.
 Beta programme structure — undecided before Step 18.
 Store full anti-spam strategy — needed before Step 15.
 Ada voice alternative — to be decided before Step 12.
-Ada full spec — must be complete before any further screens are built.
-Current spec in ada.md. Needs more work.
+Ada full spec — must be complete before further screens are built;
+current spec in ada.md, needs more work.
 Cloudflare adoption — recommended pre-launch.
-Device key storage method — technical solution needed
-before security implementation.
-Export friction detail — metadata completion requirements,
-AI disclosure prompts, publication checklist — spec needed
-before Step 14.
-New device verification process — support ticket security
-questions to be designed before launch.
+Device key storage method — technical solution needed before security
+implementation.
+Export friction detail — metadata completion, AI disclosure prompts,
+publication checklist — spec needed before Step 14.
+New device verification process — support ticket security questions to
+be designed before launch.
 
-CHAPTERS SPEC — FRAMEWORK ESTABLISHED 28 MAY 2026
-Chapters are living synopses — not just summaries.
-In constant conversation with the entire project database.
-Ada guides the writer through chapter creation.
-Conflict detection — Ada flags when something contradicts
-the database. Once. Without drama.
-Cross-pollination — new ideas in a chapter trigger Ada to
-suggest adding them to the database. One button. Go there.
-Record it. Come back. Chapter remembers where it was.
-The reverse — database feeds into chapter creation contextually.
-Navigation between chapter and database must be seamless.
-This is Proauthorism in action.
-Full spec needed before build.
-
-WRITE SCREEN — FRAMEWORK ESTABLISHED 28 MAY 2026
-Named: Write. Locked.
-Full Screen mode named and locked. Full Screen is the shutter pushed
-fully to the page side — not a separate mode (2 June 2026).
-Index Card system conceived — full spec needed before Step 10.
-Desktop only. No mobile. Locked.
-Key decisions locked — see locked-decisions.md.
-The Write screen is the fused DCW opened all the way down — same
-manuscript, two distances. The note card is the bridge: closed it is a
-beat in context, opened it is the page you write on.
-Full spec needed before Step 10.
+CHAPTERS SPEC — FRAMEWORK ESTABLISHED 28 MAY 2026 (still live)
+Chapters are living synopses — not just summaries. In constant
+conversation with the entire project database. Ada guides the writer
+through chapter creation. Conflict detection — Ada flags a database
+contradiction once, without drama. Cross-pollination — a new idea in a
+chapter triggers Ada to suggest adding it to the database (one button:
+go there, record it, come back; the chapter remembers where it was).
+The reverse — the database feeds chapter creation contextually.
+Navigation between chapter and database must be seamless. This is
+Proauthorism in action. Full spec needed before build.
+NB (4 June): this sits naturally inside the timeline-of-events model —
+chapters are a tier of the spine; the "seamless navigation between
+chapter and database" is exactly what the entity pop-up provides.
 
 LIBRARY SECTION — DEFERRED
-Research & Reference, Notes & Scratchpad, Sandbox — all deferred
-until after Write screen is built (Step 10).
-They are part of the same ecosystem as the Write screen.
-The inline research search only makes sense with the
-writing panel in place.
-Build after Step 10.
+Research & Reference, Notes & Scratchpad, Sandbox — deferred until after
+the writing surface is built (Step 10). Part of the same ecosystem; the
+inline research search only makes sense with the writing surface in
+place. Build after Step 10.
 
 UX MAP GAPS STILL OPEN
-Gap 4 — Font import experience in Publishing Suite Templates.
+Gap 4 — Font import experience in Publishing Suite / Press Templates.
 Gap 5 — Document types in New Project modal — full list needed.
+Public Press (open question) — where a non-subscriber's book data comes
+from with no platform project: enter cold, or upload a finished
+manuscript. Revisit before building the public Press.
 
 POST-LAUNCH CONSIDERATIONS
-Gap 6 — AI inference from imported manuscript. Platform reads
-manuscript and pre-fills setup fields where possible.
-Revisit when revenue supports the development cost.
-
-DCW — STILL TO RESOLVE (updated 2 June 2026)
-The DCW is now a VERTICAL board fused with the Writing Panel via the
-shutter. The horizontal strip is retired. Full spec in dcw.md; locked
-calls in locked-decisions.md. Build at Step 13.
-Still open:
-- WRITING CARD NAMING: working name "Scene." — not locked. And whether
-  it stays ONE card or becomes TWO (Dialogue + Descriptive), set into
-  script-style layout (slug / action / cue / dialogue) for the compose
-  view, with the format-aware engine setting the final output style.
-- PER-TYPE CARD FIELDS: what shows on the FRONT of each note type.
-- THE PLANNING-TO-WRITING SEAM: how arranging cards becomes writing
-  prose without a mode-wall. Three approaches, likely all layered:
-  (a) no mode-wall — the card is already editable text;
-  (b) ghost-prompts — faint italic shorthand that turns solid when
-      written (the writer's own notes when AI is off);
-  (c) Ada primes a provisional line — assisted, never instant,
-      writer-led (Ada = Step 12).
-  Make it a GRADIENT, not a moment.
-- MAGNIFY / ZOOM: wire the + / − in the footer (the cascade altitude
-  control). The board scrolls; no fit-to-screen-by-default.
-- THE (*) MARKER and LOUD/QUIET: loud shows every (*); quiet hides them
-  for clean reading but entity names stay gently live — and the way
-  back into a card when (*) is hidden (hover / keystroke / click).
-- THE SHUTTER: which side sits ON TOP when part-way (working assumption:
-  WP always on top — effectively settled, but watch in practice).
-- TRACK CONTROLS: reorder (drag headers — grouped vs free interleave?),
-  widen/narrow (drag edges), possible SOLO; undocking the board into a
-  floating window; editing entities from within the DCW.
-- NOTE RANGE: whether a card can span a chapter/scene range
-  (e.g. Ch.3–Ch.9) in addition to the copy-per-chapter system.
-- An idea may still be UNCAUGHT: Kev felt a further refinement forming
-  about how cards transform as you move along the storyline. The funnel
-  + vertical turn may have captured it — watch for more.
-
-DCW — NOW RESOLVED (was open)
-- Strip vs vertical/top-down — RESOLVED: vertical board, strip retired.
-- The shutter between DCW and WP — RESOLVED: covers/reveals without
-  resizing, WP always on top, DCW left / WP right.
-- Toggle states (how the writer shows/hides the DCW) — RESOLVED by the
-  shutter: the shutter IS the show/hide, dragged to any balance.
-- Whether the right-hand entity panel survives — RESOLVED: it survives.
-- Track header angle — RESOLVED: horizontal, centred, chevron beneath
-  (45° tried and rejected once columns widened).
+Gap 6 — AI inference from imported manuscript: platform reads a
+manuscript and pre-fills setup fields where possible. Revisit when
+revenue supports the development cost.
 
 NAV — TO ACTION
 The nav still lists the old DCW sub-entries (Timeline / Storyboard) and
-separate Plot Mapping. Once the fused vertical DCW screen is built,
-collapse these into a single DCW entry. Not yet actioned.
+a separate Plot Mapping. Under "InkySwot IS the DCW", collapse the DCW
+sub-entries — The Treatment is the home of the DCW. Add the live
+section COUNTS (Characters · 5, etc.). Reconcile Plot Mapping's place
+beside The Treatment. Not yet actioned.
