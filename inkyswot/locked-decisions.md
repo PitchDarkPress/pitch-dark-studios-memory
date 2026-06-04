@@ -1,14 +1,15 @@
 File: inkyswot/locked-decisions.md
 Last updated: 4 June 2026
 
-NOTE ON THIS FILE (4 June 2026)
-This file is normally add-only. On 4 June it was rewritten whole
-because the 1–3 June DCW locks (the shutter, the vertical board, the
-fusion-as-built, the one-screen cell-grid) were SUPERSEDED by the
+NOTE ON THIS FILE
+This file is normally add-only. On 4 June (morning) it was rewritten
+whole because the 1–3 June DCW locks (the shutter, the vertical board,
+the fusion-as-built, the one-screen cell-grid) were SUPERSEDED by the
 "InkySwot IS the DCW / The Treatment" model. Superseded locks are NOT
 deleted — they are moved to SUPERSEDED LOCKS at the foot, dated, kept
 as history. The live part of this file holds only decisions that are
-still true.
+still true. On 4 June (later) the WHEEL decisions were added (the
+click-to-write resolution and its layout) — see the new locks below.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -54,12 +55,52 @@ Timeline events sit at the MARGIN (undented). Everything else is
 INDENTED under the event it belongs to. Margin = a new beat happens;
 indent = the substance of that beat. Locked: 4 June 2026.
 
+THE CLICK-TO-WRITE IS THE WHEEL
+Resolves the old open decision (inline-grow vs focused surface) — the
+answer is neither: a WHEEL. The page sits SHIFTED RIGHT; out in the
+dark to its right is a vertical belt of section labels (staves, scenes,
+events) with a fixed gold CENTRE LINE. Scrolling the page TURNS the
+wheel; whatever label sits on the centre line is WHERE YOU ARE (lit
+gold, with a horizontal leader to its right — only the centre gets the
+leader). Locked: 4 June 2026.
+
+THE WHEEL — SPLIT, WINDOWED, EASED
+The centre label floats ALONE on the line. Everything before it bunches
+tight above a FIXED gap; everything after bunches tight below a FIXED
+gap; the gaps never close (bunches grow away from them). Only a WINDOW
+of ~3 labels each side of centre shows — labels fade IN entering the
+window, OUT leaving it, so the wheel stays calm however long the book
+is. Motion is EASED and slow (glides toward target; does not snap 1:1
+to scroll). Labels are big, roomy text with generous line spacing.
+Locked: 4 June 2026.
+
+TWO STATES — OVERVIEW AND WRITING MODE
+OVERVIEW: the assembled Treatment shows on the page; the wheel turns
+with the scroll; centre = where you are. Click a non-centre wheel label
+to roll it to centre; click the centre label (or a "— click to write
+this scene —" on the page) to enter Writing Mode.
+WRITING MODE: the page opens CLEAN for that one scene — scene line +
+event title near the top, then the whole page given to a full-height
+writing area. The wheel stays lit, locked with that scene at centre.
+CLICK ANY WHEEL LABEL to open THAT section to write — the writer
+travels scene-to-scene BY THE WHEEL without leaving Writing Mode; each
+scene's text is remembered. A "‹ overview" control (top-right, Writing
+Mode only) returns to the assembled Treatment, rolling the written
+scene back to centre. The writing position and the map position are the
+SAME thing. Locked: 4 June 2026.
+
+PAGE RIGHT, POP-UP LEFT
+The WP / Treatment page sits shifted to the RIGHT of the dark
+workspace; the wheel is to the right of the page. The LEFT of the
+workspace is reserved for the entity POP-UP note. Locked: 4 June 2026.
+
 THE ENTITY POP-UP
 The writer reaches the database without leaving the page, via a stable
-pop-up. Two steps from the nav: click a section → list of names → click
-a name → the record. STABLE: click to open, click (✕) to close; does
-not vanish on click-away; does not close when text is selected inside
-it. DRAGGABLE by its header; stays where put. Locked: 4 June 2026.
+pop-up (now on the LEFT). Two steps from the nav: click a section →
+list of names → click a name → the record. STABLE: click to open, click
+(✕) to close; does not vanish on click-away; does not close when text
+is selected inside it. DRAGGABLE by its header; stays where put.
+Locked: 4 June 2026.
 
 NAV SECTION COUNTS
 Each nav section shows a live count read from its saved array
@@ -83,8 +124,9 @@ choose. Locked: 4 June 2026.
 
 THE WP IS A REAL DOCUMENT PAGE
 The main work area / The Treatment is a proper document page (Letter
-proportions, generous margins), centred on the dark workspace with a
-page shadow — not a thin panel. Locked: 4 June 2026.
+proportions, generous margins), on the dark workspace with a page
+shadow — not a thin panel. (Now shifted right; see PAGE RIGHT, POP-UP
+LEFT.) Locked: 4 June 2026.
 
 WP MAGNIFY (ZOOM)
 A − / 100% / + control magnifies the whole document (70%–200%). It is
@@ -98,6 +140,12 @@ title page on/off. Title + author pull from Overview. Locked: 4 June 2026.
 
 SCROLLBARS
 Slim, dark, gold-on-hover, everywhere. No Windows defaults. Locked: 4 June 2026.
+
+DESIGN-A-MECHANISM RULE
+When designing a live mechanism (motion, scroll, interaction), build a
+small STATIC mockup first, agree the still picture, THEN add movement.
+Designing moving behaviour by description alone wastes time. A sketch
+from Kev beats ten descriptions — ask for one. Locked: 4 June 2026.
 
 PRICING
 Paid only. No free tier. No exceptions.
@@ -288,8 +336,9 @@ the writer's answer, filtered through everything they have already
 built. Ada spec must be complete before any further screens are built.
 Ada build is Step 12. Locked: confirmed.
 NB (4 June): AI is never required for the Treatment to work — assembling
-the database into the page, and copy-paste, are plain mechanics. Ada
-improves the experience; the writer's book stands without her.
+the database into the page, the wheel, and copy-paste are plain
+mechanics. Ada improves the experience; the writer's book stands
+without her.
 
 COVER THUMBNAIL — REMOVED
 Not being built. AI-generated cover concepts post-launch only.
@@ -308,10 +357,7 @@ Locked: 2 June 2026.
 ================================================================
 OPEN — NOT YET DECIDED
 ================================================================
-THE CLICK-TO-WRITE: clicking an event ("— click to write this scene —")
-opens a writing space INLINE (grow in the page; book as one woven
-document) OR a FOCUSED writing surface (drop in, return). The next big
-decision — the heart of the writing experience.
+(The CLICK-TO-WRITE is no longer here — it is now a lock: THE WHEEL.)
 WHERE THE MOOD WORDS LIVE: the chapter/scene mood words (e.g. Cold ·
 Bleak · Biting) were pulled off the page; Kev wants them but not yet
 sure where they belong. Parked.
@@ -324,11 +370,25 @@ needed). Emotion as a per-beat tag vs the seed of an Emotional Map.
 TENSION CURVE / EMOTIONAL MAPS / AMBIENT (Atmosphere / Weather / Time):
 carried from earlier DCW thinking; how they live in the timeline-of-
 events Treatment is open.
+WHEEL TIER STYLING: whether staves vs scenes vs events are visually
+distinguished on the wheel; whether the centre label is bigger/brighter
+or uniform (uniform for now). Open.
 PLOT MAPPING beside The Treatment: how the corkboard and the Treatment
 relate now both are views of one database.
 HOME-PAGE LAUNCHPAD: final strap wording for the four items.
 THE PRESS (public door): where a non-subscriber's book data comes from
 with no platform project — enter cold, or upload a finished manuscript.
+
+================================================================
+PARKED / FUTURE (feasible, not scheduled — also in future.md)
+================================================================
+TWO PRE-FILLED DEMO BOOKS: fully-populated, every-section-complete demo
+projects of "A Christmas Carol" and "The Wind in the Willows" so a new
+user can explore a finished world. Both out of copyright (Dickens 1843;
+Grahame 1908). A demo = a normal project, pre-filled, ideally read-only.
+Carol first (its bones are in the mockup), then Willows. Depends on the
+app shell and sections being final. Confirmed feasible 4 June; not
+scheduled; NOT a lock.
 
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
@@ -349,8 +409,8 @@ DCW × PLOT MAPPER FUSION AS BUILT (locked 1–2 June, SUPERSEDED 4 June)
 note-cards / Curve / Ambient) as columns; the cascade (book → chapters
 → scenes → words); the entity panel on the right; the card as the
 bridge to writing. The PRINCIPLE that planning and writing are one
-instrument SURVIVES — but as "InkySwot IS the DCW / The Treatment", not
-as a column board.
+instrument SURVIVES — but as "InkySwot IS the DCW / The Treatment", now
+realised as the WHEEL, not as a column board.
 DCW TERMINOLOGY — TRACKS / THREADS (locked 29 May, SUPERSEDED 4 June) —
 "lanes are called Tracks; Threads are connections feeding Tracks." The
 column/track model is gone. Connections still exist (Events/Chapters
@@ -365,12 +425,13 @@ WRITE SCREEN / FULL SCREEN / INDEX CARD (locked 28 May & 2 June,
 SUPERSEDED/ABSORBED 4 June) — "Write" as a separate screen; "Full
 Screen = shutter to the page side"; the floating Index Card system
 tethered to highlighted entities. Absorbed: the WP / Treatment IS the
-writing surface; the entity pop-up + copy-paste replaces the Index Card
-mechanism. (Distraction-free writing may return, redefined as WP +
-chrome hidden — not locked.)
+writing surface (now via the wheel's Writing Mode); the entity pop-up +
+copy-paste replaces the Index Card mechanism. (Distraction-free writing
+may return, redefined as WP + chrome hidden — not locked.)
 THE WRITING CARD ("Scene." / Dialogue + Descriptive) (open since 2 June,
 SUPERSEDED 4 June) — the keystone card you write inside. Gone with the
-card model; writing now happens in the WP page at the event.
+card model; writing now happens in the WP page at the event, opened via
+the wheel.
 "SNAP TO DEFAULT" / DRAG-TO-REORDER TRACKS / BRIGHT-RED FREEFORM /
 IDEAS COLUMNS / MAKE-YOUR-OWN TRACKS (3 June column-board thinking,
 SUPERSEDED 4 June) — all belonged to the grid-of-columns; not part of
@@ -381,3 +442,8 @@ handles; write-off-then-switch-on-and-it-asks; AI as a quality setting
 (render once, store). Gone: the database is the bones; The Treatment
 assembles them — no separate cell-grid to type into. The (*) handle
 survives as the pop-up + copy.
+THE FIRST 4 JUNE CLICK-TO-WRITE (inline gap growing under the event)
+(SUPERSEDED later 4 June) — clicking "— click to write this scene —"
+grew a small inline writing space in the assembled list. Superseded by
+the WHEEL: clicking the centre opens the whole page clean in Writing
+Mode, and the writer travels by the wheel.
