@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
   *::-webkit-scrollbar-thumb{background:var(--rule2);border-radius:6px;border:2px solid var(--bg0);}
   *::-webkit-scrollbar-thumb:hover{background:var(--gold);}
   body{height:100vh;font-family:'Crimson Pro',Georgia,serif;background:var(--bg);color:var(--ink);overflow:hidden;}
-  .app{display:grid;grid-template-rows:52px 1fr;grid-template-columns:230px 1fr;height:100vh;}
+  .app{display:grid;grid-template-rows:52px 1fr;grid-template-columns:230px 1fr 230px;height:100vh;}
 
   .header{grid-column:1/-1;background:var(--bg2);border-bottom:1px solid var(--rule);display:flex;align-items:center;padding:0 16px;gap:14px;z-index:90;}
   .wordmark{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;}
@@ -35,6 +36,7 @@
   body.writing .backview{display:inline-flex;}
 
   .sidebar{background:var(--bg2);border-right:1px solid var(--rule);overflow-y:auto;}
+  .sidebar.right{border-right:none;border-left:1px solid var(--rule);}
   .sec{padding:14px 0;border-bottom:1px solid var(--rule);}
   .sec-title{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:0 16px;margin-bottom:7px;}
   .grp{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--ink2);padding:7px 16px 4px;display:flex;align-items:center;gap:9px;}
@@ -54,56 +56,74 @@
   .stage{position:relative;width:1340px;margin:0 auto 0 300px;padding:40vh 0 60vh;}
   body.writing .stage{padding:34px 0 80px;}
 
-  .sheet{background:var(--page);color:var(--pageink);width:760px;margin:0 0 26px;
-    min-height:980px;border-radius:2px;box-shadow:0 8px 44px rgba(0,0,0,.5);position:relative;
-    padding:80px 84px 100px;font-family:'Crimson Pro',serif;}
-  .page-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--pageink);text-align:center;margin-bottom:4px;}
-  .page-by{font-family:'Crimson Pro',serif;font-style:italic;font-size:16px;color:var(--pagemute);text-align:center;margin-bottom:34px;}
+  /* one scene per full page */
+  .sheet{background:var(--page);color:var(--pageink);width:816px;margin:0 0 26px;
+    min-height:1056px;border-radius:2px;box-shadow:0 8px 44px rgba(0,0,0,.5);position:relative;
+    padding:54px 64px 110px;font-family:'Crimson Pro',serif;}
+  .page-head{position:absolute;top:18px;right:24px;font-family:'Crimson Pro',serif;
+    font-size:13px;color:var(--pagemute);text-align:right;}
 
-  .chapter{margin-bottom:30px;}
-  .ch-h{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--pageink);
-    border-bottom:1px solid #ded6c6;padding-bottom:7px;margin-bottom:16px;}
-  .scene{margin:0 0 20px;}
+  .ch-h{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:500;color:var(--pageink);border-bottom:1px solid #ded6c6;padding-bottom:6px;margin-bottom:22px;}
   .sc-h{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--pagemute);margin-bottom:11px;display:flex;align-items:baseline;gap:8px;}
+    color:var(--pagemute);margin-bottom:20px;display:flex;align-items:baseline;gap:8px;}
   .sc-h b{color:var(--pageink);font-weight:500;}
   .sc-h .ttl{font-family:'Crimson Pro',serif;font-size:15px;letter-spacing:0;text-transform:none;color:#5a4a38;font-style:italic;}
   .sc-h .add{font-family:'Crimson Pro',serif;font-size:13px;letter-spacing:0;text-transform:none;color:#b8ad97;font-style:italic;cursor:text;}
 
-  .event{margin:0 0 16px 14px;padding-left:14px;border-left:2px solid #e0d8c8;}
+  .event{margin:0 0 20px 14px;padding-left:14px;border-left:2px solid #e0d8c8;}
   .ev-t{font-size:18px;color:var(--pageink);margin-bottom:2px;}
   .ev-write{margin-top:6px;color:#b8ad97;font-style:italic;font-size:14px;cursor:text;padding:3px 0;}
   .ev-write:hover{color:var(--gold);}
 
   .writing-surface{display:none;}
-  body.writing .sheet > .page-title,
-  body.writing .sheet > .page-by,
-  body.writing .sheet > .chapter{display:none;}
-  body.writing .sheet > .writing-surface{display:block;}
+  body.writing .sheet > .page-head,
+  body.writing .sheet > .ch-h,
+  body.writing .sheet > .sc-h,
+  body.writing .sheet > .event{display:none;}
+  body.writing .sheet.live > .writing-surface{display:block;}
   .ws-scene{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
     color:var(--pagemute);margin-bottom:8px;display:flex;align-items:baseline;gap:8px;}
   .ws-scene b{color:var(--pageink);font-weight:500;}
   .ws-scene .add{font-family:'Crimson Pro',serif;font-size:13px;letter-spacing:0;text-transform:none;color:#b8ad97;font-style:italic;}
   .ws-event{font-size:20px;color:var(--pageink);margin-bottom:16px;}
   .ws-area{width:100%;min-height:760px;border:none;outline:none;resize:none;background:transparent;
-    font-family:'Crimson Pro',serif;font-size:18px;line-height:1.8;color:var(--pageink);}
+    font-family:'Crimson Pro',serif;font-size:18px;line-height:1.5;color:var(--pageink);}
   .ws-area::placeholder{color:#c3b9a4;font-style:italic;}
 
   /* ===== THE WHEEL ===== */
-  #wheel{position:absolute;top:0;bottom:0;left:50%;margin-left:300px;width:480px;
+  #wheel{position:absolute;top:0;bottom:0;left:0;width:300px;
     pointer-events:none;z-index:40;overflow:hidden;}
-  .wlabel{position:absolute;left:0;white-space:nowrap;pointer-events:auto;cursor:pointer;
-    font-family:'Crimson Pro',serif;font-size:21px;color:var(--ink);
-    transition:top .22s ease,opacity .22s ease;}
-  .wlabel:hover{color:var(--gold);}
-  .wlabel.live::after{content:'';position:absolute;left:100%;top:50%;margin-left:16px;
-    width:360px;height:0;border-top:1px solid var(--gold);opacity:.5;}
-  .wcentre{position:absolute;left:0;right:0;height:0;border-top:1px solid rgba(201,146,58,.18);}
-  .wcentre::before{content:'';position:absolute;left:-14px;top:-3px;width:6px;height:6px;border-radius:50%;
-    background:var(--gold);box-shadow:0 0 8px rgba(201,146,58,.6);}
+  #wheel .wrail{position:absolute;top:0;bottom:0;left:40px;width:1px;background:rgba(201,146,58,.28);}
+  #wheel .wfade{position:absolute;left:37px;width:7px;height:64px;text-align:center;z-index:4;}
+  #wheel .wfade.top{top:0;background:linear-gradient(var(--bg0),transparent);}
+  #wheel .wfade.bot{bottom:0;background:linear-gradient(transparent,var(--bg0));}
 
-  /* ===== THE ENTITY POP-UP (left of the workspace) ===== */
-  /* Static for now: list view only. No drag, no record, no copy yet. */
+  .wlabel{position:absolute;left:40px;height:0;pointer-events:auto;cursor:pointer;will-change:top,opacity;}
+  .wlabel .wnode{position:absolute;left:0;top:0;width:7px;height:7px;border-radius:50%;
+    background:var(--bg0);border:1px solid rgba(201,146,58,.45);transform:translate(-50%,-50%);transition:background .18s,border-color .18s,box-shadow .18s;}
+  .wlabel .wtext{position:absolute;left:46px;top:0;width:200px;white-space:normal;
+    font-family:'Crimson Pro',serif;font-size:18px;color:var(--ink);
+    transform:translateY(-50%);letter-spacing:.01em;line-height:1.2;
+    transition:color .35s ease,font-weight .35s ease,opacity .35s ease;}
+  .wlabel .wkick{display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;opacity:.7;}
+  .wlabel .wttl{display:block;}
+
+  .wlabel.near .wnode{border-color:rgba(201,146,58,.7);}
+  .wlabel:hover .wnode{background:var(--gold2);border-color:var(--gold2);box-shadow:0 0 5px rgba(232,176,96,.7);}
+  .wlabel.live .wttl{color:var(--gold2);font-weight:600;}
+  .wlabel.live .wnode{opacity:0;}
+
+  #wheel .wcentre{position:absolute;left:40px;top:50%;height:0;z-index:2;pointer-events:none;}
+  #wheel .wring{position:absolute;left:0;top:0;width:17px;height:17px;border-radius:50%;
+    border:2px solid var(--gold2);transform:translate(-50%,-50%);box-shadow:0 0 8px rgba(232,176,96,.5);}
+  #wheel .wring i{position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;
+    border-radius:50%;background:var(--gold2);box-shadow:0 0 5px rgba(232,176,96,.75);}
+  #wheel .wlead{position:absolute;left:9px;top:0;height:1px;width:32px;
+    background:linear-gradient(90deg,var(--gold2),rgba(232,176,96,.15));transform:translateY(-50%);}
+
+  /* ===== THE ENTITY POP-UP ===== */
   #popup{position:absolute;top:30px;left:24px;width:248px;z-index:70;
     background:var(--bg2);border:1px solid var(--rule2);border-radius:3px;
     box-shadow:0 14px 50px rgba(0,0,0,.55);display:none;}
@@ -120,8 +140,6 @@
   .pu-desc{font-family:'Crimson Pro',serif;font-weight:300;font-size:14px;line-height:1.4;color:var(--ink2);margin-bottom:11px;}
   .pu-end{height:0;border-top:1px solid;opacity:.5;margin:0 16px 0;}
   .pu-entry:last-child .pu-end{margin-bottom:4px;}
-
-  /* ===== RECORD VIEW (same panel, swaps in) ===== */
   .pu-back{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;
     color:var(--ink3);cursor:pointer;padding:11px 16px 9px;display:flex;align-items:center;gap:6px;}
   .pu-back:hover{color:var(--gold);}
@@ -179,66 +197,196 @@
   <main class="content" id="content">
     <div class="scroller" id="scroller">
       <div class="stage" id="stage">
-        <div class="sheet" id="sheet">
-          <div class="page-title">A Christmas Carol</div>
-          <div class="page-by">by Charles Dickens</div>
 
-          <div class="chapter">
-            <div class="ch-h" data-rail data-label="Stave One — Marley's Ghost">Stave One — Marley's Ghost</div>
-            <div class="scene">
-              <div class="sc-h" data-rail data-label="Scene 1 — The Counting-House"><b>Scene 1</b><span class="ttl">— The Counting-House</span></div>
-              <div class="event">
-                <div class="ev-t" data-rail data-label="Scrooge at his counting-house">Scrooge at his counting-house</div>
-                <div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div>
-              </div>
-              <div class="event">
-                <div class="ev-t" data-rail data-label="Fred arrives with Christmas cheer">Fred arrives with Christmas cheer</div>
-                <div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div>
-              </div>
-              <div class="event">
-                <div class="ev-t" data-rail data-label="The charity men are turned away">The charity men are turned away</div>
-                <div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div>
-              </div>
-            </div>
-            <div class="scene">
-              <div class="sc-h" data-rail data-label="Scene 2 — untitled"><b>Scene 2</b><span class="add">+ add a title</span></div>
-              <div class="event">
-                <div class="ev-t" data-rail data-label="The knocker becomes Marley's face">The knocker becomes Marley's face</div>
-                <div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="chapter">
-            <div class="ch-h" data-rail data-label="Stave Two — The First of the Three Spirits">Stave Two — The First of the Three Spirits</div>
-            <div class="scene">
-              <div class="sc-h" data-rail data-label="Scene 1 — The Old School"><b>Scene 1</b><span class="ttl">— The Old School</span></div>
-              <div class="event">
-                <div class="ev-t" data-rail data-label="The Ghost of Christmas Past appears">The Ghost of Christmas Past appears</div>
-                <div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div>
-              </div>
-              <div class="event">
-                <div class="ev-t" data-rail data-label="The lonely boy at school">The lonely boy at school</div>
-                <div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div>
-              </div>
-              <div class="event">
-                <div class="ev-t" data-rail data-label="Fezziwig's Christmas party">Fezziwig's Christmas party</div>
-                <div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="writing-surface" id="ws">
-            <div class="ws-scene" id="wsScene"></div>
-            <div class="ws-event" id="wsEvent"></div>
-            <textarea class="ws-area" id="wsArea" placeholder="Write the scene here…"></textarea>
-          </div>
-
+        <!-- ===== STAVE ONE — Marley's Ghost ===== -->
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h" data-stave-open="1">Stave One — Marley's Ghost</div>
+          <div class="sc-h" data-rail data-label="The Counting-House"><b>Scene 1</b><span class="ttl">— The Counting-House</span></div>
+          <div class="event"><div class="ev-t">Scrooge works in the bitter cold, begrudging Bob Cratchit a single coal for the fire.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
         </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave One — Marley's Ghost</div>
+          <div class="sc-h" data-rail data-label="Fred's Visit"><b>Scene 2</b><span class="ttl">— Fred's Visit</span></div>
+          <div class="event"><div class="ev-t">Scrooge's nephew arrives to cheerfully invite him to Christmas dinner, which Scrooge gruffly rejects.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave One — Marley's Ghost</div>
+          <div class="sc-h" data-rail data-label="The Charity Collectors"><b>Scene 3</b><span class="ttl">— The Charity Collectors</span></div>
+          <div class="event"><div class="ev-t">Two gentlemen ask Scrooge to donate to the poor; he refuses, citing workhouses and prisons.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave One — Marley's Ghost</div>
+          <div class="sc-h" data-rail data-label="Scrooge's Home"><b>Scene 4</b><span class="ttl">— Scrooge's Home</span></div>
+          <div class="event"><div class="ev-t">Scrooge returns to his dark, isolated house. The door knocker transforms into the face of Jacob Marley.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave One — Marley's Ghost</div>
+          <div class="sc-h" data-rail data-label="Marley's Warning"><b>Scene 5</b><span class="ttl">— Marley's Warning</span></div>
+          <div class="event"><div class="ev-t">Marley's ghost, bound by chains of ledgers and cashboxes, warns Scrooge of his doom and the coming of three spirits.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+
+        <!-- ===== STAVE TWO — The First of the Three Spirits ===== -->
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h" data-stave-open="1">Stave Two — The First of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="The Lonely School"><b>Scene 1</b><span class="ttl">— The Lonely School</span></div>
+          <div class="event"><div class="ev-t">The Ghost of Christmas Past takes Scrooge to his boyhood boarding school, where he is left alone at the holidays.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Two — The First of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="A Joyful Return"><b>Scene 2</b><span class="ttl">— A Joyful Return</span></div>
+          <div class="event"><div class="ev-t">Scrooge's sister, Fan, arrives to bring him home, revealing her loving nature.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Two — The First of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="Fezziwig's Party"><b>Scene 3</b><span class="ttl">— Fezziwig's Party</span></div>
+          <div class="event"><div class="ev-t">Scrooge revisits his old, jovial employer, Mr. Fezziwig, who throws a lively Christmas party for his staff.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Two — The First of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="The Broken Engagement"><b>Scene 4</b><span class="ttl">— The Broken Engagement</span></div>
+          <div class="event"><div class="ev-t">Scrooge's former fiancée, Belle, tearfully releases him, realising his greed has eclipsed his love for her.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Two — The First of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="Belle's Family Home"><b>Scene 5</b><span class="ttl">— Belle's Family Home</span></div>
+          <div class="event"><div class="ev-t">Scrooge sees Belle years later, on the night Marley died, happily married and surrounded by a loving family.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+
+        <!-- ===== STAVE THREE — The Second of the Three Spirits ===== -->
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h" data-stave-open="1">Stave Three — The Second of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="The Spirit's Lair"><b>Scene 1</b><span class="ttl">— The Spirit's Lair</span></div>
+          <div class="event"><div class="ev-t">The Ghost of Christmas Present appears, surrounded by a feast of holiday abundance.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Three — The Second of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="The Cratchit Home"><b>Scene 2</b><span class="ttl">— The Cratchit Home</span></div>
+          <div class="event"><div class="ev-t">Scrooge watches the poor but loving Cratchits eat a humble Christmas dinner, and learns of ailing Tiny Tim.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Three — The Second of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="People Across the World"><b>Scene 3</b><span class="ttl">— People Across the World</span></div>
+          <div class="event"><div class="ev-t">The Spirit shows Scrooge miners and lighthouse keepers celebrating, proving the Christmas spirit reaches anyone.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Three — The Second of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="Fred's Christmas Party"><b>Scene 4</b><span class="ttl">— Fred's Christmas Party</span></div>
+          <div class="event"><div class="ev-t">At Fred's house the family plays games and affectionately laughs at Scrooge's miserly ways.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Three — The Second of the Three Spirits</div>
+          <div class="sc-h" data-rail data-label="Ignorance and Want"><b>Scene 5</b><span class="ttl">— Ignorance and Want</span></div>
+          <div class="event"><div class="ev-t">Before vanishing, the Spirit reveals two emaciated children beneath its robes — the grim realities of society.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+
+        <!-- ===== STAVE FOUR — The Last of the Spirits ===== -->
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h" data-stave-open="1">Stave Four — The Last of the Spirits</div>
+          <div class="sc-h" data-rail data-label="The Businessmen"><b>Scene 1</b><span class="ttl">— The Businessmen</span></div>
+          <div class="event"><div class="ev-t">The Ghost of Christmas Yet to Come silently shows Scrooge businessmen discussing the death of an unpopular man.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Four — The Last of the Spirits</div>
+          <div class="sc-h" data-rail data-label="The Thieves"><b>Scene 2</b><span class="ttl">— The Thieves</span></div>
+          <div class="event"><div class="ev-t">In a squalid shop, scavengers barter over clothing and belongings stripped from the dead man.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Four — The Last of the Spirits</div>
+          <div class="sc-h" data-rail data-label="The Debtors"><b>Scene 3</b><span class="ttl">— The Debtors</span></div>
+          <div class="event"><div class="ev-t">Scrooge sees a family relieved at the man's death, granting them extra time to pay their debts.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Four — The Last of the Spirits</div>
+          <div class="sc-h" data-rail data-label="The Cratchit Home"><b>Scene 4</b><span class="ttl">— The Cratchit Home</span></div>
+          <div class="event"><div class="ev-t">Scrooge observes the Cratchit family grieving deeply over the death of Tiny Tim.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Four — The Last of the Spirits</div>
+          <div class="sc-h" data-rail data-label="The Graveyard"><b>Scene 5</b><span class="ttl">— The Graveyard</span></div>
+          <div class="event"><div class="ev-t">The Spirit points to a neglected headstone bearing Scrooge's own name, and he promises he will change.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+
+        <!-- ===== STAVE FIVE — The End of It ===== -->
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h" data-stave-open="1">Stave Five — The End of It</div>
+          <div class="sc-h" data-rail data-label="A Changed Man"><b>Scene 1</b><span class="ttl">— A Changed Man</span></div>
+          <div class="event"><div class="ev-t">Scrooge wakes in his own bed on Christmas morning, overjoyed and transformed.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Five — The End of It</div>
+          <div class="sc-h" data-rail data-label="The Turkey"><b>Scene 2</b><span class="ttl">— The Turkey</span></div>
+          <div class="event"><div class="ev-t">He buys the largest turkey in the shop and anonymously sends it to the Cratchit family.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Five — The End of It</div>
+          <div class="sc-h" data-rail data-label="Reconciliation"><b>Scene 3</b><span class="ttl">— Reconciliation</span></div>
+          <div class="event"><div class="ev-t">Scrooge wishes the street a Merry Christmas, donates to the charity men, and visits Fred to apologise.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Five — The End of It</div>
+          <div class="sc-h" data-rail data-label="A Raise for Bob"><b>Scene 4</b><span class="ttl">— A Raise for Bob</span></div>
+          <div class="event"><div class="ev-t">Next morning at work, Scrooge surprises Bob Cratchit with a large raise and vows to help his family.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+        <div class="sheet">
+          <div class="page-head">A Christmas Carol by Charles Dickens</div>
+          <div class="ch-h">Stave Five — The End of It</div>
+          <div class="sc-h" data-rail data-label="Epilogue"><b>Scene 5</b><span class="ttl">— Epilogue</span></div>
+          <div class="event"><div class="ev-t">The narrator concludes: Scrooge keeps Christmas perfectly ever after, especially with Tiny Tim, who survives.</div><div class="ev-write" onclick="enterWriting(this)">— click to write this scene —</div></div>
+          <div class="writing-surface"><div class="ws-scene"></div><div class="ws-event"></div><textarea class="ws-area" placeholder="Write the scene here…"></textarea></div>
+        </div>
+
       </div>
     </div>
 
-    <!-- the entity pop-up — list view, static for now -->
+    <!-- the entity pop-up -->
     <div id="popup">
       <div class="pu-head">
         <span class="pu-kicker" id="puKicker">Characters · 5</span>
@@ -247,10 +395,19 @@
       <div class="pu-list" id="puList"></div>
     </div>
 
+    <!-- THE WHEEL -->
     <div id="wheel">
-      <div class="wcentre" id="wcentre"></div>
+      <div class="wrail"></div>
+      <div class="wfade top"></div>
+      <div class="wfade bot"></div>
+      <div class="wcentre" id="wcentre">
+        <span class="wlead"></span>
+        <span class="wring"><i></i></span>
+      </div>
     </div>
   </main>
+
+  <aside class="sidebar right"></aside>
 </div>
 
 <div class="tip" id="tip">click a counted nav section — the list opens on the left</div>
@@ -259,39 +416,31 @@
   const body=document.body;
   const content=document.getElementById('content');
   const scroller=document.getElementById('scroller');
-  const sheet=document.getElementById('sheet');
+  const stage=document.getElementById('stage');
   const wheel=document.getElementById('wheel');
   const wcentre=document.getElementById('wcentre');
-  const ws=document.getElementById('ws');
-  const wsScene=document.getElementById('wsScene');
-  const wsEvent=document.getElementById('wsEvent');
-  const wsArea=document.getElementById('wsArea');
 
   let writingMode=false;
   let currentIndex=0;
   const drafts={};
 
-  /* ===== THE ENTITY POP-UP DATA (sample Carol data) ===== */
   const popData={
     characters:{ label:'Characters', colour:'var(--char)', items:[
       {sub:'Ebenezer Scrooge', desc:'A cold, solitary miser; the counting-house its own master.',
        fields:[
         ['Role','Protagonist'],
-        ['Description','A squeezing, wrenching, grasping, scraping, clutching, covetous old sinner; hard and sharp as flint, from which no steel had ever struck out generous fire; secret, and self-contained, and solitary as an oyster. The cold within him froze his old features, nipped his pointed nose, shrivelled his cheek, stiffened his gait, made his eyes red, his thin lips blue.'],
-        ['Manner','He carried his own low temperature always about with him; he iced his office in the dog-days, and didn\u2019t thaw it one degree at Christmas. External heat and cold had little influence on him. No warmth could warm, no wintry weather chill him.'],
-        ['Arc','From miser to merciful, walked there across one night by three spirits \u2014 Past, Present, and Yet to Come. By morning he is light as a feather, happy as an angel, merry as a schoolboy, giddy as a drunken man.'],
-        ['Relationships','Nephew Fred (warm, rejected); clerk Bob Cratchit (underpaid, then raised); dead partner Jacob Marley (the first warning); the boy Tiny Tim, whom he comes to cherish.'],
-        ['Key line','\u201CI will honour Christmas in my heart, and try to keep it all the year.\u201D'],
-        ['Notes (private)','Watch the thaw \u2014 it must be earned scene by scene, never sudden. The turn at Fezziwig\u2019s is where the first crack shows.'],
+        ['Description','A squeezing, wrenching, grasping, scraping, clutching, covetous old sinner; hard and sharp as flint, from which no steel had ever struck out generous fire; secret, and self-contained, and solitary as an oyster.'],
+        ['Arc','From miser to merciful, walked there across one night by three spirits — Past, Present, and Yet to Come.'],
+        ['Notes (private)','Watch the thaw — it must be earned scene by scene, never sudden.'],
        ]},
       {sub:'Jacob Marley', desc:'Scrooge\u2019s dead partner; returns in chains as the first warning.',
-       fields:[['Role','The first warning'],['Description','Dead these seven years; appears bound in the chains he forged in life.'],['Note','Sets the whole night in motion.']]},
+       fields:[['Role','The first warning'],['Description','Dead these seven years; appears bound in the chains he forged in life.']]},
       {sub:'Bob Cratchit', desc:'Scrooge\u2019s underpaid clerk; warm where his master is cold.',
-       fields:[['Role','Scrooge\u2019s clerk'],['Description','Toils for fifteen shillings a week; father to a large, loving family.'],['Family','Father of Tiny Tim.']]},
+       fields:[['Role','Scrooge\u2019s clerk'],['Description','Toils for fifteen shillings a week; father to a large, loving family.']]},
       {sub:'Fred', desc:'Scrooge\u2019s nephew; arrives full of Christmas cheer and refused.',
        fields:[['Role','Scrooge\u2019s nephew'],['Description','Ruddy, warm, and good-humoured; keeps Christmas in his heart despite his uncle.']]},
       {sub:'Tiny Tim', desc:'The Cratchits\u2019 youngest; frail, hopeful, the story\u2019s tender heart.',
-       fields:[['Role','The Cratchits\u2019 youngest'],['Description','Bears a little crutch; frail of body but bright of spirit.'],['Line','\u201CGod bless us, every one!\u201D']]},
+       fields:[['Role','The Cratchits\u2019 youngest'],['Description','Bears a little crutch; frail of body but bright of spirit.']]},
     ]},
     locations:{ label:'Locations', colour:'var(--loc)', items:[
       {sub:'The Counting-House', desc:'Scrooge\u2019s place of business; bleak, cold, candle-lit.',
@@ -306,28 +455,12 @@
        fields:[['When','Christmas Eve'],['Characters','Scrooge, Bob Cratchit'],['Location','The Counting-House']]},
       {sub:'Fred arrives with Christmas cheer', desc:'The nephew\u2019s invitation, coldly refused.',
        fields:[['When','Christmas Eve'],['Characters','Scrooge, Fred'],['Location','The Counting-House']]},
-      {sub:'The charity men are turned away', desc:'Scrooge denies the poor; \u201Care there no prisons?\u201D',
-       fields:[['When','Christmas Eve'],['Characters','Scrooge'],['Location','The Counting-House']]},
-      {sub:'The knocker becomes Marley\u2019s face', desc:'The first supernatural sign at his door.',
-       fields:[['When','Christmas Eve, night'],['Characters','Scrooge, Marley'],['Location','Scrooge\u2019s Chambers']]},
-      {sub:'The Ghost of Christmas Past appears', desc:'The first spirit comes at the stroke of one.',
-       fields:[['When','One o\u2019clock'],['Characters','Scrooge'],['Location','Scrooge\u2019s Chambers']]},
-      {sub:'The lonely boy at school', desc:'Scrooge sees his abandoned younger self.',
-       fields:[['When','Christmas past'],['Characters','Young Scrooge'],['Location','The Old School']]},
-      {sub:'Fezziwig\u2019s Christmas party', desc:'A warm memory of a generous old master.',
-       fields:[['When','Christmas past'],['Characters','Fezziwig, Young Scrooge'],['Location','Fezziwig\u2019s warehouse']]},
     ]},
     chapters:{ label:'Chapters', colour:'var(--chap)', items:[
       {sub:'Stave One — Marley\u2019s Ghost', desc:'Marley dead; Scrooge warned by his old partner.',
-       fields:[['Scenes','2'],['Characters','Scrooge, Marley, Fred, Bob Cratchit']]},
+       fields:[['Scenes','5'],['Characters','Scrooge, Marley, Fred, Bob Cratchit']]},
       {sub:'Stave Two — The First of the Three Spirits', desc:'Christmas Past walks Scrooge through his youth.',
-       fields:[['Scenes','1'],['Characters','Scrooge, Ghost of Christmas Past, Fezziwig']]},
-      {sub:'Stave Three — The Second of the Three Spirits', desc:'Christmas Present; the Cratchits and the city.',
-       fields:[['Scenes','—'],['Characters','Scrooge, Ghost of Christmas Present, the Cratchits']]},
-      {sub:'Stave Four — The Last of the Spirits', desc:'Christmas Yet to Come; the silent, pointing ghost.',
-       fields:[['Scenes','—'],['Characters','Scrooge, Ghost of Christmas Yet to Come']]},
-      {sub:'Stave Five — The End of It', desc:'Scrooge wakes changed; the morning of mercy.',
-       fields:[['Scenes','—'],['Characters','Scrooge, Bob Cratchit, Fred']]},
+       fields:[['Scenes','5'],['Characters','Scrooge, Ghost of Christmas Past, Fezziwig']]},
     ]},
   };
 
@@ -341,15 +474,11 @@
   });
 
   function openPopup(key,navEl){
-    const d=popData[key];
-    if(!d) return;
+    const d=popData[key]; if(!d) return;
     document.querySelectorAll('.item.open').forEach(e=>e.classList.remove('open'));
     if(navEl) navEl.classList.add('open');
-    openSection=key;
-    showList();
-    popup.classList.add('shown');
+    openSection=key; showList(); popup.classList.add('shown');
   }
-
   function showList(){
     const d=popData[openSection];
     puKicker.textContent=d.label+' \u00B7 '+d.items.length;
@@ -358,56 +487,41 @@
     d.items.forEach((item,i)=>{
       const e=document.createElement('div');
       e.className='pu-entry';
-      e.innerHTML=
-        '<div class="pu-sub" style="color:'+d.colour+'">'+item.sub+'</div>'+
+      e.innerHTML='<div class="pu-sub" style="color:'+d.colour+'">'+item.sub+'</div>'+
         '<div class="pu-desc">'+item.desc+'</div>'+
         '<div class="pu-end" style="border-color:'+d.colour+'"></div>';
       e.addEventListener('click',()=>showRecord(i));
       puList.appendChild(e);
     });
   }
-
   function showRecord(i){
-    const d=popData[openSection];
-    const item=d.items[i];
-    puKicker.textContent=d.label;
-    puKicker.style.color=d.colour;
+    const d=popData[openSection]; const item=d.items[i];
+    puKicker.textContent=d.label; puKicker.style.color=d.colour;
     let fields='';
     (item.fields||[]).forEach((f,fi)=>{
       if(fi>0) fields+='<div class="pu-fdiv" style="border-color:'+d.colour+'"></div>';
-      fields+='<div class="pu-field">'+
-                '<div class="pu-field-head">'+
-                  '<span class="pu-field-label">'+f[0]+'</span>'+
-                  '<span class="pu-copy" data-copy="'+fi+'">copy</span>'+
-                '</div>'+
-                '<div class="pu-field-val">'+f[1]+'</div>'+
-              '</div>';
+      fields+='<div class="pu-field"><div class="pu-field-head">'+
+        '<span class="pu-field-label">'+f[0]+'</span>'+
+        '<span class="pu-copy" data-copy="'+fi+'">copy</span></div>'+
+        '<div class="pu-field-val">'+f[1]+'</div></div>';
     });
-    puList.innerHTML=
-      '<div class="pu-back" onclick="backToList()">\u2039 back to list</div>'+
-      '<div class="pu-record">'+
-        '<div class="pu-rec-name" style="color:'+d.colour+'">'+item.sub+'</div>'+
-        '<div class="pu-rec-kind">'+d.label.replace(/ &amp;.*/,'').replace(/s$/,'')+'</div>'+
-        fields+
-        '<div class="pu-rec-end" style="border-color:'+d.colour+'"></div>'+
-      '</div>';
-    // wire per-field copy — text only
+    puList.innerHTML='<div class="pu-back" onclick="backToList()">\u2039 back to list</div>'+
+      '<div class="pu-record"><div class="pu-rec-name" style="color:'+d.colour+'">'+item.sub+'</div>'+
+      '<div class="pu-rec-kind">'+d.label.replace(/ &amp;.*/,'').replace(/s$/,'')+'</div>'+fields+
+      '<div class="pu-rec-end" style="border-color:'+d.colour+'"></div></div>';
     puList.querySelectorAll('.pu-copy').forEach(btn=>{
       btn.addEventListener('click',e=>{
         e.stopPropagation();
         const text=item.fields[+btn.getAttribute('data-copy')][1];
         const plain=text.replace(/&amp;/g,'&').replace(/&quot;/g,'"');
         navigator.clipboard&&navigator.clipboard.writeText(plain);
-        btn.textContent='copied';
-        btn.classList.add('done');
+        btn.textContent='copied'; btn.classList.add('done');
         setTimeout(()=>{btn.textContent='copy';btn.classList.remove('done');},1400);
       });
     });
   }
-
   function backToList(){ showList(); }
   window.backToList=backToList;
-
   function closePopup(){
     popup.classList.remove('shown');
     document.querySelectorAll('.item.open').forEach(e=>e.classList.remove('open'));
@@ -415,19 +529,16 @@
   }
   window.closePopup=closePopup;
 
-  /* ===== DRAG BY THE HEADER ===== */
   (function(){
     const head=popup.querySelector('.pu-head');
     let dragging=false, sx=0, sy=0, ox=0, oy=0;
     head.addEventListener('mousedown',e=>{
-      if(e.target.classList.contains('pu-x')) return; // the ✕ still closes
+      if(e.target.classList.contains('pu-x')) return;
       dragging=true;
       const r=popup.getBoundingClientRect();
       const pr=popup.offsetParent.getBoundingClientRect();
-      ox=r.left-pr.left; oy=r.top-pr.top;
-      sx=e.clientX; sy=e.clientY;
-      popup.style.left=ox+'px'; popup.style.top=oy+'px';
-      e.preventDefault();
+      ox=r.left-pr.left; oy=r.top-pr.top; sx=e.clientX; sy=e.clientY;
+      popup.style.left=ox+'px'; popup.style.top=oy+'px'; e.preventDefault();
     });
     window.addEventListener('mousemove',e=>{
       if(!dragging) return;
@@ -438,93 +549,152 @@
   })();
 
   /* ===== THE WHEEL ===== */
-  const rows=[...sheet.querySelectorAll('[data-rail]')].map(h=>({h,label:h.getAttribute('data-label')}));
+  /* one label per scene; each carries a stave/scene kicker + its title */
+  const STAVE_WORD=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten'];
+  const SCENE_WORD=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten'];
+  const sheets=[...stage.querySelectorAll('.sheet')];
+  let staveNo=0, sceneNo=0;
+  const rows=[];
+  sheets.forEach(sheet=>{
+    const chh=sheet.querySelector('.ch-h');
+    if(chh && chh.getAttribute('data-stave-open')==='1'){ staveNo++; sceneNo=0; }
+    sceneNo++;
+    const sc=sheet.querySelector('.sc-h[data-rail]');
+    if(sc){
+      const kick='Stave '+STAVE_WORD[staveNo]+' — Scene '+SCENE_WORD[sceneNo];
+      rows.push({ kick, title:sc.getAttribute('data-label'), sheet, h:sc });
+    }
+  });
 
   rows.forEach((r,i)=>{
     const el=document.createElement('div');
     el.className='wlabel';
-    el.textContent=r.label;
+    el.innerHTML='<span class="wnode"></span><span class="wtext">'+
+      '<span class="wkick">'+r.kick+'</span>'+
+      '<span class="wttl">'+r.title+'</span></span>';
     el.addEventListener('click',()=>{
       if(writingMode){ openForWriting(i); }
       else if(el.classList.contains('live')){ openForWriting(i); }
-      else { rollToCentre(r.h); }
+      else { rollToCentre(r.sheet); }
     });
     wheel.appendChild(el);
     r.el=el;
   });
 
-  function rollToCentre(h){
-    const rect=h.getBoundingClientRect();
+  function rollToCentre(target){
+    const rect=target.getBoundingClientRect();
     const cBox=content.getBoundingClientRect();
-    const target=scroller.scrollTop+(rect.top-cBox.top)-(cBox.height/2)+rect.height/2;
-    scroller.scrollTo({top:target,behavior:'smooth'});
+    const top=scroller.scrollTop+(rect.top-cBox.top)-(cBox.height/2)+rect.height/2;
+    scroller.scrollTo({top,behavior:'smooth'});
+  }
+
+  /* bring a page's TOP just below the header (for reading/writing) */
+  function rollToTop(target){
+    const rect=target.getBoundingClientRect();
+    const cBox=content.getBoundingClientRect();
+    const top=scroller.scrollTop+(rect.top-cBox.top)-16;
+    scroller.scrollTo({top,behavior:'auto'});
   }
 
   function enterWriting(writeEl){
-    const evt=writeEl.previousElementSibling;
-    const idx=rows.findIndex(r=>r.h===evt);
+    const sheet=writeEl.closest('.sheet');
+    const idx=rows.findIndex(r=>r.sheet===sheet);
     openForWriting(idx<0?0:idx);
   }
 
   function openForWriting(idx){
-    if(writingMode) drafts[currentIndex]=wsArea.value;
+    if(writingMode) saveDraft(currentIndex);
     currentIndex=idx;
     const r=rows[idx];
-    const scene=r.h.closest('.scene');
-    const sc=scene?scene.querySelector('.sc-h'):null;
-    wsScene.innerHTML = sc ? sc.innerHTML : '';
-    wsEvent.textContent = r.h.classList.contains('ev-t') ? r.label : '';
+    sheets.forEach(s=>s.classList.remove('live'));
+    r.sheet.classList.add('live');
+    const wsScene=r.sheet.querySelector('.ws-scene');
+    const wsEvent=r.sheet.querySelector('.ws-event');
+    const wsArea=r.sheet.querySelector('.ws-area');
+    wsScene.innerHTML = r.h ? r.h.innerHTML : '';
+    const firstEv=r.sheet.querySelector('.ev-t');
+    wsEvent.textContent = firstEv ? firstEv.textContent : '';
     wsArea.value = drafts[idx]||'';
     body.classList.add('writing');
     writingMode=true;
     document.getElementById('modeNote').textContent='writing · use the wheel to move';
-    scroller.scrollTo({top:0,behavior:'auto'});
     paintWheel(idx);
-    setTimeout(()=>wsArea.focus(),120);
+    /* layout changes when .writing is applied (stage padding, hidden content);
+       wait two frames for it to settle, then land the page top under the header */
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{ rollToTop(r.sheet); }));
+    setTimeout(()=>wsArea.focus(),160);
+  }
+
+  function saveDraft(idx){
+    const r=rows[idx]; if(!r) return;
+    const ta=r.sheet.querySelector('.ws-area');
+    if(ta) drafts[idx]=ta.value;
   }
 
   function exitWriting(){
-    drafts[currentIndex]=wsArea.value;
+    saveDraft(currentIndex);
     body.classList.remove('writing');
     writingMode=false;
+    sheets.forEach(s=>s.classList.remove('live'));
     document.getElementById('modeNote').textContent='the wheel · centre = where you are';
-    requestAnimationFrame(()=>{ rollToCentre(rows[currentIndex].h); requestAnimationFrame(turnFromScroll); });
+    requestAnimationFrame(()=>{ rollToCentre(rows[currentIndex].sheet); requestAnimationFrame(turnFromScroll); });
   }
   window.exitWriting=exitWriting;
 
-  const TIGHT=46, GAP=170;
-  const WINDOW=3;
+  /* belt geometry */
+  const TIGHT=46, GAP=64, WINDOW=9, BOW=0;
   function placeBelt(cur){
     const cBox=content.getBoundingClientRect();
     const centreY=cBox.height/2;
     wcentre.style.top=centreY+'px';
-    const curI=Math.round(cur);
     rows.forEach((r,i)=>{
-      const steps=i-curI;
-      const within=Math.abs(steps)<=WINDOW;
+      const steps=i-cur;
+      const asteps=Math.abs(steps);
       let y,op;
-      if(steps===0){ y=centreY; op=1; }
-      else if(steps<0){ y=centreY-GAP-(-steps-1)*TIGHT; }
-      else { y=centreY+GAP+(steps-1)*TIGHT; }
-      if(steps===0) op=1;
-      else if(!within) op=0;
-      else op=Math.max(0.12, 0.62 - (Math.abs(steps)-1)*0.16);
-      r.el.style.top=(y-13)+'px';
+      if(asteps<0.5){ y=centreY; }
+      else if(steps<0){ y=centreY-GAP-(-steps-0.5)*TIGHT; }
+      else { y=centreY+GAP+(steps-0.5)*TIGHT; }
+      if(asteps<0.5){ op=1; }
+      else {
+        const t=Math.min(1,(asteps-0.5)/WINDOW);
+        op=0.95*(1-t*t);
+        op=Math.max(0.85,op);
+        if(asteps>1.5) op=op*0.71;
+      }
+      if(asteps>WINDOW+0.7) op=0;
+      const t2=Math.min(1,asteps/(WINDOW+0.5));
+      const push=BOW*(1-t2*t2);
+      r.el.style.top=y+'px';
       r.el.style.opacity=op;
-      r.el.style.pointerEvents = within?'auto':'none';
-      const live=(steps===0);
-      r.el.style.color=live?'var(--gold2)':'var(--ink)';
+      r.el.querySelector('.wtext').style.transform='translateY(-50%) translateX('+push+'px)';
+      r.el.style.pointerEvents = op>0.05 ? 'auto':'none';
+      const live=(Math.round(cur)===i);
       r.el.classList.toggle('live',live);
+      r.el.classList.toggle('near',!live && asteps<1.6);
+      r.el.classList.toggle('far', asteps>=1.6);
     });
   }
-
   function paintWheel(idx){ placeBelt(idx); }
+
+  function positionWheel(){
+    const cRect=content.getBoundingClientRect();
+    const sRect=sheets[0].getBoundingClientRect();
+    const gapLeft=sRect.right-cRect.left;
+    const gapRight=cRect.width;
+    const gapW=gapRight-gapLeft;
+    const gapCentre=(gapLeft+gapRight)/2;
+    const labelW=Math.max(120, gapW*0.5);
+    document.querySelectorAll('.wlabel .wtext').forEach(t=>t.style.width=labelW+'px');
+    const blockW=46+labelW;
+    const blockLeft=gapCentre-blockW/2;
+    wheel.style.left=(blockLeft-40)+'px';
+  }
 
   let targetFrac=0, shownFrac=0, easing=false;
   function measureFrac(){
     const cBox=content.getBoundingClientRect();
     const centreY=cBox.height/2;
-    const ys=rows.map(r=>{const rect=r.h.getBoundingClientRect();return (rect.top-cBox.top)+rect.height/2;});
+    const ys=rows.map(r=>{const rect=r.sheet.getBoundingClientRect();return (rect.top-cBox.top)+rect.height/2;});
     let frac=0;
     if(centreY<=ys[0])frac=0;
     else if(centreY>=ys[ys.length-1])frac=ys.length-1;
@@ -546,8 +716,8 @@
     if(!easing){ easing=true; requestAnimationFrame(easeLoop); }
   }
 
-  window.addEventListener('load',()=>{ turnFromScroll(); scroller.scrollTo({top:1}); requestAnimationFrame(turnFromScroll); });
-  window.addEventListener('resize',()=>{ writingMode?paintWheel(currentIndex):turnFromScroll(); });
+  window.addEventListener('load',()=>{ positionWheel(); turnFromScroll(); scroller.scrollTo({top:1}); requestAnimationFrame(turnFromScroll); });
+  window.addEventListener('resize',()=>{ positionWheel(); writingMode?paintWheel(currentIndex):turnFromScroll(); });
   let ticking=false;
   scroller.addEventListener('scroll',()=>{
     if(!ticking){ requestAnimationFrame(()=>{ turnFromScroll(); ticking=false; }); ticking=true; }
