@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 4 June 2026
+Last updated: 7 June 2026
 
 NOTE ON THIS FILE
 This file is normally add-only. On 4 June (morning) it was rewritten
@@ -7,9 +7,14 @@ whole because the 1–3 June DCW locks (the shutter, the vertical board,
 the fusion-as-built, the one-screen cell-grid) were SUPERSEDED by the
 "InkySwot IS the DCW / The Treatment" model. Superseded locks are NOT
 deleted — they are moved to SUPERSEDED LOCKS at the foot, dated, kept
-as history. The live part of this file holds only decisions that are
-still true. On 4 June (later) the WHEEL decisions were added (the
-click-to-write resolution and its layout) — see the new locks below.
+as history.
+On 7 June it was rewritten whole again to bring the WHEEL and PAGE locks
+into line with the wheel AS BUILT across 6–7 June (one scene per page,
+two-line kicker labels, straight belt, window of 9, ring+leader with the
+bloom/chevron removed, hover lights node only, smoothed hand-off). The
+4 June wheel locks that those refinements replaced are moved to
+SUPERSEDED LOCKS, dated, kept as history. The live part of this file
+holds only decisions that are still true.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -50,57 +55,95 @@ database can hold. The writer never faces a blank page; assembled, the
 sections ARE the draft; the writing is the last layer, not the first.
 Locked: 4 June 2026.
 
-INDENTATION RULE
-Timeline events sit at the MARGIN (undented). Everything else is
-INDENTED under the event it belongs to. Margin = a new beat happens;
-indent = the substance of that beat. Locked: 4 June 2026.
+ONE SCENE PER FULL PAGE — LOCKED (6 June 2026)
+The Treatment is read and written ONE SCENE PER PAGE. Each scene sits on
+its own full US-Letter sheet (816 × 1056px). The old long-scrolling
+multi-event page is gone (it felt too busy and made the wheel track too
+many close points). Pages are ALWAYS full height — a short scene simply
+leaves white space below it, exactly like a real document page; pages
+are never shrunk to hug content. Locked: 6 June 2026.
+
+STAVE HEADING ON EVERY PAGE — LOCKED (6 June 2026)
+The stave/chapter heading shows at the top of EVERY scene page, for
+navigation, so the writer always knows which stave they are in — not
+only on the page where the stave opens. Locked: 6 June 2026.
 
 THE CLICK-TO-WRITE IS THE WHEEL
 Resolves the old open decision (inline-grow vs focused surface) — the
-answer is neither: a WHEEL. The page sits SHIFTED RIGHT; out in the
-dark to its right is a vertical belt of section labels (staves, scenes,
-events) with a fixed gold CENTRE LINE. Scrolling the page TURNS the
-wheel; whatever label sits on the centre line is WHERE YOU ARE (lit
-gold, with a horizontal leader to its right — only the centre gets the
-leader). Locked: 4 June 2026.
-
-THE WHEEL — SPLIT, WINDOWED, EASED
-The centre label floats ALONE on the line. Everything before it bunches
-tight above a FIXED gap; everything after bunches tight below a FIXED
-gap; the gaps never close (bunches grow away from them). Only a WINDOW
-of ~3 labels each side of centre shows — labels fade IN entering the
-window, OUT leaving it, so the wheel stays calm however long the book
-is. Motion is EASED and slow (glides toward target; does not snap 1:1
-to scroll). Labels are big, roomy text with generous line spacing.
+answer is neither: a WHEEL. The page sits SHIFTED RIGHT; out in the dark
+channel to its right (between the page and the 230px right sidebar) is a
+vertical belt of labels on a single hairline gold RAIL, with a fixed
+gold CENTRE. Scrolling the PAGE turns the wheel (page-scroll driven, not
+wheel-scroll); whatever label sits at the centre is WHERE YOU ARE.
 Locked: 4 June 2026.
 
+THE WHEEL LABELS ARE TWO LINES — LOCKED (7 June 2026)
+Every wheel label is TWO LINES: a small gold JetBrains Mono caps KICKER
+giving the exact position ("STAVE ONE — SCENE ONE"), and the SCENE TITLE
+beneath it in Crimson Pro ("The Counting-House"). Every scene therefore
+carries its full stave+scene position on the wheel. There are NO
+separate stave marker labels and NO blank stave pages — the stave is
+named on every scene via the kicker. Stave/scene numbers are computed in
+JS from a data-stave-open marker on each stave's first page.
+Locked: 7 June 2026. (Supersedes the 4 June single-line uniform labels.)
+
+THE WHEEL — WINDOWED, EASED, STRAIGHT — LOCKED (7 June 2026)
+- WINDOW of NINE labels each side of centre (a real map of the book
+  using the full page height). Labels fade in/out at the edges so the
+  wheel stays calm however long the book is.
+- FADE: even and gentle across the window, with a brightness FLOOR so
+  outer labels stay readable; the centre and the two labels either side
+  of it are full brightness, the rest dimmed (~71%). Label text colour
+  is uniform; the dimming is opacity only.
+- MOTION: eased and slow — glides toward target, never snaps 1:1 to
+  scroll. Ease rate 0.072. Row spacing TIGHT=46, centre gap GAP=64.
+- BELT IS STRAIGHT (BOW=0). A slight outward bow was tried and liked as
+  a "felt not seen" cue but REMOVED because it ran the two-line labels
+  together. Any future bow must not cost two-line legibility.
+- THE LIVE HAND-OFF IS SMOOTHED: 0.35s CSS transition on the label text
+  so the gold eases in/out as labels pass centre rather than snapping.
+Locked: 7 June 2026. (Supersedes the 4 June "split bunches / ~3-label
+window / big roomy uniform labels" lock.)
+
+THE WHEEL CENTRE MARK — LOCKED (6 June 2026)
+The centre is marked by a gold RING (17px, 2px border) with a filled
+gold dot, plus a short gold LEADER line from the ring toward the centre
+label. The centre label's title lights gold. The centre node is hidden
+behind the ring. REMOVED: the radial bloom glow and the » chevron — one
+clean mark, no pointing at what is already obvious. Locked: 6 June 2026.
+
+THE WHEEL HOVER — LOCKED (6 June 2026)
+Hovering a wheel label lights ONLY its node gold. The label TEXT does
+not change on hover. Clicking a label navigates to that scene.
+Locked: 6 June 2026.
+
 TWO STATES — OVERVIEW AND WRITING MODE
-OVERVIEW: the assembled Treatment shows on the page; the wheel turns
-with the scroll; centre = where you are. Click a non-centre wheel label
-to roll it to centre; click the centre label (or a "— click to write
-this scene —" on the page) to enter Writing Mode.
+OVERVIEW: the assembled Treatment shows (one scene per page); the wheel
+turns with the scroll; centre = where you are. Click a wheel label to go
+to that scene; click the centre label (or a "— click to write this
+scene —" on the page) to enter Writing Mode.
 WRITING MODE: the page opens CLEAN for that one scene — scene line +
 event title near the top, then the whole page given to a full-height
 writing area. The wheel stays lit, locked with that scene at centre.
-CLICK ANY WHEEL LABEL to open THAT section to write — the writer
-travels scene-to-scene BY THE WHEEL without leaving Writing Mode; each
-scene's text is remembered. A "‹ overview" control (top-right, Writing
-Mode only) returns to the assembled Treatment, rolling the written
-scene back to centre. The writing position and the map position are the
-SAME thing. Locked: 4 June 2026.
+CLICK ANY WHEEL LABEL to open THAT scene to write — the writer travels
+scene-to-scene BY THE WHEEL without leaving Writing Mode; each scene's
+text is remembered. A "‹ overview" control (top-right, Writing Mode
+only) returns to the assembled Treatment. The writing position and the
+map position are the SAME thing. Locked: 4 June 2026.
 
 PAGE RIGHT, POP-UP LEFT
 The WP / Treatment page sits shifted to the RIGHT of the dark
-workspace; the wheel is to the right of the page. The LEFT of the
-workspace is reserved for the entity POP-UP note. Locked: 4 June 2026.
+workspace; the wheel is in the channel to the right of the page. The
+LEFT of the workspace is reserved for the entity POP-UP note. Locked:
+4 June 2026.
 
 THE ENTITY POP-UP
 The writer reaches the database without leaving the page, via a stable
-pop-up (now on the LEFT). Two steps from the nav: click a section →
-list of names → click a name → the record. STABLE: click to open, click
-(✕) to close; does not vanish on click-away; does not close when text
-is selected inside it. DRAGGABLE by its header; stays where put.
-Locked: 4 June 2026.
+pop-up (on the LEFT). Two steps from the nav: click a section → list of
+names → click a name → the record. STABLE: click to open, click (✕) to
+close; does not vanish on click-away; does not close when text is
+selected inside it. DRAGGABLE by its header; stays where put. Locked:
+4 June 2026.
 
 NAV SECTION COUNTS
 Each nav section shows a live count read from its saved array
@@ -110,23 +153,27 @@ counted section opens the pop-up list. Locked: 4 June 2026.
 POP-UP USES QUIET-NOTE GRAMMAR IN SECTION COLOUR
 Throughout the pop-up (list, entries, kicker, back link): a SUB-TITLE
 in the SECTION's colour, a DESCRIPTION in neutral ink beneath, closed
-by a SOLID end-line in the section colour. Colour = wayfinding (what
-kind of thing this is). Characters gold; Locations teal; each section
+by a SOLID end-line in the section colour. Colour = wayfinding. Record
+view: per-field rows each with a COPY button, section-colour dividers,
+section-colour end-line. Characters gold; Locations teal; each section
 its own colour. Locked: 4 June 2026.
 
 COPY AND PASTE IS HOW INFO REACHES THE WP
 The mechanism for getting database substance into the writing is copy
-and paste. Each pop-up entry has a COPY button. Copy takes TEXT ONLY:
-coloured in the pop-up, but it lands in the WP PLAIN, taking the page's
-own ink. Colour for finding in the panel; neutral ink for reading on
-the page. The writer stays in charge — nothing lands they did not
+and paste. Each pop-up entry/field has a COPY button. Copy takes TEXT
+ONLY: coloured in the pop-up, but it lands in the WP PLAIN, taking the
+page's own ink. Colour for finding in the panel; neutral ink for reading
+on the page. The writer stays in charge — nothing lands they did not
 choose. Locked: 4 June 2026.
 
 THE WP IS A REAL DOCUMENT PAGE
-The main work area / The Treatment is a proper document page (Letter
-proportions, generous margins), on the dark workspace with a page
-shadow — not a thin panel. (Now shifted right; see PAGE RIGHT, POP-UP
-LEFT.) Locked: 4 June 2026.
+The main work area / The Treatment is a proper document page (US Letter,
+816 × 1056px, generous margins), on the dark workspace with a page
+shadow — not a thin panel. (Shifted right; see PAGE RIGHT, POP-UP LEFT;
+one scene per page; see ONE SCENE PER FULL PAGE.) Running head top-right;
+stave heading mono caps ruled under; scene heading mono + optional
+italic title; writing area Crimson Pro 18px / line-height 1.5.
+Locked: 4 June 2026 (page proportions); refined 6 June 2026.
 
 WP MAGNIFY (ZOOM)
 A − / 100% / + control magnifies the whole document (70%–200%). It is
@@ -135,17 +182,24 @@ ZOOM, not page-width — the page shape never changes. Locked: 4 June 2026.
 WP PAGE NUMBERS + OPTIONAL TITLE PAGE
 Page numbers centred at the foot of each page. An optional first TITLE
 PAGE (centred title + "by [author]") is UNNUMBERED; numbering starts at
-1 on the page after it (manuscript convention). A toggle turns the
-title page on/off. Title + author pull from Overview. Locked: 4 June 2026.
+1 on the page after it (manuscript convention). A toggle turns the title
+page on/off. Title + author pull from Overview. Locked: 4 June 2026.
 
 SCROLLBARS
-Slim, dark, gold-on-hover, everywhere. No Windows defaults. Locked: 4 June 2026.
+Slim, dark, gold-on-hover, everywhere. No Windows defaults. Locked:
+4 June 2026.
 
 DESIGN-A-MECHANISM RULE
 When designing a live mechanism (motion, scroll, interaction), build a
 small STATIC mockup first, agree the still picture, THEN add movement.
 Designing moving behaviour by description alone wastes time. A sketch
 from Kev beats ten descriptions — ask for one. Locked: 4 June 2026.
+
+CLEAN-REBUILD RULE (display freeze) — LOCKED (6 June 2026)
+If edits stop showing on screen, do NOT keep editing — do a CLEAN
+REBUILD in a fresh artifact. The artifact display freezes on an old
+version; a clean rebuild fixes it instantly. (Learned the hard way more
+than once.) Locked: 6 June 2026.
 
 PRICING
 Paid only. No free tier. No exceptions.
@@ -357,22 +411,33 @@ Locked: 2 June 2026.
 ================================================================
 OPEN — NOT YET DECIDED
 ================================================================
-(The CLICK-TO-WRITE is no longer here — it is now a lock: THE WHEEL.)
+>>> THE PAGE-TOP BUG (FIRST THING NEXT SESSION, 7 June) <<<
+Clicking a scene label on the wheel (and opening a scene generally)
+leaves the TOP OF THE PAGE CUT OFF above the fold — the running head /
+stave heading / scene line are clipped. The page should sit with its
+TOP just below the header bar, reading from the top down (Kev showed a
+screenshot of the correct look). A rollToTop() function was added and
+pointed at both the wheel-label click and the writing-open (offset tried
+at −28 and −16, behavior:'auto', two requestAnimationFrames before
+scrolling in writing mode because body.writing changes .stage padding
+40vh→34px and hides content). STILL CUTTING OFF. First thing to fix.
+
+(The CLICK-TO-WRITE is no longer here — it is a lock: THE WHEEL.)
 WHERE THE MOOD WORDS LIVE: the chapter/scene mood words (e.g. Cold ·
 Bleak · Biting) were pulled off the page; Kev wants them but not yet
 sure where they belong. Parked.
 EVENT ORDER WITHIN A SCENE: events group by chapter but have no
 sequence within a scene. The spine needs "this before that." (Events
 already store characters[] and location; they lack a position.)
+EVENTS ON THE PAGE: with one-scene-per-page, confirm whether multiple
+events per scene stay listed on the page or collapse.
 TAG SET: Prose vs Action (working split: Action = what they do; Prose =
 description / narration). Dialogue's place (not on the 4 June list but
 needed). Emotion as a per-beat tag vs the seed of an Emotional Map.
 TENSION CURVE / EMOTIONAL MAPS / AMBIENT (Atmosphere / Weather / Time):
 carried from earlier DCW thinking; how they live in the timeline-of-
 events Treatment is open.
-WHEEL TIER STYLING: whether staves vs scenes vs events are visually
-distinguished on the wheel; whether the centre label is bigger/brighter
-or uniform (uniform for now). Open.
+THE 230px RIGHT SIDEBAR: its purpose (currently blank).
 PLOT MAPPING beside The Treatment: how the corkboard and the Treatment
 relate now both are views of one database.
 HOME-PAGE LAUNCHPAD: final strap wording for the four items.
@@ -392,9 +457,29 @@ scheduled; NOT a lock.
 
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
-(These were locked 1–3 June, then superseded by the 4 June model.
-Kept as the record of how we got here.)
+(Kept as the record of how we got here.)
 ================================================================
+THE 4 JUNE WHEEL DETAIL (SUPERSEDED 6–7 June by the wheel as built) —
+the 4 June wheel was locked as: split bunches (centre alone, everything
+before bunched above a fixed gap, everything after below, gaps never
+closing); a WINDOW of ~3 labels each side; big roomy uniform single-line
+labels (Crimson Pro ~21px); a leader on the centre. These are
+superseded by: one scene per page; two-line kicker labels; a window of
+NINE; straight belt; the smoothed hand-off; the ring+dot+leader centre
+with the bloom and chevron removed; hover lights node only. The
+PRINCIPLE (windowed, eased, page-scroll driven, centre = where you are,
+leader on the centre) survives; the numbers and the label form changed.
+SEPARATE STAVE MARKER LABELS / BLANK STAVE PAGE (tried 7 June,
+SUPERSEDED same day) — putting the stave on the wheel as its own rail
+point forced a blank stave page and did not read right. Replaced by the
+two-line kicker on every scene label.
+THE WHEEL BLOOM + CHEVRON (4 June, REMOVED 6 June) — the soft radial
+glow behind the centre and the » chevron pointing in. Removed: the ring
++ dot + leader is the whole centre mark now.
+THE WHEEL BOW (tried 6 June, REMOVED 6 June) — a slight outward curve of
+the belt. Liked as a subtle cue but ran the two-line labels together;
+belt is straight.
+
 THE SHUTTER (locked 2 June, SUPERSEDED 4 June) — DCW and WP as one
 manuscript divided by a curtain that covers/reveals without resizing;
 WP always on top; DCW left, WP right; Full Screen = shutter to the page
@@ -428,6 +513,11 @@ tethered to highlighted entities. Absorbed: the WP / Treatment IS the
 writing surface (now via the wheel's Writing Mode); the entity pop-up +
 copy-paste replaces the Index Card mechanism. (Distraction-free writing
 may return, redefined as WP + chrome hidden — not locked.)
+INDENTATION RULE (locked 4 June, SUPERSEDED 6 June) — "timeline events
+at the margin; everything else indented under its event." Belonged to
+the multi-event long-scrolling page; with one scene per page it no
+longer applies. The page now shows a scene's event(s) with a
+"click to write" line; how multiple events sit on a page is OPEN.
 THE WRITING CARD ("Scene." / Dialogue + Descriptive) (open since 2 June,
 SUPERSEDED 4 June) — the keystone card you write inside. Gone with the
 card model; writing now happens in the WP page at the event, opened via
