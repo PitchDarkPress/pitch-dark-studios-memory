@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 7 June 2026
+Last updated: 7 June 2026 (later session)
 
 NOTE ON THIS FILE
 This file is normally add-only. On 4 June (morning) it was rewritten
@@ -11,10 +11,13 @@ as history.
 On 7 June it was rewritten whole again to bring the WHEEL and PAGE locks
 into line with the wheel AS BUILT across 6–7 June (one scene per page,
 two-line kicker labels, straight belt, window of 9, ring+leader with the
-bloom/chevron removed, hover lights node only, smoothed hand-off). The
-4 June wheel locks that those refinements replaced are moved to
-SUPERSEDED LOCKS, dated, kept as history. The live part of this file
-holds only decisions that are still true.
+bloom/chevron removed, hover lights node only, smoothed hand-off).
+In a LATER 7 June session it was rewritten whole once more to add three
+build fixes (the page-top reading line, the writing-mode single page,
+the multiple independent pop-ups) and the DEMO BOOKS decision. Locks
+that those changes replaced are moved to SUPERSEDED LOCKS, dated, kept
+as history. The live part of this file holds only decisions that are
+still true.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -117,6 +120,30 @@ Hovering a wheel label lights ONLY its node gold. The label TEXT does
 not change on hover. Clicking a label navigates to that scene.
 Locked: 6 June 2026.
 
+THE PAGE LANDS ON ONE SHARED READING LINE — LOCKED (7 June 2026, later)
+The page and the wheel share ONE reading line, a small fixed distance
+below the header (READ_PAD = 28px). This fixed the page-top clipping bug.
+- Clicking a wheel label (or opening any scene) lands that scene's TOP
+  on the reading line, so the page reads DOWNWARD from the top — running
+  head, stave heading, scene line all on screen. (Done by rollToTop;
+  rollToCentre, which centred the page MIDPOINT and clipped the top of a
+  full-height page, is gone.)
+- The wheel works out "where you are" from the SAME reading line —
+  whichever scene's top has reached it is the one at centre — so page
+  and wheel cannot disagree.
+- Overview top padding is small (28px) so a page opens read-from-the-top,
+  not floating mid-screen.
+- The gold ring stays at the channel's vertical centre — unchanged.
+Locked: 7 June 2026 (later session). NB: the live-label flip point (the
+wheel flips to the next scene ~halfway down a tall page) is an open small
+tweak, not part of this lock.
+
+WRITING MODE SHOWS ONLY THE LIVE SCENE — LOCKED (7 June 2026, later)
+In Writing Mode the scene being written stands alone on its own page;
+every other scene page is hidden. (Before, the non-live full-height
+sheets sat empty and showed as a stack of blank white pages above and
+below the live one — hiding them cured it.) Locked: 7 June 2026 (later).
+
 TWO STATES — OVERVIEW AND WRITING MODE
 OVERVIEW: the assembled Treatment shows (one scene per page); the wheel
 turns with the scroll; centre = where you are. Click a wheel label to go
@@ -134,7 +161,7 @@ map position are the SAME thing. Locked: 4 June 2026.
 PAGE RIGHT, POP-UP LEFT
 The WP / Treatment page sits shifted to the RIGHT of the dark
 workspace; the wheel is in the channel to the right of the page. The
-LEFT of the workspace is reserved for the entity POP-UP note. Locked:
+LEFT of the workspace is reserved for the entity POP-UP notes. Locked:
 4 June 2026.
 
 THE ENTITY POP-UP
@@ -144,6 +171,18 @@ names → click a name → the record. STABLE: click to open, click (✕) to
 close; does not vanish on click-away; does not close when text is
 selected inside it. DRAGGABLE by its header; stays where put. Locked:
 4 June 2026.
+
+POP-UPS ARE MULTIPLE AND INDEPENDENT — LOCKED (7 June 2026, later)
+Each nav-section click opens its OWN pop-up:
+- It opens at the HOME position every time — it does NOT remember where
+  the last one was dragged. A small cascade offset keeps a second one
+  visible rather than stacked exactly on the first.
+- More than one can be open at once (e.g. two characters side by side to
+  compare). Each is dragged, navigated (list ↔ record) and closed on its
+  own ✕, independently of the others.
+- Clicking a pop-up raises it to the front; drag moves only that pop-up.
+Locked: 7 June 2026 (later). (Supersedes the single reused pop-up that
+remembered its dragged position and could not be doubled.)
 
 NAV SECTION COUNTS
 Each nav section shows a live count read from its saved array
@@ -394,6 +433,35 @@ the database into the page, the wheel, and copy-paste are plain
 mechanics. Ada improves the experience; the writer's book stands
 without her.
 
+DEMO BOOKS — DECIDED (7 June 2026, later session)
+Two demo books ship with the platform, like a music DAW shipping a demo
+set, so a new user can explore a finished world.
+- A demo is a NORMAL project, fully populated, with the scene-writing
+  left blank. Every nav section completed (Characters, Locations,
+  Buildings, Objects, Rules & Lore, Plot Threads, Subplots, Themes &
+  Motifs, the full Events list with its connections, Chapters/Scenes) —
+  the nav panel completely filled in. EVERYTHING FILLED EXCEPT THE
+  WRITING.
+- FULLY EDITABLE — NOT read-only. (Overrides the earlier "ideally
+  read-only" note — see SUPERSEDED LOCKS.) The user is meant to PLAY:
+  the more they poke, add and change, the more comfortable they get and
+  the more it feels like theirs.
+- RESET TO PRISTINE — a "reset demo" returns it to its filled original
+  state; a clean demo is always there. (Reset, not a lock, keeps it
+  pristine.)
+- SAVE YOUR OWN VERSION — they can keep what they made. WORKING
+  ASSUMPTION (build-time detail, not itself locked): save = SAVE AS A
+  COPY — the demo stays a demo, their version becomes a new project in
+  My Projects.
+- Two books: "A Christmas Carol" (Dickens 1843) and "The Wind in the
+  Willows" (Grahame 1908), both out of copyright. Carol FIRST as the
+  template (its bones are in the wheel mockup), Willows second.
+- SEQUENCING: built AFTER Step 1, once the sections and their fields are
+  final, so the database is filled ONCE.
+OPEN (later, not blocking): whether the blank in-scene prose stays empty
+or carries a light sample; the exact save-as-copy mechanics.
+Decided: 7 June 2026 (later session).
+
 COVER THUMBNAIL — REMOVED
 Not being built. AI-generated cover concepts post-launch only.
 
@@ -411,18 +479,6 @@ Locked: 2 June 2026.
 ================================================================
 OPEN — NOT YET DECIDED
 ================================================================
->>> THE PAGE-TOP BUG (FIRST THING NEXT SESSION, 7 June) <<<
-Clicking a scene label on the wheel (and opening a scene generally)
-leaves the TOP OF THE PAGE CUT OFF above the fold — the running head /
-stave heading / scene line are clipped. The page should sit with its
-TOP just below the header bar, reading from the top down (Kev showed a
-screenshot of the correct look). A rollToTop() function was added and
-pointed at both the wheel-label click and the writing-open (offset tried
-at −28 and −16, behavior:'auto', two requestAnimationFrames before
-scrolling in writing mode because body.writing changes .stage padding
-40vh→34px and hides content). STILL CUTTING OFF. First thing to fix.
-
-(The CLICK-TO-WRITE is no longer here — it is a lock: THE WHEEL.)
 WHERE THE MOOD WORDS LIVE: the chapter/scene mood words (e.g. Cold ·
 Bleak · Biting) were pulled off the page; Kev wants them but not yet
 sure where they belong. Parked.
@@ -443,22 +499,34 @@ relate now both are views of one database.
 HOME-PAGE LAUNCHPAD: final strap wording for the four items.
 THE PRESS (public door): where a non-subscriber's book data comes from
 with no platform project — enter cold, or upload a finished manuscript.
+WHEEL LIVE-LABEL FLIP POINT: the wheel flips to the next scene ~halfway
+down a tall page; whether to bias the flip later into the page. Small
+tweak, not urgent.
 
-================================================================
-PARKED / FUTURE (feasible, not scheduled — also in future.md)
-================================================================
-TWO PRE-FILLED DEMO BOOKS: fully-populated, every-section-complete demo
-projects of "A Christmas Carol" and "The Wind in the Willows" so a new
-user can explore a finished world. Both out of copyright (Dickens 1843;
-Grahame 1908). A demo = a normal project, pre-filled, ideally read-only.
-Carol first (its bones are in the mockup), then Willows. Depends on the
-app shell and sections being final. Confirmed feasible 4 June; not
-scheduled; NOT a lock.
+(THE PAGE-TOP BUG is no longer here — it is FIXED; see THE PAGE LANDS
+ON ONE SHARED READING LINE, above.)
 
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 (Kept as the record of how we got here.)
 ================================================================
+DEMO BOOKS "ideally read-only" (parked note, pre-7 June, SUPERSEDED
+7 June later) — demos are now FULLY EDITABLE so the user can play;
+pristine state is protected by a RESET, and a SAVE-AS-COPY lets them
+keep their version. See DEMO BOOKS — DECIDED, above.
+
+rollToCentre — CENTRED A PAGE'S MIDPOINT (used 4–7 June, SUPERSEDED
+7 June later) — scrolling a clicked scene so its midpoint sat at screen
+centre. On a full-height page (taller than the window) this shoved the
+page top off the top of the screen — the page-top clipping bug. Replaced
+by rollToTop landing the page's TOP on the shared reading line, with the
+wheel measuring from the same line.
+
+SINGLE REUSED POP-UP (4 June, SUPERSEDED 7 June later) — one pop-up
+element, reused, that remembered where it was last dragged and could not
+be doubled. Replaced by multiple independent pop-ups (open at home,
+cascade, drag, raise-to-front, close individually).
+
 THE 4 JUNE WHEEL DETAIL (SUPERSEDED 6–7 June by the wheel as built) —
 the 4 June wheel was locked as: split bunches (centre alone, everything
 before bunched above a fixed gap, everything after below, gaps never
