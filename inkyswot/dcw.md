@@ -1,8 +1,8 @@
 File: inkyswot/dcw.md
-Last updated: 4 June 2026
+Last updated: 7 June 2026
 
 ================================================================
-READ FIRST — 4 JUNE 2026: THIS IS THE LIVE SPEC.
+READ FIRST — THIS IS THE LIVE SPEC.
 InkySwot IS the DCW. The Treatment is the DCW switched on — a TIMELINE
 OF EVENTS assembled from the database, written by filling in the blanks.
 The writer navigates AND writes by THE WHEEL. Everything from the LIVE
@@ -10,6 +10,11 @@ SPEC heading down to "================ HISTORY" is current and buildable.
 Everything below "HISTORY" (the one-screen X-ray, the vertical board,
 the shutter, the fusion, the card model) is SUPERSEDED — kept only as
 the record of how we got here. Do NOT build from the history.
+
+7 JUNE 2026 UPDATE: the wheel was heavily refined across 6–7 June. The
+WHEEL section below now describes the wheel AS BUILT in the current
+mockup, which differs in several ways from the original 4 June spec
+(noted inline). The code is the truth; this file follows it.
 ================================================================
 
 ================================================================
@@ -21,10 +26,10 @@ The Digital Creative Workstation. InkySwot's owned term. Said as three
 letters: D.C.W. Equivalent to a DAW in music production. It is the
 platform's defining feature. When rivals copy InkySwot they will be
 labelled "just another DCW ripoff."
-BUT — and this is the 4 June realisation — the DCW is NOT a screen, a
-strip, a board, or a panel. It is the WHOLE PLATFORM. Every section
-already built (Characters, Locations, Events, Plot Threads, etc.) is
-part of the instrument. The database is the BONES of the story.
+BUT — the 4 June realisation — the DCW is NOT a screen, a strip, a
+board, or a panel. It is the WHOLE PLATFORM. Every section already
+built (Characters, Locations, Events, Plot Threads, etc.) is part of
+the instrument. The database is the BONES of the story.
 
 THE TREATMENT IS THE DCW SWITCHED ON
 The Treatment is where everything in the database ASSEMBLES into a
@@ -54,102 +59,173 @@ material off to one side — assembled, they ARE the draft; the writing
 is the last layer, not the first.
 
 ----------------------------------------------------------------
-THE WHEEL — HOW THE WRITER NAVIGATES AND WRITES (settled 4 June)
+THE PAGE — ONE SCENE PER FULL PAGE (settled 6 June 2026)
+----------------------------------------------------------------
+This is the big structural change of 6 June. The Treatment is no longer
+one long scrolling document of stacked staves/scenes/events. Instead:
+
+- ONE SCENE PER FULL PAGE. Each scene sits on its OWN full US-Letter
+  sheet (816 × 1056px). The old multi-event page (several scenes and
+  many events stacked on one long page) is GONE — it felt "too busy"
+  and made the wheel track too many close points.
+- PAGES ARE ALWAYS FULL HEIGHT. A short scene leaves white space below
+  it — that white space is simply the rest of the sheet, exactly like a
+  real document page. Pages are NEVER shrunk to hug their content.
+  (Kev: the small mockup that hugged a scene was just a sketch; the
+  real thing is always a full page.)
+- STAVE HEADING ON EVERY PAGE. The stave/chapter heading (.ch-h) shows
+  at the TOP of every scene page, for navigation — so the writer always
+  knows which stave they are in. It is not limited to the page where
+  the stave opens.
+- ON A PAGE: running head top-right ("A Christmas Carol by Charles
+  Dickens"), then the stave heading (mono caps, ruled under), then the
+  scene heading ("Scene 1 — The Counting-House"), then the event(s)
+  with a "— click to write this scene —" line beneath each.
+- WHY: a page that holds ONE thing reads like a manuscript, not a
+  dashboard. The calm of the page and the calm of the wheel are the
+  same calm — fewer points for the wheel to track, so it moves at an
+  unhurried pace.
+
+----------------------------------------------------------------
+THE WHEEL — HOW THE WRITER NAVIGATES AND WRITES
+(settled 4 June; heavily refined 6–7 June — this is AS BUILT)
 ----------------------------------------------------------------
 The old "click-to-write" decision (inline-grow vs focused surface) is
-RESOLVED — and the answer is neither. It is a WHEEL. This is the heart
-of the writing experience.
+RESOLVED — the answer is a WHEEL. This is the heart of the writing
+experience.
 
 THE LAYOUT
 - The WP / Treatment page sits SHIFTED TO THE RIGHT of the dark
   workspace.
 - The LEFT of the workspace is RESERVED for the entity POP-UP note
   (draggable, stable; spec below). Not yet built into the wheel mockup.
-- Out in the dark to the RIGHT of the page is THE WHEEL: a vertical
-  belt of section labels (staves, scenes, events) with a FIXED gold
-  CENTRE LINE (a small gold node marks it).
+- A 230px right sidebar sits at the far right (purpose TBD). The wheel
+  lives in the dark CHANNEL between the WP's right edge and that right
+  sidebar. Grid is 230px 1fr 230px.
+- Out in that channel is THE WHEEL: a single hairline gold RAIL with
+  small nodes, and section labels to the right of the rail. A fixed
+  gold CENTRE marks where you are.
 
-THE MECHANISM
-- The labels are big, roomy text (Crimson Pro ~21px) with generous
-  line spacing — calm and grand, not a cramped list.
-- Scrolling the page TURNS the wheel. Whatever label sits on the fixed
-  centre line is WHERE YOU ARE. It lights gold and grows a horizontal
-  LEADER line out to the right. ONLY the centre label gets the leader.
-- THE SPLIT: the centre label floats ALONE on the line. Everything
-  BEFORE it bunches tight just above a FIXED gap; everything AFTER it
-  bunches tight just below a FIXED gap. The gaps NEVER close — the
-  bunches grow away from them. (Kev confirmed the clusters/gaps sit "in
-  EXACTLY the right places".)
-- THE WINDOW: only ~3 labels each side of centre are shown. Labels FADE
-  IN as they enter the window and FADE OUT as they leave, so the wheel
-  stays calm however long the book is — it never moves the whole list
-  past you. This is what fixed the "moving too fast" problem: the book
-  may have hundreds of sections, but the wheel only ever carries the
-  handful near where you are.
-- THE MOTION: EASED and deliberately SLOW. The wheel glides toward its
-  target rather than snapping 1:1 to scroll. Glide rate in the mockup
-  is 0.072 (was 0.12 — slowed 40% at Kev's request). Bigger line
-  spacing also means each label covers more scroll, calming it further.
-- NO LINES BETWEEN LABELS. (Early attempts drew diagonal leader
-  bundles from the page edge to each label; they kept touching/crossing
-  and were abandoned. RULE if they ever return: lines must NEVER cross
-  or touch.) The only line is the single leader on the centre label.
+THE LABELS — TWO LINES EACH (settled 7 June 2026)
+This REPLACES the original single-line uniform labels. Every wheel
+label is now TWO LINES:
+- A small KICKER line in gold JetBrains Mono caps, e.g.
+  "STAVE ONE — SCENE ONE" — telling you the exact position.
+- The SCENE TITLE beneath it in Crimson Pro, e.g. "The Counting-House".
+So every label carries its full stave+scene position. There are NO
+separate stave marker labels and NO blank stave pages — the stave is
+NAMED ON EVERY SCENE via the kicker. (We tried separate stave rail-
+points and rejected them: they forced a blank stave page and didn't
+read right. The two-line label is the resolution.)
+The stave/scene numbers are computed in JS from a data-stave-open="1"
+attribute on each stave's FIRST page; a counter increments the stave and
+resets the scene number at each stave open.
+
+THE MECHANISM (as built)
+- Scrolling the PAGE turns the wheel (page-scroll driven, NOT wheel-
+  scroll). Whatever label sits on the fixed centre is WHERE YOU ARE.
+- THE CENTRE MARK: a gold RING (17px, 2px border) with a filled gold
+  dot, plus a short gold LEADER line running from the ring toward the
+  centre label. The centre label's TITLE lights gold. The centre node
+  itself is hidden (the ring replaces it).
+  REMOVED 6 June: the radial BLOOM glow and the » CHEVRON — "how many
+  times do we want to point at something." The ring + dot + leader is
+  the whole centre furniture now.
+- THE WINDOW: nine labels each side of centre are shown (WINDOW=9), so
+  the wheel is a real MAP of the book using the full page height — not
+  the original ~3. Labels fade in/out at the edges so the wheel stays
+  calm however long the book is.
+- THE FADE: an even, gentle fade across the window with a brightness
+  FLOOR so outer labels stay readable; the centre and the two labels
+  either side of it are at full brightness, the rest dimmed to ~71%.
+  Label text colour is uniform white/ink (an earlier per-distance dim
+  on the text was dropped in favour of opacity only).
+- HOVER: hovering a label lights ONLY its NODE gold. The TEXT does NOT
+  change on hover. (Important to Kev — no text highlight on hover at
+  all.) Clicking a label navigates to it.
+- THE MOTION: eased and slow — glides toward target, does not snap 1:1
+  to scroll. Glide/ease rate 0.072. Row spacing TIGHT=46, centre gap
+  GAP=64.
+- THE LIVE HAND-OFF IS SMOOTHED: a 0.35s CSS transition on the label
+  text (colour/weight/opacity) so as one label reaches centre and
+  another leaves, the gold eases in and out rather than snapping.
+- THE BOW: a very slight outward curve of the belt (centre furthest
+  right, labels stepping back toward the rail) was tried and LIKED as a
+  "felt not seen" wheel cue — then REMOVED (BOW=0) because the two-line
+  labels ran together on the curve. The belt is now STRAIGHT. (If the
+  bow is ever wanted again, it cannot be at the expense of two-line
+  legibility.)
+- positionWheel() centres the wheel block live in the channel at any
+  screen width; labels wrap to roughly half the channel width.
 
 TWO STATES — OVERVIEW AND WRITING MODE
-- OVERVIEW: the assembled Treatment shows on the page; the wheel turns
-  with the scroll; centre = where you are. Click a NON-centre wheel
-  label to roll it to centre. Click the CENTRE label (or a
+- OVERVIEW: the assembled Treatment shows (one scene per page); the
+  wheel turns with the scroll; centre = where you are. Click a wheel
+  label to go to that scene. Click the CENTRE label (or a
   "— click to write this scene —" on the page) to enter Writing Mode.
-- WRITING MODE: the page opens CLEAN for that one scene — the scene
-  line + the event title near the top, then the WHOLE page given over
-  to a full-height writing area (this is the layout Kev approved from
-  the image; NOT a small inline gap). The wheel stays lit beside you,
-  locked with that scene at centre.
-  CLICK ANY WHEEL LABEL to open THAT section to write — the writer
-  travels scene-to-scene BY THE WHEEL without leaving Writing Mode.
-  Each scene's text is remembered as the writer moves between them.
-- A "‹ overview" control (top-right, shown ONLY in Writing Mode)
-  returns to the assembled Treatment, rolling the scene that was being
-  written back to centre.
+- WRITING MODE: the page opens CLEAN for that one scene — scene line +
+  event title near the top, then the whole page given to a full-height
+  writing area. The wheel stays lit beside you, locked with that scene
+  at centre. Click any wheel label to open THAT scene to write — the
+  writer travels scene-to-scene BY THE WHEEL without leaving Writing
+  Mode. Each scene's text is remembered (drafts{} keyed by index).
+- A "‹ overview" control (top-right, shown only in Writing Mode)
+  returns to the assembled Treatment.
 
 THE PRINCIPLE
 The writing position and the map position are the SAME thing. The
-writer writes at the centre line; the wheel always shows what has been
+writer writes at the centre; the wheel always shows what has been
 passed (above), where you are (centre), and what is coming (below).
-The writer never leaves the writing to move about the book — the wheel
-IS the way around, while writing.
+The writer never leaves the writing to move about the book.
+
+>>> OPEN BUG — FIRST THING TO FIX NEXT SESSION (7 June) <<<
+Clicking a scene label on the wheel (and opening a scene generally)
+leaves the TOP OF THE PAGE CUT OFF above the fold — the page is sitting
+too high, so the running head / stave heading / scene line are clipped.
+Kev showed a screenshot of the CORRECT look: the page top sitting just
+below the header bar, reading from the top down.
+WHAT WE TRIED (not yet working): a rollToTop(target) function that
+lands the sheet's top a small offset below the header (offset tried at
+−28, −16; behavior:'auto'); pointed both the wheel-label click and the
+writing-open at it instead of the old rollToCentre (which centres the
+page's MIDPOINT on screen and therefore clips the top of a full-height
+page). For writing-open we wait two requestAnimationFrames before
+scrolling because applying body.writing changes .stage padding
+(40vh → 34px) and hides page content, throwing off the measurement.
+STILL CUTTING OFF. This is the FIRST thing to look at next session.
+Likely needs: measure AFTER layout settles, or compute the offset from
+the actual sheet top rather than a fixed number, and make sure no
+competing smooth-scroll is running. Get a fresh screenshot from Kev of
+exactly what's clipped.
 
 THE WHEEL MOCKUP (the LIVE DESIGN SOURCE)
-Built 4 June on "A Christmas Carol". Supersedes the earlier 4 June
-WP/Treatment mockup (the inline-gap version). Page shifted right; eased
-windowed wheel with fixed centre line, split bunches with fixed gaps,
-leader on the centre; Overview ↔ Writing Mode; wheel-driven travel
-between scenes; "‹ overview" to leave. STORE + INDEX in the CODE locker.
-METHOD NOTE: this was built static-first (an agreed still picture of the
-labels/bundles) THEN animated. Designing the motion by description alone
-failed repeatedly; the static-then-movement method is what worked, and
-is now a working rule (see current-state.md / locked-decisions.md).
+Built on "A Christmas Carol", whole book loaded: 5 staves, 25 scenes,
+25 full pages. This is the live design source for the wheel + page.
+STORE + INDEX the latest in the CODE locker, superseding earlier wheel
+mockups. METHOD NOTE: built static-first then animated; designing motion
+by description alone failed repeatedly (now a working rule). LESSON
+(re-confirmed 6 June): if edits stop showing on screen, do a CLEAN
+REBUILD in a fresh artifact — the display freezes on old versions. This
+bit us twice across these sessions.
 
-STILL OPEN ON THE WHEEL (small, next time)
+CARRIED / STILL OPEN ON THE WHEEL (small)
 - The entity POP-UP note on the LEFT is not yet built into the mockup;
   the space is reserved.
-- Whether wheel labels should be bigger/brighter AT centre vs uniform.
-  Kept UNIFORM for now ("keep it the same, just get the mechanics
-  right"). Revisit if wanted.
-- Tier styling: how chapters/staves vs scenes vs events are visually
-  distinguished on the wheel — currently one treatment for all.
+- Tier styling beyond the kicker: currently the kicker line does the
+  job of distinguishing position; no further per-tier styling.
+- The 230px right sidebar still has no defined purpose.
 
 ----------------------------------------------------------------
 HOW THE WORLD IS REACHED — THE ENTITY POP-UP (settled 4 June)
 ----------------------------------------------------------------
 The writer reaches the database WITHOUT leaving the page, via a stable,
-draggable pop-up panel. It NOW LIVES ON THE LEFT (the page having moved
-right to make room).
+draggable pop-up panel. It LIVES ON THE LEFT (the page having moved
+right to make room). Present in the wheel mockup and working.
 - TWO STEPS from the NAV. Each nav section shows a live COUNT
   (Characters · 5, Locations · 3, Factions · 0; zero greyed). Click a
   section → a LIST of names pops up → click a name → that record opens.
   A "‹ back to list" link steps back. (A search box on the list is a
-  natural future touch once a project has many entries — not yet built.)
+  natural future touch — not yet built.)
 - STABLE: click to open, click (✕) to close. Does NOT vanish on
   click-away; does NOT close when you select text inside it — so
   copy-and-paste is easy. DRAGGABLE: grab the header, move it clear of
@@ -159,27 +235,37 @@ right to make room).
   neutral ink beneath, closed by a SOLID end-line in the section
   colour. Characters read gold; Locations read teal; each section its
   own colour. Colour = wayfinding.
-- Each entry has a COPY button. The mechanism for getting database
-  substance into the WP is COPY AND PASTE (Kev's call — honest,
-  learnable, unbreakable, the writer stays in charge; nothing lands the
-  writer didn't choose). Copy takes TEXT ONLY: coloured in the pop-up,
-  it lands in the WP PLAIN, taking the page's own ink. Colour for
-  FINDING in the panel; neutral ink for READING on the page.
+- RECORD VIEW: per-field rows, each with a small COPY button (turns
+  "copied" briefly), section-colour dividers between fields, a section-
+  colour end-line.
+- COPY AND PASTE is how database substance reaches the WP (Kev's call —
+  honest, learnable, unbreakable; the writer stays in charge). Copy
+  takes TEXT ONLY: coloured in the pop-up, it lands in the WP PLAIN,
+  taking the page's own ink. Colour for FINDING in the panel; neutral
+  ink for READING on the page.
 NB: the QUIET NOTE grammar and the database "handle" both survive from
 the old card/(*) model — they now live here, in the pop-up.
 
 ----------------------------------------------------------------
-THE WP — A REAL DOCUMENT PAGE (settled 4 June)
+THE WP — A REAL DOCUMENT PAGE (settled 4 June; refined 6 June)
 ----------------------------------------------------------------
-The main work area / The Treatment is a proper document page (Letter
-proportions, generous margins), on the dark workspace with a page
+The main work area / The Treatment is a proper document page (US Letter,
+816 × 1056px, generous margins), on the dark workspace with a page
 shadow — not a thin panel. Shifted RIGHT (pop-up left, wheel right).
+Now ONE SCENE PER PAGE (see THE PAGE above).
+- Running head: small Crimson Pro line top-right ("A Christmas Carol by
+  Charles Dickens"), muted grey. (The big centred Playfair title block
+  was removed 6 June.)
+- Stave heading: JetBrains Mono 13px uppercase, weight 500, ruled under
+  — matter-of-fact, "information not a style effect."
+- Scene heading: JetBrains Mono 11px uppercase mute + optional italic
+  Crimson Pro title, or "+ add a title".
+- Writing area (.ws-area): Crimson Pro 18px, line-height 1.5.
 - MAGNIFY (zoom): a − / 100% / + control scales the whole document
   (70%–200%). It is ZOOM, not page-width — the page shape never changes.
-- PAGE NUMBERS: centred at the foot of each page.
-- TITLE PAGE: an optional first page (centred title + "by [author]"),
-  UNNUMBERED; numbering starts at 1 on the page after it. A "Title pg"
-  toggle turns it on/off. Title + author pull from Overview.
+  (Specced; not the focus of the wheel mockup.)
+- PAGE NUMBERS centred at the foot; optional UNNUMBERED TITLE PAGE with
+  toggle; title + author pull from Overview. (Specced.)
 - SCROLLBARS: slim, dark, gold-on-hover. No Windows defaults.
 - NOTE: pages are fixed-height sheets in the mockup. REAL pagination
   (prose flowing and breaking onto new numbered pages as you write) is
@@ -268,6 +354,7 @@ border; slide-in guide). Template pattern, locked 30 May.
 ----------------------------------------------------------------
 OPEN DECISIONS — STILL TO SETTLE (one at a time)
 ----------------------------------------------------------------
+0. >>> THE PAGE-TOP BUG (see THE WHEEL) — FIRST THING NEXT SESSION. <<<
 1. WHERE THE MOOD WORDS LIVE. Chapter/scene mood words (e.g. Cold ·
    Bleak · Biting) were pulled OFF the page; Kev wants them but doesn't
    yet know where they belong. Parked.
@@ -278,9 +365,12 @@ OPEN DECISIONS — STILL TO SETTLE (one at a time)
    Map) — see THE TAG SET above.
 4. WHERE THE CARRIED FEATURES LIVE — tension curve, Emotional Maps,
    Ambient, the lift — in the wheel model.
-5. WHEEL TIER STYLING and centre emphasis (uniform for now).
+5. THE 230px RIGHT SIDEBAR — its purpose.
 6. PLOT MAPPING beside The Treatment — both are views of one database;
    how the corkboard relates to the Treatment now is open.
+7. EVENTS ON THE PAGE — the page now shows the scene's event(s) with a
+   "click to write" line. With one-scene-per-page, confirm whether
+   multiple events per scene stay listed on the page or collapse.
 
 ----------------------------------------------------------------
 BUILD ORDER
@@ -426,6 +516,10 @@ side"; the note CARD (tab/knot/full-stop/flip); the one-screen cell-
 grid to type into; "Snap to Default"/drag-reorder tracks/bright-red
 freeform/Ideas columns/make-your-own tracks; the writing card "Scene."
 / Dialogue+Descriptive; the first 4 June inline-gap click-to-write.
+ALSO KILLED (6 June): the multi-event long-scrolling Treatment page
+(replaced by one scene per full page); the wheel's bloom glow and
+chevron; separate stave marker labels / blank stave pages (replaced by
+the two-line kicker label).
 
 WHAT SURVIVED (re-fitted to the live model): the QUIET NOTE grammar
 (now the pop-up's); the database handle (now the pop-up + copy); Dark
