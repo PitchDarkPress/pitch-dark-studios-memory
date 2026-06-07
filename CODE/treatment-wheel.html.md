@@ -53,8 +53,8 @@
 
   .content{position:relative;overflow:hidden;background:var(--bg0);}
   .scroller{position:absolute;inset:0;overflow:auto;}
-  .stage{position:relative;width:1340px;margin:0 auto 0 300px;padding:40vh 0 60vh;}
-  body.writing .stage{padding:34px 0 80px;}
+  .stage{position:relative;width:1340px;margin:0 auto 0 300px;padding:28px 0 60vh;}
+  body.writing .stage{padding:28px 0 80px;}
 
   /* one scene per full page */
   .sheet{background:var(--page);color:var(--pageink);width:816px;margin:0 0 26px;
@@ -77,6 +77,7 @@
   .ev-write:hover{color:var(--gold);}
 
   .writing-surface{display:none;}
+  body.writing .sheet:not(.live){display:none;}
   body.writing .sheet > .page-head,
   body.writing .sheet > .ch-h,
   body.writing .sheet > .sc-h,
@@ -124,10 +125,9 @@
     background:linear-gradient(90deg,var(--gold2),rgba(232,176,96,.15));transform:translateY(-50%);}
 
   /* ===== THE ENTITY POP-UP ===== */
-  #popup{position:absolute;top:30px;left:24px;width:248px;z-index:70;
+  .popup{position:absolute;top:30px;left:24px;width:248px;
     background:var(--bg2);border:1px solid var(--rule2);border-radius:3px;
-    box-shadow:0 14px 50px rgba(0,0,0,.55);display:none;}
-  #popup.shown{display:block;}
+    box-shadow:0 14px 50px rgba(0,0,0,.55);}
   .pu-head{display:flex;align-items:center;gap:8px;padding:12px 14px 11px;border-bottom:1px solid var(--rule);cursor:grab;}
   .pu-head:active{cursor:grabbing;}
   .pu-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;flex:1;}
@@ -386,14 +386,7 @@
       </div>
     </div>
 
-    <!-- the entity pop-up -->
-    <div id="popup">
-      <div class="pu-head">
-        <span class="pu-kicker" id="puKicker">Characters · 5</span>
-        <span class="pu-x" onclick="closePopup()">✕</span>
-      </div>
-      <div class="pu-list" id="puList"></div>
-    </div>
+    <!-- entity pop-ups are created dynamically (multiple, independent) -->
 
     <!-- THE WHEEL -->
     <div id="wheel">
@@ -419,6 +412,9 @@
   const stage=document.getElementById('stage');
   const wheel=document.getElementById('wheel');
   const wcentre=document.getElementById('wcentre');
+
+  /* the shared reading line — how far below the header a page's top sits */
+  const READ_PAD=28;
 
   let writingMode=false;
   let currentIndex=0;
@@ -464,89 +460,104 @@
     ]},
   };
 
-  const popup=document.getElementById('popup');
-  const puKicker=document.getElementById('puKicker');
-  const puList=document.getElementById('puList');
-  let openSection=null;
+  /* ===== THE ENTITY POP-UPS — multiple, independent ===== */
+  let popZ=70;   /* z-index counter so a clicked pop-up rises to the front */
 
   document.querySelectorAll('.item[data-pop]').forEach(it=>{
-    it.addEventListener('click',()=>openPopup(it.getAttribute('data-pop'),it));
+    it.addEventListener('click',()=>createPopup(it.getAttribute('data-pop')));
   });
 
-  function openPopup(key,navEl){
+  function createPopup(key){
     const d=popData[key]; if(!d) return;
-    document.querySelectorAll('.item.open').forEach(e=>e.classList.remove('open'));
-    if(navEl) navEl.classList.add('open');
-    openSection=key; showList(); popup.classList.add('shown');
-  }
-  function showList(){
-    const d=popData[openSection];
-    puKicker.textContent=d.label+' \u00B7 '+d.items.length;
-    puKicker.style.color=d.colour;
-    puList.innerHTML='';
-    d.items.forEach((item,i)=>{
-      const e=document.createElement('div');
-      e.className='pu-entry';
-      e.innerHTML='<div class="pu-sub" style="color:'+d.colour+'">'+item.sub+'</div>'+
-        '<div class="pu-desc">'+item.desc+'</div>'+
-        '<div class="pu-end" style="border-color:'+d.colour+'"></div>';
-      e.addEventListener('click',()=>showRecord(i));
-      puList.appendChild(e);
-    });
-  }
-  function showRecord(i){
-    const d=popData[openSection]; const item=d.items[i];
-    puKicker.textContent=d.label; puKicker.style.color=d.colour;
-    let fields='';
-    (item.fields||[]).forEach((f,fi)=>{
-      if(fi>0) fields+='<div class="pu-fdiv" style="border-color:'+d.colour+'"></div>';
-      fields+='<div class="pu-field"><div class="pu-field-head">'+
-        '<span class="pu-field-label">'+f[0]+'</span>'+
-        '<span class="pu-copy" data-copy="'+fi+'">copy</span></div>'+
-        '<div class="pu-field-val">'+f[1]+'</div></div>';
-    });
-    puList.innerHTML='<div class="pu-back" onclick="backToList()">\u2039 back to list</div>'+
-      '<div class="pu-record"><div class="pu-rec-name" style="color:'+d.colour+'">'+item.sub+'</div>'+
-      '<div class="pu-rec-kind">'+d.label.replace(/ &amp;.*/,'').replace(/s$/,'')+'</div>'+fields+
-      '<div class="pu-rec-end" style="border-color:'+d.colour+'"></div></div>';
-    puList.querySelectorAll('.pu-copy').forEach(btn=>{
-      btn.addEventListener('click',e=>{
-        e.stopPropagation();
-        const text=item.fields[+btn.getAttribute('data-copy')][1];
-        const plain=text.replace(/&amp;/g,'&').replace(/&quot;/g,'"');
-        navigator.clipboard&&navigator.clipboard.writeText(plain);
-        btn.textContent='copied'; btn.classList.add('done');
-        setTimeout(()=>{btn.textContent='copy';btn.classList.remove('done');},1400);
-      });
-    });
-  }
-  function backToList(){ showList(); }
-  window.backToList=backToList;
-  function closePopup(){
-    popup.classList.remove('shown');
-    document.querySelectorAll('.item.open').forEach(e=>e.classList.remove('open'));
-    openSection=null;
-  }
-  window.closePopup=closePopup;
 
-  (function(){
-    const head=popup.querySelector('.pu-head');
+    /* always start at the home position; cascade a little so a second
+       pop-up is visible rather than stacked exactly on the first */
+    const n=content.querySelectorAll('.popup').length;
+    const off=Math.min(n,6)*22;
+
+    const pop=document.createElement('div');
+    pop.className='popup';
+    pop.style.left=(24+off)+'px';
+    pop.style.top =(30+off)+'px';
+    pop.style.zIndex=Math.min(89,++popZ);
+    pop.innerHTML=
+      '<div class="pu-head">'+
+        '<span class="pu-kicker"></span>'+
+        '<span class="pu-x">\u2715</span>'+
+      '</div>'+
+      '<div class="pu-list"></div>';
+    content.appendChild(pop);
+
+    const kicker=pop.querySelector('.pu-kicker');
+    const list=pop.querySelector('.pu-list');
+
+    /* clicking anywhere on this pop-up raises it above the others */
+    pop.addEventListener('mousedown',()=>{ pop.style.zIndex=Math.min(89,++popZ); });
+    /* close removes just this pop-up */
+    pop.querySelector('.pu-x').addEventListener('click',e=>{ e.stopPropagation(); pop.remove(); });
+
+    function showList(){
+      kicker.textContent=d.label+' \u00B7 '+d.items.length;
+      kicker.style.color=d.colour;
+      list.innerHTML='';
+      d.items.forEach((item,i)=>{
+        const e=document.createElement('div');
+        e.className='pu-entry';
+        e.innerHTML='<div class="pu-sub" style="color:'+d.colour+'">'+item.sub+'</div>'+
+          '<div class="pu-desc">'+item.desc+'</div>'+
+          '<div class="pu-end" style="border-color:'+d.colour+'"></div>';
+        e.addEventListener('click',()=>showRecord(i));
+        list.appendChild(e);
+      });
+    }
+    function showRecord(i){
+      const item=d.items[i];
+      kicker.textContent=d.label; kicker.style.color=d.colour;
+      let fields='';
+      (item.fields||[]).forEach((f,fi)=>{
+        if(fi>0) fields+='<div class="pu-fdiv" style="border-color:'+d.colour+'"></div>';
+        fields+='<div class="pu-field"><div class="pu-field-head">'+
+          '<span class="pu-field-label">'+f[0]+'</span>'+
+          '<span class="pu-copy" data-copy="'+fi+'">copy</span></div>'+
+          '<div class="pu-field-val">'+f[1]+'</div></div>';
+      });
+      list.innerHTML='<div class="pu-back">\u2039 back to list</div>'+
+        '<div class="pu-record"><div class="pu-rec-name" style="color:'+d.colour+'">'+item.sub+'</div>'+
+        '<div class="pu-rec-kind">'+d.label.replace(/ &amp;.*/,'').replace(/s$/,'')+'</div>'+fields+
+        '<div class="pu-rec-end" style="border-color:'+d.colour+'"></div></div>';
+      list.querySelector('.pu-back').addEventListener('click',showList);
+      list.querySelectorAll('.pu-copy').forEach(btn=>{
+        btn.addEventListener('click',e=>{
+          e.stopPropagation();
+          const text=item.fields[+btn.getAttribute('data-copy')][1];
+          const plain=text.replace(/&amp;/g,'&').replace(/&quot;/g,'"');
+          navigator.clipboard&&navigator.clipboard.writeText(plain);
+          btn.textContent='copied'; btn.classList.add('done');
+          setTimeout(()=>{btn.textContent='copy';btn.classList.remove('done');},1400);
+        });
+      });
+    }
+
+    /* drag by the header — moves only this pop-up */
+    const head=pop.querySelector('.pu-head');
     let dragging=false, sx=0, sy=0, ox=0, oy=0;
     head.addEventListener('mousedown',e=>{
       if(e.target.classList.contains('pu-x')) return;
       dragging=true;
-      const r=popup.getBoundingClientRect();
-      const pr=popup.offsetParent.getBoundingClientRect();
+      const r=pop.getBoundingClientRect();
+      const pr=pop.offsetParent.getBoundingClientRect();
       ox=r.left-pr.left; oy=r.top-pr.top; sx=e.clientX; sy=e.clientY;
-      popup.style.left=ox+'px'; popup.style.top=oy+'px'; e.preventDefault();
+      pop.style.left=ox+'px'; pop.style.top=oy+'px'; e.preventDefault();
     });
     window.addEventListener('mousemove',e=>{
       if(!dragging) return;
-      popup.style.left=(ox+e.clientX-sx)+'px';
-      popup.style.top=(oy+e.clientY-sy)+'px';
+      pop.style.left=(ox+e.clientX-sx)+'px';
+      pop.style.top=(oy+e.clientY-sy)+'px';
     });
     window.addEventListener('mouseup',()=>{ dragging=false; });
-  })();
+
+    showList();
+  }
 
   /* ===== THE WHEEL ===== */
   /* one label per scene; each carries a stave/scene kicker + its title */
@@ -575,25 +586,18 @@
     el.addEventListener('click',()=>{
       if(writingMode){ openForWriting(i); }
       else if(el.classList.contains('live')){ openForWriting(i); }
-      else { rollToCentre(r.sheet); }
+      else { rollToTop(r.sheet, true); }
     });
     wheel.appendChild(el);
     r.el=el;
   });
 
-  function rollToCentre(target){
+  /* land a page's TOP on the shared reading line (just below the header) */
+  function rollToTop(target, smooth){
     const rect=target.getBoundingClientRect();
     const cBox=content.getBoundingClientRect();
-    const top=scroller.scrollTop+(rect.top-cBox.top)-(cBox.height/2)+rect.height/2;
-    scroller.scrollTo({top,behavior:'smooth'});
-  }
-
-  /* bring a page's TOP just below the header (for reading/writing) */
-  function rollToTop(target){
-    const rect=target.getBoundingClientRect();
-    const cBox=content.getBoundingClientRect();
-    const top=scroller.scrollTop+(rect.top-cBox.top)-16;
-    scroller.scrollTo({top,behavior:'auto'});
+    const top=scroller.scrollTop+(rect.top-cBox.top)-READ_PAD;
+    scroller.scrollTo({top,behavior:smooth?'smooth':'auto'});
   }
 
   function enterWriting(writeEl){
@@ -620,8 +624,8 @@
     document.getElementById('modeNote').textContent='writing · use the wheel to move';
     paintWheel(idx);
     /* layout changes when .writing is applied (stage padding, hidden content);
-       wait two frames for it to settle, then land the page top under the header */
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{ rollToTop(r.sheet); }));
+       wait two frames for it to settle, then land the page top on the reading line */
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{ rollToTop(r.sheet, false); }));
     setTimeout(()=>wsArea.focus(),160);
   }
 
@@ -637,11 +641,12 @@
     writingMode=false;
     sheets.forEach(s=>s.classList.remove('live'));
     document.getElementById('modeNote').textContent='the wheel · centre = where you are';
-    requestAnimationFrame(()=>{ rollToCentre(rows[currentIndex].sheet); requestAnimationFrame(turnFromScroll); });
+    /* two frames for the overview padding to settle, then land on the scene we left */
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{ rollToTop(rows[currentIndex].sheet, false); turnFromScroll(); }));
   }
   window.exitWriting=exitWriting;
 
-  /* belt geometry */
+  /* belt geometry — ring stays fixed at the channel's vertical centre */
   const TIGHT=46, GAP=64, WINDOW=9, BOW=0;
   function placeBelt(cur){
     const cBox=content.getBoundingClientRect();
@@ -690,16 +695,22 @@
     wheel.style.left=(blockLeft-40)+'px';
   }
 
+  /* "where you are" reads from the SAME line the page lands on:
+     whichever scene's TOP has reached the reading line is at centre */
   let targetFrac=0, shownFrac=0, easing=false;
   function measureFrac(){
     const cBox=content.getBoundingClientRect();
-    const centreY=cBox.height/2;
-    const ys=rows.map(r=>{const rect=r.sheet.getBoundingClientRect();return (rect.top-cBox.top)+rect.height/2;});
+    const line=cBox.top+READ_PAD;
+    const tops=rows.map(r=>r.sheet.getBoundingClientRect().top);
     let frac=0;
-    if(centreY<=ys[0])frac=0;
-    else if(centreY>=ys[ys.length-1])frac=ys.length-1;
-    else for(let i=0;i<ys.length-1;i++){
-      if(centreY>=ys[i]&&centreY<=ys[i+1]){const span=ys[i+1]-ys[i];frac=i+(span?(centreY-ys[i])/span:0);break;}
+    if(line<=tops[0]) frac=0;
+    else if(line>=tops[tops.length-1]) frac=tops.length-1;
+    else for(let i=0;i<tops.length-1;i++){
+      if(line>=tops[i] && line<=tops[i+1]){
+        const span=tops[i+1]-tops[i];
+        frac=i+(span?(line-tops[i])/span:0);
+        break;
+      }
     }
     return frac;
   }
