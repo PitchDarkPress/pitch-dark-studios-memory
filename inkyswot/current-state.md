@@ -1,5 +1,5 @@
 File: inkyswot/current-state.md
-Last updated: 7 June 2026
+Last updated: 7 June 2026 (later session)
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -136,6 +136,29 @@ THE WHEEL — BEHAVIOUR (as built)
 - positionWheel() centres the wheel block live in the channel at any
   width; labels wrap to ~half the channel width.
 
+THE PAGE LANDING — ONE SHARED READING LINE (page-top bug FIXED, later 7 June)
+The page-top clipping bug is fixed. The page and the wheel now share
+ONE reading line, a small fixed distance below the header (READ_PAD =
+28px). Three parts to the fix:
+- Clicking a wheel label (or opening any scene) lands that scene's TOP
+  on the reading line, so the page reads DOWNWARD from the top — running
+  head, stave heading, scene line all on screen. (Replaces the old
+  rollToCentre, which centred the page's MIDPOINT and so shoved the top
+  of a full-height page off the screen — that was the clip.)
+- The wheel works out "where you are" from the SAME reading line —
+  whichever scene's top has reached it is the one at centre — so the
+  page and the wheel can no longer disagree. (They used to read off two
+  different rulers: that mismatch was the other half of the bug.)
+- The overview top padding was dropped (40vh → 28px) so a page opens
+  read-from-the-top rather than floating mid-screen.
+The gold ring stays put at the channel's vertical centre — unchanged.
+rollToCentre is gone; rollToTop(target, smooth) is used everywhere.
+SMALL, TO TWEAK IF WANTED: while free-scrolling a tall page, the wheel's
+live label flips to the next scene about halfway down the page (the
+point where the next scene's top is nearest the reading line). Kev has
+seen this and may want the flip biased later in the page later — easy to
+adjust, not yet changed.
+
 TWO STATES — OVERVIEW and WRITING MODE
 - OVERVIEW: the assembled Treatment shows (one scene per page); the
   wheel turns with the scroll; centre = where you are. Click a wheel
@@ -146,26 +169,15 @@ TWO STATES — OVERVIEW and WRITING MODE
   area. The wheel stays lit, locked with that scene at centre. Click any
   wheel label to open THAT scene to write — travel scene-to-scene BY THE
   WHEEL without leaving Writing Mode; each scene's text is remembered.
+- ONLY THE LIVE SCENE SHOWS (fixed later 7 June). In Writing Mode every
+  other scene page is hidden, so the scene you are writing stands alone
+  on its own page — no stack of blank white pages above and below it.
+  (When only the current page's content was switched on, the other
+  full-height sheets were left empty and showed as blank pages either
+  side; hiding the non-live sheets cured it.)
 - "‹ overview" (top-right, Writing Mode only) returns to the Treatment.
 - THE PRINCIPLE: the writing position and the map position are the SAME
   thing.
-
->>> FIRST THING NEXT SESSION — THE PAGE-TOP BUG (7 June) <<<
-Clicking a scene label on the wheel (and opening a scene generally)
-leaves the TOP OF THE PAGE CUT OFF above the fold — the running head /
-stave heading / scene line are clipped. The page should sit with its
-TOP just below the header bar, reading from the top down (Kev has a
-screenshot of the correct look). WHAT WE TRIED, not yet working: a
-rollToTop(target) function landing the sheet's top a small offset below
-the header (tried −28, −16; behavior:'auto'); pointed both the wheel-
-label click and the writing-open at it instead of rollToCentre (which
-centred the page MIDPOINT on screen and clipped the top of a full-height
-page); two requestAnimationFrames before scrolling in writing mode
-because body.writing changes .stage padding 40vh→34px and hides content.
-STILL CUTTING OFF. Get a fresh screenshot; likely needs measuring after
-layout settles, or computing the offset from the real sheet top, and
-ensuring no competing smooth-scroll is running. rollToCentre may now be
-unused — check before deleting.
 
 THE WHEEL MOCKUP (the LIVE DESIGN SOURCE)
 Built on "A Christmas Carol", whole book loaded: 5 staves, 25 scenes,
@@ -179,7 +191,7 @@ STILL OPEN ON THE WHEEL (small)
 - Whether multiple events per scene stay listed on a page or collapse,
   now there is one scene per page.
 
-HOW THE WORLD IS REACHED — THE POP-UP (settled 4 June; built)
+HOW THE WORLD IS REACHED — THE POP-UP (settled 4 June; built; multiple 7 June)
 On the LEFT (page moved right to make room). Two steps from the nav:
 click a counted section → list of names → click a name → the record.
 STABLE (click to open, ✕ to close; no vanish on click-away; stays open
@@ -191,6 +203,19 @@ view: per-field rows, each with a COPY button, section-colour dividers
 and end-line. COPY AND PASTE is how substance reaches the WP — copy is
 TEXT ONLY, coloured in the pop-up, landing PLAIN in the WP. The writer
 stays in charge; nothing lands they did not choose.
+MULTIPLE INDEPENDENT POP-UPS (fixed/added later 7 June). Each nav-section
+click opens its OWN pop-up:
+- It opens at the HOME position every time (no longer remembers where the
+  last one was dragged). A small cascade offset (22px per pop-up already
+  open, capped) keeps a second one visible rather than stacked exactly on
+  the first.
+- More than one can be open at once — e.g. two characters side by side to
+  compare. Each is dragged, navigated (list ↔ record), and closed on its
+  own ✕ independently of the others.
+- Clicking a pop-up raises it to the front (z-index counter, capped below
+  the header). Drag moves only that pop-up.
+(Was a single reused pop-up that remembered its dragged position and
+could not be doubled; refactored into a per-click factory.)
 
 THE WP — A REAL DOCUMENT PAGE (settled 4 June; refined 6 June)
 US Letter (816 × 1056px), generous margins, page shadow, on the dark
@@ -206,7 +231,6 @@ One scene per page (see THE PAGE).
   writing surface is real. Kev understands.
 
 OPEN DECISIONS — STILL TO SETTLE (one at a time)
-0. >>> THE PAGE-TOP BUG (above) — FIRST THING NEXT SESSION. <<<
 1. WHERE THE MOOD WORDS LIVE (Cold · Bleak · Biting) — pulled off the
    page; wanted, but no home yet. Parked.
 2. EVENT ORDER WITHIN A SCENE — events group by chapter, no sequence
@@ -220,6 +244,8 @@ OPEN DECISIONS — STILL TO SETTLE (one at a time)
    Ambient, the lift — in the wheel model.
 6. THE 230px RIGHT SIDEBAR — its purpose.
 7. PLOT MAPPING beside The Treatment — both views of one database.
+8. WHEEL LIVE-LABEL FLIP POINT — whether to bias the centre flip later
+   into a tall page (see THE PAGE LANDING). Small tweak; not urgent.
 
 THE TAG SET (working list — carried, nothing pruned)
 Action · Chapter · Character · Emotion · Event · Location · Note ·
@@ -316,6 +342,10 @@ Kept only as history.
 CODE/ — the code locker (finished and in-progress code, stored
 separately from the .md notes). See CODE/README.md for the index.
 CODE/README.md — locker index, lists each stored file and status.
+CODE/treatment-wheel.html — the WHEEL mockup (one scene per page, two-
+line kicker labels, the whole Carol loaded; page-top fix, writing-mode
+single page, multiple pop-ups). THE LIVE DESIGN SOURCE for the wheel +
+page; supersedes all earlier wheel mockups. (Store + index this.)
 CODE/map-plotter.html — Plot Mapping standalone mockup (30 May 2026).
 SUPERSEDED; kept as history.
 CODE/home-icons.svg — the four home-page launchpad icons, clean SVG
@@ -412,7 +442,7 @@ Import option in New Project modal
 Section help pill (SECTION ?) — template pattern for every screen
 The Treatment / DCW — now THE WHEEL (page shifted right; one scene per
 page; two-line kicker labels; windowed/eased/straight wheel; Overview ↔
-Writing Mode; entity pop-up on the left). Currently a standalone mockup,
+Writing Mode; entity pop-ups on the left). Currently a standalone mockup,
 not yet in index.html.
 All remaining stubbed screens.
 
@@ -504,7 +534,7 @@ Top menu (project name; word count + magnify + title-page controls
 top-right; "‹ overview" appears top-right in Writing Mode; Ada when AI
 ON), left nav (with counts). The WP / Treatment is the main work area (a
 real document page, one scene per page) but SHIFTED RIGHT — the LEFT of
-the dark workspace holds the entity POP-UP note. In the channel to the
+the dark workspace holds the entity POP-UP notes. In the channel to the
 RIGHT of the page is THE WHEEL; a 230px right sidebar sits beyond it
 (purpose TBD). No shutter, no strip, no board, no separate Writing Panel.
 The Press — separate section, own entry point (two doors).
@@ -523,7 +553,8 @@ InkySwot IS the DCW. The Treatment is it switched on — a timeline of
 events (Chapter → Scene → Event), assembled from the database, written
 by filling in the blanks. You navigate AND write by THE WHEEL (page
 right, pop-up left). One scene per full page; two-line kicker labels;
-windowed, eased, straight belt; ring + leader centre mark.
+windowed, eased, straight belt; ring + leader centre mark; one shared
+reading line so page and wheel agree.
 
 CARRIED, TO BE RE-FITTED (from earlier DCW thinking — not yet placed in
 the new model): Tension curve (three modes — Manual / AI-Guided /
@@ -589,7 +620,7 @@ Step 7 — Server-Side Prompt Tracking
 Step 8 — Stripe
 Step 9 — Resend
 Step 10 — Writing surface (the WP page — one scene per page, magnify,
-  page numbers, title page; the entity pop-up on the left; the wheel).
+  page numbers, title page; the entity pop-ups on the left; the wheel).
   NB: the writing surface, The Treatment (Step 11) and the DCW (Step 13)
   are CONVERGING into the WHEEL — likely ONE build. Reconcile the step
   list when the wheel is built into the app for real.
@@ -603,6 +634,10 @@ Step 16 — Admin Panel
 Step 17 — PWA Manifest
 Step 18 — Beta
 Step 19 — Launch
+DEMO BOOKS (Carol, then Willows) — sequenced AFTER Step 1, once the
+sections and their fields are final, so the database is filled ONCE. See
+PARKED / DECIDED below. Slots after the sections are locked; exact step
+number to be set when Step 1 lands.
 
 CURRENT STATUS & NEXT ACTIONS
 v4.7 pre-Step 1 rebuild. Autumn 2026 launch target.
@@ -631,43 +666,81 @@ door locked; nav updated; home launchpad decided; icons stored.
   ("STAVE ONE — SCENE ONE" + title) on every scene — no separate stave
   markers, no blank stave pages. The three .md files (dcw, locked-
   decisions, current-state) rewritten clean to match the wheel as built.
+7 June (later session): PAGE-TOP BUG FIXED — one shared reading line
+  below the header; pages land top-on-line and read downward; the wheel
+  reads "where you are" from the same line; overview top padding dropped
+  to 28px; rollToCentre replaced by rollToTop everywhere. WRITING-MODE
+  BLANK-PAGES FIXED — only the live scene shows; non-live pages hidden.
+  MULTIPLE INDEPENDENT POP-UPS — each nav click opens its own pop-up at
+  the home position (cascading), draggable, raise-to-front, closed
+  individually; can have several open to compare. DEMO BOOKS DECIDED
+  (see PARKED / DECIDED). The three .md files rewritten clean again to
+  capture all of this.
 
 NEXT (do in order, one at a time)
-1. >>> FIX THE PAGE-TOP BUG (clicking a wheel label clips the top of the
-   page; see the wheel section). FIRST THING. <<<
-2. Settle WHERE THE MOOD WORDS LIVE.
-3. Settle EVENT ORDER WITHIN A SCENE (give events a position).
-4. Settle EVENTS ON THE PAGE (multiple events per scene — list or
+1. Settle WHERE THE MOOD WORDS LIVE.
+2. Settle EVENT ORDER WITHIN A SCENE (give events a position).
+3. Settle EVENTS ON THE PAGE (multiple events per scene — list or
    collapse).
-5. Settle the tag-set opens: Prose vs Action; Dialogue's place; Emotion
+4. Settle the tag-set opens: Prose vs Action; Dialogue's place; Emotion
    as tag vs Map.
-6. Decide the 230px RIGHT SIDEBAR's purpose.
-7. Store + index the current WHEEL mockup in the CODE locker (live
-   design source; supersedes all earlier wheel mockups).
-8. Build the home-page launchpad row + nav counts on My Projects
+5. Decide the 230px RIGHT SIDEBAR's purpose.
+6. Store + index the current WHEEL mockup in the CODE locker
+   (CODE/treatment-wheel.html — live design source; supersedes all
+   earlier wheel mockups).
+7. Build the home-page launchpad row + nav counts on My Projects
    (preview first; confirm the four straps).
-9. Begin Step 1 — v4.0 app shell rebuild.
-10. Resolve UX map gaps 4 and 5, and the public-Press data question.
+8. Begin Step 1 — v4.0 app shell rebuild.
+9. Resolve UX map gaps 4 and 5, and the public-Press data question.
+10. (Optional/small) Decide the wheel live-label flip point.
 
-PARKED / FUTURE (confirmed possible, NOT now — see future.md)
-- TWO PRE-FILLED DEMO BOOKS: fully-populated, every-section-complete
-  demo projects of "A Christmas Carol" and "The Wind in the Willows", so
-  a new user can explore a finished world. Both out of copyright (Dickens
-  1843; Grahame 1908). A demo = a normal project, pre-filled, ideally
-  read-only. Build Carol first as the template (its bones are in the
-  mockup), then Willows. DEPENDS ON the app shell and sections being
-  final. Confirmed feasible 4 June; not scheduled. Open question: whether
-  the in-scene prose is written by Kev/adapted or sample-generated.
+PARKED / DECIDED — DEMO BOOKS (decided 7 June; also in future.md)
+TWO DEMO BOOKS — like a music DAW shipping a demo set. A demo is a
+NORMAL project, fully populated, with the scene-writing left blank, so a
+new user opens a world that is three-quarters built and sees the
+"fill in the blanks" principle for themselves.
+- Two books: "A Christmas Carol" (Dickens 1843) and "The Wind in the
+  Willows" (Grahame 1908). Both out of copyright. Carol FIRST as the
+  template (its bones are already in the wheel mockup), Willows second.
+- EVERYTHING FILLED EXCEPT THE WRITING. Every nav section completed —
+  Characters, Locations, Buildings, Objects, Rules & Lore, Plot Threads,
+  Subplots, Themes & Motifs, the full Events list with its connections,
+  Chapters/Scenes — so the NAV panel is completely filled in. Only the
+  scene prose is left blank.
+- FULLY EDITABLE — NOT read-only. (This OVERRIDES the earlier "ideally
+  read-only" note.) Let the new user play with it: the more they poke,
+  add, change, the more comfortable they get with the platform, and the
+  more it starts to feel like theirs.
+- RESET TO PRISTINE — a "reset demo" returns it to its original filled
+  state, so a clean demo is always there to return to. (Reset, not a
+  lock, is how the demo stays pristine.)
+- SAVE YOUR OWN VERSION — if the playing has grabbed them, they can keep
+  what they made. WORKING ASSUMPTION (build-time detail, not a lock):
+  "save" means SAVE AS A COPY — the demo stays a demo for next time, and
+  their version becomes a new project in My Projects. Keeps reset
+  meaningful and stops them clobbering the only copy.
+- SEQUENCING — built AFTER Step 1, once the sections and their fields
+  are final, so the database is filled ONCE (filling before the fields
+  are locked risks filling twice).
+- OPEN (later): whether the (blank) in-scene prose stays empty or carries
+  a light sample, and the exact save-as-copy mechanics.
 
 ================================================================
 SUPERSEDED — KEPT AS HISTORY (do NOT build from any of this)
 ================================================================
+- DEMO BOOKS "ideally read-only" (parked note, pre-7 June) — SUPERSEDED
+  7 June: demos are FULLY EDITABLE so the user can play; pristine state
+  protected by a reset, and a save-as-copy lets them keep their version.
 - 6–7 JUNE wheel detail now superseded by the wheel as built: the
   original ~3-label window; big roomy uniform single-line labels; the
   bloom glow + » chevron; the slight outward bow; separate stave marker
   labels / a blank stave page. (The current wheel: one scene per page,
   two-line kicker labels, nine-each-side window, straight belt, ring +
-  dot + leader, hover lights node only, smoothed hand-off.)
+  dot + leader, hover lights node only, smoothed hand-off, one shared
+  reading line.)
+- rollToCentre (centred a page's MIDPOINT on screen) — SUPERSEDED later
+  7 June by rollToTop landing the page's TOP on the shared reading line.
+  It was the cause of the page-top clipping.
 - 4 JUNE (morning): the first WP/Treatment mockup (assembled list with
   "— click to write this scene —" growing an inline gap). The MODEL
   (database assembled; pop-up; real page) stands; the click-to-write
