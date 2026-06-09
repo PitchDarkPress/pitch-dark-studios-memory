@@ -14,6 +14,7 @@
     --gold:#c9923a; --gold2:#e8b060; --rule:#221709; --rule2:#352815;
     --page:#f7f4ec; --pageink:#221a14; --pagemute:#8a7d68;
     --char:#cba36a; --loc:#5fa898; --evt:#b08a6a; --chap:#9a8fb0;
+    --theme:#a07d9a;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html,body{height:100%;}
@@ -55,6 +56,27 @@
   .scroller{position:absolute;inset:0;overflow:auto;}
   .stage{position:relative;width:1340px;margin:0 auto 0 300px;padding:28px 0 60vh;}
   body.writing .stage{padding:28px 0 80px;}
+
+  /* ===== THE SCENE MENU — left of the WP (NEW; nothing else changed) ===== */
+  #sceneMenu{position:absolute;top:0;bottom:0;left:0;width:300px;pointer-events:none;z-index:35;overflow:hidden;}
+  #sceneMenu .sm-rail{position:absolute;top:0;bottom:0;right:62px;width:1px;background:rgba(201,146,58,.28);}
+  #sceneMenu .sm-lead{position:absolute;right:71px;top:50%;height:1px;width:32px;
+    background:linear-gradient(90deg,rgba(232,176,96,.15),var(--gold2));transform:translateY(-50%);}
+  #sceneMenu .sm-inner{position:absolute;left:0;right:120px;top:50%;transform:translateY(-50%);
+    text-align:right;pointer-events:auto;}
+  .sm-grp{font-family:'Crimson Pro',serif;font-size:18px;color:var(--gold);margin:14px 0 2px;}
+  .sm-grp:first-child{margin-top:0;}
+  .sm-grp.character{color:#cf7f57;}
+  .sm-grp.object{color:#7a9bd0;}
+  .sm-grp.theme{color:#a07d9a;}
+  .sm-grp.tension{color:#c45b48;}
+  .sm-item{font-family:'Crimson Pro',serif;font-size:17px;color:var(--ink2);line-height:1.45;cursor:pointer;}
+  .sm-tension{color:#c45b48;cursor:default;}
+  .sm-item:hover{color:var(--gold2);}
+  #sceneMenu .sm-ring{position:absolute;right:62px;top:50%;width:17px;height:17px;border:2px solid var(--gold2);
+    border-radius:50%;transform:translate(50%,-50%);box-shadow:0 0 8px rgba(232,176,96,.5);}
+  #sceneMenu .sm-ring i{position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;
+    border-radius:50%;background:var(--gold2);box-shadow:0 0 5px rgba(232,176,96,.75);}
 
   /* one scene per full page */
   .sheet{background:var(--page);color:var(--pageink);width:816px;margin:0 0 26px;
@@ -388,6 +410,27 @@
 
     <!-- entity pop-ups are created dynamically (multiple, independent) -->
 
+    <!-- THE SCENE MENU — left of the WP (NEW) -->
+    <div id="sceneMenu">
+      <div class="sm-rail"></div>
+      <div class="sm-lead"></div>
+      <div class="sm-ring"><i></i></div>
+      <div class="sm-inner">
+        <div class="sm-grp character">Characters</div>
+        <div class="sm-item" data-pop="characters" data-rec="0">Ebenezer Scrooge</div>
+        <div class="sm-item" data-pop="characters" data-rec="3">Fred</div>
+        <div class="sm-item" data-pop="characters" data-rec="2">Bob Cratchit</div>
+        <div class="sm-grp object">Objects</div>
+        <div class="sm-item">Something</div>
+        <div class="sm-item">Something</div>
+        <div class="sm-grp theme">Themes</div>
+        <div class="sm-item">Something</div>
+        <div class="sm-item">Something</div>
+        <div class="sm-grp tension">Tension</div>
+        <div class="sm-item sm-tension">55%</div>
+      </div>
+    </div>
+
     <!-- THE WHEEL -->
     <div id="wheel">
       <div class="wrail"></div>
@@ -467,7 +510,7 @@
     it.addEventListener('click',()=>createPopup(it.getAttribute('data-pop')));
   });
 
-  function createPopup(key){
+  function createPopup(key, openRec){
     const d=popData[key]; if(!d) return;
 
     /* always start at the home position; cascade a little so a second
@@ -556,8 +599,15 @@
     });
     window.addEventListener('mouseup',()=>{ dragging=false; });
 
-    showList();
+    if(openRec!=null && d.items[openRec]) showRecord(openRec);
+    else showList();
   }
+
+  /* clicking a name in the left scene menu opens that record's pop-up */
+  document.querySelectorAll('#sceneMenu .sm-item[data-pop]').forEach(it=>{
+    it.style.cursor='pointer';
+    it.addEventListener('click',()=>createPopup(it.getAttribute('data-pop'), +it.getAttribute('data-rec')));
+  });
 
   /* ===== THE WHEEL ===== */
   /* one label per scene; each carries a stave/scene kicker + its title */
