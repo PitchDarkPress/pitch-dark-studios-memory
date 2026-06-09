@@ -1,23 +1,22 @@
 File: inkyswot/locked-decisions.md
-Last updated: 7 June 2026 (later session)
+Last updated: 9 June 2026
 
 NOTE ON THIS FILE
-This file is normally add-only. On 4 June (morning) it was rewritten
-whole because the 1–3 June DCW locks (the shutter, the vertical board,
-the fusion-as-built, the one-screen cell-grid) were SUPERSEDED by the
-"InkySwot IS the DCW / The Treatment" model. Superseded locks are NOT
-deleted — they are moved to SUPERSEDED LOCKS at the foot, dated, kept
-as history.
-On 7 June it was rewritten whole again to bring the WHEEL and PAGE locks
-into line with the wheel AS BUILT across 6–7 June (one scene per page,
-two-line kicker labels, straight belt, window of 9, ring+leader with the
-bloom/chevron removed, hover lights node only, smoothed hand-off).
-In a LATER 7 June session it was rewritten whole once more to add three
-build fixes (the page-top reading line, the writing-mode single page,
-the multiple independent pop-ups) and the DEMO BOOKS decision. Locks
-that those changes replaced are moved to SUPERSEDED LOCKS, dated, kept
-as history. The live part of this file holds only decisions that are
-still true.
+This file is normally add-only. It has been rewritten WHOLE several times
+when a model shift superseded a block of locks (4 June: the shutter /
+vertical board / fusion / cell-grid superseded by "InkySwot IS the DCW /
+The Treatment"; 7 June: the wheel and page locks brought into line with
+the wheel as built; later 7 June: the page-top reading line, writing-mode
+single page, multiple pop-ups, demo books). Superseded locks are NOT
+deleted — they move to SUPERSEDED LOCKS at the foot, dated, kept as
+history.
+Rewritten whole again 9 June 2026 to add the 9 June locks: the BOARD
+reborn as Plot Mapping (six tracks), the FUNNEL (three views of one
+body of data, living link), the CUT (Events+Locations feed the synopsis;
+the other four are reached-into), the WP SCENE MENU, the SIX TRACK
+COLOURS, the TENSION METER, and the ROAD MAP. Locks those changes
+revised are moved to SUPERSEDED LOCKS, dated. The live part of this file
+holds only decisions that are still true.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -35,6 +34,15 @@ platform. Every section already built (Characters, Locations, Events,
 Plot Threads, etc.) is part of the instrument. The database is the
 bones of the story. Locked: 4 June 2026.
 
+THREE VIEWS OF ONE BODY OF DATA — THE FUNNEL — LOCKED (9 June 2026)
+There are THREE views of the same single body of data, and the writer
+moves freely between them: THE BOARD (Plot Mapping reborn — the wide
+view), THE WP + WHEEL (the close view, one scene), and THE ROAD MAP
+(the journey view, right sidebar). It is a FUNNEL — wide and loose at
+the top (the board), narrowing to the single scene at the spine (the
+WP). LIVING LINK, BOTH WAYS: change data in one view and it changes in
+the others. NOTHING ENTERED TWICE. Locked: 9 June 2026.
+
 THE TREATMENT IS THE DCW SWITCHED ON
 The Treatment is where everything in the database ASSEMBLES into a
 readable, writable whole. A plotline is a VIEW of data that already
@@ -45,6 +53,48 @@ The Treatment is a timeline of events. Tiers: CHAPTER → SCENE → EVENT.
 Only EVENTS sit on the line and become prose — because only events
 happen. Characters, Locations, Objects, etc. do not happen; they are
 reached into by the events that use them. Locked: 4 June 2026.
+
+THE BOARD IS PLOT MAPPING REBORN — LOCKED (9 June 2026)
+The story board (the look that "made Kev laugh") IS Plot Mapping,
+reborn in the current visual language (dark, gold, Crimson Pro /
+JetBrains Mono, the quiet-note grammar). It is NOT a separate tool beside
+Plot Mapping — it IS Plot Mapping. The old corkboard (code-map-plotter
+.html) is superseded by it. Shape: scenes down a sticky left SPINE; SIX
+TRACKS across the top, left to right:
+  EVENTS · LOCATIONS · CHARACTERS · OBJECTS · THEMES · TENSION
+Each cell holds quiet notes in the track colour; Tension is a drawn
+CURVE down its column. The reborn board is NOT the old vertical board
+returning — it carries the timeline-of-events truth (Events feed prose)
+in board form. Locked: 9 June 2026.
+NB: the current board artifact (code-board-look.html) is a STILL PICTURE
+only — a "look", not wired — and still carries the OLD colours. Applying
+the six colours and building it for real are jobs to come.
+
+THE CUT — WHAT TRANSFERS TO THE WP — LOCKED (9 June 2026)
+- EVENTS + LOCATIONS form the SYNOPSIS content of every chapter and
+  scene — the "what happens and where" that becomes the prose-bound
+  substance on the WP page.
+- CHARACTERS · OBJECTS · THEMES · TENSION are related to the scene but
+  do NOT pour into prose; they are REACHED INTO, and their home is the
+  WP SCENE MENU on the left of the page (see below).
+This follows the spine lock: only events HAPPEN and become prose;
+everything else is reached into. Locked: 9 June 2026.
+
+THE SIX TRACK COLOURS — LOCKED (9 June 2026)
+One decision, used in BOTH the board AND the WP scene menu. All six pull
+clearly apart so a dyslexic reader tells them at a glance:
+  EVENTS      gold        #c9923a
+  LOCATIONS   teal        #5fa898
+  CHARACTERS  terracotta  #cf7f57
+  OBJECTS     steel blue  #7a9bd0
+  THEMES      violet      #a07d9a
+  TENSION     red         #c45b48
+This REVISES the older section colours: Characters moves OFF gold to
+terracotta; Events takes the gold; Objects becomes a cool steel blue (the
+colour the warm palette lacked); Tension is a deepened, warmed red.
+Applied to the WP scene menu (live in code-treatment-wheel.html); STILL
+TO APPLY to the board. Locked: 9 June 2026. (Supersedes Character #cba36a
+and Event #b08a6a — see SUPERSEDED LOCKS.)
 
 SCENES ARE LABELLED, TITLE OPTIONAL
 Scenes are labelled "Scene 1", "Scene 2"… The writer may add an
@@ -158,22 +208,70 @@ text is remembered. A "‹ overview" control (top-right, Writing Mode
 only) returns to the assembled Treatment. The writing position and the
 map position are the SAME thing. Locked: 4 June 2026.
 
-PAGE RIGHT, POP-UP LEFT
-The WP / Treatment page sits shifted to the RIGHT of the dark
-workspace; the wheel is in the channel to the right of the page. The
-LEFT of the workspace is reserved for the entity POP-UP notes. Locked:
-4 June 2026.
+PAGE CENTRE, SCENE MENU LEFT, WHEEL RIGHT — LOCKED (revised 9 June 2026)
+The WP / Treatment page sits in the workspace with a dark channel either
+side. The WHEEL is in the channel to the RIGHT of the page (the book /
+where you are). The SCENE MENU is in the channel to the LEFT of the page
+(this scene's reached-into world — see below). The two channels are
+BALANCED — equal breathing room from the page on both sides — and share
+the same rail/ring/leader furniture, so the workspace reads as one
+instrument. (Revises the 4 June "PAGE RIGHT, POP-UP LEFT": the page is
+framed by two mirrored channels; the entity pop-ups still appear on the
+left, over the workspace.) Locked: 9 June 2026.
+
+THE WP SCENE MENU — LOCKED (9 June 2026)
+The home of the four reached-into tracks, in the channel LEFT of the WP,
+mirroring the wheel.
+- IT IS "WHAT THIS SCENE REACHES INTO" — the Characters, Objects, Themes
+  and Tension belonging to the scene currently in front of you. Tied to
+  the PAGE, not the book; it changes scene to scene. (The wheel is the
+  BOOK; the scene menu is THIS SCENE — different jobs, opposite sides;
+  they are NOT merged.)
+- LOOK: a RIGHT-ALIGNED list; coloured group headers (Characters
+  terracotta, Objects steel blue, Themes violet, Tension red) with names
+  in plain ink beneath. MIRRORS the wheel furniture: a thin vertical
+  gold RAIL; a gold RING (17px, 2px, centred dot) on the rail; a short
+  gold LEADER off the ring pointing INWARD toward the list (mirror of the
+  wheel's outward leader). Equal gap from the page as the wheel.
+- CLICKABLE: clicking a name opens that entity's POP-UP RECORD (the same
+  draggable pop-up the nav opens, with copy buttons).
+- TENSION IS A METER, not a record (see next lock).
+Locked: 9 June 2026.
+
+TENSION IS A SEGMENTED BAR METER ON THE WP — LOCKED (9 June 2026)
+In the WP scene menu, Tension is a READING for this scene, shown as a
+SEGMENTED BAR METER: a row of segments GREEN → AMBER → RED lighting up
+to the scene's level, with the PERCENTAGE beneath (e.g. 55%). A straight
+percentage that can run PAST 100 into the red (a scene running hot).
+"For the theatre of it" — the DAW heritage made real. A light-up SWEEP
+between scenes is wanted (car-dial wake: drop to zero, run up, settle) —
+to be built static-first. Locked: 9 June 2026. (Supersedes the VU needle
+gauge, the flat line-with-pointer, and the plain "55%" text — all tried
+9 June; see SUPERSEDED LOCKS. The board still shows Tension as a CURVE
+down its column; the meter is the WP form.)
+
+THE ROAD MAP — THE RIGHT SIDEBAR'S PURPOSE — LOCKED in principle (9 June)
+The 230px right sidebar becomes a USER ROAD MAP: the stages of the
+journey down the sidebar with a LIT DOT/RING showing WHERE YOU ARE,
+mirroring the wheel/scene-menu rail furniture (so all three verticals
+share the look). REACTIVE THEATRE: actions elsewhere make the map
+respond (e.g. add/modify a Character → a small section-colour box opens
+on the map off the relevant node). CLICKABLE: stages can be clicked to
+jump there (also navigation). Locked in principle: 9 June 2026.
+STILL TO SETTLE (next build, not yet locked): WHAT STAGES live on it;
+the clickable behaviour and how it relates to the left NAV without
+doubling up; the exact reactive-box behaviour. Build static-first.
 
 THE ENTITY POP-UP
 The writer reaches the database without leaving the page, via a stable
-pop-up (on the LEFT). Two steps from the nav: click a section → list of
-names → click a name → the record. STABLE: click to open, click (✕) to
-close; does not vanish on click-away; does not close when text is
-selected inside it. DRAGGABLE by its header; stays where put. Locked:
-4 June 2026.
+pop-up. Two steps from the nav (or one click from the scene menu): a
+section → list of names → a name → the record. STABLE: click to open,
+click (✕) to close; does not vanish on click-away; does not close when
+text is selected inside it. DRAGGABLE by its header; stays where put.
+Locked: 4 June 2026.
 
 POP-UPS ARE MULTIPLE AND INDEPENDENT — LOCKED (7 June 2026, later)
-Each nav-section click opens its OWN pop-up:
+Each nav-section click (or scene-menu name click) opens its OWN pop-up:
 - It opens at the HOME position every time — it does NOT remember where
   the last one was dragged. A small cascade offset keeps a second one
   visible rather than stacked exactly on the first.
@@ -194,8 +292,8 @@ Throughout the pop-up (list, entries, kicker, back link): a SUB-TITLE
 in the SECTION's colour, a DESCRIPTION in neutral ink beneath, closed
 by a SOLID end-line in the section colour. Colour = wayfinding. Record
 view: per-field rows each with a COPY button, section-colour dividers,
-section-colour end-line. Characters gold; Locations teal; each section
-its own colour. Locked: 4 June 2026.
+section-colour end-line. Section colours per THE SIX TRACK COLOURS.
+Locked: 4 June 2026.
 
 COPY AND PASTE IS HOW INFO REACHES THE WP
 The mechanism for getting database substance into the writing is copy
@@ -208,8 +306,8 @@ choose. Locked: 4 June 2026.
 THE WP IS A REAL DOCUMENT PAGE
 The main work area / The Treatment is a proper document page (US Letter,
 816 × 1056px, generous margins), on the dark workspace with a page
-shadow — not a thin panel. (Shifted right; see PAGE RIGHT, POP-UP LEFT;
-one scene per page; see ONE SCENE PER FULL PAGE.) Running head top-right;
+shadow — not a thin panel. (Framed by the scene-menu channel left and
+the wheel channel right; one scene per page.) Running head top-right;
 stave heading mono caps ruled under; scene heading mono + optional
 italic title; writing area Crimson Pro 18px / line-height 1.5.
 Locked: 4 June 2026 (page proportions); refined 6 June 2026.
@@ -224,6 +322,12 @@ PAGE (centred title + "by [author]") is UNNUMBERED; numbering starts at
 1 on the page after it (manuscript convention). A toggle turns the title
 page on/off. Title + author pull from Overview. Locked: 4 June 2026.
 
+MANUSCRIPT VIEW — TOGGLE — LOCKED (8 June 2026)
+A toggle in the WP strips the chrome (running heads, stave headings) to
+read the book as a continuous manuscript. A WRITER COMFORT, not a
+security feature. Display-level only (hide chrome / butt sheets up); TRUE
+flowing pagination remains the bigger deferred build. Locked: 8 June 2026.
+
 SCROLLBARS
 Slim, dark, gold-on-hover, everywhere. No Windows defaults. Locked:
 4 June 2026.
@@ -234,11 +338,28 @@ small STATIC mockup first, agree the still picture, THEN add movement.
 Designing moving behaviour by description alone wastes time. A sketch
 from Kev beats ten descriptions — ask for one. Locked: 4 June 2026.
 
+WORK FROM THE IMAGE / THE CODE — LOCKED (9 June 2026)
+A screenshot from Kev IS the template — match it, do not reinterpret it.
+When changing a built file, work from the pasted code, never a
+reconstruction. SMALL CHANGES MEAN SMALL CHANGES — change only the one
+thing asked, touch nothing else. (Learned hard 9 June: rebuilding from
+guesses caused a long, frustrating drift; the fix was to return to Kev's
+own file and image.) Locked: 9 June 2026.
+
 CLEAN-REBUILD RULE (display freeze) — LOCKED (6 June 2026)
 If edits stop showing on screen, do NOT keep editing — do a CLEAN
 REBUILD in a fresh artifact. The artifact display freezes on an old
-version; a clean rebuild fixes it instantly. (Learned the hard way more
-than once.) Locked: 6 June 2026.
+version; a clean rebuild fixes it instantly. Locked: 6 June 2026.
+
+MEMORY DATABASE — INKYSWOT CODE LIVES IN THE INKYSWOT DIVISION — LOCKED
+(9 June 2026)
+Everything InkySwot — notes AND code — lives together in the InkySwot
+division of the Pitch Dark Studios Memory system. The old separate CODE/
+locker is retired. Code files carry a "code-" prefix to cluster them
+(code-readme.md, code-treatment-wheel.html.md, code-board-look.html.md,
+code-map-plotter.html.md, etc.). New files are created in the division
+and old copies deleted — no app surgery. Locked: 9 June 2026.
+(OPEN: whether the division can hold .png/.jpg images — to be tested.)
 
 PRICING
 Paid only. No free tier. No exceptions.
@@ -309,8 +430,9 @@ DCW TENSION CURVE — THREE MODES — LOCKED
 Manual — writer drags the curve. AI-guided — writer sets target
 tension, Ada advises how to achieve it. Analysis — Ada reads the text
 and plots the curve automatically. Locked: 26 May 2026.
-NB (4 June): carried but not yet PLACED in the timeline-of-events
-Treatment. How the curve lives in the new model is open.
+NB (9 June): Tension now HAS its home — a CURVE down its column on the
+board, and a SEGMENTED BAR METER (per scene) in the WP scene menu. The
+three modes still apply to how the curve/level is set.
 
 DCW EMOTIONAL MAPS — LOCKED
 Emotional Maps are curves tracking the rise and fall of a specific
@@ -318,7 +440,7 @@ emotion belonging to a specific character across chapters. The word
 Map is deliberate — names the line now, future-proofs a full
 cartographic emotional view. Multiple Maps per character. Colour coded.
 Toggleable. Locked: 28 May 2026.
-NB (4 June): carried but not yet PLACED in the new model. Also: whether
+NB: carried but not yet PLACED in the board/wheel model. Also: whether
 the "Emotion" tag is a per-beat tag or the seed of a Map is open.
 
 HOME PAGE — MY PROJECTS — LOCKED
@@ -327,12 +449,12 @@ and returns to. The hub, not a fixed path. After login the writer
 navigates freely; no forced route. The only unavoidable sequence is the
 one-time NEW project setup (New Project → Manuscript Format →
 Overview), because the project must exist before it can be navigated.
-LAUNCHPAD: four items live BOTH in the nav AND on the home page —
-Plot Mapping / The Press / Create First Project / Open Project. Each
-home-page item carries an icon, a title, a two-line strap. Icons: clean
-SVG line art, stroke="currentColor" (recolour with Tone; no PNGs),
-stored at CODE/home-icons.svg. (Strap wording not finally signed off —
-confirm before building.) Locked: 31 May 2026.
+LAUNCHPAD: home-page items carry an icon, a title, a two-line strap.
+Icons: clean SVG line art, stroke="currentColor" (recolour with Tone;
+no PNGs), stored at inkyswot/home-icons.svg.md. The entry-action icons
+are now Load=drawer / Start=typewriter / Demos=signpost (8 June; see
+LAUNCHPAD ICONS in current-state.md). (Strap wording not finally signed
+off — confirm before building.) Locked: 31 May 2026; icons revised 8 June.
 
 USER JOURNEY — TWO SHAPES — LOCKED
 Before login: a fixed path (no nav yet) — Landing Page → Sign Up /
@@ -376,30 +498,24 @@ Maintenance commitment: the requirements database is monitored and
 updated whenever any platform changes its specs. Ongoing operational
 commitment. Non-negotiable. Locked: 29 May 2026.
 
-PLOT MAPPING — LOCKED (the corkboard itself)
-Named: Plot Mapping. The story corkboard — a thinking space for
-sketching a story before committing to it. ONE Plot Mapper per project
-(each project its own board; no second mapper). On 31 May its NAV LINK
-moved up into Navigate so it is reachable front-of-house; the tool
-itself stays per-project. Saved like everything else for now; moves to
-Supabase at Step 4. Standalone mockup complete 30 May (CODE/map-plotter
-.html). Locked: 30 May 2026. Nav-link move locked: 31 May 2026.
-NB (4 June): under "InkySwot IS the DCW", Plot Mapping's relationship
-to The Treatment is being reconsidered — both are views of the same
-database. The corkboard as a thinking space is retained; how it sits
-beside The Treatment is open. The note-card mechanics that were locked
-into the column-board fusion (tab, knot, full-stop, card face) are
-SUPERSEDED — see SUPERSEDED LOCKS. The QUIET-NOTE grammar survives (now
-the pop-up's grammar). Dark Thoughts survives (private, never exported).
+PLOT MAPPING — LOCKED (revised 9 June 2026)
+Named: Plot Mapping. The story thinking space. ONE Plot Mapper per
+project. Its NAV LINK lives front-of-house (Synopsis / Plot Mapping in
+the restructured nav). NOW REALISED AS THE REBORN BOARD (9 June — see
+THE BOARD IS PLOT MAPPING REBORN): six tracks, scenes down the spine,
+the wide view of the funnel. The old corkboard mockup (code-map-plotter
+.html) is SUPERSEDED as a build target; kept as history. The QUIET-NOTE
+grammar survives (the board's and the pop-up's). Dark Thoughts survives
+(private, never exported). Locked: 30 May 2026; reborn-as-board locked
+9 June 2026.
 
 PLOT MAPPING TIMELINE — BELOW CHAPTER 1 — LOCKED ("the lift")
 One Plot Map per project. The backstory is not a separate map; it is
 the basement of the same one. Like a lift: above the line the chapters
-climb; below it you descend into the Prologue, then the Backstories
-(Ch.3 / Ch.2 / Ch.1 / Prologue / Backstory 1 / 2 / 3). Same board, same
-notes, same threads — the timeline has a downstairs. Locked: 30 May 2026.
-NB (4 June): carried; re-fit to the timeline-of-events model when the
-event-ordering question is settled.
+climb; below it you descend into the Prologue, then the Backstories.
+Same board, same notes, same threads — the timeline has a downstairs.
+Locked: 30 May 2026. NB: carried; re-fit to the board / timeline-of-
+events model when event-ordering is settled.
 
 SECTION HELP PILL — TEMPLATE PATTERN — LOCKED
 Every screen carries a help pill, top-right, gold border, reading
@@ -429,33 +545,26 @@ the writer's answer, filtered through everything they have already
 built. Ada spec must be complete before any further screens are built.
 Ada build is Step 12. Locked: confirmed.
 NB (4 June): AI is never required for the Treatment to work — assembling
-the database into the page, the wheel, and copy-paste are plain
-mechanics. Ada improves the experience; the writer's book stands
-without her.
+the database into the page, the wheel, copy-paste, the board, and the
+scene menu are plain mechanics. Ada improves the experience; the
+writer's book stands without her.
 
 DEMO BOOKS — DECIDED (7 June 2026, later session)
 Two demo books ship with the platform, like a music DAW shipping a demo
 set, so a new user can explore a finished world.
 - A demo is a NORMAL project, fully populated, with the scene-writing
-  left blank. Every nav section completed (Characters, Locations,
-  Buildings, Objects, Rules & Lore, Plot Threads, Subplots, Themes &
-  Motifs, the full Events list with its connections, Chapters/Scenes) —
-  the nav panel completely filled in. EVERYTHING FILLED EXCEPT THE
-  WRITING.
-- FULLY EDITABLE — NOT read-only. (Overrides the earlier "ideally
-  read-only" note — see SUPERSEDED LOCKS.) The user is meant to PLAY:
-  the more they poke, add and change, the more comfortable they get and
-  the more it feels like theirs.
+  left blank. Every nav section completed — the nav panel completely
+  filled in. EVERYTHING FILLED EXCEPT THE WRITING.
+- FULLY EDITABLE — NOT read-only. The user is meant to PLAY: the more
+  they poke, add and change, the more it feels like theirs.
 - RESET TO PRISTINE — a "reset demo" returns it to its filled original
-  state; a clean demo is always there. (Reset, not a lock, keeps it
-  pristine.)
-- SAVE YOUR OWN VERSION — they can keep what they made. WORKING
-  ASSUMPTION (build-time detail, not itself locked): save = SAVE AS A
-  COPY — the demo stays a demo, their version becomes a new project in
-  My Projects.
+  state; a clean demo is always there.
+- SAVE YOUR OWN VERSION — save = SAVE AS A COPY (working assumption):
+  the demo stays a demo, their version becomes a new project in My
+  Projects.
 - Two books: "A Christmas Carol" (Dickens 1843) and "The Wind in the
-  Willows" (Grahame 1908), both out of copyright. Carol FIRST as the
-  template (its bones are in the wheel mockup), Willows second.
+  Willows" (Grahame 1908), both out of copyright. Carol FIRST (its bones
+  are in the wheel mockup), Willows second.
 - SEQUENCING: built AFTER Step 1, once the sections and their fields are
   final, so the database is filled ONCE.
 OPEN (later, not blocking): whether the blank in-scene prose stays empty
@@ -479,6 +588,13 @@ Locked: 2 June 2026.
 ================================================================
 OPEN — NOT YET DECIDED
 ================================================================
+THE DATABASE REORGANISATION for the living link — the next build's
+foundation question (Kev's first question for joining the three stages):
+how do the board, the WP/wheel and the road map read/write the SAME
+records so nothing is entered twice.
+ROAD MAP DETAIL — what stages live on it; the clickable behaviour and
+how it relates to the left NAV without doubling up; the reactive-box
+behaviour.
 WHERE THE MOOD WORDS LIVE: the chapter/scene mood words (e.g. Cold ·
 Bleak · Biting) were pulled off the page; Kev wants them but not yet
 sure where they belong. Parked.
@@ -488,120 +604,103 @@ already store characters[] and location; they lack a position.)
 EVENTS ON THE PAGE: with one-scene-per-page, confirm whether multiple
 events per scene stay listed on the page or collapse.
 TAG SET: Prose vs Action (working split: Action = what they do; Prose =
-description / narration). Dialogue's place (not on the 4 June list but
-needed). Emotion as a per-beat tag vs the seed of an Emotional Map.
-TENSION CURVE / EMOTIONAL MAPS / AMBIENT (Atmosphere / Weather / Time):
-carried from earlier DCW thinking; how they live in the timeline-of-
-events Treatment is open.
-THE 230px RIGHT SIDEBAR: its purpose (currently blank).
-PLOT MAPPING beside The Treatment: how the corkboard and the Treatment
-relate now both are views of one database.
-HOME-PAGE LAUNCHPAD: final strap wording for the four items.
+description / narration). Dialogue's place. Emotion as a per-beat tag vs
+the seed of an Emotional Map.
+EMOTIONAL MAPS / AMBIENT (Atmosphere / Weather / Time): carried; how
+they live in the board/wheel model is open.
+HOME-PAGE LAUNCHPAD: final strap wording.
 THE PRESS (public door): where a non-subscriber's book data comes from
 with no platform project — enter cold, or upload a finished manuscript.
-WHEEL LIVE-LABEL FLIP POINT: the wheel flips to the next scene ~halfway
-down a tall page; whether to bias the flip later into the page. Small
-tweak, not urgent.
-
-(THE PAGE-TOP BUG is no longer here — it is FIXED; see THE PAGE LANDS
-ON ONE SHARED READING LINE, above.)
+WHEEL LIVE-LABEL FLIP POINT: small tweak, not urgent.
+MEMORY DIVISION IMAGES: whether the InkySwot division can hold .png/.jpg.
 
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 (Kept as the record of how we got here.)
 ================================================================
-DEMO BOOKS "ideally read-only" (parked note, pre-7 June, SUPERSEDED
-7 June later) — demos are now FULLY EDITABLE so the user can play;
-pristine state is protected by a RESET, and a SAVE-AS-COPY lets them
-keep their version. See DEMO BOOKS — DECIDED, above.
+SECTION COLOURS Character #cba36a / Event #b08a6a (locked 4 June,
+REVISED 9 June) — replaced by THE SIX TRACK COLOURS: Characters
+terracotta #cf7f57, Events gold #c9923a, Objects steel blue #7a9bd0,
+Tension red #c45b48 (Locations teal #5fa898 and Themes violet #a07d9a
+carried). Characters is no longer gold; Events takes the gold.
+
+TENSION ON THE WP — VU NEEDLE GAUGE / FLAT LINE-WITH-POINTER / PLAIN
+"55%" TEXT (all tried 9 June, SUPERSEDED same day) — the needle dial and
+the flat slider both read oddly in the narrow menu; the plain percentage
+was clean but flat. Replaced by the SEGMENTED BAR METER (green→amber→red
+lighting to level, % beneath), with a sweep to follow.
+
+MERGE THE SCENE MENU INTO THE WHEEL (considered 9 June, REJECTED) — the
+wheel is the BOOK / where you are; the scene menu is THIS SCENE's
+reached-into world. Different jobs; kept on opposite sides of the page.
+
+PAGE RIGHT, POP-UP LEFT (locked 4 June, REVISED 9 June) — the page now
+sits framed by TWO balanced channels (scene menu left, wheel right),
+mirrored furniture; the pop-ups still appear on the left.
+
+DEMO BOOKS "ideally read-only" (pre-7 June, SUPERSEDED 7 June later) —
+demos are now FULLY EDITABLE; pristine state protected by a RESET, and a
+SAVE-AS-COPY keeps the user's version.
 
 rollToCentre — CENTRED A PAGE'S MIDPOINT (used 4–7 June, SUPERSEDED
-7 June later) — scrolling a clicked scene so its midpoint sat at screen
-centre. On a full-height page (taller than the window) this shoved the
-page top off the top of the screen — the page-top clipping bug. Replaced
-by rollToTop landing the page's TOP on the shared reading line, with the
-wheel measuring from the same line.
+7 June later) — clipped the top of a full-height page. Replaced by
+rollToTop landing the page's TOP on the shared reading line.
 
-SINGLE REUSED POP-UP (4 June, SUPERSEDED 7 June later) — one pop-up
-element, reused, that remembered where it was last dragged and could not
-be doubled. Replaced by multiple independent pop-ups (open at home,
-cascade, drag, raise-to-front, close individually).
+SINGLE REUSED POP-UP (4 June, SUPERSEDED 7 June later) — one pop-up that
+remembered its dragged position and could not be doubled. Replaced by
+multiple independent pop-ups.
 
-THE 4 JUNE WHEEL DETAIL (SUPERSEDED 6–7 June by the wheel as built) —
-the 4 June wheel was locked as: split bunches (centre alone, everything
-before bunched above a fixed gap, everything after below, gaps never
-closing); a WINDOW of ~3 labels each side; big roomy uniform single-line
-labels (Crimson Pro ~21px); a leader on the centre. These are
-superseded by: one scene per page; two-line kicker labels; a window of
-NINE; straight belt; the smoothed hand-off; the ring+dot+leader centre
-with the bloom and chevron removed; hover lights node only. The
-PRINCIPLE (windowed, eased, page-scroll driven, centre = where you are,
-leader on the centre) survives; the numbers and the label form changed.
-SEPARATE STAVE MARKER LABELS / BLANK STAVE PAGE (tried 7 June,
-SUPERSEDED same day) — putting the stave on the wheel as its own rail
-point forced a blank stave page and did not read right. Replaced by the
-two-line kicker on every scene label.
-THE WHEEL BLOOM + CHEVRON (4 June, REMOVED 6 June) — the soft radial
-glow behind the centre and the » chevron pointing in. Removed: the ring
-+ dot + leader is the whole centre mark now.
-THE WHEEL BOW (tried 6 June, REMOVED 6 June) — a slight outward curve of
-the belt. Liked as a subtle cue but ran the two-line labels together;
-belt is straight.
+THE 4 JUNE WHEEL DETAIL (SUPERSEDED 6–7 June) — split bunches; a window
+of ~3; big roomy uniform single-line labels. Replaced by one scene per
+page; two-line kicker labels; a window of NINE; straight belt; smoothed
+hand-off; ring+dot+leader with bloom/chevron removed; hover lights node
+only. The PRINCIPLE survives; the numbers and label form changed.
+SEPARATE STAVE MARKER LABELS / BLANK STAVE PAGE (tried 7 June, SUPERSEDED
+same day) — forced a blank stave page; replaced by the two-line kicker on
+every scene label.
+THE WHEEL BLOOM + CHEVRON (4 June, REMOVED 6 June) — the radial glow and
+the » chevron; the ring + dot + leader is the whole centre mark now.
+THE WHEEL BOW (tried 6 June, REMOVED 6 June) — a slight outward curve;
+ran the two-line labels together; belt is straight.
 
 THE SHUTTER (locked 2 June, SUPERSEDED 4 June) — DCW and WP as one
-manuscript divided by a curtain that covers/reveals without resizing;
-WP always on top; DCW left, WP right; Full Screen = shutter to the page
-side; grab-handle. Gone: there is one document (the WP / Treatment), no
-curtain.
-THE DCW AS A VERTICAL BOARD (locked 2 June, SUPERSEDED 4 June) —
-scenes/chapters down a left spine, tracks as columns across the top,
-stave dividers, chevron headers. Gone: the DCW is not a board of
-columns; it is the timeline-of-events Treatment.
-DCW × PLOT MAPPER FUSION AS BUILT (locked 1–2 June, SUPERSEDED 4 June)
-— Float/Pin states of one column-board; three track types (Structural
-note-cards / Curve / Ambient) as columns; the cascade (book → chapters
-→ scenes → words); the entity panel on the right; the card as the
-bridge to writing. The PRINCIPLE that planning and writing are one
-instrument SURVIVES — but as "InkySwot IS the DCW / The Treatment", now
-realised as the WHEEL, not as a column board.
+manuscript divided by a curtain. Gone: there is one document, no curtain.
+THE DCW AS A VERTICAL BOARD (locked 2 June, SUPERSEDED 4 June; PARTLY
+RETURNED 9 June) — scenes/chapters down a left spine, tracks as columns.
+The COLUMN-BOARD-AS-the-DCW was gone; BUT the board-as-PLOT-MAPPING
+returns 9 June as the wide view of the funnel (six tracks, Events feed
+prose) — NOT the old DCW board, a different job.
+DCW × PLOT MAPPER FUSION AS BUILT (locked 1–2 June, SUPERSEDED 4 June) —
+Float/Pin states of one column-board; three track types as columns; the
+cascade; the card as the bridge to writing. The PRINCIPLE that planning
+and writing are one instrument SURVIVES — realised as the funnel (board /
+WP+wheel / road map), not as a column board.
 DCW TERMINOLOGY — TRACKS / THREADS (locked 29 May, SUPERSEDED 4 June) —
-"lanes are called Tracks; Threads are connections feeding Tracks." The
-column/track model is gone. Connections still exist (Events/Chapters
-store characters[], location, plotthreads[], subplots[]) but are not
-displayed as Tracks.
-THE NOTE CARD FACE (locked 30 May within Plot Mapping, SUPERSEDED
-4 June) — type tab with full-stop, knot, flip-from-tab, red full-stop =
-Dark Thoughts. Replaced by the QUIET NOTE grammar (no box/tab/knot/
-full-stop), which is now the pop-up's grammar. Dark Thoughts the
-feature survives; the tab mechanics do not.
+the column/track model gone. Connections still exist in the data but are
+not displayed as Tracks. (NB: the reborn board DOES show tracks across
+the top — but as the six entity categories, a layout, not the old
+track/thread connection model.)
+THE NOTE CARD FACE (locked 30 May, SUPERSEDED 4 June) — type tab/knot/
+full-stop/flip. Replaced by the QUIET NOTE grammar (the board's and the
+pop-up's). Dark Thoughts survives; the tab mechanics do not.
 WRITE SCREEN / FULL SCREEN / INDEX CARD (locked 28 May & 2 June,
-SUPERSEDED/ABSORBED 4 June) — "Write" as a separate screen; "Full
-Screen = shutter to the page side"; the floating Index Card system
-tethered to highlighted entities. Absorbed: the WP / Treatment IS the
-writing surface (now via the wheel's Writing Mode); the entity pop-up +
-copy-paste replaces the Index Card mechanism. (Distraction-free writing
-may return, redefined as WP + chrome hidden — not locked.)
-INDENTATION RULE (locked 4 June, SUPERSEDED 6 June) — "timeline events
-at the margin; everything else indented under its event." Belonged to
-the multi-event long-scrolling page; with one scene per page it no
-longer applies. The page now shows a scene's event(s) with a
-"click to write" line; how multiple events sit on a page is OPEN.
-THE WRITING CARD ("Scene." / Dialogue + Descriptive) (open since 2 June,
-SUPERSEDED 4 June) — the keystone card you write inside. Gone with the
-card model; writing now happens in the WP page at the event, opened via
-the wheel.
-"SNAP TO DEFAULT" / DRAG-TO-REORDER TRACKS / BRIGHT-RED FREEFORM /
-IDEAS COLUMNS / MAKE-YOUR-OWN TRACKS (3 June column-board thinking,
-SUPERSEDED 4 June) — all belonged to the grid-of-columns; not part of
-the 4 June model unless re-introduced.
+SUPERSEDED/ABSORBED 4 June) — the WP / Treatment IS the writing surface
+(via the wheel's Writing Mode); the entity pop-up + copy-paste replaces
+the Index Card. (Distraction-free writing returned 8 June as Manuscript
+View — chrome hidden.)
+INDENTATION RULE (locked 4 June, SUPERSEDED 6 June) — belonged to the
+multi-event long-scrolling page; with one scene per page it no longer
+applies.
+THE WRITING CARD ("Scene." / Dialogue + Descriptive) (SUPERSEDED 4 June)
+— gone with the card model; writing happens in the WP page at the event,
+opened via the wheel.
+"SNAP TO DEFAULT" / DRAG-TO-REORDER TRACKS / BRIGHT-RED FREEFORM / IDEAS
+COLUMNS / MAKE-YOUR-OWN TRACKS (3 June column-board thinking, SUPERSEDED
+4 June) — belonged to the grid-of-columns; not part of the model unless
+re-introduced.
 THE ONE-SCREEN DCW / X-RAY / LINEAR TAGGED CELLS (3 June, SUPERSEDED
-4 June) — DCW on = bones, off = flesh; cells of TAG + CONTENT with (*)
-handles; write-off-then-switch-on-and-it-asks; AI as a quality setting
-(render once, store). Gone: the database is the bones; The Treatment
-assembles them — no separate cell-grid to type into. The (*) handle
-survives as the pop-up + copy.
+4 June) — the database is the bones; The Treatment assembles them; no
+separate cell-grid. The (*) handle survives as the pop-up + copy.
 THE FIRST 4 JUNE CLICK-TO-WRITE (inline gap growing under the event)
-(SUPERSEDED later 4 June) — clicking "— click to write this scene —"
-grew a small inline writing space in the assembled list. Superseded by
-the WHEEL: clicking the centre opens the whole page clean in Writing
-Mode, and the writer travels by the wheel.
+(SUPERSEDED later 4 June) — superseded by the WHEEL: clicking the centre
+opens the whole page clean in Writing Mode.
