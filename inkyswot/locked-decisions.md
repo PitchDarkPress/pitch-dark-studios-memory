@@ -1,5 +1,5 @@
 File: inkyswot/locked-decisions.md
-Last updated: 9 June 2026
+Last updated: 11 June 2026
 
 NOTE ON THIS FILE
 This file is normally add-only. It has been rewritten WHOLE several times
@@ -7,16 +7,16 @@ when a model shift superseded a block of locks (4 June: the shutter /
 vertical board / fusion / cell-grid superseded by "InkySwot IS the DCW /
 The Treatment"; 7 June: the wheel and page locks brought into line with
 the wheel as built; later 7 June: the page-top reading line, writing-mode
-single page, multiple pop-ups, demo books). Superseded locks are NOT
-deleted — they move to SUPERSEDED LOCKS at the foot, dated, kept as
-history.
-Rewritten whole again 9 June 2026 to add the 9 June locks: the BOARD
-reborn as Plot Mapping (six tracks), the FUNNEL (three views of one
-body of data, living link), the CUT (Events+Locations feed the synopsis;
-the other four are reached-into), the WP SCENE MENU, the SIX TRACK
-COLOURS, the TENSION METER, and the ROAD MAP. Locks those changes
-revised are moved to SUPERSEDED LOCKS, dated. The live part of this file
-holds only decisions that are still true.
+single page, multiple pop-ups, demo books; 9 June: the board reborn, the
+funnel, the cut, the scene menu, the six colours, the Tension meter, the
+road map). Superseded locks are NOT deleted — they move to SUPERSEDED
+LOCKS at the foot, dated, kept as history.
+Rewritten whole again 11 June 2026 to add the 11 June locks: the CHAPTER
+(STAVE) SYNOPSIS PAGE; the WP AI PROMPT (Prompt + Expand, scoped to the
+synopsis); the PROMPT/EXPAND BUTTON LOOK + PLACEMENT; and the SITE MAP
+(renamed from "the Road Map", and now BUILT, not just in principle).
+Locks those changes revised are moved to SUPERSEDED LOCKS, dated. The
+live part of this file holds only decisions that are still true.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -37,11 +37,12 @@ bones of the story. Locked: 4 June 2026.
 THREE VIEWS OF ONE BODY OF DATA — THE FUNNEL — LOCKED (9 June 2026)
 There are THREE views of the same single body of data, and the writer
 moves freely between them: THE BOARD (Plot Mapping reborn — the wide
-view), THE WP + WHEEL (the close view, one scene), and THE ROAD MAP
-(the journey view, right sidebar). It is a FUNNEL — wide and loose at
+view), THE WP + WHEEL (the close view, one scene), and THE SITE MAP (the
+whole-structure view, right sidebar). It is a FUNNEL — wide and loose at
 the top (the board), narrowing to the single scene at the spine (the
 WP). LIVING LINK, BOTH WAYS: change data in one view and it changes in
-the others. NOTHING ENTERED TWICE. Locked: 9 June 2026.
+the others. NOTHING ENTERED TWICE. Locked: 9 June 2026. (Revised 11 June:
+the third view was "the Road Map"; renamed THE SITE MAP — see that lock.)
 
 THE TREATMENT IS THE DCW SWITCHED ON
 The Treatment is where everything in the database ASSEMBLES into a
@@ -101,12 +102,70 @@ Scenes are labelled "Scene 1", "Scene 2"… The writer may add an
 optional title ("Scene 1 — The Counting-House"). Events live under
 their scene. Locked: 4 June 2026.
 
+THE CHAPTER HAS A SYNOPSIS PAGE OF ITS OWN — LOCKED (11 June 2026)
+The synopsis previously existed only at SCENE level. The CHAPTER now has
+a SYNOPSIS of its own, on its OWN full page, in the SAME FORMAT FAMILY as
+a scene page, sitting BEFORE that stave's first scene. The spine reads:
+Stave page → its scenes → next Stave page → its scenes.
+THE STAVE PAGE (agreed against Kev's image):
+- Full US-Letter sheet, page shadow — a scene page's twin.
+- Running head top-right, alone.
+- The stave TITLE shown LARGE (Crimson Pro ~30px, weight 600) — this IS
+  the heading on a stave page; there is NO duplicate mono stave line
+  above it (the scene page's repeating mono .ch-h does not appear here).
+- A small mono line on the rule beneath: "STAVE ONE · 5 SCENES".
+- A centred mono section label: "CHAPTER SYNOPSIS".
+- The SYNOPSIS BLOCK in the same grammar as a scene's event block (left
+  border, page-ink body), then the italic "— click to write this
+  synopsis —" invitation.
+- A writing surface beneath; the chapter synopsis is EDITABLE, added to
+  exactly as a scene (not read-only).
+Locked: 11 June 2026. Built as a still; to be folded into
+code-treatment-wheel.html (the wheel will then need a label for the
+stave page — settle when folding in).
+
 FILL IN THE BLANKS
 The Treatment assembles the SUBSTANCE from the database (not just
 names) and leaves the writer the blanks — the prose and dialogue no
 database can hold. The writer never faces a blank page; assembled, the
 sections ARE the draft; the writing is the last layer, not the first.
 Locked: 4 June 2026.
+
+THE WP AI PROMPT — PROMPT + EXPAND, SCOPED TO THE SYNOPSIS — LOCKED
+(11 June 2026)
+The WP carries the writer-facing Ada buttons the rest of the platform
+has (+ Prompt / ⟳ Expand), but SCOPED so they cannot write the book.
+- THE SCOPE: the button expands the SYNOPSIS of the scene or chapter —
+  NOT the prose. Expanding the synopsis thickens the PLAN ("what happens
+  and where"), the job the Treatment already does; the blank the writer
+  fills stays blank. This is "fill in the blanks" enforced: Ada makes the
+  brief richer, never finishes the work.
+- IT SCALES WITH THE SPINE: a CHAPTER + Prompt expands the chapter
+  synopsis; a SCENE + Prompt expands that scene's synopsis. Same button,
+  two granularities. (This is why the chapter synopsis had to exist —
+  the chapter button needs something to act on.)
+- "STOP AI WRITING THE WHOLE THING" IS BUILT INTO THE SHAPE, not a
+  toggle: (a) the buttons are scoped — no "write everything" door is
+  built; (b) the hidden system prompt behind each button is OURS and
+  forbids prose, set SERVER-SIDE (the Steps 5–7 prompt-tracking layer);
+  (c) output lands by CHOICE, never automatically (the pop-up copy rule).
+Locked: 11 June 2026.
+
+THE PROMPT / EXPAND BUTTONS — PAGE FURNITURE — LOCKED (11 June 2026)
+The platform's gold-bordered dark-UI buttons belong to the dark
+workspace. The WP's two buttons sit ON THE PAGE (the cream sheet), so
+they are drawn in the PAGE'S OWN palette — page ink (#221a14), page rule
+(#ded6c6), page-mute grey (#8a7d68) — quiet, like the "click to write"
+line; NO gold loudness at rest.
+- TREATMENT "A": an OUTLINE PAIR. Both a thin page-rule border, page-ink
+  text, transparent inside. EXPAND (the heavier move) carries a faint
+  grey WASH (rgba(138,125,104,.14)) so it reads as the weightier of the
+  two; PROMPT stays open paper. A matched pair, one clearly heavier.
+- HOVER: border + text wake to GOLD (the accent as a soft echo).
+- PLACEMENT: TOP-RIGHT of the page, by the heading — level with the
+  large title, tucked under the running head; out of the reading path.
+Locked: 11 June 2026. (Supersedes treatments B / C / D, tried same day —
+see SUPERSEDED LOCKS.)
 
 ONE SCENE PER FULL PAGE — LOCKED (6 June 2026)
 The Treatment is read and written ONE SCENE PER PAGE. Each scene sits on
@@ -115,11 +174,17 @@ multi-event page is gone (it felt too busy and made the wheel track too
 many close points). Pages are ALWAYS full height — a short scene simply
 leaves white space below it, exactly like a real document page; pages
 are never shrunk to hug content. Locked: 6 June 2026.
+NB (11 June): the CHAPTER synopsis page is the same full-page family —
+one stave page per stave, before its scenes (see the chapter-synopsis
+lock).
 
 STAVE HEADING ON EVERY PAGE — LOCKED (6 June 2026)
 The stave/chapter heading shows at the top of EVERY scene page, for
 navigation, so the writer always knows which stave they are in — not
 only on the page where the stave opens. Locked: 6 June 2026.
+NB (11 June): on the STAVE PAGE itself the repeating mono heading is NOT
+shown — the large stave title is the heading there (see the
+chapter-synopsis lock). This applies to SCENE pages.
 
 THE CLICK-TO-WRITE IS THE WHEEL
 Resolves the old open decision (inline-grow vs focused surface) — the
@@ -139,6 +204,9 @@ separate stave marker labels and NO blank stave pages — the stave is
 named on every scene via the kicker. Stave/scene numbers are computed in
 JS from a data-stave-open marker on each stave's first page.
 Locked: 7 June 2026. (Supersedes the 4 June single-line uniform labels.)
+NB (11 June): the new STAVE PAGE will need its OWN wheel label form —
+how the wheel shows a chapter page is an OPEN item, settle when folding
+the stave page into the wheel file. This lock still governs SCENE labels.
 
 THE WHEEL — WINDOWED, EASED, STRAIGHT — LOCKED (7 June 2026)
 - WINDOW of NINE labels each side of centre (a real map of the book
@@ -218,6 +286,9 @@ the same rail/ring/leader furniture, so the workspace reads as one
 instrument. (Revises the 4 June "PAGE RIGHT, POP-UP LEFT": the page is
 framed by two mirrored channels; the entity pop-ups still appear on the
 left, over the workspace.) Locked: 9 June 2026.
+NB (11 June): beyond the wheel's right channel, the FAR-right sidebar
+holds the SITE MAP — so the verticals read, left to right: scene menu,
+page, wheel, site map.
 
 THE WP SCENE MENU — LOCKED (9 June 2026)
 The home of the four reached-into tracks, in the channel LEFT of the WP,
@@ -250,17 +321,39 @@ gauge, the flat line-with-pointer, and the plain "55%" text — all tried
 9 June; see SUPERSEDED LOCKS. The board still shows Tension as a CURVE
 down its column; the meter is the WP form.)
 
-THE ROAD MAP — THE RIGHT SIDEBAR'S PURPOSE — LOCKED in principle (9 June)
-The 230px right sidebar becomes a USER ROAD MAP: the stages of the
-journey down the sidebar with a LIT DOT/RING showing WHERE YOU ARE,
-mirroring the wheel/scene-menu rail furniture (so all three verticals
-share the look). REACTIVE THEATRE: actions elsewhere make the map
-respond (e.g. add/modify a Character → a small section-colour box opens
-on the map off the relevant node). CLICKABLE: stages can be clicked to
-jump there (also navigation). Locked in principle: 9 June 2026.
-STILL TO SETTLE (next build, not yet locked): WHAT STAGES live on it;
-the clickable behaviour and how it relates to the left NAV without
-doubling up; the exact reactive-box behaviour. Build static-first.
+THE SITE MAP — THE RIGHT SIDEBAR'S PURPOSE — LOCKED, BUILT (11 June 2026)
+(Formerly "the Road Map", locked in principle 9 June; renamed and BUILT
+11 June. The journey-line framing was wrong; it is a SITE MAP — the whole
+platform's structure made visible and alive.)
+WHAT IT IS: an INTERACTIVE SITE MAP of the WHOLE platform in the 230px
+right sidebar — the entire nav drawn as a branching wiring tree. It must
+WORK (real orientation) AND have THEATRE (be alive while doing it) —
+both, never one at the cost of the other.
+THE SHAPE (from Kev's wiring-diagram image):
+- A RIGHT-HAND SPINE of section boxes flowing down (the trunk): the nav's
+  sections — Overview · Synopsis · Chapters · DCW (Main Menu), Cast ·
+  World (World Building), Library (Notes) — with the three group caps.
+- ELBOW CONNECTORS reach LEFT to each section's SUB-BRANCH boxes (line +
+  arrowhead): Cast → Characters / Relationships / Language / Factions;
+  World → Locations / Buildings / Objects / Rules & Lore; Library →
+  Research / Scratchpad / Sandbox. Leaves carry a NAME + a live COUNT.
+THE INTERACTION — HOVER TO REVEAL:
+- At rest the SPINE is CALM (just the trunk; a caret where a section has
+  branches). The whole map is present but FOLDED.
+- HOVER a section → its branches pop/slide out left on their wires.
+  ONE SECTION AT A TIME: moving to another folds the first, opens the
+  next. Resolves "everything at once vs too tall" — all there, calm until
+  reached for. The writer drives the reveal.
+THE THEATRE (under the hover): YOU-ARE-HERE walks the spine (lit gold);
+REACTIVE BLOOM — a record landing briefly opens its branch and a small
+SECTION-COLOUR box blooms off the matching leaf, leaf + wire flashing the
+colour, then folds back. The platform acknowledging the work.
+WHY IT DOESN'T DOUBLE THE NAV: it is the OVERVIEW of the menu, not a
+competing menu — the nav is the list you click; the site map is the
+picture of the whole with your position on it.
+Locked, BUILT: 11 June 2026. Stored as code-site-map.html.md (the
+hover version). Kev: "fucking lovely". STILL OPEN (not blocking):
+clickable-to-jump; scroll vs fit; folding into the live workspace file.
 
 THE ENTITY POP-UP
 The writer reaches the database without leaving the page, via a stable
@@ -286,6 +379,7 @@ NAV SECTION COUNTS
 Each nav section shows a live count read from its saved array
 (Characters · 5, Locations · 3, Factions · 0; zero greyed). Clicking a
 counted section opens the pop-up list. Locked: 4 June 2026.
+NB (11 June): the SITE MAP's leaves carry the SAME counts — keep in step.
 
 POP-UP USES QUIET-NOTE GRAMMAR IN SECTION COLOUR
 Throughout the pop-up (list, entries, kicker, back link): a SUB-TITLE
@@ -337,6 +431,10 @@ When designing a live mechanism (motion, scroll, interaction), build a
 small STATIC mockup first, agree the still picture, THEN add movement.
 Designing moving behaviour by description alone wastes time. A sketch
 from Kev beats ten descriptions — ask for one. Locked: 4 June 2026.
+NB (11 June): the one allowed exception — a mechanism whose WHOLE POINT
+is the motion and which cannot be judged as a still (the Site Map's
+hover-reveal + live theatre). There a LIVING mockup is the right first
+step. Default remains static-first.
 
 WORK FROM THE IMAGE / THE CODE — LOCKED (9 June 2026)
 A screenshot from Kev IS the template — match it, do not reinterpret it.
@@ -357,8 +455,9 @@ Everything InkySwot — notes AND code — lives together in the InkySwot
 division of the Pitch Dark Studios Memory system. The old separate CODE/
 locker is retired. Code files carry a "code-" prefix to cluster them
 (code-readme.md, code-treatment-wheel.html.md, code-board-look.html.md,
-code-map-plotter.html.md, etc.). New files are created in the division
-and old copies deleted — no app surgery. Locked: 9 June 2026.
+code-site-map.html.md, code-map-plotter.html.md, etc.). New files are
+created in the division and old copies deleted — no app surgery.
+Locked: 9 June 2026.
 (OPEN: whether the division can hold .png/.jpg images — to be tested.)
 
 PRICING
@@ -383,6 +482,8 @@ detection; Stripe fraud detection.
 Visible but acceptable: email verification at signup; paid upfront;
 14-day money back guarantee; support ticket required for new device.
 Locked: 24 May 2026.
+NB (11 June): the WP + Prompt's prose-forbidding system prompt is part of
+the server-side prompt layer (Steps 5–7) — it expands the synopsis only.
 
 MARKETING POSITIONING — NEVER USE
 Never market: "Write books instantly" / "Passive income publishing" /
@@ -548,6 +649,9 @@ NB (4 June): AI is never required for the Treatment to work — assembling
 the database into the page, the wheel, copy-paste, the board, and the
 scene menu are plain mechanics. Ada improves the experience; the
 writer's book stands without her.
+NB (11 June): the WP + Prompt / Expand is Ada on the page, but scoped to
+expanding the SYNOPSIS — she never writes the prose (see the WP AI PROMPT
+lock).
 
 DEMO BOOKS — DECIDED (7 June 2026, later session)
 Two demo books ship with the platform, like a music DAW shipping a demo
@@ -589,12 +693,14 @@ Locked: 2 June 2026.
 OPEN — NOT YET DECIDED
 ================================================================
 THE DATABASE REORGANISATION for the living link — the next build's
-foundation question (Kev's first question for joining the three stages):
-how do the board, the WP/wheel and the road map read/write the SAME
+foundation question (Kev's first question for joining the three views):
+how do the board, the WP/wheel and the site map read/write the SAME
 records so nothing is entered twice.
-ROAD MAP DETAIL — what stages live on it; the clickable behaviour and
-how it relates to the left NAV without doubling up; the reactive-box
-behaviour.
+SITE MAP DETAIL — clickable-to-jump behaviour; whether it scrolls or is
+tuned to fit; folding it into the live workspace file. (What it is, what
+it shows, and how it reveals are SETTLED and BUILT, 11 June.)
+THE STAVE PAGE'S WHEEL LABEL — how the wheel shows a chapter page (settle
+when folding the stave page into the wheel file).
 WHERE THE MOOD WORDS LIVE: the chapter/scene mood words (e.g. Cold ·
 Bleak · Biting) were pulled off the page; Kev wants them but not yet
 sure where they belong. Parked.
@@ -618,6 +724,19 @@ MEMORY DIVISION IMAGES: whether the InkySwot division can hold .png/.jpg.
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 (Kept as the record of how we got here.)
 ================================================================
+THE "ROAD MAP" NAME + ITS IN-PRINCIPLE LOCK (9 June, REVISED 11 June) —
+the right sidebar was locked in principle as a "USER ROAD MAP" (journey
+stages, lit dot, clickable). RENAMED and rebuilt 11 June as THE SITE MAP
+(the whole platform's structure as a living branching tree, hover to
+reveal). The journey-line framing is dropped; the live lock is THE SITE
+MAP above.
+
+PROMPT / EXPAND BUTTON TREATMENTS B / C / D (tried 11 June, SUPERSEDED
+same day) — B: hairline underline, no box; C: Prompt outline / Expand
+solid page-ink; D: plain italic in the page's voice. Replaced by
+treatment "A" (page-tone outline pair, Expand faintly washed, gold on
+hover).
+
 SECTION COLOURS Character #cba36a / Event #b08a6a (locked 4 June,
 REVISED 9 June) — replaced by THE SIX TRACK COLOURS: Characters
 terracotta #cf7f57, Events gold #c9923a, Objects steel blue #7a9bd0,
@@ -657,7 +776,9 @@ hand-off; ring+dot+leader with bloom/chevron removed; hover lights node
 only. The PRINCIPLE survives; the numbers and label form changed.
 SEPARATE STAVE MARKER LABELS / BLANK STAVE PAGE (tried 7 June, SUPERSEDED
 same day) — forced a blank stave page; replaced by the two-line kicker on
-every scene label.
+every scene label. NB (11 June): a STAVE PAGE now returns — but as a
+SYNOPSIS page in the scene-page family, NOT a blank marker; its wheel
+label form is an open item.
 THE WHEEL BLOOM + CHEVRON (4 June, REMOVED 6 June) — the radial glow and
 the » chevron; the ring + dot + leader is the whole centre mark now.
 THE WHEEL BOW (tried 6 June, REMOVED 6 June) — a slight outward curve;
@@ -674,7 +795,7 @@ DCW × PLOT MAPPER FUSION AS BUILT (locked 1–2 June, SUPERSEDED 4 June) —
 Float/Pin states of one column-board; three track types as columns; the
 cascade; the card as the bridge to writing. The PRINCIPLE that planning
 and writing are one instrument SURVIVES — realised as the funnel (board /
-WP+wheel / road map), not as a column board.
+WP+wheel / site map), not as a column board.
 DCW TERMINOLOGY — TRACKS / THREADS (locked 29 May, SUPERSEDED 4 June) —
 the column/track model gone. Connections still exist in the data but are
 not displayed as Tracks. (NB: the reborn board DOES show tracks across
