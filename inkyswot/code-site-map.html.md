@@ -19,7 +19,6 @@
   *::-webkit-scrollbar-thumb:hover{background:var(--gold);}
   body{background:#000;font-family:'JetBrains Mono',monospace;padding:24px;display:flex;justify-content:center;}
 
-  /* the right sidebar bay, as it sits in the app */
   .bay{width:260px;height:660px;background:var(--bg2);border-left:1px solid var(--rule);position:relative;}
   .bay-head{height:38px;display:flex;align-items:center;padding:0 16px;border-bottom:1px solid var(--rule);
     font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
@@ -31,19 +30,22 @@
   .snode{position:absolute;right:16px;height:30px;border:1px solid var(--rule2);border-radius:3px;
     background:var(--bg0);transform:translateY(-50%);display:flex;align-items:center;padding:0 11px;
     font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);cursor:pointer;
-    transition:border-color .35s,color .35s,box-shadow .35s;white-space:nowrap;}
+    transition:border-color .35s,color .35s,box-shadow .35s;white-space:nowrap;z-index:6;}
   .snode:hover{border-color:var(--gold);color:var(--ink);}
   .snode.live{border-color:var(--gold2);color:var(--gold2);box-shadow:0 0 12px rgba(232,176,96,.4);}
+  .snode .caret{margin-left:7px;font-size:8px;color:var(--ink3);transition:color .25s;}
+  .snode.open .caret{color:var(--gold2);}
 
-  /* group caps on the spine */
   .grpcap{position:absolute;right:16px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;
     color:var(--gold);opacity:.8;transform:translateY(-50%);}
 
-  /* leaf box (left) — the sub-branches */
+  /* leaf box (left) — hidden until its section is hovered */
   .leaf{position:absolute;left:14px;height:26px;border:1px solid var(--rule2);border-radius:3px;
-    background:var(--bg0);transform:translateY(-50%);display:flex;align-items:center;padding:0 9px;gap:6px;
-    font-family:'Crimson Pro',serif;font-size:12px;color:var(--ink2);cursor:pointer;
-    transition:border-color .35s,color .35s,box-shadow .35s,opacity .35s;white-space:nowrap;max-width:150px;}
+    background:var(--bg0);display:flex;align-items:center;padding:0 9px;gap:6px;
+    font-family:'Crimson Pro',serif;font-size:12px;color:var(--ink2);cursor:pointer;white-space:nowrap;max-width:150px;
+    opacity:0;transform:translateY(-50%) translateX(14px);pointer-events:none;
+    transition:opacity .3s ease,transform .3s cubic-bezier(.3,.1,.2,1),border-color .35s,color .35s,box-shadow .35s;}
+  .leaf.shown{opacity:1;transform:translateY(-50%) translateX(0);pointer-events:auto;}
   .leaf:hover{border-color:var(--gold);color:var(--ink);}
   .leaf .nm{overflow:hidden;text-overflow:ellipsis;}
   .leaf .ct{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--ink3);margin-left:auto;
@@ -51,11 +53,18 @@
   .leaf .ct.zero{opacity:.4;}
   .leaf.flash{box-shadow:0 0 12px currentColor;}
 
+  /* wires hidden until shown */
+  .wire,.arrow{opacity:0;transition:opacity .3s ease,stroke .35s;}
+  .wire.shown,.arrow.shown{opacity:1;}
+
   .bloom{position:absolute;left:14px;background:var(--bg0);border:1px solid;border-radius:3px;padding:4px 9px;
     font-family:'Crimson Pro',serif;font-size:11px;transform:translateY(-50%) translateX(-6px);opacity:0;
     transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap;z-index:8;}
   .bloom.show{opacity:1;transform:translateY(-50%) translateX(0);}
   .bloom .bk{font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:.1em;text-transform:uppercase;margin-right:5px;}
+
+  .hint{position:absolute;left:0;right:0;bottom:0;padding:8px 14px;font-size:8px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink3);text-align:center;background:linear-gradient(transparent,var(--bg2) 60%);}
 </style>
 </head>
 <body>
@@ -64,13 +73,13 @@
     <div class="scroll">
       <div class="tree" id="tree"><svg id="svg"></svg></div>
     </div>
+    <div class="hint">hover a section to open its branches</div>
   </div>
 
 <script>
   const NS='http://www.w3.org/2000/svg';
   const C={Character:'var(--char)',Location:'var(--loc)',Object:'var(--obj)',Theme:'var(--theme)',Event:'var(--evt)'};
 
-  /* the WHOLE platform — three groups, sections on the spine, sub-branches as leaves */
   const MAP=[
     {group:'Main Menu', sections:[
       {n:'Overview', leaves:[]},
@@ -89,25 +98,19 @@
 
   const tree=document.getElementById('tree'),svg=document.getElementById('svg');
   const W=260, SPINE_X=W-16-34, LEAF_RX=14+150;
-  const GROUP_GAP=26, SEC_GAP=46, LEAF_STEP=34, PAD=24;
+  const GROUP_GAP=24, SEC_GAP=20, LEAF_STEP=34, PAD=22;
 
-  let y=PAD;
-  const sections=[]; const allLeaves=[];
-  let prevSpineY=null;
+  let y=PAD, prevSpineY=null;
+  const sections=[], allLeaves=[];
 
-  MAP.forEach((g,gi)=>{
-    // group cap
+  MAP.forEach(g=>{
     const gc=document.createElement('div');gc.className='grpcap';gc.style.top=y+'px';gc.textContent=g.group;
     tree.appendChild(gc);
     y+=GROUP_GAP;
 
     g.sections.forEach(sec=>{
-      const leafCount=sec.leaves.length;
-      // section sits centred against its block of leaves
-      const blockH=Math.max(1,leafCount)*LEAF_STEP;
-      const secY=y + blockH/2 - LEAF_STEP/2;
+      const secY=y;
 
-      // spine link from previous section down to this one
       if(prevSpineY!=null){
         const p=document.createElementNS(NS,'path');
         p.setAttribute('d',`M ${SPINE_X} ${prevSpineY} V ${secY}`);
@@ -115,21 +118,23 @@
         svg.appendChild(p);
       }
 
-      const sEl=document.createElement('div');sEl.className='snode';sEl.style.top=secY+'px';sEl.textContent=sec.n;
+      const sEl=document.createElement('div');sEl.className='snode';sEl.style.top=secY+'px';
+      sEl.innerHTML=sec.n+(sec.leaves.length?'<span class="caret">▸</span>':'');
       tree.appendChild(sEl);
       const secRec={el:sEl,y:secY,name:sec.n,leaves:[]};
       sections.push(secRec);
 
-      // leaves
+      // leaves are laid out BELOW the section node, revealed on hover
       sec.leaves.forEach((L,li)=>{
-        const ly=y+li*LEAF_STEP;
-        // elbow connector spine -> leaf
+        const ly=secY + 40 + li*LEAF_STEP;
         const midx=SPINE_X-20;
         const path=document.createElementNS(NS,'path');
-        path.setAttribute('d',`M ${SPINE_X} ${secY} H ${midx} V ${ly} H ${LEAF_RX}`);
+        path.setAttribute('class','wire');
+        path.setAttribute('d',`M ${SPINE_X} ${secY+15} V ${ly} H ${LEAF_RX}`);
         path.setAttribute('fill','none');path.setAttribute('stroke','rgba(201,146,58,.3)');path.setAttribute('stroke-width','1');
         svg.appendChild(path);
         const ar=document.createElementNS(NS,'path');
+        ar.setAttribute('class','arrow');
         ar.setAttribute('d',`M ${LEAF_RX+5} ${ly-3} L ${LEAF_RX} ${ly} L ${LEAF_RX+5} ${ly+3}`);
         ar.setAttribute('fill','none');ar.setAttribute('stroke','rgba(201,146,58,.3)');ar.setAttribute('stroke-width','1');
         svg.appendChild(ar);
@@ -137,26 +142,51 @@
         const lEl=document.createElement('div');lEl.className='leaf';lEl.style.top=ly+'px';
         lEl.innerHTML='<span class="nm">'+L.n+'</span><span class="ct'+(L.ct===0?' zero':'')+'">'+L.ct+'</span>';
         tree.appendChild(lEl);
-        const leafRec={el:lEl,y:ly,name:L.n,wire:path,arrow:ar,colour:L.c?C[L.c]:null};
-        secRec.leaves.push(leafRec);allLeaves.push(leafRec);
+        secRec.leaves.push({el:lEl,y:ly,name:L.n,wire:path,arrow:ar});
+        allLeaves.push({el:lEl,y:ly,name:L.n,wire:path,arrow:ar});
       });
 
       prevSpineY=secY;
-      y += blockH + SEC_GAP - (blockH - (leafCount? blockH:LEAF_STEP)); // advance below the block
-      y = (sec.leaves.length? (sec.leaves.length-1)*LEAF_STEP + (y - blockH) : y); // normalise
-      y = ly_end(sec, y);
+      // advance: section + (its leaf block, collapsed when closed leaves only a small gap)
+      y = secY + SEC_GAP + 18;
     });
     y += GROUP_GAP;
   });
 
-  function ly_end(sec,yIn){ return yIn; } // (kept simple; y already advanced)
-
-  // set tree height
   tree.style.height=(y+PAD)+'px';
   svg.setAttribute('height',(y+PAD));
 
-  /* ---- the life ---- */
-  // 1) you-are-here walks the spine
+  /* ---- hover reveal: one section at a time ---- */
+  let pinned=null; // hovering wins; live walk continues underneath
+  function openSection(sec){
+    sections.forEach(s=>{
+      const on = s===sec;
+      s.el.classList.toggle('open',on);
+      s.leaves.forEach(L=>{
+        L.el.classList.toggle('shown',on);
+        L.wire.classList.toggle('shown',on);
+        L.arrow.classList.toggle('shown',on);
+      });
+    });
+  }
+  function closeAll(){
+    sections.forEach(s=>{
+      s.el.classList.remove('open');
+      s.leaves.forEach(L=>{L.el.classList.remove('shown');L.wire.classList.remove('shown');L.arrow.classList.remove('shown');});
+    });
+  }
+  sections.forEach(sec=>{
+    sec.el.addEventListener('mouseenter',()=>{pinned=sec;openSection(sec);});
+    sec.el.addEventListener('mouseleave',()=>{ setTimeout(()=>{ if(pinned===sec){/* keep open while over leaves */} },10); });
+    // keep open while pointer is over the leaf column near this section
+    sec.leaves.forEach(L=>{
+      L.el.addEventListener('mouseenter',()=>{pinned=sec;openSection(sec);});
+    });
+  });
+  // close when leaving the tree entirely
+  tree.addEventListener('mouseleave',()=>{pinned=null;closeAll();});
+
+  /* ---- the life (runs whether or not a branch is open) ---- */
   let si=0;
   function step(){
     sections.forEach((s,j)=>s.el.classList.toggle('live',j===si));
@@ -164,35 +194,42 @@
   }
   step();setInterval(step,2600);
 
-  // 2) records land — a colour box blooms off the matching leaf
-  const adds=[
-    ['Characters','Character','Scrooge'],
-    ['Locations','Location','Counting-House'],
-    ['Characters','Character','Tiny Tim'],
-    ['Objects','Object','The Chain'],
-    ['Relationships','Character','Scrooge ↔ Fred'],
-    ['Scenes','Event','Marley\u2019s Warning'],
-  ];
+  // demo: every so often, auto-open a section so the reveal is visible without a mouse
+  const demoOrder=[4,5,2]; let di=0;
+  function demoHover(){
+    if(pinned) return; // don't fight a real hover
+    const sec=sections[demoOrder[di%demoOrder.length]];
+    openSection(sec);
+    setTimeout(()=>{ if(!pinned) closeAll(); },1900);
+    di++;
+  }
+  setTimeout(demoHover,1200);setInterval(demoHover,3200);
+
+  // blooms still fire on the live walk (off whichever leaf, briefly opening it)
+  const adds=[['Cast','Characters','Character','Scrooge'],['World','Locations','Location','Counting-House'],
+              ['Cast','Characters','Character','Tiny Tim'],['World','Objects','Object','The Chain']];
   let ai=0;
   function bloom(){
-    const [leafName,kind,name]=adds[ai%adds.length];
-    const L=allLeaves.find(x=>x.name===leafName);
+    if(pinned) {ai++;return;}
+    const [secName,leafName,kind,name]=adds[ai%adds.length];
+    const sec=sections.find(s=>s.name===secName);
+    const L=sec&&sec.leaves.find(x=>x.name===leafName);
     if(L){
+      openSection(sec);
       const c=C[kind]||'var(--gold2)';
       const b=document.createElement('div');b.className='bloom';b.style.top=L.y+'px';b.style.left='150px';
       b.style.borderColor=c;b.innerHTML='<span class="bk" style="color:'+c+'">+'+kind+'</span>'+name;
       tree.appendChild(b);requestAnimationFrame(()=>b.classList.add('show'));
       L.el.style.color=c;L.el.style.borderColor=c;L.el.classList.add('flash');
-      L.wire.setAttribute('stroke',c);L.arrow.setAttribute('stroke',c);
       setTimeout(()=>{
         b.classList.remove('show');setTimeout(()=>b.remove(),350);
         L.el.classList.remove('flash');L.el.style.color='';L.el.style.borderColor='';
-        L.wire.setAttribute('stroke','rgba(201,146,58,.3)');L.arrow.setAttribute('stroke','rgba(201,146,58,.3)');
+        if(!pinned) closeAll();
       },1700);
     }
     ai++;
   }
-  setTimeout(bloom,1000);setInterval(bloom,2400);
+  setTimeout(bloom,2600);setInterval(bloom,3200);
 </script>
 </body>
 </html>
