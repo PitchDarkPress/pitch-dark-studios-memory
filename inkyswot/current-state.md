@@ -1,7 +1,10 @@
 File: inkyswot/current-state.md
-Last updated: 14 June 2026 (session — NAV ORDER settled; SITE MAP reframed
-as theatrical "where you are" and PARKED for its own page; left nav rebuilt;
-right column widened; four-heading map kept as the calm sidebar version)
+Last updated: 16 June 2026 (chat / design session — THE DCW SETTLED AS ONE
+BODY OF DATA / A MIXDOWN; Writing Panel renamed THE MANUSCRIPT; the funnel
+seen end-to-end (board = wide, wheel+page = close); right-hand ROADMAP to
+be removed, wheel stays; PINNED POST-IT NOTES new idea; menu spine grown
+— Landing / Home / four-section nav; NOTES = Snippets + Research; Stickies
+parked; Sandbox moved to head of DCW)
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -26,6 +29,9 @@ Never rush. Kev may be slow at some steps — this is fine.
 Do NOT use multiple-choice button lists to ask questions — plain
 questions only. A single plain either/or in prose is fine; never a
 stacked list of options.
+KEEP IT SIMPLE — when Kev says he doesn't understand, STOP, drop the
+jargon and the long lists, and say it in plain words, one thing at a
+time. Do not dump a big banked list on him; hold it yourself.
 InkySwot = always capital I and capital S.
 PUBLISH AND BE DAMNED — no full stop. Ever.
 If a decision is in the files, do not revisit it unless Kev asks.
@@ -49,8 +55,10 @@ DISPLAY FREEZE: if edits stop showing, do a CLEAN REBUILD in a fresh
 artifact rather than editing on.
 LONG-THREAD DRIFT: a long, winding conversation degrades reliability —
 start a fresh chat (with the .md files pasted) for a new build session
-rather than carrying a tired thread on. (This 14 June session ran long
-across several rebuilds/reverts — banked and broken here.)
+rather than carrying a tired thread on. (The 16 June session was a
+design / talk session — it wandered, ran long, and built nothing; it
+SETTLED the DCW model and the menu spine, then banked here. No code
+changed this session.)
 
 ================================================================
 THE MODEL — INKYSWOT *IS* THE DCW (settled 4 June 2026)
@@ -62,36 +70,55 @@ THE MODEL — INKYSWOT *IS* THE DCW (settled 4 June 2026)
   readable, writable whole. A plotline is a VIEW of data that already
   exists, not a new thing to author.
 
-THREE VIEWS OF ONE BODY OF DATA — THE FUNNEL (settled 9 June 2026)
-*** STILL UNDER REVIEW — the BOARD / wide view's fate was NOT settled
-this session. Do not build from it until Kev settles its scope. ***
-- THE BOARD (was "Plot Mapping reborn") — the WIDE view. The whole book
-  as an instrument: scenes down the spine, the world across the tracks.
-  Whether it survives is OPEN (see PLOT MAPPING / SYNOPSIS below).
-- THE WP + THE WHEEL — the CLOSE view. The same data narrowed to the one
-  scene being written. (Live, built.)
-- THE SITE MAP — the WHOLE-STRUCTURE view (right sidebar; see below).
-It is a FUNNEL: wide and loose at the top, narrowing to the single scene
-at the spine. LIVING LINK, BOTH WAYS — change data in one view, it
-changes in the others. NOTHING ENTERED TWICE.
-First foundation question for bringing the views together: HOW THE
-DATABASE IS REORGANISED so all views read from and write to the same
-records.
+================================================================
+*** THE BIG TURN — THE DCW IS ONE BODY OF DATA / A MIXDOWN ***
+(settled 16 June 2026 — supersedes "three views" framing)
+================================================================
+KEV'S INSIGHT, stated plainly: "It is just one thing." The DCW is NOT
+three separate screens you move between. It is ONE body of material seen
+through OVERLAYS — and it behaves like a MIXDOWN in music.
 
-================================================================
-PLOT MAPPING = SYNOPSIS — ONE THING; "PLOT MAPPING" NAME DROPPED
-(confirmed 14 June 2026; first dropped 11 June)
-================================================================
-KEV'S DECISION (clarified 14 June): "Plot Mapping" and "Synopsis" are the
-SAME THING. The "Plot Mapping" NAME/FRAMING is dropped; SYNOPSIS is the
-name that stays, and it lives under DCW. There is NOT a separate Plot
-Mapping item to add anywhere.
-- The settled nav lists SYNOPSIS under DCW (see NAV — SETTLED).
-- THE BOARD (the wide six-track view once logged as "Plot Mapping
-  reborn") — its scope is STILL OPEN; it was not built or settled this
-  session. Treat THE BOARD / THREE-VIEWS FUNNEL as UNDER REVIEW.
-- code-map-plotter.html (old corkboard) and code-board-look.html (the
-  board look) remain as history pending the board scope call.
+THE FUNNEL, END TO END (both ends now seen on real screens):
+- SANDBOX — the raw, no-order end. Brainstorming. You drop ideas in
+  (places, characters, events, objects) and toss them about until they
+  coalesce into a semblance of a story. WIDE end of the funnel.
+- SYNOPSIS — the SAME material with an overlay that fixes it into an
+  ORDERED timeline; then a SECOND overlay drops CHAPTERS and SCENES onto
+  it.
+- THE MANUSCRIPT (renamed from "Writing Panel", 16 June) — the SAME
+  material again, with the writing surface revealed, where the writer
+  completes the book. CLOSE end of the funnel (one scene).
+
+WHY BACK-AND-FORTH IS FREE — THE MIXDOWN:
+- Like multitrack music: the tracks underneath never go away; a mixdown
+  RENDERS them together but does not destroy them. Going back is free
+  because nothing was ever converted — it was the same data wearing a
+  different coat all along.
+- Things drop into FIXED PLACES (a home/slot) but can STILL be moved
+  from place to place. Loose AND structured at once.
+- When you MIX DOWN, only certain things stay VISIBLE in the centre (the
+  spine / the EVENTS — the through-line), and the rest (Characters,
+  Locations, Objects, Themes, Tension — the "reach-into" tracks) drop to
+  a LIST DOWN THE SIDE. They don't vanish; they move to the margin. That
+  side-list IS the WP SCENE MENU already built into the wheel file.
+- THE BOARD (code-board-look.html) is the WIDE end — all six tracks as
+  columns, everything visible. THE WHEEL + PAGE is the CLOSE end — spine
+  as the page, reach-into tracks as the side list. SAME DATA, two coats.
+
+THE HARD KERNEL — THE KEYSTONE (NOT yet solved; the next real build):
+- The whole thing only works if each overlay's structure — the ordering,
+  the timeline position, the chapter/scene home — is STORED ON THE
+  SHARED DATA itself, not held inside a view. In music terms: the
+  structure lives in the MIX INSTRUCTIONS that sit alongside the tracks,
+  not in the tracks.
+- THE QUESTION TO ANSWER (still-picture first, fresh chat): how does ONE
+  record carry its board position, its timeline order, AND its
+  chapter/scene home all at once, so the overlays just read and write the
+  same thing? This is the SAME beast as the long-standing DATABASE
+  REORGANISATION question.
+- OPEN within this: is each level's ordering a SEPARATE set of mix
+  instructions (Sandbox can stay jumbled while Synopsis holds the tidy
+  order), or does ordering in one level flow down and change the others?
 
 THE SPINE — A TIMELINE OF EVENTS
 Three tiers: CHAPTER → SCENE → EVENT. Only EVENTS sit on the line and
@@ -102,6 +129,30 @@ do not happen; they are REACHED INTO by the events that use them.
 The Treatment assembles the SUBSTANCE from the database and leaves the
 writer the blanks: the prose only they can write. Assembled, the
 sections ARE the draft; the writing is the last layer.
+
+================================================================
+PINNED POST-IT NOTES — NEW IDEA (16 June 2026)
+================================================================
+A writer can PIN notes — like post-its — onto the DCW.
+- A post-it is NOT story data: not a character, event or scene; it never
+  becomes prose, never mixes down into the side list. It is the writer
+  talking to themselves ("fix this", "Marley too early?", "check the
+  date").
+- So it sits on its OWN LAYER, ABOVE the data, touching nothing
+  underneath. Shows/hides as a layer (like the chapter dividers toggle).
+- IT STAYS WHERE IT IS STUCK and SCROLLS WITH THE CONTENT — it is
+  anchored to the content, not floating on the glass.
+- STILL OPEN: whether a note travels BETWEEN views (pinned to the THING,
+  e.g. a scene, so it rides the funnel with it) or lives only in the view
+  it was stuck in (pinned to the VIEW). "Stays and scrolls" settles that
+  it is content-anchored, NOT whether it crosses the funnel.
+- LINEAGE: this is the grown-up form of the old "Stickies" toy (a simple
+  React post-it board that became the Map Plotter corkboard). Stickies is
+  NOT a menu destination (it was deliberately dropped from NOTES); its
+  DNA already lives in the board. The original simple Stickies React file
+  lives in chat "STICKIES BASE FILE - 1" — fetch its real code from there
+  if needed (it is React + window.storage; InkySwot is single-file HTML,
+  so treat it as a feel reference, likely rebuilt in HTML).
 
 ================================================================
 THE SIX TRACK COLOURS — SETTLED (9 June 2026)
@@ -145,6 +196,21 @@ biasing it later is an easy future tweak.
 
 WRITING MODE shows ONLY the live scene; other pages hidden. "‹ overview"
 returns to the Treatment.
+
+================================================================
+THE RIGHT-HAND ROADMAP — TO BE REMOVED; THE WHEEL STAYS (16 June 2026)
+================================================================
+The current live wheel file (see FILES — the real file is now
+wheel-with-roadmap (7).html) carries a scrolling ROADMAP down the RIGHT
+side — a list of every scene (Stave One Scene One, Fred's Visit, …).
+- DECISION: the right-hand ROADMAP GOES. It duplicates the WHEEL — both
+  tell you "where you are" and move you between scenes. One mover, not two.
+- THE WHEEL STAYS, on the right, in its place.
+- RESTING SHAPE of the close view: LEFT reach-into list (Characters,
+  Objects, Themes, Tension) · the PAGE in the centre · the WHEEL on the
+  right.
+- This is a SMALL SURGICAL build for a fresh chat: remove the roadmap
+  from the pasted wheel file, wheel untouched, small-change-means-small.
 
 ================================================================
 THE CHAPTER (STAVE) PAGE — A SYNOPSIS PAGE OF ITS OWN (built 11 June 2026)
@@ -206,6 +272,8 @@ instrument, the same gold rail-and-ring furniture both sides.
 - WHAT IT IS: "what this scene reaches into" — the Characters, Objects,
   Themes and Tension of the scene in front of you. Tied to the PAGE; it
   changes scene to scene.
+- THIS IS THE MIXED-DOWN SIDE LIST (see THE MIXDOWN): the reach-into
+  tracks that collapse out of the board's columns into the margin.
 - LOOK: right-aligned list. Coloured group headers (Characters terracotta,
   Objects steel blue, Themes violet, Tension red), names in plain ink
   beneath. Thin vertical gold RAIL, gold RING (17px) on the rail, short
@@ -219,56 +287,26 @@ instrument, the same gold rail-and-ring furniture both sides.
   (Currently shows a plain "55%" placeholder in the wheel file.)
 
 ================================================================
-THE SITE MAP — REFRAMED AS THEATRICAL "WHERE YOU ARE"; PARKED
-(14 June 2026)
+THE MENU SPINE — GROWN THIS SESSION (16 June 2026)
 ================================================================
-*** THE BIG TURN THIS SESSION. *** Kev revealed the Site Map he actually
-wants is NOT the calm tree the 11-June redesign recorded. The intended
-Site Map is OUTRAGEOUSLY THEATRICAL — a delight, not a menu.
+Kev grew the menu beyond the bare nav to a full spine: a Landing page,
+then a Home page, then the project nav. NOTE: this is a SPINE, not the
+finished map — Kev flagged there is still "loads missing". Wording on a
+few items is LEANING, not locked (see OPEN DECISIONS).
 
-THE INTENT (Kev's words, 14 June):
-- It SHOWS WHERE THE WRITER IS — nothing more functional than that. It is
-  set dressing / theatre, NOT a working navigation control (the wheel and
-  the nav do the real navigating).
-- BLOCKS OF COLOUR (the six track colours), connected by STRANGE LINES.
-- It should MAKE THE USER SMILE.
-- When the writer NAVIGATES (goes somewhere on the menu), the Site Map
-  goes "BOOM (ish)" — a flourish that celebrates where you've landed. The
-  drama is the REACTION to the click, not ambient self-motion.
+THE LANDING PAGE (before login)
+- Sign in
+- Sign up
 
-WHAT WE TRIED (14 June) — and PARKED:
-- A playful CONSTELLATION in the right sidebar: scattered colour blocks,
-  wandering lines, a lit "You are here" block. Then iterated: straight
-  lines, more delicate, more linear. It WAS NOT WORKING — the 290px
-  sidebar is too cramped for something that wants to go BOOM. PUT ON HOLD.
-- The BOOM itself (the motion) was never built — static-first rule held;
-  we never got past the resting still.
+THE HOME PAGE (after login — the launchpad)
+- New Project
+- Load Project
+- Demos
+   - A Christmas Carol
+   - The Wind in the Willows
+- The Press
 
-THE PLAN WHEN IT COMES BACK (Kev's question, agreed in principle):
-- The theatrical "where you are" map likely wants ITS OWN PAGE (room to
-  breathe and bang), reached from the nav — NOT the narrow sidebar.
-- The RIGHT SIDEBAR can KEEP the calm four-heading map (quiet,
-  always-there, tells you where you are at a glance).
-- Two stills to agree first (resting + exploded), THEN wire the BOOM.
-
-THE CALM FOUR-HEADING SITE MAP — the SIDEBAR version (built, kept):
-A calm SPINE of the FOUR HEADINGS, each heading's contents POPPING UP on
-hover; the four headings the only fixed things. Spine on the RIGHT, ring
-nodes, plain-text contents right-aligned in their own lane (no boxes, no
-glow), two lanes (headings always visible), STATIC / hover-driven. The
-four headings + contents match the SETTLED nav (see NAV — SETTLED). This
-is what currently sits in the wheel file's right sidebar (clean, known
-state). Earlier "+" deeper-level behaviour still OPEN.
-
-================================================================
-NAV — SETTLED (14 June 2026)
-================================================================
-*** ORDER NOW SETTLED. *** Kev gave the full list; this supersedes the
-8-June "under rework" structure. Left nav (in the wheel mockup) was
-rebuilt to this list, ALL OPEN (nothing collapsed). The four-heading Site
-Map already draws the same list.
-
-THE FULL LIST:
+THE PROJECT NAV (the in-app left menu)
 - PROJECTS
    - New Project
    - Load Project
@@ -276,10 +314,12 @@ THE FULL LIST:
       - A Christmas Carol
       - The Wind in the Willows
 - DCW
+   - Sandbox        (moved here — head of the funnel)
    - Synopsis
    - Chapters
    - Scenes
-   - Writing Panel
+   - Manuscript     (was "Writing Panel")
+   - The Press       (its second home; sub-items TBD — "other stuff")
 - WORLD BUILDING
    - Cast
       - Characters
@@ -292,25 +332,42 @@ THE FULL LIST:
       - Objects & Artefacts
       - Rules & Lore
 - NOTES
-   - Library
-   - Research & Reference
-   - Notes & Scratchpad
+   - Snippets        (was "Library" — Snippets = bits of script/text YOU
+                      wrote and saved for later; replaces the vague
+                      "Library" wrapper)
+   - Research        (was "Research & Reference" — material brought in
+                      from OUTSIDE the story)
+- HELP
+   - Tutorials
+   - Manual
+   - FAQs
+   - What's New
+- Trash
+   - View Trash
+   - Empty Trash
 
-NOTES ON THE SETTLED NAV:
+NOTES ON THE MENU SPINE:
+- SANDBOX now lives at the HEAD of DCW (not under NOTES). It is the loose
+  entry point that feeds the DCW; head of DCW = where the funnel begins.
+- THE PRESS lives in TWO homes: on the HOME page, and nested under DCW.
+  Its DCW sub-items are not yet defined ("other stuff" placeholders).
+- NOTES = Snippets + Research. "Library" dropped (too vague — Snippets
+  names the actual contents, so a writer never hesitates "mine vs found").
+- STICKIES (Notes & Scratchpad) — DELIBERATELY DROPPED from the menu this
+  session. "We will circle back to that later." Not a destination; it is
+  the PINNED-NOTE layer (see PINNED POST-IT NOTES).
 - SYNOPSIS under DCW IS the former "Plot Mapping" (same thing; name
-  dropped). No separate Plot Mapping item.
-- OVERVIEW and SANDBOX are NOT in this list. (The old nav carried them.)
-  Whether OVERVIEW persists as the post-login LANDING screen even though
-  it is not a nav heading is a CARRIED QUESTION — Kev to confirm.
+  dropped, confirmed 14 June).
 - FACTIONS & ORGANISATIONS — written in FULL. Never "Orgs".
 - STRUCK FROM THE NAV earlier (hidden, not deleted as screens): Plot
   Threads, Subplots, Themes & Motifs.
-- The LEFT nav and the four-heading SITE MAP must stay in step.
 
 ENTRY (settled 8 June, standing):
 - LANDING PAGE (before login): Sign In / Sign Up. Its own screen.
-- After sign in/up the writer lands on the OVERVIEW page (currently titled
-  "BASIS" in index.html — RENAME to OVERVIEW; pending code job).
+- After sign in/up the writer lands on the HOME page (launchpad).
+- OVERVIEW: currently titled "BASIS" in index.html. Whether OVERVIEW
+  persists as a screen at all is now in doubt — the new spine routes
+  login → HOME, not login → Overview. CARRIED QUESTION.
 
 LAUNCHPAD ICONS — SETTLED (8 June 2026)
 Clean single-weight gold line art, stroke="currentColor" (recolour with
@@ -318,11 +375,33 @@ Tone; no PNGs). Three drawn: Load Project — drawer chest; New Project —
 typewriter; Demos — signpost. Stored with inkyswot/home-icons.svg.md.
 
 ================================================================
+THE SITE MAP — TWO DIFFERENT THINGS; DON'T CONFUSE THEM
+================================================================
+1. THE STRUCTURAL SITE MAP (a PLAN, not a feature) — the complete tree of
+   what InkySwot contains, the skeleton on paper, built to settle where
+   everything lives. Kev asked for this 16 June ("we have to build a
+   complete site map… so we stop messing"). NOT yet built — wants its own
+   fresh chat with the core files. The MENU SPINE above is the start of it.
+2. THE THEATRICAL SITE MAP (a FEATURE in the app) — the "where you are"
+   delight: blocks of colour (the six track colours), strange lines, a
+   "BOOM (ish)" flourish on navigate, meant to make the writer smile.
+   PARKED (14 June) — likely wants its OWN PAGE; the 290px sidebar was too
+   cramped. The calm FOUR-HEADING SIDEBAR map is the quiet stand-in.
+
+THE CALM FOUR-HEADING SITE MAP — the SIDEBAR version (built, kept):
+A calm SPINE of the FOUR HEADINGS, contents popping up on hover; spine on
+the RIGHT, ring nodes, plain-text contents right-aligned, two lanes,
+STATIC / hover-driven. NB the four headings should be kept in step with
+the SETTLED nav — which has now GROWN (see THE MENU SPINE), so the
+sidebar map will need updating when next touched.
+
+================================================================
 MANUSCRIPT VIEW — TOGGLE (writer comfort, agreed 8 June)
 ================================================================
 A toggle in the WP to strip the chrome and read the book as a continuous
 manuscript. Display-level only; TRUE flowing pagination remains a bigger
-deferred build.
+deferred build. (NB: "the Manuscript" is now also the NAME of the close /
+writing view — see THE MIXDOWN. This toggle is a comfort view within it.)
 
 ================================================================
 SECURITY — A NOTE FROM 8 June (resolves a WP worry)
@@ -365,18 +444,27 @@ STILL TO TEST: whether the InkySwot division can hold a .png / .jpg image.
 
 FILES — InkySwot division of the memory database
 current-state.md · locked-decisions.md · dcw.md (the three core .md).
-inkyswot/code-treatment-wheel.html.md — THE LIVE DESIGN SOURCE. NOW also
-carries: the SETTLED LEFT NAV (rebuilt this session, all open), the RIGHT
-COLUMN widened to 290px, and the calm FOUR-HEADING SITE MAP sitting in the
-right sidebar. STILL NOT folded in: the chapter STAVE PAGE; the WP
+*** FILE-OF-TRUTH NOTE (16 June): the LIVE wheel file is now
+"wheel-with-roadmap (7).html" — it carries the SETTLED four-section nav,
+the LEFT reach-into list, and the RIGHT-HAND ROADMAP (which is to be
+REMOVED, wheel kept). An OLDER copy with a stub left-nav and an EMPTY
+right sidebar was pasted earlier and is NOT the truth. Always ask Kev for
+the current file at the start of a build. ***
+inkyswot/code-treatment-wheel.html.md — earlier live design source (the
+older lineage; superseded by wheel-with-roadmap (7).html as the working
+file). STILL NOT folded in anywhere: the chapter STAVE PAGE; the WP
 Prompt/Expand buttons; the wheel's stave-page label; the Tension meter
 (still a "55%" placeholder).
 inkyswot/code-site-map.html.md — the SITE MAP. The standalone four-heading
 spine. NB the THEATRICAL "where you are" Site Map (blocks of colour, BOOM)
 is the new intent and is PARKED (likely its own page) — not in any file.
-inkyswot/code-board-look.html.md — the BOARD still picture. UNDER REVIEW.
+inkyswot/code-board-look.html.md — the BOARD still picture = the WIDE end
+of the funnel (all six tracks as columns). Now CONFIRMED as part of the
+mixdown, not "under review".
 inkyswot/home-icons.svg.md — launchpad icons.
-inkyswot/code-map-plotter.html.md — old Plot Mapping corkboard. SUPERSEDED.
+inkyswot/code-map-plotter.html.md — old Plot Mapping corkboard (grew from
+the original "Stickies" toy). SUPERSEDED as a screen; its DNA feeds the
+PINNED-NOTE idea and the Sandbox.
 index.html — the app workspace (Overview screen still titled "BASIS").
 login.html — login / sign up gate (stubbed).
 
@@ -387,9 +475,9 @@ Language & Dialogue / Locations / Buildings / Objects & Artefacts /
 Rules & Lore / Plot Threads / Subplots / Themes & Motifs / Events &
 Timeline / Chapters / The Treatment (placeholder shell) / AI Expand /
 AI ON-OFF / Read Aloud / light-dark / voice selector. The WHEEL + WP +
-LEFT SCENE MENU + SETTLED LEFT NAV + calm FOUR-HEADING SITE MAP live
-together in the standalone mockup (code-treatment-wheel.html), NOT yet in
-index.html. The BOARD is a standalone still picture, UNDER REVIEW.
+LEFT SCENE MENU + SETTLED LEFT NAV + RIGHT-HAND ROADMAP live together in
+the standalone mockup (wheel-with-roadmap (7).html), NOT yet in
+index.html. The BOARD is a standalone still picture (the wide end).
 
 BUILD ORDER — CONFIRMED (unchanged)
 Step 1 v4.0 App Shell Rebuild (NOT STARTED) · 2 Walk · 3 Sign-off Gate ·
@@ -401,51 +489,61 @@ DEMO BOOKS (Carol then Willows) — after Step 1 sections are final.
 
 CURRENT STATUS & NEXT ACTIONS
 v4.7 pre-Step 1 rebuild. Autumn 2026 target.
-... [history through 11 June as previously logged] ...
-14 June (chat / design session): NAV ORDER SETTLED (the full four-section
-  list). LEFT NAV in the wheel file rebuilt to it, all open. RIGHT COLUMN
-  widened 230 → 290px. Plot Mapping = Synopsis confirmed (one thing; name
-  dropped). The four-heading SITE MAP folded into the wheel file's right
-  sidebar as the calm version. SITE MAP REFRAMED as theatrical "where you
-  are" (blocks of colour, strange lines, BOOM on navigate) — constellation
-  tried in the sidebar, didn't work (too cramped), PARKED; likely its own
-  page when it returns. Several rebuilds/reverts; ended on a clean known
-  state. current-state.md rewritten clean (this file).
+... [history through 14 June as previously logged] ...
+16 June (chat / design session — NO CODE CHANGED): settled the DCW as ONE
+  BODY OF DATA / a MIXDOWN (Sandbox → Synopsis (timeline + Chapters/Scenes
+  overlays) → THE MANUSCRIPT, renamed from Writing Panel). Saw the funnel
+  end-to-end on real screens: the BOARD is the wide end, the WHEEL+PAGE
+  the close end, the left scene menu IS the mixed-down side list. Decided
+  the RIGHT-HAND ROADMAP goes and the WHEEL stays. New idea: PINNED
+  POST-IT NOTES — a layer above the data, content-anchored, never mixed
+  down. Grew the MENU SPINE (Landing / Home / four-section nav; Sandbox to
+  head of DCW; NOTES = Snippets + Research; Stickies parked; Press in two
+  homes; Trash opens to View/Empty). Identified the real wheel file as
+  wheel-with-roadmap (7).html (older pasted copy was stale). current-
+  state.md rewritten clean (this file).
 
 NEXT (do in order, one at a time — START A FRESH CHAT for a build)
-1. FOLD THE STAVE PAGE + WP PROMPT/EXPAND into code-treatment-wheel.html
-   (work from Kev's pasted file). Then the wheel's stave-page label.
-2. Build the TENSION SEGMENTED BAR METER + sweep (static-first) to replace
+1. SMALL SURGICAL BUILD: remove the RIGHT-HAND ROADMAP from the live wheel
+   file (wheel-with-roadmap (7).html), WHEEL UNTOUCHED. Work from Kev's
+   pasted file.
+2. THE KEYSTONE: design the FUNNEL DATA MODEL (still-picture first) — how
+   ONE record carries its board position + timeline order + chapter/scene
+   home at once so the overlays/mixdown read and write the same thing.
+   This is the spine of the whole platform.
+3. FOLD THE STAVE PAGE + WP PROMPT/EXPAND into the live wheel file. Then
+   the wheel's stave-page label.
+4. Build the TENSION SEGMENTED BAR METER + sweep (static-first) to replace
    the "55%" placeholder in the scene menu.
-3. THE THEATRICAL SITE MAP (when off hold): agree resting + exploded
-   stills, then wire the BOOM — likely as its OWN PAGE, sidebar keeping the
-   calm four-heading map.
-4. (Held by the scope call) THE BOARD / THREE VIEWS — revisit once Kev
-   settles whether the wide view survives.
-5. UPDATE locked-decisions.md and dcw.md to match this session (nav
-   settled; Plot Mapping = Synopsis; Site Map reframed) — one file at a
-   time.
-6. Test whether the InkySwot division can hold a .png image.
-7. (Carried app jobs) Rename Overview "BASIS" → "OVERVIEW"; build the nav
-   into index.html (to the SETTLED order); build the home launchpad; begin
-   Step 1 — v4.0 app shell rebuild.
+5. THE PINNED-NOTE LAYER (static-first): once the keystone is clearer,
+   settle whether a note crosses between views, then build the layer.
+6. THE THEATRICAL SITE MAP (when off hold): agree resting + exploded
+   stills, then wire the BOOM — likely its OWN PAGE.
+7. UPDATE locked-decisions.md and dcw.md to match (DCW = mixdown; Writing
+   Panel = Manuscript; menu spine; roadmap out) — one file at a time.
+8. Test whether the InkySwot division can hold a .png image.
+9. (Carried app jobs) settle Overview's fate; build the nav into
+   index.html (to the new spine); build the home launchpad; begin Step 1.
 
 OPEN DECISIONS — STILL TO SETTLE (one at a time)
-1. THE BOARD / WIDE VIEW scope — does it survive, and under what name?
-2. OVERVIEW & SANDBOX — do they return anywhere? (Not in the settled nav.
-   Does Overview persist as the post-login landing screen?)
-3. THE THEATRICAL SITE MAP — its own page vs sidebar; what the BOOM is.
-4. THE FOUR-HEADING MAP DEEPER LEVEL — how Demo's books and Cast/World's
-   "+" contents open.
-5. THE DATABASE REORGANISATION for the living link.
-6. SYNOPSIS → WP TRANSITION — mechanics still to build.
-7. WHERE THE MOOD WORDS LIVE (Cold · Bleak · Biting). Parked.
-8. EVENT ORDER WITHIN A SCENE (events lack a position).
-9. EVENTS ON THE PAGE — multiple events per scene: list or collapse.
-10. TAG SET — Prose vs Action; Dialogue's place; Emotion tag vs Map.
-11. CARRIED FEATURES' HOME — Emotional Maps, Ambient, the lift.
-12. WHEEL LIVE-LABEL FLIP POINT — small tweak.
-13. THE STAVE PAGE'S WHEEL LABEL — settle when folding the stave page in.
+1. THE KEYSTONE — the FUNNEL DATA MODEL (how one record holds all three
+   structures at once). The big one; everything hangs on it.
+2. PINNED NOTES — does a note cross BETWEEN views (pinned to the thing) or
+   live in one view (pinned to the view)?
+3. MENU WORDING — final confirm "Snippets" replaces "Library"; "Research"
+   vs "Research & Reference"; THE PRESS's DCW sub-items.
+4. THE PRESS — what its two homes each hold; its DCW sub-items.
+5. OVERVIEW — does it survive at all now that login routes to HOME?
+6. THE BOARD's exact role in the mixdown (it is the wide end — but does
+   the writer build IN it, or is it a read view?).
+7. STICKIES / NOTES & SCRATCHPAD — circle back; how/where it returns.
+8. THE THEATRICAL SITE MAP — its own page; what the BOOM is.
+9. EVENT ORDER WITHIN A SCENE; multiple events per scene (list or collapse).
+10. WHERE THE MOOD WORDS LIVE (Cold · Bleak · Biting). Parked.
+11. TAG SET — Prose vs Action; Dialogue's place; Emotion tag vs Map.
+12. CARRIED FEATURES' HOME — Emotional Maps, Ambient, the lift.
+13. WHEEL LIVE-LABEL FLIP POINT — small tweak.
+14. THE STAVE PAGE'S WHEEL LABEL — settle when folding the stave page in.
 
 ================================================================
 ROUGH — NOT SETTLED. Captured so it is not lost. Do NOT build from this.
@@ -468,22 +566,24 @@ THE TAGGING MECHANISM:
 ================================================================
 SUPERSEDED / DROPPED — KEPT AS HISTORY (do NOT build from any of this)
 ================================================================
+- "THREE VIEWS OF ONE BODY OF DATA" as the framing — superseded 16 June by
+  THE MIXDOWN (one body, overlays). The funnel idea survives; "three
+  separate views" does not.
+- "WRITING PANEL" as the name — renamed THE MANUSCRIPT, 16 June.
+- THE RIGHT-HAND ROADMAP — to be removed (duplicates the wheel), 16 June.
+- "LIBRARY" as a NOTES item — replaced by "Snippets", 16 June.
 - THE CALM FOUR-HEADING SITE MAP AS THE INTENDED MAP — superseded 14 June
-  as the *whole* intent: it is now only the calm SIDEBAR version. The
-  intended Site Map is THEATRICAL ("where you are", blocks of colour,
-  BOOM). The four-heading map is kept, not killed.
-- THE 14-JUNE SIDEBAR CONSTELLATION TRIES — scattered blocks + wandering
-  curved lines; then straight lines; then more delicate; then more linear.
-  All PARKED — the 290px sidebar is too cramped for the BOOM; the
-  theatrical map wants its own page.
+  as the *whole* intent: now only the calm SIDEBAR version. The intended
+  Site Map is THEATRICAL. The four-heading map is kept, not killed.
+- THE 14-JUNE SIDEBAR CONSTELLATION TRIES — all PARKED; the theatrical map
+  wants its own page.
 - "PLOT MAPPING" as a name/item — dropped; it IS Synopsis.
-- THE FIRST SITE MAP (11 June) — full branching TREE with self-running
-  walk + blooms. Superseded by the four-heading spine.
+- THE FIRST SITE MAP (11 June) — full branching TREE; superseded by the
+  four-heading spine.
 - THE "ROAD MAP" NAME — renamed to SITE MAP, 11 June.
-- THE OLD GOLD CHARACTERS / BROWN EVENTS section colours — revised 9 June
-  to the six-colour set.
+- THE OLD GOLD CHARACTERS / BROWN EVENTS section colours — revised 9 June.
 - TENSION as a VU NEEDLE / FLAT LINE-WITH-POINTER / plain "55%" text — all
-  tried 9 June; superseded by the segmented bar meter.
+  superseded by the segmented bar meter.
 - MERGING the left scene menu INTO the wheel — rejected 9 June.
 - SITE MAP BUTTON TREATMENTS B / C / D (WP Prompt/Expand) — "A" chosen.
 - MAPS & GEOGRAPHY / "SimCity" stamp composer / tile sets — DROPPED 8 June.
