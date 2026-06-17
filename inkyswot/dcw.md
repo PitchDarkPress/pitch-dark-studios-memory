@@ -1,13 +1,18 @@
 File: inkyswot/dcw.md
-Last updated: 11 June 2026
+Last updated: 17 June 2026
 
 ================================================================
 READ FIRST — THIS IS THE LIVE SPEC.
 InkySwot IS the DCW. The Treatment is the DCW switched on — a TIMELINE
 OF EVENTS assembled from the database, written by filling in the blanks.
-There are THREE VIEWS of one body of data: THE BOARD (Plot Mapping
-reborn — wide), THE WP + WHEEL (close, one scene), THE SITE MAP (the
-whole structure). A FUNNEL, living link both ways, nothing entered twice.
+The DCW is ONE BODY OF DATA seen through OVERLAYS — a MIXDOWN (16 June;
+supersedes the earlier "three views" framing). The FUNNEL survives: the
+BOARD is the WIDE end, the WHEEL + PAGE the CLOSE end (one scene), the
+LEFT SCENE MENU is the mixed-down side list; living link both ways,
+nothing entered twice. The close / writing view is now named THE
+MANUSCRIPT (was "Writing Panel" / "WP" — older "WP" mentions below mean
+the Manuscript). A separate QUICK-NOTE (pinned post-it) layer sits ABOVE
+the data — see THE QUICK-NOTE.
 Everything from the LIVE SPEC heading down to "================ HISTORY"
 is current and buildable. Everything below "HISTORY" is SUPERSEDED —
 kept only as the record of how we got here. Do NOT build from history.
@@ -24,6 +29,17 @@ synopsis, never the prose) with the buttons drawn as PAGE FURNITURE. And
 the right-sidebar idea was BUILT and renamed THE SITE MAP — the whole
 platform as a living branching tree, hover to reveal. The code is the
 truth; this file follows it.
+
+16 JUNE 2026: the framing became THE MIXDOWN (one body of data seen
+through overlays) — "three views" retired, the FUNNEL kept. The BOARD is
+confirmed as the WIDE end. The WRITING PANEL is renamed THE MANUSCRIPT.
+The live wheel file's right-hand SCENE-LIST ROADMAP is marked for REMOVAL
+(it duplicates the wheel; the wheel stays). The MENU SPINE grew. (Full
+record in current-state.md / locked-decisions.md.)
+
+17 JUNE 2026: THE QUICK-NOTE (the pinned post-it) was BUILT as a
+standalone component and signed off — added below. Images on notes were
+DROPPED (they live in Research).
 ================================================================
 
 ================================================================
@@ -40,22 +56,29 @@ board, or a panel. It is the WHOLE PLATFORM. Every section already
 built (Characters, Locations, Events, Plot Threads, etc.) is part of
 the instrument. The database is the BONES of the story.
 
-THREE VIEWS OF ONE BODY OF DATA — THE FUNNEL (settled 9 June 2026)
-The whole instrument is seen at three distances, and the writer moves
-freely between them:
-- THE BOARD (Plot Mapping reborn) — the WIDE view. The whole book as an
+ONE BODY OF DATA — THE MIXDOWN — THE FUNNEL (settled 16 June 2026;
+supersedes the 9 June "three views" framing)
+The whole instrument is ONE body of material seen through OVERLAYS, and
+it behaves like a MIXDOWN in music — the tracks beneath never go away;
+an overlay RENDERS them together without destroying them, so moving
+between distances is free (nothing was ever converted). The writer moves
+freely along the FUNNEL:
+- THE BOARD (Plot Mapping reborn) — the WIDE end. The whole book as an
   instrument: scenes down the spine, the world across the tracks.
-- THE WP + THE WHEEL — the CLOSE view. The same data narrowed to the
-  one scene being written.
-- THE SITE MAP — the WHOLE-STRUCTURE view (right sidebar). (Formerly
-  "the road map"; renamed 11 June — it is the platform's structure made
-  live, not a journey line.)
-A FUNNEL: wide and loose at the top (the board), narrowing to the single
-scene at the spine (the WP). LIVING LINK, BOTH WAYS — change data in one
-view, it changes in the others. NOTHING ENTERED TWICE. The three views
-are to be BROUGHT TOGETHER as the next build; the foundation question
-(Kev's first for that build) is HOW THE DATABASE IS REORGANISED so all
-three read/write the same records.
+- THE WHEEL + PAGE — the CLOSE end. The same data narrowed to the one
+  scene being written; the reach-into tracks collapse to the LEFT SCENE
+  MENU (the mixed-down side list).
+- THE SITE MAP — the WHOLE-STRUCTURE picture (a map of the platform, not
+  a fourth body of data; see THE SITE MAP). The right-hand SCENE-LIST
+  ROADMAP that the live wheel file once carried is being REMOVED — it
+  duplicated the wheel; the wheel stays.
+LIVING LINK, BOTH WAYS — change data in one place, it changes
+everywhere. NOTHING ENTERED TWICE. The overlays are to be BROUGHT
+TOGETHER as the next build; the foundation question (the KEYSTONE) is
+HOW THE DATABASE IS REORGANISED so each overlay reads/writes the same
+records — how ONE record carries its board position, its timeline order
+AND its chapter/scene home at once. (The "three separate views" framing
+is retired — see HISTORY.)
 
 THE TREATMENT IS THE DCW SWITCHED ON
 The Treatment is where everything in the database ASSEMBLES into a
@@ -85,13 +108,16 @@ can do. Assembled, the sections ARE the draft; the writing is the last
 layer, not the first.
 
 ----------------------------------------------------------------
-THE BOARD — PLOT MAPPING REBORN (settled 9 June 2026)
+THE BOARD — PLOT MAPPING REBORN — THE WIDE END (settled 9 June 2026;
+confirmed 16 June 2026)
 ----------------------------------------------------------------
 The old DCW vertical board was killed on 4 June for the "what is a row"
 knot. On 9 June it came BACK — the look that "made Kev laugh" — now in
 the current visual language, and carrying the timeline-of-events truth.
 The lesson: the board was never the mistake; killing the beauty to solve
 a logic problem was. The board can hold the truth AND be beautiful.
+16 JUNE confirmed the board SURVIVES as the WIDE END of the mixdown —
+only the "Plot Mapping" name was dropped, not the board.
 
 THE BOARD IS PLOT MAPPING — not a tool beside it, it IS Plot Mapping
 reborn. The old corkboard (code-map-plotter.html) is superseded by it.
@@ -116,6 +142,7 @@ THE CUT — WHAT TRANSFERS TO THE WP (settled 9 June):
 CURRENT STATE: code-board-look.html is a STILL PICTURE only (a "look",
 not wired, no drag, no real data) and still carries the OLD colours.
 Applying the six colours and building it for real are jobs to come.
+OPEN (carried): does the writer BUILD in the board, or is it a read view?
 
 ----------------------------------------------------------------
 THE PAGE — ONE SCENE PER FULL PAGE (settled 6 June 2026)
@@ -209,8 +236,9 @@ THE LAYOUT
   book / where you are). The SCENE MENU is in the channel to the LEFT
   (this scene's reached-into world — see below). The two channels are
   BALANCED and share the same rail/ring/leader furniture. Grid is
-  ~230px 1fr 230px. NB (11 June): beyond the wheel's right channel, the
-  FAR-right sidebar holds the SITE MAP.
+  ~230px 1fr 230px. NB (16 June): the live wheel file's right-hand
+  SCENE-LIST ROADMAP is being REMOVED (it duplicated the wheel); the
+  resting close-view shape, left to right, is SCENE MENU · PAGE · WHEEL.
 - Out in the right channel is THE WHEEL: a single hairline gold RAIL
   with small nodes, two-line labels to the right of the rail, and a
   fixed gold CENTRE.
@@ -286,7 +314,9 @@ THE WP LEFT SCENE MENU — THE REACHED-INTO TRACKS (built 9 June 2026)
 ----------------------------------------------------------------
 The home found for Characters · Objects · Themes · Tension. In the dark
 channel to the LEFT of the WP, MIRRORING the wheel — the workspace reads
-as one instrument, the same furniture on both sides.
+as one instrument, the same furniture on both sides. (This IS the
+mixed-down side list — the reach-into tracks that collapse out of the
+board's columns into the margin at the close end.)
 - WHAT IT IS: "what this scene reaches into" — tied to the PAGE, not the
   book; it changes scene to scene. (The wheel is the BOOK; the scene
   menu is THIS SCENE. Different jobs, opposite sides. NOT merged — that
@@ -317,6 +347,12 @@ THE SITE MAP — THE RIGHT SIDEBAR'S PURPOSE (BUILT, living, 11 June 2026)
 The journey-line framing was wrong; it is a SITE MAP: the whole platform's
 structure made visible and alive. Answers the long-open "what is the
 right sidebar for", and the "doesn't it double the nav" worry — see end.)
+NB (11 June, later session): the Site Map was REDESIGNED from the
+branching tree below to a calm SPINE of the FOUR MAIN HEADINGS (PROJECTS ·
+DCW · WORLD BUILDING · NOTES) with pop-up contents (plain text, no boxes,
+no glow, two lanes, static / hover-driven). The branching-tree version
+described here is SUPERSEDED — kept as the record; see locked-decisions.md
+and current-state.md for the redesigned, signed-off Site Map.
 
 WHAT IT IS: an INTERACTIVE SITE MAP of the WHOLE platform in the 230px
 right sidebar — the entire nav drawn as a branching wiring tree. It must
@@ -357,12 +393,53 @@ competing menu — the nav is the list you click down; the site map is the
 PICTURE of the whole thing with your position on it. A nav gives options;
 a map shows where you are. Different jobs.
 
-STATE: BUILT as a living mockup (the one allowed static-first exception —
-the life is the thing being judged and a still cannot show it). Kev:
-"fucking lovely" / "nothing needs tweaking". Stored as code-site-map.html
-(the hover version). STILL OPEN: clickable-to-jump; scroll vs fit;
-folding into the live workspace file (so the verticals read, left to
-right: scene menu · page · wheel · site map).
+STATE: this BRANCHING-TREE build is SUPERSEDED by the four-heading
+redesign (see NB above). STILL OPEN on the redesigned map: the deeper-
+level "+" behaviour; clickable-to-jump; scroll vs fit; folding into the
+live workspace file (so the verticals read, left to right: scene menu ·
+page · wheel · site map).
+
+----------------------------------------------------------------
+THE QUICK-NOTE — THE PINNED POST-IT LAYER (built 17 June 2026)
+----------------------------------------------------------------
+A layer the writer can summon ABOVE the data — a scrap to talk to
+themselves ("fix this", "Marley too early?", "check the date"). NOT story
+data: never a character / event / scene, never becomes prose, never mixes
+down. BUILT as a standalone component and signed off; saved as
+inkyswot/inkyswot-code-quick-note.html.md. NOT yet wired into the platform.
+- THE SCRAP: a small AMBER paper note on the dark workspace (reads at a
+  glance as a SCRAP, not a record). The scruffy COUSIN OF THE ENTITY
+  POP-UP — drag by its top strip, ✕ to delete (top-right), cascades,
+  click raises to front. Square-ish, upright; AUTO-GROWS with the text
+  (never a scrollbar); the folded bottom-right corner is a real RESIZE
+  handle.
+- LIFE OF A SCRAP: summon → jot → KEEP (Enter; in the platform it files
+  the text to the Notes pad via window.QuickNoteOnKeep) / BIN (esc or ✕)
+  / PIN.
+- THE PIN — a TWO-STATE THUMBTACK: a GOLD OUTLINE when loose; the SAME
+  shape FILLED with colour when pinned, in the SAME spot (swap in place);
+  a faint gold ring marks a pinned scrap. A CLEAN CLICK toggles
+  pinned/loose; a PRESS-AND-DRAG on the pin MOVES the note (a pinned
+  scrap is still freely movable). PINNED = ANCHORED TO THE SCENE — it
+  drops into the scrolling page and SCROLLS WITH IT (content-anchored).
+  Loose scraps FLOAT over the view.
+- THE PIN-HEAD COLOUR: assignable PER NOTE via a small POPUP that opens on
+  pin and closes once a colour is picked (or you click away) — the SIX
+  TRACK COLOURS, default Tension red, so a pin's colour can MEAN something.
+- NO IMAGES on notes — images live in RESEARCH.
+- WIRING (for integration): HOST = the viewport layer (loose scraps float
+  here); STAGE = the scrolling scene/page (pinned scraps anchor here);
+  window.QuickNoteOnKeep(text) = optional keep hook; summonNote() from the
+  summon key / a button / the keypad. Ships with a DEMO HARNESS marked to
+  delete on integration.
+STILL OPEN: (a) PERSISTENCE — scraps must survive a refresh and stay put
+(browser memory standalone; the DATABASE in the platform); (b) SEE-ALL —
+one button showing every scrap at once (a PANEL that lists them, or GATHER
+the actual notes onto the screen); (c) does a pinned note CROSS between
+overlays (pinned to the THING, riding the funnel) or stay where stuck;
+then (d) WIRE IT ACROSS ALL SCREENS (HOST as an app-level overlay; summon
+on the keypad). LINEAGE: the grown-up form of the old Stickies / Map
+Plotter corkboard.
 
 ----------------------------------------------------------------
 HOW THE WORLD IS REACHED — THE ENTITY POP-UP (settled 4 June)
@@ -384,9 +461,14 @@ its record). Present in the wheel mockup and working.
 - COPY AND PASTE is how database substance reaches the WP. Copy takes
   TEXT ONLY: coloured in the pop-up, it lands in the WP PLAIN, taking
   the page's own ink. Colour for FINDING; neutral ink for READING.
+NB (17 June): THE QUICK-NOTE (above) is the pop-up's scruffy cousin —
+same drag / ✕ / cascade / raise-to-front instincts, a lighter paper skin,
+no record machinery.
 
 ----------------------------------------------------------------
 THE WP — A REAL DOCUMENT PAGE (settled 4 June; refined 6 June)
+(NB: "THE WP" is now THE MANUSCRIPT — the close / writing view; renamed
+16 June. "WP" kept below as the built spec.)
 ----------------------------------------------------------------
 A proper document page (US Letter, 816 × 1056px, generous margins), on
 the dark workspace with a page shadow — not a thin panel. Framed by the
@@ -404,7 +486,9 @@ scene-menu channel left and the wheel channel right. ONE SCENE PER PAGE.
 - PAGE NUMBERS centred at the foot; optional UNNUMBERED TITLE PAGE with
   toggle; title + author pull from Overview. (Specced.)
 - MANUSCRIPT VIEW toggle (8 June): strip the chrome to read the book as
-  a continuous manuscript — writer comfort, display-level only.
+  a continuous manuscript — writer comfort, display-level only. (NB: "the
+  Manuscript" is now also the NAME of the whole close view; this toggle
+  is a comfort view within it.)
 - SCROLLBARS: slim, dark, gold-on-hover.
 - NOTE: pages are fixed-height sheets in the mockup. REAL pagination
   (prose flowing onto new numbered pages) is a bigger build, for when
@@ -457,7 +541,9 @@ AMBIENT (Atmosphere / Weather / Time)
   Separating the two clocks is the insight no rival tool has. Not placed.
 
 DARK THOUGHTS — private notes, never exported, never sent to InkySwot.
-Marker: a small grey-violet dot. Carried.
+Marker: a small grey-violet dot. Carried. (NB: distinct from THE
+QUICK-NOTE — Dark Thoughts are a private FIELD on a record; a quick-note
+is a free scrap pinned to the workspace.)
 
 THE LIFT (Prologue / Backstory below Chapter 1) — locked 30 May. The
 timeline has a "downstairs": above the line the chapters climb; below it
@@ -470,12 +556,13 @@ slide-in guide. Template pattern, locked 30 May. Not yet built.
 ----------------------------------------------------------------
 OPEN DECISIONS — STILL TO SETTLE (one at a time)
 ----------------------------------------------------------------
-0. THE DATABASE REORGANISATION for the living link — the next build's
-   foundation question (Kev's first for joining the three views): how
-   the board, the WP/wheel and the site map read/write the SAME records.
-1. SITE MAP DETAIL — clickable-to-jump; scroll vs fit; folding it into
-   the live workspace file. (What it is / shows / how it reveals are
-   SETTLED and BUILT, 11 June.)
+0. THE KEYSTONE — THE DATABASE REORGANISATION for the living link — the
+   next build's foundation question: how the board, the WP/wheel and the
+   site map read/write the SAME records (how one record holds its board
+   position, timeline order and chapter/scene home at once).
+1. SITE MAP DETAIL — the deeper-level "+" behaviour; clickable-to-jump;
+   scroll vs fit; folding the (redesigned four-heading) map into the live
+   workspace file.
 2. THE STAVE PAGE'S WHEEL LABEL — how the wheel shows a chapter page
    (settle when folding the stave page into the wheel file).
 3. WHERE THE MOOD WORDS LIVE (Cold · Bleak · Biting). Parked.
@@ -488,49 +575,72 @@ OPEN DECISIONS — STILL TO SETTLE (one at a time)
 7. WHERE THE OTHER CARRIED FEATURES LIVE — Emotional Maps, Ambient, the
    lift — in the board/wheel model. (Tension now HAS a home.)
 8. WHEEL LIVE-LABEL FLIP POINT — small tweak.
+9. THE QUICK-NOTE follow-ups (17 June): (a) PERSISTENCE — browser memory
+   standalone / the DATABASE in the platform; (b) SEE-ALL — a panel that
+   lists every scrap, or gather them onto the screen?; (c) does a pinned
+   note CROSS between overlays or stay where stuck?; then (d) wire it
+   ACROSS ALL SCREENS (HOST as an app-level overlay; summon on the keypad).
 
 ----------------------------------------------------------------
 BUILD ORDER
 ----------------------------------------------------------------
 The writing surface (Step 10), The Treatment (Step 11) and the DCW
 (Step 13) are CONVERGING into the WHEEL + BOARD + SCENE MENU + SITE MAP
-— one instrument, the funnel. The IMMEDIATE next build folds the CHAPTER
-SYNOPSIS PAGE and the WP PROMPT/EXPAND into the wheel file (then settles
-the stave page's wheel label). After that, the next build BRINGS THE
-THREE VIEWS TOGETHER (board / WP+wheel / site map), starting with the
-database reorganisation. The wheel mockup (code-treatment-wheel.html),
-the board still (code-board-look.html) and the site map (code-site-map
-.html) are the current standalone build / live design sources. Reconcile
-the step list once the join is built.
+— one instrument, the funnel (the mixdown). The IMMEDIATE next build
+folds the CHAPTER SYNOPSIS PAGE and the WP PROMPT/EXPAND into the wheel
+file, and removes the right-hand SCENE-LIST ROADMAP (then settles the
+stave page's wheel label). After that, the next build BRINGS THE OVERLAYS
+TOGETHER (board / WP+wheel / site map), starting with the database
+reorganisation (the keystone). The QUICK-NOTE is built standalone and is
+wired in as part of the cross-screen integration. The wheel mockup
+(code-treatment-wheel.html), the board still (code-board-look.html), the
+site map (code-site-map.html) and the quick-note (inkyswot-code-quick-
+note.html.md) are the current standalone build / live design sources.
+Reconcile the step list once the join is built.
 
 THE LIVE DESIGN SOURCES
 - code-treatment-wheel.html — the WHEEL + WP + LEFT SCENE MENU. Built on
   "A Christmas Carol", whole book loaded (5 staves, 25 scenes). The
   chapter synopsis page + Prompt/Expand are agreed as stills, NOT yet in
-  this file. METHOD: static-first then animated; designing motion by
-  description alone failed repeatedly (a working rule now). If edits stop
-  showing, do a CLEAN REBUILD in a fresh artifact.
+  this file; the right-hand scene-list roadmap is to be removed. METHOD:
+  static-first then animated; designing motion by description alone failed
+  repeatedly (a working rule now). If edits stop showing, do a CLEAN
+  REBUILD in a fresh artifact.
 - code-board-look.html — the BOARD still picture (a look; old colours;
   not wired).
-- code-site-map.html — the SITE MAP, BUILT living (full platform tree,
-  hover-to-reveal branches one at a time, you-are-here on the spine,
-  reactive blooms off the leaves).
+- code-site-map.html — the SITE MAP (the four-heading redesign is the
+  live one; the branching-tree build is superseded).
+- inkyswot-code-quick-note.html.md — the QUICK-NOTE component, built
+  standalone and signed off; STYLES + SCRIPT blocks marked to lift, a
+  DEMO HARNESS marked to delete. Not yet wired in.
 
 ================================================================
 HISTORY — SUPERSEDED. DO NOT BUILD FROM ANY OF THIS.
 Kept as the record of how we reached here. (Full detail retained in the
-7 June file; abbreviated here to the headlines, plus the 9–11 June items.)
+7 June file; abbreviated here to the headlines, plus the 9–17 June items.)
 ================================================================
 
-11 JUNE — THE "ROAD MAP" NAME (RENAMED same day) — the right sidebar's
-purpose, locked in principle 9 June as a "road map" (journey stages, lit
-dot), was rebuilt and renamed THE SITE MAP (the whole platform's
-structure as a living branching tree, hover to reveal). The journey-line
-framing is dropped.
-11 JUNE — PROMPT/EXPAND BUTTON TREATMENTS B / C / D (tried, dropped same
-day): B hairline-underline; C Prompt-outline / Expand-solid-ink; D plain
-italic. Replaced by treatment "A" (page-tone outline pair, Expand faintly
-washed, gold on hover).
+17 JUNE — THE QUICK-NOTE ROUND RED PUSHPIN (tried, dropped same day) —
+the pinned state was first a round glossy red pushpin punched through the
+top edge; replaced by the FILLED THUMBTACK matching the gold outline
+shape (same shape, one outline / one filled). ALSO: IMAGES ON NOTES
+dropped — a quick-note holds text only; images live in RESEARCH.
+
+16 JUNE — "THREE VIEWS OF ONE BODY OF DATA" as the FRAMING (SUPERSEDED) —
+replaced by THE MIXDOWN (one body of data seen through overlays). The
+FUNNEL and the living link survive; "three separate views" does not. ALSO:
+"WRITING PANEL" / "WP" as the NAME — renamed THE MANUSCRIPT. ALSO: the
+live wheel file's right-hand SCENE-LIST ROADMAP — marked for REMOVAL (it
+duplicated the wheel; the wheel stays).
+
+11 JUNE — THE FIRST SITE MAP, A BRANCHING TREE (SUPERSEDED 11 June later)
+— the right sidebar drawn as a full branching wiring tree of every nav
+section; replaced by the calm FOUR-HEADING spine with pop-up contents
+(plain text, no boxes, no glow, two lanes, static / hover-driven). ALSO:
+THE "ROAD MAP" NAME (RENAMED same day) — the journey-line framing dropped;
+it became THE SITE MAP. ALSO: PROMPT/EXPAND BUTTON TREATMENTS B / C / D
+(tried, dropped same day): B hairline-underline; C Prompt-outline /
+Expand-solid-ink; D plain italic. Replaced by treatment "A".
 
 9 JUNE — TENSION TRIES (SUPERSEDED same day): a VU NEEDLE GAUGE, a FLAT
 LINE-WITH-POINTER, and a plain "55%" TEXT — all tried in the scene menu,
@@ -558,15 +668,16 @@ divided by a curtain; "Full Screen"); THE FUSION (Float/Pin; the note
 CARD as the board object; three track types — Structural cards / Curve /
 Ambient; the cascade; the card as the bridge to writing). The PRINCIPLE
 that planning and writing are one instrument SURVIVES — now realised as
-the FUNNEL (board / WP+wheel / site map). NB 9 June: the board-as-a-look
-RETURNS as Plot Mapping reborn — but as the timeline-of-events truth
-(six entity tracks, Events feed prose), NOT the old DCW column-board.
+the FUNNEL / MIXDOWN (board / WP+wheel / site map). NB 9 June: the
+board-as-a-look RETURNS as Plot Mapping reborn — but as the timeline-of-
+events truth (six entity tracks, Events feed prose), NOT the old DCW
+column-board.
 
 MOCKUP / BUILD FILES (history): inkyswot-daw.html (original horizontal
 STRIP, superseded 2 June); CODE/dcw-vertical.html (vertical board in the
 shutter, superseded); code-map-plotter.html (Plot Mapping corkboard,
 30 May — superseded as a build target by the reborn board; kept as
-history).
+history; its DNA also feeds THE QUICK-NOTE).
 
 WHAT THE TURNS KILLED (so it is never rebuilt): the horizontal strip;
 the old vertical board (tracks as columns / the DCW); the shutter/
@@ -580,11 +691,14 @@ wheel's bloom glow and chevron; separate stave marker labels / blank
 stave pages (NB 11 June: a stave page RETURNS — but as a SYNOPSIS page in
 the scene-page family, NOT a blank marker). ALSO (9 June): the Tension
 needle gauge / flat-line / plain-text tries. ALSO (11 June): the
-"road map" journey-line name; button treatments B/C/D.
+"road map" journey-line name; button treatments B/C/D; the branching-tree
+Site Map. ALSO (16 June): the "three separate views" framing; the right-
+hand scene-list roadmap. ALSO (17 June): the quick-note round red pushpin;
+images on notes.
 
 WHAT SURVIVED (re-fitted to the live model): the QUIET NOTE grammar (the
 board's and the pop-up's); the database handle (the pop-up + copy); Dark
-Thoughts; the SECTION ? help pill; the FUNNEL idea (now the three views
-of one body of data — board / WP+wheel / site map); and the CARRIED
-features (Tension — now homed as board curve + WP meter; Emotional Maps;
-Ambient with Time-as-a-block; the lift) awaiting full placement.
+Thoughts; the SECTION ? help pill; the FUNNEL idea (now THE MIXDOWN — one
+body of data seen through overlays: board / WP+wheel / site map); and the
+CARRIED features (Tension — now homed as board curve + WP meter; Emotional
+Maps; Ambient with Time-as-a-block; the lift) awaiting full placement.
