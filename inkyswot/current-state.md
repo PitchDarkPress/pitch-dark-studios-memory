@@ -1,10 +1,14 @@
 File: inkyswot/current-state.md
-Last updated: 16 June 2026 (chat / design session — THE DCW SETTLED AS ONE
-BODY OF DATA / A MIXDOWN; Writing Panel renamed THE MANUSCRIPT; the funnel
-seen end-to-end (board = wide, wheel+page = close); right-hand ROADMAP to
-be removed, wheel stays; PINNED POST-IT NOTES new idea; menu spine grown
-— Landing / Home / four-section nav; NOTES = Snippets + Research; Stickies
-parked; Sandbox moved to head of DCW)
+Last updated: 17 June 2026 (chat / BUILD session — THE QUICK-NOTE (pinned
+post-it) BUILT as a standalone component and signed off: amber scrap, a
+two-state thumbtack pin (gold OUTLINE when loose → the SAME shape filled
+with colour when pinned), a colour popup using the six track colours,
+pin-drag moves the note, pinned scraps anchor to the scene and scroll with
+it; saved to the DB as inkyswot-code-quick-note.html.md. STILL TO DO: make
+notes PERSIST + a "SEE ALL" button + the across-all-screens wiring. Images
+DROPPED from notes — they live in Research. Admin-panel gotcha found and
+fixed: a file saved at the repo ROOT saves fine but does NOT show in the
+menu — give it the division folder.)
 
 WHO YOU ARE WORKING WITH
 Kevin Martin (Kev). Writer, former professional actor and voice artist.
@@ -55,10 +59,7 @@ DISPLAY FREEZE: if edits stop showing, do a CLEAN REBUILD in a fresh
 artifact rather than editing on.
 LONG-THREAD DRIFT: a long, winding conversation degrades reliability —
 start a fresh chat (with the .md files pasted) for a new build session
-rather than carrying a tired thread on. (The 16 June session was a
-design / talk session — it wandered, ran long, and built nothing; it
-SETTLED the DCW model and the menu spine, then banked here. No code
-changed this session.)
+rather than carrying a tired thread on.
 
 ================================================================
 THE MODEL — INKYSWOT *IS* THE DCW (settled 4 June 2026)
@@ -131,28 +132,91 @@ writer the blanks: the prose only they can write. Assembled, the
 sections ARE the draft; the writing is the last layer.
 
 ================================================================
-PINNED POST-IT NOTES — NEW IDEA (16 June 2026)
+THE QUICK-NOTE — PINNED POST-IT, BUILT (component, 17 June 2026)
 ================================================================
-A writer can PIN notes — like post-its — onto the DCW.
-- A post-it is NOT story data: not a character, event or scene; it never
-  becomes prose, never mixes down into the side list. It is the writer
-  talking to themselves ("fix this", "Marley too early?", "check the
-  date").
-- So it sits on its OWN LAYER, ABOVE the data, touching nothing
-  underneath. Shows/hides as a layer (like the chapter dividers toggle).
-- IT STAYS WHERE IT IS STUCK and SCROLLS WITH THE CONTENT — it is
-  anchored to the content, not floating on the glass.
-- STILL OPEN: whether a note travels BETWEEN views (pinned to the THING,
-  e.g. a scene, so it rides the funnel with it) or lives only in the view
-  it was stuck in (pinned to the VIEW). "Stays and scrolls" settles that
-  it is content-anchored, NOT whether it crosses the funnel.
-- LINEAGE: this is the grown-up form of the old "Stickies" toy (a simple
-  React post-it board that became the Map Plotter corkboard). Stickies is
-  NOT a menu destination (it was deliberately dropped from NOTES); its
-  DNA already lives in the board. The original simple Stickies React file
-  lives in chat "STICKIES BASE FILE - 1" — fetch its real code from there
-  if needed (it is React + window.storage; InkySwot is single-file HTML,
-  so treat it as a feel reference, likely rebuilt in HTML).
+The PINNED POST-IT idea (raised 16 June) is now a WORKING, APPROVED
+standalone component, signed off by Kev. Saved to the DB as
+inkyswot/inkyswot-code-quick-note.html.md. NOT yet wired into the
+platform — it is a finished part waiting to be dropped in.
+
+WHAT IT IS (settled this session):
+- A small AMBER PAPER SCRAP — warm amber on the dark workspace, so it
+  reads instantly as a SCRAP (a thought, NOT filed story data). Built as
+  the scruffy cousin of the entity POP-UP idiom: drag by its top strip,
+  ✕ to delete (top-right), cascades when there is more than one, click a
+  scrap to raise it to the front.
+- Square-ish and upright. AUTO-GROWS as you type — the paper deepens, so
+  there is never a scrollbar. The folded bottom-right corner is a real
+  RESIZE handle (drag it).
+- IT IS NOT STORY DATA: never a character / event / scene, never becomes
+  prose, never mixes down. The writer talking to themselves ("fix this",
+  "Marley too early?", "check the date").
+
+THE LIFE OF A SCRAP — three exits:
+- SUMMON from anywhere → jot → then one of:
+  · KEEP (Enter) — files it away. In the platform this hands the text to
+    the Notes pad via an optional hook (window.QuickNoteOnKeep).
+  · BIN (esc, or the ✕) — gone.
+  · PIN — sticks it down; it stays until deleted.
+
+THE PIN — a two-state thumbtack (much-iterated; Kev happy):
+- LOOSE: a small GOLD OUTLINE thumbtack, centred on the top of the note.
+- PINNED: the SAME thumbtack SHAPE, FILLED with a colour, in the SAME
+  spot — clicking swaps outline → filled IN PLACE (no jump). The note
+  also gains a faint gold ring, so "pinned" reads at a glance.
+- A CLEAN CLICK on the pin toggles pinned/loose. A PRESS-AND-DRAG on the
+  very same pin MOVES the note — so a pinned scrap is still freely
+  movable (grab the pin, or the top strip).
+- PINNED = ANCHORED TO THE SCENE: a pinned scrap drops into the scrolling
+  page and SCROLLS WITH IT (content-anchored, not floating on the glass).
+  Loose scraps float over the view.
+
+THE PIN-HEAD COLOUR — assignable, per note (new this session):
+- When you pin, a small COLOUR POPUP opens just below the pin. Pick a
+  colour and it applies and the popup closes (clicking away also closes
+  it). Each scrap remembers its own head colour.
+- The palette is THE SIX TRACK COLOURS (Events gold, Locations teal,
+  Characters terracotta, Objects steel blue, Themes violet, Tension red),
+  default Tension red — so a pin's colour can MEAN something later rather
+  than being random decoration.
+- To recolour later you re-pin (the popup is tied to the pinning action).
+  A "recolour without unpinning" gesture is a possible future tweak — not
+  built.
+
+HOW THE COMPONENT IS WIRED (for the integration step):
+- HOST = a layer fixed in the viewport — loose scraps float here.
+- STAGE = the scrolling scene/page — pinned scraps anchor here.
+- window.QuickNoteOnKeep(text) = optional hook; in the platform it files
+  a kept scrap into the Notes pad.
+- summonNote() = call it from the summon key / a button / the ELSRA keypad.
+- The file ships with a DEMO HARNESS (dark backdrop + ＋ button + N key),
+  clearly marked to DELETE on integration; the STYLES and SCRIPT blocks
+  are marked to lift whole.
+
+STILL TO DO (also noted as a comment in the code):
+1. PERSIST — scraps must STAY where dropped and survive a refresh. In the
+   standalone file that means browser memory; in the platform they should
+   save into the InkySwot DATABASE like everything else. NOT built.
+2. SEE ALL — one button that shows EVERY scrap at once, wherever each is
+   pinned. UNDECIDED: a panel that LISTS them, or GATHER the actual notes
+   onto the screen. NOT built. (Persistence comes first — you cannot
+   gather what was never saved.)
+3. ACROSS ALL SCREENS — the founding requirement. This is the integration
+   job: HOST becomes one app-level overlay above EVERY screen; the summon
+   moves to app level (the keypad). Needs the live platform shell pasted.
+
+STILL OPEN (carried from 16 June): does a PINNED note travel BETWEEN views
+(pinned to the THING — e.g. a scene — so it rides the funnel) or live only
+in the view it was stuck in (pinned to the VIEW)? The component anchors a
+pinned scrap to the scene/page and scrolls with it; whether it CROSSES the
+funnel is still undecided.
+
+DROPPED this session: notes do NOT hold images. Images live in the
+RESEARCH section.
+
+LINEAGE: the grown-up form of the old "Stickies" toy / Map Plotter
+corkboard. Stickies remains NOT a menu destination; its DNA lives here and
+in the board.
 
 ================================================================
 THE SIX TRACK COLOURS — SETTLED (9 June 2026)
@@ -169,7 +233,8 @@ muddy neighbours.
 NB: this REVISES the older locked section colours (Character #cba36a,
 Event #b08a6a). Characters is now terracotta; Events takes the gold.
 Locations teal unchanged. Applied to the WP scene menu (live in the
-wheel file). Chapter #9a8fb0.
+wheel file), and now ALSO to the QUICK-NOTE pin-head palette (17 June).
+Chapter #9a8fb0.
 
 ================================================================
 THE PAGE + THE WHEEL — AS BUILT (4 June settled; 6–7 June refined)
@@ -287,7 +352,7 @@ instrument, the same gold rail-and-ring furniture both sides.
   (Currently shows a plain "55%" placeholder in the wheel file.)
 
 ================================================================
-THE MENU SPINE — GROWN THIS SESSION (16 June 2026)
+THE MENU SPINE — GROWN (16 June 2026)
 ================================================================
 Kev grew the menu beyond the bare nav to a full spine: a Landing page,
 then a Home page, then the project nav. NOTE: this is a SPINE, not the
@@ -336,7 +401,8 @@ THE PROJECT NAV (the in-app left menu)
                       wrote and saved for later; replaces the vague
                       "Library" wrapper)
    - Research        (was "Research & Reference" — material brought in
-                      from OUTSIDE the story)
+                      from OUTSIDE the story; ALSO now the home for any
+                      IMAGES — they are NOT held on notes, 17 June)
 - HELP
    - Tutorials
    - Manual
@@ -353,9 +419,9 @@ NOTES ON THE MENU SPINE:
   Its DCW sub-items are not yet defined ("other stuff" placeholders).
 - NOTES = Snippets + Research. "Library" dropped (too vague — Snippets
   names the actual contents, so a writer never hesitates "mine vs found").
-- STICKIES (Notes & Scratchpad) — DELIBERATELY DROPPED from the menu this
-  session. "We will circle back to that later." Not a destination; it is
-  the PINNED-NOTE layer (see PINNED POST-IT NOTES).
+- STICKIES (Notes & Scratchpad) — DELIBERATELY DROPPED from the menu (16
+  June). It is NOT a menu destination; it is the PINNED-NOTE layer, now
+  BUILT as the QUICK-NOTE component (see that section).
 - SYNOPSIS under DCW IS the former "Plot Mapping" (same thing; name
   dropped, confirmed 14 June).
 - FACTIONS & ORGANISATIONS — written in FULL. Never "Orgs".
@@ -430,7 +496,7 @@ OTHER STANDING SECTIONS (unchanged — abbreviated; see specialist files):
   lists, LANDING + LOGIN pages — as previously logged.
 
 ================================================================
-THE MEMORY DATABASE — HOUSEKEEPING (9 June 2026)
+THE MEMORY DATABASE — HOUSEKEEPING (9 June; updated 17 June 2026)
 ================================================================
 Pitch Dark Studios Memory (pitchdarkpress.github.io/pitch-dark-studios-
 memory) holds files per DIVISION. Code files carry a "code-" prefix, e.g.
@@ -440,7 +506,21 @@ memory) holds files per DIVISION. Code files carry a "code-" prefix, e.g.
   inkyswot/code-site-map.html.md     (the SITE MAP)
   inkyswot/code-map-plotter.html.md  (old corkboard — SUPERSEDED history)
   inkyswot/home-icons.svg.md         (launchpad line icons)
-STILL TO TEST: whether the InkySwot division can hold a .png / .jpg image.
+  inkyswot/inkyswot-code-quick-note.html.md  (NEW 17 June — the QUICK-NOTE
+                                     component; note this one carries the
+                                     division at the FRONT of the name,
+                                     fuller than the older "code-" prefix)
+
+*** ADMIN-PANEL GOTCHA — FOUND & FIXED (17 June) ***
+A file saved at the repo ROOT (a bare filename, no division folder in
+front) SAVES fine but does NOT appear in the admin menu. The menu builder
+(renderTree) buckets files by their top-level folder and deliberately
+drops anything not inside one. THE FIX: always put the division folder in
+front, e.g. "inkyswot/inkyswot-code-quick-note.html.md" — not just the
+bare filename. (Any root copy made by mistake is hidden, not lost.)
+
+STILL TO TEST: whether the InkySwot division can hold a .png / .jpg image
+(now mainly for RESEARCH, since images are NOT held on notes).
 
 FILES — InkySwot division of the memory database
 current-state.md · locked-decisions.md · dcw.md (the three core .md).
@@ -455,6 +535,10 @@ older lineage; superseded by wheel-with-roadmap (7).html as the working
 file). STILL NOT folded in anywhere: the chapter STAVE PAGE; the WP
 Prompt/Expand buttons; the wheel's stave-page label; the Tension meter
 (still a "55%" placeholder).
+inkyswot/inkyswot-code-quick-note.html.md — the QUICK-NOTE component
+(BUILT 17 June, signed off). Standalone; STYLES + SCRIPT blocks marked to
+lift, plus a DEMO HARNESS marked to delete on integration. NOT yet wired
+into index.html or the wheel.
 inkyswot/code-site-map.html.md — the SITE MAP. The standalone four-heading
 spine. NB the THEATRICAL "where you are" Site Map (blocks of colour, BOOM)
 is the new intent and is PARKED (likely its own page) — not in any file.
@@ -464,7 +548,7 @@ mixdown, not "under review".
 inkyswot/home-icons.svg.md — launchpad icons.
 inkyswot/code-map-plotter.html.md — old Plot Mapping corkboard (grew from
 the original "Stickies" toy). SUPERSEDED as a screen; its DNA feeds the
-PINNED-NOTE idea and the Sandbox.
+QUICK-NOTE and the Sandbox.
 index.html — the app workspace (Overview screen still titled "BASIS").
 login.html — login / sign up gate (stubbed).
 
@@ -477,7 +561,9 @@ Timeline / Chapters / The Treatment (placeholder shell) / AI Expand /
 AI ON-OFF / Read Aloud / light-dark / voice selector. The WHEEL + WP +
 LEFT SCENE MENU + SETTLED LEFT NAV + RIGHT-HAND ROADMAP live together in
 the standalone mockup (wheel-with-roadmap (7).html), NOT yet in
-index.html. The BOARD is a standalone still picture (the wide end).
+index.html. The BOARD is a standalone still picture (the wide end). The
+QUICK-NOTE component is built and signed off as a STANDALONE file — NOT
+yet wired into the platform.
 
 BUILD ORDER — CONFIRMED (unchanged)
 Step 1 v4.0 App Shell Rebuild (NOT STARTED) · 2 Walk · 3 Sign-off Gate ·
@@ -500,8 +586,22 @@ v4.7 pre-Step 1 rebuild. Autumn 2026 target.
   down. Grew the MENU SPINE (Landing / Home / four-section nav; Sandbox to
   head of DCW; NOTES = Snippets + Research; Stickies parked; Press in two
   homes; Trash opens to View/Empty). Identified the real wheel file as
-  wheel-with-roadmap (7).html (older pasted copy was stale). current-
-  state.md rewritten clean (this file).
+  wheel-with-roadmap (7).html (older pasted copy was stale).
+17 June (chat / BUILD session — CODE BUILT): built THE QUICK-NOTE
+  component (the pinned post-it) end to end and Kev signed it off. An
+  amber scrap built as the pop-up's scruffy cousin (drag, ✕, cascade,
+  raise-to-front); auto-grows with the text; folded-corner resize; summon
+  → jot → keep / bin / pin. The PIN is a two-state thumbtack — gold
+  OUTLINE when loose, the SAME shape FILLED with colour when pinned, swap
+  in place, with a faint gold ring when pinned; a clean click toggles, a
+  drag on the pin MOVES the note; a pinned scrap anchors to the scene and
+  scrolls with it. The pin-HEAD colour is assignable via a small POPUP (the
+  six track colours, default Tension red). Saved to the DB as
+  inkyswot/inkyswot-code-quick-note.html.md. Images on notes DROPPED (they
+  live in Research). Found & fixed an admin-panel gotcha: root-level files
+  save but do not show in the menu — give the division folder. STILL TO
+  DO: persistence + a "see all" button + the across-all-screens wiring.
+  current-state.md rewritten clean (this file).
 
 NEXT (do in order, one at a time — START A FRESH CHAT for a build)
 1. SMALL SURGICAL BUILD: remove the RIGHT-HAND ROADMAP from the live wheel
@@ -515,13 +615,18 @@ NEXT (do in order, one at a time — START A FRESH CHAT for a build)
    the wheel's stave-page label.
 4. Build the TENSION SEGMENTED BAR METER + sweep (static-first) to replace
    the "55%" placeholder in the scene menu.
-5. THE PINNED-NOTE LAYER (static-first): once the keystone is clearer,
-   settle whether a note crosses between views, then build the layer.
+5. THE QUICK-NOTE — finish it: (a) PERSIST the scraps (browser memory in
+   the standalone, the DATABASE in the platform); (b) the SEE-ALL button
+   (decide first: a panel that lists them, or gather the notes onto the
+   screen); (c) settle whether a pinned note CROSSES between views; then
+   (d) WIRE IT ACROSS ALL SCREENS (HOST as an app-level overlay; summon on
+   the keypad) — needs the live platform shell pasted.
 6. THE THEATRICAL SITE MAP (when off hold): agree resting + exploded
    stills, then wire the BOOM — likely its OWN PAGE.
 7. UPDATE locked-decisions.md and dcw.md to match (DCW = mixdown; Writing
-   Panel = Manuscript; menu spine; roadmap out) — one file at a time.
-8. Test whether the InkySwot division can hold a .png image.
+   Panel = Manuscript; menu spine; roadmap out; the QUICK-NOTE settled
+   spec) — one file at a time.
+8. Test whether the InkySwot division can hold a .png image (for Research).
 9. (Carried app jobs) settle Overview's fate; build the nav into
    index.html (to the new spine); build the home launchpad; begin Step 1.
 
@@ -529,14 +634,21 @@ OPEN DECISIONS — STILL TO SETTLE (one at a time)
 1. THE KEYSTONE — the FUNNEL DATA MODEL (how one record holds all three
    structures at once). The big one; everything hangs on it.
 2. PINNED NOTES — does a note cross BETWEEN views (pinned to the thing) or
-   live in one view (pinned to the view)?
+   live in one view (pinned to the view)? (Component anchors to the scene
+   and scrolls with it; crossing the funnel is still undecided.)
+2b. QUICK-NOTE "SEE ALL" — does the button open a PANEL that LISTS every
+   scrap, or GATHER the actual notes onto the screen? Undecided.
+2c. QUICK-NOTE PERSISTENCE — browser memory (quick, standalone) vs the
+   InkySwot DATABASE (proper, everywhere). The DB is the real home; the
+   storage swaps over at integration.
 3. MENU WORDING — final confirm "Snippets" replaces "Library"; "Research"
    vs "Research & Reference"; THE PRESS's DCW sub-items.
 4. THE PRESS — what its two homes each hold; its DCW sub-items.
 5. OVERVIEW — does it survive at all now that login routes to HOME?
 6. THE BOARD's exact role in the mixdown (it is the wide end — but does
    the writer build IN it, or is it a read view?).
-7. STICKIES / NOTES & SCRATCHPAD — circle back; how/where it returns.
+7. STICKIES / NOTES & SCRATCHPAD — now answered by the QUICK-NOTE; any
+   remaining "scratchpad" need to revisit.
 8. THE THEATRICAL SITE MAP — its own page; what the BOOM is.
 9. EVENT ORDER WITHIN A SCENE; multiple events per scene (list or collapse).
 10. WHERE THE MOOD WORDS LIVE (Cold · Bleak · Biting). Parked.
@@ -572,6 +684,11 @@ SUPERSEDED / DROPPED — KEPT AS HISTORY (do NOT build from any of this)
 - "WRITING PANEL" as the name — renamed THE MANUSCRIPT, 16 June.
 - THE RIGHT-HAND ROADMAP — to be removed (duplicates the wheel), 16 June.
 - "LIBRARY" as a NOTES item — replaced by "Snippets", 16 June.
+- IMAGES ON NOTES — dropped 17 June. A quick-note holds text only; images
+  live in the RESEARCH section.
+- THE ROUND GLOSSY RED PUSHPIN for the pinned note — superseded 17 June by
+  the FILLED THUMBTACK that matches the gold outline shape (same shape,
+  one outline, one filled).
 - THE CALM FOUR-HEADING SITE MAP AS THE INTENDED MAP — superseded 14 June
   as the *whole* intent: now only the calm SIDEBAR version. The intended
   Site Map is THEATRICAL. The four-heading map is kept, not killed.
