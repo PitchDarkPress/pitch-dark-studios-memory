@@ -1,5 +1,9 @@
 File: inkyswot/locked-decisions.md
-Last updated: 11 June 2026 (later session — Site Map redesigned; Plot Mapping dropped)
+Last updated: 17 June 2026 (added the QUICK-NOTE / pinned post-it lock —
+component built & signed off; AND folded in the 16 June decisions that had
+not yet reached this file: the DCW MIXDOWN superseding "three views",
+WRITING PANEL → THE MANUSCRIPT, the RIGHT-HAND ROADMAP removed, the MENU
+SPINE recorded)
 
 NOTE ON THIS FILE
 This file is normally add-only. It has been rewritten WHOLE several times
@@ -18,6 +22,15 @@ text, no boxes, no glow, two lanes, static/hover-driven); the old build
 moves to SUPERSEDED. (2) PLOT MAPPING was DROPPED from the platform; its
 knock-on to the board / funnel / "the lift" is UNDER REVIEW pending Kev's
 scope call (next session), so those locks are FLAGGED, not yet superseded.
+Rewritten whole again 17 June 2026 for TWO things: (1) ADDED the QUICK-NOTE
+(pinned post-it) lock — built and signed off this session (additive; the
+round red pushpin tried for the pin was never a lock — the filled thumbtack
+is the settled form); (2) FOLDED IN the 16 June decisions that had not yet
+reached this file — the DCW MIXDOWN supersedes the "three views" framing;
+the WRITING PANEL is renamed THE MANUSCRIPT; the RIGHT-HAND ROADMAP is
+removed (the wheel stays); and the MENU SPINE is recorded. Superseded
+framings move to SUPERSEDED LOCKS, dated. (Exact NAV ORDER within the menu
+spine is still being reworked — noted provisional in that lock.)
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -35,17 +48,31 @@ platform. Every section already built (Characters, Locations, Events,
 etc.) is part of the instrument. The database is the bones of the story.
 Locked: 4 June 2026.
 
-THREE VIEWS OF ONE BODY OF DATA — THE FUNNEL — LOCKED (9 June 2026)
-*** UNDER REVIEW (11 June, later) — Plot Mapping dropped; the BOARD (the
-wide view) was "Plot Mapping reborn", so the funnel's shape is Kev's
-scope call next session. Do not build from this until settled. ***
-There are THREE views of the same single body of data, and the writer
-moves freely between them: THE BOARD (Plot Mapping reborn — the wide
-view), THE WP + WHEEL (the close view, one scene), and THE SITE MAP (the
-whole-structure view, right sidebar). It is a FUNNEL — wide and loose at
-the top (the board), narrowing to the single scene at the spine (the
-WP). LIVING LINK, BOTH WAYS: change data in one view and it changes in
-the others. NOTHING ENTERED TWICE. Locked: 9 June 2026.
+THE DCW IS ONE BODY OF DATA — THE MIXDOWN — LOCKED (16 June 2026)
+(SUPERSEDES "three views of one body of data" as the FRAMING — see
+SUPERSEDED LOCKS. The FUNNEL and the LIVING LINK survive; "three separate
+views" does not.)
+The DCW is NOT three separate screens you move between. It is ONE body of
+material seen through OVERLAYS, behaving like a MIXDOWN in music — the
+tracks beneath never go away; an overlay RENDERS them together without
+destroying them, so going back is free (nothing was ever converted).
+THE FUNNEL, end to end:
+- SANDBOX — the wide, loose, no-order end (brainstorm).
+- SYNOPSIS — the SAME material with a timeline overlay, then a second
+  overlay dropping CHAPTERS and SCENES onto it.
+- THE MANUSCRIPT — the SAME material with the writing surface revealed
+  (one scene, the CLOSE end).
+TWO COATS ON ONE BODY: THE BOARD is the WIDE end (all six tracks as
+columns). THE WHEEL + PAGE is the CLOSE end (the spine = the page; the
+reach-into tracks = the LEFT scene menu, i.e. the mixed-down side list).
+LIVING LINK, BOTH WAYS; NOTHING ENTERED TWICE.
+THE KEYSTONE (still OPEN — the next real build): each overlay's structure
+— order, timeline position, chapter/scene home — must be STORED ON THE
+SHARED DATA itself, not held inside a view (the "mix instructions" sit
+alongside the tracks). How ONE record carries its board position, its
+timeline order AND its chapter/scene home at once is the question the
+whole platform hangs on (the long-standing database-reorganisation
+question). Locked (framing): 16 June 2026.
 
 THE TREATMENT IS THE DCW SWITCHED ON
 The Treatment is where everything in the database ASSEMBLES into a
@@ -58,11 +85,11 @@ Only EVENTS sit on the line and become prose — because only events
 happen. Characters, Locations, Objects, etc. do not happen; they are
 reached into by the events that use them. Locked: 4 June 2026.
 
-THE BOARD IS PLOT MAPPING REBORN — LOCKED (9 June 2026)
-*** UNDER REVIEW (11 June, later) — Plot Mapping dropped. Whether the
-BOARD / wide view survives (under a new name) or goes with Plot Mapping
-is Kev's scope call next session. Kept below as the record; do NOT build
-from it until settled. ***
+THE BOARD IS PLOT MAPPING REBORN — THE WIDE END — LOCKED (9 June 2026;
+CONFIRMED 16 June 2026)
+The board SURVIVES: 16 June confirmed it as the WIDE END of the funnel /
+mixdown — it does NOT go with the dropped "Plot Mapping" name. (This
+resolves the 11 June "under review" flag.)
 The story board (the look that "made Kev laugh") IS Plot Mapping,
 reborn in the current visual language (dark, gold, Crimson Pro /
 JetBrains Mono, the quiet-note grammar). The old corkboard
@@ -70,9 +97,27 @@ JetBrains Mono, the quiet-note grammar). The old corkboard
 left SPINE; SIX TRACKS across the top, left to right:
   EVENTS · LOCATIONS · CHARACTERS · OBJECTS · THEMES · TENSION
 Each cell holds quiet notes in the track colour; Tension is a drawn
-CURVE down its column. Locked: 9 June 2026.
+CURVE down its column. Locked: 9 June 2026; confirmed 16 June 2026.
 NB: the current board artifact (code-board-look.html) is a STILL PICTURE
 only — a "look", not wired — and still carries the OLD colours.
+OPEN (carried): does the writer BUILD in the board, or is it a read view?
+
+THE MANUSCRIPT — THE CLOSE / WRITING VIEW, RENAMED — LOCKED (16 June 2026)
+The close / writing view — the "Writing Panel" / "WP" in earlier locks —
+is now named THE MANUSCRIPT: the CLOSE end of the funnel, where the
+writer completes the book. Earlier locks that say "WP" or "Writing Panel"
+refer to THE MANUSCRIPT (the name changed, the spec did not). The
+"Manuscript View" comfort toggle lives WITHIN it. Locked: 16 June 2026.
+(Supersedes "Writing Panel" as the name — see SUPERSEDED LOCKS.)
+
+THE RIGHT-HAND ROADMAP — REMOVED; THE WHEEL STAYS — LOCKED (16 June 2026)
+The live wheel file carried a scrolling ROADMAP down the RIGHT side — a
+list of every scene. It DUPLICATES the wheel (both tell you "where you
+are" and move you between scenes). DECISION: the roadmap GOES; the WHEEL
+STAYS, on the right. Resting shape of the close view, left to right: the
+reach-into SCENE MENU · the PAGE · the WHEEL. A SMALL SURGICAL build from
+Kev's pasted wheel file (wheel untouched, small-change-means-small).
+Locked: 16 June 2026. (See SUPERSEDED LOCKS for the roadmap itself.)
 
 THE CUT — WHAT TRANSFERS TO THE WP — LOCKED (9 June 2026)
 (Survives independently of the board's fate — it governs the WP scene
@@ -88,8 +133,9 @@ everything else is reached into. Locked: 9 June 2026.
 
 THE SIX TRACK COLOURS — LOCKED (9 June 2026)
 One decision, used wherever the entity categories appear (the WP scene
-menu now; the board if it survives). All six pull clearly apart so a
-dyslexic reader tells them at a glance:
+menu now; the board if it survives; the QUICK-NOTE pin-head palette from
+17 June). All six pull clearly apart so a dyslexic reader tells them at a
+glance:
   EVENTS      gold        #c9923a
   LOCATIONS   teal        #5fa898
   CHARACTERS  terracotta  #cf7f57
@@ -280,6 +326,73 @@ flat line-with-pointer, and the plain "55%" text — see SUPERSEDED LOCKS.
 The board, if it survives, shows Tension as a CURVE; the meter is the WP
 form.)
 
+THE ENTITY POP-UP
+The writer reaches the database without leaving the page, via a stable
+pop-up. Two steps from the nav (or one click from the scene menu):
+section → list → name → record. STABLE: click to open, click (✕) to
+close; does not vanish on click-away; does not close when text is
+selected inside it. DRAGGABLE by its header. Locked: 4 June 2026.
+
+POP-UPS ARE MULTIPLE AND INDEPENDENT — LOCKED (7 June 2026, later)
+Each click opens its OWN pop-up at the HOME position (small cascade
+offset). Several open at once; each dragged, navigated and closed on its
+own ✕. Clicking one raises it to the front. Locked: 7 June 2026 (later).
+
+THE QUICK-NOTE — PINNED POST-IT — LOCKED, BUILT (17 June 2026)
+The pinned post-it (the 16 June idea) is BUILT as a standalone component
+and signed off. It is the writer's OWN scrap — NEVER story data, never
+prose, never mixed down (the writer talking to themselves). Saved to the
+DB as inkyswot/inkyswot-code-quick-note.html.md. NOT yet wired into the
+platform.
+THE SCRAP: a small AMBER paper note on the dark workspace (reads at a
+glance as a SCRAP, not a record). Built as the scruffy COUSIN OF THE
+ENTITY POP-UP — drag by its top strip, ✕ to delete (top-right), cascades
+when there is more than one, clicking one raises it to the front.
+Square-ish, upright; AUTO-GROWS with the text so there is never a
+scrollbar; the folded bottom-right corner is a real RESIZE handle.
+THE LIFE OF A SCRAP: summon → jot → KEEP (Enter; in the platform it hands
+the text to the Notes pad via window.QuickNoteOnKeep) / BIN (esc or ✕) /
+PIN.
+THE PIN — a TWO-STATE THUMBTACK: a GOLD OUTLINE when loose; the SAME
+thumbtack SHAPE FILLED with colour when pinned, in the SAME spot (swap in
+place); a faint gold ring marks a pinned scrap. A CLEAN CLICK toggles
+pinned/loose; a PRESS-AND-DRAG on the pin MOVES the note — a pinned scrap
+is still freely movable. PINNED = ANCHORED TO THE SCENE: it drops into
+the scrolling page and SCROLLS WITH IT (content-anchored). Loose scraps
+FLOAT over the view.
+THE PIN-HEAD COLOUR — assignable PER NOTE via a small POPUP that opens on
+pin and closes once a colour is picked (or you click away). The palette
+is THE SIX TRACK COLOURS, default Tension red, so a pin's colour can MEAN
+something later.
+NO IMAGES on notes — images live in the RESEARCH section.
+THE WIRING (for integration): HOST = the viewport layer (loose scraps
+float here); STAGE = the scrolling scene/page (pinned scraps anchor
+here); window.QuickNoteOnKeep(text) = optional keep hook; summonNote() is
+called from the summon key / a button / the keypad. Ships with a DEMO
+HARNESS marked to delete on integration.
+Locked, BUILT: 17 June 2026. (The filled thumbtack is the settled pin —
+the round glossy red pushpin tried earlier was dropped.)
+
+NAV SECTION COUNTS
+Each nav section shows a live count read from its saved array
+(Characters · 5, Locations · 3, Factions · 0; zero greyed). Clicking a
+counted section opens the pop-up list. Locked: 4 June 2026.
+NB (11 June, later): the REDESIGNED Site Map dropped the count badges
+from its pop-up contents (Kev's list was structure only); counts may
+return there later. The nav itself keeps its counts.
+
+POP-UP USES QUIET-NOTE GRAMMAR IN SECTION COLOUR
+Throughout the pop-up: a SUB-TITLE in the SECTION's colour, a DESCRIPTION
+in neutral ink, closed by a SOLID end-line in the section colour. Record
+view: per-field rows each with a COPY button, section-colour dividers,
+section-colour end-line. Section colours per THE SIX TRACK COLOURS.
+Locked: 4 June 2026.
+
+COPY AND PASTE IS HOW INFO REACHES THE WP
+Each pop-up entry/field has a COPY button. Copy takes TEXT ONLY:
+coloured in the pop-up, it lands in the WP PLAIN, taking the page's own
+ink. The writer stays in charge. Locked: 4 June 2026.
+
 THE SITE MAP — THE RIGHT SIDEBAR — LOCKED, BUILT (REDESIGNED 11 June
 2026, later session)
 (SUPERSEDES the first 11 June Site Map lock — the branching tree of every
@@ -314,37 +427,30 @@ Locked, BUILT: 11 June 2026 (later). Signed off ("nailed it"). To REPLACE
 code-site-map.html. STILL OPEN: the deeper-level "+" behaviour;
 clickable-to-jump; scroll vs fit; folding into the live workspace file.
 
-THE ENTITY POP-UP
-The writer reaches the database without leaving the page, via a stable
-pop-up. Two steps from the nav (or one click from the scene menu):
-section → list → name → record. STABLE: click to open, click (✕) to
-close; does not vanish on click-away; does not close when text is
-selected inside it. DRAGGABLE by its header. Locked: 4 June 2026.
-
-POP-UPS ARE MULTIPLE AND INDEPENDENT — LOCKED (7 June 2026, later)
-Each click opens its OWN pop-up at the HOME position (small cascade
-offset). Several open at once; each dragged, navigated and closed on its
-own ✕. Clicking one raises it to the front. Locked: 7 June 2026 (later).
-
-NAV SECTION COUNTS
-Each nav section shows a live count read from its saved array
-(Characters · 5, Locations · 3, Factions · 0; zero greyed). Clicking a
-counted section opens the pop-up list. Locked: 4 June 2026.
-NB (11 June, later): the REDESIGNED Site Map dropped the count badges
-from its pop-up contents (Kev's list was structure only); counts may
-return there later. The nav itself keeps its counts.
-
-POP-UP USES QUIET-NOTE GRAMMAR IN SECTION COLOUR
-Throughout the pop-up: a SUB-TITLE in the SECTION's colour, a DESCRIPTION
-in neutral ink, closed by a SOLID end-line in the section colour. Record
-view: per-field rows each with a COPY button, section-colour dividers,
-section-colour end-line. Section colours per THE SIX TRACK COLOURS.
-Locked: 4 June 2026.
-
-COPY AND PASTE IS HOW INFO REACHES THE WP
-Each pop-up entry/field has a COPY button. Copy takes TEXT ONLY:
-coloured in the pop-up, it lands in the WP PLAIN, taking the page's own
-ink. The writer stays in charge. Locked: 4 June 2026.
+THE MENU SPINE — RECORDED (16 June 2026)
+The menu grew beyond the bare nav into a full spine. The STRUCTURE below
+is settled; the exact ORDER / membership is PROVISIONAL — Kev is reworking
+the nav order in a later session, so treat order as awaiting that.
+- LANDING PAGE (before login): Sign in · Sign up.
+- HOME PAGE (the launchpad, after login): New Project · Load Project ·
+  Demos (A Christmas Carol · The Wind in the Willows) · The Press.
+- THE PROJECT NAV (the in-app left menu):
+   PROJECTS — New Project · Load Project · Demo (the two books)
+   DCW — Sandbox (HEAD of the funnel) · Synopsis · Chapters · Scenes ·
+     Manuscript (was "Writing Panel") · The Press (its second home)
+   WORLD BUILDING — Cast (Characters · Relationships · Language &
+     Dialogue · Factions & Organisations) · World (Locations · Buildings ·
+     Objects & Artefacts · Rules & Lore)
+   NOTES — Snippets (bits YOU wrote and saved) · Research (material from
+     OUTSIDE the story; also the home for IMAGES)
+   HELP — Tutorials · Manual · FAQs · What's New
+   Trash — View Trash · Empty Trash
+SETTLED POINTS within it: SANDBOX moves to the HEAD of DCW (the loose
+entry that feeds the funnel); NOTES = Snippets + Research ("Library"
+dropped as too vague — see SUPERSEDED); THE PRESS lives in TWO homes (Home
+and under DCW); STICKIES is NOT a destination — it is the QUICK-NOTE (see
+that lock). FACTIONS & ORGANISATIONS always written in full.
+Recorded: 16 June 2026 (structure); order provisional.
 
 THE WP IS A REAL DOCUMENT PAGE
 A proper document page (US Letter, 816 × 1056px, generous margins), on
@@ -368,6 +474,9 @@ A toggle in the WP strips the chrome to read the book as a continuous
 manuscript. A WRITER COMFORT, not a security feature. Display-level only;
 TRUE flowing pagination remains the bigger deferred build. Locked:
 8 June 2026.
+NB (16 June): "the Manuscript" is now ALSO the NAME of the close / writing
+view (was "Writing Panel") — see THE MANUSCRIPT lock above. This toggle is
+a comfort view WITHIN it.
 
 SCROLLBARS
 Slim, dark, gold-on-hover, everywhere. No Windows defaults. Locked:
@@ -397,6 +506,12 @@ Everything InkySwot — notes AND code — lives together in the InkySwot
 division of the Pitch Dark Studios Memory system. Code files carry a
 "code-" prefix to cluster them. New files are created in the division and
 old copies deleted — no app surgery. Locked: 9 June 2026.
+NB (17 June): a file must be saved INSIDE its division folder (e.g.
+inkyswot/inkyswot-code-quick-note.html.md), NOT at the repo ROOT — a
+root-level file SAVES but does NOT appear in the admin menu (the menu
+drops anything not inside a folder). The new quick-note file carries the
+division at the FRONT of its name (inkyswot-code-…), a fuller form of the
+"code-" prefix.
 (OPEN: whether the division can hold .png/.jpg images — to be tested.)
 
 PRICING
@@ -486,6 +601,9 @@ strap. Icons: clean SVG line art (no PNGs), stored at home-icons.svg.md.
 Entry-action icons: Load=drawer / Start=typewriter / Demos=signpost.
 (Strap wording not finally signed off.) Locked: 31 May 2026; icons
 revised 8 June.
+NB (16 June): the MENU SPINE grew — a Landing page and a HOME launchpad
+now sit before the project nav, and login routes to HOME (Overview's
+survival is in question). See THE MENU SPINE lock above.
 
 USER JOURNEY — TWO SHAPES — LOCKED
 Before login: a fixed path — Landing Page → Sign Up / Log In → Login
@@ -525,9 +643,9 @@ touches:
 - THE NAV: the "Synopsis (Plot Mapping)" framing goes; Synopsis remains
   (the redesigned Site Map lists Synopsis under DCW).
 - THE BOARD ("Plot Mapping reborn", the wide view of the funnel) and the
-  THREE-VIEWS FUNNEL: UNDER REVIEW — survive under a new name, or go with
-  Plot Mapping? Kev decides next session. Their locks above are FLAGGED,
-  not yet superseded.
+  FUNNEL: RESOLVED 16 June — the board SURVIVES as the funnel's WIDE END
+  within the mixdown (see THE BOARD lock). Only the "Plot Mapping" NAME
+  was dropped, not the board.
 - "THE LIFT" (the Plot Mapping timeline downstairs, below): tied to the
   board — UNDER REVIEW with it.
 - code-map-plotter.html and code-board-look.html: affected; left as
@@ -604,13 +722,24 @@ OPEN — NOT YET DECIDED
 ================================================================
 THE NEW NAV ORDER (Kev, next session) — and with it: do Overview and
 Sandbox stay? What is the PLOT MAPPING SCOPE — does the BOARD / wide view
-(and "the lift") go too, or survive under a new name?
+(and "the lift") go too, or survive under a new name? (16 June leaning:
+the board survives as the funnel's wide end.)
+THE QUICK-NOTE — three follow-ups (17 June): (a) PERSISTENCE — scraps must
+survive a refresh and stay put: browser memory in the standalone, the
+InkySwot DATABASE in the platform; (b) SEE ALL — one button to show every
+scrap at once: a PANEL that lists them, or GATHER the notes onto the
+screen? Undecided; (c) DOES A PINNED NOTE CROSS BETWEEN VIEWS — pinned to
+the THING (rides the funnel) or to the VIEW? The component anchors to the
+scene and scrolls with it; crossing is undecided. Then WIRE IT ACROSS ALL
+SCREENS (HOST as one app-level overlay; summon on the keypad).
 THE SITE MAP DEEPER LEVEL — how Demo's books and Cast/World's contents
 (the "+" items) open: a further pop-up set, or a pop-up panel.
 SITE MAP DETAIL — clickable-to-jump; scroll vs fit; folding into the live
 workspace file. (What it is / shows / how it reveals are SETTLED + BUILT.)
 THE DATABASE REORGANISATION for the living link (when the views are
-brought together): how the views read/write the SAME records.
+brought together): how the views read/write the SAME records. (16 June:
+this is THE KEYSTONE — how one record carries board position + timeline
+order + chapter/scene home at once.)
 THE STAVE PAGE'S WHEEL LABEL — how the wheel shows a chapter page.
 WHERE THE MOOD WORDS LIVE (Cold · Bleak · Biting). Parked.
 EVENT ORDER WITHIN A SCENE: events lack a position.
@@ -628,6 +757,24 @@ MEMORY DIVISION IMAGES: whether the InkySwot division can hold .png/.jpg.
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 (Kept as the record of how we got here.)
 ================================================================
+THREE VIEWS OF ONE BODY OF DATA — THE FRAMING (locked 9 June, SUPERSEDED
+16 June) — "three separate views you move between". Replaced by THE
+MIXDOWN (one body of data seen through overlays). The FUNNEL and the
+LIVING LINK survive; the "three separate views" framing does not. See THE
+DCW IS ONE BODY OF DATA — THE MIXDOWN above.
+
+"WRITING PANEL" / "WP" AS THE NAME (used from 4 June, SUPERSEDED 16 June)
+— the close / writing view is now THE MANUSCRIPT. Earlier locks still say
+"WP"; they refer to the Manuscript. See THE MANUSCRIPT lock above.
+
+THE RIGHT-HAND ROADMAP (built in the live wheel file, SUPERSEDED 16 June)
+— a scrolling list of every scene down the right side. Removed because it
+DUPLICATES the wheel; the wheel stays. See THE RIGHT-HAND ROADMAP lock.
+
+"LIBRARY" AS A NOTES ITEM (SUPERSEDED 16 June) — replaced by "Snippets"
+(too vague; Snippets names the actual contents). NOTES = Snippets +
+Research. See THE MENU SPINE.
+
 THE FIRST SITE MAP — A BRANCHING TREE (locked/built 11 June, SUPERSEDED
 11 June later) — the right sidebar drawn as a full branching wiring tree
 of EVERY nav section (spine of section boxes; elbow connectors to leaf
@@ -648,6 +795,11 @@ THE "ROAD MAP" NAME + ITS IN-PRINCIPLE LOCK (9 June, REVISED 11 June) —
 the right sidebar was locked in principle as a "USER ROAD MAP" (journey
 stages, lit dot). Renamed THE SITE MAP 11 June; the journey-line framing
 is dropped.
+
+THE QUICK-NOTE ROUND RED PUSHPIN (tried 17 June, SUPERSEDED same day) —
+the pinned state was first a round glossy red pushpin punched through the
+top edge. Replaced by the FILLED THUMBTACK that matches the gold outline
+shape (same shape, one outline / one filled). See THE QUICK-NOTE above.
 
 PROMPT / EXPAND BUTTON TREATMENTS B / C / D (tried 11 June, SUPERSEDED
 same day) — B hairline underline; C Prompt outline / Expand solid
