@@ -1,5 +1,228 @@
-# code.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InkySwot · Render Bench</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-*Created: 2026-06-20*
+  :root{
+    --bg:#0a0806;
+    --panel:#0f0d0a;
+    --ink:#e8e0d0;
+    --mute:#8a8170;
+    --faint:#5a5345;
+    --gold:#c9923a;
+    --gold-bright:#e8b060;
+    --rule:#2a2620;
+    --rule-soft:#1c1915;
+  }
 
-Nothing recorded yet.
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Crimson Pro',serif;
+    overflow:hidden;
+  }
+
+  /* top bar */
+  .topbar{
+    height:48px;
+    display:flex;align-items:center;gap:16px;
+    padding:0 20px;
+    border-bottom:1px solid var(--rule);
+    background:linear-gradient(180deg,#13110d,#0c0a07);
+  }
+  .wordmark{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;letter-spacing:.22em;
+    color:var(--gold);text-transform:uppercase;font-weight:600;
+  }
+  .crumb{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;letter-spacing:.18em;
+    color:var(--faint);text-transform:uppercase;
+  }
+  .topbar .right{margin-left:auto;display:flex;gap:10px;align-items:center;}
+
+  /* buttons */
+  .btn{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mute);
+    background:transparent;
+    border:1px solid var(--rule);
+    border-radius:3px;
+    padding:8px 14px;
+    cursor:pointer;
+    transition:border-color .15s,color .15s;
+  }
+  .btn:hover{border-color:var(--gold);color:var(--gold);}
+  .btn.go{border-color:var(--gold);color:var(--gold);}
+  .btn.go:hover{background:rgba(201,146,58,.08);color:var(--gold-bright);border-color:var(--gold-bright);}
+
+  /* the stage */
+  .stage{
+    position:absolute;inset:48px 0 0 0;
+    display:flex;
+  }
+
+  /* left: paste */
+  .paste-pane{
+    width:50%;
+    display:flex;flex-direction:column;
+    border-right:1px solid var(--rule);
+    transition:width .2s ease;
+  }
+  .pane-head{
+    height:34px;
+    display:flex;align-items:center;gap:12px;
+    padding:0 16px;
+    border-bottom:1px solid var(--rule-soft);
+    font-family:'JetBrains Mono',monospace;
+    font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--faint);
+    flex-shrink:0;
+  }
+  textarea#src{
+    flex:1;
+    width:100%;
+    background:var(--panel);
+    color:var(--ink);
+    border:none;
+    outline:none;
+    resize:none;
+    padding:16px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    line-height:1.6;
+    tab-size:2;
+  }
+  textarea#src::placeholder{color:var(--faint);}
+
+  /* right: render */
+  .view-pane{
+    width:50%;
+    display:flex;flex-direction:column;
+    transition:width .2s ease;
+  }
+  iframe#out{
+    flex:1;
+    width:100%;
+    border:none;
+    background:#fff;
+  }
+  .empty{
+    flex:1;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--faint);
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    text-align:center;
+    padding:40px;
+  }
+
+  /* collapsed states */
+  body.full-view .paste-pane{width:0;border-right:none;overflow:hidden;}
+  body.full-view .view-pane{width:100%;}
+
+  .stat{
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;letter-spacing:.12em;
+    color:var(--faint);
+    margin-left:auto;
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span class="wordmark">InkySwot</span>
+    <span class="crumb">Render Bench</span>
+    <div class="right">
+      <button class="btn" id="clearBtn">Clear</button>
+      <button class="btn" id="fullBtn">Full view</button>
+      <button class="btn go" id="renderBtn">Render ▸</button>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="paste-pane">
+      <div class="pane-head">
+        <span>Paste code here</span>
+        <span class="stat" id="stat">empty</span>
+      </div>
+      <textarea id="src" placeholder="Paste a saved file straight from the database — the File: header line at the top is stripped for you automatically. Then hit Render."></textarea>
+    </div>
+    <div class="view-pane">
+      <div class="pane-head"><span>Live page</span></div>
+      <div class="empty" id="empty">nothing rendered yet — paste on the left, hit render</div>
+      <iframe id="out" style="display:none"></iframe>
+    </div>
+  </div>
+
+<script>
+  const src      = document.getElementById('src');
+  const out      = document.getElementById('out');
+  const empty    = document.getElementById('empty');
+  const stat     = document.getElementById('stat');
+  const renderBtn= document.getElementById('renderBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const fullBtn  = document.getElementById('fullBtn');
+
+  function clean(text){
+    let t = text;
+    t = t.replace(/^\s*File:.*(\r?\n)+/i, '');
+    return t.trimStart();
+  }
+
+  function render(){
+    const code = clean(src.value);
+    if(!code.trim()){
+      out.style.display = 'none';
+      empty.style.display = 'flex';
+      empty.textContent = 'nothing to render — the box is empty';
+      return;
+    }
+    empty.style.display = 'none';
+    out.style.display = 'block';
+    const doc = out.contentDocument || out.contentWindow.document;
+    doc.open();
+    doc.write(code);
+    doc.close();
+  }
+
+  function clearAll(){
+    src.value = '';
+    out.style.display = 'none';
+    empty.style.display = 'flex';
+    empty.textContent = 'nothing rendered yet — paste on the left, hit render';
+    updateStat();
+    src.focus();
+  }
+
+  function updateStat(){
+    const n = src.value.length;
+    stat.textContent = n ? n.toLocaleString() + ' chars' : 'empty';
+  }
+
+  renderBtn.addEventListener('click', render);
+  clearBtn.addEventListener('click', clearAll);
+  fullBtn.addEventListener('click', ()=>{
+    document.body.classList.toggle('full-view');
+    fullBtn.textContent = document.body.classList.contains('full-view') ? 'Split view' : 'Full view';
+  });
+  src.addEventListener('input', updateStat);
+
+  src.addEventListener('keydown', e=>{
+    if((e.ctrlKey||e.metaKey) && e.key==='Enter'){ e.preventDefault(); render(); }
+  });
+
+  updateStat();
+</script>
+
+</body>
+</html>
