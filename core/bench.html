@@ -59,6 +59,7 @@
     transition:border-color .15s,color .15s;
   }
   .btn:hover{border-color:var(--gold);color:var(--gold);}
+  .btn.active{border-color:var(--gold);color:var(--gold);}
   .btn.go{border-color:var(--gold);color:var(--gold);}
   .btn.go:hover{background:rgba(201,146,58,.08);color:var(--gold-bright);border-color:var(--gold-bright);}
 
@@ -120,8 +121,13 @@
     padding:40px;
   }
 
-  body.full-view .paste-pane{width:0;border-right:none;overflow:hidden;}
-  body.full-view .view-pane{width:100%;}
+  /* full-code: code takes the whole width, render hidden */
+  body.full-code .paste-pane{width:100%;border-right:none;}
+  body.full-code .view-pane{width:0;overflow:hidden;}
+
+  /* full-render: render takes the whole width, code hidden */
+  body.full-render .paste-pane{width:0;border-right:none;overflow:hidden;}
+  body.full-render .view-pane{width:100%;}
 
   .stat{
     font-family:'JetBrains Mono',monospace;
@@ -138,7 +144,8 @@
     <span class="crumb">Render Bench</span>
     <div class="right">
       <button class="btn" id="clearBtn">Clear</button>
-      <button class="btn" id="fullBtn">Full view</button>
+      <button class="btn" id="fullCodeBtn">Full view code</button>
+      <button class="btn" id="fullRenderBtn">Full view render</button>
       <button class="btn go" id="renderBtn">Render ▸</button>
     </div>
   </div>
@@ -159,13 +166,14 @@
   </div>
 
 <script>
-  const src      = document.getElementById('src');
-  const out      = document.getElementById('out');
-  const empty    = document.getElementById('empty');
-  const stat     = document.getElementById('stat');
-  const renderBtn= document.getElementById('renderBtn');
-  const clearBtn = document.getElementById('clearBtn');
-  const fullBtn  = document.getElementById('fullBtn');
+  const src         = document.getElementById('src');
+  const out         = document.getElementById('out');
+  const empty       = document.getElementById('empty');
+  const stat        = document.getElementById('stat');
+  const renderBtn   = document.getElementById('renderBtn');
+  const clearBtn    = document.getElementById('clearBtn');
+  const fullCodeBtn = document.getElementById('fullCodeBtn');
+  const fullRenderBtn = document.getElementById('fullRenderBtn');
 
   function clean(text){
     let t = text;
@@ -203,12 +211,24 @@
     stat.textContent = n ? n.toLocaleString() + ' chars' : 'empty';
   }
 
+  // toggle a full-view state; clicking the active one returns to 50/50
+  function toggleView(mode, btn){
+    const cls = mode === 'code' ? 'full-code' : 'full-render';
+    const other = mode === 'code' ? 'full-render' : 'full-code';
+    const wasActive = document.body.classList.contains(cls);
+    document.body.classList.remove('full-code','full-render');
+    fullCodeBtn.classList.remove('active');
+    fullRenderBtn.classList.remove('active');
+    if(!wasActive){
+      document.body.classList.add(cls);
+      btn.classList.add('active');
+    }
+  }
+
   renderBtn.addEventListener('click', render);
   clearBtn.addEventListener('click', clearAll);
-  fullBtn.addEventListener('click', ()=>{
-    document.body.classList.toggle('full-view');
-    fullBtn.textContent = document.body.classList.contains('full-view') ? 'Split view' : 'Full view';
-  });
+  fullCodeBtn.addEventListener('click', ()=>toggleView('code', fullCodeBtn));
+  fullRenderBtn.addEventListener('click', ()=>toggleView('render', fullRenderBtn));
   src.addEventListener('input', updateStat);
 
   src.addEventListener('keydown', e=>{
