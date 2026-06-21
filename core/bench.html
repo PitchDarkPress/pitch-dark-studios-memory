@@ -215,7 +215,20 @@
     if((e.ctrlKey||e.metaKey) && e.key==='Enter'){ e.preventDefault(); render(); }
   });
 
-  updateStat();
+  // On open: pick up code handed over by the CODE VIEW button, drop it in, render once
+  (function(){
+    try{
+      const handed = sessionStorage.getItem('benchCode');
+      if(handed){
+        src.value = handed;
+        sessionStorage.removeItem('benchCode');
+        updateStat();
+        render();
+        return;
+      }
+    }catch(e){}
+    updateStat();
+  })();
 </script>
 
 </body>
