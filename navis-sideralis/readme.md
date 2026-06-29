@@ -1,5 +1,1 @@
-# readme
-
-*Created: 2026-06-29*
-
-Nothing recorded yet.
+This was a bugger to create
