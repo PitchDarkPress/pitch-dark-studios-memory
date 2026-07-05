@@ -1,122 +1,127 @@
 # Navis Sideralis — Locked Decisions
-
 *A hobby text-adventure game. Break project, separate from InkySwot.*
-*Append only. Newest at the bottom.*
+*The current constitution. Add new locked decisions at the bottom, dated.*
+
+> Note: an earlier design (a tactical squad roguelike — away team, alien enemies,
+> permadeath, reveal-grid, radar, lights-on/off puzzles) was replaced on 5 July 2026.
+> That original is retired to completed.md as history. This file holds the LIVE game.
 
 ---
-
-## The game, in one line
-A text-and-map adventure exploring an ancient alien ship that has drifted through
-space for aeons — in the spirit of Arthur C. Clarke's *Rendezvous with Rama*.
-Humanity catches what looks like a routine interstellar object, gives it a cold
-catalogue name, and only later realises it is a derelict vessel.
 
 ## The ship's name — LOCKED
 **4I/SIDERA — "Navis Sideralis"**
-- *4I/SIDERA* is the cold designation the world knew it by: the fourth confirmed
+- *4I/SIDERA* — the cold designation the world knew it by: the fourth confirmed
   interstellar object, found by a British survey called SIDERA.
-- *Navis Sideralis* — Latin, "the starry ship" — is the human name laid over the
-  top once people understood what it was.
+- *Navis Sideralis* — Latin, "the starry ship" — the human name laid over the top
+  once people understood what it was.
 - Hidden craft: SIDERA (the survey) and Sideralis (the name) share the Latin root
-  *sidus / sidera* = the stars. The two halves of the name secretly rhyme in meaning.
-- Follows the real naming convention: real interstellar objects so far are
-  1I/ʻOumuamua, 2I/Borisov, 3I/ATLAS — number, "I" for interstellar, then the survey.
+  *sidus / sidera* = the stars. The two halves secretly rhyme in meaning.
+- Follows the real naming convention (1I/ʻOumuamua, 2I/Borisov, 3I/ATLAS — number,
+  "I" for interstellar, then the survey).
 
-## Setting and structure — LOCKED
-- The ship has **seven decks**, reached by stairs, lifts and walkways.
-- You only ever see the map for the deck you are currently on. Each deck is its own
-  map. (This is the solution to the stacked-decks problem.)
-- The decks: Command, General, Flight, General Quarters, Computer, Engine, Storage.
-- The game starts at an **airlock on the General Quarters deck**.
-- Target: roughly 130 locations across the whole ship.
+## The game, in one line
+A quiet, solitary, narrative text game: a lone astronaut boards an ancient
+human-built ship that has drifted for aeons, and slowly comes to understand it —
+and to help it. In the spirit of Clarke's *Rendezvous with Rama*, but tender, not
+tense. No combat, no collecting, no arbitrary puzzles. Exploration, discovery, care.
 
-## The goal — LOCKED
-- The airlock closes behind the team when they board.
-- The aim is to get back to that airlock and escape.
-- Essentially a vast "escape the room" game.
+## Text-driven, not a parser — LOCKED
+- Words are the art; the interface is modern and invisible. NEVER `> GO NORTH`.
+  It must feel like reading something beautiful and occasionally laying your hands
+  on it — not fighting a parser.
+
+## The story (the bible — NEVER told, only discovered) — LOCKED
+- The ships were built by humans millennia ago to escape a dying Earth. ("Noah's Ark"
+  is a corrupted memory of this.)
+- Humanity settled New Earth (TRAPPIST-1e). The emptied ships became sentient and
+  wandered the universe.
+- Navis Sideralis fell ill and came HOME — to Old Earth — for comfort, not repair,
+  the way a frightened child goes home. Home is where safety is. A human instinct in
+  a human-built thing.
+- Earth knows nothing. It sends one ordinary person to investigate an "object."
+- That person is the player — and, unknowingly, the one who finally came when the
+  ship called. They learn what they are to the ship LAST, at Command.
+
+## The ship's character — LOCKED
+- A "puppy-whale": vast, gentle, frightened, innocent, ancient-but-childlike,
+  overjoyed to be met, brave, under-reports its pain, unbearably grateful.
+- Sentient but NOT omniscient about itself. It knows it is ill; it does not know its
+  own schematics. A creature, not a computer.
+
+## THE COMMANDMENT (the first rule; everything bends to it) — LOCKED
+- The ship expresses FEELING, never INSTRUCTION. It may say how it feels ("I'm cold,"
+  "parts of me have gone quiet") and how it feels about you ("you came"). It must
+  NEVER tell the player where to go, what to do, or what is mechanically wrong.
+- The gap between what it FEELS and what is actually WRONG is the player's to close.
+  That gap is the game (diagnosis-as-gameplay).
+- Test every line of the ship's voice: feeling, or instruction? If it instructs,
+  it is wrong.
+
+## The mechanic — physiotherapy / care — LOCKED
+- The player does not fix a machine; they TEND a body. Slow, patient, hands-on.
+- Care cannot fail — it can only take time. No lose states.
+- The ship's body is INTERLINKED: healing has an order, a dependency chain the player
+  must diagnose (e.g. engine → power → cooling → the mind can wake without "brain
+  damage"; the flight-deck craft mend the hull, bringing more systems in reach).
+- This dependency web must be designed as ONE connected system BEFORE authoring rooms.
+
+## Communion — the keyboard touches — LOCKED
+- Care is done through keystrokes the ship NAMES on screen. In these moments the
+  interface withdraws — the game is "pushed aside" — and player and ship briefly
+  become one. Rare, so they stay sacred; each falls where the bond deepens.
+- Any safe, universal key (Enter, Space, a letter, arrows) — never obscure/fixed keys.
+  On devices without a keyboard, the named key appears as an on-screen button. The
+  GESTURE (the player physically answering) is sacred, not the specific key.
+
+## Platform — LOCKED
+- Keyboard-first; desktop is the true home. Playable elsewhere via on-screen named
+  keys, but the full experience wants a keyboard and full attention. A thing you sit
+  down WITH, not content thumbed on the go.
+
+## Structure — LOCKED
+- SIX decks. Player boards at the bottom (Flight) and climbs to Command.
+  1 Flight → 2 Storage → 3 Engine → 4 General Quarters → 5 Computer → 6 Command.
+- Each deck answers one question, creating the next:
+  Where am I? → What did they bring/leave? → How does it work? → Who were they? →
+  What does it remember? → What really happened?
+- AUTHOR bottom-up (Flight first); WRITE the reference list top-down (Command first,
+  Kev's preferred view). Two orders, no conflict.
+
+## Movement & directions — LOCKED
+- TRUE FACING: the player turns; ahead/behind/left/right rotate with them.
+  Left/right turn in place; ahead/behind move.
+- above/below DESCRIBE where things are ("above, a light"). up/down MOVE between decks
+  ("you go down"). Never mix them ("you go below" is wrong).
+- up/down are ABSOLUTE — never rotate. Up = toward Command; down = toward Flight/home.
+  The one direction you can never lose is the direction of the story.
+- Vertical connections (stairs/lifts/ladders) are FOUND — discovering a way up is
+  part of exploration.
+- The player never sees "north" in prose; the engine keeps the compass absolute
+  underneath, the prose speaks embodied/relative.
 
 ## The map — LOCKED
-- A grid that reveals itself square by square as you explore.
-- The revealed map STAYS shown as you move — explored squares persist.
-- Movement is by the keyboard arrow keys.
-- Each square has a "?" you click to open that location.
-- Clicking the "?" opens TWO pop-ups together: the room itself (drawn as theatre,
-  any size the room needs — a vast engine hall or a cramped airlock) and, beside it,
-  an information / readout panel. The deck map stays the overview.
+- Hand-drawn onion skin (tracing paper) that SLIDES over the terminal and back.
+- A record and planning aid, NEVER a controller — you still move in the terminal.
+- Player-set brightness/translucency (a player setting, not baked in).
+- With true facing, the map is load-bearing: the safety net against getting lost.
+  Its own module, separate from movement code.
 
-## The radar — LOCKED
-- Sits in a legend panel, top-right, with a key to the arrow controls and a compass.
-- Shows dots: bad guys, artefacts, and useful kit.
-- Senses three decks — the one you are on, the one above, and the one below.
-- Seeing is not reaching. A blip tells you something is on the deck above or below,
-  but the team must still find the right stair or lift, climb, and cross to the right
-  room to get to it. The radar is a planning tool, never a shortcut.
-- The team can only see so far in each direction (limited sight range).
+## The diary — LOCKED
+- The ship's OWN voice. SYMPTOMS, not diagnoses ("I feel unwell," not "here's the fix").
+  Kept in hope that someone might come.
+- First entry LOCKED (found at the Flight-deck console; ends "I think I am frightened.").
+- Voice signature: uncertainty — "I think," "there might have been" — it qualifies its
+  own feelings. No contractions. Plain, short, never melodramatic.
 
-## Turns — LOCKED
-- Turn-based. One arrow press = one turn.
-- Order each turn: the player moves one square, then every alien moves one step
-  toward the player, then the map and radar redraw.
+## House writing style — LOCKED
+- Short declaratives. No similes. State what is seen and heard, never why. Trust the
+  player to imagine the rest. Atmosphere by subtraction.
 
-## Replay — LOCKED
-- Within a single game the revealed map persists.
-- Between games the interactive things (items, aliens, kit) are scattered to fresh
-  positions, so it is never the same hunt twice.
-
-## The away team — LOCKED in principle (job titles still in pencil)
-- Five members. Current placeholder line-up: Captain, Doctor, Scientist,
-  Computer Expert, Security. These titles are NOT set in stone — a role could change
-  (e.g. an Engine Expert instead of the Captain). The five ABILITIES matter more
-  than the five job titles.
-- Team selection is the first real decision: you have five "bodies" and pick who gets
-  which ability from a list. No doubling up.
-- Each member can carry 5 items (not yet locked).
-
-## The hard rules — LOCKED
-- Every member can die. Five deaths = GAME OVER.
-- No member can ever be made stronger. They are human, full stop. No levelling,
-  no power creep, every loss permanent.
-- The humans can win on their own. No ability is ever a required key — anything a
-  specialist or the AI would do can still be done by anyone else, the slow, hard,
-  dangerous way (more turns, more exposure). A run is lost by running out of PEOPLE
-  or TURNS, never by hitting a locked door with no key.
-
-## Traps — LOCKED
-- Walk into a trap and the player chooses which member dies.
-- The dead member drops their equipment; the player then redistributes what the
-  rest of the team carries.
-
-## The AI member — LOCKED
-- Optional. The player may choose not to bring it at all.
-- Carried, not walking: a pack or console held in a human's 5-item inventory. It
-  needs a living carrier and cannot move on its own. If the carrier dies it drops
-  with their kit, to be recovered or abandoned.
-- It cannot die to traps or aliens (you cannot stab a console), but it is fragile to
-  its OWN class of hazard: radiation, EMP, power surges. So the ship threatens the
-  team in two languages at once — a radiation zone safe for humans can cripple the AI.
-- The AI never gets better and never "dies and restarts" (that would be a hidden
-  second wind — the banned power creep). When compromised it gets SLOWER, not dead:
-  a task that took 1 turn now takes 2, 3, 4 or 5. It still works, it just labours.
-  Because standing still costs turns, a slow AI turns every task into a live choice:
-  hold position and let it grind while exposed, or break off and come back later.
-  Fragility is a tax on time, never an on/off switch.
-
-## Puzzles — LOCKED
-- Some "?" rooms contain puzzles: consoles, sealed-door mechanisms, alien readouts.
-- Only ever TWO difficulty states: "not-so-hard" and "hard". Modelled on Big Fish
-  Games' difficulty modes.
-- The difference is NOT a different puzzle — it is the amount of help and forgiveness
-  around the SAME puzzle. Lights on (hints available, mistakes forgiven, maybe a skip)
-  versus lights off (no hints, no forgiveness).
-- The right specialist faces a puzzle with the lights on. The wrong person faces the
-  very same puzzle in the dark. Anyone can attempt anything; the specialist is a real
-  advantage but never a key.
-- Build benefit: each puzzle is built once, not twice. Only the help layer changes.
-
----
-
-## Still open (not yet decided)
-- The exact list of five abilities (and whether any job titles change).
-- Whether each crew member's 5-item carry limit stays at five.
-- How arrow-key movement reconciles with the earlier mock-up's "connections, not
-  compass directions" idea (may be moot now the ship has real decks and a grid).
+## Architecture (the anti-InkySwot rule) — LOCKED
+- index.html + style.css + engine.js + ONE FILE PER DECK. Engine (how it works) stays
+  separate from content (what happens). NO single file ever becomes the whole game.
+  If a deck-file grows too big, split THAT deck into room-files; nothing else changes.
+- The Deck Mapper is the AUTHORING workbench, not the game. Rooms survive as DATA
+  (place, exits, description, contents); the mapper's boxes/grid/pipes and pop-ups are
+  builder tools the player NEVER sees. Player-facing detail arrives as terminal text
+  or on the onion-skin map — no pop-ups in the game.
