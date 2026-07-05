@@ -1,42 +1,54 @@
 # Navis Sideralis — Current State
-
 *Overwrite each session. A snapshot of where the game is right now.*
-*Last updated: 29 June 2026*
+*Last updated: 5 July 2026*
 
 ---
 
 ## What this is
 A hobby text-adventure game — a break project, separate from InkySwot.
-An escape-the-room game set aboard an ancient alien ship, 4I/SIDERA
-("Navis Sideralis"), that has drifted through space for aeons.
+A quiet, solitary, narrative game about a lone astronaut who boards an ancient
+human-built ship, Navis Sideralis, and slowly comes to understand it — and to
+help it. Not combat, not collecting, not arbitrary puzzles. Exploration, discovery,
+care.
 
-## Where we've got to
-The whole design is roughed out and the big decisions are locked (see
-locked-decisions.md). In short:
-- Seven decks, one map per deck, you only see the deck you're on.
-- Grid map that reveals itself square by square and stays revealed.
-- Arrow-key movement, turn-based: you move, aliens step toward you, redraw.
-- "?" on each square opens the room as theatre plus an info panel.
-- Radar senses three decks (yours, above, below) but seeing isn't reaching.
-- Five-person away team, chosen at the start, each with one ability, no doubling up.
-- Everyone can die; five deaths = game over; nobody gets stronger; humans can always
-  win the slow hard way.
-- Optional carried AI: can't be stabbed, but radiation/EMP make it slower, never dead.
-- Puzzles have two states only — lights on (right specialist) or lights off (wrong
-  person) — same puzzle, different help.
+## The heart of it (settled today)
+The ship is ours — built by humans millennia ago to carry humanity from a dying
+Earth. Its people were long ago settled on New Earth (TRAPPIST-1e). The empty ships
+became sentient. One, Navis Sideralis, fell ill and came *home* — to Old Earth — the
+way a frightened child goes home, because home is where safety is. Earth knows
+nothing; it sends one ordinary person to look at an "object." That person is the
+player — and, though neither they nor Earth know it, the one who finally came when
+the ship called.
 
-## Nothing is built yet
-This is all design. No code exists. The agreed first build, when the time comes, is
-the smallest core that proves the spine: the start square on a deck grid, arrow-key
-movement revealing new squares, and the turn heartbeat running. Radar, "?" rooms,
-team and puzzles all come after that core moves correctly.
+The ship is a puppy-whale: vast, gentle, frightened, innocent, overjoyed to be met.
+The player is its doctor/physio, not its mechanic. The ending leans hopeful: it came
+home, and someone was there.
 
-## Next time — the obvious next piece of thinking
-The list of five crew abilities (job titles still in pencil). Everything it has to
-satisfy is already locked, so it should be a clean session.
+## Structure
+Six decks, built bottom-up (the way the player climbs), viewed top-down in our notes:
+- Deck 6 · Command — *What really happened?*
+- Deck 5 · Computer — *What does the ship remember?*
+- Deck 4 · General Quarters — *Who were they?*
+- Deck 3 · Engine — *How does this thing work?*
+- Deck 2 · Storage — *What did they bring / leave behind?*
+- Deck 1 · Flight — *Where am I?* ← we build here first (the prologue/docking deck)
+
+## What's actually built
+- **Cold open** — the docking/hatch terminal sequence (earlier).
+- **Deck Mapper** — the authoring workbench (not the game). Reordered to the six decks;
+  DECK codes editable; anchor now marks the active deck.
+- **Onion-skin map** — hand-drawn tracing-paper chart that slides over the terminal;
+  player-set translucency; a record you consult, never a controller. Prototype locked.
+- **Console-communion prototype** — dark hangar, walk north, PLEASE PRESS ENTER, the
+  game withdraws, and the ship's first diary entry types out in the dark.
+- **The ship's first diary entry** — written and locked (ends "I think I am frightened.").
+
+## Next time — the obvious next piece
+Rewrite the prototype's movement to the agreed language (true facing;
+ahead/behind/left/right; above/below to describe, up/down to move), then scaffold the
+engine (index.html + style.css + engine.js + one file per deck) and author Flight.
 
 ## Open threads
-- Exact five abilities, and whether any role titles change.
-- Whether the 5-item carry limit stays at five.
-- A leftover from an early mock-up: "connections, not compass directions" — probably
-  moot now there are real decks and a grid, but noted.
+See thinking.md — voice register (frozen-old vs modernising), whether "helping" is
+repair or being-known, one diary entry or scattered per deck, where the brightness
+control lives.
