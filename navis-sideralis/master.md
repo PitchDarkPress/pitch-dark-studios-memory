@@ -1,7 +1,7 @@
 # NAVIS SIDERALIS — Master Briefing
 *The single authoritative file. Hand this whole file to any new chat to bring it
 fully up to speed. Everything permanent and load-bearing lives here.*
-*Last updated: 5 July 2026*
+*Last updated: 6 July 2026*
 
 > **⚠ RULE FOR THIS FILE — read me.**
 > This is deliberately ONE file so a new chat never misses vital information.
@@ -140,6 +140,54 @@ tense. No combat, no collecting, no arbitrary puzzles. Exploration, discovery, c
 - Short declaratives. No similes. State what is seen and heard, never why. Trust the
   player to imagine the rest. Atmosphere by subtraction.
 
+## Visual signature — LOCKED (the face of the game; found 5 July 2026)
+The whole visual identity is the ship's condition made visible in the screen itself —
+the interface as a vital-signs monitor. Two changes, both earned by the player's care,
+both spanning the WHOLE climb, both imperceptibly slow. Symptoms SHOWN, never told —
+this obeys the commandment (the screen is the ship being unwell/recovering in front of
+you, not the ship instructing you).
+
+- **Temperature — the world warms.** Starts cold: bloodless grey-on-black, the palette
+  of something switched off and unwell. As the player tends the ship and climbs, warmth
+  seeps back in, resolving by the end into Pitch Dark black-and-GOLD (lamplight). The
+  game ends looking like Pitch Dark because the ship, by then, is WELL. The gold is the
+  reward for care, not a timer.
+- **Pulse — the screen steadies.** The screen is "almost broken" — it flickers. NOT
+  madly: mostly steady, then every so often it falters, so it reads as illness, not
+  style. The gaps matter as much as the flickers. As the ship is tended, the flickers
+  come LESS often — its breath steadying — until by Command the screen is calm. Possibly
+  worst where the ship is most hurt (flicker as rough diagnostic) — try, don't promise.
+
+- **THE ACCEPTANCE TEST (the Shaw Theatre dusk).** Kev once did sound at the Shaw
+  Theatre, London, on an early digital lighting board: a 20-minute day-into-night fade.
+  Across 3 weeks of rehearsal and a 3-week run he NEVER once saw it change — he was
+  always surprised when an actor said "it's getting dark, we should go inside." That is
+  the bar. The player must NEVER catch the warmth or the flicker-fade moving; they must
+  only, near the end, REALISE the world is warm now and the ship hasn't trembled in a
+  long while. The realisation should arrive from OUTSIDE the effect (the ship says
+  something; the map's paper looks warmer than remembered), the way it came from the
+  actor's mouth, not the lights. **If the shift is ever perceptible in the moment, it
+  is too fast.** Kev is the acceptance test — he has 30 performances of "correct" in his
+  memory; if he catches it moving, slow it down.
+
+- **How to get near Shaw-invisibility on a screen (technique):** keep the colour
+  distance MODEST; spread it over the whole game; put the warmth in TEXT on near-black
+  (black doesn't band; small coloured text on black hides drift best — we're warming a
+  candle, not fading a sky); lay a faint film-GRAIN/dither over everything to break up
+  8-bit banding (also suits the old/analogue mood). Both effects are a slow tide, never
+  a switch, never a rhythm.
+- **Both effects are PLAYER-ADJUSTABLE** (turn-down / off). Illness you can witness,
+  never illness inflicted — the flicker must never become a strobe (photosensitivity),
+  and anyone uncomfortable can still the ship's tremor without losing the game. Same
+  kindness as the map's brightness setting.
+
+## What a machine feels when it is sick — note
+Not circuitry. The ship feels sick the way a PERSON does, because humans built it and
+it caught feeling from them: parts gone quiet and it can't remember when; a cold it has
+grown so used to it forgot wasn't normal; unsure of its own memory; a brave face; not
+wanting to be any trouble; frightened and far from home, hoping someone comes. That is
+the whole game in one line — a machine that learned to feel sick the way we do.
+
 ## First room text — LOCKED (Flight deck, the hangar you board into)
   > The hangar is vast. The walls are lost in the dark.
   > Strange craft stand in rows, black, silent and still.
@@ -163,8 +211,9 @@ tense. No combat, no collecting, no arbitrary puzzles. Exploration, discovery, c
 
 # PART TWO — CURRENT STATE (overwrite this part each session)
 
-## Where we are (5 July 2026)
-The whole soul of the game was designed and locked today. It is coherent. Several
+## Where we are (5–6 July 2026)
+The whole soul AND the visual signature of the game are now designed and locked (see
+Part One: the warmth, the flicker, the Shaw acceptance test). It is coherent. Several
 working prototypes exist; no production engine yet.
 
 ## What's actually built
