@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InkySwot Enclosure</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap');
+
+  :root {
+    --bg: #0a0806;
+    --ink: #e8e0d0;
+    --gold: #c9923a;
+    --gold-dim: #7a5520;
+    --dark: #111009;
+    --panel: #13110d;
+    --border: #2a2419;
+    --success: #6aaa6a;
+    --danger: #c87070;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Courier Prime', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  header .tagline {
+    font-size: 0.72rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  #token-bar { display: flex; align-items: center; gap: 10px; }
+  #token-bar input {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    padding: 8px 12px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.85rem;
+    width: 240px;
+    letter-spacing: 0.05em;
+  }
+  #token-bar input:focus { outline: 1px solid var(--gold-dim); }
+
+  button {
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.15s;
+  }
+  button:hover { background: var(--gold-dim); color: var(--ink); }
+  button.primary { border-color: var(--gold); }
+  button.primary:hover { background: var(--gold); color: var(--bg); }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  button:disabled:hover { background: transparent; color: var(--gold); }
+
+  .main {
+    flex: 1;
+    padding: 40px 32px;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    background: var(--dark);
+    padding: 28px 32px;
+    margin-bottom: 24px;
+  }
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .card .num {
+    font-size: 0.72rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .card .sub {
+    font-size: 0.85rem;
+    color: var(--ink);
+    opacity: 0.6;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .big-btn { font-size: 1rem; padding: 16px 32px; letter-spacing: 0.15em; }
+
+  textarea.paste {
+    width: 100%;
+    height: 160px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8rem;
+    padding: 14px 16px;
+    outline: none;
+    resize: vertical;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  textarea.paste:focus { border-color: var(--gold-dim); }
+
+  #log {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    font-size: 0.9rem;
+    line-height: 2;
+    min-height: 200px;
+    max-height: 460px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .log-line { display: block; }
+  .log-line.ok  { color: var(--success); }
+  .log-line.err { color: var(--danger); }
+  .log-line.busy { color: var(--gold); }
+  .log-line.info { color: var(--ink); opacity: 0.7; }
+  .log-line.head { color: var(--gold); font-weight: 700; letter-spacing: 0.1em; margin-top: 8px; }
+  .log-line .stamp { color: var(--gold-dim); font-size: 0.75rem; margin-right: 10px; }
+
+  .config {
+    font-size: 0.8rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+  .config b { color: var(--ink); opacity: 0.8; }
+
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold-dim); }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>InkySwot Enclosure</h1>
+    <div class="tagline">Stitch the pockets · Write the platform</div>
+  </div>
+  <div id="token-bar">
+    <input type="password" id="token-input" placeholder="GitHub token...">
+    <button class="primary" onclick="saveToken()">Connect</button>
+  </div>
+</header>
+
+<div class="main">
+
+  <div class="card">
+    <div class="num">Step Two</div>
+    <h2>Import &amp; Split</h2>
+    <div class="sub">
+      Paste your current <b>index.html</b> below and press Split. The enclosure carves it into
+      the corridor (the shared shell) and one pocket file per content screen, then writes them all
+      into the repo. It reads your existing screen dividers, so the cut follows lines already in your file.
+      This does not touch your live app anywhere else — it only writes into this rebuild repo.
+    </div>
+    <textarea class="paste" id="source-paste" placeholder="Paste the full contents of your index.html here..."></textarea>
+    <div class="row">
+      <button class="primary" id="split-btn" onclick="importAndSplit()">Split into Corridor + Pockets</button>
+      <span style="font-size:0.78rem;color:var(--gold-dim);">Writes corridor.html and pockets/ into the repo</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">Step Three</div>
+    <h2>Stitch</h2>
+    <div class="sub">
+      Reads the corridor and every pocket back from the repo, joins them in order, and writes the
+      finished <b>index.html</b>. This is the proof: if the stitched file opens and looks exactly like
+      your app today, the split worked. Run this after every edit to a pocket.
+    </div>
+    <div class="config">
+      Repository: <b>PitchDarkPress/inkyswot-rebuild</b> &nbsp;·&nbsp; Branch: <b>main</b>
+    </div>
+    <div class="row">
+      <button class="primary big-btn" id="stitch-btn" onclick="stitch()">Stitch the Platform</button>
+      <button id="download-btn" onclick="downloadLast()" disabled="">Download stitched index.html</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">One-time setup</div>
+    <h2>Install to Database</h2>
+    <div class="sub">
+      Places a copy of this enclosure into the memory database at <b>core/enclosure.html</b>,
+      so you can reach it from the database menu like the Render Bench. You only need to do this
+      once. If you later change the enclosure, press it again to update the copy in the database.
+    </div>
+    <div class="config">
+      Installs into: <b>PitchDarkPress/pitch-dark-studios-memory</b> &nbsp;·&nbsp; at <b>core/enclosure.html</b>
+    </div>
+    <div class="row">
+      <button id="install-btn" onclick="installToDatabase()" disabled="">Install to Database</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;margin-bottom:6px;">
+      <h2 style="margin-bottom:0;">Log</h2>
+      <button onclick="copyLog()">Copy Log</button>
+    </div>
+    <div class="sub">Every step is reported here, in order, so you can see exactly what happened.</div>
+    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">15:09:29</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">15:51:06</span>Installing enclosure into the memory database...</span></div>
+  </div>
+
+</div>
+
+<script>
+// ── CONFIG ─────────────────────────────────────────────
+const REPO   = 'PitchDarkPress/inkyswot-rebuild';
+const BRANCH = 'main';
+const API    = 'https://api.github.com';
+
+// The memory database repo — where the enclosure installs itself, next to the bench.
+const DB_REPO   = 'PitchDarkPress/pitch-dark-studios-memory';
+const DB_BRANCH = 'main';
+
+// The content screens that become pockets, in the order they appear in <main>.
+// Small shared screens (projects, trash, coming-soon) stay in the corridor.
+const POCKET_SCREENS = [
+  'project-overview',
+  'events',
+  'treatment',
+  'chapters',
+  'cast',
+  'relationships',
+  'factions',
+  'language',
+  'locations',
+  'buildings',
+  'objects',
+  'rules',
+  'subplots',
+  'themes',
+  'plotthreads'
+];
+
+let lastStitched = null;
+
+// ── TOKEN ──────────────────────────────────────────────
+// Strip anything that is not a plain GitHub-token character. Tokens are
+// ASCII (letters, digits, underscore). A stray space or hidden glyph pasted
+// in with the token would otherwise break the request header.
+function cleanToken(t) { return (t || '').replace(/[^A-Za-z0-9_]/g, ''); }
+function getToken() {
+  const raw = localStorage.getItem('pdp_lip_token') || localStorage.getItem('pds_memory_token') || '';
+  return cleanToken(raw);
+}
+function saveToken() {
+  const t = cleanToken(document.getElementById('token-input').value);
+  if (t) {
+    localStorage.setItem('pds_memory_token', t);
+    localStorage.setItem('pdp_lip_token', t);
+    log('Token saved and cleaned. Ready.', 'ok');
+  } else {
+    log('No usable token characters entered.', 'err');
+  }
+}
+function headers() {
+  return {
+    'Authorization': 'token ' + getToken(),
+    'Accept': 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json'
+  };
+}
+
+// ── LOG ────────────────────────────────────────────────
+function log(msg, type = 'info') {
+  const el = document.getElementById('log');
+  const line = document.createElement('span');
+  line.className = `log-line ${type}`;
+  const stamp = new Date().toTimeString().substring(0, 8);
+  line.innerHTML = `<span class="stamp">${stamp}</span>${msg}`;
+  el.appendChild(line);
+  el.scrollTop = el.scrollHeight;
+}
+function clearLog() { document.getElementById('log').innerHTML = ''; }
+function copyLog() {
+  const lines = Array.from(document.querySelectorAll('#log .log-line')).map(l => l.textContent).join('\n');
+  navigator.clipboard.writeText(lines).then(
+    () => log('Log copied to clipboard.', 'ok'),
+    () => log('Could not copy — select the text by hand.', 'err')
+  );
+}
+
+// ── ENCODE / DECODE (UTF-8 safe) ───────────────────────
+function encode(str) { return btoa(unescape(encodeURIComponent(str))); }
+function decode(b64) { return decodeURIComponent(escape(atob(b64.replace(/\n/g, '')))); }
+
+// ── DIAGNOSTIC ─────────────────────────────────────────
+// Reports the first non-ISO-8859-1 character in a string, with context,
+// so we can see exactly what is tripping a request rather than guessing.
+function findBadChar(label, s) {
+  if (typeof s !== 'string') return null;
+  for (let i = 0; i < s.length; i++) {
+    if (s.charCodeAt(i) > 255) {
+      const around = s.substring(Math.max(0, i - 12), i + 12);
+      return label + ': char code ' + s.charCodeAt(i) + ' at position ' + i + ' — near "' + around + '"';
+    }
+  }
+  return null;
+}
+
+// ── API HELPERS ────────────────────────────────────────
+async function apiGet(path) {
+  const h = headers();
+  const bad = findBadChar('GET header/path', h.Authorization + path);
+  if (bad) throw new Error(bad);
+  const res = await fetch(`${API}${path}`, { headers: h });
+  if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+  return res.json();
+}
+async function apiPut(path, body) {
+  const h = headers();
+  const bad = findBadChar('PUT header', h.Authorization);
+  if (bad) throw new Error(bad);
+  const res = await fetch(`${API}${path}`, { method: 'PUT', headers: h, body: JSON.stringify(body) });
+  if (!res.ok) { const err = await res.json().catch(() => ({})); throw new Error(err.message || res.statusText); }
+  return res.json();
+}
+async function readFile(path) {
+  try {
+    const data = await apiGet(`/repos/${REPO}/contents/${path}?ref=${BRANCH}`);
+    return { text: decode(data.content), sha: data.sha };
+  } catch (e) { return null; }
+}
+// Keep commit messages to plain safe characters so a request can never trip on a stray glyph.
+function safeMsg(s) { return s.replace(/[^\x20-\x7E]/g, '-'); }
+async function writeFile(path, text, message) {
+  const existing = await readFile(path);
+  const body = { message: safeMsg(message), content: encode(text), branch: BRANCH };
+  if (existing) body.sha = existing.sha;
+  await apiPut(`/repos/${REPO}/contents/${path}`, body);
+}
+function today() { return new Date().toISOString().split('T')[0]; }
+
+function slotMarker(id) { return '<!-- POCKET:' + id + ' -->'; }
+
+// ── IMPORT & SPLIT ─────────────────────────────────────
+async function importAndSplit() {
+  if (!getToken()) { log('Connect your token first.', 'err'); return; }
+  const source = document.getElementById('source-paste').value;
+  if (!source.trim()) { log('Paste your index.html into the box first.', 'err'); return; }
+  if (!source.includes('<main class="content">')) {
+    log('That does not look like the InkySwot index.html — no <main class="content"> found.', 'err');
+    return;
+  }
+
+  const btn = document.getElementById('split-btn');
+  btn.disabled = true;
+  clearLog();
+  log('Starting Import & Split.', 'head');
+
+  try {
+    let corridor = source;
+    const pockets = [];
+
+    for (const id of POCKET_SCREENS) {
+      const found = extractScreen(corridor, id);
+      if (!found) {
+        log('Could not find screen "' + id + '" — it stays in the corridor.', 'err');
+        continue;
+      }
+      pockets.push({ id, html: found.block });
+      corridor = found.before + slotMarker(id) + found.after;
+      log('Lifted screen "' + id + '" (' + found.block.length + ' chars)', 'ok');
+    }
+
+    log('Writing pocket files...', 'busy');
+    for (const p of pockets) {
+      const path = 'pockets/' + p.id + '.html';
+      const wrapped =
+        '<!-- InkySwot pocket: ' + p.id + ' -->\n' +
+        '<!-- This file holds one screen. Edit it here on its own. -->\n' +
+        '<!-- The enclosure stitches it back into index.html at the ' + slotMarker(p.id) + ' slot. -->\n\n' +
+        p.html + '\n';
+      await writeFile(path, wrapped, 'Split: pocket ' + p.id + ' - ' + today());
+      log('Wrote ' + path, 'ok');
+    }
+
+    log('Writing the corridor...', 'busy');
+    await writeFile('corridor.html', corridor, 'Split: corridor - ' + today());
+    log('Wrote corridor.html (' + corridor.length + ' chars)', 'ok');
+
+    log('SPLIT DONE. ' + pockets.length + ' pockets + corridor written to the repo.', 'head');
+    log('Now press "Stitch the Platform" to prove it reassembles correctly.', 'info');
+
+  } catch (e) {
+    log('SPLIT FAILED — ' + (e.message || 'unknown error'), 'err');
+    log('Nothing is broken. Your index.html is untouched. Fix and try again.', 'info');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// Find <div class="screen" id="screen-ID"> and its matching close via div-depth counting.
+function extractScreen(source, id) {
+  const openTag = '<div class="screen" id="screen-' + id + '"';
+  const start = source.indexOf(openTag);
+  if (start === -1) return null;
+
+  const re = /<div\b|<\/div>/gi;
+  re.lastIndex = start;
+  let m, depth = 0, end = -1;
+  while ((m = re.exec(source)) !== null) {
+    if (m[0].toLowerCase() === '</div>') {
+      depth--;
+      if (depth === 0) { end = m.index + m[0].length; break; }
+    } else {
+      depth++;
+    }
+  }
+  if (end === -1) return null;
+
+  return {
+    block: source.substring(start, end),
+    before: source.substring(0, start),
+    after: source.substring(end)
+  };
+}
+
+// ── STITCH ─────────────────────────────────────────────
+async function stitch() {
+  if (!getToken()) { log('Connect your token first.', 'err'); return; }
+  const btn = document.getElementById('stitch-btn');
+  btn.disabled = true;
+  log('Starting Stitch.', 'head');
+
+  try {
+    log('Reading the corridor...', 'busy');
+    const corridor = await readFile('corridor.html');
+    if (!corridor) throw new Error('No corridor.html in the repo — run Split first.');
+    log('Read corridor.html (' + corridor.text.length + ' chars)', 'ok');
+
+    let out = corridor.text;
+
+    for (const id of POCKET_SCREENS) {
+      const marker = slotMarker(id);
+      if (!out.includes(marker)) {
+        log('Corridor has no slot for "' + id + '" — skipping.', 'info');
+        continue;
+      }
+      const pocket = await readFile('pockets/' + id + '.html');
+      if (!pocket) {
+        log('Missing pocket "' + id + '" — leaving slot empty.', 'err');
+        continue;
+      }
+      const cleaned = stripPocketHeader(pocket.text);
+      out = out.replace(marker, cleaned);
+      log('Placed pocket "' + id + '"', 'ok');
+    }
+
+    log('Writing the finished index.html...', 'busy');
+    await writeFile('index.html', out, 'Stitch: index.html - ' + today());
+    log('Wrote index.html (' + out.length + ' chars)', 'ok');
+
+    lastStitched = out;
+    document.getElementById('download-btn').disabled = false;
+
+    log('STITCH DONE. The finished index.html is in the repo.', 'head');
+    log('Use the Download button to grab a copy and open it to check it looks right.', 'info');
+
+  } catch (e) {
+    log('STITCH FAILED — ' + (e.message || 'unknown error'), 'err');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function stripPocketHeader(text) {
+  const anchor = text.indexOf('<div class="screen"');
+  if (anchor > -1) return text.substring(anchor).replace(/\s+$/, '');
+  return text.trim();
+}
+
+// ── DOWNLOAD ───────────────────────────────────────────
+function downloadLast() {
+  if (!lastStitched) { log('Nothing stitched yet.', 'err'); return; }
+  const blob = new Blob([lastStitched], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'index.html';
+  a.click();
+  log('Downloading index.html — check it in your browser.', 'ok');
+}
+
+// ── INSTALL TO DATABASE ────────────────────────────────
+// Writes this enclosure's own source into the memory database at core/enclosure.html,
+// so it can be opened from the database menu like the Render Bench.
+async function installToDatabase() {
+  if (!getToken()) { log('Connect your token first.', 'err'); return; }
+  const btn = document.getElementById('install-btn');
+  btn.disabled = true;
+  log('Installing enclosure into the memory database...', 'head');
+
+  try {
+    // Grab this page's complete source, exactly as it is now.
+    const source = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    const path = 'core/enclosure.html';
+
+    // Read any existing copy to get its sha (needed to overwrite).
+    log('Checking for an existing copy...', 'busy');
+    let sha = null;
+    try {
+      const existing = await apiGet('/repos/' + DB_REPO + '/contents/' + path + '?ref=' + DB_BRANCH);
+      sha = existing.sha;
+      log('Found an existing copy — it will be updated.', 'info');
+    } catch (e) {
+      log('No existing copy — a new one will be created.', 'info');
+    }
+
+    log('Writing core/enclosure.html into the database...', 'busy');
+    const body = { message: safeMsg('Install enclosure - ' + today()), content: encode(source), branch: DB_BRANCH };
+    if (sha) body.sha = sha;
+    await apiPut('/repos/' + DB_REPO + '/contents/' + path, body);
+
+    log('INSTALLED. The enclosure now lives at core/enclosure.html in the database.', 'head');
+    log('Next: add the menu button to the database so you can open it from there.', 'info');
+
+  } catch (e) {
+    log('INSTALL FAILED — ' + (e.message || 'unknown error'), 'err');
+    log('Nothing is broken. Check the token reaches the database repo, then try again.', 'info');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// ── INIT ───────────────────────────────────────────────
+window.addEventListener('load', () => {
+  if (getToken()) {
+    document.getElementById('token-input').value = '\u2022'.repeat(16);
+    log('Token found from a previous session. Ready.', 'ok');
+  }
+});
+</script>
+
+
+</body></html>
