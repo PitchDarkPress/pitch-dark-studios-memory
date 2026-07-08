@@ -226,6 +226,22 @@
   </div>
 
   <div class="card">
+    <div class="num">Platform feature</div>
+    <h2>Enable Spell Check</h2>
+    <div class="sub">
+      Switches on the browser's built-in spell-check for every text field across the whole
+      platform, in one go. Red underlines appear under misspelled words; right-click to correct,
+      or "Add to dictionary" to ignore a word. It follows the browser's language (British English
+      for UK settings). This edits the corridor for you, so you never touch the big file by hand.
+      Press once. It is safe to press again — it will not add itself twice.
+    </div>
+    <div class="row">
+      <button id="spellcheck-btn" onclick="enableSpellCheckInCorridor()">Add Spell Check to Corridor</button>
+      <span style="font-size:0.78rem;color:var(--gold-dim);">Remember to Stitch afterwards</span>
+    </div>
+  </div>
+
+  <div class="card">
     <div class="num">One-time setup</div>
     <h2>Install to Database</h2>
     <div class="sub">
@@ -247,7 +263,7 @@
       <button onclick="copyLog()">Copy Log</button>
     </div>
     <div class="sub">Every step is reported here, in order, so you can see exactly what happened.</div>
-    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">15:09:29</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">15:51:06</span>Installing enclosure into the memory database...</span></div>
+    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">20:39:47</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">20:40:13</span>Installing enclosure into the memory database...</span></div>
   </div>
 
 </div>
@@ -529,6 +545,58 @@ function downloadLast() {
   a.download = 'index.html';
   a.click();
   log('Downloading index.html — check it in your browser.', 'ok');
+}
+
+// ── ENABLE SPELL CHECK ─────────────────────────────────
+// Inserts a small block into the corridor's shared script that switches on
+// the browser spell-check for every text field. Placed just before the final
+// script end tag so it runs with the rest of the app's code.
+async function enableSpellCheckInCorridor() {
+  if (!getToken()) { log('Connect your token first.', 'err'); return; }
+  const btn = document.getElementById('spellcheck-btn');
+  btn.disabled = true;
+  log('Adding spell check to the corridor...', 'head');
+
+  try {
+    log('Reading the corridor...', 'busy');
+    const corridor = await readFile('corridor.html');
+    if (!corridor) throw new Error('No corridor.html in the repo - run Split first.');
+    let text = corridor.text;
+
+    // Guard: do not add it twice.
+    if (text.indexOf('function enableSpellCheck(') > -1) {
+      log('Spell check is already in the corridor. Nothing to add.', 'info');
+      log('If it is not working, make sure you have Stitched since it was added.', 'info');
+      return;
+    }
+
+    const block =
+      '\n' +
+      '// -- SPELL CHECK --------------------------------------\n' +
+      '// Switches on the browser spell-check for every text field across the platform.\n' +
+      '// Red underlines under misspelled words; right-click to correct or add to dictionary.\n' +
+      'function enableSpellCheck(root){\n' +
+      '  (root||document).querySelectorAll(\'input[type="text"], textarea\').forEach(function(f){ f.setAttribute("spellcheck","true"); });\n' +
+      '}\n' +
+      'window.addEventListener("load", function(){ enableSpellCheck(document); });\n';
+
+    // Find the LAST script-end tag and insert the block just before it.
+    const END_TAG = '<' + '/script>';
+    const idx = text.lastIndexOf(END_TAG);
+    if (idx === -1) throw new Error('Could not find the script block in the corridor.');
+    text = text.substring(0, idx) + block + '\n' + text.substring(idx);
+
+    log('Writing the corridor back...', 'busy');
+    await writeFile('corridor.html', text, 'Add spell check to corridor - ' + today());
+    log('DONE. Spell check added to the corridor.', 'head');
+    log('Now press "Stitch the Platform" so it reaches the finished index.html.', 'info');
+
+  } catch (e) {
+    log('FAILED - ' + (e.message || 'unknown error'), 'err');
+    log('Nothing is broken. The corridor is unchanged. Try again.', 'info');
+  } finally {
+    btn.disabled = false;
+  }
 }
 
 // ── INSTALL TO DATABASE ────────────────────────────────
