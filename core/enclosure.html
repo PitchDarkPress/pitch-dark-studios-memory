@@ -278,7 +278,7 @@
       <button onclick="copyLog()">Copy Log</button>
     </div>
     <div class="sub">Every step is reported here, in order, so you can see exactly what happened.</div>
-    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">15:08:22</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">15:08:32</span>Installing enclosure into the memory database...</span></div>
+    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">17:11:56</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">17:12:10</span>Installing enclosure into the memory database...</span></div>
   </div>
 
 </div>
@@ -645,10 +645,18 @@ async function addReadAloudToCorridor() {
     if (!corridor) throw new Error('No corridor.html in the repo - run Split first.');
     let text = corridor.text;
 
-    if (text.indexOf('READ ALOUD ON EVERY WRITTEN FIELD') > -1) {
-      log('Read aloud is already in the corridor. Nothing to add.', 'info');
-      log('If it is not working, make sure you have Stitched since it was added.', 'info');
-      return;
+    // If a previous read-aloud block is already in the corridor, remove it first
+    // so this press installs the current version rather than skipping.
+    const START_MARK = '// -- READ ALOUD ON EVERY WRITTEN FIELD';
+    const startPos = text.indexOf(START_MARK);
+    if (startPos > -1) {
+      // The block is a self-contained (function(){ ... })(); ending with "})();".
+      const endMark = '})();';
+      const endPos = text.indexOf(endMark, startPos);
+      if (endPos > -1) {
+        text = text.substring(0, startPos) + text.substring(endPos + endMark.length);
+        log('Removed the previous read-aloud block so it can be replaced.', 'info');
+      }
     }
 
     // The block that adds Read buttons to every text input and textarea.
@@ -677,11 +685,15 @@ async function addReadAloudToCorridor() {
       '    f.dataset.readReady="1";\n' +
       '  }\n' +
       '  function scan(root){ (root||document).querySelectorAll(\'input[type="text"], textarea\').forEach(attachTo); }\n' +
-      '  window.addEventListener("load", function(){\n' +
+      '  function start(){\n' +
       '    scan(document);\n' +
       '    var content=document.querySelector(".content")||document.body;\n' +
       '    new MutationObserver(function(){ scan(document); }).observe(content,{childList:true,subtree:true});\n' +
-      '  });\n' +
+      '  }\n' +
+      '  // Run now if the page is ready, and also on load, so fields present at any\n' +
+      '  // point get a Read button whether the code runs early or late.\n' +
+      '  if(document.readyState==="loading"){ document.addEventListener("DOMContentLoaded", start); } else { start(); }\n' +
+      '  window.addEventListener("load", function(){ scan(document); });\n' +
       '})();\n';
 
     // Neutralise the OLD read-aloud setup so buttons do not double up.
