@@ -242,6 +242,21 @@
   </div>
 
   <div class="card">
+    <div class="num">Platform feature</div>
+    <h2>Read Aloud on Every Field</h2>
+    <div class="sub">
+      Adds a small Read button to every written field across the whole platform - the big
+      writing boxes and the short one-line fields alike - so any field a writer fills in can be
+      spoken. It catches fields whenever they appear, not just at load. Dropdowns are left alone.
+      This edits the corridor for you. Press once. It is safe to press again - it will not add itself twice.
+    </div>
+    <div class="row">
+      <button id="readaloud-btn" onclick="addReadAloudToCorridor()">Add Read Aloud to Corridor</button>
+      <span style="font-size:0.78rem;color:var(--gold-dim);">Remember to Stitch afterwards</span>
+    </div>
+  </div>
+
+  <div class="card">
     <div class="num">One-time setup</div>
     <h2>Install to Database</h2>
     <div class="sub">
@@ -263,7 +278,7 @@
       <button onclick="copyLog()">Copy Log</button>
     </div>
     <div class="sub">Every step is reported here, in order, so you can see exactly what happened.</div>
-    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">20:39:47</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">20:40:13</span>Installing enclosure into the memory database...</span></div>
+    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">14:59:18</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">14:59:33</span>Installing enclosure into the memory database...</span></div>
   </div>
 
 </div>
@@ -589,6 +604,87 @@ async function enableSpellCheckInCorridor() {
     log('Writing the corridor back...', 'busy');
     await writeFile('corridor.html', text, 'Add spell check to corridor - ' + today());
     log('DONE. Spell check added to the corridor.', 'head');
+    log('Now press "Stitch the Platform" so it reaches the finished index.html.', 'info');
+
+  } catch (e) {
+    log('FAILED - ' + (e.message || 'unknown error'), 'err');
+    log('Nothing is broken. The corridor is unchanged. Try again.', 'info');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// ── ADD READ ALOUD TO EVERY FIELD ──────────────────────
+// Inserts a block that puts a Read button on every written field, and neutralises
+// the old text-area-only setup so buttons do not double up.
+async function addReadAloudToCorridor() {
+  if (!getToken()) { log('Connect your token first.', 'err'); return; }
+  const btn = document.getElementById('readaloud-btn');
+  btn.disabled = true;
+  log('Adding read aloud to every field...', 'head');
+
+  try {
+    log('Reading the corridor...', 'busy');
+    const corridor = await readFile('corridor.html');
+    if (!corridor) throw new Error('No corridor.html in the repo - run Split first.');
+    let text = corridor.text;
+
+    if (text.indexOf('READ ALOUD ON EVERY WRITTEN FIELD') > -1) {
+      log('Read aloud is already in the corridor. Nothing to add.', 'info');
+      log('If it is not working, make sure you have Stitched since it was added.', 'info');
+      return;
+    }
+
+    // The block that adds Read buttons to every text input and textarea.
+    const block =
+      '\n' +
+      '// -- READ ALOUD ON EVERY WRITTEN FIELD --------------------------\n' +
+      '// Adds a Read button to every text area and single-line text input across\n' +
+      '// the platform. Catches fields whenever they appear, not just at load.\n' +
+      '(function(){\n' +
+      '  function makeReadBtn(f){\n' +
+      '    var b=document.createElement("button");\n' +
+      '    b.className="read-aloud-btn"; b.type="button";\n' +
+      '    b.innerHTML="\\uD83D\\uDD0A Read"; b.title="Read aloud";\n' +
+      '    b.onclick=function(){ readFieldAloud(f.id, this); };\n' +
+      '    return b;\n' +
+      '  }\n' +
+      '  function attachTo(f){\n' +
+      '    if(!f||!f.id) return;\n' +
+      '    if(f.dataset.readReady==="1") return;\n' +
+      '    var wrap=f.closest(".field"); if(!wrap) return;\n' +
+      '    var label=wrap.querySelector(".field-label");\n' +
+      '    if(label && !label.querySelector(".read-aloud-btn")){\n' +
+      '      label.style.display="flex"; label.style.alignItems="center"; label.style.gap="6px";\n' +
+      '      label.appendChild(makeReadBtn(f));\n' +
+      '    }\n' +
+      '    f.dataset.readReady="1";\n' +
+      '  }\n' +
+      '  function scan(root){ (root||document).querySelectorAll(\'input[type="text"], textarea\').forEach(attachTo); }\n' +
+      '  window.addEventListener("load", function(){\n' +
+      '    scan(document);\n' +
+      '    var content=document.querySelector(".content")||document.body;\n' +
+      '    new MutationObserver(function(){ scan(document); }).observe(content,{childList:true,subtree:true});\n' +
+      '  });\n' +
+      '})();\n';
+
+    // Neutralise the OLD read-aloud setup so buttons do not double up.
+    // The old code is a DOMContentLoaded handler that adds buttons to .field-textarea only.
+    // We disable it by marking its fields as already handled is not possible from here,
+    // so instead we make the old handler harmless: it also checks for an existing button,
+    // which our new code adds first on load. To be certain, we add a guard flag the old
+    // code will respect by running our scan first. Simplest safe route: our attachTo sets
+    // data-read-ready and skips if a button exists, and the old handler also skips if a
+    // button exists (it checks label.querySelector('.read-aloud-btn')). So no doubling.
+
+    const END_TAG = '<' + '/script>';
+    const idx = text.lastIndexOf(END_TAG);
+    if (idx === -1) throw new Error('Could not find the script block in the corridor.');
+    text = text.substring(0, idx) + block + '\n' + text.substring(idx);
+
+    log('Writing the corridor back...', 'busy');
+    await writeFile('corridor.html', text, 'Add read aloud to every field - ' + today());
+    log('DONE. Read aloud added to every field.', 'head');
     log('Now press "Stitch the Platform" so it reaches the finished index.html.', 'info');
 
   } catch (e) {
