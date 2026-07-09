@@ -278,7 +278,7 @@
       <button onclick="copyLog()">Copy Log</button>
     </div>
     <div class="sub">Every step is reported here, in order, so you can see exactly what happened.</div>
-    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">14:59:18</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">14:59:33</span>Installing enclosure into the memory database...</span></div>
+    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">15:08:22</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">15:08:32</span>Installing enclosure into the memory database...</span></div>
   </div>
 
 </div>
@@ -405,10 +405,26 @@ async function readFile(path) {
 // Keep commit messages to plain safe characters so a request can never trip on a stray glyph.
 function safeMsg(s) { return s.replace(/[^\x20-\x7E]/g, '-'); }
 async function writeFile(path, text, message) {
-  const existing = await readFile(path);
-  const body = { message: safeMsg(message), content: encode(text), branch: BRANCH };
-  if (existing) body.sha = existing.sha;
-  await apiPut(`/repos/${REPO}/contents/${path}`, body);
+  // Try up to 3 times. If GitHub says the sha is stale (the file moved since we
+  // last read it), fetch the current sha and try again. This handles writes that
+  // land close together without failing.
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const existing = await readFile(path);
+    const body = { message: safeMsg(message), content: encode(text), branch: BRANCH };
+    if (existing) body.sha = existing.sha;
+    try {
+      await apiPut('/repos/' + REPO + '/contents/' + path, body);
+      return;
+    } catch (e) {
+      const msg = (e.message || '');
+      const stale = msg.indexOf('does not match') > -1 || msg.indexOf('409') > -1 || msg.indexOf('sha') > -1;
+      if (stale && attempt < 3) {
+        await new Promise(r => setTimeout(r, 400));  // brief pause, then retry with a fresh sha
+        continue;
+      }
+      throw e;
+    }
+  }
 }
 function today() { return new Date().toISOString().split('T')[0]; }
 
