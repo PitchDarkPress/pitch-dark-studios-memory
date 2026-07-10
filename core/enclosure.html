@@ -275,6 +275,21 @@
   </div>
 
   <div class="card">
+    <div class="num">Platform feature</div>
+    <h2>Fix Used Button Colour</h2>
+    <div class="sub">
+      When a Prompt or Expand button has been used it currently goes a darker colour, which makes
+      it look as if it cannot be pressed again. This makes a used button look exactly like a fresh
+      one - full gold, fully live - keeping only the little redo arrow so the writer can still see
+      which they have used. Edits the corridor for you. Safe to press again.
+    </div>
+    <div class="row">
+      <button id="usedfix-btn" onclick="fixUsedButtonColour()">Fix Used Button Colour</button>
+      <span style="font-size:0.78rem;color:var(--gold-dim);">Remember to Stitch, then Publish</span>
+    </div>
+  </div>
+
+  <div class="card">
     <div class="num">One-time setup</div>
     <h2>Install to Database</h2>
     <div class="sub">
@@ -296,7 +311,7 @@
       <button onclick="copyLog()">Copy Log</button>
     </div>
     <div class="sub">Every step is reported here, in order, so you can see exactly what happened.</div>
-    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">18:04:48</span>Token found from a previous session. Ready.</span><span class="log-line ok"><span class="stamp">18:05:22</span>Token saved and cleaned. Ready.</span><span class="log-line ok"><span class="stamp">18:18:55</span>Log copied to clipboard.</span><span class="log-line head"><span class="stamp">18:19:29</span>Installing enclosure into the memory database...</span></div>
+    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">18:49:35</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">18:49:45</span>Installing enclosure into the memory database...</span></div>
   </div>
 
 </div>
@@ -803,6 +818,48 @@ async function publishToLive() {
   } catch (e) {
     log('PUBLISH FAILED - ' + (e.message || 'unknown error'), 'err');
     log('Nothing is broken. The live app is unchanged. Check the branch name if it keeps failing.', 'info');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// ── FIX USED BUTTON COLOUR ─────────────────────────────
+// Makes a used Prompt/Expand button look identical to a fresh one (full gold),
+// keeping only the redo arrow. Replaces the greyed "used" CSS with gold.
+async function fixUsedButtonColour() {
+  if (!getToken()) { log('Connect your token first.', 'err'); return; }
+  const btn = document.getElementById('usedfix-btn');
+  btn.disabled = true;
+  log('Fixing the used button colour...', 'head');
+
+  try {
+    log('Reading the corridor...', 'busy');
+    const corridor = await readFile('corridor.html');
+    if (!corridor) throw new Error('No corridor.html in the repo - run Split first.');
+    let text = corridor.text;
+
+    const oldRule = '.ai-btn.used{border-color:var(--ink3);color:var(--ink3)}.ai-btn.used:hover{background:var(--ink3);color:var(--btn-text)}';
+    const newRule = '.ai-btn.used{border-color:var(--gold);color:var(--gold)}.ai-btn.used:hover{background:var(--gold);color:var(--btn-text)}';
+
+    if (text.indexOf(newRule) > -1) {
+      log('The used button colour is already fixed. Nothing to change.', 'info');
+      return;
+    }
+    if (text.indexOf(oldRule) === -1) {
+      log('Could not find the used button colour rule. It may already have been changed by hand.', 'err');
+      return;
+    }
+
+    text = text.replace(oldRule, newRule);
+
+    log('Writing the corridor back...', 'busy');
+    await writeFile('corridor.html', text, 'Fix used button colour - ' + today());
+    log('DONE. Used buttons now look identical to fresh ones, keeping the redo arrow.', 'head');
+    log('Now Stitch, then Publish to Live.', 'info');
+
+  } catch (e) {
+    log('FAILED - ' + (e.message || 'unknown error'), 'err');
+    log('Nothing is broken. The corridor is unchanged. Try again.', 'info');
   } finally {
     btn.disabled = false;
   }
