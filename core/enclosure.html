@@ -226,6 +226,24 @@
   </div>
 
   <div class="card">
+    <div class="num">Go live</div>
+    <h2>Publish to Live</h2>
+    <div class="sub">
+      Takes the finished <b>index.html</b> from the rebuild and writes it into the live app repo.
+      Vercel then publishes it to app.inkyswot.com by itself, a minute or two later. This is what
+      makes the Prompt and Expand buttons work - once live, they call the AI from the trusted site.
+      Run Stitch first, then this. Give the site a minute, then hard-refresh (Ctrl+Shift+R).
+    </div>
+    <div class="config">
+      Copies from: <b>inkyswot-rebuild</b> &nbsp;into:&nbsp; <b>PitchDarkPress/inkyswot-app</b>
+    </div>
+    <div class="row">
+      <button class="primary" id="publish-btn" onclick="publishToLive()">Publish to Live</button>
+      <span style="font-size:0.78rem;color:var(--gold-dim);">Replaces the live index.html</span>
+    </div>
+  </div>
+
+  <div class="card">
     <div class="num">Platform feature</div>
     <h2>Enable Spell Check</h2>
     <div class="sub">
@@ -278,7 +296,7 @@
       <button onclick="copyLog()">Copy Log</button>
     </div>
     <div class="sub">Every step is reported here, in order, so you can see exactly what happened.</div>
-    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">17:11:56</span>Token found from a previous session. Ready.</span><span class="log-line head"><span class="stamp">17:12:10</span>Installing enclosure into the memory database...</span></div>
+    <div id="log"><span class="log-line info">Waiting. Connect your token, then paste your index.html and press Split.</span><span class="log-line ok"><span class="stamp">18:04:48</span>Token found from a previous session. Ready.</span><span class="log-line ok"><span class="stamp">18:05:22</span>Token saved and cleaned. Ready.</span><span class="log-line ok"><span class="stamp">18:18:55</span>Log copied to clipboard.</span><span class="log-line head"><span class="stamp">18:19:29</span>Installing enclosure into the memory database...</span></div>
   </div>
 
 </div>
@@ -292,6 +310,10 @@ const API    = 'https://api.github.com';
 // The memory database repo — where the enclosure installs itself, next to the bench.
 const DB_REPO   = 'PitchDarkPress/pitch-dark-studios-memory';
 const DB_BRANCH = 'main';
+
+// The live app repo — Vercel watches this and publishes to app.inkyswot.com.
+const LIVE_REPO   = 'PitchDarkPress/inkyswot-app';
+const LIVE_BRANCH = 'main';
 
 // The content screens that become pockets, in the order they appear in <main>.
 // Small shared screens (projects, trash, coming-soon) stay in the corridor.
@@ -718,6 +740,69 @@ async function addReadAloudToCorridor() {
   } catch (e) {
     log('FAILED - ' + (e.message || 'unknown error'), 'err');
     log('Nothing is broken. The corridor is unchanged. Try again.', 'info');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// ── PUBLISH TO LIVE ────────────────────────────────────
+// Reads the finished index.html from the rebuild and writes it into the live
+// app repo, where Vercel publishes it to app.inkyswot.com.
+async function publishToLive() {
+  if (!getToken()) { log('Connect your token first.', 'err'); return; }
+  if (!confirm('This will replace the live index.html at app.inkyswot.com.\n\nYou have a saved copy to fall back on.\n\nGo ahead?')) {
+    log('Publish cancelled. Nothing changed.', 'info');
+    return;
+  }
+  const btn = document.getElementById('publish-btn');
+  btn.disabled = true;
+  log('Publishing to live...', 'head');
+
+  try {
+    // Read the finished index.html from the rebuild repo.
+    log('Reading the stitched index.html from the rebuild...', 'busy');
+    const built = await readFile('index.html');   // readFile uses the rebuild REPO
+    if (!built) throw new Error('No stitched index.html in the rebuild - run Stitch first.');
+    log('Read index.html (' + built.text.length + ' chars)', 'ok');
+
+    // Find the current live index.html sha (to overwrite it), then write.
+    log('Writing index.html into the live app...', 'busy');
+    let sha = null;
+    try {
+      const existing = await apiGet('/repos/' + LIVE_REPO + '/contents/index.html?ref=' + LIVE_BRANCH);
+      sha = existing.sha;
+      log('Found the live index.html - it will be replaced.', 'info');
+    } catch (e) {
+      log('No existing live index.html - a new one will be created.', 'info');
+    }
+
+    // Write with a small retry in case of a stale sha.
+    let done = false;
+    for (let attempt = 1; attempt <= 3 && !done; attempt++) {
+      const body = { message: safeMsg('Publish rebuild to live - ' + today()), content: encode(built.text), branch: LIVE_BRANCH };
+      if (sha) body.sha = sha;
+      try {
+        await apiPut('/repos/' + LIVE_REPO + '/contents/index.html', body);
+        done = true;
+      } catch (e) {
+        const msg = (e.message || '');
+        if ((msg.indexOf('does not match') > -1 || msg.indexOf('sha') > -1) && attempt < 3) {
+          await new Promise(r => setTimeout(r, 400));
+          const fresh = await apiGet('/repos/' + LIVE_REPO + '/contents/index.html?ref=' + LIVE_BRANCH);
+          sha = fresh.sha;
+        } else {
+          throw e;
+        }
+      }
+    }
+
+    log('PUBLISHED. The rebuild is now in the live app.', 'head');
+    log('Vercel will publish it to app.inkyswot.com in a minute or two.', 'info');
+    log('Then hard-refresh the site with Ctrl+Shift+R to see it.', 'info');
+
+  } catch (e) {
+    log('PUBLISH FAILED - ' + (e.message || 'unknown error'), 'err');
+    log('Nothing is broken. The live app is unchanged. Check the branch name if it keeps failing.', 'info');
   } finally {
     btn.disabled = false;
   }
