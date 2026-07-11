@@ -1,4 +1,113 @@
 File: inkyswot/current-state.md
+================================================================
+*** THE POCKET-SPLIT REBUILD + THE ENCLOSURE — LIVE (July 2026) ***
+(paste-in section — added at the top; everything below is untouched)
+================================================================
+WHAT CHANGED SINCE 17 JUNE: the app is no longer one giant index.html.
+It has been carved into a CORRIDOR + POCKETS, stitched back together by a
+purpose-built tool called the ENCLOSURE, and the whole rebuild is now the
+LIVE app at app.inkyswot.com. This section records that work so a fresh
+chat starts already knowing it. NB: this concerns the app's STRUCTURE and
+BUILD PLUMBING, not the DCW/mixdown design thinking below — that all still
+stands.
+
+THE NEW REPO
+- PitchDarkPress/inkyswot-rebuild (PRIVATE) — the home of the rebuild.
+  Branch: main. Separate from the live app repo.
+- The LIVE app repo is still PitchDarkPress/inkyswot-app — Vercel watches
+  it and publishes to app.inkyswot.com on a push to main (a minute or two,
+  then hard-refresh Ctrl+Shift+R).
+
+THE ARCHITECTURE — CORRIDOR + POCKETS
+- CORRIDOR (corridor.html in inkyswot-rebuild) = the shared shell: header,
+  sidebar, ALL the CSS, ALL the shared JavaScript, and empty labelled slots
+  where each screen drops in. The slot marker is a comment: <!-- POCKET:id -->
+- POCKETS (pockets/ folder) = one HTML file per content screen. Fifteen of
+  them: project-overview, events, treatment, chapters, cast, relationships,
+  factions, language, locations, buildings, objects, rules, subplots,
+  themes, plotthreads. Edit a screen here, on its own, in a short file.
+- Three small shared screens STAY in the corridor (not pocketed): projects
+  (home), trash, coming-soon.
+- IMPORTANT: pockets currently hold each screen's HTML ONLY. The shared
+  JavaScript stays whole in the corridor — it was deliberately NOT split,
+  to avoid shredding the working script. Splitting the script is a possible
+  future job, its own careful task, not yet done.
+- index.html (in inkyswot-rebuild) = the finished, stitched platform,
+  written by the enclosure. This is what gets published to live.
+
+THE ENCLOSURE — THE BUILD TOOL (installed, working)
+- Lives in the memory database at core/enclosure.html (next to the bench),
+  reachable from a menu button in the admin panel (sits beside CODE VIEW).
+- Built like the bench: one HTML page, the GitHub token, the GitHub API.
+  Same token as the database — it reaches all the repos.
+- WHAT IT DOES (its buttons, top to bottom):
+  · IMPORT & SPLIT — paste an index.html, it carves it into corridor +
+    pockets and writes them to inkyswot-rebuild. (One-time; already done.)
+  · STITCH — reads corridor + all pockets, joins them, writes a fresh
+    index.html into inkyswot-rebuild. Run after every pocket edit.
+  · PUBLISH TO LIVE — copies the stitched index.html from inkyswot-rebuild
+    into inkyswot-app, where Vercel publishes it to app.inkyswot.com.
+  · FIX USED BUTTON COLOUR — a corridor CSS tweak (see features below).
+  · ENABLE SPELL CHECK — a corridor tweak (see features below).
+  · ADD READ ALOUD TO EVERY FIELD — a corridor tweak (see features below).
+  · INSTALL TO DATABASE — writes the enclosure's own current source into
+    core/enclosure.html. Press after any change to the enclosure itself.
+- The enclosure's writeFile RETRIES on a stale-sha conflict (handles two
+  writes landing close together). Commit messages are sanitised to plain
+  ASCII (a fancy em-dash once broke a request). Tokens are cleaned of
+  hidden characters on save/read (a hidden char in the token once broke
+  every request — the classic gotcha).
+
+THE BUILD RHYTHM (the new way of working — SETTLED)
+  edit a pocket  →  STITCH  →  PUBLISH TO LIVE  →  Vercel publishes  →
+  hard-refresh (Ctrl+Shift+R) to see it.
+- If the enclosure ITSELF is changed, add one step first: INSTALL TO
+  DATABASE, so the menu copy is current.
+- THE LAST-MILE LESSON (learned the hard way): a change is not truly live
+  until it has gone corridor → stitch → publish → Vercel rebuild → browser
+  cache cleared. When something "didn't work", CHECK THE ACTUAL FILE ON
+  GITHUB (open inkyswot-app/index.html, Ctrl+F the rule) to see the truth
+  rather than guess. That is where a lost change shows up.
+
+PLATFORM FEATURES ADDED VIA CORRIDOR CHANGES — LIVE
+- SPELL CHECK across every written field (browser spell-check switched on
+  platform-wide). NB the browser's OWN spell-check must also be on in the
+  user's browser settings, or no squiggles show — that half is per-machine
+  and cannot be forced from code. British English follows the browser.
+- READ ALOUD on EVERY written field — the big boxes AND the short one-line
+  fields (Title, Author, etc.). Dropdowns deliberately left alone. Runs
+  immediately and watches for fields that appear later.
+- USED BUTTON COLOUR fixed — a used Prompt/Expand button now looks
+  identical to a fresh one (full gold), keeping only the ↺ redo arrow, so
+  it no longer looks disabled. (Was greyed via --ink3; now --gold.)
+
+PROMPT / EXPAND — A NOTE (not a bug)
+- The AI buttons only reach the AI from the REAL live site (the Vercel
+  proxy trusts app.inkyswot.com, not a downloaded file). So a downloaded
+  index.html shows Prompt/Expand "failing" — that is expected, not broken.
+  On the live site they work. The daily-20 Prompt count resets at midnight;
+  a manual reset line for the console:
+  localStorage.setItem('is-ai-calls', JSON.stringify({date:new Date().toDateString(),count:0}))
+
+LOOSE ENDS (noted, none urgent)
+- The old test/ folder in inkyswot-rebuild is harmless clutter — delete
+  from GitHub whenever.
+- PUBLIC vs PRIVATE for the memory database is still its own decision.
+  GitHub Pages may now work on private free repos — would need testing
+  (flip private, check the bench/enclosure still open, flip back if not).
+  GitHub Pro is about $4/month if a paid route were ever wanted.
+
+WHAT THIS MEANS FOR THE DESIGN WORK BELOW
+- All the DCW / mixdown / wheel / quick-note / menu-spine thinking below
+  STILL STANDS. The pocket split does not change any of it — it just makes
+  the app easier to edit (each screen its own file) and gives a clean
+  path to publish. When the design work resumes, the new screens/changes
+  are made as POCKET edits, then stitched and published.
+
+================================================================
+(original current-state.md continues below, unchanged)
+================================================================
+
 Last updated: 17 June 2026 (chat / BUILD session — THE QUICK-NOTE (pinned
 post-it) BUILT as a standalone component and signed off: amber scrap, a
 two-state thumbtack pin (gold OUTLINE when loose → the SAME shape filled
