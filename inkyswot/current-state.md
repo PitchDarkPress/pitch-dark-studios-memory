@@ -1,7 +1,149 @@
 File: inkyswot/current-state.md
+
+File: inkyswot/current-state.md
+================================================================
+*** THE OVERVIEW SCREEN — REBUILT & LIVE (13 July 2026) ***
+(paste-in section — newest at the top; everything below untouched)
+================================================================
+WHAT HAPPENED: a full BUILD session on the OVERVIEW screen (the
+project-overview pocket). Every change below is DONE, SIGNED OFF, and
+LIVE at app.inkyswot.com. Kev drove most of the Stitch/Publish himself.
+
+THE JOURNEY — CONFIRMED (the writer's path, start to finish)
+This was settled plainly this session so board/wheel work has a spine:
+  1. NEW PROJECT — title + genre, Save. (Fine as is.)
+  2. OVERVIEW — the screen we just rebuilt. Writer fills it, Save Overview.
+  3. THE SYNOPSIS BOARD (the rotated board, code-board-rotated.html) —
+     the WIDE end of the funnel. Tracks as columns, cards, spine of
+     chapters/scenes. Where the writer builds the shape and fills fields.
+     Chapters are created here, each with its NUMBER.
+  4. THE GATHERED, ACTIVE SYNOPSIS — what the writer types on the board
+     BECOMES written synopsis at three grains: SCENE synopsis, CHAPTER
+     synopsis, and an OVERALL synopsis GATHERED from below. ACTIVE:
+     change anything at any level and it flows through the whole, live,
+     never a frozen copy. The CHAPTER NUMBERS are the shared address that
+     keeps board and page pointing at the same chapter — so a chapter
+     created on the board already exists on the page with its synopsis in.
+  5. THE WHEEL / THE PAGE (the wheel file) — the CLOSE end. Page centre,
+     scene menu left, wheel right. Where the book is written scene by scene.
+  RUNNING UNDER ALL: the LEFT MENU + the IN-PAGE LIST stay live — create
+  or add an entity and it appears in BOTH at once, each opening as a pop-up.
+- THE BUTTON that turns the board INTO the wheel view (Kev's "SOMEHOW at
+  the click of a button") IS the KEYSTONE / funnel data model. Same beast
+  as always: one record must carry board position + timeline order +
+  chapter/scene home at once. Still the next real build (see NEXT).
+- STILL OPEN from this walk-through: when the board becomes the wheel, can
+  the writer FLIP BACK to the board (mixdown never destroys tracks), or is
+  it a one-way move? (My steer: flip-back, per the mixdown. Not confirmed.)
+- KEV'S GOAL, stated plainly and to hold to: something so intuitive a
+  writer thinks "why aren't all writing platforms like this?" The whole
+  promise lives on ONE feeling — the writer types in one place and TRUSTS
+  it has flowed everywhere, without checking. The day they stop checking
+  is the day it feels like magic. Death by a thousand small frictions is
+  the enemy. Build smallest honest picture first, judge with the eyes.
+
+OVERVIEW — WHAT WE CHANGED (all live)
+- STRAP LINE: was a multi-line textarea with Prompt + Expand. Now a
+  SINGLE-LINE box, Expand removed, Prompt kept. PLUS a HOVER-SCROLL: when
+  the text is longer than the box, hovering the field gently drifts it so
+  the hidden end slides into view, pauses at the end, drifts back, and
+  SETTLES to the start when the mouse leaves. Holds DEAD STILL while the
+  field is focused (so it never fights editing). Gentle, not a ticker
+  whizz (SPEED 34px/s, PAUSE_ENDS 700ms, no pause on the FIRST move).
+  Reason it was needed: Ada's Prompt drops in a long line whose end was
+  hidden in a fixed single-line box.
+- COVER & OUTLINE GROUP: REMOVED WHOLE — both the cover upload and the
+  Outline textarea. (Cover returns in the PUBLISH section later.)
+- FORMAT dropdown: REMOVED (Genre covers it). The only Format items Genre
+  lacked (Screenplay, Poetry Collection) folded into Genre.
+- TARGET AUDIENCE: REMOVED (Classification covers who it is for).
+  Classification now sits alone on its row.
+- WORD COUNT GROUP — now has the CLEVER STEERS (see next section).
+- GENRE — now a CUSTOM InkySwot dropdown (see COMING-SOON PATTERN).
+
+THE CLEVER WORD COUNT STEERS (Overview, live)
+Both TARGET and CHAPTERS boxes guide the writer, genre-driven, overridable.
+- TARGET box: type-a-number box that AUTO-COMMAS as you type (80000 -> 
+  80,000). It is a TEXT box (not number) so commas can show; the maths
+  reads digits only. Under it, a caption: "A novel runs ~=80,000 words"
+  then a second plain line "You can change this to suit your needs".
+- CHAPTERS box: shows a SUGGESTED number, worked from the target words
+  divided by a genre-appropriate words-per-chapter. If no target yet, a
+  genre FALLBACK number. The suggestion sits in GOLD; type your own and it
+  turns to plain INK and a small reset arrow (rotate) appears to bring the
+  suggestion back. Caption under it: "<n> chapters suits <target> words"
+  (or "<n> chapters is typical for a <genre>") then the same "You can
+  change this to suit your needs" line.
+- CAPTIONS: kept genuinely READABLE (16-17px, near-full ink, upright — NOT
+  faint italic). This mattered: Kev is on 28-inch screens and small grey
+  italic was unreadable. Readable beats quiet here. Steer line forced to
+  ONE line (white-space:nowrap).
+- THE HONEST FIGURES (industry norms, checked, reusable):
+  words-per-chapter: Novel 3000, Novella 2500, Children's 1500, Non-Fiction
+  4500, Crime/Thriller 2000, Fantasy 4000, Sci-Fi 4000, Romance 2500,
+  Literary 4000, Historical 3500, Horror 3000, default 3000.
+  typical whole-book words: Novel 80k, Novella 35k, Children's 10k,
+  Non-Fiction 90k, Crime/Thriller 85k, Fantasy 100k, Sci-Fi 100k, Romance
+  80k, Literary 90k, Historical 95k, Horror 85k, default 80k.
+  fallback chapters (no target): Novel 25, Novella 12, Children's 10,
+  Non-Fiction 15, Crime/Thriller 35, Fantasy 30, Sci-Fi 30, Romance 28,
+  Literary 22, Historical 24, Horror 28, default 25.
+  RULE OF THUMB behind it: chapters ~= target words / 3000 is a decent
+  default across most genres.
+
+THE COMING-SOON DROPDOWN PATTERN (Overview Genre — a REUSABLE idiom)
+A plain browser <select> CANNOT grey options elegantly, show a note on
+hover, or hold custom behaviour. So the Genre field is a CUSTOM InkySwot-
+BUILT dropdown. Pattern, worth reusing wherever formats/features arrive in
+stages:
+- The FULL list lives in one place; each entry carries a quiet "coming:true"
+  flag for anything not yet deliverable. Ready ones show in full ink and
+  pick normally; "coming" ones are GREYED and cannot be picked.
+- NO marker/text/icon on the greyed rows — the list stays THIN and elegant.
+- On HOVER of a greyed row, a small gold-edged POINTER-NOTE pops up beside
+  it: "COMING SOON" (mono, gold) + an italic line "<Format> formatting is
+  on its way." The note CENTRES itself on the row and its little arrow
+  points dead at the row. Fades when the mouse leaves. Clicking a greyed
+  row does nothing.
+- The dropdown's scrollbar is restyled dark-and-gold (the default XP-look
+  bar was wrong).
+- WHY GREYED not hidden (Kev's call): the writer sees the full ambition,
+  knows nothing's forgotten, but is never let through a door not built yet.
+- The CLOCK as a "we're working on this" glyph was considered and dropped
+  for the list (keep it thin) — but noted as InkySwot's vocabulary: a
+  STILL clock = "coming", a SPINNING clock = "working". Kept for elsewhere.
+- GENRES currently flagged "coming" (need specialised page formatting not
+  yet built): Audio Drama, Audiobook, Comic Script, Game Script, Graphic
+  Novel, Picture Book, Poetry, Poetry Collection, Radio Drama, Screenplay,
+  Stage Play, Teleplay. Flip a flag OFF as each format's layout is built.
+
+HOW THE POCKET IS WIRED (so it survives future edits)
+- The pocket keeps the corridor's helpers UNTOUCHED: autoSave,
+  saveProjectHeader, aiAutofill, aiExpand all still called exactly as
+  before. The custom Genre value is written into a HIDDEN input #ph-genre
+  (with onchange="autoSave()") so saving works as it always did.
+- The NEW parts (custom dropdown, coming-note, word-count steers, strap
+  hover-scroll) travel INSIDE the pocket — their own <style> and <script>
+  at the foot of the pocket file, scoped with #screen-project-overview and
+  using the corridor's colour VARIABLES (var(--gold) etc). Nothing new was
+  added to the corridor.
+- The floating COMING-SOON note div lives just OUTSIDE the screen div
+  (it is position:fixed).
+
+PUBLISH TIMING — A LESSON LEARNED THIS SESSION (important)
+- First publish attempt FAILED silently: Stitch wrote the new file
+  (254,657 chars) but PUBLISH read the OLD one (252,709) — it grabbed the
+  stale stitched file because Publish was clicked before Stitch had fully
+  settled. The strap-scroll never reached live.
+- THE FIX / THE HABIT: after Stitch, WATCH THE CHARACTER COUNTS. The
+  "Wrote index.html (N chars)" from Stitch and the "Read index.html (N
+  chars)" from Publish MUST MATCH. If Publish shows the old number, STOP,
+  re-Stitch, and Publish again — do not refresh and chase ghosts. Second
+  run matched (254,657 both) and it went live correctly.
+
 ================================================================
 *** THE POCKET-SPLIT REBUILD + THE ENCLOSURE — LIVE (July 2026) ***
-(paste-in section — added at the top; everything below is untouched)
+(everything below here is the earlier file, untouched)
 ================================================================
 WHAT CHANGED SINCE 17 JUNE: the app is no longer one giant index.html.
 It has been carved into a CORRIDOR + POCKETS, stitched back together by a
@@ -32,6 +174,10 @@ THE ARCHITECTURE — CORRIDOR + POCKETS
   JavaScript stays whole in the corridor — it was deliberately NOT split,
   to avoid shredding the working script. Splitting the script is a possible
   future job, its own careful task, not yet done.
+  (NB 13 July: the Overview pocket now ALSO carries its OWN small style +
+  script block for its new custom parts — scoped, using corridor vars. This
+  is a fine pattern for screen-specific behaviour; the SHARED script still
+  stays whole in the corridor.)
 - index.html (in inkyswot-rebuild) = the finished, stitched platform,
   written by the enclosure. This is what gets published to live.
 
@@ -63,6 +209,9 @@ THE BUILD RHYTHM (the new way of working — SETTLED)
   hard-refresh (Ctrl+Shift+R) to see it.
 - If the enclosure ITSELF is changed, add one step first: INSTALL TO
   DATABASE, so the menu copy is current.
+- WATCH THE CHARACTER COUNTS (13 July lesson): Stitch's "Wrote (N chars)"
+  and Publish's "Read (N chars)" MUST MATCH, or Publish grabbed a stale
+  file — re-Stitch and Publish again.
 - THE LAST-MILE LESSON (learned the hard way): a change is not truly live
   until it has gone corridor → stitch → publish → Vercel rebuild → browser
   cache cleared. When something "didn't work", CHECK THE ACTUAL FILE ON
@@ -229,6 +378,9 @@ THE HARD KERNEL — THE KEYSTONE (NOT yet solved; the next real build):
 - OPEN within this: is each level's ordering a SEPARATE set of mix
   instructions (Sandbox can stay jumbled while Synopsis holds the tidy
   order), or does ordering in one level flow down and change the others?
+- (13 July) The BOARD->WHEEL button, the CHAPTER NUMBERS as shared address,
+  and the GATHERED ACTIVE SYNOPSIS all hang off THIS keystone. See the
+  OVERVIEW REBUILD section at the top for the confirmed journey.
 
 THE SPINE — A TIMELINE OF EVENTS
 Three tiers: CHAPTER → SCENE → EVENT. Only EVENTS sit on the line and
@@ -540,9 +692,13 @@ NOTES ON THE MENU SPINE:
 ENTRY (settled 8 June, standing):
 - LANDING PAGE (before login): Sign In / Sign Up. Its own screen.
 - After sign in/up the writer lands on the HOME page (launchpad).
-- OVERVIEW: currently titled "BASIS" in index.html. Whether OVERVIEW
-  persists as a screen at all is now in doubt — the new spine routes
-  login → HOME, not login → Overview. CARRIED QUESTION.
+- OVERVIEW: RESOLVED 13 July — OVERVIEW STAYS, and is GROWING. It is no
+  longer in doubt. See the OVERVIEW REBUILD section at the top: it is now
+  a rich screen and is set to become the HOME OF THE GATHERED SYNOPSIS
+  (overall + chapter synopsis land here). The separate ROUTING question
+  (does login land on Overview or Home) is still open, but Overview as a
+  SCREEN is confirmed and invested in. (Was titled "BASIS" in old
+  index.html; that rename/fate now settled as OVERVIEW, alive.)
 
 LAUNCHPAD ICONS — SETTLED (8 June 2026)
 Clean single-weight gold line art, stroke="currentColor" (recolour with
@@ -639,6 +795,9 @@ the LEFT reach-into list, and the RIGHT-HAND ROADMAP (which is to be
 REMOVED, wheel kept). An OLDER copy with a stub left-nav and an EMPTY
 right sidebar was pasted earlier and is NOT the truth. Always ask Kev for
 the current file at the start of a build. ***
+*** THE OVERVIEW POCKET is now LIVE and RICH (13 July) — the current live
+version is the project-overview pocket in inkyswot-rebuild. Always ask Kev
+to paste the current pocket before editing it. ***
 inkyswot/code-treatment-wheel.html.md — earlier live design source (the
 older lineage; superseded by wheel-with-roadmap (7).html as the working
 file). STILL NOT folded in anywhere: the chapter STAVE PAGE; the WP
@@ -653,26 +812,32 @@ spine. NB the THEATRICAL "where you are" Site Map (blocks of colour, BOOM)
 is the new intent and is PARKED (likely its own page) — not in any file.
 inkyswot/code-board-look.html.md — the BOARD still picture = the WIDE end
 of the funnel (all six tracks as columns). Now CONFIRMED as part of the
-mixdown, not "under review".
+mixdown, not "under review". (NB the ROTATED board, code-board-rotated.html,
+is the more advanced working board — the SYNOPSIS BOARD in the confirmed
+journey.)
 inkyswot/home-icons.svg.md — launchpad icons.
 inkyswot/code-map-plotter.html.md — old Plot Mapping corkboard (grew from
 the original "Stickies" toy). SUPERSEDED as a screen; its DNA feeds the
 QUICK-NOTE and the Sandbox.
-index.html — the app workspace (Overview screen still titled "BASIS").
+index.html — the app workspace.
 login.html — login / sign up gate (stubbed).
 
 WHAT IS BUILT AND WORKING
 Landing page; login page (stubbed); My Projects / Trash / New Project
-modal / Overview / Characters / Relationships / Factions & Orgs /
+modal / OVERVIEW (REBUILT & LIVE 13 July — single-line strap with hover-
+scroll; Cover & Outline group removed; Format + Target Audience removed;
+clever Word Count steers; custom Genre dropdown with greyed coming-formats
++ hover COMING SOON note) / Characters / Relationships / Factions & Orgs /
 Language & Dialogue / Locations / Buildings / Objects & Artefacts /
 Rules & Lore / Plot Threads / Subplots / Themes & Motifs / Events &
 Timeline / Chapters / The Treatment (placeholder shell) / AI Expand /
 AI ON-OFF / Read Aloud / light-dark / voice selector. The WHEEL + WP +
 LEFT SCENE MENU + SETTLED LEFT NAV + RIGHT-HAND ROADMAP live together in
 the standalone mockup (wheel-with-roadmap (7).html), NOT yet in
-index.html. The BOARD is a standalone still picture (the wide end). The
-QUICK-NOTE component is built and signed off as a STANDALONE file — NOT
-yet wired into the platform.
+index.html. The BOARD is a standalone still picture (the wide end); the
+ROTATED board (code-board-rotated.html) is the advanced synopsis board.
+The QUICK-NOTE component is built and signed off as a STANDALONE file —
+NOT yet wired into the platform.
 
 BUILD ORDER — CONFIRMED (unchanged)
 Step 1 v4.0 App Shell Rebuild (NOT STARTED) · 2 Walk · 3 Sign-off Gate ·
@@ -710,16 +875,38 @@ v4.7 pre-Step 1 rebuild. Autumn 2026 target.
   live in Research). Found & fixed an admin-panel gotcha: root-level files
   save but do not show in the menu — give the division folder. STILL TO
   DO: persistence + a "see all" button + the across-all-screens wiring.
-  current-state.md rewritten clean (this file).
+13 July (chat / BUILD session — CODE BUILT & LIVE): rebuilt the OVERVIEW
+  screen end to end and Kev signed it off on the live site. Confirmed the
+  WRITER'S JOURNEY (New Project → Overview → Synopsis board → gathered
+  active synopsis → Wheel/page), with CHAPTER NUMBERS as the shared
+  address and the board->wheel button = the KEYSTONE. Overview changes,
+  all live: strap line to single-line + HOVER-SCROLL; Cover & Outline
+  group removed whole; Format + Target Audience removed; the CLEVER WORD
+  COUNT STEERS (target auto-commas + genre word-count steer; chapters
+  suggested from target/genre, overridable with reset arrow; readable
+  captions for 28-inch screens; honest industry figures logged); the
+  custom GENRE DROPDOWN with GREYED coming-formats + a hover COMING SOON
+  pointer-note (a reusable pattern). Learned the PUBLISH TIMING lesson
+  (watch Stitch/Publish char counts match, or Publish grabs a stale file).
+  RESOLVED: Overview STAYS and is GROWING — it will become the home of the
+  GATHERED SYNOPSIS (both an auto-gathered active synopsis AND a hand-typed
+  one). current-state.md rewritten clean (this file).
 
 NEXT (do in order, one at a time — START A FRESH CHAT for a build)
+0. OVERVIEW GROWS: add the SYNOPSIS FIELDS to Overview — the OVERALL
+   SYNOPSIS (BOTH a gathered, active one that fills itself from chapters/
+   scenes below AND a hand-typed one the writer writes), plus chapter/
+   scene synopsis plumbing. This ties into the KEYSTONE (the gathered/
+   active flow needs the shared store). Kev has fresh ideas here — start
+   there next.
 1. SMALL SURGICAL BUILD: remove the RIGHT-HAND ROADMAP from the live wheel
    file (wheel-with-roadmap (7).html), WHEEL UNTOUCHED. Work from Kev's
    pasted file.
 2. THE KEYSTONE: design the FUNNEL DATA MODEL (still-picture first) — how
    ONE record carries its board position + timeline order + chapter/scene
    home at once so the overlays/mixdown read and write the same thing.
-   This is the spine of the whole platform.
+   This is the spine of the whole platform. The board->wheel button, the
+   chapter-number address, and the gathered active synopsis all hang here.
 3. FOLD THE STAVE PAGE + WP PROMPT/EXPAND into the live wheel file. Then
    the wheel's stave-page label.
 4. Build the TENSION SEGMENTED BAR METER + sweep (static-first) to replace
@@ -734,10 +921,11 @@ NEXT (do in order, one at a time — START A FRESH CHAT for a build)
    stills, then wire the BOOM — likely its OWN PAGE.
 7. UPDATE locked-decisions.md and dcw.md to match (DCW = mixdown; Writing
    Panel = Manuscript; menu spine; roadmap out; the QUICK-NOTE settled
-   spec) — one file at a time.
+   spec; the confirmed JOURNEY; Overview stays & grows; the coming-soon
+   dropdown pattern) — one file at a time.
 8. Test whether the InkySwot division can hold a .png image (for Research).
-9. (Carried app jobs) settle Overview's fate; build the nav into
-   index.html (to the new spine); build the home launchpad; begin Step 1.
+9. (Carried app jobs) build the nav into index.html (to the new spine);
+   build the home launchpad; begin Step 1.
 
 OPEN DECISIONS — STILL TO SETTLE (one at a time)
 1. THE KEYSTONE — the FUNNEL DATA MODEL (how one record holds all three
@@ -753,7 +941,9 @@ OPEN DECISIONS — STILL TO SETTLE (one at a time)
 3. MENU WORDING — final confirm "Snippets" replaces "Library"; "Research"
    vs "Research & Reference"; THE PRESS's DCW sub-items.
 4. THE PRESS — what its two homes each hold; its DCW sub-items.
-5. OVERVIEW — does it survive at all now that login routes to HOME?
+5. OVERVIEW ROUTING — Overview STAYS (resolved 13 July), but does LOGIN
+   land on Overview or on HOME? The screen is confirmed; only the routing
+   is open.
 6. THE BOARD's exact role in the mixdown (it is the wide end — but does
    the writer build IN it, or is it a read view?).
 7. STICKIES / NOTES & SCRATCHPAD — now answered by the QUICK-NOTE; any
@@ -765,6 +955,8 @@ OPEN DECISIONS — STILL TO SETTLE (one at a time)
 12. CARRIED FEATURES' HOME — Emotional Maps, Ambient, the lift.
 13. WHEEL LIVE-LABEL FLIP POINT — small tweak.
 14. THE STAVE PAGE'S WHEEL LABEL — settle when folding the stave page in.
+15. BOARD->WHEEL BUTTON — one-way move, or flip-back (mixdown never
+    destroys tracks)? (Steer: flip-back. Not confirmed.)
 
 ================================================================
 ROUGH — NOT SETTLED. Captured so it is not lost. Do NOT build from this.
@@ -798,6 +990,14 @@ SUPERSEDED / DROPPED — KEPT AS HISTORY (do NOT build from any of this)
 - THE ROUND GLOSSY RED PUSHPIN for the pinned note — superseded 17 June by
   the FILLED THUMBTACK that matches the gold outline shape (same shape,
   one outline, one filled).
+- THE OVERVIEW "COVER & OUTLINE" GROUP — removed 13 July. Cover returns in
+  the PUBLISH section; the Outline box is gone (the gathered synopsis will
+  be the story-description home instead).
+- FORMAT dropdown + TARGET AUDIENCE on Overview — removed 13 July (Genre
+  and Classification cover them).
+- THE CLOCK GLYPH ON GREYED FORMATS — dropped 13 July for the list (keep it
+  thin); the coming-soon note is hover-only, no per-row marker. (Clock kept
+  as vocabulary elsewhere: still = coming, spinning = working.)
 - THE CALM FOUR-HEADING SITE MAP AS THE INTENDED MAP — superseded 14 June
   as the *whole* intent: now only the calm SIDEBAR version. The intended
   Site Map is THEATRICAL. The four-heading map is kept, not killed.
