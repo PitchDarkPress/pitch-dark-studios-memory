@@ -62,6 +62,8 @@
   .btn.active{border-color:var(--gold);color:var(--gold);}
   .btn.go{border-color:var(--gold);color:var(--gold);}
   .btn.go:hover{background:rgba(201,146,58,.08);color:var(--gold-bright);border-color:var(--gold-bright);}
+  /* Copy button flashes gold when it has grabbed the code */
+  .btn.copied{border-color:var(--gold-bright);color:var(--gold-bright);background:rgba(201,146,58,.10);}
 
   .stage{
     position:absolute;inset:48px 0 0 0;
@@ -144,6 +146,7 @@
     <span class="crumb">Render Bench</span>
     <div class="right">
       <button class="btn" id="clearBtn">Clear</button>
+      <button class="btn" id="copyBtn">Copy all</button>
       <button class="btn" id="fullCodeBtn">Full view code</button>
       <button class="btn" id="fullRenderBtn">Full view render</button>
       <button class="btn go" id="renderBtn">Render ▸</button>
@@ -172,6 +175,7 @@
   const stat        = document.getElementById('stat');
   const renderBtn   = document.getElementById('renderBtn');
   const clearBtn    = document.getElementById('clearBtn');
+  const copyBtn     = document.getElementById('copyBtn');
   const fullCodeBtn = document.getElementById('fullCodeBtn');
   const fullRenderBtn = document.getElementById('fullRenderBtn');
 
@@ -206,6 +210,33 @@
     src.focus();
   }
 
+  // Copy the whole paste box to the clipboard in one press — no manual selecting.
+  // Uses the modern clipboard API, with a select-all fallback for older setups.
+  function copyAll(){
+    const text = src.value;
+    if(!text){
+      copyBtn.textContent = 'Nothing to copy';
+      setTimeout(()=>{ copyBtn.textContent = 'Copy all'; }, 1200);
+      return;
+    }
+    const flash = ()=>{
+      copyBtn.classList.add('copied');
+      copyBtn.textContent = 'Copied ✓';
+      setTimeout(()=>{ copyBtn.classList.remove('copied'); copyBtn.textContent = 'Copy all'; }, 1400);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(flash).catch(()=>{ selectFallback(); });
+    } else {
+      selectFallback();
+    }
+    function selectFallback(){
+      src.focus();
+      src.select();
+      try{ document.execCommand('copy'); flash(); }
+      catch(e){ copyBtn.textContent = 'Press Ctrl+C'; setTimeout(()=>{ copyBtn.textContent = 'Copy all'; }, 1600); }
+    }
+  }
+
   function updateStat(){
     const n = src.value.length;
     stat.textContent = n ? n.toLocaleString() + ' chars' : 'empty';
@@ -227,6 +258,7 @@
 
   renderBtn.addEventListener('click', render);
   clearBtn.addEventListener('click', clearAll);
+  copyBtn.addEventListener('click', copyAll);
   fullCodeBtn.addEventListener('click', ()=>toggleView('code', fullCodeBtn));
   fullRenderBtn.addEventListener('click', ()=>toggleView('render', fullRenderBtn));
   src.addEventListener('input', updateStat);
