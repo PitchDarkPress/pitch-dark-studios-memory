@@ -1,5 +1,7 @@
 File: inkyswot/completed.md
-Last updated: 4 June 2026
+Last updated: 15 August 2026 — the list had stopped at 4 June. Entries for
+6–17 June, July and August have been added from the record held in
+locked-decisions.md and current-state.md. Earlier lines are unchanged.
 
 Database restructured — InkySwot content redistributed into nine files — 24 May 2026.
 Pricing locked — £9.95/month, £99.50/year, no free tier, 14-day money back — 24 May 2026.
@@ -83,3 +85,54 @@ THE WHEEL mockup built on "A Christmas Carol" — the live design source; supers
 Design-a-mechanism rule adopted — build a static mockup first, agree the still, then add movement; a sketch from Kev beats ten descriptions — 4 June 2026.
 Two pre-filled demo books (A Christmas Carol / The Wind in the Willows) confirmed FEASIBLE and logged to future.md — fully-populated read-only demo projects so new users see how InkySwot works; both out of copyright; Carol first; depends on the shell being final; not scheduled — 4 June 2026.
 current-state.md, locked-decisions.md and dcw.md rewritten clean for the WHEEL (the click-to-write resolution; page-right/pop-up-left; Overview ↔ Writing Mode); dcw.md given its full rewrite (live wheel spec on top, all prior models kept as fenced history); future.md updated with the demo books — 4 June 2026.
+
+--- ADDED 15 AUGUST 2026: the record from 6 June onward ---
+
+One scene per full page locked — each scene on its own full US-Letter sheet, always full height, never shrunk to hug content; the long-scrolling multi-event page gone. Stave heading on every scene page — 6 June 2026.
+Wheel centre mark settled — gold ring, filled dot, short leader; the radial bloom and the chevron removed. Wheel hover settled — the node lights, the text does not. The wheel bow tried and removed (it ran the two-line labels together) — 6 June 2026.
+Clean-rebuild rule adopted — if edits stop showing, rebuild clean in a fresh file rather than editing on — 6 June 2026.
+Wheel labels rebuilt as TWO LINES — a gold mono kicker over the scene title; separate stave marker labels and blank stave pages dropped. Wheel windowed to nine each side, eased (0.072), straight belt, smoothed hand-off — 7 June 2026.
+One shared reading line established (READ_PAD 28px) — page and wheel can no longer disagree about where you are; rollToCentre replaced by rollToTop, fixing the page-top clipping — 7 June 2026 (later).
+Writing Mode set to show only the live scene. Pop-ups made multiple and independent, each with its own ✕, cascade and raise-on-click — 7 June 2026 (later).
+Demo books decided properly — a demo is a normal project, fully populated, writing left blank, FULLY EDITABLE, with Reset to Pristine and Save as a Copy; the earlier "ideally read-only" dropped — 7 June 2026 (later).
+Manuscript View comfort toggle locked — strips the chrome to read the book as a continuous manuscript; display-level only, true pagination deferred — 8 June 2026.
+Home-page launchpad icons revised — 8 June 2026.
+THE SIX TRACK COLOURS locked — Events gold, Locations teal, Characters terracotta, Objects steel blue, Themes violet, Tension red; Characters moved off gold, Events took it — 9 June 2026.
+THE CUT locked — Events + Locations become the synopsis and the prose; Characters, Objects, Themes and Tension are reached into, and live in the scene menu — 9 June 2026.
+The scene menu built and locked, left of the page, mirroring the wheel's furniture; Tension settled as a segmented bar meter after the VU needle, the flat line and plain text were all tried and dropped — 9 June 2026.
+The board returned as Plot Mapping reborn — the funnel's wide end — 9 June 2026. [SUPERSEDED 15 August 2026.]
+Work-from-the-image / work-from-the-code rule locked — a screenshot IS the template; change built files from the pasted code, never a reconstruction; small changes mean small changes — 9 June 2026.
+InkySwot code moved into the InkySwot division of the memory database, with a code- prefix — 9 June 2026.
+The chapter given a synopsis page of its own, in the scene-page family, sitting before that chapter's first scene — 11 June 2026.
+The AI Prompt scoped and locked — Prompt and Expand expand the SYNOPSIS, never the prose; they scale with the spine; the prose-forbidding system prompt is server-side; output lands by choice — 11 June 2026.
+Prompt / Expand button treatment settled as an outline pair in the page's own palette, waking to gold on hover; treatments B, C and D dropped — 11 June 2026.
+The Site Map built, then REDESIGNED the same day — from a branching tree of every nav section to a calm spine of four headings with plain-text pop-up contents, two lanes, static and hover-driven. Signed off — 11 June 2026.
+PLOT MAPPING DROPPED from the platform — 11 June 2026. [REVERSED 15 August 2026.]
+The DCW reframed as ONE BODY OF DATA — the MIXDOWN — superseding "three views you move between". The funnel and the living link survive. The keystone identified: each overlay's structure must be stored on the shared data itself — 16 June 2026.
+The Writing Panel renamed THE MANUSCRIPT. The right-hand roadmap removed as a duplicate of the wheel. The menu spine recorded — 16 June 2026.
+THE QUICK-NOTE built and signed off — the pinned post-it, the scruffy cousin of the entity pop-up; two-state thumbtack, per-note pin colour from the six track colours, pinned scraps anchored to the scene and scrolling with it. Saved as inkyswot-code-quick-note.html.md; not yet wired in — 17 June 2026.
+CONCEPTS built and working — the writer's store for future-story ideas, living on the My Projects screen; genre folder → story title → main story card as a resizable canvas holding header-band idea cards. The dashed empty-card idiom settled. Working file concepts-canvas.html — 14 July 2026.
+[The Ideas Box / filing-box design of 13 July was abandoned the same week — it chased theatre over usability. The header-band card and the dashed-empty state survived.]
+THE CORRIDOR-PLUS-POCKETS ARCHITECTURE built — corridor.html as the shared shell with pocket slots, pockets/ holding one file per screen, and the Enclosure stitching and publishing to app.inkyswot.com via Vercel. Supersedes single-file architecture — August 2026.
+Platform-wide spell check FIXED with the MutationObserver pattern, catching fields created after load. The Grammarly trap identified and written up — 11 August 2026.
+The sidebar rebuilt and published — Basics, then Story / People / World / Library / DCW — 11 August 2026.
+The Overview / Basics screen rebuilt and published — genre dropdown carrying industry word-count ranges, three linked guides (words, chapters, words per chapter) replacing the four boxes, ranges throughout, each genre carrying its own sentence wording. The New Project pop-up cut to Title and Author — 12 August 2026.
+THE SYNOPSIS REBUILT AS ONE CONTINUOUS DOCUMENT after Kev's insight: "you just write stuff down and then sort it out later." The box-based screen abandoned — 12 August 2026.
+THE PLOT MAPPER — the Synopsis screen became the Plot Mapper, and the only one. Built to code-plot-mapper-10.html — 14/15 August 2026:
+  · F2 as the single key, reading the situation (breaks with a bare cursor, the sixteen sections with a phrase highlighted).
+  · The section menu rebuilt as the whole sidebar — sixteen sections, four columns, family colours, single letters in bright white.
+  · Kev's dashed-hairline divider adopted for chapter and scene breaks, with the pill in the gutter and the gold dot at the end.
+  · Paragraph-aware prose; first-line indents flush after a break, with an Indent switch.
+  · Empty runs trapped between two breaks dropped automatically.
+  · Marks redrawn as dashed underlines in family colour, with a Details switch.
+  · Selections grown out to whole words — catching part of a word is enough.
+  · ALSO CALLED on cards, with suggestions, set-aside and recall.
+  · Prompt / Expand on every chapter and scene line, reading the words beneath them; the pair at the foot of the page removed.
+  · AI ON/OFF made live and governing all of it.
+  · The SECTION ? guide rebuilt as a movable, resizable window.
+  · The header cut back, with a More / Less button unfolding the book's details beneath the word budget.
+  · Fixed widths on every switch, and the new house rules that go with them.
+THE HISTORY CLASH FIXED — the undo store had been named "history", which the browser already owns, so every action that changed the document had been dying silently since the screen was first built. Found by making the screen print what it did — 15 August 2026.
+The rotated board's rescue attempted and ABANDONED (code-board-rotated-6 to -11) — 15 August 2026.
+The continuity library conceived and written to future.md — uploading a finished book so the platform can hold the writer to what they already wrote — 15 August 2026.
+current-state.md and locked-decisions.md rewritten whole, with two months of platform work folded in and every overtaken lock moved to Superseded — 15 August 2026.
