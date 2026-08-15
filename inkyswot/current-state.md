@@ -1,76 +1,177 @@
 File: inkyswot/current-state.md
 
 ================================================================
-*** THE SYNOPSIS SCREEN — REBUILT AS ONE DOCUMENT (12 August 2026) ***
-Paste this block at the TOP of current-state.md. It supersedes nothing —
-the Synopsis screen had not been written up before. Working file:
-code-synopsis-flow-3.html (standalone, not yet a pocket).
+*** THE PLOT MAPPER — WHAT WAS THE SYNOPSIS SCREEN (15 August 2026) ***
+Working file: code-plot-mapper-10.html (standalone, not yet a pocket).
+This SUPERSEDES the old Synopsis block and the "which plot mapper"
+open decision, both of which have been removed from this file.
 ================================================================
 
-THE INSIGHT THAT CHANGED IT
-Kev, mid-session: "when writing your idea for a story, a synopsis, you just
-write stuff down and then sort it out later."
+*** THE DECISION OF THE SESSION ***
 
-The old screen (code-synopsis-boxes.html) was a Whole Story box followed by
-chapter boxes opening into scene boxes. It was WRONG because it asked the
-writer to know their chapter breaks before they knew their story. It has been
-replaced.
+THE SYNOPSIS SCREEN IS NOW THE PLOT MAPPER. Not a screen that feeds one —
+it IS the Plot Mapper. The writer writes the story down in one piece,
+breaks it into chapters and scenes, and names the people, places and
+things inside it. That is plot mapping.
 
-WHAT IT IS NOW
-ONE CONTINUOUS DOCUMENT. The whole synopsis is a single flowing, editable
-text. The prose is NEVER moved, boxed or retyped. Structure arrives as MARKS
-WITHIN the flow — the writer draws lines through their own writing.
+AND IT IS THE ONLY ONE. Kev: "This is the only one we will be putting
+live." The rotated board, the corkboard, the vertical DCW and the
+horizontal work area are all OUT as candidates. The comparison we set out
+to make was settled by building the better thing instead.
 
-- F2 at the cursor opens a small two-option menu: Chapter break (1) or Scene
-  break (2). NO HIGHLIGHTING NEEDED. A break never falls mid-word — if the
-  caret is inside a word it steps back to the start of it.
-- A CHAPTER BREAK renders as a rule across the page with "Ch. 1", an
-  editable title, and its word count against its range.
-- A SCENE BREAK is a lighter mark — rule, dot, optional title — the way a
-  printed book marks one.
-- Removing a break STITCHES the prose either side back together.
-- HIGHLIGHTING A PHRASE opens a menu offering the platform's sections:
-  Character (P), Location (L), Building (B), Object (O), Plot thread (T),
-  Subplot (U), Theme (M), Event (E). Each has a single-key shortcut.
-- Choosing one OPENS THAT CARD OVER THE WHOLE PAGE — the phrase already in
-  as the name, the right fields for that section, a line showing the sentence
-  it came from, Prompt and Expand, Save or Cancel.
-- The made phrase is TINTED IN THE PROSE in its section's colour.
-- CTRL+Z steps back through breaks, cards, marks and typing (typing grouped
-  into bursts, so one undo does not remove a single letter).
-- The foot tallies: words, chapters, scenes, cards made, and HOW MUCH IS NOT
-  YET DIVIDED — which tells the writer how far through the splitting they are.
+The name is now free of the rotated board. If that board is ever revived
+it needs a different name — it cannot be called Plot Mapper.
 
-HOW IT IS HELD
-An ordered list of parts: {kind:'chapter'|'scene'|'prose', ...}. Everything on
-screen is drawn from that list. Word counts are simply the words falling
-between one break and the next. Chapter marks carry an optional own budget.
+*** HOW WE GOT THERE (worth keeping, because the reasoning matters) ***
 
-WHY THIS SHAPE — THE WHEEL
-The Wheel (the writing view) is ONE FULL PAGE PER SCENE, each carrying: the
-chapter heading, the scene number, the scene title, and THE SCENE'S SUMMARY
-TEXT sitting above the writing area. That summary is the line the writer works
-FROM. It is exactly what the splitting produces — the passage marked off IS
-the scene summary.
+Sara (writer, Kev's wife) was shown the Synopsis and said: "Do I have to
+use it?" That was taken seriously. The reading: the screen asked the
+writer to do admin — chop the prose up, tag the names — and gave nothing
+back, because everything it produced was for a screen somewhere else.
 
-The Wheel's scene menu (Characters, Objects, Themes, Tension) is populated by
-the tagging done here: a scene knows Mole is in it because Mole was made a
-character while writing that passage.
+Kev's answer was to make it the Plot Mapper. The breaking-up is no longer
+work done for another screen; it is the thing itself. Kev's later view:
+"What Sara said was wrong. This page works." Both are true — her reaction
+was right about what she was shown, and what she was shown has changed.
+
+A morning was spent instead trying to rescue the rotated board (files
+code-board-rotated-6 to -11: scene summary line rendered, fine-line
+divider, delicacy pass, titles into the margin, cards made in their cell).
+It was ABANDONED. Kev: "None of this is working for me. Somewhere we have
+lost the magic." Every step that morning had been a subtraction, and the
+board was being judged empty. Those files exist but are not the way.
+
+*** WHAT THE SCREEN DOES NOW ***
+
+- ONE CONTINUOUS DOCUMENT. Prose is never boxed, moved or retyped.
+  The insight it was built on, from 12 August, still holds: "when writing
+  your idea for a story, a synopsis, you just write stuff down and then
+  sort it out later."
+- F2 IS THE ONE KEY. Bare cursor -> Chapter break (1) or Scene break (2).
+  A phrase highlighted -> the SIXTEEN sections of the sidebar, four
+  columns, headed and coloured by family, each with a single letter shown
+  in bright white. Highlighting alone summons nothing.
+  Letters: Story T U M E · People C R F D · World L B O W · Library G N I S.
+- CATCHING PART OF A WORD IS ENOUGH. The selection grows out to whole
+  words: "oa" gives Toad; a drag from inside "Mr." into "Toad" gives
+  "Mr. Toad"; a trailing comma is dropped; "Mr." keeps its full stop.
+  Kev: "a tired writer would get pissed off damn quick."
+- THE BREAK is a dashed gold hairline with its "Ch. 1" pill out in a left
+  gutter and a gold dot at the far end — Kev's own sketch, and the same
+  mark a board would use. Scene breaks are the same in pale stone.
+  A break never falls mid-word. Removing one stitches the prose back
+  together. An empty run trapped between two breaks is dropped.
+- THE GOLD DOT opens: own word range, change chapter to scene or back,
+  remove the break.
+- PROMPT / EXPAND sit ON THE LINE, right-hand end, before the dot, on
+  every chapter and every scene — matching where Ada's buttons sit on
+  other screens. They READ THE WRITING BENEATH THEM: with words there,
+  both are live and say "312 words here already — Ada works from them";
+  with nothing there, Expand goes quiet. The two buttons that used to sit
+  at the foot of the page are GONE.
+- AI ON/OFF in the header is live. Off removes Ada from every line and
+  every card.
+- CARDS carry ALSO CALLED — Mr. Toad is also Toad. The platform proposes
+  the obvious ones (drops a title, drops a surname); a rejected name goes
+  quiet but is reachable behind a "2 set aside" line; typing a rejected
+  name in adds it normally. Rejection belongs to that card only.
+- INDENT (first lines set in, flush after a break) and DETAILS (dashed
+  lines under anything recorded, in its family's colour — the word itself
+  is never tinted).
+- SECTION ? at the top right opens a MOVABLE, RESIZABLE window: twelve
+  lines, a gold label and one plain sentence each. No scrim — the page
+  stays live so it can be read while working.
+- THE HEADER was cut to title, strapline, word budget and Edit in Basics.
+  A MORE / LESS button under the budget unfolds Genre, Classification,
+  Status and Author beneath it. They are shown, not editable — Basics is
+  the one door.
+- THE FOOT tallies: words, chapters, scenes, how many things made, and
+  HOW MUCH IS NOT YET DIVIDED.
+
+*** THE BUG THAT COST AN AFTERNOON — READ THIS ***
+
+The undo store was declared as "var history = []". The browser has
+already claimed that name for its own back-and-forward list, and a var at
+the top level of a script does NOT override it. Every call to snapshot()
+hit history.push and threw.
+
+snapshot() is the FIRST line of every action that changes the document,
+so breaks, cards and break-removal all died silently at step one. It
+looked like a broken F2, then a broken menu, then a broken mouse. It was
+none of those.
+
+NEVER NAME A VARIABLE history, name, location, status, top, self or
+parent — the window already owns them all.
+
+It was found only by building a version that PRINTED WHAT IT WAS DOING to
+a line on the page. WHEN A FAULT SURVIVES ONE FIX, STOP GUESSING AND MAKE
+THE SCREEN SAY WHAT IT DID.
+
+*** HOW THE WRITING IS HELD ***
+
+  { kind:'chapter', title, budget }
+  { kind:'scene',   title }
+  { kind:'prose',   paras:[ {text, marks} ] }
+
+A run of prose is A LIST OF PARAGRAPHS, not one long string. A break is
+"this paragraph, this point in it" — no counting across the document,
+nothing to drift. Word counts are the words between one break and the
+next. Chapter marks carry an optional own budget.
+
+*** WHY THIS SHAPE — THE WHEEL ***
+
+The Wheel (the writing view) is ONE FULL PAGE PER SCENE, each carrying:
+the chapter heading, the scene number, the scene title, and THE SCENE'S
+SUMMARY TEXT above the writing area. That summary is the line the writer
+works FROM, and it is exactly what the splitting produces.
+
+The Wheel's scene menu (Characters, Objects, Themes, Tension) is
+populated by the naming done here: a scene knows Mole is in it because
+Mole was made a character while writing that passage.
 
 TEST FOR ANY PLOT MAPPER: can it produce chapter, scene number, title and
 summary? If not, it is not a Plot Mapper, whatever else it does well.
 
-KNOWN LIMITATION
-Editing a run of prose clears that run's tints — the marks are held as
-character offsets and the text has moved. To be solved when persistence is
-built.
+*** STILL TO DO ***
 
-STILL TO DO
-Two steps, agreed: (1) turn it into pockets/synopsis.html, add the corridor
-slot, switch the sidebar link from Coming Soon, make the header and budget
-read the real project, save and reload the document; (2) make the cards
-actually write into the same store Cast/Locations use, so making Mole puts him
-in Characters. Step 2 is the real work.
+1. NOTHING SAVES. Refresh and it is gone.
+2. TINTS VANISH WHEN THE PROSE IS EDITED. A mark is held as "characters
+   14 to 22 of this paragraph" and editing moves the words. THIS IS NOT
+   FIXED BY GOING LIVE — it must be solved WHILE building saving, since
+   both need the platform to follow a phrase as text moves. Do it after
+   and the store is built twice.
+3. CARDS DO NOT REACH CHARACTERS. Making Mole does not put him anywhere.
+   Step two, and the real work.
+4. The header facts and the budget are still the Wind in the Willows
+   demo's, hard-coded.
+
+*** NEXT SESSION — STEP ONE OF GOING LIVE ***
+Turn code-plot-mapper-10.html into pockets/plot-mapper.html, add the
+corridor slot, point the sidebar's DCW > Plot Mapper at it, make the
+header and budget read the real project. THE CURRENT CORRIDOR MUST BE
+PASTED IN — build from the file, never from a reconstruction.
+
+================================================================
+*** PLOT MAPPING — THE OPEN DECISION IS CLOSED (15 August 2026) ***
+================================================================
+
+THE CANDIDATES ARE OUT. The corkboard, the rotated board
+(code-board-rotated-5.html), the vertical DCW and the horizontal work
+area are no longer in the running.
+
+WHAT THE ROTATED BOARD TAUGHT US, KEPT:
+- The four requirements test still stands (chapter, scene number, title,
+  summary). The rotated board was the only candidate whose design
+  accounted for all four — and its summary line was styled but never
+  rendered, so in truth it had three.
+- The compass rose, the arrival state (reading chapterRange from
+  localStorage "is-projects"), the take-6 header-band card, the
+  drag-to-reorder tracks and the snap-to-grid machinery all still exist
+  in that file if ever wanted.
+- code-board-rotated-6 to -11 were a failed rescue attempt on 15 August.
+  Do not build on them.
+
+IF A BOARD IS EVER REVIVED IT NEEDS A DIFFERENT NAME.
 
 ================================================================
 *** BASICS (OVERVIEW) — GENRE RANGES & THE THREE GUIDES · LIVE ***
@@ -99,8 +200,8 @@ it's a guide, not a rule." The word LAND was chosen deliberately: it describes
 where books tend to end up, not where this one must.
 
 RANGES THROUGHOUT — never a single target, because the Overview gives ranges
-and the two must never disagree. The Synopsis budget divides the book's range
-across the chapters to give each its own range.
+and the two must never disagree. The Plot Mapper's budget divides the book's
+range across the chapters to give each its own range.
 
 CURRENT AND REMAINING WERE REMOVED — they are facts about progress and belong
 where the writing is. They survive as HIDDEN STUBS because the corridor's
@@ -128,14 +229,17 @@ File: corridor.html
 ================================================================
 
 BASICS, then:
-  STORY    Synopsis · Plot Threads · Subplots · Themes & Motifs · Events & Timeline
+  STORY    Plot Threads · Subplots · Themes & Motifs · Events & Timeline
   PEOPLE   Characters · Relationships · Factions & Orgs · Language & Dialogue
   WORLD    Locations · Buildings · Objects & Artefacts · Rules & Lore
   LIBRARY  Research & Reference · Notes · Images · Sandbox
   DCW      Plot Mapper · Manuscript · Publish
 
-Synopsis, Images, Manuscript and Publish point at Coming Soon. Chapters and
-The Treatment were dropped from the sidebar — their pockets remain in the repo
+SYNOPSIS HAS GONE FROM STORY (15 August) — it was this screen under another
+name, and it is now DCW > Plot Mapper.
+
+Images, Manuscript and Publish point at Coming Soon. Chapters and The
+Treatment were dropped from the sidebar — their pockets remain in the repo
 untouched, only the way in has gone. showScreen was guarded so the removed nav
 ids no longer throw.
 
@@ -157,13 +261,13 @@ rooms to build. Not started.
 File: corridor.html
 ================================================================
 
-enableSpellCheck ran once on load, so it missed any field created later (the
-Synopsis boxes, for instance). Rewritten to use the SAME MUTATIONOBSERVER
-PATTERN the Read-aloud block already used. It now catches input[type="text"]
-and textarea whenever they appear, platform-wide, marking each field
-data-spellReady="1" so nothing is done twice.
+enableSpellCheck ran once on load, so it missed any field created later.
+Rewritten to use the SAME MUTATIONOBSERVER PATTERN the Read-aloud block
+already used. It now catches input[type="text"] and textarea whenever they
+appear, platform-wide, marking each field data-spellReady="1" so nothing is
+done twice.
 
-NOTE: this catches inputs and textareas. The new Synopsis uses contenteditable
+NOTE: this catches inputs and textareas. The Plot Mapper uses contenteditable
 divs, which the selector does NOT cover — they set spellcheck themselves. If a
 future screen uses contenteditable, widen the corridor selector.
 
@@ -182,7 +286,7 @@ Enclosure below Publish. It was how the original code was installed, and
 pressing it now would push an OLDER version back into the corridor, undoing
 this fix.
 
-*** THE PUBLISHING RULE — reinforced twice this session ***
+*** THE PUBLISHING RULE ***
 WAIT A FULL MINUTE between pressing Stitch and pressing Publish. Pressing
 Publish twenty seconds after Stitch reads the PREVIOUS index.html and silently
 deploys stale code. Pressing Publish again after a pause fixes it. Stitch's
@@ -190,66 +294,12 @@ character count and Publish's character count MUST MATCH before a hard refresh
 is trusted.
 
 ================================================================
-*** PLOT MAPPING — SMALL CHANGES, AND AN OPEN DECISION ***
-File: code-board-rotated-5.html (standalone, not yet a pocket)
-================================================================
-
-DONE THIS SESSION
-- The "+ card" button in the bottom-right corner REMOVED (cards are to be made
-  within the tracks). The card machinery itself untouched.
-- "Time" in the spine head replaced with a COMPASS ROSE — drawn SVG, house
-  gold, eight points, engraved shading (brighter on one facet of each point,
-  dimmer on the other), no lettering, 42px. Standalone high-res copy exists as
-  compass-rose.svg.
-- Track dropdown reordered to STORY, PEOPLE, WORLD, LIBRARY, and the Story
-  group matched to the sidebar: Synopsis, Plot Threads, Subplots, Themes &
-  Motifs, Events & Timeline. This REMOVED Chapter & Scene Tracker and Dialogue
-  from the dropdown — flagged, not yet decided.
-- AN ARRIVAL STATE was added: the board reads the Overview's chapter range,
-  takes the bottom of it, and lays that many chapters down the spine, each
-  with Scene One already present, so the board NEVER OPENS EMPTY. Falls back
-  to 25. It finds the project by reading localStorage "is-projects" directly
-  and taking the most recently edited entry.
-  KEV'S RESPONSE: "We are jumping ahead of ourselves. we need the synopsis
-  page first." Built, but the ordering was wrong.
-
-*** THE OPEN DECISION — WHICH PLOT MAPPER ***
-Kev's proposal (13 August): put all the candidates live and see which works
-best, possibly letting the writer choose between them.
-
-The counsel given: BUILDING THEM LIVE TO COMPARE — YES, you cannot judge a
-workstation from a screenshot. OFFERING THE CHOICE PERMANENTLY — be careful.
-Every one kept is maintained forever, and they must all agree about the same
-scenes. Two views of one story is a feature; two that drift apart is a bug
-factory. A new writer asked which plot mapper they would like has been handed
-indecision as a menu. If two do genuinely different jobs (mess-making versus
-placing) keep both DELIBERATELY, not by default.
-
-THE CANDIDATES
-1. THE CORKBOARD — free-form. Double-click to drop a note, drag anywhere,
-   pull threads between notes, chapter timeline along the bottom, Ada bubble,
-   Transfer to InkySwot, section help panel, notes flip to private DARK
-   THOUGHTS. Beautifully made. DOES NOT CREATE SCENES.
-2. THE ROTATED BOARD — spine of chapters and scenes down the left, tracks as
-   columns. DOES create scenes. Chosen as Plot Mapping in the earlier brief.
-3. THE VERTICAL DCW (dcw-vertical-full.html) — and this one impressed.
-   FORTY-FIVE-DEGREE TRACK HEADERS, so twenty tracks fit where the rotated
-   board manages three. Small, flat, dense cards with the red full-stop for
-   Dark Thoughts. TENSION, FEAR AND COMPASSION DRAWN AS CURVES running down
-   the whole book rather than tracks of cards. Atmosphere, Weather and Time as
-   their own columns. A RIGHT-HAND PANEL showing the selected character with
-   their arc, relationships, which staves they appear in, and Ada's tools
-   (Auto-fill, Image prompt, Check & improve).
-4. A STILL PICTURE — fixed grid, no interaction. A look, not a tool.
-
-KEV'S OBSERVATION: "I think we have lost a little of the DCW idea and with
-that some of the theatre." He is right. The vertical DCW is what he means by a
-workstation; the rotated board is its skeleton with most of the flesh missing.
-
-================================================================
 *** THE TWO BIG IDEAS — PARKED, NOT ABANDONED ***
 These are the two things in the project nobody else is offering, and they are
-the same idea seen from two ends.
+the same idea seen from two ends. A THIRD now joins them — the continuity
+library in future.md. A project that knows its own proper nouns serves the
+spell checker, the language creator and the continuity guard alike. Three
+features, one well.
 ================================================================
 
 1. INKYSWOT'S OWN SPELL CHECKER
@@ -352,6 +402,9 @@ platform is already list-on-the-left, detail-on-the-right. The Library may not
 need a new metaphor at all — just the platform behaving consistently. That
 line of thought was not followed to its end.
 
+THE CONTINUITY LIBRARY (15 August, in future.md) belongs here when it is
+built: uploading a finished book as a source the whole project reads from.
+
 ================================================================
 *** THE THEATRE PASS — DEFERRED DELIBERATELY ***
 ================================================================
@@ -360,22 +413,18 @@ Kev: "we are going to do a theatre pass at the end so we can mess about with
 syntax then." Nothing decorative should be built before it.
 
 FROM THE EARLIER BRIEF, the board's failings: cards APPEAR rather than arrive;
-pinning should feel like coming home; snap-to-grid should be the showpiece
-(twenty cards flying into formation); adding a scene jolts everything below;
-the board is inert at rest.
+pinning should feel like coming home; snap-to-grid should be the showpiece;
+adding a scene jolts everything below; the board is inert at rest.
 
-SUGGESTED THIS SESSION: the best single moment for theatre is A BREAK ARRIVING
-IN THE SYNOPSIS — the rule drawing itself across, the prose settling into its
-new place. One well-made moment there would do more than a dozen small
-flourishes elsewhere.
+THE BEST SINGLE MOMENT FOR THEATRE IS A BREAK ARRIVING IN THE PLOT MAPPER —
+the rule drawing itself across, the prose settling into its new place. One
+well-made moment there would do more than a dozen small flourishes elsewhere.
 
 REMEMBER: gold marks anything alive and responding. Never decorative.
 
 ================================================================
 *** CONCEPTS — THE IDEAS SYSTEM · BUILT & WORKING (14 July 2026) ***
-This block is unchanged from its original entry. It REPLACES the old "Ideas
-Database / Ideas Box" design block from 13 July — see the SUPERSEDED note at
-the foot. Working file: concepts-canvas.html.
+Working file: concepts-canvas.html.
 ================================================================
 
 WHAT IT IS
@@ -383,104 +432,64 @@ CONCEPTS — a writer's private store for FUTURE-story ideas, separate from any
 one project. It lives ON THE MY PROJECTS SCREEN, not in its own pocket: the
 screen splits, My Projects on the left (unchanged), the Ideas/Concepts area
 on the right. A concept is a pre-project — a seed that may one day become one
-of the books on the shelf. (The name CONCEPTS is held LIGHTLY — settled for
-now, change later if a better one turns up. "Ideas" is the working heading on
-screen in the prototype.)
+of the books on the shelf. (The name CONCEPTS is held LIGHTLY.)
 
 THE STRUCTURE — THREE STAGES (locked, matches Kev's map)
 GENRE FOLDER -> STORY TITLE -> MAIN STORY CARD (a canvas). No more levels.
 - GENRE FOLDER: a narrow bar. Named from the real GENRE LIST (the same list
-  as the Overview screen's custom dropdown — all ~50, twelve greyed "coming
-  soon"). Made via a + FOLDER button, bottom-right of the Ideas area
-  (mirrors + NEW PROJECT bottom-left). + FOLDER makes an EMPTY genre folder
-  and nothing more.
-- Click a genre folder: its STORY SUB-FOLDERS (story titles) open OUT TO THE
-  SIDE (to the right), joined by a dotted connector line. Narrow genre bars
-  stack tight; the opened stories float beside without adding row height.
-  Stories are added by the folder's OWN + (and a "+ New story" line).
-  Story titles are PLAIN BARS (just the title), not header-band cards.
+  as the Overview screen's custom dropdown). Made via a + FOLDER button,
+  bottom-right of the Ideas area (mirrors + NEW PROJECT bottom-left).
+- Click a genre folder: its STORY SUB-FOLDERS open OUT TO THE SIDE, joined by
+  a dotted connector line. Stories are added by the folder's OWN +. Story
+  titles are PLAIN BARS, not header-band cards.
 - Click a STORY TITLE: its MAIN STORY CARD opens as an almost-full-screen
-  POP-UP on a dimmed backdrop (modal). Title sits IN THE TOP BAR, with the
-  close x. No category band in the head (that was removed — it belonged to
-  earlier idea-card thinking).
+  POP-UP on a dimmed backdrop. Title in the top bar, with the close x.
 
 THE MAIN STORY CARD = A RESIZABLE CANVAS (the heart of it)
-- The story card is NOT a title-and-body page. It is a CANVAS that holds
-  small header-band idea cards — a mini-board, the board idiom scaled down
-  and living inside a story.
-- ADD IDEA button (top bar) opens a GROUPED DROPDOWN = the platform's real
-  side-menu list:
-    Cast:  Characters, Relationships, Factions & Orgs, Language & Dialogue
-    World: Locations, Buildings, Objects & Artefacts, Rules & Lore
-    Plot:  Plot Threads, Subplots, Themes & Motifs, Events & Timeline
+- Not a title-and-body page. A CANVAS holding small header-band idea cards —
+  the board idiom scaled down and living inside a story.
+- ADD IDEA opens a GROUPED DROPDOWN of the platform's real side-menu list.
   Pick a category -> a HEADER-BAND CARD drops onto the canvas, named and
-  COLOURED BY FAMILY (Cast = terracotta, World = teal, Plot = violet — deep
-  muted tints from the platform palette). A glance tells you the kind by
-  colour. Each card has a "Write your idea..." body that auto-grows, and a
-  small x to remove.
-- WHY IT MATTERS (the integration thread): because these are the platform's
-  REAL side-menu categories, a card jotted in a Concept LATER INTEGRATES
-  into the main platform when the idea grows into a project (a Location
-  jotted here can carry through to the project's Locations).
-- Cards DRAG FREELY around the canvas (grab the card, not the text).
-- The WHOLE POP-UP is RESIZABLE (head + canvas + foot grow together — not
-  the canvas alone). It opens LARGE by default (~94vw x 90vh) since it's a
-  pop-up and has the room; drag the bottom-right corner to adjust.
-- PROMPT and EXPAND buttons float up the right edge of the pop-up, gold,
-  matching the Overview screen's Ada-assist buttons. Placeholders for now —
-  to wire to the corridor's aiAutofill / aiExpand helpers when built for real.
+  COLOURED BY FAMILY. Each has a "Write your idea..." body that auto-grows.
+- WHY IT MATTERS: because these are the platform's REAL categories, a card
+  jotted in a Concept LATER INTEGRATES into the main platform when the idea
+  grows into a project.
+- Cards DRAG FREELY. The WHOLE POP-UP is RESIZABLE, opening large (~94vw x
+  90vh); drag the bottom-right corner to adjust.
+- PROMPT and EXPAND float up the right edge, gold. Placeholders — to wire to
+  the corridor's aiAutofill / aiExpand helpers.
 
 GENRE FOLDER COLOUR (locked)
-- Default = a REPEATING PALETTE of the SIX TRACK COLOURS (deep muted body
-  tints, so folders sit calm in the dark, light text on deep bar). New folder
-  takes the next colour; loops after six.
-- The writer CAN CHANGE any folder's colour: a small colour dot on each bar
-  opens a six-swatch picker (same six, same idiom as the note palette).
+- Default = a REPEATING PALETTE of the SIX TRACK COLOURS. New folder takes the
+  next colour; loops after six. The writer CAN CHANGE any folder's colour via
+  a small colour dot opening a six-swatch picker.
 
 THE EMPTY-CARD IDIOM (settled, kept)
-- An empty/unfiled card is a DASHED OUTLINE only (no fill) — tab band and
-  body both just a soft pencil-grey stroke on the black. It earns its colour
-  by being filled/filed. (Chosen over a grey fill — an empty idea is honestly
-  empty.)
+- An empty/unfiled card is a DASHED OUTLINE only — tab band and body both a
+  soft pencil-grey stroke on the black. It earns its colour by being filled.
+  (The Plot Mapper's Also-called suggestions use the same idiom.)
 
-BUILT FROM THE TRUTH
-- The header-band card was lifted from code-board-rotated.html (the take-6
-  cards: .note-tab band + .note-card body + "Write your idea..." + Details).
-- The genre list was read from project-overview.html (the real dropdown).
-- The side-menu category list (Cast/World/Plot, 12 items) came from Kev.
+STILL TO DO
+- Build the actual story-naming step (+ New story and folder + are demos).
+- Wire Prompt / Expand to the real Ada helpers.
+- PERSIST — folders, stories, cards and card positions into the database, and
+  integrate the cards into the main platform entities when a concept becomes
+  a project.
+- A gold-rendering niggle on Prompt/Expand on Kev's screen was NOT resolved.
 
-STILL TO DO (next session)
-- The "+ New story" and folder "+" are demo placeholders — build the actual
-  story-naming step.
-- Wire Prompt / Expand to the real Ada helpers (aiAutofill / aiExpand).
-- PERSIST — folders, stories, cards, and card positions must save into the
-  InkySwot database (and integrate the cards into the main platform entities
-  when a concept becomes a project).
-- Decide if a card, once dropped, needs anything beyond its body (kept
-  deliberately just body for now — the seed end must not be forced).
-- A gold-rendering niggle on Prompt/Expand on Kev's screen was NOT resolved
-  (the icons were flat system glyphs; swapped to gold SVGs; Kev still saw no
-  gold — likely browser/cache, left for later).
+NOTE (13 August, still outstanding): the Concepts side-menu list uses the OLD
+grouping (Cast / World / Plot). The sidebar is now STORY / PEOPLE / WORLD /
+LIBRARY / DCW, and the Plot Mapper's section menu uses the new list of
+sixteen. Concepts should be brought into line when next touched.
 
-NOTE (added 13 August 2026): the Concepts side-menu list above uses the OLD
-grouping (Cast / World / Plot). The sidebar has since been rebuilt as STORY /
-PEOPLE / WORLD / LIBRARY / DCW, and the Synopsis screen's section menu uses
-the new list. Concepts should be brought into line when it is next touched.
-
-BANKED FOR future.md (from the dropped face-generator idea, still valid)
-- (a) richer CHARACTER fields; (b) ADA AS CONTINUITY-GUARD ("written with
-  long hair, but his record says short"). Banked, not started.
+BANKED FOR future.md: (a) richer CHARACTER fields; (b) ADA AS
+CONTINUITY-GUARD — now folded into the continuity library entry.
 
 ----------------------------------------------------------------
 *** SUPERSEDED — the 13 July "Ideas Box / filing-box" design ***
-The filing-box metaphor (face-on drawer, genre divider TABS across the top,
-an Unfiled tab, cream front card, brass pull, four richness levels) was
-ABANDONED. Reason: it chased theatre over usability. It was replaced by the
-simple Concepts system above (folders on the My Projects screen). The
-header-band CARD idiom and the DASHED-empty state survived from that
-thinking; everything else about the box (drawer, tabs-as-furniture, folding
-cards, the peeking-blank-card, richness levels) is dropped. Do not rebuild
-the box.
+The filing-box metaphor was ABANDONED: it chased theatre over usability. The
+header-band CARD idiom and the DASHED-empty state survived from that thinking;
+everything else about the box is dropped. Do not rebuild the box.
 ----------------------------------------------------------------
 
 ================================================================
@@ -494,17 +503,28 @@ GOLD MARKS ANYTHING ALIVE AND RESPONDING. NEVER DECORATIVE.
 Track colour families: People #cf7f57 · World #5fa898 · Story #c9923a ·
 Library #9a8f72.
 
+ADDED 15 AUGUST:
+- A CONTROL THAT CHANGES ITS WORDING MUST NOT CHANGE ITS SIZE. Fixed width
+  sized to the longest state, text centred. TO BE SWEPT ACROSS THE CORRIDOR
+  when it is next in hand.
+- A CONTROL'S SIZE MUST NOT DEPEND ON WHAT IS BESIDE IT.
+- OPENING SOMETHING MUST NOT PUSH WHAT IS ABOVE IT.
+- MARKS ARE DASHED LINES BENEATH, NEVER TINTED WORDS. Colour is by FAMILY,
+  not by section — four colours read at a glance, sixteen do not.
+- EVERY SCREEN CARRIES A "SECTION ?" PILL at the TOP RIGHT of its header,
+  opening a movable, resizable window. No scrim. One line per thing.
+
 ================================================================
 *** SUGGESTED ORDER OF WORK ***
 ================================================================
-1. Gather and assess the plot-mapping candidates against the Wheel's four
-   requirements (chapter, scene number, title, summary). DECIDE — do not ship
-   a menu of them.
-2. Make the Synopsis live, in the two steps above. It is the screen everything
-   downstream depends on, and it produces the chapters the board is supposed
-   to arrive holding.
-3. Then the remaining Library sections, then the five rooms, then the theatre
-   pass.
+1. MAKE THE PLOT MAPPER LIVE — step one: pockets/plot-mapper.html, the
+   corridor slot, the sidebar link, the header and budget reading the real
+   project. THE CURRENT CORRIDOR MUST BE PASTED IN.
+2. STEP TWO — the cards writing into the same store Characters, Locations and
+   the rest read from. This is the real work, and the continuity library in
+   future.md depends on it. SOLVE THE VANISHING TINTS AS PART OF THIS, not
+   after.
+3. Then the Library, then the five rooms, then the theatre pass.
 
 Kev's own words, still true: "We will have to make and remake this page until
 it is right." Expect several passes. That is the plan, not a failure of it.
