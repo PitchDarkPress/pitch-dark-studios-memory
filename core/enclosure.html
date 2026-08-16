@@ -332,11 +332,18 @@ const LIVE_BRANCH = 'main';
 
 // The content screens that become pockets, in the order they appear in <main>.
 // Small shared screens (projects, trash, coming-soon) stay in the corridor.
+//
+// SPLIT uses this list to decide what to carve out of a single index.html.
+// STITCH does NOT. Stitch reads the corridor and fills every slot it finds
+// there, so a new pocket works the first time without anyone remembering to
+// add its name here. This list once fell a screen behind the corridor and
+// the tool said nothing about it.
 const POCKET_SCREENS = [
   'project-overview',
   'events',
   'treatment',
   'chapters',
+  'plot-mapper',
   'cast',
   'relationships',
   'factions',
@@ -565,20 +572,40 @@ async function stitch() {
 
     let out = corridor.text;
 
-    for (const id of POCKET_SCREENS) {
+    // Every slot the corridor actually asks for, in the order it asks for
+    // them. The corridor is the truth; nothing is kept in step by hand.
+    const wanted = [...corridor.text.matchAll(/<!-- POCKET:([A-Za-z0-9._-]+) -->/g)]
+                     .map(m => m[1]);
+
+    if (wanted.length === 0) {
+      throw new Error('The corridor has no pocket slots in it at all.');
+    }
+    log('The corridor asks for ' + wanted.length + ' pockets.', 'info');
+
+    let placed = 0;
+    const missing = [];
+
+    for (const id of wanted) {
       const marker = slotMarker(id);
-      if (!out.includes(marker)) {
-        log('Corridor has no slot for "' + id + '" — skipping.', 'info');
-        continue;
-      }
       const pocket = await readFile('pockets/' + id + '.html');
       if (!pocket) {
-        log('Missing pocket "' + id + '" — leaving slot empty.', 'err');
+        log('NO POCKET FILE for "' + id + '" — the slot is left empty. '
+          + 'Expected pockets/' + id + '.html', 'err');
+        missing.push(id);
         continue;
       }
       const cleaned = stripPocketHeader(pocket.text);
       out = out.replace(marker, cleaned);
+      placed++;
       log('Placed pocket "' + id + '"', 'ok');
+    }
+
+    // Say plainly what was done. A silent miss once cost an afternoon.
+    log('Placed ' + placed + ' of ' + wanted.length + ' pockets.',
+        placed === wanted.length ? 'ok' : 'err');
+    if (missing.length) {
+      log('STOP — these slots are still empty: ' + missing.join(', ')
+        + '. Do not publish until they are in.', 'err');
     }
 
     log('Writing the finished index.html...', 'busy');
@@ -588,8 +615,13 @@ async function stitch() {
     lastStitched = out;
     document.getElementById('download-btn').disabled = false;
 
-    log('STITCH DONE. The finished index.html is in the repo.', 'head');
-    log('Use the Download button to grab a copy and open it to check it looks right.', 'info');
+    if (missing.length) {
+      log('STITCH FINISHED WITH SLOTS EMPTY — do not publish this.', 'err');
+      log('Put the missing pocket file(s) in, then Stitch again.', 'info');
+    } else {
+      log('STITCH DONE. The finished index.html is in the repo.', 'head');
+      log('Use the Download button to grab a copy and open it to check it looks right.', 'info');
+    }
 
   } catch (e) {
     log('STITCH FAILED — ' + (e.message || 'unknown error'), 'err');
