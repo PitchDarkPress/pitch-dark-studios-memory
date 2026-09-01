@@ -1,7 +1,7 @@
 File: inkyswot/completed.md
-Last updated: 15 August 2026 — the list had stopped at 4 June. Entries for
-6–17 June, July and August have been added from the record held in
-locked-decisions.md and current-state.md. Earlier lines are unchanged.
+Last updated: 31 August 2026 — entries for 16–31 August added, recovered
+from the session record after the database was found to be a fortnight
+behind the repository. Earlier lines are unchanged.
 
 Database restructured — InkySwot content redistributed into nine files — 24 May 2026.
 Pricing locked — £9.95/month, £99.50/year, no free tier, 14-day money back — 24 May 2026.
@@ -52,87 +52,237 @@ current-state.md updated — press.md added to specialist files — 29 May 2026.
 Plot Mapping standalone mockup built and complete — CODE/map-plotter.html — 30 May 2026.
 Section help pill (SECTION ?) template pattern built, first on Plot Mapping — 30 May 2026.
 CODE locker created — CODE/README.md and map-plotter.html stored — 30 May 2026.
-User journey reworked — open hub after login; My Projects is the home page; fixed path only before login and for one-time new-project setup — 31 May 2026.
-The Press two-door model locked — inside (members) and outside (public, own door at press.inkyswot.com, own sign-up, cloned for a separate payment gateway) — 31 May 2026.
-Nav updated — The Press and Plot Mapping added to Navigate; Trash moved to its own section at the foot of the sidebar — 31 May 2026.
-Plot Mapping confirmed ONE mapper, per-project; only its nav link moved to Navigate — 31 May 2026.
-Home-page launchpad decided — four items (Plot Mapping / The Press / Create First Project / Open Project) in both the nav and the home page, each with icon, title and two-line strap — 31 May 2026.
-Four launchpad icons made as clean SVG line art (currentColor) and stored at CODE/home-icons.svg — 31 May 2026.
-DCW × Plot Mapper FUSION decided — one instrument; three track types (Structural / Curve / Ambient, Time is a block); cards hold text; the cascade; the card as the bridge to writing — 1 June 2026.
+User journey reworked — open hub after login; My Projects is the home page — 31 May 2026.
+The Press two-door model locked — 31 May 2026.
+Nav updated — The Press and Plot Mapping added to Navigate; Trash moved to its own section — 31 May 2026.
+Plot Mapping confirmed ONE mapper, per-project — 31 May 2026.
+Home-page launchpad decided — four items in both the nav and the home page — 31 May 2026.
+Four launchpad icons made as clean SVG line art and stored at CODE/home-icons.svg — 31 May 2026.
+DCW × Plot Mapper FUSION decided — 1 June 2026.
 current-state.md, locked-decisions.md and dcw.md rewritten for the fusion — 1 June 2026.
-DCW STRIP RETIRED — the DCW turned into a VERTICAL board (scenes down the spine, tracks as columns) to fuse with the Writing Panel — 2 June 2026.
-The SHUTTER built and signed off — DCW + WP one instrument, curtain covers/reveals without resizing, WP always on top, DCW left / WP right, Full Screen = page-side extreme, grab-handle keeps it findable — 2 June 2026.
-Vertical DCW board built into the shutter frame (standalone, CODE/dcw-vertical.html) — WP side still a placeholder — 2 June 2026.
-DCW polish landed — full-width stave divider rows (line above + below); bigger reading text (Crimson Pro) across the board; columns widened; horizontal centred track headers with downward chevrons, auto-wrap + hyphenation (45° rejected); click-a-card-to-expand overlay; ambient tracks (Atmosphere/Weather/Time) given card furniture but no knot/full-stop; minimap rail removed; entity panel kept; scrollbars restyled (12px, gold on hover); shutter grab-handle added — 2 June 2026.
+DCW STRIP RETIRED — the DCW turned into a VERTICAL board — 2 June 2026.
+The SHUTTER built and signed off — 2 June 2026.
+Vertical DCW board built into the shutter frame (CODE/dcw-vertical.html) — 2 June 2026.
+DCW polish landed — full-width stave divider rows, bigger reading text, widened columns, centred track headers, click-to-expand overlay, ambient tracks, restyled scrollbars, shutter grab-handle — 2 June 2026.
 Entity-panel question RESOLVED — the right-hand panel survives the fusion — 2 June 2026.
 File discipline locked — rewrite whole files clean, never patch — 2 June 2026.
-current-state.md, locked-decisions.md and dcw.md rewritten clean for the vertical DCW + shutter — 2 June 2026.
-THE TURN (3 June 2026) — the shutter and the two-tool model killed; landed on the one-screen DCW / X-ray (on = bones, off = flesh), linear screenplay-style tagged cells (TAG + CONTENT) with (*) handles, write-off-then-switch-on-and-it-asks, AI as a quality setting (render once, store) — 3 June 2026. [SUPERSEDED 4 June 2026.]
-Quiet-note visual grammar settled — no box/tab/knot/stem; sub-title in colour, neutral description, solid end-line — 3 June 2026. [Survives — now the pop-up's grammar.]
-Study mockups built for the one-screen thinking (quiet-note board, expand-to-write, one-screen studies) — 3 June 2026. [Studies only; superseded as build targets.]
-current-state.md rewritten for the 3 June turn; dcw.md given a history note; locked-decisions.md deliberately left untouched (decisions still parked) — 3 June 2026.
-THE SECOND TURN (4 June 2026) — realised InkySwot IS the DCW (the whole platform, not a screen); The Treatment is the DCW switched on; the spine is a TIMELINE OF EVENTS (Chapter → Scene → Event); only events become prose; the writer "fills in the blanks" — the database, assembled, IS the draft — 4 June 2026.
-Confirmed against the live index.html that The Treatment is an empty placeholder and that Events store characters[]/location and Chapters store characters[]/location/plotthreads[]/subplots[] — the connections the Treatment needs already exist — 4 June 2026.
-The Treatment recognised as the same object as the DCW — Steps 11 and 13 converging — 4 June 2026.
-The entity POP-UP settled — two-step from nav counts (list → record); stable (click open, click close, no vanish-on-click-away, no close-on-text-select); draggable by its header; quiet-note grammar in section colour; copy buttons; copy-and-paste into the WP as PLAIN ink (colour for finding, neutral for reading) — 4 June 2026.
-Nav section live counts decided — each section shows .length (Characters · 5, etc.; zero greyed); clicking opens the pop-up list — 4 June 2026.
-The WP settled as a real document page — Letter proportions, generous margins, page shadow; MAGNIFY/zoom control (70%–200%, view only, page shape fixed); centred page numbers; optional UNNUMBERED title page (numbering starts at 1 after it) with a toggle; title + author from Overview; slim dark gold-on-hover scrollbars throughout — 4 June 2026.
-WP / Treatment mockup built for "A Christmas Carol" — sidebar with counts; Chapter → Scene → Event spine; "— click to write this scene —"; the stable draggable quiet-note pop-up; magnify; page numbers; title page — the live design source for the new model — 4 June 2026.
-current-state.md and locked-decisions.md rewritten clean for the 4 June model (superseded 1–3 June material moved to clearly-fenced history blocks, not deleted) — 4 June 2026.
-completed.md updated — 3 June and 4 June milestones recorded — 4 June 2026.
-THE WHEEL (4 June 2026, later session) — click-to-write RESOLVED. Not inline-grow, not a focused surface — a WHEEL. The WP/Treatment page shifted RIGHT (left reserved for the pop-up); a vertical belt of section labels in the dark to the right with a fixed gold centre line; scrolling turns the wheel; the centre label is where you are (lit gold, single leader line). The split layout (centre alone; before-bunch above; after-bunch below; FIXED gaps) and a windowed view (~3 labels each side, fade in/out at the edges) keep it calm however long the book is; motion eased and slowed (glide 0.072). Two states: OVERVIEW (assembled Treatment, wheel follows scroll) and WRITING MODE (page opens clean for one scene, full-height writing area; travel scene-to-scene BY THE WHEEL; drafts remembered; "‹ overview" to leave) — 4 June 2026.
-THE WHEEL mockup built on "A Christmas Carol" — the live design source; supersedes the earlier 4 June WP/Treatment (inline-gap) mockup. Built STATIC-FIRST (agreed still picture) then animated — the method that worked after description-only failed — 4 June 2026.
-Design-a-mechanism rule adopted — build a static mockup first, agree the still, then add movement; a sketch from Kev beats ten descriptions — 4 June 2026.
-Two pre-filled demo books (A Christmas Carol / The Wind in the Willows) confirmed FEASIBLE and logged to future.md — fully-populated read-only demo projects so new users see how InkySwot works; both out of copyright; Carol first; depends on the shell being final; not scheduled — 4 June 2026.
-current-state.md, locked-decisions.md and dcw.md rewritten clean for the WHEEL (the click-to-write resolution; page-right/pop-up-left; Overview ↔ Writing Mode); dcw.md given its full rewrite (live wheel spec on top, all prior models kept as fenced history); future.md updated with the demo books — 4 June 2026.
-
---- ADDED 15 AUGUST 2026: the record from 6 June onward ---
-
-One scene per full page locked — each scene on its own full US-Letter sheet, always full height, never shrunk to hug content; the long-scrolling multi-event page gone. Stave heading on every scene page — 6 June 2026.
-Wheel centre mark settled — gold ring, filled dot, short leader; the radial bloom and the chevron removed. Wheel hover settled — the node lights, the text does not. The wheel bow tried and removed (it ran the two-line labels together) — 6 June 2026.
-Clean-rebuild rule adopted — if edits stop showing, rebuild clean in a fresh file rather than editing on — 6 June 2026.
-Wheel labels rebuilt as TWO LINES — a gold mono kicker over the scene title; separate stave marker labels and blank stave pages dropped. Wheel windowed to nine each side, eased (0.072), straight belt, smoothed hand-off — 7 June 2026.
-One shared reading line established (READ_PAD 28px) — page and wheel can no longer disagree about where you are; rollToCentre replaced by rollToTop, fixing the page-top clipping — 7 June 2026 (later).
-Writing Mode set to show only the live scene. Pop-ups made multiple and independent, each with its own ✕, cascade and raise-on-click — 7 June 2026 (later).
-Demo books decided properly — a demo is a normal project, fully populated, writing left blank, FULLY EDITABLE, with Reset to Pristine and Save as a Copy; the earlier "ideally read-only" dropped — 7 June 2026 (later).
-Manuscript View comfort toggle locked — strips the chrome to read the book as a continuous manuscript; display-level only, true pagination deferred — 8 June 2026.
+current-state.md, locked-decisions.md and dcw.md rewritten clean — 2 June 2026.
+THE TURN — the shutter and the two-tool model killed — 3 June 2026. [SUPERSEDED 4 June 2026.]
+Quiet-note visual grammar settled — 3 June 2026. [Survives — now the pop-up's grammar.]
+Study mockups built for the one-screen thinking — 3 June 2026. [Studies only.]
+current-state.md rewritten for the 3 June turn — 3 June 2026.
+THE SECOND TURN — realised InkySwot IS the DCW; The Treatment is the DCW switched on; the spine is a TIMELINE OF EVENTS — 4 June 2026.
+Confirmed against the live index.html that The Treatment is an empty placeholder and that Events store characters[]/location — 4 June 2026.
+The Treatment recognised as the same object as the DCW — 4 June 2026.
+The entity POP-UP settled — two-step from nav counts, stable, draggable, quiet-note grammar, copy buttons, paste as PLAIN ink — 4 June 2026.
+Nav section live counts decided — 4 June 2026.
+The WP settled as a real document page — Letter proportions, MAGNIFY, centred page numbers, optional title page — 4 June 2026.
+WP / Treatment mockup built for "A Christmas Carol" — 4 June 2026.
+current-state.md and locked-decisions.md rewritten clean for the 4 June model — 4 June 2026.
+THE WHEEL — click-to-write RESOLVED. Not inline-grow, not a focused surface — a WHEEL — 4 June 2026.
+THE WHEEL mockup built on "A Christmas Carol". Built STATIC-FIRST then animated — 4 June 2026.
+Design-a-mechanism rule adopted — 4 June 2026.
+Two pre-filled demo books confirmed FEASIBLE and logged to future.md — 4 June 2026.
+current-state.md, locked-decisions.md and dcw.md rewritten clean for the WHEEL — 4 June 2026.
+One scene per full page locked — 6 June 2026.
+Wheel centre mark settled — gold ring, filled dot, short leader. Wheel hover settled. The wheel bow tried and removed — 6 June 2026.
+Clean-rebuild rule adopted — 6 June 2026.
+Wheel labels rebuilt as TWO LINES. Wheel windowed to nine each side, eased, straight belt — 7 June 2026.
+One shared reading line established (READ_PAD 28px); rollToCentre replaced by rollToTop — 7 June 2026.
+Writing Mode set to show only the live scene. Pop-ups made multiple and independent — 7 June 2026.
+Demo books decided properly — a normal project, fully populated, writing left blank, FULLY EDITABLE — 7 June 2026.
+Manuscript View comfort toggle locked — 8 June 2026.
 Home-page launchpad icons revised — 8 June 2026.
-THE SIX TRACK COLOURS locked — Events gold, Locations teal, Characters terracotta, Objects steel blue, Themes violet, Tension red; Characters moved off gold, Events took it — 9 June 2026.
-THE CUT locked — Events + Locations become the synopsis and the prose; Characters, Objects, Themes and Tension are reached into, and live in the scene menu — 9 June 2026.
-The scene menu built and locked, left of the page, mirroring the wheel's furniture; Tension settled as a segmented bar meter after the VU needle, the flat line and plain text were all tried and dropped — 9 June 2026.
-The board returned as Plot Mapping reborn — the funnel's wide end — 9 June 2026. [SUPERSEDED 15 August 2026.]
-Work-from-the-image / work-from-the-code rule locked — a screenshot IS the template; change built files from the pasted code, never a reconstruction; small changes mean small changes — 9 June 2026.
-InkySwot code moved into the InkySwot division of the memory database, with a code- prefix — 9 June 2026.
-The chapter given a synopsis page of its own, in the scene-page family, sitting before that chapter's first scene — 11 June 2026.
-The AI Prompt scoped and locked — Prompt and Expand expand the SYNOPSIS, never the prose; they scale with the spine; the prose-forbidding system prompt is server-side; output lands by choice — 11 June 2026.
-Prompt / Expand button treatment settled as an outline pair in the page's own palette, waking to gold on hover; treatments B, C and D dropped — 11 June 2026.
-The Site Map built, then REDESIGNED the same day — from a branching tree of every nav section to a calm spine of four headings with plain-text pop-up contents, two lanes, static and hover-driven. Signed off — 11 June 2026.
+THE SIX TRACK COLOURS locked — 9 June 2026.
+THE CUT locked — Events + Locations become the synopsis and the prose — 9 June 2026.
+The scene menu built and locked; Tension settled as a segmented bar meter — 9 June 2026.
+The board returned as Plot Mapping reborn — 9 June 2026. [SUPERSEDED 15 August 2026.]
+Work-from-the-image / work-from-the-code rule locked — 9 June 2026.
+InkySwot code moved into the InkySwot division of the memory database — 9 June 2026.
+The chapter given a synopsis page of its own — 11 June 2026.
+The AI Prompt scoped and locked — Prompt and Expand expand the SYNOPSIS, never the prose — 11 June 2026.
+Prompt / Expand button treatment settled — 11 June 2026.
+The Site Map built, then REDESIGNED the same day. Signed off — 11 June 2026.
 PLOT MAPPING DROPPED from the platform — 11 June 2026. [REVERSED 15 August 2026.]
-The DCW reframed as ONE BODY OF DATA — the MIXDOWN — superseding "three views you move between". The funnel and the living link survive. The keystone identified: each overlay's structure must be stored on the shared data itself — 16 June 2026.
-The Writing Panel renamed THE MANUSCRIPT. The right-hand roadmap removed as a duplicate of the wheel. The menu spine recorded — 16 June 2026.
-THE QUICK-NOTE built and signed off — the pinned post-it, the scruffy cousin of the entity pop-up; two-state thumbtack, per-note pin colour from the six track colours, pinned scraps anchored to the scene and scrolling with it. Saved as inkyswot-code-quick-note.html.md; not yet wired in — 17 June 2026.
-CONCEPTS built and working — the writer's store for future-story ideas, living on the My Projects screen; genre folder → story title → main story card as a resizable canvas holding header-band idea cards. The dashed empty-card idiom settled. Working file concepts-canvas.html — 14 July 2026.
-[The Ideas Box / filing-box design of 13 July was abandoned the same week — it chased theatre over usability. The header-band card and the dashed-empty state survived.]
-THE CORRIDOR-PLUS-POCKETS ARCHITECTURE built — corridor.html as the shared shell with pocket slots, pockets/ holding one file per screen, and the Enclosure stitching and publishing to app.inkyswot.com via Vercel. Supersedes single-file architecture — August 2026.
-Platform-wide spell check FIXED with the MutationObserver pattern, catching fields created after load. The Grammarly trap identified and written up — 11 August 2026.
+The DCW reframed as ONE BODY OF DATA — the MIXDOWN. The keystone identified — 16 June 2026.
+The Writing Panel renamed THE MANUSCRIPT. The right-hand roadmap removed — 16 June 2026.
+THE QUICK-NOTE built and signed off. Not yet wired in — 17 June 2026.
+CONCEPTS built and working — genre folder → story title → main story card as a resizable canvas. Working file concepts-canvas.html — 14 July 2026.
+[The Ideas Box / filing-box design of 13 July was abandoned the same week.]
+THE CORRIDOR-PLUS-POCKETS ARCHITECTURE built — corridor.html, pockets/, and the Enclosure stitching and publishing to app.inkyswot.com via Vercel — August 2026.
+Platform-wide spell check FIXED with the MutationObserver pattern. The Grammarly trap identified and written up — 11 August 2026.
 The sidebar rebuilt and published — Basics, then Story / People / World / Library / DCW — 11 August 2026.
-The Overview / Basics screen rebuilt and published — genre dropdown carrying industry word-count ranges, three linked guides (words, chapters, words per chapter) replacing the four boxes, ranges throughout, each genre carrying its own sentence wording. The New Project pop-up cut to Title and Author — 12 August 2026.
-THE SYNOPSIS REBUILT AS ONE CONTINUOUS DOCUMENT after Kev's insight: "you just write stuff down and then sort it out later." The box-based screen abandoned — 12 August 2026.
+The Overview / Basics screen rebuilt and published — genre dropdown carrying industry word-count ranges, three linked guides, ranges throughout. The New Project pop-up cut to Title and Author — 12 August 2026.
+THE SYNOPSIS REBUILT AS ONE CONTINUOUS DOCUMENT after Kev's insight: "you just write stuff down and then sort it out later" — 12 August 2026.
 THE PLOT MAPPER — the Synopsis screen became the Plot Mapper, and the only one. Built to code-plot-mapper-10.html — 14/15 August 2026:
-  · F2 as the single key, reading the situation (breaks with a bare cursor, the sixteen sections with a phrase highlighted).
-  · The section menu rebuilt as the whole sidebar — sixteen sections, four columns, family colours, single letters in bright white.
-  · Kev's dashed-hairline divider adopted for chapter and scene breaks, with the pill in the gutter and the gold dot at the end.
-  · Paragraph-aware prose; first-line indents flush after a break, with an Indent switch.
+  · F2 as the single key, reading the situation.
+  · The section menu rebuilt as the whole sidebar — sixteen sections, four columns, family colours.
+  · Kev's dashed-hairline divider adopted for chapter and scene breaks.
+  · Paragraph-aware prose; first-line indents flush after a break.
   · Empty runs trapped between two breaks dropped automatically.
   · Marks redrawn as dashed underlines in family colour, with a Details switch.
-  · Selections grown out to whole words — catching part of a word is enough.
+  · Selections grown out to whole words.
   · ALSO CALLED on cards, with suggestions, set-aside and recall.
-  · Prompt / Expand on every chapter and scene line, reading the words beneath them; the pair at the foot of the page removed.
+  · Prompt / Expand on every chapter and scene line, reading the words beneath them.
   · AI ON/OFF made live and governing all of it.
   · The SECTION ? guide rebuilt as a movable, resizable window.
-  · The header cut back, with a More / Less button unfolding the book's details beneath the word budget.
+  · The header cut back, with a More / Less button.
   · Fixed widths on every switch, and the new house rules that go with them.
-THE HISTORY CLASH FIXED — the undo store had been named "history", which the browser already owns, so every action that changed the document had been dying silently since the screen was first built. Found by making the screen print what it did — 15 August 2026.
+THE HISTORY CLASH FIXED — the undo store had been named "history", which the browser already owns. Found by making the screen print what it did — 15 August 2026.
 The rotated board's rescue attempted and ABANDONED (code-board-rotated-6 to -11) — 15 August 2026.
-The continuity library conceived and written to future.md — uploading a finished book so the platform can hold the writer to what they already wrote — 15 August 2026.
-current-state.md and locked-decisions.md rewritten whole, with two months of platform work folded in and every overtaken lock moved to Superseded — 15 August 2026.
+The continuity library conceived and written to future.md — 15 August 2026.
+current-state.md and locked-decisions.md rewritten whole — 15 August 2026.
+
+--- ADDED 31 AUGUST 2026: the record from 25 August onward ---
+
+THE PLOT MAPPER WENT LIVE — code-plot-mapper-10.html became
+pockets/plot-mapper.html, the corridor slot was added, the sidebar's
+DCW > Plot Mapper points at it, and the header and word budget read the
+real project rather than the demo. THE DOCUMENT NOW SAVES with the project
+in localStorage, debounced and on beforeunload. Step one of going live is
+complete — 25 August 2026.
+
+THE ENCLOSURE FAULT FOUND AND FIXED — it placed 15 of 16 pockets in
+silence, skipping the Plot Mapper, because it kept a hard-coded list that
+had never been updated. Claude misdiagnosed it twice (blaming the file
+upload, then GitHub's cache) before Kev cut through and asked for a plain
+explanation. The immediate publish was done by dropping the pocket into
+the stitched index.html by hand. THE ENCLOSURE WAS THEN REBUILT to read
+its slots from the corridor itself and to report "Placed N of N pockets"
+at the end of every stitch, tested against three deliberate scenarios
+before deploying. The Split side was left untouched — 25 August 2026.
+
+THE DESK conceived and settled in shape — faders producing versions of a
+passage at a chosen prose intensity, shown as a stack of windows with the
+writer's original permanently at the foot. Tested live on a passage from
+"Revenge of an Ordinary Man", which established that THE SYNTH MODEL IS
+RIGHT AND THE MIXING-DESK MODEL IS WRONG — the controls generate rather
+than balance, so a paragraph with no dread in it is not a limitation but a
+source waiting for a setting — and that raising intensity requires
+compression and directness rather than addition. THE ENVELOPE was
+identified as the idea worth stealing wholesale: attack, decay, sustain,
+release, which is shape over time rather than intensity and which no fader
+on a mixing desk can do. The base mix button settled as HELD, not toggled
+— you glance at the bare truth, you do not travel to it — which also gives
+Proauthorism a button that shows at any moment how far the work has
+drifted. Plug-ins settled as version three, changing voice and register
+rather than intensity, carrying their own levels, combining with each
+other and the faders, and using GENERIC AND HISTORICAL NAMES ONLY, never a
+living writer. The architecture settled as one shape doing every job:
+everything is "how much", and everything combines.
+CLAUDE'S PROAUTHORISM OBJECTION WAS RAISED AND WITHDRAWN after Kev pointed
+at The Yuletide Promise — a full screenplay where Claude wrote text and
+Kev cut it, redirected it and threw scenes out. Proauthorism was never
+"the AI must not produce sentences"; a desk does not ask for a new take,
+it decides what you hear from the take you have. Written up so it is not
+relitigated. Left open: how many faders, and whether the settings belong
+to the scene or the whole manuscript — 25 August 2026.
+
+THE MYSTERY PLOTTER designed and its grid built — "Who Was Where",
+code-mystery-grid.html. The design turns on a mystery having TWO
+TIMELINES, the truth and what the reader is shown, with the writer holding
+both at once; the tool holds both and shows where they contradict. The
+grid (people against clock time) is the truth half and was built; the
+shown timeline and the checks across both were not. THE LINE WAS DRAWN
+EXPLICITLY: a puzzle-construction tool, never a how-to — it holds
+positions and knowledge, never method. Built on a day Kev was unwell after
+a horsefly bite and asked for it anyway. NEVER REVIEWED SINCE —
+25 August 2026.
+
+A SERIES BIBLE IMPORT for Research & Reference raised, not built — the
+writer uploading their OWN finished books so the platform reads them for
+continuity and as a reference for the writer's own voice. Named as
+arguably the strongest Proauthorist thing on the platform, since it is the
+writer teaching Ada their own voice rather than the AI imposing one. Two
+things left to decide: the boundary (someone else's books uploaded to
+write like them is a different thing entirely) and whether the writer
+confirms extracted data before it lands in Characters. One hard limit
+already known: style reference must be a DISTILLED thing, produced once
+and carried, because Ada cannot read a whole novel every time Prompt is
+pressed — 25 August 2026.
+
+THE EVENT PLANNER / MURDER PLANNER designed — zero hour as the one fixed
+point, OFFSETS AS THE TRUTH with clock time as a derived coat, multiple
+time pins with conflicts flagged rather than silently resolved, the board
+carrying people only with everything else behind corridor pop-ups, and the
+event drawn as a single continuous vertical drop line through every track.
+The first mockup was rejected as "too clunky" and the visual redrawn. Two
+phases agreed, with concealment and misdirection explicitly deferred —
+26 August 2026.
+
+THE CHRISTMAS MURDERS COPY-EDITED across all four acts — roughly 1,200
+punctuation changes, British English standardisation, conservative grammar
+corrections, paragraph breaks only where blocks were doing several jobs,
+eight continuity errors resolved in Act Two, and a full reconstruction of
+the Act Three orangery timeline so that Charlotte's noise, Elsie's
+sighting, the footman's light, Reggie's locked door, Barnaby's visit and
+Bitsy's killing of Piers all fit one coherent sequence. Outstanding: the
+Act One Reggie name change, and a review of the new Gerald P.S. in Act
+Four Letter 16 — 26 August 2026.
+
+THE YOUTUBE INTRO APPROACH agreed — three.js in single HTML files,
+captured with OBS. Chosen over Blender because it matches the existing way
+of working: whole files, run in Chrome, no install or build step —
+26 August 2026.
+
+THE CHECKER — PUNCTUATION. Designed, specified, built and tested against a
+real manuscript over two days. Built to checker.html, Build 12 —
+27/28 August 2026:
+  · THE DESIGN SETTLED FIRST, over a long conversation: a paste-in pop-up
+    that never touches the manuscript; one red mark rather than colour
+    categories; a drop-down opened by a definite click; ignore meaning
+    always, within the project; a learning list storing the writer's own
+    corrections after a single use and keeping several answers for one
+    slip; and browser-only checking so the text never leaves the machine.
+  · GRAMMARLY RESEARCHED and the position settled: it is secure in the
+    corporate sense and not private in the sense a novelist means. Ours
+    competes on the one claim they structurally cannot make.
+  · A MASTER PUNCTUATION SPECIFICATION (produced via ChatGPT) was SORTED
+    into three piles — passage-local, manuscript-aware, and out of scope —
+    with the philosophy and the false-positive discipline adopted whole.
+    Kev made four amendments, all correct.
+  · "RAGGED EDGES" added to the specification — a pasted passage is
+    usually cut out of the middle of a scene, so pair-matching rules must
+    be gentler at its edges. The specification could not have known this,
+    having assumed a whole manuscript.
+  · THE PARSER BUILT FIRST (stage 1a) — characters, protected regions,
+    paragraphs, tokens, sentences, quotes, dialogue and edges, with
+    findings plumbing. 110 tests.
+  · THIRTY-ONE RULES BUILT (stage 1b), with a suppression list as long as
+    the rule list. 75 tests. ZERO FALSE POSITIVES on a page of
+    deliberately awkward but entirely correct British fiction.
+  · NO SIZE LIMIT ESTABLISHED AS A PRINCIPLE at Kev's insistence. Two
+    quadratic faults found and fixed; the work rewritten to run in slices
+    so the screen never freezes. 500,000 words in 618 milliseconds.
+  · MARKS PAINTED ON THE TEXT with the CSS Custom Highlight API, with a
+    click-to-open correction panel. Nothing inserted into the writer's
+    words. Kev: "That's FUCKING wonderful. EXACTLY what I wanted."
+  · FOUR ENGINE FAULTS FOUND BY RUNNING ACT ONE (47,074 words) through it,
+    all of the same class — a reasonable rule that was wrong about real
+    prose. The speech-mark family decided by counting; the speech verb
+    list holding ordinary verbs; a tag accepted after a full stop; and a
+    manuscript that genuinely uses both kinds of speech mark being forced
+    into one.
+  · AND A FINDING IN THE BOOK: Act One punctuates some dialogue with
+    double marks and some with single. The engine now answers "mixed"
+    rather than choosing.
+
+THE FLOW REVIEWED against the live corridor — Basics → Plot Mapper →
+Wheel/Manuscript → Publishing preparation → Publish, with the Plot Mapper
+and the Wheel established as a PAIR the writer moves between freely. The
+world-building screens confirmed as pockets used when needed rather than
+steps in the sequence. Claude's diagnosis of chapters.html and
+treatment.html as an orphaning fault CORRECTED — their removal from the
+sidebar was deliberate — 31 August 2026.
+
+THE HUMANISER conceived and turned into two tools from one set of
+measurements — a style meter marking where prose has flattened, and the
+same measurements applied to generated text. Then the more useful idea
+underneath it: CONSISTENCY CHECKING AGAINST PREVIOUS WORK, aimed at facts
+rather than style. Which led to the card question: the cards are built for
+thinking, not for checking, and need a factual layer beneath the prose
+fields — 31 August 2026.
+
+ALL FIVE DATABASE FILES REWRITTEN WHOLE, recovering the 15–31 August gap
+from the session record, and the session-end update rule locked —
+31 August 2026.
