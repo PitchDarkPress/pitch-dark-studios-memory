@@ -1,8 +1,8 @@
 File: inkyswot/thinking.md
-Last updated: 31 August 2026 — rewritten clean. Several 15 August items
-have closed (the Plot Mapper is live and saving; the Enclosure fault is
-fixed) and have moved out of here to current-state.md and completed.md.
-New open questions from 25–31 August are folded in at the top.
+Last updated: 1 September 2026 — rewritten clean. The Wheel's state is now
+known and its conversion is the live thread at the top. The Basics foot is
+built and has moved out to current-state.md and completed.md, leaving one
+open question behind it.
 
 This is the LIVE-IDEAS file (overwrite). Settled things belong in
 locked-decisions.md; build state belongs in current-state.md.
@@ -12,10 +12,57 @@ the other four. See the lock in locked-decisions.md and the reason for it
 at the head of current-state.md.
 
 ================================================================
-SECTION A — OPEN NOW (31 August 2026)
+SECTION A — OPEN NOW (1 September 2026)
 ================================================================
 
---- THE CARDS NEED A FACTUAL LAYER (31 August, the live thread) ---
+--- THE WHEEL'S CONVERSION — THE LIVE THREAD ---
+
+THE FILE IS FOUND AND READ. Full state in current-state.md. In one line:
+the mechanism is right and everything round it is a June mockup of a
+platform that no longer looks like that.
+
+THE PLAN AGREED IN SHAPE, NOT YET BUILT:
+1. STRIP, DO NOT REBUILD. Cut the header, both sidebars and the Site Map.
+   Keep the page, the scene menu and the wheel. The wheel's code comes
+   across byte-for-byte — every locked number in it is correct, and a
+   fresh write would get some of them subtly wrong and cost a session
+   finding out which.
+2. POINT IT AT A REAL PROJECT. This is the join, and the join is where a
+   fault will be. Twenty-five hard-coded sheets of Dickens become chapters
+   and scenes read from the project.
+3. THEN the corridor: a POCKET:manuscript slot, and nav-manuscript
+   pointing at it instead of Coming Soon.
+The Plot Mapper's own going-live on 25 August is the pattern — same steps,
+same order.
+
+THE FIRST DELIVERABLE IS A STATIC STILL: one page, the wheel beside it,
+the scene menu, real project data, no writing mode and no movement. Look
+at it before anything moves. If it turns wrong at that point we know it is
+the join and not the mechanism.
+
+THREE CORRECTIONS TO MAKE DURING THE STRIP, all settled after the file was
+written: Tension becomes the segmented bar meter (it is currently the
+plain text "55%"); the pop-up colours move to the locked six; and the
+screen gains its SECTION ? pill.
+
+WHAT WE DO NOT KNOW AND WILL NOT UNTIL WE RUN IT. Twenty-five pages is
+about 26,000 pixels of scroll. A real novel is four hundred pages. THE
+BELT HAS NEVER BEEN TESTED AT THAT LENGTH. Watch it on the first real
+project.
+
+AND THE HONEST GAP TO STATE PLAINLY RATHER THAN FAKE. The scene menu is
+fed by the naming done in the Plot Mapper, and the Plot Mapper's cards do
+not write into a shared store yet — that is step two, and it is not built.
+So the menu will be EMPTY. It should say so, not invent names.
+
+--- THE ONE QUESTION LEFT ON THE BASICS FOOT ---
+
+After a project has been to the Plot Mapper, the two save buttons sit as
+equals. Built as BOTH OUTLINED, because two solid gold buttons side by
+side read as loud. Kev has not ruled. If he wants both filled instead, it
+is a one-line change.
+
+--- THE CARDS NEED A FACTUAL LAYER (31 August, still open) ---
 
 WHERE IT CAME FROM. Kev raised a "humaniser" — the device on a drum
 machine that shifts each hit off the grid so it stops sounding like a
@@ -121,9 +168,14 @@ TWO THINGS CHANGE, AND BOTH NEED DECIDING:
    painted over rendered text. That works on a proper writing surface but
    NOT INSIDE AN ORDINARY TEXT BOX. Any plain field would need a list of
    findings instead, or to become a proper surface first.
-   NOT YET KNOWN: which InkySwot writing areas are which. The Plot Mapper
-   uses contenteditable, so it can take marks. The world-building screens
-   use plain textareas, so they cannot.
+   NOW PARTLY KNOWN (1 September, from reading the files): the Plot Mapper
+   uses contenteditable, so it can take marks. Basics and every
+   world-building screen use plain inputs and textareas, so they cannot.
+   AND THE WHEEL'S WRITING AREA IS A PLAIN TEXTAREA in the June file —
+   which means the manuscript itself, the screen the checker most wants,
+   cannot take painted marks as things stand. WORTH SETTLING DURING THE
+   WHEEL'S CONVERSION RATHER THAN AFTER, because changing the writing
+   surface later is a rebuild.
 
 THE ORDER AGREED: (1) make the engine a shared part in the corridor;
 (2) build the attachment — one piece that can be given any writing area
@@ -139,7 +191,9 @@ built against a shape that is about to change.
 The live corridor has "Plot Mapping" under NAVIGATE pointing at Coming
 Soon, while the real Plot Mapper is under DCW. Two items, similar names,
 one working — and the more prominent one does nothing. A writer would try
-it first. NEEDS RESOLVING when the corridor is next in hand.
+it first. NEEDS RESOLVING when the corridor is next in hand — which is
+Job Two, since the corridor must be opened anyway to add the manuscript
+slot and repoint nav-manuscript.
 
 --- THE VANISHING TINTS — STILL OPEN, STILL NOT A SEPARATE JOB ---
 
@@ -234,13 +288,16 @@ THE FIVE ROOMS. If Library is clickable, all five group headings must be.
 Five screens, none started.
 
 "BASICS" vs "OVERVIEW" vs "FRONT MATTER". Still deliberately Basics.
+NOTE: the screen's own title still reads "Overview" while the sidebar says
+Basics. Two names for one screen, live, today.
 
 CONCEPTS IS OUT OF STEP — still the old Cast / World / Plot grouping.
 
-THE SIZING SWEEP. Three house rules locked 15 August, done on the Plot
-Mapper. THE CORRIDOR HAS STILL NOT BEEN SWEPT. Do it when the corridor is
-next in hand rather than screen by screen — which is now, given the
-Plot Mapping dead end needs the same file open.
+THE SIZING SWEEP. Three house rules locked 15 August, a fourth added
+1 September (a row of controls is one size throughout). Done on the Plot
+Mapper and now on the Basics foot. THE CORRIDOR HAS STILL NOT BEEN SWEPT.
+Do it when the corridor is next in hand rather than screen by screen —
+which is Job Two.
 
 ================================================================
 SECTION B — WHAT HAPPENED TO THE 18 JUNE THINKING
@@ -293,7 +350,10 @@ THE QUICK-NOTE — persistence; a "see all"; whether a pinned note crosses
 between views. Then wiring it across all screens.
 
 THE SITE MAP was built in June against the old four-heading nav. Needs
-checking against what is live.
+checking against what is live. NOTE 1 SEPTEMBER: the only copy of it we
+have seen is the one inside the Wheel file, and it is the old one. When
+the Wheel is stripped the Site Map goes with the cut — so if it is wanted,
+lift it out first rather than losing it.
 
 WHERE THE MOOD WORDS LIVE (Cold · Bleak · Biting). Wanted, not placed.
 
@@ -369,3 +429,9 @@ RETIRED FROM THIS FILE (so nothing feels lost)
 - THE SPELL CHECKER'S OVERLAY PROBLEM — closed 28 August. The CSS Custom
   Highlight API does it without inserting anything, and it is built and
   working in the checker.
+- WHERE THE BASICS SAVE ROW LIVES — closed 1 September. The pocket, not
+  the corridor. Read both files before deciding, every time.
+- WHAT STATE THE WHEEL FILE IS IN — closed 1 September. Read and written
+  up in current-state.md.
+- "THE JOURNEY STOPS DEAD AT STEP ONE" — closed 1 September. The foot of
+  Basics now points forward.
