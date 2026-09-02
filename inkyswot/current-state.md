@@ -1,16 +1,18 @@
 File: inkyswot/current-state.md
-Last updated: 31 August 2026 — rewritten WHOLE.
+Last updated: 1 September 2026 — the WHEEL now has a section of its own,
+written from the file rather than from memory, and the BASICS section
+carries its new foot. Everything else is unchanged from 31 August.
 
-THE GAP THAT PROMPTED THIS REWRITE. All five database files were last
-written on 15 August. Between then and 31 August a fortnight of work
-happened that never reached them, including the Plot Mapper going LIVE
-and a real fault in the Enclosure. The gap was found when the database
-was read against the repository and the two disagreed. It has been
-filled from the session record. Kev, honestly: "I have been slack on
+THE GAP THAT PROMPTED THE 31 AUGUST REWRITE. All five database files had
+been last written on 15 August. Between then and 31 August a fortnight of
+work happened that never reached them, including the Plot Mapper going
+LIVE and a real fault in the Enclosure. The gap was found when the
+database was read against the repository and the two disagreed. It has
+been filled from the session record. Kev, honestly: "I have been slack on
 updating these files and have now been caught out."
 
 THE RULE THAT COMES OUT OF IT IS NOW LOCKED — UPDATE THE DATABASE AT THE
-END OF EVERY SESSION. See locked-decisions.md.
+END OF EVERY SESSION. See locked-decisions.md. Held to on 1 September.
 
 ================================================================
 *** SESSION-END REMINDER — READ THIS FIRST, EVERY SESSION ***
@@ -34,7 +36,98 @@ When 15–31 August went unrecorded, the code was still there — the two
 weeks of decisions behind it were nearly lost, and were only recovered
 because the session record could be searched.
 
+AND A SECOND KIND OF LOSS, FOUND 1 SEPTEMBER: THE WHEEL HAD NO FILENAME
+ANYWHERE IN THE DATABASE. Every other built thing had one —
+code-plot-mapper-10.html, code-mystery-grid.html, concepts-canvas.html.
+The Wheel had only "a mockup built on A Christmas Carol". A whole session
+opened without anyone able to say what state the largest missing piece was
+in. WHEN A THING IS BUILT, ITS FILENAME GOES IN THE FILE.
+
 IF A SESSION ENDS ABRUPTLY, the next one begins by writing up the last.
+
+================================================================
+*** THE WHEEL / MANUSCRIPT — STANDALONE, NOT A POCKET ***
+Read and assessed 1 September 2026. The largest missing piece of the
+platform. NOT IN THE CORRIDOR: nav-manuscript points at Coming Soon and
+there is no POCKET:manuscript slot.
+================================================================
+
+WHAT THE FILE ACTUALLY IS. A mockup of the WHOLE PLATFORM as it stood in
+June, not a screen. It draws its own header, its own left sidebar and a
+right sidebar holding the Site Map. Roughly half of it is corridor work
+that the corridor now does properly.
+
+THE SIDEBAR INSIDE IT IS THE SUPERSEDED SPINE — Projects / DCW / World
+Building / Notes, still carrying "Writing Panel" as the name and a
+"Scenes" item that no longer exists. Replaced platform-wide on 11 August.
+The Site Map beside it is the June one, built against that same old nav.
+All of this is deleted in the conversion.
+
+--- WHAT SURVIVES INTACT, AND IT IS THE IMPORTANT HALF ---
+
+EVERY LOCKED NUMBER IS PRESENT AND CORRECT. TIGHT 46, GAP 64, WINDOW 9,
+BOW 0, ease rate 0.072, READ_PAD 28. The centre mark is the 17px two-pixel
+gold ring with its filled dot and short leader. Labels are two lines, mono
+gold kicker over Crimson Pro title. Hover lights the node only, never the
+text. Both states are built — Overview and Writing Mode — and the hand-off
+between them waits two animation frames for the layout to settle before
+landing the page on the reading line.
+
+THE WHEEL TURNS OFF SCROLL POSITION. It measures where each page's top
+sits against the reading line and eases toward it. That arithmetic does
+not care whose book it is or how many pages there are, which is why the
+conversion is a strip rather than a rebuild.
+
+THE ENTITY POP-UPS ARE THE LOCKED ONES — multiple, independent, dragged by
+the header, closed by ✕ only, rising on click, with copy buttons that take
+plain text.
+
+--- THREE THINGS IN IT ARE OUT OF DATE ---
+
+All three were settled AFTER the file was written, and all three are
+corrected during the strip:
+1. TENSION SHOWS AS THE PLAIN TEXT "55%" in the scene menu — one of the
+   versions rejected on 9 June in favour of the segmented bar meter.
+2. THE POP-UP COLOURS use the old section colours #cba36a and #b08a6a,
+   superseded 4 June by the six track colours.
+3. THERE IS NO SECTION ? PILL, which every screen now carries.
+
+--- AND NOTHING IN IT IS REAL ---
+
+The whole of A Christmas Carol is twenty-five sheets of hard-coded HTML.
+THERE IS NO localStorage ANYWHERE IN THE FILE. Writing goes into a plain
+object in memory and is gone on refresh. The scene menu's Objects and
+Themes are literally the word "Something".
+
+ONE SMALL TRAP, FOUND AND RECORDED. The scene kicker builds "Stave One —
+Scene One" from a word list that stops at ten. A book with an eleventh
+chapter would read "Stave undefined".
+
+--- THE CONVERSION, AGREED IN SHAPE ---
+
+STRIP, DO NOT REBUILD. Cut the header, both sidebars and the Site Map;
+keep the page, the scene menu and the wheel. THE WHEEL'S CODE COMES ACROSS
+UNCHANGED — a fresh write would get some of those numbers subtly wrong and
+cost a session finding out which.
+THEN POINT IT AT A REAL PROJECT. The labels are currently hard-coded in
+the HTML and must be built from the project's chapters and scenes. THIS IS
+THE JOIN, AND THE JOIN IS WHERE A FAULT WILL BE.
+THEN THE CORRIDOR: add a POCKET:manuscript slot and repoint
+nav-manuscript. The Plot Mapper's going-live on 25 August is the pattern.
+THE FIRST DELIVERABLE IS A STATIC STILL — one page, the wheel, the scene
+menu, real data, nothing moving.
+
+TWO THINGS WE DO NOT YET KNOW. The belt has never been run at novel
+length — twenty-five pages is about 26,000 pixels of scroll and a real
+book is four hundred pages. And the scene menu will be EMPTY, because it
+is fed by the Plot Mapper's cards and those do not write into a shared
+store yet (step two). It must say so plainly rather than fake it.
+
+AND ONE THING WORTH SETTLING DURING THE CONVERSION RATHER THAN AFTER. The
+Wheel's writing area is a PLAIN TEXTAREA. The checker's painted marks need
+a proper writing surface and cannot work inside an ordinary text box —
+so the screen the checker most wants cannot take marks as things stand.
+Changing the writing surface later is a rebuild.
 
 ================================================================
 *** THE CHECKER — PUNCTUATION · BUILT TO BUILD 12 (27–28 August 2026) ***
@@ -286,6 +379,10 @@ FOUR AMENDMENTS KEV MADE TO THE SORT, ALL CORRECT:
 4. INTO INKYSWOT. The engine becomes a shared part in the corridor, then
    an attachment that can be given any writing area on any screen, then
    attached to ONE screen and lived with for a week before the rest.
+   NOTE 1 SEPTEMBER: which screens can take painted marks is now partly
+   known — the Plot Mapper can (contenteditable); Basics, the
+   world-building screens and the Wheel's writing area cannot (plain
+   inputs and textareas).
 5. PARAGRAPHING GUIDANCE. Kev asked for it and it is teaching rather than
    checking. The one thing a checker can catch is two apparent speakers
    in one paragraph. THE RULE UNDERNEATH, worth carrying: A PARAGRAPH
@@ -311,6 +408,10 @@ details switches — with currentWords and lastEdited updated. Saving is
 debounced and also fires on beforeunload. THE "NOTHING SAVES" ITEM FROM
 15 AUGUST IS CLOSED.
 
+NOTE 1 SEPTEMBER: that plotMapper record is now doing a second job. It is
+how the Basics screen knows whether a project has been to the Plot Mapper,
+which decides the emphasis on its foot buttons. No new flag was added.
+
 WHAT THE SCREEN DOES (unchanged from the 15 August build, confirmed live):
 one continuous document, prose never boxed or retyped · F2 as the one key
 · selections growing out to whole words · the dashed gold hairline break
@@ -332,8 +433,13 @@ STILL TO DO ON THE PLOT MAPPER:
    the marks on edit rather than following them. Unchanged since 15
    August, and still to be solved WITH step two, not after.
 2. CARDS DO NOT REACH CHARACTERS. Making Mole does not put him anywhere.
-   Step two, and the real work.
+   Step two, and the real work. THE WHEEL'S SCENE MENU DEPENDS ON THIS —
+   until it is built, that menu is empty.
 3. Ada's buttons.
+4. THE CROSSING TO THE WHEEL. The Plot Mapper already carries "Edit in
+   Basics →" at the top right of its header. That is the pattern; the
+   crossing to the Wheel is the same idea in the same place, and the Wheel
+   carries the matching one back. Job Three.
 
 ================================================================
 *** THE ENCLOSURE — A REAL FAULT, FOUND AND FIXED (25 August 2026) ***
@@ -365,7 +471,9 @@ THE FIX, AND IT IS THE IMPORTANT PART:
 THIS IS THE PATTERN TO COPY. When a tool can fail quietly, make it count
 what it did and say so. The same thinking later produced the checker's
 "Checked 47,074 words, found nothing" — because zero findings and a pass
-that never ran look identical otherwise.
+that never ran look identical otherwise. AND ON 1 SEPTEMBER the same
+thinking was turned toward the writer: an unreported save is a silent
+success, and looks exactly like no save at all.
 
 ================================================================
 *** THE DESK — CONCEIVED AND SETTLED IN SHAPE (25 August 2026) ***
@@ -587,6 +695,14 @@ BACK AND FORTH between the Plot Mapper and the Wheel. Basics and
 Publishing are one-way gates at either end; THE PLOT MAPPER AND THE WHEEL
 ARE A PAIR.
 
+WHERE THE FLOW STANDS AT 1 SEPTEMBER:
+  1. BASICS — live, and as of today it POINTS FORWARD. Was a dead end.
+  2. PLOT MAPPER — live, and it saves.
+  3. WHEEL / MANUSCRIPT — still not in the platform. Read and assessed
+     today; the conversion is the next job.
+  4. PUBLISHING PREPARATION — Coming Soon, none of the four built.
+  5. PUBLISH — Coming Soon.
+
 THE WORLD-BUILDING SCREENS ARE NOT MISSING FROM THE FLOW. They are
 pockets used when needed, and the Wheel carries them in its side menu.
 Claude raised this as a gap and was wrong.
@@ -606,14 +722,81 @@ was the source. THE FILE IS THE TRUTH. And index.html is the OUTPUT —
 corridor.html is where the menu lives and where a menu fix belongs.
 
 ================================================================
-*** BASICS (OVERVIEW) — GENRE RANGES & THE THREE GUIDES · LIVE ***
-Published 12 August 2026. File: pockets/project-overview.html
+*** BASICS (OVERVIEW) — GENRE RANGES, THE THREE GUIDES, AND NOW THE
+*** WAY FORWARD · LIVE
+Published 12 August 2026. Foot rebuilt 1 September 2026.
+File: pockets/project-overview.html
 ================================================================
+
+THE SAVE ROW LIVES IN THE POCKET, NOT THE CORRIDOR. Established
+1 September by reading both files. The corridor holds only the slot and
+the shared functions the buttons call — autoSave, saveProjectHeader,
+showScreen, getProjects/saveProjects. It looks from the outside as though
+the corridor owns this screen, because autoSave reaches into it by element
+name (ph-format, ph-audience, ph-outline and the hidden stubs). It does
+not. SO THE FOOT WAS A ONE-FILE CHANGE with no corridor edit.
+
+--- THE FOOT OF THE SCREEN, REBUILT 1 SEPTEMBER ---
+
+IT USED TO BE A DEAD END. "Save Overview", "Back to Projects", and a tick.
+Pressing Save flashed the tick and left you sitting there. Nothing pointed
+forward, so the writer's journey stopped at step one.
+
+IT IS NOW THREE BUTTONS OF ONE FIXED WIDTH:
+  SAVE · PLOT MAPPER → · BACK TO PROJECTS
+All three always present, all three saving. The middle one goes forward;
+the third goes back; the first stays.
+
+THE WORDING WAS DECIDED BY THE WIDTH, NOT THE OTHER WAY ROUND. Kev: "I am
+finding it hard to reconcile three buttons of different sizes." Three
+buttons at the width of "Save and go to the Plot Mapper" will not fit an
+800px column — it comes to well over a thousand pixels with the gaps. So
+the wording came down to fit the set. THE ARROW MATCHES "Edit in Basics →"
+already on the Plot Mapper's header, which is the crossing Job Three will
+build in both directions — one shape, learned once.
+
+FIRST VISIT ONLY, the Plot Mapper button is the filled one so a new
+writer's eye lands on the way forward; afterwards both sit outlined as
+equals. A project has been to the Plot Mapper if it carries a plotMapper
+record. NO NEW FLAG WAS ADDED. Only the fill changes — nothing appears or
+disappears, because a control that quietly behaves differently on hidden
+state is what makes a platform feel unpredictable.
+OPEN: whether "equal" should mean both outlined (as built) or both filled.
+Two solid gold buttons side by side was judged loud. Not ruled on.
+
+--- AND THE SECOND FAULT, WHICH WAS THE REAL ONE ---
+
+Kev, on the first build: it is not clear the work is saved on the Plot
+Mapper and Back to Projects buttons.
+
+THE SCREEN HAD BEEN SAVING ON EVERY KEYSTROKE SINCE 12 AUGUST AND HAD
+NEVER SAID SO. Every field carries oninput="autoSave()"; the guides save
+as they are edited. The work was already safe. The screen simply gave the
+writer no reason to believe it.
+
+THE TICK WAS THE CAUSE, NOT THE CURE. A confirmation that appears only
+when Save is pressed teaches the writer that saving is something the Save
+button does — which makes every other button look like a way to lose work.
+A SAVE THAT HAPPENS CONTINUOUSLY MUST BE REPORTED CONTINUOUSLY.
+
+FIXED IN TWO PARTS:
+1. BACK TO PROJECTS NOW SAVES BEFORE IT LEAVES. It was the one genuine
+   gap — everything typed was already stored, but a change not yet landed
+   would have gone.
+2. THE TICK IS REPLACED BY A STANDING LINE beneath the row. Before the
+   first save it reads "Everything on this screen saves as you type" in
+   the quiet grey; from then on it reads "Saved · 14:32" in gold and
+   updates on every save. It is there all the time rather than flashing.
+   The corridor's saveProjectHeader still drives the old element; the
+   pocket hides it and reports through one door instead.
+
+--- THE REST OF THE SCREEN, UNCHANGED ---
 
 THE GENRE DROPDOWN carries each format's INDUSTRY WORD-COUNT RANGE,
 labelled "TYPICAL LENGTH:" in small mono caps with the figure in gold. The
 chosen range stays visible in the closed field. The writer sees what they
-are signing up for AT THE MOMENT OF CHOOSING.
+are signing up for AT THE MOMENT OF CHOOSING. Formats that need page
+layout not yet built are greyed, with a hover note saying so.
 
 Every genre carries THREE things: its range (wc), its words-per-chapter
 (per), and ITS OWN SENTENCE WORDING (says) — so the steer reads "Most
@@ -645,9 +828,13 @@ window.IS_GENRE_INFO exposed for other screens.
 NEW PROJECT POP-UP: Title and Author only. Genre removed — it duplicated
 the proper dropdown and taught the writer nothing.
 
+STILL ODD, AND NOTED: the screen's own title reads "Overview" while the
+sidebar calls it Basics. Two names for one screen, live today. Part of the
+unresolved Basics / Overview / Front Matter question.
+
 ================================================================
 *** THE SIDEBAR — LIVE (11 August 2026) ***
-File: corridor.html
+File: corridor.html. Confirmed against the live file 1 September.
 ================================================================
 
 AS BUILT IN THE LIVE CORRIDOR:
@@ -666,9 +853,16 @@ TWELVE ITEMS POINT AT COMING SOON: The Press, Plot Mapping, Research &
 Reference, Notes, Images, Sandbox, Manuscript, Publish, and the four Help
 items.
 
+FOR JOB TWO, TWO CORRIDOR CHANGES ARE NEEDED AND NO MORE: nav-manuscript
+currently calls showScreen('coming-soon','Manuscript') and must point at
+the new pocket, and THERE IS NO POCKET:manuscript SLOT — one must be
+added. Both were confirmed by reading the live file.
+
 NOTE — "PLOT MAPPING" UNDER NAVIGATE IS A DEAD END while the real Plot
 Mapper is live under DCW. Two items, similar names, one working. A writer
-would try the more prominent one first. WORTH RESOLVING.
+would try the more prominent one first. WORTH RESOLVING — and the corridor
+has to be open for Job Two anyway, so do it then, along with the sizing
+sweep.
 
 SYNOPSIS HAS GONE FROM STORY (15 August) — it was this screen under
 another name, and it is now DCW > Plot Mapper.
@@ -694,6 +888,7 @@ PitchDarkPress/inkyswot-rebuild (private):
     relationships · rules · subplots · themes · treatment
   test/
 INDEX.HTML IS THE OUTPUT, NOT A SOURCE. Never edit it as though it were.
+NO manuscript POCKET YET. That is Job Two.
 
 ================================================================
 *** SPELL CHECK — FIXED PLATFORM-WIDE · LIVE (11 August 2026) ***
@@ -707,7 +902,8 @@ appear, marking each data-spellReady="1".
 NOTE: this catches inputs and textareas. The Plot Mapper uses
 contenteditable divs, which the selector does NOT cover — they set
 spellcheck themselves. If a future screen uses contenteditable, widen the
-corridor selector.
+corridor selector. THE WHEEL'S WRITING AREA IS A TEXTAREA, so it is
+covered as things stand.
 
 *** THE GRAMMARLY TRAP — READ BEFORE CHASING A SPELL-CHECK FAULT ***
 Testing took an hour longer than it should because Grammarly was masking
@@ -870,21 +1066,33 @@ FROM 28 AUGUST (from the checker):
 - A PROGRESS BAR IS HELD BACK a quarter of a second and only shown if the
   work is still running.
 
+FROM 1 SEPTEMBER (from the Basics foot):
+- A ROW OF CONTROLS DOING THE SAME KIND OF JOB IS ONE SIZE THROUGHOUT,
+  sized to the longest — AND THE WIDTH DECIDES THE WORDING.
+- A SAVE THAT HAPPENS CONTINUOUSLY MUST BE REPORTED CONTINUOUSLY. A
+  confirmation that only appears on a button press teaches the writer that
+  the other buttons do not save.
+- EVERY DOOR OFF A SCREEN SAVES BEFORE IT OPENS, backwards as well as
+  forwards.
+
 ================================================================
 *** SUGGESTED ORDER OF WORK ***
 ================================================================
-1. THE CORRIDOR. It is the source of the menu and has not been in hand
-   since 11 August. Settle the Plot Mapping dead end, and do the sizing
-   sweep while it is open.
-2. STEP TWO OF THE PLOT MAPPER — the cards writing into the same store
+1. JOB TWO — THE WHEEL INTO THE PLATFORM. Strip the June file to its
+   middle column, point it at a real project, make it a pocket, add the
+   slot, repoint nav-manuscript. THE CORRIDOR IS OPEN ANYWAY, so settle
+   the Plot Mapping dead end and do the sizing sweep while it is in hand.
+2. JOB THREE — THE CROSSING, both ways, in the same place on both
+   screens, matching "Edit in Basics →".
+3. STEP TWO OF THE PLOT MAPPER — the cards writing into the same store
    Characters, Locations and the rest read from. THE REAL WORK, and the
    continuity library depends on it. SOLVE THE VANISHING TINTS AS PART OF
-   IT, not after.
-3. Ada's buttons on the Plot Mapper.
-4. THE CHECKER — the queries, then the learning list, then spelling, then
+   IT, not after. The Wheel's scene menu stays empty until this is done.
+4. Ada's buttons on the Plot Mapper.
+5. THE CHECKER — the queries, then the learning list, then spelling, then
    into the platform.
-5. THE CARDS — the factual layer under the prose fields (see thinking.md).
-6. Then the Library, the five rooms, and the theatre pass.
+6. THE CARDS — the factual layer under the prose fields (see thinking.md).
+7. Then the Library, the five rooms, and the theatre pass.
 
 Kev's own words, still true: "We will have to make and remake this page
 until it is right." Expect several passes. That is the plan, not a failure
