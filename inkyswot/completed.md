@@ -1,7 +1,6 @@
 File: inkyswot/completed.md
-Last updated: 31 August 2026 — entries for 16–31 August added, recovered
-from the session record after the database was found to be a fortnight
-behind the repository. Earlier lines are unchanged.
+Last updated: 1 September 2026 — entries for 1 September added at the foot.
+Earlier lines are unchanged.
 
 Database restructured — InkySwot content redistributed into nine files — 24 May 2026.
 Pricing locked — £9.95/month, £99.50/year, no free tier, 14-day money back — 24 May 2026.
@@ -286,3 +285,65 @@ fields — 31 August 2026.
 ALL FIVE DATABASE FILES REWRITTEN WHOLE, recovering the 15–31 August gap
 from the session record, and the session-end update rule locked —
 31 August 2026.
+
+--- 1 SEPTEMBER 2026 ---
+
+THE WHEEL'S STANDALONE FILE FOUND AND READ, and its state established for
+the first time in writing. It had never been recorded under a filename in
+any database file — the only file in the project with no name against it —
+which is why nobody could say what state it was in.
+WHAT IT IS: a mockup of the WHOLE PLATFORM as it stood in June, not a
+screen. It draws its own header, its own left sidebar (the old Projects /
+DCW / World Building / Notes spine, superseded 11 August, still carrying
+"Writing Panel" and a "Scenes" item that no longer exists), and a right
+sidebar holding the June Site Map built against that same old nav. Roughly
+half the file is corridor work that the corridor now does.
+WHAT SURVIVES INTACT, AND IT IS THE IMPORTANT HALF: every locked number is
+present and correct — TIGHT 46, GAP 64, WINDOW 9, BOW 0, ease rate 0.072,
+READ_PAD 28. The centre ring is the 17px two-pixel gold ring with its
+filled dot and leader. Labels are two lines, mono gold kicker over Crimson
+title. Hover lights the node only. Both states are built, and the hand-off
+between them waits two frames for the layout to settle before landing the
+page on the reading line. The entity pop-ups are the locked ones —
+multiple, independent, dragged by the header, closed by ✕ only, copy
+taking plain text.
+THREE THINGS IN IT ARE OUT OF DATE, all settled after it was written:
+Tension shows as the plain text "55%" (a version rejected 9 June in favour
+of the segmented bar meter); the pop-up colours use the old section
+colours #cba36a and #b08a6a (superseded 4 June); and there is no
+SECTION ? pill.
+AND NOTHING IN IT IS REAL: the whole of A Christmas Carol is twenty-five
+sheets of hard-coded HTML, there is no localStorage anywhere in the file,
+and writing goes into an object in memory that is gone on refresh. The
+scene menu's Objects and Themes are literally the word "Something".
+ONE SMALL TRAP FOUND AND RECORDED: the scene kicker builds "Stave One —
+Scene One" from a word list that stops at ten, so an eleventh chapter
+would read "Stave undefined" — 1 September 2026.
+
+THE BASICS SAVE ROW REBUILT — Job One. The journey had stopped dead at
+step one: Save flashed a tick and left the writer sitting there with
+nothing pointing forward. The foot of the screen is now three buttons of
+one fixed width — SAVE · PLOT MAPPER → · BACK TO PROJECTS — with a
+standing line beneath them reporting the last save.
+IT IS A ONE-FILE CHANGE. The save row was established to live in
+pockets/project-overview.html, not the corridor; the corridor holds only
+the slot and the functions the buttons call. The forward door uses
+showScreen('plot-mapper'), which already existed and already worked.
+THE SIZE QUESTION DROVE THE WORDING. Kev: "I am finding it hard to
+reconcile three buttons of different sizes." Three buttons at the width of
+"Save and go to the Plot Mapper" will not fit an 800px column, so the
+middle button became "Plot Mapper →" and all three sit at 258px. The arrow
+matches the "Edit in Basics →" pattern already on the Plot Mapper's
+header, which is the crossing Job Three will build — one shape learned
+once.
+THEN THE SECOND FAULT, AND IT WAS THE REAL ONE. Kev: it is not clear the
+work is saved on the Plot Mapper and Back to Projects buttons. The screen
+had in fact been saving on every keystroke since 12 August and had never
+said so. The flashing tick was the cause rather than the cure — appearing
+only when Save was pressed, it implied the other two did not save.
+FIXED IN TWO PARTS: Back to Projects now saves before it leaves, so all
+three genuinely save; and the tick was replaced by a standing line under
+the row reading "Saved · 14:32", gold, updating on every save and present
+all the time rather than flashing.
+Still to look at: whether "equal" after the first visit means both
+outlined (as built) or something else — 1 September 2026.
