@@ -1,14 +1,12 @@
 File: inkyswot/locked-decisions.md
-Last updated: 31 August 2026 — rewritten WHOLE. A fortnight of work
-(15–31 August) had never reached this file: the Plot Mapper going live,
-the Enclosure fault and its fix, the Desk, the Event Planner, and the
-whole of the punctuation checker. Nothing has been deleted: everything
-overtaken has moved to SUPERSEDED LOCKS with its date and the reason.
+Last updated: 1 September 2026 — ADD-ONLY update. Four new locks from the
+1 September session are added under WORKING PRACTICE, THE MANUSCRIPT AND
+THE WHEEL, and a new BASICS block. Nothing has been deleted or moved.
 
 NOTE ON THIS FILE
 Normally add-only. Rewritten whole when a model shift supersedes a block
-of locks (4, 7, 9, 11, 17 June; 15 August; now 31 August). Superseded
-locks are NOT deleted — they move to the foot, dated.
+of locks (4, 7, 9, 11, 17 June; 15 August; 31 August). Superseded locks
+are NOT deleted — they move to the foot, dated.
 
 WHAT CHANGED SINCE 15 AUGUST, IN ONE LINE EACH
 - THE DATABASE IS UPDATED AT THE END OF EVERY SESSION. New, and the
@@ -19,6 +17,13 @@ WHAT CHANGED SINCE 15 AUGUST, IN ONE LINE EACH
 - THE CHECKER exists, with a body of locks of its own.
 - THE DESK is settled in shape: a synth, not a mixing desk.
 - THE EVENT PLANNER is designed: offsets are the truth.
+
+AND SINCE 31 AUGUST
+- THE WHEEL IS STRIPPED, NOT REBUILT. Its mechanism is correct and is not
+  to be rewritten.
+- THE FOOT OF A SCREEN IS ONE SET OF BUTTONS, ALL THE SAME SIZE.
+- SAVING IS SHOWN, NOT PERFORMED.
+- EVERY DOOR OFF A SCREEN SAVES BEFORE IT OPENS.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -37,6 +42,14 @@ and what the trap was. When 15–31 August went unwritten the code was still
 there, but two weeks of decisions were nearly lost and were recovered only
 because the session record could be searched.
 IF A SESSION ENDS ABRUPTLY, the next one begins by writing up the last.
+
+EVERY WORKING FILE IS RECORDED UNDER ITS FILENAME — LOCKED
+(1 September 2026)
+The Wheel could not be assessed for a whole session because no database
+file had ever written down which file it was. The Plot Mapper had
+code-plot-mapper-10.html; the mystery grid had code-mystery-grid.html; the
+Wheel had only "a mockup built on A Christmas Carol". A description is not
+a filename. WHEN A THING IS BUILT, ITS FILENAME GOES IN THE FILE.
 
 FILE DISCIPLINE — LOCKED (2 June 2026)
 When updating any .md file, rewrite the WHOLE file clean and hand it back
@@ -138,6 +151,18 @@ CORRIDOR PLUS POCKETS — THE ARCHITECTURE — LOCKED (August 2026)
 - INDEX.HTML IS THE OUTPUT, NOT A SOURCE.
 Private repo: PitchDarkPress/inkyswot-rebuild.
 
+A SCREEN'S OWN FURNITURE LIVES IN ITS POCKET — LOCKED (1 September 2026)
+Established by reading both files rather than assuming. The corridor holds
+the SLOT and the SHARED FUNCTIONS a screen calls (autoSave,
+saveProjectHeader, showScreen, getProjects/saveProjects); the pocket holds
+all of that screen's markup, including its buttons. So the Basics save row
+is a one-file change with no corridor edit and no risk to the shared
+shell.
+THE COROLLARY: before deciding which file a change belongs in, READ BOTH.
+The corridor's autoSave reaching into the Basics screen by element name
+(ph-format, ph-audience, ph-outline and the hidden stubs) makes it look
+from the outside as though the corridor owns that screen. It does not.
+
 THE ENCLOSURE READS THE CORRIDOR — LOCKED (25 August 2026)
 (SUPERSEDES the hard-coded pocket list.)
 The Enclosure takes its list of pockets FROM THE CORRIDOR'S OWN SLOTS, not
@@ -154,6 +179,61 @@ code. Stitch's character count and Publish's character count MUST MATCH
 before a hard refresh is trusted. NEVER press Split unless deliberately
 re-splitting a whole index.html. NEVER press "ADD SPELL CHECK TO
 CORRIDOR" — it pushes an older corridor back over the fix.
+
+--- BASICS (THE OVERVIEW SCREEN) ---
+
+THE FOOT OF THE SCREEN IS ONE SET OF BUTTONS, ALL THE SAME SIZE — LOCKED
+(1 September 2026)
+Kev: "I am finding it hard to reconcile three buttons of different sizes."
+Three buttons across the foot of a form read as untidy when each takes the
+width of its own wording. They now share ONE FIXED WIDTH, sized to the
+longest, with their text centred.
+AND THE CONSEQUENCE THAT MATTERS: THE WIDTH DECIDES THE WORDING, NOT THE
+OTHER WAY ROUND. "Save and go to the Plot Mapper" at three-across will not
+fit an 800px column. The wording was cut to fit the set, not the set
+stretched to fit the wording.
+This extends the 15 August rules rather than replacing them: a control's
+size must not depend on what is beside it, and must not change with its
+wording — and now, a ROW of controls doing the same kind of job is one
+size throughout.
+
+THE THREE DOORS AT THE FOOT OF BASICS — LOCKED (1 September 2026)
+SAVE · PLOT MAPPER → · BACK TO PROJECTS. All three always present, always
+in that order, none ever hidden behind a first-visit rule.
+- Save saves and stays.
+- Plot Mapper → saves and goes forward.
+- Back to Projects saves and goes back.
+THE ARROW IS THE CROSSING'S SHAPE. It matches "Edit in Basics →" already
+on the Plot Mapper's header, so the writer learns one mark for "this takes
+you to another screen" — and that is the pattern Job Three will use in
+both directions.
+FIRST VISIT ONLY, the Plot Mapper button is the filled one so a new
+writer's eye lands on the way forward; afterwards the two sit as equals. A
+project has "been to the Plot Mapper" if it carries a plotMapper record.
+NO NEW FLAG WAS ADDED.
+WHY IT IS NOT CLEVERER THAN THAT: a button that quietly behaves
+differently depending on hidden state is what makes a platform feel
+unpredictable. Only the FILL changes; nothing appears or disappears.
+
+EVERY DOOR OFF A SCREEN SAVES BEFORE IT OPENS — LOCKED (1 September 2026)
+Not just the forward one. Back to Projects saves too. A writer should
+never have to work out which exits are safe, and "which button keeps my
+work" is not a question a writing platform may ask.
+
+SAVING IS SHOWN, NOT PERFORMED — LOCKED (1 September 2026)
+Kev, on the first build: it is not clear the work is saved on the Plot
+Mapper and Back to Projects buttons. THE SCREEN HAD BEEN SAVING ON EVERY
+KEYSTROKE SINCE 12 AUGUST AND HAD NEVER SAID SO.
+THE TICK WAS THE CAUSE, NOT THE CURE. A confirmation that appears only
+when Save is pressed teaches the writer that saving is something the Save
+button does — which makes every other button look like a way to lose work.
+A save that happens continuously must be reported continuously.
+SO: a standing line beneath the row, reading "Saved · 14:32" in gold,
+updating on every save, present all the time. Before the first save it
+says plainly that the screen saves as you type.
+THIS IS THE SAME LOCK AS "MAKE IT COUNT WHAT IT DID", pointed at the
+writer rather than at the builder: a silent success and a silent failure
+must never look the same — and to a writer, an unreported save is silent.
 
 --- THE PLOT MAPPER ---
 
@@ -436,6 +516,9 @@ OPEN: "Basics" vs "Overview" vs "Front Matter". Sandbox should move from
 Library to DCW. Group headings should become live rooms. AND the "Plot
 Mapping" item under NAVIGATE points at Coming Soon while the real Plot
 Mapper is live under DCW — two similar names, one working.
+CONFIRMED AGAINST THE LIVE FILE 1 SEPTEMBER: the sidebar is as locked.
+nav-manuscript points at Coming Soon, and there is NO POCKET:manuscript
+slot in the corridor — both are Job Two's to change.
 
 THE SECTION ? GUIDE — PLATFORM-WIDE — LOCKED (15 August 2026)
 - EVERY SCREEN carries a SECTION ? pill at the TOP RIGHT of its header,
@@ -454,6 +537,8 @@ CONTROLS DO NOT CHANGE SIZE — LOCKED (15 August 2026)
   sized to its longest state, text centred.
 - A CONTROL'S SIZE MUST NOT DEPEND ON WHAT IS BESIDE IT.
 - OPENING SOMETHING MUST NOT PUSH WHAT IS ABOVE IT.
+EXTENDED 1 SEPTEMBER: A ROW OF CONTROLS DOING THE SAME KIND OF JOB IS ONE
+SIZE THROUGHOUT — see the Basics block above.
 TO BE SWEPT ACROSS THE CORRIDOR when it is next in hand. STILL NOT DONE.
 
 --- THE DATA MODEL ---
@@ -496,6 +581,34 @@ downstream must agree. Warnings inform; they never block.
 
 --- THE MANUSCRIPT AND THE WHEEL ---
 
+THE WHEEL IS STRIPPED, NOT REBUILT — LOCKED (1 September 2026)
+The June standalone file is a mockup of the whole platform. Turning it
+into pockets/manuscript.html means CUTTING AWAY THE OUTSIDE AND KEEPING
+THE MIDDLE — its own header, its own left sidebar and its Site Map all go,
+because the corridor already draws those. The page, the scene menu and the
+wheel stay.
+THE WHEEL CODE ITSELF IS NOT TO BE REWRITTEN. Every locked number in it is
+correct (TIGHT 46, GAP 64, WINDOW 9, BOW 0, ease 0.072, READ_PAD 28), and
+a fresh write would get some of them subtly wrong and cost a session
+finding out which. It comes across unchanged.
+THE ONE THING THAT DOES CHANGE IS THE JOIN: labels currently hard-coded in
+the HTML must be built from the project's real chapters and scenes. That
+is where a fault will appear, and the first still is pointed at a real
+project precisely so a wrong turn can be blamed on the join and not the
+mechanism.
+
+THE TWO LEFT MENUS ARE DIFFERENT THINGS — LOCKED (1 September 2026)
+Worth writing down because it caused real confusion in conversation. On
+the finished Wheel screen there are TWO things to the left of the page:
+- THE PLATFORM SIDEBAR, furthest out. The corridor's. Basics / Story /
+  People / World / Library / DCW. The pocket does not carry one.
+- THE SCENE MENU, in the channel between it and the page. The Wheel's own,
+  and it STAYS. Characters, Objects, Themes, Tension for the scene you are
+  on.
+The old four-heading menu inside the June file (Projects / DCW / World
+Building / Notes) is neither of these. It is the superseded spine and it
+is deleted.
+
 THE MANUSCRIPT — THE CLOSE / WRITING VIEW — LOCKED (16 June 2026)
 The close end of the funnel, where the writer completes the book. Earlier
 locks saying "WP" or "Writing Panel" refer to THE MANUSCRIPT.
@@ -513,6 +626,9 @@ Locked: 4 June 2026.
 THE WHEEL LABELS ARE TWO LINES — LOCKED (7 June 2026)
 A small gold mono caps KICKER ("STAVE ONE — SCENE ONE") and the SCENE
 TITLE beneath in Crimson Pro.
+NOTE 1 SEPTEMBER: in the June file the kicker's number words come from a
+list that stops at TEN, so an eleventh chapter reads "Stave undefined".
+Fix it when the labels are rebuilt from the real project.
 
 THE WHEEL — WINDOWED, EASED, STRAIGHT — LOCKED (7 June 2026)
 Window of NINE labels each side of centre, fading at the edges with a
@@ -542,6 +658,9 @@ Right-aligned list, coloured group headers, names in plain ink. Tied to
 the PAGE, not the book.
 
 TENSION IS A SEGMENTED BAR METER — LOCKED (9 June 2026)
+NOTE 1 SEPTEMBER: the June Wheel file still shows the plain text "55%",
+which is one of the versions rejected on 9 June. Correct it during the
+strip.
 
 THE ENTITY POP-UP — LOCKED (4 June 2026)
 Click to open, ✕ to close; does not vanish on click-away; does not close
@@ -570,6 +689,8 @@ THE SIX TRACK COLOURS — LOCKED (9 June 2026)
   TENSION red #c45b48
 NB: the SIDEBAR groups carry FOUR FAMILY COLOURS — Story #c9923a, People
 #cf7f57, World #5fa898, Library #9a8f72.
+NOTE 1 SEPTEMBER: the June Wheel file's pop-ups still use the superseded
+4 June section colours (#cba36a, #b08a6a). Correct them during the strip.
 
 SCENES ARE LABELLED, TITLE OPTIONAL — Locked: 4 June 2026.
 
@@ -683,6 +804,10 @@ GOLD MARKS ANYTHING ALIVE AND RESPONDING. NEVER DECORATIVE.
 ================================================================
 OPEN — NOT YET DECIDED
 ================================================================
+WHETHER "EQUAL" MEANS BOTH OUTLINED. After a project has been to the Plot
+Mapper, Save and Plot Mapper → are both shown outlined. Two filled gold
+buttons side by side was judged too loud. NOT RULED ON BY KEV. (New,
+1 September.)
 STEP TWO OF THE PLOT MAPPER — the cards writing into the same store
 Characters, Locations and the rest read from. THE VANISHING TINTS MUST BE
 SOLVED AS PART OF IT.
@@ -715,6 +840,15 @@ MEMORY DIVISION IMAGES: whether the division can hold .png/.jpg.
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 ================================================================
 
+THE FLASHING SAVE TICK ON BASICS (SUPERSEDED 1 September 2026) — a green
+"✓ Saved" that appeared for 2.5 seconds when Save Overview was pressed and
+at no other time. It made continuous saving invisible and made the other
+buttons look unsafe. Replaced by the standing saved line. The corridor's
+saveProjectHeader still drives the element; the pocket hides it.
+
+"SAVE OVERVIEW" AS THE BUTTON'S WORDING (SUPERSEDED 1 September 2026) —
+now simply SAVE, so the three foot buttons can share one width.
+
 THE ENCLOSURE'S HARD-CODED POCKET LIST (SUPERSEDED 25 August 2026) — the
 Enclosure kept its own list of pockets, which was never updated when the
 Plot Mapper was added, so it placed 15 of 16 in silence. Replaced by
@@ -745,7 +879,9 @@ SECTION HELP PILL AS A SLIDE-IN (locked 30 May, SUPERSEDED 15 August
 
 THE MENU SPINE'S PROJECT NAV (recorded 16 June, SUPERSEDED 11 August
 2026) — PROJECTS / DCW / WORLD BUILDING / NOTES. Replaced by the rebuilt
-sidebar.
+sidebar. NOTE 1 SEPTEMBER: this superseded menu is still drawn inside the
+June Wheel file, complete with "Writing Panel" and a "Scenes" item. It is
+deleted when the Wheel is stripped.
 
 THE SPELL CHECKER'S MIRRORED OVERLAY (specced, SUPERSEDED 28 August
 2026) — an invisible copy of the text behind the box, kept in step as the
