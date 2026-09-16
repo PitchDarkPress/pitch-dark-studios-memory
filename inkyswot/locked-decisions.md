@@ -1,7 +1,10 @@
 File: inkyswot/locked-decisions.md
-Last updated: 1 September 2026 — ADD-ONLY update. Four new locks from the
-1 September session are added under WORKING PRACTICE, THE MANUSCRIPT AND
-THE WHEEL, and a new BASICS block. Nothing has been deleted or moved.
+Last updated: 16 September 2026 — ADD-ONLY update. Nine new locks from the
+16 September session are added, most of them under a new PLATFORM STORE
+block at the head of the live locks; the LIBRARY, THE IMPORT and BUILD FOR
+ONE USER are new blocks of their own. Two existing locks are EXTENDED (the
+saved line, and the sidebar). Two OPEN items are now CLOSED. Nothing has
+been deleted or moved.
 
 NOTE ON THIS FILE
 Normally add-only. Rewritten whole when a model shift supersedes a block
@@ -25,9 +28,147 @@ AND SINCE 31 AUGUST
 - SAVING IS SHOWN, NOT PERFORMED.
 - EVERY DOOR OFF A SCREEN SAVES BEFORE IT OPENS.
 
+AND SINCE 1 SEPTEMBER — THE LARGEST SHIFT SINCE THE REBUILD BEGAN
+- THE PLATFORM'S STORE IS SUPABASE. InkySwot leaves the browser.
+- A LIBRARY IS A LIBRARY. Not two books.
+- THE IMPORT LIVES IN THE LIBRARY, and it is not Research & Reference.
+- NOTHING LANDS IN THE WRITER'S WORK UNTIL THE WRITER HAS SAID SO.
+- BUILD FOR ONE USER FIRST.
+- USE WINS OVER THE BUILD LIST.
+
 ================================================================
 LIVE LOCKED DECISIONS
 ================================================================
+
+--- THE PLATFORM STORE (16 September 2026) ---
+
+THE PLATFORM'S STORE IS SUPABASE — LOCKED (16 September 2026)
+InkySwot leaves the browser. Everything currently lives in ONE localStorage
+item called "is-projects" — every project, character, location, building,
+chapter and the whole plotMapper record in a single lump of text, held only
+by Chrome on one machine. CLEAR THE BROWSER DATA AND THE LOT IS GONE.
+THE REASON IT CANNOT STAND: the box is about 5MB and a 90,000-word novel is
+roughly half of one. Every keystroke rewrites the whole lump. And
+saveProjects calls localStorage.setItem bare, so a full box FAILS IN
+SILENCE.
+AND IT WAS ALWAYS COMING: YOU CANNOT SELL A SUBSCRIPTION TO A PLATFORM
+THAT KEEPS EVERY WRITER'S NOVEL IN THEIR OWN BROWSER CACHE. The library
+merely brought it forward.
+WHY SUPABASE AND NOT THE OTHERS: Vercel's own storage is simplest to wire
+but does less and needs something separate for logins. Cloudflare R2 is
+cheapest for files but holds files only. SUPABASE DOES STORAGE AND LOGINS
+IN ONE JOB RATHER THAN TWO, and InkySwot needs logins before it can take a
+penny from anyone.
+THE ACCOUNT: organisation PITCH DARK STUDIOS (Personal, Free), project
+INKYSWOT, region West Europe (London) eu-west-2, signed in through GitHub
+OAuth on PitchDarkPress with user:email scope only. The database password
+is generated and held by Kev outside the browser; Supabase will not show
+it again.
+BUILD AND TEST ON FREE, SWITCH TO PRO WHEN IT GOES LIVE. Pro is $25 a
+month PER ORGANISATION — not per project and not per user — and nothing is
+rebuilt at the switch.
+
+THE SECURITY DEFAULTS ARE NOT OPTIONAL — LOCKED (16 September 2026)
+Chosen deliberately when the project was created, and to be kept:
+· DATA API ON — without it the browser cannot reach the database.
+· AUTOMATICALLY EXPOSE NEW TABLES OFF — Supabase's own recommendation. It
+  would open every new table to the outside world by default. THESE ARE
+  WRITERS' NOVELS.
+· AUTOMATIC ROW LEVEL SECURITY ON — RLS is the rule that a person sees
+  only their own rows. IT IS THE THING THAT STOPS ONE WRITER READING
+  ANOTHER'S BOOK, and automatic means it cannot be forgotten on a table
+  added in a hurry.
+
+A NUDGE TO THE WRITER, YES. A THING PRETENDING TO BE THE WRITER, NO —
+LOCKED (16 September 2026)
+Free Supabase projects pause after seven days without activity. A
+scheduled keep-alive ping was considered and set aside: it cannot come
+from inside InkySwot (the app only runs when a browser has it open, and
+the problem is precisely the weeks when nobody opens it), and it works
+against the terms of the free tier rather than within them.
+KEV'S ANSWER, AND IT IS THE RIGHT ONE: Vercel reminds HIM to open the
+platform, and he opens it. That is real use and needs no disguise.
+THE GENERAL PRINCIPLE, WORTH MORE THAN THE CASE THAT PRODUCED IT:
+BUILDING SOMETHING DESIGNED TO LOOK UNLIKE WHAT IT IS ADDS NO BENEFIT.
+Once the app is wired up, opening it IS the activity, and the dashboard
+settles the question by observation rather than argument.
+
+--- BUILD FOR ONE USER (16 September 2026) ---
+
+BUILD FOR ONE USER FIRST — LOCKED (16 September 2026)
+KEV: "ALWAYS picture me as the ONLY user. Therefore questions on prompts
+and their cost are void. Once we have the platform sorted for me only then
+do we add the cost/benefits equation into the mix and go from there. The
+reason I say this is that I am probably going to be the most difficult
+customer for the platform, so if it works for me then all else follows."
+PROMPT CAPS, PER-USER COSTS AND ALLOWANCES ARE OFF THE TABLE until the
+platform works for him. If the import needs to read a book forty times to
+get it right, it reads it forty times.
+THE ONE EXCEPTION: A LIMIT OF THE MACHINE IS NOT A BUSINESS DECISION. Kev
+as a single user hits the 5MB browser ceiling with two books just as
+surely as three thousand writers would. "Will the book fit" is not a cost
+question, which is why the Supabase decision could not wait.
+
+USE WINS OVER THE BUILD LIST — LOCKED (16 September 2026)
+KEV: "we are building something based on theory. I think that now is the
+time to start using it and see where that takes the build."
+THE BUILD LIST NOW COMES FROM USE, NOT FROM THE DATABASE FILES. Where the
+two disagree, USE WINS.
+THE CONSEQUENCE FOR "FIX BEFORE WE MOVE ON": real use throws up a steady
+drip of small irritations. Only a thing that actually BLOCKS the work
+stops the day; the rest is logged and the writing continues. This is a
+deliberate change of shape, agreed out loud rather than arrived at by
+drift.
+
+--- THE LIBRARY AND THE IMPORT (16 September 2026) ---
+
+A LIBRARY IS A LIBRARY — LOCKED (16 September 2026)
+KEV: "Two books is going to be too limiting. When we talk about a library
+it has to be just that." A library that holds two books is not a library,
+and the browser holds two books. THE LIBRARY IS SERVER-SIDE. Storing books
+in the browser was only ever a way of dodging the real answer.
+
+THE IMPORT LIVES IN THE LIBRARY — LOCKED (16 September 2026)
+Claude argued for the foot of Basics, as a beginning-of-project act, and
+was wrong. KEV: "what if I want to add stories by other people for style
+and tone?" THE MOMENT THE SHELF HOLDS ANYTHING BUT YOUR OWN PREVIOUS BOOKS
+IT IS A REFERENCE COLLECTION, AND A REFERENCE COLLECTION LIVES IN THE
+LIBRARY. Material must never arrive in one room and live in another.
+
+THE IMPORT IS NOT RESEARCH & REFERENCE — LOCKED (16 September 2026)
+The old Research & Reference fields — Title, Type, a link — were built for
+notes ABOUT sources. A FINISHED NOVEL IN A TITLE-AND-TYPE FORM IS A BOOK
+IN A FILING CARD. What Kev asked for is different: hand it the book and it
+fills the screens. "The first thing would be to auto fill all the
+locations characters etc."
+AND THE CHAPTER SPLIT NEEDS NO AI AT ALL. Chapter headings are visible in
+the text itself, so finding them costs nothing and is more reliable than
+anything the AI does. It is probably the FIRST thing built, not the last.
+THE READ IS ONE PASS, front to back, delivered in sections because the
+reply comes back in pieces. IT IS NOT FORTY READINGS OF THE SAME BOOK.
+
+NOTHING LANDS IN THE WRITER'S WORK UNTIL THE WRITER HAS SEEN IT AND SAID
+SO — LOCKED (16 September 2026)
+The import shows what it found as a list to go through and tick. It does
+not get to decide quietly that the innkeeper is a minor character. THIS
+CLOSES THE OPEN QUESTION "whether writers confirm extracted data before it
+lands in Characters" — they do, always.
+THE PRINCIPLE UNDERNEATH IT IS KEV'S OWN, AND IT IS THE BEST SINGLE THING
+SAID ABOUT THE PLATFORM: THE BUDDY SYSTEM. "I watch my wife and she
+watches me." Two people who know each other's work, each keeping an eye
+out for the other, NEITHER IN CHARGE. It cuts both ways: if the platform
+is a buddy rather than an observer, then the writer watches it as closely
+as it watches them, so EVERYTHING IT DOES MUST BE VISIBLE, CORRECTABLE AND
+REVERSIBLE. That is Proauthorism stated as a working relationship rather
+than as a declaration.
+
+SOMEONE ELSE'S NOVEL AS A STYLE SOURCE IS NOT SETTLED — RAISED, NOT
+LOCKED (16 September 2026)
+Pulling in Kev's own Rapscallion is uncomplicated: his book, his world,
+his voice. Someone else's novel used to teach the platform a style is a
+different matter, legally and in terms of what InkySwot says it stands
+for. "Always writer-led" is strong precisely because it means the writer's
+OWN voice. TO BE DECIDED DELIBERATELY RATHER THAN ARRIVED AT BY ACCIDENT.
 
 --- WORKING PRACTICE ---
 
@@ -42,6 +183,25 @@ and what the trap was. When 15–31 August went unwritten the code was still
 there, but two weeks of decisions were nearly lost and were recovered only
 because the session record could be searched.
 IF A SESSION ENDS ABRUPTLY, the next one begins by writing up the last.
+NOTE 16 SEPTEMBER: the 1–16 September gap was ILLNESS, not neglect. No
+work happened in it, so nothing was lost. A gap in the record is only a
+failure when work happened inside it.
+
+HOW THESE FILES ARE SHORTENED — LOCKED (16 September 2026)
+They are now too long, and much of the length is finished work described
+at the length it needed WHILE IT WAS STILL BEING DECIDED. The condensing
+pass is its own session, and the method is:
+SHORTEN BY AGE AND SETTLEDNESS, NEVER BY CUTTING DETAIL. A thing built,
+working and undisputed keeps its filename, its shape in a few lines, and
+its traps — the reasoning that got there has done its job. A THING STILL
+OPEN KEEPS EVERY WORD.
+TWO THINGS ARE NEVER SHORTENED: THE TRAPS (the Grammarly trap, the
+Enclosure warning, the publishing minute), because each cost an hour and
+would cost it again; and ANYTHING MARKED SETTLED-DO-NOT-REOPEN, such as
+the Proauthorism argument, which exists precisely so a future session
+cannot reopen it and which a summary would not hold.
+AND SPLITTING IS THE OTHER ANSWER — the checker alone justifies a file of
+its own, as the nine files of May were split.
 
 EVERY WORKING FILE IS RECORDED UNDER ITS FILENAME — LOCKED
 (1 September 2026)
@@ -57,14 +217,20 @@ complete. Never a list of patches. The .md is the single source of truth;
 the code is the truth above it.
 
 WORK FROM THE IMAGE / THE CODE — LOCKED (9 June 2026, reinforced 31
-August) A screenshot from Kev IS the template — match it, do not
-reinterpret it. When changing a built file, work from the pasted code,
-never a reconstruction. SMALL CHANGES MEAN SMALL CHANGES.
+August and 16 September) A screenshot from Kev IS the template — match it,
+do not reinterpret it. When changing a built file, work from the pasted
+code, never a reconstruction. SMALL CHANGES MEAN SMALL CHANGES.
 ADDED 31 AUGUST: A SCREENSHOT IS NOT A SOURCE FOR DIAGNOSIS. Two
 diagnoses of the sidebar were made from screenshots and both were wrong,
 because the two images were of different screens and neither was the file.
 AND index.html IS THE OUTPUT, NOT A SOURCE — corridor.html is where the
 menu lives and where a menu fix belongs.
+ADDED 16 SEPTEMBER, AND IT IS THE THIRD TIME THIS FAULT HAS BEEN
+RECORDED: NEITHER IS MEMORY A SOURCE. Claude stated that the Cast and
+World screens had never been brought into the rebuild and that an import
+would have nowhere to land. Wrong — Characters is a live working screen,
+as are the other seven. ONE CLICK SETTLED IT IN SECONDS. When the state of
+the platform matters, ASK FOR THE CLICK OR THE FILE. Do not assert it.
 
 ABSENCE IS NOT ACCIDENT — LOCKED (31 August 2026)
 Chapters and The Treatment are stitched into index.html with no way in,
@@ -90,6 +256,10 @@ The Enclosure placed 15 of 16 pockets and said nothing. It now reports
 nothing", because zero findings and a pass that never ran look identical
 otherwise. THE PATTERN IS GENERAL: a silent success and a silent failure
 must never look the same.
+AND ON 16 SEPTEMBER THE SAME FAULT WAS FOUND IN THE CORRIDOR ITSELF:
+saveProjects writes to localStorage with no check at all. THREE TIMES NOW,
+IN THREE DIFFERENT TOOLS. IT IS THE HOUSE FAULT, and it is to be looked
+for deliberately rather than stumbled upon.
 
 NEVER NAME A VARIABLE history, name, location, status, top, self or
 parent — LOCKED (15 August 2026)
@@ -134,6 +304,13 @@ CLARIFIED 31 AUGUST: a tool that HIDES machine authorship would run
 against Proauthorism, but a writer who declares the collaboration either
 way is not hiding anything. The declaration is the point; the disguise
 never was.
+CLARIFIED 16 SEPTEMBER — KEV'S OWN FORMULATION, AND THE CLEAREST YET:
+"A platform that thinks like the individual writer BUT POWER ASSISTED."
+Power assistance is a steering analogy: the driver still steers, the
+assistance only makes the turn easier, and the car never decides where to
+go. It names the mechanism rather than merely declaring the policy.
+AND SEE THE BUDDY SYSTEM under the import above, which is the same idea
+stated as a relationship.
 
 INKYSWOT IS THE DCW
 The DCW is not a screen, strip, board or panel. It is the WHOLE platform.
@@ -235,6 +412,17 @@ THIS IS THE SAME LOCK AS "MAKE IT COUNT WHAT IT DID", pointed at the
 writer rather than at the builder: a silent success and a silent failure
 must never look the same — and to a writer, an unreported save is silent.
 
+A SAVE IS ONLY REPORTED WHEN IT HAS ACTUALLY SUCCEEDED — LOCKED
+(16 September 2026) — EXTENDS THE LOCK ABOVE
+The standing line as built reports that a save was ATTEMPTED, not that it
+SUCCEEDED. It wraps autoSave; autoSave calls saveProjects; saveProjects
+has no error handling. IF localStorage IS FULL THE LINE STILL SAYS
+"Saved · 14:32". THE SCREEN THE PLATFORM TRUSTS MOST IS CURRENTLY CAPABLE
+OF LYING TO THE WRITER.
+REPORTING AN ATTEMPT IS WORSE THAN REPORTING NOTHING, because the writer
+then trusts it. Wrapping a save in nothing and announcing it is how a
+platform lies. TO BE FIXED WITH THE SUPABASE CONNECTION, OR SOONER.
+
 --- THE PLOT MAPPER ---
 
 THE SYNOPSIS SCREEN IS THE PLOT MAPPER — LOCKED (15 August 2026)
@@ -251,6 +439,18 @@ The document is written onto the project in localStorage "is-projects"
 under plotMapper: parts, made, the budget, and the indent and details
 switches, with currentWords and lastEdited updated. Debounced, and also on
 beforeunload.
+NOTE 16 SEPTEMBER: this changes when the store moves to Supabase.
+
+CHAPTERS AND SCENES CARRY PERMANENT IDS — LOCKED (1 September 2026)
+So that written prose attaches to a SCENE rather than to a position that
+shifts the moment content is rearranged. The Wheel depends on it, and so
+does the import's landing.
+
+PASTED TEXT ARRIVES AS PLAIN INK — LOCKED (1 September 2026)
+Text pasted from Word or a PDF comes in as plain ink in the screen's own
+colour, paragraphs preserved and inline formatting stripped. Black text on
+a dark screen is not a styling preference, it is text the writer cannot
+read.
 
 THE PLOT MAPPER AND THE WHEEL ARE A PAIR — LOCKED (31 August 2026)
 Basics and Publishing are one-way gates at either end of the journey. THE
@@ -308,6 +508,11 @@ text does not go anywhere. This is a fact about the architecture, not a
 promise, and it is the one claim Grammarly structurally cannot make.
 Fetching a dictionary is not sending text: the dictionary comes down, the
 checking happens here.
+NOTE 16 SEPTEMBER: MOVING THE PLATFORM'S STORE TO SUPABASE DOES NOT TOUCH
+THIS. The checker checks what is handed to it, in the browser, and that
+stays true whatever the manuscript is stored on. If the claim is ever made
+in marketing, it is made about the CHECKER, not about the platform's
+storage.
 
 THE CHECKER PROPOSES, IT NEVER REWRITES — LOCKED (28 August 2026)
 It marks and offers. The writer decides. Where nothing safe can be offered
@@ -513,12 +718,14 @@ Synopsis has gone from Story. "Library" has RETURNED as a group heading.
 CHAPTERS AND THE TREATMENT were dropped DELIBERATELY; their pockets remain
 in the repo and showScreen is guarded so the removed nav ids do not throw.
 OPEN: "Basics" vs "Overview" vs "Front Matter". Sandbox should move from
-Library to DCW. Group headings should become live rooms. AND the "Plot
-Mapping" item under NAVIGATE points at Coming Soon while the real Plot
-Mapper is live under DCW — two similar names, one working.
-CONFIRMED AGAINST THE LIVE FILE 1 SEPTEMBER: the sidebar is as locked.
-nav-manuscript points at Coming Soon, and there is NO POCKET:manuscript
-slot in the corridor — both are Job Two's to change.
+Library to DCW. Group headings should become live rooms.
+UPDATED 1 SEPTEMBER: THE DUPLICATE "PLOT MAPPING" ITEM UNDER NAVIGATE WAS
+DELETED. It was a dead end while the real Plot Mapper was live under DCW —
+two items, similar names, one working, and a writer would have tried the
+more prominent one first. CLOSED.
+CONFIRMED AGAINST THE LIVE FILE 16 SEPTEMBER: the sidebar is as locked.
+nav-manuscript points at Coming Soon, nav-research points at Coming Soon,
+and there is NO POCKET:manuscript and NO POCKET:research slot.
 
 THE SECTION ? GUIDE — PLATFORM-WIDE — LOCKED (15 August 2026)
 - EVERY SCREEN carries a SECTION ? pill at the TOP RIGHT of its header,
@@ -554,6 +761,9 @@ end). LIVING LINK, BOTH WAYS; NOTHING ENTERED TWICE.
 THE KEYSTONE, still open: each overlay's structure must be STORED ON THE
 SHARED DATA itself, not inside a view. THIS IS STEP TWO OF THE PLOT MAPPER
 GOING LIVE.
+NOTE 16 SEPTEMBER: THE IMPORT'S LANDING IS THE SAME ROAD FROM THE OTHER
+END. Its ticked characters and locations become records in exactly the
+store step two must write into. Solve it once.
 
 THE TREATMENT IS THE DCW SWITCHED ON
 Everything in the database ASSEMBLES into a readable, writable whole. A
@@ -748,6 +958,12 @@ Never: "Write books instantly" / "Passive income publishing" / "Make 100
 books a week" / "AI author riches". InkySwot markets to writers, creators,
 worldbuilders, playwrights, serious independents, disabled writers,
 dyslexic writers. Locked: 24 May 2026.
+ADDED 16 SEPTEMBER — A WORDING CAUTION, NOT A BAN. The platform "learns by
+watching" is a lovely idea for how it grows and a poor line for the
+marketing: a writer reading it will hear surveillance before they hear
+devotion, and the writers most worth having are the most alert to it. THE
+SAME IDEA SAYS BETTER AS: IT STARTS KNOWING NOTHING, AND EVERYTHING IT
+LEARNS, IT LEARNS FROM YOU.
 
 FORMAT LIST / FORMAT GROUPS / FORMAT-AWARE TOOLBAR / FORMAT CHOSEN FIRST
 — LOCKED (26 May 2026), unchanged.
@@ -783,6 +999,8 @@ Hardback / Ebook, audiobook later.
 
 SIGNUP / AUTHENTICATION — email + password → verification → access. No
 SSO. Locked: 25 May 2026.
+NOTE 16 SEPTEMBER: Supabase provides this, which is half the reason it was
+chosen. The lock stands; the means is now decided.
 
 DATA — InkySwot never sells user data. Ever. GDPR compliant. Deletion
 within 30 days.
@@ -804,25 +1022,30 @@ GOLD MARKS ANYTHING ALIVE AND RESPONDING. NEVER DECORATIVE.
 ================================================================
 OPEN — NOT YET DECIDED
 ================================================================
+HOW INKYSWOT CONNECTS TO SUPABASE. The account exists; nothing is wired.
+What moves first, what stays in the browser meanwhile, and how existing
+work is carried across without loss. (New, 16 September.)
+WHETHER SOMEONE ELSE'S NOVEL MAY BE USED AS A STYLE SOURCE. Raised
+16 September, deliberately not settled.
+WHETHER THE IMPORT COUNTS AGAINST THE PROMPT ALLOWANCE. Claude's view is
+that it should not — a prompt is the writer asking for a suggestion, an
+import is one job done once on a book. NOT RULED ON, and parked under
+BUILD FOR ONE USER until the platform works.
 WHETHER "EQUAL" MEANS BOTH OUTLINED. After a project has been to the Plot
 Mapper, Save and Plot Mapper → are both shown outlined. Two filled gold
-buttons side by side was judged too loud. NOT RULED ON BY KEV. (New,
-1 September.)
+buttons side by side was judged too loud. NOT RULED ON BY KEV.
+(1 September.)
 STEP TWO OF THE PLOT MAPPER — the cards writing into the same store
 Characters, Locations and the rest read from. THE VANISHING TINTS MUST BE
 SOLVED AS PART OF IT.
 ADA'S BUTTONS ON THE PLOT MAPPER — built but quiet.
-THE "PLOT MAPPING" DEAD END under NAVIGATE.
 THE CARD FACT FIELDS — a factual layer under the prose fields, and what
 wins when facts and prose disagree.
 "BASICS" vs "OVERVIEW" vs "FRONT MATTER".
 SANDBOX moving from Library to DCW.
 THE FIVE ROOMS.
-THE LIBRARY's shape.
 THE EVENT PLANNER's drop line — fixed at centre or moving with the pan.
 THE MYSTERY PLOTTING GRID — built 25 August, never reviewed.
-THE SERIES BIBLE IMPORT — whether writers confirm extracted data before it
-lands in Characters.
 WHAT "MORE" SHOULD SHOW on the Plot Mapper; whether STATUS should be
 editable there.
 THE QUICK-NOTE — persistence; a "see all"; whether a pinned note crosses
@@ -836,9 +1059,34 @@ AMBIENT (Atmosphere / Weather / Time).
 CONCEPTS still uses the OLD Cast / World / Plot grouping.
 MEMORY DIVISION IMAGES: whether the division can hold .png/.jpg.
 
+CLOSED SINCE THE LAST WRITE:
+· THE "PLOT MAPPING" DEAD END under NAVIGATE — deleted 1 September.
+· THE SERIES BIBLE IMPORT, whether writers confirm extracted data before
+  it lands in Characters — CLOSED 16 September. They do, always. See
+  NOTHING LANDS IN THE WRITER'S WORK above.
+· THE LIBRARY's shape — CLOSED 16 September in its essentials: it is
+  server-side, and it is where the import lives. The room's drawing (three
+  rows opening rightwards) still awaits building.
+
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 ================================================================
+
+THE BROWSER AS THE PLATFORM'S STORE (SUPERSEDED 16 September 2026) —
+everything in one localStorage item called "is-projects", read by
+getProjects and written whole by saveProjects on every keystroke. It
+served from the first day of the rebuild and it was the right thing while
+the platform held forms. It cannot hold a library: about 5MB in total,
+with no error handling, so a full box fails in silence. Replaced by
+SUPABASE. The code is still live as this is written; the connection is
+Job Zero.
+
+THE IMPORT AS A LOCALSTORAGE SHELF (SUPERSEDED 16 September 2026, BEFORE
+IT WAS BUILT) — the first plan gave big text its own localStorage keys,
+separate from "is-projects", so a book would not be rewritten on every
+keystroke. It would have worked for one or two books and it dodged the
+real question. Superseded the same day by the decision that a library is
+server-side.
 
 THE FLASHING SAVE TICK ON BASICS (SUPERSEDED 1 September 2026) — a green
 "✓ Saved" that appeared for 2.5 seconds when Save Overview was pressed and
@@ -857,6 +1105,13 @@ reading the corridor's own slots and reporting "Placed N of N".
 SINGLE FILE ARCHITECTURE (locked 26 May, SUPERSEDED August 2026) —
 replaced by CORRIDOR PLUS POCKETS. The single file survives only as the
 stitched index.html output.
+
+THE OLD RESEARCH & REFERENCE SCREEN (SUPERSEDED August 2026) — built in
+the old single-file index.html: list on the left, a form on the right with
+Title and Type, web search attached. The rebuild replaced it and no
+pockets/research.html was ever made. Recorded here so a future session
+does not go looking for it. THE NEW ONE IS A POCKET FROM SCRATCH, NOT A
+REPAIR, and its job is different — see THE IMPORT.
 
 PLOT MAPPING — DROPPED (locked 11 June, SUPERSEDED 15 August 2026) —
 REVERSED: the Plot Mapper exists, it is the screen that was the Synopsis,
