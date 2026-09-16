@@ -1,10 +1,9 @@
 File: inkyswot/future.md
-Last updated: 31 August 2026 — rewritten clean. The CONTINUITY LIBRARY
-entry from 15 August has been REACHED AGAIN from a different direction and
-is now much better specified. The SPELL CHECKER entry has changed
-substantially: its hard part is solved. THE DESK and THE EVENT PLANNER
-have moved out of here into current-state.md, being designed rather than
-merely imagined.
+Last updated: 16 September 2026 — rewritten clean. THE SERIES BIBLE IMPORT
+HAS MOVED OUT OF THIS FILE: it is being built, as THE IMPORT, and its
+write-up is in current-state.md. The CONTINUITY LIBRARY's open question is
+answered. Several entries gain a note now that the platform has a real
+file store behind it.
 
 FUTURE IDEAS — NOT LOCKED — TO DISCUSS
 Logged possibilities, not on the current build list. Nothing here is a
@@ -16,7 +15,8 @@ other four. See the lock in locked-decisions.md.
 ================================================================
 THE CONTINUITY LIBRARY — upload a finished book
 Conceived 15 August 2026. REACHED AGAIN INDEPENDENTLY 31 August 2026,
-from the humaniser conversation. NOT STARTED. Needs step two to exist.
+from the humaniser conversation. AND A THIRD TIME 16 SEPTEMBER, from the
+import. NOT STARTED. Needs step two to exist.
 ================================================================
 
 KEV'S ORIGINAL FRAMING (15 August): "I have written a book and want to
@@ -30,12 +30,18 @@ having started from a "humaniser" for AI prose and worked backwards:
 the writing. EG: Bill has dark hair in book one and I give him blond in
 another."
 
-THAT SECOND FRAMING IS THE BETTER ONE AND SHOULD GOVERN THE BUILD. The
-same idea arrived at twice, two weeks apart, from different directions —
-which is about as strong a signal as a solo project gets.
+AND ON 16 SEPTEMBER IT ARRIVED A THIRD TIME, no longer as an idea but as a
+thing he actually wants to do this week: Rapscallion book one finished,
+book two half written, and a request to put book one into the platform.
+THE SAME IDEA REACHED THREE TIMES FROM THREE DIRECTIONS IN A MONTH is
+about as strong a signal as a solo project gets. IT IS NO LONGER A FUTURE
+IDEA IN ANY MEANINGFUL SENSE — the front half of it is being built. What
+remains here is the CHECKING, which is the half that needs the factual
+layer.
 
-WHERE IT BELONGS: THE LIBRARY, not the Plot Mapper. It is a SOURCE the
-whole project reads from, not a screen the writer works on.
+WHERE IT BELONGS: THE LIBRARY, not the Plot Mapper. CONFIRMED 16 SEPTEMBER
+when the import's home was decided on exactly this reasoning. It is a
+SOURCE the whole project reads from, not a screen the writer works on.
 
 IT IS TWO THINGS WEARING ONE COAT.
 
@@ -55,7 +61,7 @@ IT IS TWO THINGS WEARING ONE COAT.
    MEANS IT IS DOWNSTREAM OF STEP TWO, not a separate build.
    AN INCOMPLETE BOOK IS FINE FOR THIS. For style an unfinished draft is
    a problem; for facts it is not. A half-written book contributes the
-   facts it contains.
+   facts it contains — WHICH IS PRECISELY KEV'S SITUATION WITH BOOK TWO.
    And it delivers ADA AS CONTINUITY-GUARD: "written with long hair, but
    his record says short." She invents nothing. She holds the writer to
    what they already wrote. This is also the CONFLICT DETECTION half of
@@ -85,44 +91,22 @@ writer's to publish. A sequel to a book still in copyright can be written
 privately but NOT published without the estate's permission. Worth saying
 at the point of upload — a writer could put six months into one without
 realising.
+NOTE 16 SEPTEMBER: THIS IS THE SAME DOOR AS THE BOUNDARY QUESTION. The
+point of upload is where both belong: whose book is this, and what are you
+intending to do with it. One quiet note at one moment, covering both.
 
 THE MACHINERY IS SHARED. FOUR separate items need the same thing — a way
-to take an uploaded manuscript and read it: this, the SERIES BIBLE IMPORT
-for Research & Reference (raised 25 August), the PUBLIC PRESS, and the
+to take an uploaded manuscript and read it: this, the IMPORT (formerly the
+series bible import — NOW BEING BUILT), the PUBLIC PRESS, and the
 post-launch AI INFERENCE FROM AN IMPORTED MANUSCRIPT. Build one and the
 others are nearly free.
-THE OPEN QUESTION ACROSS ALL FOUR: whether the writer confirms extracted
-data before it lands in Characters, or whether it lands and is corrected.
-
-================================================================
-THE SERIES BIBLE IMPORT — teaching Ada your own voice
-Raised 25 August 2026. NOT BUILT. Deserves its own session.
-================================================================
-
-WHAT IT IS. The writer uploads THEIR OWN FINISHED BOOKS into Research &
-Reference, and the platform reads them — both for continuity (names,
-places, events) and as a reference for the writer's own voice.
-
-WHY IT IS THE STRONGEST PROAUTHORIST THING ON THE PLATFORM, and it should
-be named as such: IT IS THE WRITER TEACHING ADA THEIR OWN VOICE FROM THEIR
-OWN BOOKS. That is not the AI imposing a style. It is the exact opposite.
-
-THE BOUNDARY, AND IT NEEDS DECIDING BEFORE IT IS BUILT RATHER THAN AFTER.
-The writer's own books — absolutely. SOMEONE ELSE'S BOOKS UPLOADED IN
-ORDER TO WRITE LIKE THEM IS A DIFFERENT THING ENTIRELY. Take a position on
-it before somebody does it.
-
-A HARD LIMIT WORTH KNOWING NOW. Ada cannot read a whole novel every time
-Prompt is pressed. STYLE REFERENCE HAS TO BE A DISTILLED THING — a sense
-of the writer's sentences, their rhythms, how they handle dialogue — NOT
-THE BOOK ITSELF. Whatever is built must produce that distillation once and
-carry it, rather than re-reading.
-
-THE OPEN QUESTION THAT DECIDES THE SHAPE: when a book goes in, DOES THE
-WRITER CONFIRM WHAT GETS EXTRACTED BEFORE IT LANDS IN CHARACTERS — OR DOES
-IT JUST APPEAR? The same question governs the continuity library, the
-public Press and the post-launch import inference, and it should be
-answered once for all four.
+*** AND THE FIRST OF THE FOUR IS NOW BEING BUILT. Whatever the import does
+about file formats, chapter finding and reading a book in one pass, the
+other three inherit. Build it as though all four depended on it, because
+they do. ***
+THE OPEN QUESTION THAT RAN ACROSS ALL FOUR IS NOW ANSWERED: THE WRITER
+CONFIRMS. Nothing lands in Characters until it has been seen and ticked.
+See the muster in current-state.md and the lock in locked-decisions.md.
 
 ================================================================
 THE STYLE METER — new, 31 August 2026. NOT STARTED.
@@ -167,9 +151,28 @@ THIS IS THE STYLE / READABILITY TOOL the checker's specification sort
 deliberately kept OUT of the punctuation checker. Sentence length was
 removed from the punctuation rules on 28 August and belongs here.
 
+A HARD LIMIT CARRIED OVER FROM THE SERIES BIBLE ENTRY, and it applies to
+any style work: ADA CANNOT READ A WHOLE NOVEL EVERY TIME PROMPT IS
+PRESSED. Style reference must be A DISTILLED THING — the sense of the
+sentences, the rhythms, the handling of dialogue — produced once and
+carried, never the book itself. THE IMPORT'S READ IS WHERE THAT
+DISTILLATION WOULD BE MADE, if it is ever wanted.
+
 ================================================================
 DELIVERED OR SUBSTANTIALLY CHANGED SINCE THIS FILE WAS LAST WRITTEN
 ================================================================
+
+THE SERIES BIBLE IMPORT — MOVED OUT OF THIS FILE (16 September). It is
+being built, as THE IMPORT, and it turned out to be a different thing from
+what it had been called. Full write-up in current-state.md; six stages,
+and the muster is the one that matters.
+WHAT IT KEPT FROM THE ENTRY THAT USED TO SIT HERE: the framing worth
+keeping, which is that it is THE WRITER TEACHING ADA THEIR OWN VOICE FROM
+THEIR OWN BOOKS — not the AI imposing a style but the exact opposite, and
+arguably the strongest Proauthorist thing on the platform.
+WHAT REMAINS OPEN AND CAME WITH IT: THE BOUNDARY. The writer's own books,
+yes. Someone else's uploaded in order to write like them is a different
+thing entirely. Raised twice now and deliberately settled neither time.
 
 INKYSWOT'S OWN SPELL CHECKER — THE HARD PART IS NOW SOLVED (28 August)
 The entry as written on 15 August described the overlay technique — "an
@@ -187,6 +190,10 @@ dictionary that lives WITH THE PROJECT so a character's name is never
 flagged again. The reason it matters is unchanged and worth restating:
 for a dyslexic writer, constant false flags on your own proper nouns
 train you to ignore the underlines entirely, which defeats the purpose.
+NOTE 16 SEPTEMBER: THE IMPORT IS THE FASTEST ROUTE TO A FULL PERSONAL
+DICTIONARY THERE HAS EVER BEEN. A book read for its characters and places
+is a project's proper nouns arriving in one go, already spelled the way
+the writer spells them.
 
 SMART ENTITY ASSIGNMENT / HOT-KEY TAGGING — LARGELY BUILT (15 August)
 The 8 June seed was: highlight a word, hit a key, assign it as Character /
@@ -194,8 +201,7 @@ Location / etc. That is now the Plot Mapper's F2.
 WHAT WAS BUILT, against what was specced:
   · Write freely, then a hot key catches the phrase — YES, F2.
   · Extending a partial catch — YES, and better than specced: the
-    selection GROWS OUT TO WHOLE WORDS by itself. No selection mode, no
-    escape route, nothing to learn.
+    selection GROWS OUT TO WHOLE WORDS by itself.
   · A menu offering the TYPE — YES, all sixteen sections in four columns.
   · A record is a THING, not a string: one CANONICAL name + ALIASES —
     YES. This is ALSO CALLED.
@@ -203,13 +209,16 @@ WHAT WAS BUILT, against what was specced:
     suggested aliases appear as faint dashed pills the writer accepts or
     sets aside, and a rejected one goes quiet without being lost.
   · A QUIET MARK in the prose — YES, a dashed line beneath in family
-    colour, with a Details switch. Does not rely on colour alone.
+    colour, with a Details switch.
 WHAT IS NOT BUILT YET:
   · Picking an EXISTING record from a list. F2 always makes a new card.
   · The database filling ITSELF as you write.
-  · Ada-assisted offers when AI is on. (Ada is not connected to that
-    screen at all — see thinking.md.)
+  · Ada-assisted offers when AI is on.
 All three need the entity store — step two.
+NOTE 16 SEPTEMBER: "PICKING AN EXISTING RECORD" HAS JUST BECOME MORE
+IMPORTANT. Once a book has been imported, a project already HAS a cast
+before the writer types a word — so F2 making a new card every time would
+start producing duplicates of characters that are already there.
 
 STICKIES — BUILT as THE QUICK-NOTE (17 June 2026). A locked, built
 component awaiting wiring.
@@ -239,14 +248,25 @@ Full voice interaction — conversational speech in and out, beyond the
 current Read Aloud. Braille support. Multi-voice audiobook production.
 Radio play production with multiple cast voices. AI voice profiles for
 characters.
+NOTE 16 SEPTEMBER: THE AUDIO ONES NOW HAVE SOMEWHERE TO LIVE. Supabase's
+file store holds any file — audio, video, images — so audiobook and radio
+play output is no longer blocked on "where would it go". Only on being
+built. WORTH CHECKING ON THE DAY: the maximum size for a single uploaded
+file, which is generous but is the one limit a long audio file might meet.
 
 PLATFORM — FUTURE FEATURES
 Six-tone time-of-day theme system — designed, not built.
-Scrivener .scriv importer — Phase 2 priority.
-World Anvil JSON import.
+Scrivener .scriv importer — Phase 2 priority. NOTE: this is the same
+family as the import. A .scriv file is a folder of text plus metadata, so
+it is a WAY IN rather than a new machine — stage 2 of the import's six,
+wearing a different coat.
+World Anvil JSON import. Same note.
 AI inference from an imported manuscript — pre-filling setup fields. See
 the shared machinery note above.
-Collaborative editing with live cursors.
+Collaborative editing with live cursors. NOTE 16 SEPTEMBER: this was
+impossible while everything lived in one browser. With a server behind the
+platform it becomes merely hard. Not a reason to build it; a reason to
+know it is no longer barred.
 
 EMOTIONAL MAP AS A LITERAL MAP
 The DCW Emotional Map curve expands into a cartographic view of a
@@ -263,8 +283,12 @@ remote control, styled like a TV remote. Moveable. Theatrical.
 RICHER CHARACTER FIELDS — banked from the dropped face-generator idea.
 NOTE (31 August): THIS HAS COME BACK AS A LIVE JOB, from a different
 direction. The cards need a FACTUAL LAYER beneath their prose fields for
-the continuity check to work at all. See thinking.md — it is no longer a
-future nicety.
+the continuity check to work at all.
+NOTE (16 SEPTEMBER): AND NOW FROM A THIRD DIRECTION. The import needs
+somewhere to put the facts it extracts, and long prose fields throw away
+exactly the structure that made them worth extracting. THE FACTUAL LAYER
+IS THE IMPORT'S TARGET. See thinking.md — it is well past being a future
+nicety.
 
 PLATFORM — FUTURE PRODUCTS
 Newspaper / magazine platform — separate product.
@@ -289,17 +313,26 @@ THE BIG IDEAS — the ones nobody else is offering
    afternoon, not forty years. THE LEXICON IS THE PERSONAL DICTIONARY, so
    this and the spell checker are one idea. With the footnote mechanism
    for invented speech, and LANGUAGE PACKS as a product.
-3. THE CONTINUITY LIBRARY — above.
+3. THE CONTINUITY LIBRARY — above. Its front half is being built.
 4. THE CHECKER — a punctuation checker whose text never leaves the
    machine. Built to Build 12; see current-state.md. It belongs on this
    list because "your manuscript never leaves your computer" is a claim
    Grammarly structurally cannot make.
+   NOTE 16 SEPTEMBER: MOVING THE PLATFORM'S STORE TO SUPABASE DOES NOT
+   WEAKEN THIS, but it does make the wording matter. The claim is about
+   the CHECKER — what it is handed is checked in the browser and goes
+   nowhere. It is not a claim about where the manuscript is stored. KEEP
+   THE TWO APART IN EVERY SENTENCE WRITTEN ABOUT IT, because blurring
+   them would be easy and would cost more than it gained.
 
 ALL FOUR DRAW FROM THE SAME WELL: A PROJECT THAT KNOWS ITS OWN PROPER
 NOUNS. The spell checker needs it. The language creator fills it. The
 continuity library reads it. The checker's learning list is the same
 shape — the writer's own corrections, remembered against this project.
-WHICHEVER IS BUILT FIRST SHOULD BUILD THAT WELL PROPERLY.
+AND A FIFTH ROAD ARRIVED 16 SEPTEMBER: THE IMPORT FILLS THE WELL IN ONE
+GO, from a book the writer has already written.
+WHICHEVER IS BUILT FIRST SHOULD BUILD THAT WELL PROPERLY — and the import
+now looks like being the one that does.
 
 ================================================================
 CONSIDERED AND DROPPED (kept so it is not re-proposed)
@@ -319,3 +352,13 @@ turned round rather than dropped. The measurements are worth having; the
 purpose was not. It became THE STYLE METER above. Kev's own position
 settled it: he would declare the collaboration either way, so there was
 never anything to disguise.
+
+A SCHEDULED KEEP-ALIVE PING TO SUPABASE — considered 16 September and set
+aside. Free projects pause after seven days of inactivity, and a timed
+ping from Vercel would keep one awake. It cannot come from inside InkySwot
+(the app only runs when a browser has it open, and the problem is
+precisely the weeks when nobody opens it), and it works against the terms
+of the free tier rather than within them. KEV'S ANSWER REPLACED IT: a
+reminder to HIM to open the platform, which is real use and needs no
+disguise. THE PRINCIPLE IS WORTH MORE THAN THE CASE — A NUDGE TO THE
+WRITER, YES; A THING PRETENDING TO BE THE WRITER, NO.
