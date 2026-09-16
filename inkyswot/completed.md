@@ -1,6 +1,7 @@
 File: inkyswot/completed.md
-Last updated: 1 September 2026 — entries for 1 September added at the foot.
-Earlier lines are unchanged.
+Last updated: 16 September 2026 — entries for 16 September added at the
+foot, AND four 1 September milestones that were done AFTER that session's
+write-up and so never reached this file. Earlier lines are unchanged.
 
 Database restructured — InkySwot content redistributed into nine files — 24 May 2026.
 Pricing locked — £9.95/month, £99.50/year, no free tier, 14-day money back — 24 May 2026.
@@ -199,6 +200,9 @@ confirms extracted data before it lands in Characters. One hard limit
 already known: style reference must be a DISTILLED thing, produced once
 and carried, because Ada cannot read a whole novel every time Prompt is
 pressed — 25 August 2026.
+[BOTH QUESTIONS REACHED 16 SEPTEMBER. The confirmation one is CLOSED —
+the writer always confirms. The boundary one was raised again and
+deliberately left open. See below.]
 
 THE EVENT PLANNER / MURDER PLANNER designed — zero hour as the one fixed
 point, OFFSETS AS THE TRUTH with clock time as a derived coat, multiple
@@ -347,3 +351,168 @@ the row reading "Saved · 14:32", gold, updating on every save and present
 all the time rather than flashing.
 Still to look at: whether "equal" after the first visit means both
 outlined (as built) or something else — 1 September 2026.
+
+--- 1 SEPTEMBER 2026, RECORDED LATE ---
+*** THESE FOUR WERE DONE AFTER THAT SESSION'S WRITE-UP AND SO NEVER
+REACHED THIS FILE. Found and added 16 September. THE LESSON IS NOT THE
+SESSION-END RULE, WHICH WAS FOLLOWED — it is that a session can carry on
+after the files are brought current, and whatever happens next is written
+nowhere. IF WORK CONTINUES AFTER THE WRITE-UP, THE WRITE-UP IS NOT
+FINISHED. ***
+
+PERMANENT IDS ADDED TO CHAPTERS AND SCENES in pockets/plot-mapper.html, so
+that written prose can attach to a SCENE rather than to a position that
+shifts the moment content is rearranged. The Wheel depends on this, and so
+does the import's landing. Published live — 1 September 2026.
+
+THE DUPLICATE "PLOT MAPPING" ITEM DELETED from the NAVIGATE section of
+corridor.html. It pointed at Coming Soon while the real Plot Mapper was
+live under DCW — two items, similar names, one working, and a writer would
+have tried the more prominent one first. Published live — 1 September 2026.
+
+A PASTE HANDLER ADDED TO THE PLOT MAPPER, so text pasted from Word or a
+PDF arrives as plain ink in the screen's own colour, paragraphs preserved
+and inline formatting stripped. Black text on a dark screen is not a
+styling preference; it is text the writer cannot read. Published live —
+1 September 2026.
+
+THE MAN WHO LEARNT TO FLY PUT INTO THE PLOT MAPPER — book one of a series,
+and THE FIRST REAL BOOK EVER HELD BY THE PLATFORM. Everything before it
+was demo data or Wind in the Willows — 1 September 2026.
+
+A STATIC STILL AGREED FOR A REVISED MY PROJECTS CARD — three underlined
+link-style doors at the foot of each card (Basics, Plot Mapper,
+Manuscript), a bin icon in the top corner replacing the Trash pill, equal
+card heights with the strap line as the flexible row, and steel blue
+#7a9bd0 as the hover colour on active doors. NOT BUILT INTO THE LIVE
+SCREEN — 1 September 2026.
+
+--- 16 SEPTEMBER 2026 ---
+[The gap from 1 to 16 September was illness. No work happened in it.]
+
+*** THE PLATFORM LEFT THE BROWSER — the largest architectural decision
+since the rebuild began. ***
+
+THE STORAGE CEILING FOUND BY READING THE CORRIDOR. Everything InkySwot
+holds lives in ONE localStorage item called "is-projects" — every project,
+character, location, building, chapter and the whole plotMapper record in
+a single lump of text, held only by Chrome on one machine. Three
+consequences, all read from the file rather than assumed: the box is about
+5MB and a 90,000-word novel is roughly half of one; every keystroke
+rewrites the whole lump, so a novel in the record would be re-saved on
+every letter typed anywhere; and saveProjects calls localStorage.setItem
+BARE, so a full box fails in complete silence. That last is a live fault
+in the code today and the third time the same silent-failure pattern has
+been found in this project — 16 September 2026.
+
+THE DECISION THAT FOLLOWED, AND IT WAS KEV'S. "Two books is going to be
+too limiting. When we talk about a library it has to be just that." A
+library that holds two books is not a library, and the browser holds two
+books. THE LIBRARY IS SERVER-SIDE, and with it, in time, the platform.
+Three options weighed — Vercel's own storage, Cloudflare R2 and Supabase —
+and SUPABASE CHOSEN because it does storage and logins in one job rather
+than two, and InkySwot needs logins before it can take a penny from
+anyone — 16 September 2026.
+
+THE SUPABASE ACCOUNT CREATED AND STANDING READY. Organisation PITCH DARK
+STUDIOS (Personal, Free), project INKYSWOT, West Europe (London),
+eu-west-2, signed in through GitHub OAuth on PitchDarkPress with
+user:email scope only. Database password generated and saved outside the
+browser. Status Healthy; Advisor found no issues.
+THREE SECURITY SETTINGS CHOSEN DELIBERATELY: Data API ON, automatically
+expose new tables OFF (Supabase's own recommendation — it would open every
+new table to the world by default), and automatic Row Level Security ON,
+which is the rule that stops one writer reading another's book.
+NOTHING IS CONNECTED. InkySwot still reads and writes localStorage and
+knows nothing about Supabase. The connection is the next job and it is
+INFRASTRUCTURE, NOT A POCKET — 16 September 2026.
+
+THE PRICING CHECKED TWICE against Supabase's own documentation, because
+Kev asked for a second check rather than risk a rabbit hole. PRO IS $25 A
+MONTH PER ORGANISATION — not per project and not per user — covering every
+subscriber InkySwot ever has, with 8GB database, 100GB file storage and
+100,000 monthly active users. A spend cap is on by default. Claude's first
+answer carried "per project" as a live doubt and was wrong; Supabase's
+billing documentation is explicit, and the per-project claim is named in
+several write-ups as the commonest error made about Supabase —
+16 September 2026.
+
+THE PAUSING QUESTION SETTLED, AND A PRINCIPLE CAME OUT OF IT. Free
+projects pause after seven days of inactivity. A scheduled keep-alive ping
+was considered and set aside: it cannot come from inside InkySwot, and it
+works against the terms rather than within them. KEV'S ANSWER: Vercel
+reminds him to open the platform, and he opens it — real use, needing no
+disguise. THE PRINCIPLE: A NUDGE TO THE WRITER, YES; A THING PRETENDING TO
+BE THE WRITER, NO — 16 September 2026.
+
+*** THE IMPORT CONCEIVED — and the finding was that it is not the screen
+anybody thought it was. ***
+
+Kev asked where to put THE ADVENTURES OF A. RAPSCALLION so it could serve
+as a reference while he writes THE FURTHER ADVENTURES OF A. RAPSCALLION,
+book two, currently half finished. Claude assumed Research & Reference.
+KEV MEANT SOMETHING ELSE ENTIRELY: "the first thing would be to auto fill
+all the locations characters etc." THAT IS AN IMPORT, NOT A REFERENCE
+CARD — a finished novel in a Title-and-Type form is a book in a filing
+card.
+AND KEV ADDED THE EASIEST PART OF THE WHOLE JOB: a part-finished book
+should have its chapters noticed and put into the Plot Mapper. Chapter
+headings are visible in the text itself, so this needs NO AI AT ALL, costs
+nothing, and is more reliable than anything the AI does.
+IT LIVES IN THE LIBRARY, on Kev's reasoning rather than Claude's. Claude
+argued for the foot of Basics; Kev asked "what if I want to add stories by
+other people for style and tone?" — and the moment the shelf holds
+anything but your own previous books it is a reference collection.
+THE SIX STAGES AGREED: the room, the way in, the chapter split, the read,
+the muster, the landing. THE MUSTER IS THE ONE THAT MATTERS — nothing
+lands in the writer's screens until the writer has seen it and ticked it.
+Which closes the question left open on 25 August — 16 September 2026.
+
+THE BUDDY SYSTEM NAMED, and it is the clearest thing said about the
+platform so far. Kev, on what "learns by watching" actually means: "I
+watch my wife and she watches me. It's the 'buddy system'." Two people who
+know each other's work, each keeping an eye out for the other, NEITHER IN
+CHARGE. Claude had read "watching" as one-way and was corrected. IT CUTS
+BOTH WAYS: if the platform is a buddy rather than an observer, the writer
+watches it as closely as it watches them, so everything it does must be
+visible, correctable and reversible. That is Proauthorism stated as a
+working relationship rather than as a declaration, and it is the reason
+the muster exists — 16 September 2026.
+
+"POWER ASSISTED" ARRIVED AS THE SHARPEST FORMULATION YET of what InkySwot
+is. Kev: "A platform that thinks like the individual writer BUT power
+assisted." A steering analogy — the driver still steers, the assistance
+only makes the turn easier, and the car never decides where to go. It
+names the mechanism rather than merely declaring the policy, which is what
+"AI welcome, AI optional, always writer-led" does — 16 September 2026.
+
+BUILD FOR ONE USER LOCKED as a working rule. Kev: "ALWAYS picture me as
+the ONLY user… I am probably going to be the most difficult customer for
+the platform, so if it works for me then all else follows." Prompt caps,
+per-user costs and allowances are off the table until the platform works
+for him. The one exception, and the reason the Supabase decision could not
+wait: a limit of the machine is not a business decision — 16 September 2026.
+
+AND THE DECISION THAT CHANGED THE DIRECTION OF THE WHOLE PROJECT. Kev:
+"we are building something based on theory. I think that now is the time
+to start using it and see where that takes the build." THE BUILD LIST NOW
+COMES FROM USE, NOT FROM THE DATABASE FILES. Where the two disagree, use
+wins. The consequence was named out loud rather than left to drift: under
+"fix before we move on", only a thing that actually BLOCKS the work stops
+the day — 16 September 2026.
+
+A CORRECTION, THE THIRD OF ITS KIND. Claude stated that the Cast and World
+screens had never been brought into the rebuild and that an import would
+have nowhere to land. Wrong — Characters is a live working screen, as are
+Relationships, Factions, Language, Locations, Buildings, Objects and Rules
+& Lore. ONE CLICK FROM KEV SETTLED IT IN SECONDS. The file is the truth,
+a screenshot is not a source for diagnosis, and NEITHER IS MEMORY —
+16 September 2026.
+
+THE CONDENSING METHOD AGREED. These files are now too long. Shorten by AGE
+AND SETTLEDNESS, never by cutting detail: a thing built, working and
+undisputed keeps its filename, its shape in a few lines and its traps; a
+thing still open keeps every word. THE TRAPS AND THE
+SETTLED-DO-NOT-REOPEN BLOCKS ARE NEVER SHORTENED. Splitting is the other
+answer. The pass is its own session and was deliberately not done today —
+16 September 2026.
