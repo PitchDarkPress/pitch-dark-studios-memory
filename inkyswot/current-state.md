@@ -1,7 +1,14 @@
 File: inkyswot/current-state.md
-Last updated: 1 September 2026 — the WHEEL now has a section of its own,
-written from the file rather than from memory, and the BASICS section
-carries its new foot. Everything else is unchanged from 31 August.
+Last updated: 16 September 2026 — THE PLATFORM IS LEAVING THE BROWSER.
+A new section at the head of this file records the storage ceiling found
+in the corridor, the decision that followed, and the Supabase account now
+standing ready. THE IMPORT has a section of its own. The Library section
+and the order of work are both amended. Everything else is unchanged from
+1 September.
+
+THE GAP FROM 1 TO 16 SEPTEMBER WAS ILLNESS, NOT NEGLECT. No work happened
+in it, so nothing was lost and no lesson is owed. This is recorded only so
+a future session does not read the fortnight as a second slippage.
 
 THE GAP THAT PROMPTED THE 31 AUGUST REWRITE. All five database files had
 been last written on 15 August. Between then and 31 August a fortnight of
@@ -12,7 +19,8 @@ been filled from the session record. Kev, honestly: "I have been slack on
 updating these files and have now been caught out."
 
 THE RULE THAT COMES OUT OF IT IS NOW LOCKED — UPDATE THE DATABASE AT THE
-END OF EVERY SESSION. See locked-decisions.md. Held to on 1 September.
+END OF EVERY SESSION. See locked-decisions.md. Held to on 1 September and
+on 16 September.
 
 ================================================================
 *** SESSION-END REMINDER — READ THIS FIRST, EVERY SESSION ***
@@ -44,6 +52,262 @@ opened without anyone able to say what state the largest missing piece was
 in. WHEN A THING IS BUILT, ITS FILENAME GOES IN THE FILE.
 
 IF A SESSION ENDS ABRUPTLY, the next one begins by writing up the last.
+
+NOTE 16 SEPTEMBER — THESE FILES ARE NOW TOO LONG. Much of the length is
+finished work described at the length it needed while it was still being
+decided. A CONDENSING PASS IS ITS OWN SESSION, and the method is agreed:
+shorten by AGE AND SETTLEDNESS, never by cutting detail. A thing built,
+working and undisputed keeps its filename, its shape in a few lines, and
+its traps; the reasoning that got there has done its job. A thing still
+open keeps every word. TWO THINGS ARE NEVER SHORTENED: the traps (the
+Grammarly trap, the Enclosure warning, the publishing minute) because each
+one cost an hour and would cost it again; and anything marked
+settled-do-not-reopen, such as the Proauthorism argument, which exists
+precisely so a future session cannot reopen it. SPLITTING IS THE OTHER
+ANSWER — the checker alone justifies a file of its own, as the nine files
+of May were split.
+
+================================================================
+*** THE PLATFORM IS LEAVING THE BROWSER (16 September 2026) ***
+THE LARGEST ARCHITECTURAL DECISION SINCE THE REBUILD BEGAN.
+Account created and standing ready. NOTHING IS CONNECTED YET.
+================================================================
+
+--- WHAT THE CODE ACTUALLY DOES TODAY, READ FROM corridor.html ---
+
+EVERYTHING LIVES IN THE BROWSER AND NOWHERE ELSE. getProjects and
+saveProjects read and write ONE localStorage item called "is-projects".
+Every project, every character, location, building, faction, chapter, and
+the whole plotMapper record sit inside that single lump of text. There is
+no server, no account, no login. The projects exist because Chrome on that
+machine is holding them. CLEAR THE BROWSER DATA AND THE LOT IS GONE.
+
+THREE CONSEQUENCES, ALL FOUND BY READING THE FILE:
+
+1. THE BOX IS ABOUT 5MB. A 90,000-word novel as plain text is roughly half
+   a megabyte. One book survives. A LIBRARY DOES NOT.
+
+2. EVERY KEYSTROKE REWRITES THE WHOLE LUMP. autoSave fetches all projects,
+   alters one, writes them all back — on every oninput. Harmless with form
+   fields. With a novel in the same lump, every letter typed anywhere
+   re-saves the entire book.
+
+3. *** saveProjects HAS NO ERROR HANDLING AND FAILS SILENTLY. ***
+   localStorage.setItem is called bare. When the box is full the write
+   simply does not happen and NOTHING TELLS THE WRITER. This is a LIVE
+   FAULT IN THE CODE TODAY, not merely an argument for moving. It is the
+   exact opposite of the Enclosure lesson and of the Basics standing save
+   line: A SAVE THAT CAN FAIL QUIETLY MUST SAY SO.
+
+--- THE DECISION, AND KEV'S REASONING ---
+
+KEV: "Two books is going to be too limiting. When we talk about a library
+it has to be just that." AND: "I want, if possible, to avoid local
+storage. That said there will have to be an upper limit that when reached
+triggers a cost increase."
+
+A REAL LIBRARY NEEDS A SERVER. Storing books in the browser was only ever
+a way of dodging the real answer. And this was always coming: YOU CANNOT
+SELL A SUBSCRIPTION TO A PLATFORM THAT KEEPS EVERY WRITER'S NOVEL IN THEIR
+OWN BROWSER CACHE. The library merely brought it forward.
+
+--- WHY SUPABASE, OVER THE ALTERNATIVES ---
+
+Three were weighed. VERCEL'S OWN STORAGE: already on Vercel, simplest to
+wire, but does less, needs something separate for logins, dearer as it
+grows. CLOUDFLARE R2: cheapest by a distance for large files with no
+egress charge, but files only — no database, no logins, bolted onto
+something else. SUPABASE: database and file store in one, WITH LOGINS,
+which InkySwot needs before it can take a penny from anyone. DOING
+STORAGE AND LOGINS AS ONE JOB RATHER THAN TWO IS THE WHOLE ARGUMENT.
+It was also the intended direction back in May.
+
+--- WHAT WAS SET UP, 16 SEPTEMBER ---
+
+  Organisation:  PITCH DARK STUDIOS  (Personal, Free plan)
+  Project:       INKYSWOT
+  Region:        West Europe (London), eu-west-2
+  Signed in via: GitHub OAuth on the PitchDarkPress account
+  Scope granted: user:email ONLY — read-only access to email addresses.
+                 No repository access. Revoke at
+                 github.com/settings/connections/applications
+  Database password: GENERATED AND SAVED BY KEV OUTSIDE THE BROWSER.
+                 Supabase will not show it again.
+  Status on creation: Healthy. Advisor found no security, performance or
+                 health issues.
+
+THREE SECURITY SETTINGS, CHOSEN DELIBERATELY AT CREATION:
+  · ENABLE DATA API — ON. This is how InkySwot talks to the database from
+    the browser. Without it nothing works.
+  · AUTOMATICALLY EXPOSE NEW TABLES — OFF. Supabase's own note recommends
+    disabling it. It would open every new table to the outside world by
+    default. THESE ARE WRITERS' NOVELS.
+  · ENABLE AUTOMATIC RLS — ON. Row Level Security on every new table in
+    the public schema. RLS is the rule that says a person sees only their
+    own rows — THE THING THAT STOPS ONE WRITER READING ANOTHER'S BOOK.
+    Automatic means it cannot be forgotten.
+
+--- THE PRICING, CHECKED TWICE AND CONFIRMED ---
+
+FREE PLAN: two active projects, 500MB database, 1GB file storage, 50,000
+monthly active users. Egress is reported as either 5GB or 500MB depending
+on source — READ IT OFF SUPABASE'S OWN PAGE WHEN IT MATTERS. 1GB of file
+storage is around two thousand novels: ample for building.
+THE ONE CATCH: FREE PROJECTS ARE PAUSED AFTER SEVEN DAYS OF INACTIVITY.
+Nothing is deleted; it restarts from the dashboard. Fine while building,
+no good once anyone depends on it.
+
+PRO: $25/month PER ORGANISATION — *** NOT PER PROJECT, AND NOT PER USER
+*** — covering every subscriber InkySwot ever has. Includes 8GB database,
+100GB file storage, 250GB egress, 100,000 monthly active users, daily
+backups, no inactivity pause, and a $10 compute credit covering one Micro
+instance. A SPEND CAP IS ON BY DEFAULT, so runaway usage cannot quietly
+produce a large bill. Beyond 100GB, file storage is about 2p per GB —
+which is where Kev's cost-trigger idea belongs, and it is years away.
+A SECOND PROJECT in the same organisation adds about $10 of compute, NOT
+another $25 of plan fee.
+CLAUDE WAS WRONG FIRST TIME and reported "$25 per project" as a live
+doubt. Supabase's own billing documentation is explicit that billing is
+per organisation. Several pricing write-ups name the per-project claim as
+the commonest error made about Supabase.
+
+THE PLAN: BUILD AND TEST ON FREE, SWITCH TO PRO WHEN IT GOES LIVE.
+Nothing is rebuilt at that point — it is a switch on the account.
+
+--- THE PAUSING QUESTION, AND WHAT WAS DECIDED ---
+
+Kev opens InkySwot most days, so the seven-day pause may never bite. ONCE
+THE APP IS WIRED UP, OPENING IT IS ITSELF THE ACTIVITY — loading the
+projects is a request to the database and the clock resets. TODAY IT IS
+NOT, because InkySwot does not talk to Supabase yet.
+
+A SCHEDULED KEEP-ALIVE FROM VERCEL WAS CONSIDERED AND SET ASIDE. It cannot
+come from inside InkySwot, because the app only runs when a browser has it
+open and the whole problem is the weeks when nobody opens it. And a
+keep-alive ping works against the terms of the free tier rather than
+within them. KEV'S BETTER ANSWER: Vercel reminds HIM to open the platform,
+and he opens it. That is real use and needs no disguise.
+SETTLED, AND WORTH KEEPING AS A PRINCIPLE: A NUDGE TO THE WRITER, YES. A
+THING PRETENDING TO BE THE WRITER, NO. Building something designed to look
+unlike what it is adds no benefit and is the only part that would sit
+awkwardly.
+AND THE DASHBOARD SETTLES IT BY OBSERVATION rather than by argument — it
+reports when the project last saw activity.
+
+--- WHAT SUPABASE HOLDS ---
+
+TWO STORES WORKING TOGETHER. The DATABASE (Postgres) holds structured
+text — projects, characters, locations, chapters. The FILE STORE holds
+actual files and does not care what they are: images, audio, video, PDFs,
+Word documents. So the Library's IMAGES screen has a home, and so does
+anything sound-related later.
+A BOOK WILL PROBABLY LIVE IN BOTH — the uploaded file kept as the
+original, the text pulled out of it for the app to work with.
+TO CHECK ON THE DAY: the maximum size for a single uploaded file, which
+differs between free and paid. Generous, and a novel or a photograph is
+nowhere near it, but worth checking against a long audio file.
+
+--- WHERE THIS LEAVES THE PLATFORM ---
+
+NOTHING IS CONNECTED. InkySwot still reads and writes localStorage and
+knows nothing about Supabase. The account is a place for the library to
+live, and that is all it is today.
+THE NEXT JOB IS THE CONNECTION ITSELF, and it is INFRASTRUCTURE, NOT A
+POCKET — the first thing hit in this rebuild that cannot be done by
+writing a screen. It has to be done carefully or it loses work.
+KEV: "Let's go slow."
+
+================================================================
+*** THE IMPORT — CONCEIVED 16 SEPTEMBER. NOT BUILT. ***
+NOT Research & Reference. A DIFFERENT THING, and knowing that is the
+finding.
+================================================================
+
+WHAT KEV ASKED FOR. He has written THE ADVENTURES OF A. RAPSCALLION and
+is half way through THE FURTHER ADVENTURES OF A. RAPSCALLION, book two of
+the series. He wants book one in InkySwot as a reference for book two.
+
+AND WHAT HE ACTUALLY MEANT, which is not what Claude first assumed:
+"THE FIRST THING WOULD BE TO AUTO FILL ALL THE LOCATIONS CHARACTERS ETC."
+Hand it the book; it goes through and fills the screens. THAT IS AN
+IMPORT, NOT A REFERENCE CARD. The old Research & Reference fields — Title,
+Type, a link — were built for notes about sources. A FINISHED NOVEL IN A
+TITLE-AND-TYPE FORM IS A BOOK IN A FILING CARD.
+
+PLUS, KEV'S OWN ADDITION AND THE EASIEST PART OF THE WHOLE JOB: when a
+part-finished book is added, IT SHOULD NOTICE THE CHAPTERS AND PUT THEM
+INTO THE PLOT MAPPER. Chapter headings are visible in the text itself, so
+finding them NEEDS NO AI AT ALL, costs nothing, and is more reliable than
+anything the AI does. PROBABLY THE FIRST THING BUILT, NOT THE LAST.
+
+WHERE IT LIVES — THE LIBRARY, AND KEV'S REASON IS THE GOOD ONE. Claude
+argued for the foot of Basics, as a beginning-of-project act. KEV: "what
+if I want to add stories by other people for style and tone?" THE MOMENT
+THE SHELF HOLDS ANYTHING BUT YOUR OWN PREVIOUS BOOKS IT IS A REFERENCE
+COLLECTION, AND A REFERENCE COLLECTION LIVES IN THE LIBRARY. Material
+must not arrive in one room and live in another.
+
+A FLAG RAISED ONCE AND LEFT FOR KEV TO DECIDE, NOT BUILT AROUND. Pulling
+in his own Rapscallion is uncomplicated — his book, his world, his voice.
+SOMEONE ELSE'S NOVEL USED TO TEACH THE PLATFORM A STYLE is a different
+matter, legally and in terms of what InkySwot says it stands for. "Always
+writer-led" is strong precisely because it means the writer's OWN voice,
+and a feature that absorbs another author's is the first thing a sceptical
+writer would point at. NOT SETTLED. To be decided deliberately rather than
+arrived at by accident.
+
+--- THE RUN, IN ORDER ---
+  0. THE SHELF — now Supabase, not a localStorage key. Superseded by the
+     decision above before it was ever built.
+  1. THE ROOM — pockets/research.html replaces the Coming Soon. Lists
+     what is on the shelf, allows removal. STATIC STILL FIRST.
+  2. THE WAY IN — a file picker. PLAIN TEXT FIRST; Word and PDF are
+     packed formats needing extra machinery and can follow.
+  3. THE CHAPTER SPLIT — find the headings, build the Plot Mapper's
+     chapters. No AI. Cheapest and most reliable part.
+  4. THE READ — the book through the AI for cast and locations. ONE PASS,
+     front to back, delivered in sections because the reply comes back in
+     pieces. IT IS NOT FORTY READINGS OF THE SAME BOOK. Claude described
+     it badly first time and Kev was right to push back.
+  5. THE MUSTER — everything found shown as a list to go through and
+     tick. NOTHING LANDS IN THE SCREENS UNTIL THE WRITER SAYS SO.
+  6. THE LANDING — ticked items become real records in Characters,
+     Locations and Buildings.
+
+THE MUSTER IS THE BUDDY SYSTEM AT THE DESK. It shows what it found, the
+writer corrects it, it takes the correction. It does not get to decide
+quietly that the innkeeper is a minor character. See locked-decisions.md.
+
+--- COST, AND WHY IT IS PARKED ---
+Haiku is $1.00 per million input tokens and $5.00 per million output. A
+90,000-word novel is roughly 120,000 tokens in. READING AN ENTIRE NOVEL
+COSTS ABOUT 15p. The 20-a-day prompt cap is not a cost ceiling; it is a
+guard in the code.
+CLAUDE'S VIEW, NOT YET RULED ON: the import should not touch the prompt
+counter at all. A prompt is the writer asking for a suggestion; an import
+is one job done once on a book. COUNTING IT AS FORTY PROMPTS WOULD PUNISH
+SOMEONE FOR DOING THE THING YOU MOST WANT THEM TO DO. It should have its
+own allowance.
+BUT ALL OF THIS IS PARKED BY KEV'S RULE BELOW.
+
+================================================================
+*** BUILD FOR ONE USER — KEV'S RULE, 16 SEPTEMBER ***
+================================================================
+
+KEV: "ALWAYS picture me as the ONLY user. Therefore questions on prompts
+and their cost are void. Once we have the platform sorted for me only then
+do we add the cost/benefits equation into the mix and go from there. The
+reason I say this is that I am probably going to be the most difficult
+customer for the platform, so if it works for me then all else follows."
+
+PROMPT CAPS, PER-USER COSTS AND ALLOWANCES ARE OFF THE TABLE until the
+platform works for him. If the import needs to read a book forty times to
+get it right, it reads it forty times.
+
+THE ONE EXCEPTION, AND IT IS WHY THE SUPABASE DECISION COULD NOT WAIT:
+A STORAGE CEILING IS A LIMIT OF THE MACHINE, NOT A BUSINESS DECISION. Kev
+as a single user hits 5MB with two books just as surely as three thousand
+writers would. "Will the book fit" is not a cost question.
 
 ================================================================
 *** THE WHEEL / MANUSCRIPT — STANDALONE, NOT A POCKET ***
@@ -412,6 +676,14 @@ NOTE 1 SEPTEMBER: that plotMapper record is now doing a second job. It is
 how the Basics screen knows whether a project has been to the Plot Mapper,
 which decides the emphasis on its foot buttons. No new flag was added.
 
+NOTE 16 SEPTEMBER: permanent IDs were added to chapters and scenes on
+1 September so the Wheel can attach prose to a SCENE rather than a
+position that shifts when content is rearranged. A paste handler was also
+added, so text pasted from Word or a PDF arrives as plain ink in the
+screen's own colour, paragraphs preserved and inline formatting stripped.
+Kev put THE MAN WHO LEARNT TO FLY, book one of a series, into the Plot
+Mapper on that day — THE FIRST REAL BOOK IN THE PLATFORM.
+
 WHAT THE SCREEN DOES (unchanged from the 15 August build, confirmed live):
 one continuous document, prose never boxed or retyped · F2 as the one key
 · selections growing out to whole words · the dashed gold hairline break
@@ -434,7 +706,9 @@ STILL TO DO ON THE PLOT MAPPER:
    August, and still to be solved WITH step two, not after.
 2. CARDS DO NOT REACH CHARACTERS. Making Mole does not put him anywhere.
    Step two, and the real work. THE WHEEL'S SCENE MENU DEPENDS ON THIS —
-   until it is built, that menu is empty.
+   until it is built, that menu is empty. NOTE 16 SEPTEMBER: THE IMPORT
+   NEEDS THE SAME JOIN. Its stage 6 lands records in Characters and
+   Locations, which is the same road from the other end.
 3. Ada's buttons.
 4. THE CROSSING TO THE WHEEL. The Plot Mapper already carries "Edit in
    Basics →" at the top right of its header. That is the pattern; the
@@ -474,6 +748,9 @@ what it did and say so. The same thinking later produced the checker's
 that never ran look identical otherwise. AND ON 1 SEPTEMBER the same
 thinking was turned toward the writer: an unreported save is a silent
 success, and looks exactly like no save at all.
+AND ON 16 SEPTEMBER THE SAME FAULT WAS FOUND IN THE CORRIDOR ITSELF —
+saveProjects writes to localStorage with no check and fails silently when
+the box is full. THREE TIMES NOW. IT IS THE HOUSE FAULT.
 
 ================================================================
 *** THE DESK — CONCEIVED AND SETTLED IN SHAPE (25 August 2026) ***
@@ -695,11 +972,12 @@ BACK AND FORTH between the Plot Mapper and the Wheel. Basics and
 Publishing are one-way gates at either end; THE PLOT MAPPER AND THE WHEEL
 ARE A PAIR.
 
-WHERE THE FLOW STANDS AT 1 SEPTEMBER:
-  1. BASICS — live, and as of today it POINTS FORWARD. Was a dead end.
-  2. PLOT MAPPER — live, and it saves.
+WHERE THE FLOW STANDS AT 16 SEPTEMBER:
+  1. BASICS — live, and it POINTS FORWARD. Was a dead end.
+  2. PLOT MAPPER — live, and it saves. Holds one real book.
   3. WHEEL / MANUSCRIPT — still not in the platform. Read and assessed
-     today; the conversion is the next job.
+     1 September; the conversion was the next job and is now BEHIND THE
+     SUPABASE CONNECTION.
   4. PUBLISHING PREPARATION — Coming Soon, none of the four built.
   5. PUBLISH — Coming Soon.
 
@@ -720,6 +998,15 @@ CLAUDE ALSO DIAGNOSED THE MENU TWICE FROM SCREENSHOTS AND WAS WRONG BOTH
 TIMES, because the screenshots were of two different screens and neither
 was the source. THE FILE IS THE TRUTH. And index.html is the OUTPUT —
 corridor.html is where the menu lives and where a menu fix belongs.
+
+A THIRD CORRECTION, 16 SEPTEMBER, THE SAME FAULT AGAIN. Claude stated
+that the Cast and World screens had not been brought across into the
+rebuild and that an import would have nowhere to land. WRONG. Characters
+is a real, working screen with a list, an + Add button and a record in it;
+so are Relationships, Factions, Language, Locations, Buildings, Objects
+and Rules & Lore. All sixteen pockets are in the repository and stitched.
+CLAUDE ASSERTED THE STATE OF THE PLATFORM FROM MEMORY INSTEAD OF ASKING
+FOR ONE CLICK. The one click settled it in seconds.
 
 ================================================================
 *** BASICS (OVERVIEW) — GENRE RANGES, THE THREE GUIDES, AND NOW THE
@@ -790,6 +1077,13 @@ FIXED IN TWO PARTS:
    The corridor's saveProjectHeader still drives the old element; the
    pocket hides it and reports through one door instead.
 
+NOTE 16 SEPTEMBER, AND IT IS AN UNCOMFORTABLE ONE: that standing line
+reports that a save was ATTEMPTED, not that it SUCCEEDED. It is driven by
+wrapping autoSave, and autoSave calls saveProjects, which has no error
+handling. IF localStorage IS FULL THE LINE STILL SAYS "Saved · 14:32".
+The screen the platform trusts most is currently capable of lying to the
+writer. TO BE FIXED WITH THE SUPABASE CONNECTION, OR SOONER.
+
 --- THE REST OF THE SCREEN, UNCHANGED ---
 
 THE GENRE DROPDOWN carries each format's INDUSTRY WORD-COUNT RANGE,
@@ -834,11 +1128,11 @@ unresolved Basics / Overview / Front Matter question.
 
 ================================================================
 *** THE SIDEBAR — LIVE (11 August 2026) ***
-File: corridor.html. Confirmed against the live file 1 September.
+File: corridor.html. Confirmed against the live file 16 September.
 ================================================================
 
 AS BUILT IN THE LIVE CORRIDOR:
-  NAVIGATE  My Projects · The Press · Plot Mapping
+  NAVIGATE  My Projects · The Press
   PROJECT   Basics, then
     STORY    Plot Threads · Subplots · Themes & Motifs · Events & Timeline
     PEOPLE   Characters · Relationships · Factions & Orgs · Language &
@@ -849,20 +1143,18 @@ AS BUILT IN THE LIVE CORRIDOR:
   HELP      Tutorial · Manual · FAQs · What's New
   TRASH
 
-TWELVE ITEMS POINT AT COMING SOON: The Press, Plot Mapping, Research &
-Reference, Notes, Images, Sandbox, Manuscript, Publish, and the four Help
-items.
+ELEVEN ITEMS POINT AT COMING SOON: The Press, Research & Reference, Notes,
+Images, Sandbox, Manuscript, Publish, and the four Help items.
+
+THE DUPLICATE "PLOT MAPPING" UNDER NAVIGATE WAS DELETED on 1 September.
+It was a dead end while the real Plot Mapper was live under DCW — two
+items, similar names, one working, and a writer would have tried the more
+prominent one first. CLOSED.
 
 FOR JOB TWO, TWO CORRIDOR CHANGES ARE NEEDED AND NO MORE: nav-manuscript
 currently calls showScreen('coming-soon','Manuscript') and must point at
 the new pocket, and THERE IS NO POCKET:manuscript SLOT — one must be
-added. Both were confirmed by reading the live file.
-
-NOTE — "PLOT MAPPING" UNDER NAVIGATE IS A DEAD END while the real Plot
-Mapper is live under DCW. Two items, similar names, one working. A writer
-would try the more prominent one first. WORTH RESOLVING — and the corridor
-has to be open for Job Two anyway, so do it then, along with the sizing
-sweep.
+added. Both confirmed by reading the live file.
 
 SYNOPSIS HAS GONE FROM STORY (15 August) — it was this screen under
 another name, and it is now DCW > Plot Mapper.
@@ -888,7 +1180,7 @@ PitchDarkPress/inkyswot-rebuild (private):
     relationships · rules · subplots · themes · treatment
   test/
 INDEX.HTML IS THE OUTPUT, NOT A SOURCE. Never edit it as though it were.
-NO manuscript POCKET YET. That is Job Two.
+NO manuscript POCKET YET. NO research POCKET YET.
 
 ================================================================
 *** SPELL CHECK — FIXED PLATFORM-WIDE · LIVE (11 August 2026) ***
@@ -933,6 +1225,9 @@ see the checker above and the continuity library in future.md. A project
 that knows its own proper nouns serves the spell checker, the language
 creator, the continuity guard AND the checker's learning list alike.
 FOUR FEATURES, ONE WELL.
+AND A FIFTH ROAD TO THE SAME WELL, 16 SEPTEMBER: THE IMPORT. A book read
+for its characters and locations is a project's proper nouns arriving in
+one go.
 ================================================================
 
 1. INKYSWOT'S OWN SPELL CHECKER
@@ -979,14 +1274,30 @@ tap-to-reveal.
 Build the engine once, sell the languages forever.
 
 ================================================================
-*** THE LIBRARY — DESIGNED, UNRESOLVED ***
+*** THE LIBRARY — THE SHAPE IS NOW DECIDED (16 September 2026) ***
 ================================================================
 
-SETTLED: folders are FIXED and platform-provided, NO "NEW FOLDER" BUTTON —
-the writer never makes a filing decision, so there is nothing to tidy.
-Sub-folders mirror the sidebar sections. An entry is filed in a sub-folder
-AND may optionally NAME the location or character it is about, so it
-appears on that record's screen too. Sandbox is not Library.
+*** IT IS SERVER-SIDE. Decided 16 September. See the Supabase section at
+the head of this file. Kev: "Two books is going to be too limiting. When
+we talk about a library it has to be just that." A library that holds two
+books is not a library, and the browser holds two books. ***
+
+AND IT IS WHERE THE IMPORT LIVES — Kev's reasoning, and it is the right
+one: the shelf will hold more than his own previous books, and the moment
+it does, it is a reference collection. See THE IMPORT above.
+
+SETTLED PREVIOUSLY, AND UNCHANGED: folders are FIXED and
+platform-provided, NO "NEW FOLDER" BUTTON — the writer never makes a
+filing decision, so there is nothing to tidy. Sub-folders mirror the
+sidebar sections. An entry is filed in a sub-folder AND may optionally
+NAME the location or character it is about, so it appears on that record's
+screen too. Sandbox is not Library.
+
+THE ROOM DESIGN FROM REBUILD-5, DRAWN AND AGREED BUT NEVER BUILT: click
+Library and the room shows three rows — Research & Reference, Notes,
+Images — each with an arrow running rightwards to its folders, and those
+folders opening in turn. Not a tree down the left with a panel beside it.
+A ROW PER SECTION, GROWING RIGHTWARDS.
 
 REJECTED: shelves of book spines; a filing drawer of hanging files; a tree
 of coloured pills. Then a folder icon and a stack of three folders seen
@@ -995,6 +1306,12 @@ front-on. Then: "forget it and we will just carry on."
 THE INSIGHT WORTH KEEPING is Kev's own: "Damn we already have it." Every
 screen is already list-on-the-left, detail-on-the-right. Never followed to
 its end, and it should be.
+
+THE OLD RESEARCH & REFERENCE SCREEN, FOR THE RECORD. It was built in the
+old single-file index.html — list on the left, a form on the right with
+Title and Type, web search attached. THAT BUILD IS THE ONE THE REBUILD
+REPLACED. There is no pockets/research.html. The nav item points at Coming
+Soon. THIS IS A NEW POCKET FROM SCRATCH, NOT A REPAIR.
 
 THE CONTINUITY LIBRARY belongs here when built. NOTE (31 August): Kev
 arrived at the same idea again from a different direction — see thinking.md.
@@ -1040,6 +1357,15 @@ Plot grouping. Bring it into line with the sixteen sections when next
 touched.
 
 ================================================================
+*** MY PROJECTS CARD — STATIC STILL AGREED (1 September 2026) ***
+NOT BUILT INTO THE LIVE SCREEN.
+================================================================
+Three underlined link-style doors at the foot of every card — BASICS ·
+PLOT MAPPER · MANUSCRIPT. A bin icon in the top corner replacing the old
+Trash pill. Cards of equal height with the strap line as the flexible row.
+STEEL BLUE #7a9bd0 as the hover colour on active doors.
+
+================================================================
 *** HOUSE STYLE — LOCKED ***
 ================================================================
 #0a0806 near-black · #0f0d0a background · #c9923a gold · #e8b060 bright
@@ -1050,6 +1376,7 @@ Light/dark toggle platform-wide.
 GOLD MARKS ANYTHING ALIVE AND RESPONDING. NEVER DECORATIVE.
 Track colour families: People #cf7f57 · World #5fa898 · Story #c9923a ·
 Library #9a8f72.
+Steel blue #7a9bd0 — hover on the My Projects card doors (1 September).
 
 FROM 15 AUGUST:
 - A CONTROL THAT CHANGES ITS WORDING MUST NOT CHANGE ITS SIZE.
@@ -1075,25 +1402,47 @@ FROM 1 SEPTEMBER (from the Basics foot):
 - EVERY DOOR OFF A SCREEN SAVES BEFORE IT OPENS, backwards as well as
   forwards.
 
+FROM 16 SEPTEMBER:
+- A SAVE IS ONLY REPORTED WHEN IT HAS ACTUALLY SUCCEEDED. Reporting an
+  attempt is worse than reporting nothing, because the writer then trusts
+  it. Wrapping a save in nothing and announcing it is how a platform lies.
+- NOTHING THE PLATFORM FINDS LANDS IN THE WRITER'S WORK UNTIL THE WRITER
+  HAS SEEN IT AND SAID SO. The muster, not the silent fill.
+
 ================================================================
-*** SUGGESTED ORDER OF WORK ***
+*** SUGGESTED ORDER OF WORK — REORDERED 16 SEPTEMBER ***
 ================================================================
-1. JOB TWO — THE WHEEL INTO THE PLATFORM. Strip the June file to its
+0. *** THE SUPABASE CONNECTION. *** New, and it comes first because
+   everything after it changes shape depending on how it is done. The
+   account is ready; nothing is wired. INFRASTRUCTURE, NOT A POCKET.
+   Slowly, one step at a time, and it must not lose existing work.
+   Fix the silent saveProjects failure as part of it, or before it.
+1. THE IMPORT, in its six stages — the room, the way in, the chapter
+   split, the read, the muster, the landing. Rapscallion is waiting.
+2. JOB TWO — THE WHEEL INTO THE PLATFORM. Strip the June file to its
    middle column, point it at a real project, make it a pocket, add the
-   slot, repoint nav-manuscript. THE CORRIDOR IS OPEN ANYWAY, so settle
-   the Plot Mapping dead end and do the sizing sweep while it is in hand.
-2. JOB THREE — THE CROSSING, both ways, in the same place on both
+   slot, repoint nav-manuscript. THE CORRIDOR IS OPEN ANYWAY, so do the
+   sizing sweep while it is in hand.
+3. JOB THREE — THE CROSSING, both ways, in the same place on both
    screens, matching "Edit in Basics →".
-3. STEP TWO OF THE PLOT MAPPER — the cards writing into the same store
-   Characters, Locations and the rest read from. THE REAL WORK, and the
-   continuity library depends on it. SOLVE THE VANISHING TINTS AS PART OF
-   IT, not after. The Wheel's scene menu stays empty until this is done.
-4. Ada's buttons on the Plot Mapper.
-5. THE CHECKER — the queries, then the learning list, then spelling, then
+4. STEP TWO OF THE PLOT MAPPER — the cards writing into the same store
+   Characters, Locations and the rest read from. THE REAL WORK, and both
+   the continuity library and the import's landing depend on it. SOLVE
+   THE VANISHING TINTS AS PART OF IT, not after. The Wheel's scene menu
+   stays empty until this is done.
+5. Ada's buttons on the Plot Mapper.
+6. THE CHECKER — the queries, then the learning list, then spelling, then
    into the platform.
-6. THE CARDS — the factual layer under the prose fields (see thinking.md).
-7. Then the Library, the five rooms, and the theatre pass.
+7. THE CARDS — the factual layer under the prose fields (see thinking.md).
+8. Then the Library rooms, the five group headings, and the theatre pass.
+9. THE CONDENSING PASS on these five files. Its own session.
 
 Kev's own words, still true: "We will have to make and remake this page
 until it is right." Expect several passes. That is the plan, not a failure
 of it.
+
+AND KEV'S NEW ONE, 16 SEPTEMBER, WHICH CHANGED THE DIRECTION OF THE
+WHOLE PROJECT: "This all seems very complicated… we are building
+something based on theory. I think that now is the time to start using it
+and see where that takes the build." THE BUILD LIST NOW COMES FROM USE,
+NOT FROM THIS FILE. Where the two disagree, USE WINS.
