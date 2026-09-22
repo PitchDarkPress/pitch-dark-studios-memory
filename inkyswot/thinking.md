@@ -1,9 +1,19 @@
 File: inkyswot/thinking.md
-Last updated: 16 September 2026 — rewritten clean. THE SUPABASE
-CONNECTION is now the live thread and the Wheel has moved down behind it.
-THE IMPORT is a new thread. The Plot Mapping dead end is closed. The
-series bible import's confirm question is answered and its boundary
-question is not. A new fault — the silent save — is open and urgent.
+Last updated: 22 September 2026. Covers the previous session, whose date
+was not recorded, written up at the start of this one.
+NOT REWRITTEN CLEAN THIS TIME, though that is this file's usual rule. Kev:
+"dont lose anything yet." Every word of the 16 September version is kept;
+what changed is written beside it, dated. THE SILENT SAVE IS FIXED. What
+moves to Supabase is decided FOR NOW — the library alone. THE IMPORT HAS
+CHANGED PURPOSE and is still being built on. The factual layer is now its
+own file with three questions open.
+
+*** THE SUPABASE WORK IS SUBJECT TO CHANGE ***
+Kev, 22 September: "I have no idea how things will work on Supabase and
+until then I can't nail things down." Everything below about the library,
+the shelf, the import and the check is A WORKING IDEA. Where something is
+marked decided, read it as decided for now. Build small, show Kev, let
+what he sees decide.
 
 This is the LIVE-IDEAS file (overwrite). Settled things belong in
 locked-decisions.md; build state belongs in current-state.md.
@@ -17,7 +27,7 @@ after that session's files were brought current, and reached no file until
 a fortnight later.
 
 ================================================================
-SECTION A — OPEN NOW (16 September 2026)
+SECTION A — OPEN NOW (16 September 2026, updated 22 September)
 ================================================================
 
 --- THE SUPABASE CONNECTION — THE LIVE THREAD, AND JOB ZERO ---
@@ -50,7 +60,52 @@ WHAT IS NOT YET DECIDED, AND ALL OF IT NEEDS DECIDING BEFORE ANY CODE:
 THE ONE THING THAT SHOULD HAPPEN FIRST, WHATEVER ELSE IS DECIDED: FIX THE
 SILENT SAVE. See below.
 
+UPDATED 22 SEPTEMBER — WHAT HAPPENED TO THE FOUR QUESTIONS ABOVE.
+They were put to Kev as a list. KEV: "To be completely honest I am not
+sure I know the answers to any of those questions!!" THAT WAS A FAULT IN
+THE ASKING. Two of the four were engineering questions dressed up as
+decisions for him; only two were genuinely his.
+· QUESTION 1, WHAT MOVES FIRST — KEV'S, AND ANSWERED FOR NOW: "we move as
+  little as possible. That way as we move forward we are not having to
+  make changes on another platform." THE LIBRARY ALONE. His reason beats
+  Claude's: the platform is still changing shape, so moving it all now
+  means building everything twice.
+· QUESTION 2, CARRYING WORK ACROSS — CLAUDE'S TO PROPOSE. Largely
+  dissolved by the answer to 1: nothing in the browser moves, so The Man
+  Who Learnt To Fly is not at risk.
+· QUESTION 3, NO NETWORK — CLAUDE'S TO PROPOSE. Much reduced: only the
+  library depends on the connection. Still to be designed for the shelf.
+· QUESTION 4, LOGINS — KEV'S, AND ANSWERED FOR NOW: "I dont mind logging
+  in." Later, once the store exists.
+
+THE SHAPE OF THE SHELF — CLAUDE'S PROPOSAL, NOT DECIDED (22 September).
+Researched against Supabase's own documentation before recommending.
+  · The ORIGINAL FILE in the file store, untouched, as the record of what
+    was handed over.
+  · A ROW PER BOOK — title, author, when it went in.
+  · A ROW PER CHAPTER — number, heading, words. THE FINDING THAT SHAPED
+    IT: one row holding 90,000 words works, but every request for a
+    paragraph pulls half a megabyte, and someone running a large document
+    system on Supabase found cells near a megabyte noticeably slower.
+    Storing by chapter matches how the platform already thinks.
+KEV'S REQUIREMENTS, WHICH ARE HIS: whatever is stored must let the
+platform pull information into the screens, and must be SEARCHABLE.
+Claude read both as pointing at chapter rows. KEV'S VERDICT ON THE SHAPE
+ITSELF: not sure — "I have no idea how things will work on Supabase and
+until then I can't nail things down." FAIR, AND RIGHT. Build a small piece,
+look at it, then decide.
+TO VERIFY ON SUPABASE'S OWN PAGES BEFORE BUILDING: the largest single file
+the free tier accepts, and whether a single text row has a ceiling worth
+respecting.
+
 --- *** THE SILENT SAVE — A LIVE FAULT, NOT A DESIGN QUESTION *** ---
+*** FIXED AND LIVE — the previous session, written up 22 September. ***
+Done first, as argued below. A save guard bolted onto the end of
+corridor.html wraps saveProjects and saveTrash; a failed save raises a
+red bar across the top that stays until a save succeeds, and never
+blocks. The Basics line now reads the guard's flag and says "NOT SAVED"
+in red rather than claiming a time. Full account in current-state.md.
+THE TEXT BELOW IS KEPT AS THE RECORD OF WHY IT MATTERED.
 
 saveProjects calls localStorage.setItem BARE. No try, no catch, no check.
 When the box is full the write does not happen AND NOTHING TELLS THE
@@ -70,6 +125,34 @@ like a pass that never ran, and now this. IT IS THE HOUSE FAULT. Worth a
 deliberate sweep for it rather than waiting to stumble on the fourth.
 
 --- THE IMPORT — THE NEW THREAD ---
+*** UPDATED 22 SEPTEMBER: ITS PURPOSE HAS CHANGED, AND IT IS STILL BEING
+BUILT ON. READ THIS FIRST, THEN THE 16 SEPTEMBER TEXT BENEATH IT. ***
+KEV CORRECTED THE FIRST SHAPE: "We DONT need ALL that info, just the
+ability to check it. so what we really need is the ability to find the
+above information and have it 'ping' the user when they get things wrong
+in the new book — IE: hair colour etc."
+THEN, ASKED WHAT THE CHECK SHOULD RUN AGAINST — BOOK ONE'S TEXT OR THE
+CHARACTERS SCREEN: "YES info should be in certain fields — characters
+being one of them. There is no point in rebuilding a character profile
+when it already exists."
+AND THEN: "We will be still building on how uploaded work is referenced."
+CLAUDE'S WORKING READING OF THOSE THREE, OFFERED AND NOT AGREED: the book
+is read once; what it finds about people lands in their cards, behind the
+muster; from then on the new book is checked against the cards rather
+than against the old text; and a disagreement pings with WHERE — "he was
+dark in chapter nine of book one" — so the writer can look, and may have
+changed it on purpose. THAT IS A PROPOSAL. It is not Kev's decision and
+it is not locked.
+WHAT KEV HAS SAID STANDS: check, not fill everything; character facts in
+character cards; still being built on.
+THE SIX STAGES BELOW WERE CLAUDE'S OUTLINE. The heading "agreed in shape"
+overstated it, and is kept only as the record.
+ONE MORE WORKING IDEA OF CLAUDE'S: the checker's parser already classifies
+CHAPTER TITLES (stage 3 of the eight). The chapter split may be mostly
+built already. Worth checking before writing anything new.
+AND IT IS THE CONTINUITY LIBRARY — described by Kev on 15 August and again
+on 31 August, and now wanted for a real book. Three arrivals, three
+directions.
 
 WHAT IT IS, AND IT IS NOT WHAT ANYONE THOUGHT. Kev has Rapscallion
 finished and book two half written, and wants book one in the platform.
@@ -263,6 +346,29 @@ work REWARDS CONSISTENCY. Pushed too hard it becomes a machine for
 stopping a writer developing. IT SHOULD BE VOLUNTARY AND OCCASIONAL,
 NEVER ALWAYS ON.
 
+UPDATED 22 SEPTEMBER — THE FACTUAL LAYER IS NOW ITS OWN FILE:
+inkyswot/factual-layer.md. A working list, not a lock.
+KEV ASKED FOR IT TO BE COMPREHENSIVE, and it now covers Characters,
+Relationships, Factions, Language & Dialogue, Locations, Buildings,
+Objects, Rules & Lore, Events, and the project as a whole — each field
+under one test: A WRONG ANSWER MUST BE CHECKABLE.
+AND KEV ADDED A NOTES SECTION ON EVERY RECORD "for things like
+preferences etc." A GOOD ADDITION: habits are checkable too — "drinks
+only tea", then coffee in book two.
+THE CHECK NOW DEPENDS ON THIS LAYER ENTIRELY, which is why it has moved up
+the order of work.
+THREE QUESTIONS WAITING FOR KEV, all in factual-layer.md:
+  1. THE NOTES SECTION. The cards already have a free prose Notes field. A
+     checker reading prose is back to guessing. Reuse it, or a SEPARATE
+     LIST of short lines, one fact each? Claude's view: the separate list.
+  2. WHICH WINS when the facts and the prose disagree. (The question
+     already open above, now carried there too.)
+  3. HOW MANY FIELDS SHOW AT ONCE. The whole list on one card is a form
+     nobody would fill in.
+ONE FIELD WORTH POINTING AT: "who knows about a thing, and from when", on
+Relationships and Events. It is the same fact the mystery plotter turns
+on. TWO TOOLS, ONE FACT.
+
 --- THE CHECKER ACROSS THE PLATFORM (31 August) ---
 
 Kev: "Why can't we apply the checker across the entire InkySwot
@@ -356,6 +462,9 @@ them that has a real job — it is where the import lives.
 
 "BASICS" vs "OVERVIEW" vs "FRONT MATTER". Still deliberately Basics. The
 screen's own title still reads "Overview" while the sidebar says Basics.
+NOTE 22 SEPTEMBER: the MISMATCH is separate from the naming question.
+Whatever it is called, it should be called one thing. A small fix, listed
+among the niggles.
 
 CONCEPTS IS OUT OF STEP — still the old Cast / World / Plot grouping.
 
@@ -372,6 +481,14 @@ THING THAT ACTUALLY BLOCKS THE WORK STOPS THE DAY. Said out loud rather
 than allowed to happen by drift — but it has not yet been tested against a
 real irritation, and the first time it is, watch whether the log becomes
 the snag list the original rule existed to prevent.
+FIRST TESTED IN THE PREVIOUS SESSION (written up 22 September). Kev,
+checking the save guard on the live screen, saw the Author and Status
+boxes out of line and asked for it fixed. It was — small, done, published
+in the same sitting. THAT IS "USE WINS" WORKING. It did not stop the day,
+and it did not become a snag list. One case is not a pattern yet.
+AND KEV'S COUNTERWEIGHT, SAID IN THE SAME SESSION: "we can't really
+progress the platform until we can start adding my work to a database."
+The niggles are cosmetic; the store is what everything else waits on.
 
 ================================================================
 SECTION B — WHAT HAPPENED TO THE 18 JUNE THINKING
@@ -412,7 +529,9 @@ SECTION C — LIVE OPEN QUESTIONS CARRIED
 ================================================================
 
 THE LIBRARY'S SHAPE — HALF ANSWERED. Settled: it is SERVER-SIDE, and it
-is where the import lives. Settled previously: folders are FIXED and
+is where the import lives. [UPDATED 22 SEPTEMBER: both for now, and it is
+the ONLY thing that moves to the server. The shelf's inner shape is
+Claude's proposal only — see Section A.] Settled previously: folders are FIXED and
 platform-provided, with no New Folder button; sub-folders mirror the
 sidebar sections; an entry may optionally name the location or character
 it is about.
@@ -526,3 +645,11 @@ RETIRED FROM THIS FILE (so nothing feels lost)
   they have seen it and said so.
 - WHERE A LIBRARY OF BOOKS CAN LIVE — closed 16 September. Not the
   browser. Supabase.
+- THE SILENT SAVE — closed in the previous session (written up
+  22 September). The save guard is live, and the Basics line reports
+  success rather than attempt. Kept in full in Section A as the record.
+- WHAT MOVES TO SUPABASE FIRST — closed FOR NOW, 22 September. The library
+  alone. Subject to change once something is built.
+- LOGINS — closed FOR NOW, 22 September. Later; Kev does not mind them.
+- THE AUTHOR AND STATUS BOXES OUT OF LINE — closed in the previous
+  session. Found by Kev in use, fixed and live.
