@@ -1,7 +1,17 @@
 File: inkyswot/current-state.md
-Last updated: 18 September 2026, written up at the start of the session
-after the work, as the rule requires when a session ends without one.
-COVERS 17 SEPTEMBER.
+Last updated: 22 September 2026.
+COVERS THE PREVIOUS SESSION, whose date was not recorded, written up at
+the start of this one as the rule requires when a session ends without a
+write-up. Its work is dated 22 September throughout — the day it was
+filed — because the day it was done is not known.
+
+*** THE DATING RULE — KEV, 22 SEPTEMBER: "always date it for the current
+day. I dont allways come back the day after." *** Claude broke it on
+first writing this update, inventing 17 and 18 September by counting
+forward from the 16th as if every session followed the one before. They
+do not. The ONLY dates in these files that can be trusted are ones read
+off something real — a screenshot, a log, a dashboard — or today's date.
+NEVER COUNT FORWARD FROM A PREVIOUS SESSION.
 BUILT AND LIVE: the silent save is fixed; the Basics saved line reports
 success rather than attempt; paired boxes on Basics line up.
 DECIDED BY KEV: move as little as possible — THE LIBRARY ALONE goes to
@@ -10,7 +20,7 @@ he wants from an uploaded book is the ability to CHECK the new book
 against it, not to fill every screen from it.
 *** NOT DECIDED, AND MARKED AS SUCH THROUGHOUT *** — the shape of the
 shelf, how uploaded work is referenced, and how the check behaves. Kev,
-18 September: "I have no idea how things will work on Supabase and until
+22 September: "I have no idea how things will work on Supabase and until
 then I can't nail things down." The first write-up of this file stated
 Claude's proposals as agreed; that was corrected the same morning.
 A new file, factual-layer.md, holds the checkable fields — a working
@@ -19,7 +29,7 @@ list, not a lock, with three questions open in it.
 ================================================================
 *** EVERYTHING ABOUT THE SUPABASE WORK IS SUBJECT TO CHANGE ***
 ================================================================
-KEV, 18 SEPTEMBER: "I have no idea how things will work on Supabase and
+KEV, 22 SEPTEMBER: "I have no idea how things will work on Supabase and
 until then I can't nail things down."
 
 THIS APPLIES TO ALL OF IT, INCLUDING WHAT IS MARKED AS DECIDED. Even "the
@@ -47,9 +57,9 @@ updating these files and have now been caught out."
 
 THE RULE THAT COMES OUT OF IT IS NOW LOCKED — UPDATE THE DATABASE AT THE
 END OF EVERY SESSION. See locked-decisions.md. Held to on 1 and
-16 September. On 17 September the session ended with Kev tired and no
-write-up; the rule's own fallback was followed — THE NEXT SESSION BEGAN BY
-WRITING UP THE LAST.
+16 September. The session after that ended with Kev tired and no
+write-up; the rule's own fallback was followed — THE NEXT SESSION, ON
+22 SEPTEMBER, BEGAN BY WRITING UP THE LAST.
 
 ================================================================
 *** SESSION-END REMINDER — READ THIS FIRST, EVERY SESSION ***
@@ -65,7 +75,7 @@ WHAT GETS WRITTEN:
   · completed.md        one line per milestone, dated
   · thinking.md         what is still open
   · future.md           anything conceived but not started
-AND ONE SPECIFICATION FILE, NEW 17 SEPTEMBER:
+AND ONE SPECIFICATION FILE, NEW 22 SEPTEMBER:
   · factual-layer.md    the checkable fields the cards need. Not rewritten
                         every session — only when the fields change.
 
@@ -103,7 +113,7 @@ ANSWER — the checker alone justifies a file of its own, as the nine files
 of May were split.
 
 ================================================================
-*** THE SILENT SAVE — FOUND 16 SEPTEMBER, FIXED AND LIVE 17 SEPTEMBER ***
+*** THE SILENT SAVE — FOUND 16 SEPTEMBER, FIXED AND LIVE 22 SEPTEMBER ***
 File: corridor.html (a self-contained block at the end of the script).
 File: pockets/project-overview.html (the saved line).
 ================================================================
@@ -181,7 +191,7 @@ ANY FILE. It is the "use wins" rule working the first time it was tested.
 
 ================================================================
 *** THE PLATFORM IS LEAVING THE BROWSER (16 September 2026) ***
-AND HOW FAR IT GOES — DECIDED 17 SEPTEMBER: THE LIBRARY ALONE.
+AND HOW FAR IT GOES — DECIDED 22 SEPTEMBER: THE LIBRARY ALONE.
 Account created and standing ready. NOTHING IS CONNECTED YET.
 ================================================================
 
@@ -205,7 +215,7 @@ THREE CONSEQUENCES, ALL FOUND BY READING THE FILE:
    re-saves the entire book.
 
 3. saveProjects HAD NO ERROR HANDLING AND FAILED SILENTLY.
-   *** FIXED 17 SEPTEMBER. See THE SILENT SAVE above. ***
+   *** FIXED 22 SEPTEMBER. See THE SILENT SAVE above. ***
 
 --- THE DECISION, AND KEV'S REASONING ---
 
@@ -219,7 +229,7 @@ a way of dodging the real answer. And this was always coming: YOU CANNOT
 SELL A SUBSCRIPTION TO A PLATFORM THAT KEEPS EVERY WRITER'S NOVEL IN THEIR
 OWN BROWSER CACHE. The library merely brought it forward.
 
---- *** WHAT MOVES — DECIDED 17 SEPTEMBER: AS LITTLE AS POSSIBLE *** ---
+--- *** WHAT MOVES — DECIDED 22 SEPTEMBER: AS LITTLE AS POSSIBLE *** ---
 
 Four questions were put to Kev before any code. HIS ANSWER, AND IT WAS
 THE RIGHT ONE: "To be completely honest I am not sure I know the answers
@@ -260,7 +270,7 @@ his.
 
 --- THE SHAPE OF THE SHELF — CLAUDE'S PROPOSAL, NOT DECIDED ---
 
-*** NOT SETTLED. *** KEV, 18 SEPTEMBER: "I have no idea how things will
+*** NOT SETTLED. *** KEV, 22 SEPTEMBER: "I have no idea how things will
 work on Supabase and until then I can't nail things down." Everything in
 this subsection is Claude's recommendation. Kev said at the time he was
 "not entirely sure", and he is right not to be: nobody knows yet how it
@@ -374,7 +384,7 @@ Kev opens InkySwot most days, so the seven-day pause may never bite. ONCE
 THE APP IS WIRED UP, OPENING IT IS ITSELF THE ACTIVITY — loading the
 library is a request to the database and the clock resets. TODAY IT IS
 NOT, because InkySwot does not talk to Supabase yet.
-NOTE 17 SEPTEMBER: with only the library moving, OPENING THE APP WILL NOT
+NOTE 22 SEPTEMBER: with only the library moving, OPENING THE APP WILL NOT
 BY ITSELF TOUCH SUPABASE unless the library is opened, or something on
 the first screen reads from it. Worth remembering when the shelf is built.
 
@@ -400,7 +410,7 @@ IT IS INFRASTRUCTURE, NOT A POCKET — the first thing hit in this rebuild
 that cannot be done by writing a screen. KEV: "Let's go slow."
 
 ================================================================
-*** THE IMPORT — RESHAPED 17 SEPTEMBER INTO A CHECK ***
+*** THE IMPORT — RESHAPED 22 SEPTEMBER INTO A CHECK ***
 Conceived 16 September. NOT BUILT. Read this section whole before
 building any of it — its purpose changed twice in one conversation, and
 the final shape is not the first one.
@@ -419,7 +429,7 @@ that some (Characters, Locations, Buildings, Objects, Factions, Events)
 are nouns that appear in the text, while others (Plot Threads, Subplots,
 Themes, Rules & Lore) are INTERPRETATIONS a machine can only guess at.
 
-SECOND SHAPE (17 September): A CHECK, NOT A FILL. KEV CORRECTED IT:
+SECOND SHAPE (22 September): A CHECK, NOT A FILL. KEV CORRECTED IT:
 "We DONT need ALL that info, just the ability to check it. so what we
 really need is the ability to find the above information and have it
 'ping' the user when they get things wrong in the new book — IE: hair
@@ -436,7 +446,7 @@ CHARACTERS SCREEN? KEV: "YES info should be in certain fields — characters
 being one of them. There is no point in rebuilding a character profile
 when it already exists."
 
-*** THE SHAPE SO FAR, 17 SEPTEMBER — STILL BEING BUILT ON ***
+*** THE SHAPE SO FAR, 22 SEPTEMBER — STILL BEING BUILT ON ***
 KEV, THE MORNING AFTER: "We will be still building on how uploaded work
 is referenced." SO THIS IS A DIRECTION, NOT A LOCK. It is recorded here
 and in thinking.md, and deliberately NOT in locked-decisions.md, because a
@@ -622,7 +632,7 @@ Wheel's writing area is a PLAIN TEXTAREA. The checker's painted marks need
 a proper writing surface and cannot work inside an ordinary text box —
 so the screen the checker most wants cannot take marks as things stand.
 Changing the writing surface later is a rebuild.
-NOTE 17 SEPTEMBER: THE CONTINUITY CHECK WILL WANT THE SAME. A ping that
+NOTE 22 SEPTEMBER: THE CONTINUITY CHECK WILL WANT THE SAME. A ping that
 points at the exact phrase in the manuscript is a painted mark. The case
 for a proper writing surface in the Wheel just doubled.
 
@@ -708,7 +718,7 @@ have marked as something else. Eight stages, in order:
 PLUS the findings plumbing: confidence threshold, severity ordering, and
 overlap resolution so three rules describing one problem produce one
 finding.
-NOTE 17 SEPTEMBER: STAGE 3 ALREADY CLASSIFIES CHAPTER TITLES. The
+NOTE 22 SEPTEMBER: STAGE 3 ALREADY CLASSIFIES CHAPTER TITLES. The
 import's chapter split may not need writing at all — the parser may
 already do most of it. WORTH CHECKING BEFORE BUILDING.
 
@@ -855,7 +865,7 @@ into three piles, kept at checker-spec-sorted.md:
 NOTE: the specification assumed the checker would eventually see the whole
 manuscript. It does not — it sees a pasted passage. A good deal of it is
 not wrong, merely aimed at a different tool.
-NOTE 17 SEPTEMBER: PILE TWO IS NOW A LIVE NEIGHBOUR. "Consistency across
+NOTE 22 SEPTEMBER: PILE TWO IS NOW A LIVE NEIGHBOUR. "Consistency across
 the whole book" is the punctuation cousin of the continuity check. When
 the continuity check is built, pile two should be looked at in the same
 light — both need the whole book, both are consistency, both ping rather
@@ -915,7 +925,7 @@ IT SAVES. The document is written onto the project in localStorage
 details switches — with currentWords and lastEdited updated. Saving is
 debounced and also fires on beforeunload. THE "NOTHING SAVES" ITEM FROM
 15 AUGUST IS CLOSED.
-NOTE 17 SEPTEMBER: IT STAYS IN THE BROWSER. Under the library-alone
+NOTE 22 SEPTEMBER: IT STAYS IN THE BROWSER. Under the library-alone
 decision the Plot Mapper does not move to Supabase. And its saves now go
 through the save guard, so a failure would raise the red bar here too.
 
@@ -954,7 +964,7 @@ STILL TO DO ON THE PLOT MAPPER:
 2. CARDS DO NOT REACH CHARACTERS. Making Mole does not put him anywhere.
    Step two, and the real work. THE WHEEL'S SCENE MENU DEPENDS ON THIS —
    until it is built, that menu is empty. NOTE 16 SEPTEMBER: THE IMPORT
-   NEEDS THE SAME JOIN. NOTE 17 SEPTEMBER: AND SO NOW DOES THE CONTINUITY
+   NEEDS THE SAME JOIN. NOTE 22 SEPTEMBER: AND SO NOW DOES THE CONTINUITY
    CHECK, which runs against the cards. Three things wait on this one
    join.
 3. Ada's buttons.
@@ -998,7 +1008,7 @@ thinking was turned toward the writer: an unreported save is a silent
 success, and looks exactly like no save at all.
 AND ON 16 SEPTEMBER THE SAME FAULT WAS FOUND IN THE CORRIDOR ITSELF —
 saveProjects writing to localStorage with no check. THREE TIMES. IT IS THE
-HOUSE FAULT. *** THE THIRD WAS FIXED 17 SEPTEMBER with the save guard. ***
+HOUSE FAULT. *** THE THIRD WAS FIXED 22 SEPTEMBER with the save guard. ***
 Worth a deliberate sweep for a fourth rather than waiting to stumble on it.
 
 ================================================================
@@ -1176,7 +1186,7 @@ WHAT IT TELLS YOU — the point of the whole thing:
   COULD have solved it. Too early and it is obvious; too late and it is a
   cheat. Nothing else tells a writer where that line is — they find out
   from a review.
-NOTE 17 SEPTEMBER: "WHO KNOWS ABOUT A THING, AND FROM WHEN" is now a
+NOTE 22 SEPTEMBER: "WHO KNOWS ABOUT A THING, AND FROM WHEN" is now a
 field in factual-layer.md, on Relationships and on Events. It is the same
 fact the mystery plotter's third question turns on. TWO TOOLS, ONE FACT.
 
@@ -1224,7 +1234,7 @@ BACK AND FORTH between the Plot Mapper and the Wheel. Basics and
 Publishing are one-way gates at either end; THE PLOT MAPPER AND THE WHEEL
 ARE A PAIR.
 
-WHERE THE FLOW STANDS AT 17 SEPTEMBER:
+WHERE THE FLOW STANDS AT 22 SEPTEMBER:
   1. BASICS — live, points forward, saves honestly, boxes line up.
   2. PLOT MAPPER — live, and it saves. Holds one real book.
   3. WHEEL / MANUSCRIPT — still not in the platform. Read and assessed
@@ -1263,7 +1273,7 @@ FOR ONE CLICK. The one click settled it in seconds.
 *** BASICS (OVERVIEW) — GENRE RANGES, THE THREE GUIDES, AND NOW THE
 *** WAY FORWARD · LIVE
 Published 12 August 2026. Foot rebuilt 1 September 2026. Saved line made
-honest and paired boxes aligned 17 September 2026.
+honest and paired boxes aligned 22 September 2026.
 File: pockets/project-overview.html
 ================================================================
 
@@ -1310,13 +1320,13 @@ NEVER SAID SO. The flashing tick was the cause, not the cure — appearing
 only when Save was pressed, it implied the other buttons did not save.
 SINCE 1 SEPTEMBER: Back to Projects saves before it leaves, and a standing
 line beneath the row reads "Saved · 14:32" in gold, present all the time.
-SINCE 17 SEPTEMBER: IT REPORTS SUCCESS, NOT ATTEMPT. It reads the save
+SINCE 22 SEPTEMBER: IT REPORTS SUCCESS, NOT ATTEMPT. It reads the save
 guard's flag first; on a failed save it reads "NOT SAVED — see the
 warning at the top of the screen" in the danger red and claims no time.
 The uncomfortable note of 16 September — that the line could lie — IS
 CLOSED.
 
---- PAIRED BOXES LINE UP — 17 SEPTEMBER ---
+--- PAIRED BOXES LINE UP — 22 SEPTEMBER ---
 
 Author and Status, and Start Date and Classification, now sit level. Each
 half of a field-row is a column with its box pushed to the foot, so a
@@ -1369,7 +1379,7 @@ called one thing. A SMALL FIX WORTH DOING.
 
 ================================================================
 *** THE SIDEBAR — LIVE (11 August 2026) ***
-File: corridor.html. Confirmed against the live file 17 September.
+File: corridor.html. Confirmed against the live file 22 September.
 ================================================================
 
 AS BUILT IN THE LIVE CORRIDOR:
@@ -1422,7 +1432,7 @@ PitchDarkPress/inkyswot-rebuild (private):
   test/
 INDEX.HTML IS THE OUTPUT, NOT A SOURCE. Never edit it as though it were.
 NO manuscript POCKET YET. NO research POCKET YET.
-LAST STITCH, 17 SEPTEMBER: corridor.html 147,527 characters, index.html
+LAST STITCH, 22 SEPTEMBER: corridor.html 147,527 characters, index.html
 347,456 characters, 16 of 16 pockets placed.
 
 THE CORRIDOR'S SCRIPT NOW ENDS WITH THREE BOLTED-ON BLOCKS, in this
@@ -1460,14 +1470,14 @@ and does not turn it back on when removed.
 NEVER press "ADD SPELL CHECK TO CORRIDOR". That button still sits in the
 Enclosure below Publish. It was how the original code was installed, and
 pressing it now would push an OLDER version back into the corridor,
-undoing this fix — AND, SINCE 17 SEPTEMBER, POSSIBLY TAKING THE SAVE
+undoing this fix — AND, SINCE 22 SEPTEMBER, POSSIBLY TAKING THE SAVE
 GUARD WITH IT.
 
 *** THE PUBLISHING RULE ***
 WAIT A FULL MINUTE between Stitch and Publish. Publishing twenty seconds
 after Stitch reads the PREVIOUS index.html and silently deploys stale
 code. Stitch's character count and Publish's character count MUST MATCH
-before a hard refresh is trusted. HELD TO TWICE ON 17 SEPTEMBER: 345,951
+before a hard refresh is trusted. HELD TO TWICE ON 22 SEPTEMBER: 345,951
 and 347,456, both matching.
 
 ================================================================
@@ -1479,7 +1489,7 @@ creator, the continuity guard AND the checker's learning list alike.
 FOUR FEATURES, ONE WELL.
 AND A FIFTH ROAD TO THE SAME WELL, 16 SEPTEMBER: THE IMPORT. A book read
 for its characters and locations is a project's proper nouns arriving in
-one go. NOTE 17 SEPTEMBER: THE FACTUAL LAYER'S CANONICAL NAME FIELD IS
+one go. NOTE 22 SEPTEMBER: THE FACTUAL LAYER'S CANONICAL NAME FIELD IS
 THE WELL, WRITTEN DOWN. One spelling per character, per place.
 ================================================================
 
@@ -1527,11 +1537,11 @@ tap-to-reveal.
 Build the engine once, sell the languages forever.
 
 ================================================================
-*** THE LIBRARY — THE SHAPE IS NOW DECIDED (16–17 September 2026) ***
+*** THE LIBRARY — THE SHAPE IS NOW DECIDED (16–22 September 2026) ***
 ================================================================
 
 *** IT IS SERVER-SIDE, AND IT IS THE ONLY THING THAT IS. Decided
-16 September; scope fixed 17 September. See the Supabase section. Kev:
+16 September; scope fixed 22 September. See the Supabase section. Kev:
 "Two books is going to be too limiting. When we talk about a library it
 has to be just that." And: "we move as little as possible." ***
 
@@ -1570,7 +1580,7 @@ Title and Type, web search attached. THAT BUILD IS THE ONE THE REBUILD
 REPLACED. There is no pockets/research.html. The nav item points at Coming
 Soon. THIS IS A NEW POCKET FROM SCRATCH, NOT A REPAIR.
 
-THE CONTINUITY LIBRARY belongs here. NOTE 17 SEPTEMBER: IT IS NOW BEING
+THE CONTINUITY LIBRARY belongs here. NOTE 22 SEPTEMBER: IT IS NOW BEING
 BUILT — it is what the import became once it was reshaped into a check.
 
 THE IMAGES ROOM HAS A NEW REASON TO EXIST. On the evening of 16 September
@@ -1668,11 +1678,11 @@ FROM 16 SEPTEMBER:
 - A SAVE IS ONLY REPORTED WHEN IT HAS ACTUALLY SUCCEEDED. Reporting an
   attempt is worse than reporting nothing, because the writer then trusts
   it. Wrapping a save in nothing and announcing it is how a platform lies.
-  BUILT 17 SEPTEMBER.
+  BUILT 22 SEPTEMBER.
 - NOTHING THE PLATFORM FINDS LANDS IN THE WRITER'S WORK UNTIL THE WRITER
   HAS SEEN IT AND SAID SO. The muster, not the silent fill.
 
-FROM 17 SEPTEMBER:
+FROM 22 SEPTEMBER:
 - TWO BOXES SIDE BY SIDE LINE UP, WHATEVER THEIR LABELS DO. The box is
   what the eye follows, so the box wins. Each half of a row is a column
   with its box pushed to the foot.
@@ -1682,10 +1692,10 @@ FROM 17 SEPTEMBER:
   "inform, never block" rule applied.)
 
 ================================================================
-*** SUGGESTED ORDER OF WORK — REORDERED 17 SEPTEMBER ***
+*** SUGGESTED ORDER OF WORK — REORDERED 22 SEPTEMBER ***
 Proposed, not ruled. USE WINS OVER THIS LIST WHEREVER THEY DISAGREE.
 ================================================================
-DONE 17 SEPTEMBER: THE SILENT SAVE. The save guard in the corridor and
+DONE 22 SEPTEMBER: THE SILENT SAVE. The save guard in the corridor and
 the honest saved line on Basics, both live.
 
 0. *** THE SHELF. *** Supabase, THE LIBRARY ALONE (Kev's decision).
@@ -1728,10 +1738,10 @@ AND KEV'S ONE FROM 16 SEPTEMBER, WHICH CHANGED THE DIRECTION OF THE
 WHOLE PROJECT: "we are building something based on theory. I think that
 now is the time to start using it and see where that takes the build."
 THE BUILD LIST NOW COMES FROM USE, NOT FROM THIS FILE. Where the two
-disagree, USE WINS. IT WAS TESTED FOR THE FIRST TIME ON 17 SEPTEMBER —
+disagree, USE WINS. IT WAS TESTED FOR THE FIRST TIME ON 22 SEPTEMBER —
 the box alignment came from Kev looking at the screen, not from any list.
 
-AND KEV'S ONE FROM 17 SEPTEMBER, WHICH IS THE SAME THOUGHT FROM THE OTHER
+AND KEV'S ONE FROM 22 SEPTEMBER, WHICH IS THE SAME THOUGHT FROM THE OTHER
 SIDE: "we can't really progress the platform until we can start adding my
 work to a database." THE NIGGLES ARE COSMETIC; THE STORE IS WHAT
 EVERYTHING ELSE WAITS ON.
