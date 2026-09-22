@@ -1,7 +1,9 @@
 File: inkyswot/completed.md
-Last updated: 16 September 2026 — entries for 16 September added at the
-foot, AND four 1 September milestones that were done AFTER that session's
-write-up and so never reached this file. Earlier lines are unchanged.
+Last updated: 22 September 2026 — entries for the previous session added
+at the foot, dated 22 September because the day that work was done was
+not recorded. Two 16 September entries carry a bracketed note where they
+were written more firmly than was decided. NOTHING ELSE IS CHANGED, AND
+NOTHING IS SHORTENED OR REMOVED.
 
 Database restructured — InkySwot content redistributed into nine files — 24 May 2026.
 Pricing locked — £9.95/month, £99.50/year, no free tier, 14-day money back — 24 May 2026.
@@ -413,6 +415,10 @@ Three options weighed — Vercel's own storage, Cloudflare R2 and Supabase —
 and SUPABASE CHOSEN because it does storage and logins in one job rather
 than two, and InkySwot needs logins before it can take a penny from
 anyone — 16 September 2026.
+[NARROWED 22 SEPTEMBER. "And with it, in time, the platform" went further
+than was decided. Kev chose to move as little as possible: ONLY THE
+LIBRARY moves to Supabase, and everything else stays in the browser for
+now. See the 22 September entries below.]
 
 THE SUPABASE ACCOUNT CREATED AND STANDING READY. Organisation PITCH DARK
 STUDIOS (Personal, Free), project INKYSWOT, West Europe (London),
@@ -467,6 +473,12 @@ THE SIX STAGES AGREED: the room, the way in, the chapter split, the read,
 the muster, the landing. THE MUSTER IS THE ONE THAT MATTERS — nothing
 lands in the writer's screens until the writer has seen it and ticked it.
 Which closes the question left open on 25 August — 16 September 2026.
+[CORRECTED 22 SEPTEMBER. "The six stages agreed" overstated it: they were
+Claude's outline, not a decision of Kev's. And the import's purpose has
+since changed — Kev: "We DONT need ALL that info, just the ability to
+check it." How uploaded work is referenced is STILL BEING BUILT ON. The
+muster — nothing lands until the writer says so — does stand, and is
+locked. See the 22 September entries below.]
 
 THE BUDDY SYSTEM NAMED, and it is the clearest thing said about the
 platform so far. Kev, on what "learns by watching" actually means: "I
@@ -516,3 +528,126 @@ thing still open keeps every word. THE TRAPS AND THE
 SETTLED-DO-NOT-REOPEN BLOCKS ARE NEVER SHORTENED. Splitting is the other
 answer. The pass is its own session and was deliberately not done today —
 16 September 2026.
+
+--- 16 SEPTEMBER 2026, RECORDED LATE ---
+*** DONE THE SAME EVENING, AFTER THAT SESSION'S WRITE-UP, SO IT REACHED NO
+FILE AT THE TIME. The rule broken the same way twice: IF WORK CONTINUES
+AFTER THE WRITE-UP, THE WRITE-UP IS NOT FINISHED. ***
+
+THE ILLUSTRATION LIBRARY RETURNED TO, AND TAKEN FURTHER. Kev brought back
+the chapter-initials idea from the August clipart conversation — black
+line-art dropped capitals and ornaments, subscriber-only. Then a new idea
+he called "a damn good idea anyway": ANY SUBSCRIBER COULD OFFER THEIR OWN
+INITIALS AND ILLUSTRATIONS TO OTHERS. Then a second: initials could be
+generated from the text of the book being written, three or four styles
+offered to choose from.
+A MARKETPLACE WAS CONSIDERED AND SET ASIDE BY KEV HIMSELF. Claude named
+what a marketplace brings — payments out, tax, disputes, refunds, a
+takedown route — and that AI-generated images may not attract copyright at
+all, which leaves unclear what a seller would be selling. KEV: "Then allow
+it all to be free. Still a draw. BUT only to InkySwot subscribers." That
+dissolves the ownership and payments problems in one move and leaves a
+SHARING LIBRARY. Still open: why a writer would contribute (credit is the
+likely answer) and how something uploaded that is not the uploader's own
+gets taken down. Recorded in future.md — 16 September 2026.
+
+--- 22 SEPTEMBER 2026 ---
+[Covers the previous session, written up at the start of this one. The day
+that work was done was not recorded, so it is dated by the day it was
+written up, under Kev's rule: "always date it for the current day."]
+
+*** THE SILENT SAVE FIXED AND LIVE — done first, before any Supabase work,
+because it was the only thing on the list that could actually lose work.
+***
+
+THE SAVE GUARD ADDED TO THE CORRIDOR. saveProjects and saveTrash had
+called localStorage.setItem bare, so a full store failed in silence. A
+self-contained block now sits at the end of corridor.html's script, after
+the spell-check and read-aloud blocks and in the same pattern. It wraps
+both save doors; a save that works shows nothing, a save that fails raises
+a red bar across the top of the screen — "YOUR WORK IS NOT BEING SAVED" —
+that stays until a save succeeds. It informs and never blocks. It sets
+window.IS_SAVE_OK for any screen to read.
+DONE AS A BOLTED-ON BLOCK RATHER THAN A WHOLE FILE, and agreed with Kev
+first: the corridor is about 147,000 characters, and retyping it whole
+risked a silent typo worse than the fault being fixed.
+The corridor was ASKED FOR FRESH rather than worked from the copy pasted
+the session before, in case anything had moved.
+Stitched 16 of 16; index.html 345,951 characters at both ends. On the live
+screen nothing visible changed — which is what success looks like —
+22 September 2026.
+
+THE BASICS SAVED LINE MADE HONEST. pockets/project-overview.html now reads
+the guard's flag before claiming anything. A good save reads
+"Saved · 14:32" in gold; a failed one reads "NOT SAVED — see the warning
+at the top of the screen" in the danger red and claims no time. Handed
+back as a whole file, three changes, nothing else touched. A SAVE IS NOW
+ONLY REPORTED WHEN IT HAS ACTUALLY SUCCEEDED — 22 September 2026.
+
+PAIRED BOXES ON BASICS LINED UP — and the first fix to come from use rather
+than from any file. Kev, checking the save guard on the live screen:
+"two boxes dont line up." The Author box sat lower than Status, because
+the Read button is added to some labels after the page loads and makes
+them taller. Asked whether the labels or the boxes should align, Kev:
+"they should line up." Each half of a field-row became a column with its
+box pushed to the foot. Start Date and Classification were fixed in the
+same stroke. index.html 347,456 characters at both ends. Kev: "all good" —
+22 September 2026.
+
+WHAT MOVES TO SUPABASE, DECIDED FOR NOW. Four questions were put to Kev.
+His answer: "To be completely honest I am not sure I know the answers to
+any of those questions!!" — which exposed that two of the four were
+engineering questions dressed up as decisions for him. The two that were
+his, he answered. WHAT MOVES: "we move as little as possible. That way as
+we move forward we are not having to make changes on another platform."
+ONLY THE LIBRARY GOES; everything else stays in the browser. His reason
+was better than Claude's: the platform is still changing shape, and moving
+it now means building everything twice. LOGINS: "I dont mind logging in."
+Later, once the store exists — 22 September 2026.
+
+THE SHAPE OF THE SHELF RESEARCHED AND PROPOSED — NOT DECIDED. Checked
+against Supabase's own documentation: the file store for the original
+upload, the database for the text, and — the finding that changed the
+proposal — not one row holding a whole book but a row per chapter. Kev
+said he was not sure, and then said why: "I have no idea how things will
+work on Supabase and until then I can't nail things down." IT STAYS A
+PROPOSAL — 22 September 2026.
+
+THE IMPORT'S PURPOSE CHANGED — and it is still being built on. Kev named
+what he needs: to pull information into the screens and to be able to
+search. Then corrected it: "We DONT need ALL that info, just the ability
+to check it … have it 'ping' the user when they get things wrong in the
+new book — IE: hair colour etc." Then: character information belongs in
+the character cards, "there is no point in rebuilding a character profile
+when it already exists." HOW THOSE FIT TOGETHER IS OPEN. Kev: "We will be
+still building on how uploaded work is referenced." It is, in essence, the
+continuity library of 15 and 31 August, arrived at a third time —
+22 September 2026.
+
+THE FACTUAL LAYER WRITTEN UP AS ITS OWN FILE — inkyswot/factual-layer.md,
+saved into the InkySwot division. The checkable fields each card needs,
+screen by screen, under one test: a wrong answer must be checkable. Hair
+colour passes; personality does not. KEV ASKED FOR IT TO BE COMPREHENSIVE,
+AND FOR A NOTES SECTION ON EVERY RECORD for preferences and habits — which
+are checkable too ("drinks only tea", then coffee in book two). Three
+questions left for Kev: whether that notes section is the existing Notes
+field or a separate list; which wins when facts and prose disagree; and
+how many fields show at once. A WORKING LIST, NOT A LOCK —
+22 September 2026.
+
+THE WRITE-UP ITSELF CORRECTED, THREE TIMES, AND ALL THREE ARE WORTH
+KEEPING.
+1. INVENTED DATES. Claude dated the previous session 17 September and the
+   write-up 18 September by counting forward from the 16th. Kev: "always
+   date it for the current day. I dont allways come back the day after."
+   Only trust a date read off something real, or today's.
+2. PROPOSALS WRITTEN AS DECISIONS. Kev: "I think you are making decisions
+   that have not been settled yet." The shelf's shape, the import's shape
+   and how the check behaves had been written up as agreed. Corrected
+   throughout, and a notice added that the Supabase work is SUBJECT TO
+   CHANGE — Kev asked for that in so many words.
+3. SHORTENING IN PASSING. Rewriting locked-decisions.md, Claude condensed
+   many existing locks without being asked. Kev: "yes please dont lose
+   anything yet." Rebuilt from his 16 September file word for word, with
+   today's changes added on top and every original line checked against
+   the new one — 22 September 2026.
