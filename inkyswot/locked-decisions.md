@@ -1,10 +1,28 @@
 File: inkyswot/locked-decisions.md
-Last updated: 16 September 2026 — ADD-ONLY update. Nine new locks from the
-16 September session are added, most of them under a new PLATFORM STORE
-block at the head of the live locks; the LIBRARY, THE IMPORT and BUILD FOR
-ONE USER are new blocks of their own. Two existing locks are EXTENDED (the
-saved line, and the sidebar). Two OPEN items are now CLOSED. Nothing has
-been deleted or moved.
+Last updated: 22 September 2026 — ADD-ONLY update. Covers the previous
+session, whose date was not recorded, written up at the start of this one.
+NOTHING HAS BEEN SHORTENED, DELETED OR MOVED except as described here.
+ADDED: five new locks, all Kev's own decisions or built and live. EXTENDED:
+several existing locks carry a dated note. AMENDED IN PLACE: the Supabase
+lock (only the library moves) and the import lock (check, not fill) — the
+original wording of both is kept exactly where it was, with the amendment
+written above or below it, so nothing is lost.
+WHAT THIS UPDATE DELIBERATELY DOES NOT DO: lock Claude's proposals. Kev,
+22 September: "I think you are making decisions that have not been
+settled yet. I have no idea how things will work on Supabase and until
+then I can't nail things down."
+
+================================================================
+*** THE SUPABASE WORK IS SUBJECT TO CHANGE — READ BEFORE ANY LOCK BELOW ***
+================================================================
+EVERY LOCK IN THE "PLATFORM STORE" AND "LIBRARY AND IMPORT" BLOCKS IS
+DECIDED FOR NOW, NOT FOR EVER. They are Kev's decisions on what he knows
+today, and he has said plainly that he cannot know how things will work
+until something is built on Supabase and he can see it. When the library
+is built and it behaves differently from what was expected, THESE LOCKS
+MOVE. That is not a failure of the lock; it is what the lock is for.
+DO NOT ARGUE FROM THESE AS THOUGH THEY WERE SETTLED. Build small, show
+Kev, let what he sees decide.
 
 NOTE ON THIS FILE
 Normally add-only. Rewritten whole when a model shift supersedes a block
@@ -30,19 +48,60 @@ AND SINCE 31 AUGUST
 
 AND SINCE 1 SEPTEMBER — THE LARGEST SHIFT SINCE THE REBUILD BEGAN
 - THE PLATFORM'S STORE IS SUPABASE. InkySwot leaves the browser.
+  AMENDED 22 SEPTEMBER: ONLY THE LIBRARY LEAVES. See below.
 - A LIBRARY IS A LIBRARY. Not two books.
 - THE IMPORT LIVES IN THE LIBRARY, and it is not Research & Reference.
 - NOTHING LANDS IN THE WRITER'S WORK UNTIL THE WRITER HAS SAID SO.
 - BUILD FOR ONE USER FIRST.
 - USE WINS OVER THE BUILD LIST.
 
+AND SINCE 16 SEPTEMBER — ALL DECIDED FOR NOW, SUBJECT TO CHANGE
+- ONLY THE LIBRARY MOVES TO SUPABASE. Everything else stays where it is.
+  Kev: "we move as little as possible."
+- LOGINS LATER. Kev does not mind logging in.
+- A SAVE IS ONLY REPORTED WHEN IT HAS SUCCEEDED — NOW BUILT AND LIVE.
+- TWO BOXES SIDE BY SIDE LINE UP.
+- DATE EVERY WRITE-UP FOR THE CURRENT DAY.
+- A PROPOSAL IS NOT A DECISION. Write it up as what it is.
+
 ================================================================
 LIVE LOCKED DECISIONS
 ================================================================
 
---- THE PLATFORM STORE (16 September 2026) ---
+--- THE PLATFORM STORE (16 September 2026, amended 22 September) ---
+*** SUBJECT TO CHANGE. See the notice at the head of this file. ***
+
+ONLY THE LIBRARY MOVES TO SUPABASE — LOCKED FOR NOW (22 September 2026)
+KEV: "My feeling is that we move as little as possible. That way as we
+move forward we are not having to make changes on another platform."
+BOOKS GO TO SUPABASE. PROJECTS, CHARACTERS, THE PLOT MAPPER AND EVERYTHING
+ELSE STAY WHERE THEY ARE, IN THE BROWSER, FOR NOW.
+KEV'S REASON IS THE ONE TO KEEP: THE PLATFORM IS STILL CHANGING SHAPE.
+The Wheel is not in, step two of the Plot Mapper is not built, the cards
+need a factual layer. Move all of it now and every one of those jobs
+becomes a job done in two places. (Claude had argued the same outcome on
+grounds of risk. Kev's ground is better.)
+THE HONEST COST, NAMED AT THE TIME: for a while a book lives on the server
+and its project lives in the browser. Two halves of one piece of work in
+two places, to be kept straight.
+THIS NARROWS THE LOCK BELOW. Its reasons for Supabase all stand. Its first
+sentence — "InkySwot leaves the browser" — no longer does: only the
+library leaves. The lock is kept in full, unaltered, as the record of the
+reasoning.
+
+LOGINS LATER — LOCKED FOR NOW (22 September 2026)
+KEV: "I dont mind logging in." Not now: once the library's store exists.
+A login means the app asks who you are before it shows anything; nothing
+else about the platform changes.
+
+NOT LOCKED, AND RECORDED HERE SO NOBODY LOCKS IT BY ACCIDENT:
+THE SHAPE OF THE SHELF. Claude proposed the original file in the file
+store, a row per book and a row per chapter. KEV WAS NOT SURE, AND SAID
+SO. It stays a proposal until something is built and he has seen it. See
+current-state.md and thinking.md.
 
 THE PLATFORM'S STORE IS SUPABASE — LOCKED (16 September 2026)
+[NARROWED 22 SEPTEMBER — only the library moves. See the lock above.]
 InkySwot leaves the browser. Everything currently lives in ONE localStorage
 item called "is-projects" — every project, character, location, building,
 chapter and the whole plotMapper record in a single lump of text, held only
@@ -119,8 +178,15 @@ drip of small irritations. Only a thing that actually BLOCKS the work
 stops the day; the rest is logged and the writing continues. This is a
 deliberate change of shape, agreed out loud rather than arrived at by
 drift.
+FIRST TESTED IN THE PREVIOUS SESSION (written up 22 September): the
+paired-boxes fix came from Kev looking at the live screen, not from any
+list.
 
---- THE LIBRARY AND THE IMPORT (16 September 2026) ---
+--- THE LIBRARY AND THE IMPORT (16 September 2026, amended 22 September) ---
+*** SUBJECT TO CHANGE. See the notice at the head of this file. ***
+KEV, 22 SEPTEMBER: "We will be still building on how uploaded work is
+referenced." SO HOW THE IMPORT WORKS IS NOT LOCKED. The locks below hold
+for now; where one describes the import's workings, it carries a note.
 
 A LIBRARY IS A LIBRARY — LOCKED (16 September 2026)
 KEV: "Two books is going to be too limiting. When we talk about a library
@@ -128,7 +194,7 @@ it has to be just that." A library that holds two books is not a library,
 and the browser holds two books. THE LIBRARY IS SERVER-SIDE. Storing books
 in the browser was only ever a way of dodging the real answer.
 
-THE IMPORT LIVES IN THE LIBRARY — LOCKED (16 September 2026)
+THE IMPORT LIVES IN THE LIBRARY — LOCKED FOR NOW (16 September 2026)
 Claude argued for the foot of Basics, as a beginning-of-project act, and
 was wrong. KEV: "what if I want to add stories by other people for style
 and tone?" THE MOMENT THE SHELF HOLDS ANYTHING BUT YOUR OWN PREVIOUS BOOKS
@@ -146,6 +212,15 @@ the text itself, so finding them costs nothing and is more reliable than
 anything the AI does. It is probably the FIRST thing built, not the last.
 THE READ IS ONE PASS, front to back, delivered in sections because the
 reply comes back in pieces. IT IS NOT FORTY READINGS OF THE SAME BOOK.
+AMENDED 22 SEPTEMBER — THE WORDING ABOVE IS KEPT AS THE RECORD, BUT PART
+OF IT NO LONGER HOLDS. "Hand it the book and it fills the screens" is not
+what Kev now wants. He corrected it: "We DONT need ALL that info, just the
+ability to check it." Then: information about characters belongs in their
+cards — "there is no point in rebuilding a character profile when it
+already exists." HOW THOSE TWO FIT TOGETHER IS STILL BEING BUILT ON, and
+is in thinking.md as a working idea, NOT here.
+AND THE CHAPTER SPLIT AND THE ONE-PASS READ ABOVE are Claude's working
+ideas about mechanics, not decisions of Kev's. They stand as ideas only.
 
 NOTHING LANDS IN THE WRITER'S WORK UNTIL THE WRITER HAS SEEN IT AND SAID
 SO — LOCKED (16 September 2026)
@@ -161,6 +236,8 @@ is a buddy rather than an observer, then the writer watches it as closely
 as it watches them, so EVERYTHING IT DOES MUST BE VISIBLE, CORRECTABLE AND
 REVERSIBLE. That is Proauthorism stated as a working relationship rather
 than as a declaration.
+NOTE 22 SEPTEMBER: THIS HOLDS HOWEVER THE IMPORT IS FINALLY SHAPED,
+because it is not really about the import — it is about the platform.
 
 SOMEONE ELSE'S NOVEL AS A STYLE SOURCE IS NOT SETTLED — RAISED, NOT
 LOCKED (16 September 2026)
@@ -171,6 +248,34 @@ for. "Always writer-led" is strong precisely because it means the writer's
 OWN voice. TO BE DECIDED DELIBERATELY RATHER THAN ARRIVED AT BY ACCIDENT.
 
 --- WORKING PRACTICE ---
+
+DATE EVERY WRITE-UP FOR THE CURRENT DAY — LOCKED (22 September 2026)
+KEV: "always date it for the current day. I dont allways come back the
+day after."
+Claude broke this on first writing up the previous session, inventing
+17 and 18 September by counting forward from the 16th as though every
+session followed the day before. They do not.
+THE ONLY DATES TO TRUST are ones read off something real — a screenshot,
+a log, a dashboard — or today's date. NEVER COUNT FORWARD FROM A PREVIOUS
+SESSION. Where the day a piece of work was done is not known, say so, and
+date it by the day it was written up.
+
+A PROPOSAL IS NOT A DECISION — LOCKED (22 September 2026)
+KEV: "I think you are making decisions that have not been settled yet."
+On first writing up the previous session, Claude recorded its own
+recommendations — the shape of the shelf, how uploaded work is referenced,
+how the check pings — as agreed, and one line said Kev had "arrived at the
+same answer" when he had only stated what the thing had to do.
+SO, IN EVERY WRITE-UP: WHAT KEV DECIDED is written as his decision, in
+his words where possible. WHAT IS BUILT AND LIVE is written as fact. WHAT
+CLAUDE PROPOSED is written as a proposal, marked as such, and kept out of
+this file. A requirement Kev states is his; the design Claude infers from
+it is not.
+AND WHERE THINGS ARE STILL BEING WORKED OUT, THE FILE SAYS THEY ARE
+SUBJECT TO CHANGE. Kev asked for that in so many words.
+AND NOTHING IS SHORTENED IN PASSING. Claude condensed many existing locks
+while rewriting this file and had to put them back. Kev: "dont lose
+anything yet." The condensing pass is its own session, agreed in advance.
 
 UPDATE THE DATABASE AT THE END OF EVERY SESSION — LOCKED (31 August 2026)
 Before a session closes, current-state.md, locked-decisions.md,
@@ -186,6 +291,12 @@ IF A SESSION ENDS ABRUPTLY, the next one begins by writing up the last.
 NOTE 16 SEPTEMBER: the 1–16 September gap was ILLNESS, not neglect. No
 work happened in it, so nothing was lost. A gap in the record is only a
 failure when work happened inside it.
+ADDED 16 SEPTEMBER: IF WORK CONTINUES AFTER THE WRITE-UP, THE WRITE-UP IS
+NOT FINISHED.
+HELD TO 22 SEPTEMBER: the previous session ended with Kev tired and no
+write-up, and this session began by writing it up.
+AND ONE SPECIFICATION FILE JOINS THE FIVE: factual-layer.md, saved as
+inkyswot/factual-layer.md. It is rewritten only when its fields change.
 
 HOW THESE FILES ARE SHORTENED — LOCKED (16 September 2026)
 They are now too long, and much of the length is finished work described
@@ -215,6 +326,13 @@ FILE DISCIPLINE — LOCKED (2 June 2026)
 When updating any .md file, rewrite the WHOLE file clean and hand it back
 complete. Never a list of patches. The .md is the single source of truth;
 the code is the truth above it.
+QUALIFIED 22 SEPTEMBER, FOR CODE ONLY: corridor.html is about 147,000
+characters. Handing it back whole means retyping every line, and a silent
+typo somewhere in the middle would be a worse fault than most it could
+fix. A SMALL CORRIDOR CHANGE MAY BE A SELF-CONTAINED BLOCK BOLTED ON AT
+THE END OF THE SCRIPT — the pattern the spell-check and read-aloud blocks
+already used, and the save guard now uses. Kev agreed it for the save
+guard. Pockets are small enough to go back whole, and still do.
 
 WORK FROM THE IMAGE / THE CODE — LOCKED (9 June 2026, reinforced 31
 August and 16 September) A screenshot from Kev IS the template — match it,
@@ -231,6 +349,9 @@ World screens had never been brought into the rebuild and that an import
 would have nowhere to land. Wrong — Characters is a live working screen,
 as are the other seven. ONE CLICK SETTLED IT IN SECONDS. When the state of
 the platform matters, ASK FOR THE CLICK OR THE FILE. Do not assert it.
+AND IN THE PREVIOUS SESSION: the corridor was asked for fresh before the
+save guard was written, even though a copy had been pasted the session
+before — "in case anything moved". That is the rule working.
 
 ABSENCE IS NOT ACCIDENT — LOCKED (31 August 2026)
 Chapters and The Treatment are stitched into index.html with no way in,
@@ -260,6 +381,9 @@ AND ON 16 SEPTEMBER THE SAME FAULT WAS FOUND IN THE CORRIDOR ITSELF:
 saveProjects writes to localStorage with no check at all. THREE TIMES NOW,
 IN THREE DIFFERENT TOOLS. IT IS THE HOUSE FAULT, and it is to be looked
 for deliberately rather than stumbled upon.
+*** THE THIRD WAS FIXED IN THE PREVIOUS SESSION (written up 22 September)
+WITH THE SAVE GUARD, AND IS LIVE. *** Worth a deliberate sweep for a
+fourth.
 
 NEVER NAME A VARIABLE history, name, location, status, top, self or
 parent — LOCKED (15 August 2026)
@@ -327,6 +451,8 @@ CORRIDOR PLUS POCKETS — THE ARCHITECTURE — LOCKED (August 2026)
   to PitchDarkPress/inkyswot-app; Vercel deploys to app.inkyswot.com.
 - INDEX.HTML IS THE OUTPUT, NOT A SOURCE.
 Private repo: PitchDarkPress/inkyswot-rebuild.
+NOTE 22 SEPTEMBER: the corridor's script now ends with three bolted-on
+blocks, in this order — SPELL CHECK, READ ALOUD, THE SAVE GUARD.
 
 A SCREEN'S OWN FURNITURE LIVES IN ITS POCKET — LOCKED (1 September 2026)
 Established by reading both files rather than assuming. The corridor holds
@@ -356,6 +482,9 @@ code. Stitch's character count and Publish's character count MUST MATCH
 before a hard refresh is trusted. NEVER press Split unless deliberately
 re-splitting a whole index.html. NEVER press "ADD SPELL CHECK TO
 CORRIDOR" — it pushes an older corridor back over the fix.
+ADDED 22 SEPTEMBER: AND IT MAY TAKE THE SAVE GUARD WITH IT.
+HELD TO TWICE IN THE PREVIOUS SESSION: 345,951 and 347,456 characters,
+both matching.
 
 --- BASICS (THE OVERVIEW SCREEN) ---
 
@@ -422,6 +551,27 @@ OF LYING TO THE WRITER.
 REPORTING AN ATTEMPT IS WORSE THAN REPORTING NOTHING, because the writer
 then trusts it. Wrapping a save in nothing and announcing it is how a
 platform lies. TO BE FIXED WITH THE SUPABASE CONNECTION, OR SOONER.
+*** BUILT AND LIVE — THE PREVIOUS SESSION, written up 22 September. ***
+Done sooner, before any Supabase work, because it was the only thing on
+the list that could actually lose work. The corridor's save guard wraps
+saveProjects and saveTrash and sets window.IS_SAVE_OK. A failed save
+raises a red bar across the top of the screen that stays until a save
+succeeds; the writer can keep working beneath it — IT INFORMS, IT NEVER
+BLOCKS. The Basics line reads the flag first, and on a failed save reads
+"NOT SAVED — see the warning at the top of the screen" in the danger red,
+claiming no time. The paragraph above describing the fault is kept as the
+record of why.
+
+TWO BOXES SIDE BY SIDE LINE UP — LOCKED (22 September 2026)
+KEV, asked whether the labels or the boxes should align: "they should
+line up." THE BOXES, because they are what the eye follows.
+AS BUILT: each half of a field-row is a column with its box pushed to the
+foot, so a taller label above one cannot drag it out of line. The cause
+was the Read button, added to some labels after the page loads, which
+makes those labels taller. Fixed Author/Status and Start
+Date/Classification together. Found by Kev on the live screen.
+This extends the 15 August sizing rules: a control's position must not
+depend on what is beside it either.
 
 --- THE PLOT MAPPER ---
 
@@ -440,6 +590,9 @@ under plotMapper: parts, made, the budget, and the indent and details
 switches, with currentWords and lastEdited updated. Debounced, and also on
 beforeunload.
 NOTE 16 SEPTEMBER: this changes when the store moves to Supabase.
+NOTE 22 SEPTEMBER: IT DOES NOT, FOR NOW — only the library moves, and the
+Plot Mapper stays in the browser. Its saves now pass through the save
+guard.
 
 CHAPTERS AND SCENES CARRY PERMANENT IDS — LOCKED (1 September 2026)
 So that written prose attaches to a SCENE rather than to a position that
@@ -726,6 +879,8 @@ more prominent one first. CLOSED.
 CONFIRMED AGAINST THE LIVE FILE 16 SEPTEMBER: the sidebar is as locked.
 nav-manuscript points at Coming Soon, nav-research points at Coming Soon,
 and there is NO POCKET:manuscript and NO POCKET:research slot.
+CONFIRMED AGAIN 22 SEPTEMBER against the corridor pasted in the previous
+session: unchanged.
 
 THE SECTION ? GUIDE — PLATFORM-WIDE — LOCKED (15 August 2026)
 - EVERY SCREEN carries a SECTION ? pill at the TOP RIGHT of its header,
@@ -746,6 +901,8 @@ CONTROLS DO NOT CHANGE SIZE — LOCKED (15 August 2026)
 - OPENING SOMETHING MUST NOT PUSH WHAT IS ABOVE IT.
 EXTENDED 1 SEPTEMBER: A ROW OF CONTROLS DOING THE SAME KIND OF JOB IS ONE
 SIZE THROUGHOUT — see the Basics block above.
+EXTENDED 22 SEPTEMBER: TWO BOXES SIDE BY SIDE LINE UP — see the Basics
+block above.
 TO BE SWEPT ACROSS THE CORRIDOR when it is next in hand. STILL NOT DONE.
 
 --- THE DATA MODEL ---
@@ -1001,6 +1158,7 @@ SIGNUP / AUTHENTICATION — email + password → verification → access. No
 SSO. Locked: 25 May 2026.
 NOTE 16 SEPTEMBER: Supabase provides this, which is half the reason it was
 chosen. The lock stands; the means is now decided.
+NOTE 22 SEPTEMBER: AND NOT YET. See LOGINS LATER above.
 
 DATA — InkySwot never sells user data. Ever. GDPR compliant. Deletion
 within 30 days.
@@ -1022,9 +1180,24 @@ GOLD MARKS ANYTHING ALIVE AND RESPONDING. NEVER DECORATIVE.
 ================================================================
 OPEN — NOT YET DECIDED
 ================================================================
+*** THE SHAPE OF THE SHELF. *** Claude's proposal only. Kev: "I have no
+idea how things will work on Supabase and until then I can't nail things
+down." (New, 22 September.)
+*** HOW UPLOADED WORK IS REFERENCED. *** Kev: "We will be still building
+on how uploaded work is referenced." What he has said he wants: the
+ability to CHECK the new book, and character information in the
+characters' cards. How those fit together is open. (New, 22 September.)
+*** THE FACTUAL LAYER — THREE QUESTIONS IN factual-layer.md. *** The
+Notes field (reuse the existing one, or a separate list of short lines);
+which wins when facts and prose disagree; how many fields show at once.
+Kev asked for the list to be comprehensive and for a notes section on
+every record. (New, 22 September.)
 HOW INKYSWOT CONNECTS TO SUPABASE. The account exists; nothing is wired.
 What moves first, what stays in the browser meanwhile, and how existing
 work is carried across without loss. (New, 16 September.)
+UPDATED 22 SEPTEMBER: what moves first is decided for now — the library
+alone — so nothing already in the browser crosses over. How the library
+connects, and how it behaves on a bad connection, is still open.
 WHETHER SOMEONE ELSE'S NOVEL MAY BE USED AS A STYLE SOURCE. Raised
 16 September, deliberately not settled.
 WHETHER THE IMPORT COUNTS AGAINST THE PROMPT ALLOWANCE. Claude's view is
@@ -1040,8 +1213,12 @@ Characters, Locations and the rest read from. THE VANISHING TINTS MUST BE
 SOLVED AS PART OF IT.
 ADA'S BUTTONS ON THE PLOT MAPPER — built but quiet.
 THE CARD FACT FIELDS — a factual layer under the prose fields, and what
-wins when facts and prose disagree.
-"BASICS" vs "OVERVIEW" vs "FRONT MATTER".
+wins when facts and prose disagree. NOW SPECIFIED AS A WORKING LIST in
+factual-layer.md (22 September); see the three questions above.
+"BASICS" vs "OVERVIEW" vs "FRONT MATTER". AND, SEPARATELY, THE LIVE
+MISMATCH: the screen's own title says Overview while the sidebar says
+Basics. Whatever it is called, it should be called one thing. (Noted
+22 September.)
 SANDBOX moving from Library to DCW.
 THE FIVE ROOMS.
 THE EVENT PLANNER's drop line — fixed at centre or moving with the pan.
@@ -1067,10 +1244,27 @@ CLOSED SINCE THE LAST WRITE:
 · THE LIBRARY's shape — CLOSED 16 September in its essentials: it is
   server-side, and it is where the import lives. The room's drawing (three
   rows opening rightwards) still awaits building.
+CLOSED 22 SEPTEMBER (for the previous session):
+· THE SAVED LINE THAT COULD LIE — built and live.
+· WHAT MOVES TO SUPABASE FIRST — closed for now: the library alone.
+· LOGINS — closed for now: later, and Kev does not mind them.
 
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 ================================================================
+
+"INKYSWOT LEAVES THE BROWSER" (the first sentence of THE PLATFORM'S STORE
+IS SUPABASE, 16 September 2026, NARROWED 22 September 2026) — Kev decided
+to move as little as possible: ONLY THE LIBRARY GOES. The lock itself is
+kept in full in the live section, since its reasons for Supabase all
+stand; only its scope has changed. Recorded here too, as this file's rule
+requires.
+
+"THE IMPORT FILLS THE SCREENS" (from THE IMPORT IS NOT RESEARCH &
+REFERENCE, 16 September 2026, SUPERSEDED 22 September 2026) — Kev: "We
+DONT need ALL that info, just the ability to check it." The original
+wording is kept in the live lock as the record; what replaces it is still
+being built on and is NOT locked.
 
 THE BROWSER AS THE PLATFORM'S STORE (SUPERSEDED 16 September 2026) —
 everything in one localStorage item called "is-projects", read by
@@ -1080,6 +1274,8 @@ the platform held forms. It cannot hold a library: about 5MB in total,
 with no error handling, so a full box fails in silence. Replaced by
 SUPABASE. The code is still live as this is written; the connection is
 Job Zero.
+NARROWED 22 SEPTEMBER: ONLY HALF-SUPERSEDED. The browser remains the store
+for everything except the library, for now. It is not to be torn out.
 
 THE IMPORT AS A LOCALSTORAGE SHELF (SUPERSEDED 16 September 2026, BEFORE
 IT WAS BUILT) — the first plan gave big text its own localStorage keys,
