@@ -1,4 +1,9 @@
 File: inkyswot/completed.md
+Last updated: 24 September 2026 — entries for the previous session added
+at the foot. NOTHING ELSE IS CHANGED, AND NOTHING IS SHORTENED OR REMOVED.
+THE HEADLINE: THE PLATFORM IS CONNECTED AND THE FRONT DOOR IS LIVE.
+
+[The 22 September header follows, kept as written.]
 Last updated: 22 September 2026 — entries for the previous session added
 at the foot, dated 22 September because the day that work was done was
 not recorded. Two 16 September entries carry a bracketed note where they
@@ -651,3 +656,131 @@ KEEPING.
    anything yet." Rebuilt from his 16 September file word for word, with
    today's changes added on top and every original line checked against
    the new one — 22 September 2026.
+
+--- 24 SEPTEMBER 2026 ---
+[The previous session, written up at the start of this one.]
+
+*** INKYSWOT IS CONNECTED TO SUPABASE, AND THE FRONT DOOR IS LIVE.
+Kev is member number 1. ***
+
+THE CONNECTION PROVED, FIRST TIME. code-supabase-plug-test.html — one
+standalone page, opened from Kev's own machine, never published, doing one
+job: send a line to Supabase and read it back. 201 on the write, 200 on
+the read, the line came back exactly as it went in.
+IT IS A PLUG TESTER, NOT A REHEARSAL OF THE LIBRARY, and Kev was right to
+challenge it — "That's not how it will work when we are done!" The reason
+for doing it separately is that WHEN THE REAL THING FAILS YOU WANT TO KNOW
+WHETHER IT IS THE CONNECTION OR THE CODE. Kev: "No lets do it properly,
+just asking as I am — AGAIN — in unknown territory."
+It used a throwaway table, public.connection_test, opened deliberately to
+anyone with the publishable key. Nothing real ever went in it. IT IS STILL
+THERE AND SHOULD BE DELETED — 24 September 2026.
+
+*** THE SECRET KEY TRAP — IT HAPPENED, AND IT WAS DEALT WITH. *** Supabase
+shows the publishable and secret keys with their copy buttons side by
+side. Kev copied the SECRET one and pasted it into the chat. Claude had
+said which was which and it still happened, because the buttons sit
+together. THE KEY WAS DELETED IN SUPABASE IMMEDIATELY — nothing was using
+it, nothing broke, and the pasted key is now useless to anyone. THE RULE:
+A SECRET KEY THAT HAS BEEN PASTED ANYWHERE IS SPENT. Delete it while it
+costs nothing — 24 September 2026.
+
+THE MEMBERS TABLE BUILT. public.members — the account's uuid as the key,
+MEMBER_NO counting from 1, email, joined_at. RLS on, with one policy: a
+member reads their own row and nothing else. THE ROW IS MADE BY A TRIGGER
+THE MOMENT AN ACCOUNT IS CREATED, so it cannot be forgotten and cannot be
+faked from the browser.
+IT CAME FROM KEV: "Then we need to start having account numbers… my
+account number should be: 01." Supabase's own identifier is a uuid and
+cannot be made to count, so the member number sits beside it as the HUMAN
+number. VERIFIED: one row, member_no 1, Kev's email — 24 September 2026.
+
+THE AUTHENTICATION SETTINGS SET. Site URL changed from Supabase's default
+http://localhost:3000 — which would have sent every confirmation email
+nowhere — to https://app.inkyswot.com. CONFIRM EMAIL ON (Kev: YES).
+Anonymous sign-ins off. Email the only provider, matching "no SSO" —
+24 September 2026.
+
+LOGIN.HTML WIRED, AND IT IS LIVE. The May page was already the right shape
+— panel, two tabs, fields, error line, validation — and only the middle was
+missing: the two handlers checked the fields and then said "InkySwot is
+not yet open". A WIRING JOB, NOT A REBUILD.
+Log In signs in and goes to app.inkyswot.com. Sign Up creates the account
+and says plainly to check the email, because with confirmation on nobody
+is signed in yet. Forgot your password really sends a reset. Already
+signed in goes straight through. Supabase's own error wording is replaced
+with plain English for the two common cases.
+It loads Supabase's own library from a CDN — a deliberate departure from
+no-tooling, BECAUSE THAT IS WHAT KEEPS THE WRITER SIGNED IN BETWEEN VISITS
+— 24 September 2026.
+
+FOUR CHANGES CAME FROM KEV LOOKING AT THE LIVE SCREEN:
+· SHOW PASSWORD on all three password boxes, fixed width so nothing jumps,
+  and the word says what pressing it will do.
+· THE FRONT PAGE'S SIGN UP BUTTON LANDED ON THE LOG IN TAB, because both
+  buttons pointed at the same address. Now login.html#signup opens on Sign
+  Up, and the front page's Sign up link carries #signup. Fixed in the
+  inkyswot repository, which is published by GitHub Pages.
+· "MEMBERS ACCESS" CUT. Kev: "Sounds too exclusive, like some silly club."
+· "REQUEST ADMISSION" BECAME "SIGN UP" — 24 September 2026.
+
+VERIFIED END TO END: Kev signed up, the confirmation email arrived, he
+confirmed, and he signed in and reached the app. Authentication → Users
+shows one account, created 20:29 and signed in 20:31 — 24 September 2026.
+
+TWO ADDRESSES, ONE ACCOUNT — DECIDED, AND KEV ASKED CLAUDE TO MAKE THE
+CALL: "That's the point I DON'T know what I want. You have to tell me what
+I need… We must think security as well."
+THE ANSWER: keep both addresses, put every account job on the app. The
+front page's Sign Up button sends people to the app; the app does the rest.
+THE SECURITY REASON DECIDED IT — putting the sign-in on the marketing site
+means a compromised front page can reach into people's accounts, and the
+marketing site is the part that changes most and is likeliest to be broken
+into. KEEP THEM APART AND A BREAK-IN ON THE SHOP WINDOW COSTS YOU A SHOP
+WINDOW. Kev: "That last bit really hit home. so separate it is."
+AND THE SITE WAS ALREADY BUILT THAT WAY — both buttons already pointed at
+app.inkyswot.com/login.html — 24 September 2026.
+
+THE THREE REPOSITORIES EXPLAINED AND RECORDED, because Kev said "I am
+worried about having two repositories" and a session had opened without
+knowing where login.html lived. inkyswot-rebuild is THE WORKSHOP;
+inkyswot-app is THE SHOP, an output, never hand-edited except login.html;
+inkyswot is THE FRONT PAGE on GitHub Pages. They cannot drift apart the
+way duplicate copies do — 24 September 2026.
+
+THE FRONT PAGE LOOKED AT AND DELIBERATELY LEFT. Kev: "I am not entirely
+sure that the InkySwot front page is dynamic enough", and compared it with
+pitchdarkbroadcasting.com, which has an OFF AIR state and switchable
+feeds. WHAT MAKES THAT WORK IS THAT IT HAS A WORLD; InkySwot's page has a
+statement. But a persuading page must show the platform working, and the
+Plot Mapper, the Wheel and the checker are not ready to be shown.
+KEV: "The trouble is that now it will bug the crap out of me." He then
+showed his own idiom for it — A WRITER'S DESK AT NIGHT, with the lamp, the
+open notebook, the rain, the cat, and InkySwot's real sections down the
+left. Recorded in current-state.md. Kev: "NO. Lets keep going" —
+24 September 2026.
+
+THREE THINGS AGREED FOR THE SHELF FROM THE FIRST DAY, from Kev's question
+"are there things, functions, systems etc that we should be adding now. I
+ask so we dont have to go back over stuff": WHICH PROJECT a book belongs
+to, WHOSE BOOK it is, and WHEN IT ARRIVED plus a deleted-marker. Those
+three are painful to retrofit; everything else can be added later without
+disturbing what is on the shelf — 24 September 2026.
+
+HOW CHAPTERS WOULD BE RECOGNISED, ASKED AND ANSWERED. Kev: "How will it
+recognise chapters?" By short lines alone on a line with no full stop —
+which works on tidy books and struggles with ornaments, split headings and
+prologues. So it shows what it found and the writer corrects it. AND KEV
+ADDED THE REFINEMENT: "we should have a checking function. So where the
+system is not sure it asks for clarity." Which splits the findings into
+CERTAIN, UNSURE and MISSED, and means it only asks where asking earns its
+place — the same rule as the checker — 24 September 2026.
+
+*** STILL NOT DONE, AND NAMED SO IT IS NOT FORGOTTEN: THE APP IS NOT YET
+CLOSED. *** Anyone with the address still walks into app.inkyswot.com. Kev:
+"We need to close this off." A small block in the corridor, and the next
+piece of work.
+AND THE CONFIRMATION EMAIL COMES FROM SUPABASE, NOT FROM INKYSWOT. Kev
+spotted it. Supabase's built-in sender is for testing only — a handful an
+hour — so fixing the name and the limit is one job, and it involves domain
+settings rather than code. A session of its own — 24 September 2026.
