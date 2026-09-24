@@ -1,4 +1,12 @@
 File: inkyswot/future.md
+Last updated: 24 September 2026. Covers the previous session, written up
+at the start of this one. NOTHING IS SHORTENED OR REMOVED; today's
+additions sit beside what they affect.
+NEW: THE FRONT PAGE — Kev's own picture of what inkyswot.com should
+become, and the decision to leave it until the platform has something to
+show.
+
+[The 22 September header follows, kept as written.]
 Last updated: 22 September 2026. Covers the previous session, whose date
 was not recorded, written up at the start of this one.
 NOT REWRITTEN CLEAN THIS TIME, though that is this file's usual rule. Kev:
@@ -136,6 +144,59 @@ CONFIRMS. Nothing lands in Characters until it has been seen and ticked.
 See the muster in current-state.md and the lock in locked-decisions.md.
 
 ================================================================
+THE FRONT PAGE — A WRITER'S DESK AT NIGHT
+Raised 24 September 2026. DELIBERATELY NOT STARTED.
+================================================================
+
+WHAT PROMPTED IT. Kev: "I am not entirely sure that the InkySwot front
+page is dynamic enough." He then showed pitchdarkbroadcasting.com, which
+is a livelier holding page: an OFF AIR state, a studio hero image, and a
+row of feeds to switch between — Newswire, Weather, Market, Transmissions,
+Archive.
+WHY THAT ONE WORKS, AND IT IS WORTH UNDERSTANDING BEFORE COPYING IT: IT
+HAS A WORLD. Broadcasting hands you a ready-made idiom — off air, signal
+routing, transmissions — so a page that really says "nothing here yet"
+instead says "we are between broadcasts", and you poke at it.
+INKYSWOT'S PAGE HAS A STATEMENT INSTEAD. Wordmark, a claim, a date, world
+clocks. Nothing to poke.
+
+*** AND THEN KEV SHOWED HIS OWN, AND IT IS THE RIGHT IDIOM: A WRITER'S
+DESK AT NIGHT. *** Not a press — a desk. The lamp, the open notebook, rain
+on the window, the cat asleep on the books, the city beyond the glass.
+WHAT IS DOING REAL WORK IN IT:
+· THE SIDEBAR DOWN THE LEFT IS INKYSWOT'S ACTUAL SECTIONS — Manuscript,
+  Characters, World, Notes, Research, Tools, Library. A visitor sees the
+  SHAPE OF THE PLATFORM without a word of explanation.
+· The book spines labelled IDEAS · DRAFTS · REWRITES · MAYBES ·
+  REFERENCE · INSPIRATION.
+· "Every book begins here…" on the open page, with a pen across it.
+· ENTER THE WORKSHOP as the one door.
+· The world clocks carried over from the page that exists.
+· The Proauthorist line along the foot: MACHINE FREE TO SPEAK — HUMAN
+  DECIDES WHAT SURVIVES.
+· And the small hand-written asides — "Ideas Misbehave Here", "Stories
+  keep the dark out", "Same idea. Different story."
+
+ONE HONEST NOTE, SAID ONCE AND THEN LEFT. It is a single flat picture, so
+as a web page it would be an IMAGE WITH THINGS LAYERED ON TOP — the
+sidebar and the clocks drawn over it rather than being it. That is fine.
+BUT IT MATTERS BEFORE ANYONE TRIES TO MAKE EVERY OBJECT IN IT CLICKABLE,
+WHICH WAY LIES A MONTH'S WORK.
+
+WHY IT IS NOT BEING BUILT NOW, AND KEV AGREED IT. A persuading front page
+SHOWS THE PLATFORM WORKING — the Plot Mapper, the Wheel, the checker. None
+of those are ready to be shown. WRITE THE PAGE NOW AND IT WOULD BE
+REWRITTEN THREE TIMES BEFORE LAUNCH.
+KEV, HONESTLY: "The trouble is that now it will bug the crap out of me."
+Which is why it is written down here rather than left rattling. And then:
+"NO. Lets keep going."
+
+WHEN IT IS BUILT: the picture Kev made should be saved into the InkySwot
+division under its own filename, so a future session can find it. A
+description is not a file — the same rule that cost a session over the
+Wheel.
+
+================================================================
 THE STYLE METER — new, 31 August 2026. NOT STARTED.
 ================================================================
 
@@ -249,6 +310,10 @@ STILL OPEN:
 WHAT IT NEEDS THAT NOW EXISTS: somewhere for images to live. Supabase's
 file store will hold them, and the Library's IMAGES room gains a real
 reason to be built.
+NOTE 24 SEPTEMBER: the platform now genuinely talks to Supabase — for
+accounts. THE FILE STORE IS STILL UNTOUCHED, so "will hold them" is still
+a promise rather than a fact. But it is no longer a promise about
+something unproven.
 ITS NEIGHBOUR: the RIGHTS MARKETPLACE under Future Products — the same
 instinct, pointed much further off.
 
@@ -350,6 +415,8 @@ file store holds any file — audio, video, images — so audiobook and radio
 play output is no longer blocked on "where would it go". Only on being
 built. WORTH CHECKING ON THE DAY: the maximum size for a single uploaded
 file, which is generous but is the one limit a long audio file might meet.
+NOTE 24 SEPTEMBER: still true, and still untested — nothing has yet been
+put into the file store at all.
 
 PLATFORM — FUTURE FEATURES
 Six-tone time-of-day theme system — designed, not built.
@@ -366,6 +433,9 @@ platform it becomes merely hard. Not a reason to build it; a reason to
 know it is no longer barred.
 NOTE 22 SEPTEMBER: for now only the LIBRARY is moving to the server, so
 this stays barred for the writing itself until more follows it.
+NOTE 24 SEPTEMBER: one piece of it has quietly arrived, though. ACCOUNTS
+EXIST. Collaboration needs to know who two people are before it can show
+two cursors, and that half is now real.
 
 EMOTIONAL MAP AS A LITERAL MAP
 The DCW Emotional Map curve expands into a cartographic view of a
