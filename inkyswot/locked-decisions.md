@@ -1,4 +1,13 @@
 File: inkyswot/locked-decisions.md
+Last updated: 24 September 2026 — ADD-ONLY update. Covers the previous
+session, which this file dates 22 September. NOTHING HAS BEEN SHORTENED,
+DELETED OR MOVED. ADDED: a new ACCOUNTS AND THE FRONT DOOR block, and
+three working-practice locks. AMENDED IN PLACE: LOGINS LATER, which was
+overtaken deliberately — its wording is kept where it was, with the
+amendment beside it, and it is recorded at the foot as this file's rule
+requires.
+
+[The 22 September header follows, kept as written.]
 Last updated: 22 September 2026 — ADD-ONLY update. Covers the previous
 session, whose date was not recorded, written up at the start of this one.
 NOTHING HAS BEEN SHORTENED, DELETED OR MOVED except as described here.
@@ -64,6 +73,18 @@ AND SINCE 16 SEPTEMBER — ALL DECIDED FOR NOW, SUBJECT TO CHANGE
 - DATE EVERY WRITE-UP FOR THE CURRENT DAY.
 - A PROPOSAL IS NOT A DECISION. Write it up as what it is.
 
+AND SINCE 22 SEPTEMBER — THE FRONT DOOR
+- ACCOUNTS COME BEFORE THE SHELF. An owner cannot be retrofitted, so
+  logins were built FIRST, overtaking "logins later" on purpose.
+- EVERY MEMBER HAS A MEMBER NUMBER, counting from 1, beside Supabase's
+  own identifier. Kev is 1.
+- TWO ADDRESSES, ONE ACCOUNT. The app owns every account job; the front
+  page never signs anybody in.
+- CONFIRM EMAIL IS ON.
+- THE APP IS CLOSED TO ANYONE NOT SIGNED IN. Decided, NOT YET BUILT.
+- NO CLUB LANGUAGE.
+- A SECRET KEY THAT HAS BEEN PASTED ANYWHERE IS SPENT.
+
 ================================================================
 LIVE LOCKED DECISIONS
 ================================================================
@@ -90,6 +111,9 @@ library leaves. The lock is kept in full, unaltered, as the record of the
 reasoning.
 
 LOGINS LATER — LOCKED FOR NOW (22 September 2026)
+*** OVERTAKEN 24 SEPTEMBER, DELIBERATELY. LOGINS CAME FIRST. The wording
+below is kept as the record; see ACCOUNTS COME BEFORE THE SHELF in the
+next block, and the entry at the foot of this file. ***
 KEV: "I dont mind logging in." Not now: once the library's store exists.
 A login means the app asks who you are before it shows anything; nothing
 else about the platform changes.
@@ -151,6 +175,92 @@ THE GENERAL PRINCIPLE, WORTH MORE THAN THE CASE THAT PRODUCED IT:
 BUILDING SOMETHING DESIGNED TO LOOK UNLIKE WHAT IT IS ADDS NO BENEFIT.
 Once the app is wired up, opening it IS the activity, and the dashboard
 settles the question by observation rather than argument.
+
+--- ACCOUNTS AND THE FRONT DOOR (24 September 2026) ---
+BUILT AND LIVE. login.html in PitchDarkPress/inkyswot-app.
+
+ACCOUNTS COME BEFORE THE SHELF — LOCKED (24 September 2026)
+KEV: "Then we need to start having account numbers."
+A book on a shelf has to belong to somebody, and A BOOK STORED WITH NO
+OWNER CANNOT RELIABLY BE GIVEN ONE LATER. So the accounts were built
+before the shelf — not because logins were urgent, but because THE OWNER
+IS THE HARDEST THING TO RETROFIT.
+THIS OVERTAKES "LOGINS LATER" ABOVE, deliberately and with Kev's
+agreement: "I think we are moving in that direction."
+AND THE SAME REASONING GIVES THE SHELF THREE COLUMNS IT MUST HAVE FROM
+THE FIRST DAY, whatever shape it finally takes: WHICH PROJECT, WHOSE BOOK,
+and WHEN IT ARRIVED plus a deleted-marker rather than a real deletion.
+[The owner column is Kev's decision. The other two are Claude's proposal,
+answering Kev's question "are there things, functions, systems etc that we
+should be adding now". Recorded as such.]
+
+EVERY MEMBER HAS A MEMBER NUMBER — LOCKED (24 September 2026)
+Supabase gives each account a permanent uuid of its own, which never
+changes even if the email does. THAT IS THE MACHINERY AND IT CANNOT BE
+MADE TO COUNT. Kev wanted a number — "my account number should be: 01" —
+so public.members carries MEMBER_NO, counting from 1, beside it.
+IT IS THE HUMAN NUMBER: what a person quotes in a support email or sees
+on an invoice. AND IT CANNOT BE RETROFITTED — everyone who joined before
+it existed would have none.
+THE ROW IS MADE BY A TRIGGER THE MOMENT AN ACCOUNT IS CREATED, so it
+cannot be forgotten and cannot be faked from the browser. RLS on; a member
+reads their own row and nothing else.
+KEV IS MEMBER 1.
+
+TWO ADDRESSES, ONE ACCOUNT — LOCKED (24 September 2026)
+The front page stays at inkyswot.com; the app stays at app.inkyswot.com.
+EVERY ACCOUNT JOB HAPPENS ON THE APP. The front page's Sign Up button does
+not sign anybody up — it sends them to the app, and the app does the
+signing up, the signing in and everything after.
+KEV ASKED CLAUDE TO MAKE THE CALL: "That's the point I DON'T know what I
+want. You have to tell me what I need… We must think security as well."
+THE SECURITY REASON, WHICH IS THE ONE THAT DECIDED IT: the alternative is
+to let people sign in on the front page and share the session. THAT PUTS
+THE SIGN-IN ON THE MARKETING SITE — the part that changes most often,
+carries the most third-party bits, and is likeliest to be broken into. Do
+it that way and a compromised front page can reach into people's accounts.
+KEEP THEM APART AND A BREAK-IN ON THE SHOP WINDOW COSTS YOU A SHOP WINDOW.
+KEV: "That last bit really hit home. so separate it is."
+THE SECOND REASON: the front page will change constantly, and THE APP MUST
+NOT WOBBLE EVERY TIME THE MARKETING IS FIDDLED WITH.
+
+LOGIN.HTML IS NOT A POCKET — LOCKED (24 September 2026)
+A person meets it BEFORE there is any project, any corridor, any pocket.
+Making it a pocket would mean loading the whole app before anyone could
+sign in. IT STANDS IN FRONT OF THE APP, so it is its own page in
+inkyswot-app, and STITCH NEVER TOUCHES IT.
+IT IS THE ONE HAND-EDITED FILE IN THAT REPOSITORY, which is untidy. The
+tidy answer — move it into the rebuild repo and have the Enclosure copy it
+across on publish — was offered and NOT TAKEN UP YET. It is a change to
+the Enclosure, so it is a job rather than a keystroke.
+
+CONFIRM EMAIL IS ON — LOCKED (24 September 2026)
+Kev: YES. It enacts the May lock (email + password → verification →
+access). Nobody gets in with a made-up address.
+SITE URL IS https://app.inkyswot.com. It was Supabase's default,
+http://localhost:3000, which would have sent every confirmation email
+nowhere.
+ANONYMOUS SIGN-INS OFF. EMAIL THE ONLY PROVIDER, matching "no SSO".
+
+THE APP IS CLOSED TO ANYONE NOT SIGNED IN — LOCKED (24 September 2026),
+NOT YET BUILT
+KEV: "We need to close this off. It means I will have to sign in each time
+we work on it but my pc will remember password etc."
+AND HE WILL NOT HAVE TO, which is worth recording because it was a real
+worry: Supabase keeps the session in the browser until it is signed out or
+expires. SIGNING IN IS OCCASIONAL, NOT A DAILY TOLL.
+THE WORK ITSELF is a small block in the corridor that sends anyone without
+a session back to login.html. NOT DONE.
+
+NO CLUB LANGUAGE — LOCKED (24 September 2026)
+"MEMBERS ACCESS" CUT. Kev: "Sounds too exclusive, like some silly club."
+Claude offered The Front Door and others; Kev: "Just cut it as The Front
+Door etc sound a bit forced." Right — the two tabs beneath already say Log
+In and Sign Up, so the line was telling people what they could see.
+"REQUEST ADMISSION" BECAME "SIGN UP". It sounded like a committee would
+consider your application.
+THE GENERAL RULE: INKYSWOT IS NOT A COMMITTEE AND NOT A CLUB. Plain words
+for plain acts, and a button matches the tab that got you there.
 
 --- BUILD FOR ONE USER (16 September 2026) ---
 
@@ -248,6 +358,33 @@ for. "Always writer-led" is strong precisely because it means the writer's
 OWN voice. TO BE DECIDED DELIBERATELY RATHER THAN ARRIVED AT BY ACCIDENT.
 
 --- WORKING PRACTICE ---
+
+*** A SECRET KEY THAT HAS BEEN PASTED ANYWHERE IS SPENT — LOCKED
+(24 September 2026). A TRAP, AND IT ALREADY HAPPENED ONCE. ***
+Supabase's API Keys page shows two keys with their copy buttons close
+together. The PUBLISHABLE key (sb_publishable_…) is meant to be visible in
+a web page — the database's own rules decide what it may touch. THE SECRET
+KEY (sb_secret_…) GETS PAST EVERY RULE.
+Kev copied the secret one and pasted it into the chat. Claude had said
+which was which, and it still happened, BECAUSE THE TWO BUTTONS SIT SIDE
+BY SIDE.
+WHAT WAS DONE, IMMEDIATELY AND CORRECTLY: the key was DELETED in Supabase
+(API Keys → Secret keys → three dots → delete, typing "default" to
+confirm). Nothing was using it, so nothing broke.
+THE RULE: DELETE IT WHILE IT COSTS NOTHING. Do not hope. And when asking
+for a key, say plainly which one, what the wrong one looks like, and say
+it twice.
+
+PROVE THE CONNECTION BEFORE BUILDING ON IT — LOCKED (24 September 2026)
+Before any Supabase work, one throwaway page did one thing: send a line
+and read it back. code-supabase-plug-test.html. It worked first time.
+IT IS A PLUG TESTER, NOT A REHEARSAL. Kev asked, fairly, "That's not how
+it will work when we are done!" — and it is not meant to be. THE REASON
+FOR DOING IT SEPARATELY IS THAT WHEN THE REAL THING FAILS YOU WANT TO KNOW
+WHETHER IT IS THE CONNECTION OR THE CODE. Prove the connection once and it
+is the code every time after.
+IT IS THE SAME RULE AS THE STATIC STILL: prove one piece, then build on
+it. The throwaway table is then deleted.
 
 DATE EVERY WRITE-UP FOR THE CURRENT DAY — LOCKED (22 September 2026)
 KEV: "always date it for the current day. I dont allways come back the
@@ -453,6 +590,13 @@ CORRIDOR PLUS POCKETS — THE ARCHITECTURE — LOCKED (August 2026)
 Private repo: PitchDarkPress/inkyswot-rebuild.
 NOTE 22 SEPTEMBER: the corridor's script now ends with three bolted-on
 blocks, in this order — SPELL CHECK, READ ALOUD, THE SAVE GUARD.
+NOTE 24 SEPTEMBER — THERE ARE THREE REPOSITORIES, AND THEY DO DIFFERENT
+JOBS. inkyswot-rebuild is THE WORKSHOP (corridor and pockets).
+inkyswot-app is THE SHOP — the Enclosure's output, served by Vercel at
+app.inkyswot.com, never hand-edited EXCEPT login.html. inkyswot is THE
+FRONT PAGE, published by GitHub Pages to inkyswot.com and slower to
+deploy. THEY ARE NOT TWO VERSIONS OF THE SAME CODE: the app repo is an
+output, so they cannot drift apart the way duplicate copies do.
 
 A SCREEN'S OWN FURNITURE LIVES IN ITS POCKET — LOCKED (1 September 2026)
 Established by reading both files rather than assuming. The corridor holds
@@ -1159,6 +1303,9 @@ SSO. Locked: 25 May 2026.
 NOTE 16 SEPTEMBER: Supabase provides this, which is half the reason it was
 chosen. The lock stands; the means is now decided.
 NOTE 22 SEPTEMBER: AND NOT YET. See LOGINS LATER above.
+*** BUILT AND LIVE 24 SEPTEMBER. *** Email and password, confirmation
+email, sign in, password reset — all working on app.inkyswot.com. No SSO,
+exactly as locked in May. See ACCOUNTS AND THE FRONT DOOR above.
 
 DATA — InkySwot never sells user data. Ever. GDPR compliant. Deletion
 within 30 days.
@@ -1176,6 +1323,11 @@ gold. Crimson Pro (body) · JetBrains Mono (labels and interface) ·
 Playfair Display (wordmark and titles). Muted danger red #c43a2a.
 Light/dark toggle platform-wide.
 GOLD MARKS ANYTHING ALIVE AND RESPONDING. NEVER DECORATIVE.
+ADDED 24 SEPTEMBER, from the front door:
+- A REAL FAILURE IS SAID IN THE DANGER RED; NEWS IS SAID IN GOLD. One
+  message line per form, so a failure cannot be mistaken for progress.
+- A SHOW/HIDE CONTROL SAYS WHAT PRESSING IT WILL DO, not what state it is
+  in, and it has a fixed width so the box does not jump.
 
 ================================================================
 OPEN — NOT YET DECIDED
@@ -1192,12 +1344,23 @@ Notes field (reuse the existing one, or a separate list of short lines);
 which wins when facts and prose disagree; how many fields show at once.
 Kev asked for the list to be comprehensive and for a notes section on
 every record. (New, 22 September.)
+WHICH EMAIL SERVICE SENDS INKYSWOT'S MAIL. The confirmation email
+currently comes from Supabase, whose built-in sender is FOR TESTING ONLY —
+a handful an hour, and it carries their name not InkySwot's. Kev spotted
+it. One job fixes the name and the limit together: choose a service, prove
+the domain, add records to the domain's settings, point Supabase at it.
+NOT CHOSEN. (New, 24 September.)
+WHETHER LOGIN.HTML MOVES INTO THE REBUILD REPOSITORY, with the Enclosure
+copying it across on publish. Offered 24 September, not taken up.
 HOW INKYSWOT CONNECTS TO SUPABASE. The account exists; nothing is wired.
 What moves first, what stays in the browser meanwhile, and how existing
 work is carried across without loss. (New, 16 September.)
 UPDATED 22 SEPTEMBER: what moves first is decided for now — the library
 alone — so nothing already in the browser crosses over. How the library
 connects, and how it behaves on a bad connection, is still open.
+UPDATED 24 SEPTEMBER: THE CONNECTION ITSELF IS NO LONGER OPEN. It is
+proved and in use for accounts. What remains open is the LIBRARY's own
+connection and its behaviour on a bad connection.
 WHETHER SOMEONE ELSE'S NOVEL MAY BE USED AS A STYLE SOURCE. Raised
 16 September, deliberately not settled.
 WHETHER THE IMPORT COUNTS AGAINST THE PROMPT ALLOWANCE. Claude's view is
@@ -1248,10 +1411,26 @@ CLOSED 22 SEPTEMBER (for the previous session):
 · THE SAVED LINE THAT COULD LIE — built and live.
 · WHAT MOVES TO SUPABASE FIRST — closed for now: the library alone.
 · LOGINS — closed for now: later, and Kev does not mind them.
+CLOSED 24 SEPTEMBER:
+· WHETHER INKYSWOT CAN TALK TO SUPABASE AT ALL — proved, first time.
+· WHERE ACCOUNT WORK HAPPENS — the app, not the front page.
+· WHETHER THERE IS A MEMBER NUMBER — there is. Kev is 1.
+· WHEN LOGINS HAPPEN — now, not later. The "logins later" lock is
+  overtaken; see the foot of this file.
+· WHAT THE SIGN-UP BUTTON SAYS, and whether the panel carries a
+  "Members Access" line — Sign Up, and it does not.
 
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 ================================================================
+
+"LOGINS LATER" (locked for now 22 September 2026, OVERTAKEN 24 September
+2026) — the plan was to build the store first and add accounts afterwards.
+KEV: "Then we need to start having account numbers." A book stored with no
+owner cannot reliably be given one later, so THE FRONT DOOR WAS BUILT
+FIRST. The lock is kept in full in the live section as the record of the
+reasoning; only its timing has changed. Kev's own words on the turn: "I
+think we are moving in that direction."
 
 "INKYSWOT LEAVES THE BROWSER" (the first sentence of THE PLATFORM'S STORE
 IS SUPABASE, 16 September 2026, NARROWED 22 September 2026) — Kev decided
