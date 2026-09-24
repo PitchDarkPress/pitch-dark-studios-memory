@@ -1,9 +1,16 @@
 File: inkyswot/current-state.md
-Last updated: 22 September 2026.
-COVERS THE PREVIOUS SESSION, whose date was not recorded, written up at
-the start of this one as the rule requires when a session ends without a
-write-up. Its work is dated 22 September throughout — the day it was
-filed — because the day it was done is not known.
+Last updated: 24 September 2026.
+COVERS THE PREVIOUS SESSION, which is dated 22 September throughout this
+file — the day it was filed. Written up at the start of this one, as the
+rule requires when a session ends without a write-up. NOTHING FROM THE
+22 SEPTEMBER VERSION HAS BEEN SHORTENED OR REMOVED; today's work is added
+beside what it affects.
+
+*** THE HEADLINE, 24 SEPTEMBER: THE PLATFORM IS CONNECTED. *** InkySwot
+now talks to Supabase. The connection was proved with a throwaway test
+page, a members table was built, and THE FRONT DOOR IS LIVE — sign up,
+confirmation email, sign in, password reset, all working end to end on
+app.inkyswot.com. Kev is member number 1. See the new section below.
 
 *** THE DATING RULE — KEV, 22 SEPTEMBER: "always date it for the current
 day. I dont allways come back the day after." *** Claude broke it on
@@ -113,6 +120,260 @@ ANSWER — the checker alone justifies a file of its own, as the nine files
 of May were split.
 
 ================================================================
+*** THE FRONT DOOR — BUILT AND LIVE (24 September 2026) ***
+InkySwot is connected to Supabase. Accounts exist. Kev is member 1.
+File: login.html, in PitchDarkPress/inkyswot-app.
+Also: code-supabase-plug-test.html (a throwaway, its job done).
+================================================================
+
+--- WHY THIS CAME BEFORE THE SHELF ---
+
+The session began intending to build the shelf, and stopped one step
+short of it. KEV: "Then we need to start having account numbers." A book
+on a shelf has to belong to somebody, and a book stored today with no
+owner cannot reliably be given one later. SO THE ACCOUNTS CAME FIRST —
+not because logins were urgent, but because THE OWNER COLUMN IS THE
+HARDEST THING TO RETROFIT.
+This overturns, deliberately and for a good reason, the 22 September
+"logins later". Kev: "I think we are moving in that direction."
+
+--- STEP ONE: THE PLUG TEST. WORKED FIRST TIME. ---
+
+code-supabase-plug-test.html — one standalone page, opened from Kev's own
+machine, never published. It sent one line of text to Supabase and read
+it back. IT IS NOT A REHEARSAL OF THE LIBRARY and was never meant to be;
+Kev asked and was right to. IT IS A PLUG TESTER, and the reason for doing
+it separately is that WHEN THE REAL THING FAILS YOU WANT TO KNOW WHETHER
+IT IS THE CONNECTION OR THE CODE. Prove the connection once and it is the
+code every time after.
+RESULT: 201 on the write, 200 on the read, the line came back exactly as
+it went in. Kev's words: it works.
+IT USED A THROWAWAY TABLE, public.connection_test, deliberately opened to
+anyone with the publishable key. NOTHING REAL EVER WENT IN IT. *** IT IS
+STILL THERE AND SHOULD BE DELETED next time Supabase is open. ***
+
+--- *** THE SECRET KEY TRAP — READ THIS BEFORE ASKING FOR ANY KEY *** ---
+
+Supabase's API Keys page shows TWO keys with their copy buttons close
+together. The PUBLISHABLE key (sb_publishable_…) is meant to be visible in
+a web page — the database's own rules decide what it may touch. The SECRET
+key (sb_secret_…) gets past every rule.
+KEV COPIED THE SECRET ONE AND PASTED IT INTO THE CHAT. An easy slip, and
+the two buttons sit side by side.
+WHAT WAS DONE, IMMEDIATELY: the key was DELETED in Supabase (API Keys →
+Secret keys → the three dots → delete, typing "default" to confirm).
+Nothing was using it, so nothing broke, and the pasted key is now useless
+to anyone. NO HARM DONE — but the right answer is always to kill the key
+rather than hope.
+THE LESSON, WORTH KEEPING: A SECRET KEY THAT HAS BEEN PASTED ANYWHERE IS
+SPENT. Delete it while it costs nothing. And when asking Kev for a key,
+say plainly which one and what the wrong one looks like — Claude did, and
+it still happened, so say it twice.
+
+--- STEP TWO: THE MEMBERS TABLE ---
+
+Supabase owns the accounts (auth.users) and gives each one a permanent
+identifier of its own — a long uuid that never changes even if the email
+does. THAT IS THE MACHINERY, AND IT CANNOT BE MADE TO COUNT 1, 2, 3.
+KEV WANTED AN ACCOUNT NUMBER: "my account number should be: 01." So a
+MEMBER NUMBER was built alongside it — a plain column counting up from 1,
+the thing a person quotes in a support email or sees on an invoice.
+IT IS ANOTHER THING THAT CANNOT BE RETROFITTED: everyone who joined before
+it existed would have no number.
+
+  public.members
+    id         uuid, primary key, references auth.users(id), cascade
+    member_no  integer, generated always as identity, unique
+    email      text
+    joined_at  timestamptz, default now()
+
+RLS ON, and one policy: a member may read THEIR OWN ROW and nothing else.
+AND THE ROW IS MADE BY A TRIGGER (on_auth_user_created, calling
+handle_new_member) THE MOMENT AN ACCOUNT IS CREATED — so it cannot be
+forgotten, and it cannot be faked from the browser.
+VERIFIED: select member_no, email, joined_at from public.members →
+ONE ROW, MEMBER_NO 1, KEV'S EMAIL.
+
+--- STEP THREE: THE AUTHENTICATION SETTINGS ---
+
+· SITE URL was Supabase's default, http://localhost:3000, which means
+  nothing to us — the confirmation email would have sent people nowhere.
+  CHANGED TO https://app.inkyswot.com.
+· CONFIRM EMAIL — ON. Kev: YES. It matches the May lock: email + password
+  → verification → access.
+· ALLOW NEW USERS TO SIGN UP — on. ANONYMOUS SIGN-INS — off. EMAIL is the
+  only provider enabled, matching "no SSO".
+
+--- STEP FOUR: login.html, WIRED ---
+
+THE PAGE WAS ALREADY THE RIGHT SHAPE — panel, two tabs, fields, error
+line, validation, all built in May. Only the middle was missing:
+handleLogin and handleSignup checked the fields and then said "InkySwot is
+not yet open". THIS WAS A WIRING JOB, NOT A REBUILD.
+
+WHAT IT DOES NOW:
+· LOG IN — signs in and goes to app.inkyswot.com.
+· SIGN UP — creates the account, then says plainly to check the email,
+  because with confirmation on NOBODY IS SIGNED IN YET. Saying so beats
+  leaving the writer looking at a still screen.
+· FORGOT YOUR PASSWORD — really sends a reset, using the address already
+  typed in the box above.
+· ALREADY SIGNED IN — the page sends you straight through without showing
+  you anything.
+· Supabase's own error wording is unhelpful to a writer, so the two
+  common cases are said plainly ("That email and password do not match",
+  "Please confirm your email first") and anything else is passed through.
+
+IT LOADS SUPABASE'S OWN LIBRARY from a CDN, and that is a deliberate
+departure from no-tooling: IT IS WHAT KEEPS THE WRITER SIGNED IN BETWEEN
+VISITS and renews the session quietly. Writing that by hand is fiddly and
+easy to get wrong.
+KEV'S WORRY ABOUT SIGNING IN EVERY TIME WAS UNFOUNDED, and worth
+recording: the session persists in the browser until it is signed out or
+expires. Signing in is occasional, not a daily toll.
+
+FOUR CHANGES CAME OUT OF USING IT, ALL FROM KEV LOOKING AT THE SCREEN:
+1. SHOW PASSWORD on all three password boxes — a quiet word inside the
+   right-hand end of each box, fixed width so nothing jumps when Show
+   becomes Hide, and the word says what pressing it will DO.
+2. THE FRONT PAGE'S SIGN UP BUTTON LANDED ON THE LOG IN TAB, because both
+   buttons pointed at the same address. Now login.html#signup opens on
+   Sign Up; anything else opens on Log In. The front page's Sign up link
+   carries #signup.
+3. "MEMBERS ACCESS" CUT. Kev: "Sounds too exclusive, like some silly
+   club." Claude offered The Front Door and others; Kev: "Just cut it as
+   The Front Door etc sound a bit forced." Right — the two tabs beneath
+   already say Log In and Sign Up. The strapline took up its spacing so
+   the panel keeps its shape.
+4. "REQUEST ADMISSION" BECAME "SIGN UP". It sounded like a committee would
+   consider your application. The button now matches the tab that got you
+   there.
+AND ONE THING ADDED TO THE STYLING: A REAL FAILURE IS SAID IN THE DANGER
+RED #c43a2a, not in gold, so it cannot be mistaken for news.
+
+--- VERIFIED END TO END ---
+
+Kev signed up, the confirmation email arrived, he confirmed, and he signed
+in and reached the app. Authentication → Users shows one account, created
+20:29, signed in 20:31. members shows member_no 1.
+
+--- *** WHAT IS NOT DONE, AND IT MATTERS *** ---
+
+THE APP DOES NOT YET CHECK WHETHER ANYONE IS SIGNED IN. Anyone with the
+address still walks straight into app.inkyswot.com. The front door exists;
+THERE IS NO LOCK ON IT YET. Kev: "We need to close this off." That is a
+small block in the corridor and it is the next piece of this job.
+
+THE CONFIRMATION EMAIL COMES FROM SUPABASE, NOT FROM INKYSWOT. Kev spotted
+it and it needs fixing, but it is one job with a second: SUPABASE'S
+BUILT-IN SENDER IS FOR TESTING ONLY — a handful of emails an hour, and it
+says so itself. Attaching a proper email service fixes the name and the
+limit together. It means choosing a service, proving the domain, adding
+records to the domain's settings, and pointing Supabase at it. A SESSION
+OF ITS OWN, and it involves domain settings rather than code. It blocks
+nothing today.
+
+================================================================
+*** TWO ADDRESSES, ONE ACCOUNT — DECIDED 24 SEPTEMBER ***
+================================================================
+
+THE QUESTION WAS KEV'S: the front page at inkyswot.com and the app at
+app.inkyswot.com are separate, and if people sign up on one and sign in on
+the other they must be the same account underneath. He asked Claude to
+make the call: "That's the point I DON'T know what I want. You have to
+tell me what I need. Is it best to have everything under the .com? Or is
+there a better way. We must think security as well."
+
+THE ANSWER, AND KEV AGREED IT: KEEP THE TWO ADDRESSES. PUT EVERY ACCOUNT
+JOB ON THE APP. The front page stays the shop window; its Sign Up button
+does not sign anybody up, it sends them to the app, and the app does the
+signing up, the signing in and everything after. To a person using it that
+is married up — one journey, one account, one password.
+
+THE SECURITY REASON, WHICH IS THE ONE THAT DECIDED IT. The tempting
+alternative is to let people sign in on the front page too and share the
+session across both. THAT PUTS THE SIGN-IN ON THE MARKETING SITE — the
+part that changes most often, carries the most third-party bits, and is
+the likeliest thing to get broken into. Do it that way and a compromised
+front page can reach into people's accounts. KEEP THEM APART AND IT
+CANNOT: a break-in on the shop window costs you a shop window.
+KEV: "That last bit really hit home. so separate it is."
+
+THE SECOND REASON: the front page will change constantly — new copy, new
+pictures, a blog. THE APP MUST NOT WOBBLE EVERY TIME THE MARKETING IS
+FIDDLED WITH. Separate addresses means separate deployments, which already
+exist and should be kept.
+
+AND IT TURNED OUT THE SITE WAS ALREADY BUILT THAT WAY. Both buttons on
+inkyswot.com already pointed at app.inkyswot.com/login.html. Nothing had
+to move; the app simply needed a real front door behind them.
+
+--- THE THREE REPOSITORIES, AND WHY THERE ARE THREE ---
+
+Kev: "I am worried about having two repositories." Worth answering
+properly, because the worry is bigger than the thing.
+  · PitchDarkPress/inkyswot-rebuild — THE WORKSHOP. corridor.html and the
+    pockets. Everything Kev edits for the app lives here.
+  · PitchDarkPress/inkyswot-app — THE SHOP. What the Enclosure produces:
+    the stitched index.html that Vercel serves. NEVER EDITED BY HAND —
+    except for login.html, which is the one exception (see below).
+  · PitchDarkPress/inkyswot — THE FRONT PAGE, published by GitHub Pages
+    to inkyswot.com. Slower to deploy than Vercel; give it a couple of
+    minutes.
+THEY ARE NOT TWO VERSIONS OF THE SAME CODE. The app repo is an OUTPUT, so
+the two cannot drift apart in the way duplicate copies do.
+
+THE ONE GENUINE WRINKLE: login.html sits in the app repo and is not
+produced by anything. It is the single file there that is edited by hand.
+THE TIDY ANSWER, OFFERED AND NOT TAKEN UP YET: move it into the rebuild
+repo and have the Enclosure copy it across on publish, so everything Kev
+edits is in one place. That is a change to the Enclosure — a job, not a
+keystroke.
+AND THE REASON LOGIN.HTML IS NOT A POCKET: a person meets it BEFORE there
+is any project, any corridor, any pocket. Making it a pocket would mean
+loading the whole app before anyone could sign in. IT STANDS IN FRONT OF
+THE APP, so it is its own page, and Stitch never touches it.
+
+================================================================
+*** THE FRONT PAGE — LOOKED AT, AND DELIBERATELY LEFT (24 September) ***
+================================================================
+
+inkyswot.com IS A HOLDING PAGE, not a front page: wordmark, "The world's
+first Digital Creative Workstation for writers", Publish and be damned,
+world clocks, Watch This Space, Coming Autumn 2026.
+JUDGED AS A HOLDING PAGE IT IS DOING ITS JOB. Judged as the page that must
+convince a writer to subscribe it does almost nothing — but it is not
+trying to yet, and it cannot: a persuading page shows the platform
+working, and the Plot Mapper, the Wheel and the checker are not ready to
+be shown. WRITE IT NOW AND IT WOULD BE REWRITTEN THREE TIMES BEFORE
+LAUNCH.
+
+KEV COMPARED IT TO pitchdarkbroadcasting.com, which is livelier: an OFF
+AIR state, a studio hero image, and a row of feeds to switch between.
+WHAT MAKES THAT WORK IS THAT IT HAS A WORLD — broadcasting hands you
+off air, signal routing, transmissions, so a page saying "nothing here
+yet" instead says "we are between broadcasts", and you poke at it.
+INKYSWOT'S PAGE HAS A STATEMENT INSTEAD. Nothing to poke.
+
+KEV, HONESTLY: "The trouble is that now it will bug the crap out of me."
+AND HIS OWN IDIOM, WHICH IS BETTER THAN THE PRESS: A WRITER'S DESK AT
+NIGHT — the lamp, the open notebook, rain on the window, the cat. The
+sidebar down the left showing InkySwot's real sections, so a visitor sees
+the shape of the platform without a word of explanation. Spines labelled
+Ideas, Drafts, Rewrites, Maybes. "Every book begins here…" on the open
+page. The Proauthorist line along the bottom, and the world clocks carried
+over.
+ONE HONEST NOTE: as a web page that is a picture with things layered on
+it — the sidebar and the clocks drawn on top rather than being the
+picture. Fine, but worth knowing before anyone tries to make every object
+in it clickable, WHICH WAY LIES A MONTH'S WORK.
+DECIDED: LEAVE IT. The front page is a job for when there is something to
+put on it. KEV: "NO. Lets keep going."
+ONE TIDY NOTE FOR WHEN IT IS NEXT OPEN: the inkyswot repository's
+description and README both say "Publish and be prepared", which the
+locked decisions say must never be used. It is not on the live page.
+
+================================================================
 *** THE SILENT SAVE — FOUND 16 SEPTEMBER, FIXED AND LIVE 22 SEPTEMBER ***
 File: corridor.html (a self-contained block at the end of the script).
 File: pockets/project-overview.html (the saved line).
@@ -192,7 +453,10 @@ ANY FILE. It is the "use wins" rule working the first time it was tested.
 ================================================================
 *** THE PLATFORM IS LEAVING THE BROWSER (16 September 2026) ***
 AND HOW FAR IT GOES — DECIDED 22 SEPTEMBER: THE LIBRARY ALONE.
-Account created and standing ready. NOTHING IS CONNECTED YET.
+*** UPDATED 24 SEPTEMBER: IT IS CONNECTED NOW — but for ACCOUNTS, not
+for the library. The shelf is still not built. Read THE FRONT DOOR above
+before this section, because several lines below say nothing is connected
+and that is no longer true. ***
 ================================================================
 
 --- WHAT THE CODE ACTUALLY DOES TODAY, READ FROM corridor.html ---
@@ -267,6 +531,10 @@ his.
 4. LOGINS — KEV'S CALL: "I dont mind logging in." LATER, once the store
    exists. A login means the app asks who you are before it shows
    anything; nothing else about the platform changes.
+   *** OVERTAKEN 24 SEPTEMBER, DELIBERATELY. *** Logins came FIRST, not
+   later, because a book on a shelf must belong to somebody and an owner
+   cannot be retrofitted. Kev: "Then we need to start having account
+   numbers." See THE FRONT DOOR above.
 
 --- THE SHAPE OF THE SHELF — CLAUDE'S PROPOSAL, NOT DECIDED ---
 
@@ -314,6 +582,22 @@ TWO THINGS TO VERIFY ON SUPABASE'S OWN PAGES BEFORE BUILDING, NOT
 TRUSTED FROM A SEARCH: the maximum size of a single uploaded file on the
 free tier, and whether there is a practical ceiling on a single text row
 worth respecting.
+
+*** AND THREE THINGS THAT GO IN FROM THE FIRST DAY, WHATEVER SHAPE THE
+SHELF TAKES — AGREED 24 SEPTEMBER. *** Kev asked the right question:
+"are there things, functions, systems etc that we should be adding now. I
+ask so we dont have to go back over stuff." Most things are cheaper to add
+later. THESE THREE ARE PAINFUL TO RETROFIT:
+  1. WHICH PROJECT A BOOK BELONGS TO. Add it later and every book already
+     on the shelf has no answer.
+  2. WHOSE BOOK IT IS — the account's own identifier. THIS IS WHY THE
+     FRONT DOOR WAS BUILT FIRST.
+  3. WHEN IT WENT ON THE SHELF, AND WHETHER IT IS DELETED — a
+     deleted-marker rather than a real deletion, so nothing vanishes by
+     accident. The same thinking as the Trash screen.
+NOTHING ELSE. The chapter-finding, the muster, the check and the search
+can all be added to a shelf that already works without disturbing what is
+on it.
 
 --- WHY SUPABASE, OVER THE ALTERNATIVES ---
 
@@ -400,10 +684,17 @@ AND THE DASHBOARD SETTLES IT BY OBSERVATION rather than by argument — it
 reports when the project last saw activity.
 
 --- WHERE THIS LEAVES THE PLATFORM ---
+[WRITTEN 22 SEPTEMBER, AND NOW HALF OUT OF DATE. See the note below.]
 
 NOTHING IS CONNECTED. InkySwot still reads and writes localStorage and
 knows nothing about Supabase. The account is a place for the library to
 live, and that is all it is today.
+
+*** UPDATED 24 SEPTEMBER. *** login.html now talks to Supabase, and the
+members table holds one row. THE PROJECTS STILL LIVE IN localStorage and
+the shelf is still not built, so the rest of the paragraph above stands.
+AND THE PAUSING NOTE BELOW IS NOW ANSWERED IN PART: signing in touches
+Supabase, so opening the app through the front door IS activity.
 THE NEXT JOB IS THE SHELF ITSELF — somewhere for a book to live, and a
 way to put one there. SMALL, BECAUSE ONLY THE LIBRARY MOVES.
 IT IS INFRASTRUCTURE, NOT A POCKET — the first thing hit in this rebuild
@@ -513,6 +804,29 @@ CLAUDE'S VIEW, NOT DECIDED: the ping should say WHERE, not just what.
 "That's wrong" is useless. "He was dark in chapter nine of book one" lets
 the writer go and look — and the writer may have changed it on purpose.
 So it asks rather than corrects. Offered, not ruled on.
+
+--- HOW CHAPTERS WOULD BE RECOGNISED — ASKED 24 SEPTEMBER ---
+
+KEV: "How will it recognise chapters?" By the headings, and it works well
+on tidy books and less well on untidy ones. It looks for a SHORT LINE,
+ALONE, WITH NO FULL STOP, often in capitals: CHAPTER ONE · Chapter 1 ·
+1. · Stave One · Part Three.
+WHERE IT STRUGGLES: chapters marked only by an ornament or a gap; a number
+on one line and the title on the next; prologues, epilogues and interludes
+that never say "chapter".
+SO IT SHOWS WHAT IT FOUND AND THE WRITER CORRECTS IT. "I found 24
+chapters, here they are." An awkward book costs a minute rather than
+defeating it.
+AND KEV ADDED THE RIGHT REFINEMENT: "we should have a checking function.
+So where the system is not sure it asks for clarity." WHICH SPLITS THE
+FINDINGS THREE WAYS — CERTAIN (shown, ticked, no question), UNSURE
+(flagged, the writer says yes or no), and MISSED (the count is stated
+plainly, so 11 chapters in a 24-chapter book is obviously wrong).
+IT ONLY ASKS WHERE ASKING EARNS ITS PLACE — the same rule as the checker:
+rules assert, queries ask, and a query dressed as a fault is the worst
+thing the tool can do.
+THE REAL ANSWER IS STILL TO RUN IT ON RAPSCALLION AND LOOK. Guessing at
+how tidy Kev's own book is would be daft when it can simply be tried.
 
 --- STILL CARRIED FROM 16 SEPTEMBER ---
 
@@ -1234,7 +1548,10 @@ BACK AND FORTH between the Plot Mapper and the Wheel. Basics and
 Publishing are one-way gates at either end; THE PLOT MAPPER AND THE WHEEL
 ARE A PAIR.
 
-WHERE THE FLOW STANDS AT 22 SEPTEMBER:
+WHERE THE FLOW STANDS AT 24 SEPTEMBER:
+  0. THE FRONT DOOR — NEW, and live. login.html: sign up, confirm, sign
+     in, reset. The app itself is not yet closed to people who have not
+     signed in.
   1. BASICS — live, points forward, saves honestly, boxes line up.
   2. PLOT MAPPER — live, and it saves. Holds one real book.
   3. WHEEL / MANUSCRIPT — still not in the platform. Read and assessed
@@ -1432,6 +1749,14 @@ PitchDarkPress/inkyswot-rebuild (private):
   test/
 INDEX.HTML IS THE OUTPUT, NOT A SOURCE. Never edit it as though it were.
 NO manuscript POCKET YET. NO research POCKET YET.
+
+AND THE OTHER TWO REPOSITORIES, RECORDED HERE 24 SEPTEMBER because a
+session opened without knowing where login.html lived:
+PitchDarkPress/inkyswot-app — what Vercel serves at app.inkyswot.com.
+  index.html (the Enclosure's output, never hand-edited) and LOGIN.HTML,
+  which is hand-edited and is the one exception. Stitch never touches it.
+PitchDarkPress/inkyswot — the front page, index.html, published by GitHub
+  Pages to inkyswot.com. Slower to deploy than Vercel.
 LAST STITCH, 22 SEPTEMBER: corridor.html 147,527 characters, index.html
 347,456 characters, 16 of 16 pockets placed.
 
@@ -1682,6 +2007,15 @@ FROM 16 SEPTEMBER:
 - NOTHING THE PLATFORM FINDS LANDS IN THE WRITER'S WORK UNTIL THE WRITER
   HAS SEEN IT AND SAID SO. The muster, not the silent fill.
 
+FROM 24 SEPTEMBER (from the front door):
+- A REAL FAILURE IS SAID IN THE DANGER RED, NEWS IS SAID IN GOLD. One
+  message line per form, so a failure can never be mistaken for progress.
+- A SHOW/HIDE CONTROL SAYS WHAT PRESSING IT WILL DO, not what state it is
+  in — and it has a fixed width, so the box does not jump.
+- A BUTTON MATCHES THE TAB THAT GOT YOU THERE. Sign Up under Sign Up.
+- NO CLUB LANGUAGE. "Members Access" and "Request Admission" both went.
+  The platform is not a committee.
+
 FROM 22 SEPTEMBER:
 - TWO BOXES SIDE BY SIDE LINE UP, WHATEVER THEIR LABELS DO. The box is
   what the eye follows, so the box wins. Each half of a row is a column
@@ -1697,10 +2031,25 @@ Proposed, not ruled. USE WINS OVER THIS LIST WHEREVER THEY DISAGREE.
 ================================================================
 DONE 22 SEPTEMBER: THE SILENT SAVE. The save guard in the corridor and
 the honest saved line on Basics, both live.
+DONE 24 SEPTEMBER: THE CONNECTION PROVED, THE MEMBERS TABLE BUILT, AND
+THE FRONT DOOR LIVE. Kev is member 1.
+
+0a. *** THE LOCK ON THE DOOR. *** The app does not yet check whether
+   anyone is signed in. A small block in the corridor that sends anyone
+   not signed in back to login.html. Kev: "We need to close this off."
+   THE NEXT PIECE OF WORK.
+0b. THE EMAIL SENDER. The confirmation email comes from Supabase, and
+   Supabase's built-in sender is for testing only. One job fixes the name
+   and the limit together, and it involves domain settings rather than
+   code. A SESSION OF ITS OWN. Blocks nothing today.
+0c. DELETE public.connection_test, the plug test's throwaway table.
 
 0. *** THE SHELF. *** Supabase, THE LIBRARY ALONE (Kev's decision).
    ITS SHAPE IS NOT DECIDED — build something small, see how Supabase
    actually behaves, and decide from that. INFRASTRUCTURE, NOT A POCKET.
+   WHATEVER SHAPE IT TAKES, three things go in from the first day: which
+   project, whose book, and when it arrived plus a deleted-marker. See
+   the Supabase section.
 1. THE LIBRARY ROOM AND THE WAY IN — pockets/research.html, a corridor
    slot, nav-research repointed. A file picker, plain text first.
 2. THE CHAPTER SPLIT — find the headings. CHECK FIRST whether the
@@ -1745,3 +2094,7 @@ AND KEV'S ONE FROM 22 SEPTEMBER, WHICH IS THE SAME THOUGHT FROM THE OTHER
 SIDE: "we can't really progress the platform until we can start adding my
 work to a database." THE NIGGLES ARE COSMETIC; THE STORE IS WHAT
 EVERYTHING ELSE WAITS ON.
+
+AND KEV'S ONE FROM 24 SEPTEMBER, WHICH IS WHY THE ACCOUNTS CAME BEFORE
+THE SHELF: "I want to get this backend stuff sorted so we can progress the
+platform." The front door is the first half of that, and it is done.
