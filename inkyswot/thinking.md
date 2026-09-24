@@ -1,4 +1,12 @@
 File: inkyswot/thinking.md
+Last updated: 24 September 2026. Covers the previous session, written up
+at the start of this one. NOTHING FROM THE 22 SEPTEMBER VERSION IS
+SHORTENED OR REMOVED; today's changes sit beside what they affect.
+*** THE BIG ONE: THE CONNECTION IS NO LONGER A THREAD. It is proved and
+in use, and THE FRONT DOOR IS LIVE. What is open now is the LOCK on it,
+the email sender, and the shelf. ***
+
+[The 22 September header follows, kept as written.]
 Last updated: 22 September 2026. Covers the previous session, whose date
 was not recorded, written up at the start of this one.
 NOT REWRITTEN CLEAN THIS TIME, though that is this file's usual rule. Kev:
@@ -31,6 +39,11 @@ SECTION A — OPEN NOW (16 September 2026, updated 22 September)
 ================================================================
 
 --- THE SUPABASE CONNECTION — THE LIVE THREAD, AND JOB ZERO ---
+*** CLOSED IN PART, 24 SEPTEMBER. THE CONNECTION IS PROVED AND IN USE —
+for ACCOUNTS, not yet for the library. A throwaway page sent a line and
+read it back, first time; login.html now signs people in and out for
+real. WHAT REMAINS OPEN IN THIS SECTION is the LIBRARY's own connection
+and the behaviour on a bad network. The text below is kept as written. ***
 
 THE ACCOUNT EXISTS AND NOTHING IS WIRED. Organisation Pitch Dark Studios,
 project InkySwot, London, Free plan, RLS on by default. Full detail in
@@ -77,6 +90,12 @@ decisions for him; only two were genuinely his.
   library depends on the connection. Still to be designed for the shelf.
 · QUESTION 4, LOGINS — KEV'S, AND ANSWERED FOR NOW: "I dont mind logging
   in." Later, once the store exists.
+  *** OVERTAKEN 24 SEPTEMBER. NOT LATER — FIRST. *** Kev: "Then we need to
+  start having account numbers." A book on a shelf must belong to
+  somebody, and an owner cannot be retrofitted, so the front door was
+  built before the shelf. Kev: "I think we are moving in that direction."
+  AND THE WORRY THAT CAME WITH IT WAS UNFOUNDED: the session persists in
+  the browser, so signing in is occasional, not a daily toll.
 
 THE SHAPE OF THE SHELF — CLAUDE'S PROPOSAL, NOT DECIDED (22 September).
 Researched against Supabase's own documentation before recommending.
@@ -97,6 +116,19 @@ look at it, then decide.
 TO VERIFY ON SUPABASE'S OWN PAGES BEFORE BUILDING: the largest single file
 the free tier accepts, and whether a single text row has a ceiling worth
 respecting.
+
+AND THREE COLUMNS THAT GO IN WHATEVER THE SHAPE — 24 SEPTEMBER. Kev asked
+the right question: "are there things, functions, systems etc that we
+should be adding now. I ask so we dont have to go back over stuff." Most
+things are cheaper later. THESE ARE PAINFUL TO RETROFIT:
+  1. WHICH PROJECT the book belongs to.
+  2. WHOSE BOOK IT IS — the account's identifier. KEV'S OWN, and the
+     reason the front door was built first.
+  3. WHEN IT ARRIVED, AND A DELETED-MARKER rather than a real deletion —
+     the same thinking as the Trash screen.
+[1 and 3 are Claude's proposal; 2 is Kev's. Nothing else is added now:
+the chapter split, the muster, the check and the search can all be added
+to a shelf that already works.]
 
 --- *** THE SILENT SAVE — A LIVE FAULT, NOT A DESIGN QUESTION *** ---
 *** FIXED AND LIVE — the previous session, written up 22 September. ***
@@ -124,6 +156,43 @@ placing 15 of 16 pockets in silence, the checker's zero findings looking
 like a pass that never ran, and now this. IT IS THE HOUSE FAULT. Worth a
 deliberate sweep for it rather than waiting to stumble on the fourth.
 
+--- *** THE LOCK ON THE DOOR — THE LIVE THREAD, AND THE NEXT PIECE OF
+    WORK (24 September) *** ---
+
+THE FRONT DOOR IS BUILT AND THE APP IS STILL OPEN. login.html signs people
+up and in, but app.inkyswot.com does not check whether anyone has. ANYONE
+WITH THE ADDRESS STILL WALKS IN.
+KEV: "We need to close this off."
+WHAT IT IS: a small block in the corridor that asks Supabase whether there
+is a session and, if not, sends the person to login.html. The same
+bolted-on-block pattern as the save guard.
+WHAT TO THINK ABOUT BEFORE WRITING IT, because a gate on the front of
+everything is the one piece that can lock Kev out of his own platform:
+· IT MUST FAIL OPEN OR FAIL LOUD, NOT FAIL SILENT. If Supabase is
+  unreachable, a gate that quietly decides nobody is signed in would
+  bounce the writer away from work that is sitting safely in their own
+  browser. THE PROJECTS ARE STILL IN localStorage; the gate must not
+  stand between the writer and their own machine's copy.
+· THE CHECK IS ASYNCHRONOUS. The page will draw before the answer comes
+  back. Either hold the screen for a moment or accept a flash of the app
+  before the redirect — and a held screen must say why it is held.
+· SIGNING OUT NEEDS SOMEWHERE TO LIVE. There is no sign-out control
+  anywhere in the platform yet.
+NOT DESIGNED. NOT BUILT.
+
+--- THE EMAIL SENDER — OPEN (24 September) ---
+
+The confirmation email arrives from Supabase, not from InkySwot. Kev
+spotted it straight away and it needs fixing — but it is ONE JOB WITH A
+SECOND, because Supabase's built-in sender is FOR TESTING ONLY: a handful
+of emails an hour, and it says so itself. Fine for one writer; useless the
+day three people sign up at once.
+ATTACHING A PROPER SENDER FIXES THE NAME AND THE LIMIT TOGETHER. It means
+choosing a service, proving InkySwot owns its domain, adding records to
+the domain's settings, and pointing Supabase at it.
+IT IS A SESSION OF ITS OWN, and it is domain settings rather than code.
+IT BLOCKS NOTHING TODAY. NOT CHOSEN.
+
 --- THE IMPORT — THE NEW THREAD ---
 *** UPDATED 22 SEPTEMBER: ITS PURPOSE HAS CHANGED, AND IT IS STILL BEING
 BUILT ON. READ THIS FIRST, THEN THE 16 SEPTEMBER TEXT BENEATH IT. ***
@@ -150,6 +219,28 @@ overstated it, and is kept only as the record.
 ONE MORE WORKING IDEA OF CLAUDE'S: the checker's parser already classifies
 CHAPTER TITLES (stage 3 of the eight). The chapter split may be mostly
 built already. Worth checking before writing anything new.
+
+HOW CHAPTERS WOULD BE RECOGNISED — ASKED AND ANSWERED 24 SEPTEMBER.
+KEV: "How will it recognise chapters?" By the headings: A SHORT LINE,
+ALONE, NO FULL STOP, often in capitals. CHAPTER ONE · Chapter 1 · 1. ·
+Stave One · Part Three.
+WHERE IT STRUGGLES, said plainly rather than promised away: chapters
+marked only by an ornament or a gap; a number on one line and the title on
+the next; prologues, epilogues and interludes that never say "chapter".
+AND KEV'S REFINEMENT, WHICH IS THE RIGHT ONE: "we should have a checking
+function. So where the system is not sure it asks for clarity."
+SO THE FINDINGS SPLIT THREE WAYS:
+  · CERTAIN — shown, ticked, no question asked.
+  · UNSURE — flagged, and the writer says yes or no.
+  · MISSED — the count stated plainly, so 11 chapters in a 24-chapter book
+    is obviously wrong.
+IT ONLY ASKS WHERE ASKING EARNS ITS PLACE. A list of twenty-four with
+three queried is a minute's work; a list where all twenty-four are queried
+is a chore nobody does. SAME RULE AS THE CHECKER: rules assert, queries
+ask, and a query dressed as a fault is the worst thing the tool can do.
+AND THE REAL ANSWER IS STILL TO RUN IT ON RAPSCALLION AND LOOK. Kev's own
+books may be perfectly tidy, in which case the clever version never needs
+building.
 AND IT IS THE CONTINUITY LIBRARY — described by Kev on 15 August and again
 on 31 August, and now wanted for a real book. Three arrivals, three
 directions.
@@ -510,6 +601,14 @@ NOTE (16 SEPTEMBER): THE NO-TOOLING PRINCIPLE NOW MEETS ITS FIRST REAL
 TEST. Supabase is an account, a dashboard and keys — it is not a terminal,
 but it is the first thing in this project that lives outside a browser tab
 and a button. Watch whether it stays that simple.
+NOTE (24 SEPTEMBER): SO FAR IT HAS. Everything done on Supabase was a
+dashboard page or a paste into the SQL Editor — no terminal, no install,
+no build step. ONE DEPARTURE, MADE DELIBERATELY: login.html loads
+Supabase's own library from a CDN, because that is what keeps the writer
+signed in between visits and renews the session quietly. Writing that by
+hand is fiddly and easy to get wrong. IT IS A SCRIPT TAG IN A FILE, NOT A
+BUILD STEP, so the principle bends rather than breaks — but it is the
+first outside library the platform depends on, and worth watching.
 
 THE DCW AS THE STAGE — NOT BUILT, AND NOT NEEDED SO FAR. If it returns,
 the question it left open is still right: what does the DCW show when
@@ -653,3 +752,19 @@ RETIRED FROM THIS FILE (so nothing feels lost)
 - LOGINS — closed FOR NOW, 22 September. Later; Kev does not mind them.
 - THE AUTHOR AND STATUS BOXES OUT OF LINE — closed in the previous
   session. Found by Kev in use, fixed and live.
+- WHETHER INKYSWOT CAN TALK TO SUPABASE AT ALL — closed 24 September.
+  Proved with a throwaway page, first time: 201 on the write, 200 on the
+  read. The page has done its job; the table it used should be deleted.
+- WHERE ACCOUNT WORK HAPPENS — closed 24 September. The app, never the
+  marketing site. The security reasoning is in locked-decisions.md.
+- WHETHER THERE IS A MEMBER NUMBER — closed 24 September. There is, and
+  Kev is 1.
+- WHEN LOGINS HAPPEN — closed 24 September, the other way round from
+  22 September: FIRST, not later, because an owner cannot be retrofitted.
+- THE SIGN UP BUTTON LANDING ON THE LOG IN TAB — closed 24 September.
+  login.html#signup, and the front page's button carries it.
+- "MEMBERS ACCESS" AND "REQUEST ADMISSION" — closed 24 September. Both
+  gone. Kev: "Sounds too exclusive, like some silly club."
+- WHETHER THE FRONT PAGE NEEDS REWORKING NOW — closed 24 September, for
+  now. It is a holding page and it is right for one. The writer's-desk
+  idiom Kev showed is recorded in future.md and current-state.md.
