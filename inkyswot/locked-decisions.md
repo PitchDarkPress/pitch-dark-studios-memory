@@ -1,4 +1,14 @@
 File: inkyswot/locked-decisions.md
+
+File: inkyswot/locked-decisions.md
+Last updated: 26 September 2026 — ADD-ONLY update. Covers the previous
+session: the Log Out button, built and live. NOTHING HAS BEEN SHORTENED,
+DELETED OR MOVED. ADDED: one lock under ACCOUNTS AND THE FRONT DOOR, two
+working-practice locks, two traps, and three house-style lines. AMENDED
+IN PLACE: the lock on the door, which is now PARKED — its wording is kept
+where it was, with the amendment beside it.
+
+[The 24 September header follows, kept as written.]
 Last updated: 24 September 2026 — ADD-ONLY update. Covers the previous
 session, which this file dates 22 September. NOTHING HAS BEEN SHORTENED,
 DELETED OR MOVED. ADDED: a new ACCOUNTS AND THE FRONT DOOR block, and
@@ -84,6 +94,15 @@ AND SINCE 22 SEPTEMBER — THE FRONT DOOR
 - THE APP IS CLOSED TO ANYONE NOT SIGNED IN. Decided, NOT YET BUILT.
 - NO CLUB LANGUAGE.
 - A SECRET KEY THAT HAS BEEN PASTED ANYWHERE IS SPENT.
+
+AND SINCE 24 SEPTEMBER — LOG OUT
+- LOG OUT IS CENTRED AT THE FOOT OF THE SIDEBAR, with the platform's own
+  confirmation panel. Built and live.
+- THE LOCK ON THE DOOR IS PARKED. It guards an empty room.
+- BUILD THE ONE THING ASKED FOR.
+- NOTHING IN A BOLTED-ON BLOCK MAY CONTAIN THE CLOSING SCRIPT TAG, EVEN
+  INSIDE A COMMENT. A trap; it killed the whole page.
+- READ THE CLASS FROM THE FILE. Never guess it.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -243,7 +262,8 @@ nowhere.
 ANONYMOUS SIGN-INS OFF. EMAIL THE ONLY PROVIDER, matching "no SSO".
 
 THE APP IS CLOSED TO ANYONE NOT SIGNED IN — LOCKED (24 September 2026),
-NOT YET BUILT
+NOT BUILT, AND *** PARKED 26 SEPTEMBER *** — see THE LOCK ON THE DOOR IS
+PARKED below. The decision stands; only the timing has changed.
 KEV: "We need to close this off. It means I will have to sign in each time
 we work on it but my pc will remember password etc."
 AND HE WILL NOT HAVE TO, which is worth recording because it was a real
@@ -261,6 +281,40 @@ In and Sign Up, so the line was telling people what they could see.
 consider your application.
 THE GENERAL RULE: INKYSWOT IS NOT A COMMITTEE AND NOT A CLUB. Plain words
 for plain acts, and a button matches the tab that got you there.
+
+LOG OUT — LOCKED AND BUILT (26 September 2026)
+ONE ITEM AT THE FOOT OF THE SIDEBAR, in its own section directly under
+Trash, and CENTRED. Its own InkySwot confirmation panel, built from the
+corridor's modal classes. It signs the writer out and lands them at
+login.html.
+WHERE IT SITS, AND WHY IT IS NOT BELOW NEW PROJECT: New Project is in its
+own strip, apart from the menu, so a menu item beneath it would be wrong.
+And New Project is pressed most, Log Out least.
+HOW IT IS SET APART — KEV ASKED FOR THAT, so it is not pressed by
+accident, AND RULED OUT THE TWO OBVIOUS ANSWERS HIMSELF.
+  · NOT RED. The danger red means a FAULT. Spend it on an ordinary action
+    and it stops meaning "something is wrong", which weakens it where it
+    is actually needed — the save guard's bar.
+  · NOT DIMMER. Kev: "a darker colour doesnt work for me." It would read
+    as disabled.
+  · KEV'S ANSWER: "Just centre it, that is diferant form the rest."
+IT ASKS BEFORE IT ACTS, in the platform's own panel.
+
+THE LOCK ON THE DOOR IS PARKED — LOCKED FOR NOW (26 September 2026)
+*** THIS AMENDS "THE APP IS CLOSED TO ANYONE NOT SIGNED IN" ABOVE, which
+is kept in full as the record. The decision stands; the TIMING does not.
+***
+It was written and then withdrawn, for two separate reasons and both are
+worth keeping.
+1. KEV ASKED FOR A LOG OUT BUTTON AND GOT A BUNDLE. See BUILD THE ONE
+   THING ASKED FOR under working practice.
+2. AND IT IS A LOCK ON AN EMPTY ROOM. Nothing lives on the server yet but
+   accounts. Anyone who got past the gate would find an app reading their
+   own browser, so the gate protects nothing today, and a gate that can
+   fail is a gate that can lock Kev out of his own work for no gain.
+IT WAITS UNTIL THE SHELF EXISTS. This is "use wins" turned on Claude's own
+enthusiasm rather than on the build list.
+THE SIGN-OUT HALF OF THAT LOCK IS NOW DONE — it is the Log Out button.
 
 --- BUILD FOR ONE USER (16 September 2026) ---
 
@@ -358,6 +412,61 @@ for. "Always writer-led" is strong precisely because it means the writer's
 OWN voice. TO BE DECIDED DELIBERATELY RATHER THAN ARRIVED AT BY ACCIDENT.
 
 --- WORKING PRACTICE ---
+
+*** NOTHING IN A BOLTED-ON BLOCK MAY CONTAIN THE CLOSING SCRIPT TAG, EVEN
+INSIDE A COMMENT — LOCKED (26 September 2026). A TRAP. NEVER SHORTEN THIS.
+***
+Version one of the Log Out block described where it should go, and in
+doing so wrote the closing script tag out in full inside its opening
+comment.
+THE BROWSER DOES NOT READ COMMENTS. It saw that tag and ended the script
+there. Hundreds of lines of corridor after it never ran. My Projects drew
+nothing; the new button never appeared. Kev: "I dont know what that did
+but I have lose the single project and the button is not there."
+The console said it in one line: "Uncaught SyntaxError: Invalid or
+unexpected token" at (index):3331.
+THE FIX WAS ONE LINE of the comment. Every version of the block since
+carries a standing note saying so, and any future bolted-on block should
+carry the same.
+
+*** WHEN A PAGE DIES, PROVE THE WRITER'S WORK IS SAFE BEFORE FIXING
+ANYTHING — LOCKED (26 September 2026). ***
+With the app blank and the project apparently gone, the first thing done
+was not a fix. It was one line in the console —
+localStorage.getItem('is-projects') — which returned The Further
+Adventures of A. Rapscallion whole, with Kev's name on it. The book had
+never been at risk; the screen simply could not draw it.
+A MINUTE SPENT PROVING IT COSTS NOTHING AND REMOVES THE ONLY FEAR THAT
+MATTERS. Reassure, then repair. In that order, every time.
+
+READ THE CLASS FROM THE FILE — LOCKED (26 September 2026)
+Version two of the Log Out block built its panel from the corridor's own
+modal classes, correctly, read from the New Project pop-up — and then
+opened it by adding the class "active", BECAUSE CLAUDE ASSUMED THAT WAS
+THE PATTERN.
+IT IS NOT. Line 117 of the corridor: ".modal-overlay.open{display:flex}".
+THE CLASS IS "open". The panel was built, present in the page, and never
+shown.
+IT COST A WHOLE STITCH AND PUBLISH CYCLE, and it is the same fault this
+file already records three times over under WORK FROM THE IMAGE / THE
+CODE. Claude had the corridor to hand and did not look.
+THE SPECIFIC FORM OF IT WORTH NAMING: a class name, an id, a function
+name or a selector is READ FROM THE FILE, never inferred from a pattern
+seen elsewhere in it.
+
+BUILD THE ONE THING ASKED FOR — LOCKED (26 September 2026)
+Kev asked for a Log Out button. Claude built the Log Out button AND the
+sign-in gate in one block, without separating them or saying so.
+KEV: "I thought we were adding a log out button and now we seem to have
+gone in an entirly diferant direction."
+AND THE SECOND HALF OF THE FAULT WAS WORSE THAN THE FIRST: asked what the
+extra thing was, Claude explained the bundle rather than simply
+unbundling it. Kev had to ask twice.
+THE RULE: BUILD THE ONE THING ASKED FOR. If something else is genuinely
+needed alongside it, say so in a sentence and let Kev decide. And when a
+bundle is pointed out, take it apart first and discuss it after.
+IT IS THE SAME SHAPE AS "SMALL CHANGES MEAN SMALL CHANGES", pointed at
+scope rather than at code.
 
 *** A SECRET KEY THAT HAS BEEN PASTED ANYWHERE IS SPENT — LOCKED
 (24 September 2026). A TRAP, AND IT ALREADY HAPPENED ONCE. ***
@@ -489,6 +598,10 @@ the platform matters, ASK FOR THE CLICK OR THE FILE. Do not assert it.
 AND IN THE PREVIOUS SESSION: the corridor was asked for fresh before the
 save guard was written, even though a copy had been pasted the session
 before — "in case anything moved". That is the rule working.
+AND 26 SEPTEMBER, THE FOURTH TIME, AND THE RULE FAILING: the modal's
+opening class was GUESSED as "active" when the corridor says "open" on
+line 117. See READ THE CLASS FROM THE FILE above. The file was available
+and was not read.
 
 ABSENCE IS NOT ACCIDENT — LOCKED (31 August 2026)
 Chapters and The Treatment are stitched into index.html with no way in,
@@ -590,6 +703,9 @@ CORRIDOR PLUS POCKETS — THE ARCHITECTURE — LOCKED (August 2026)
 Private repo: PitchDarkPress/inkyswot-rebuild.
 NOTE 22 SEPTEMBER: the corridor's script now ends with three bolted-on
 blocks, in this order — SPELL CHECK, READ ALOUD, THE SAVE GUARD.
+UPDATED 26 SEPTEMBER: FOUR. LOG OUT is the fourth. Corridor 151,742
+characters, index.html 351,671. AND SEE THE SCRIPT-TAG TRAP under working
+practice before writing a fifth.
 NOTE 24 SEPTEMBER — THERE ARE THREE REPOSITORIES, AND THEY DO DIFFERENT
 JOBS. inkyswot-rebuild is THE WORKSHOP (corridor and pockets).
 inkyswot-app is THE SHOP — the Enclosure's output, served by Vercel at
@@ -1323,6 +1439,17 @@ gold. Crimson Pro (body) · JetBrains Mono (labels and interface) ·
 Playfair Display (wordmark and titles). Muted danger red #c43a2a.
 Light/dark toggle platform-wide.
 GOLD MARKS ANYTHING ALIVE AND RESPONDING. NEVER DECORATIVE.
+ADDED 26 SEPTEMBER, from Log Out:
+- A SIDEBAR ITEM THAT IS NOT A WORKING SCREEN IS CENTRED. That is the
+  distinguishing mark. Not red — red means a fault. Not dimmer — that
+  reads as disabled.
+- A CONFIRMATION USES THE PLATFORM'S OWN PANEL, NEVER THE BROWSER'S BOX.
+  The corridor's classes are there to be reused: modal-overlay / modal /
+  modal-title / modal-sub / modal-btns, opened with the class "open".
+- A MEASUREMENT IS NOT A DIAGNOSIS. offsetParent returning <body> and a
+  top of 785 were read as "the item is in the wrong place". It was not —
+  the sidebar scrolls and it was below the fold.
+
 ADDED 24 SEPTEMBER, from the front door:
 - A REAL FAILURE IS SAID IN THE DANGER RED; NEWS IS SAID IN GOLD. One
   message line per form, so a failure cannot be mistaken for progress.
@@ -1411,6 +1538,13 @@ CLOSED 22 SEPTEMBER (for the previous session):
 · THE SAVED LINE THAT COULD LIE — built and live.
 · WHAT MOVES TO SUPABASE FIRST — closed for now: the library alone.
 · LOGINS — closed for now: later, and Kev does not mind them.
+CLOSED 26 SEPTEMBER:
+· WHETHER THERE IS A WAY OUT OF THE PLATFORM — there is. Log Out, centred
+  at the foot of the sidebar, with its own panel. Built and live.
+· HOW LOG OUT IS SET APART FROM THE WORKING SCREENS — centred. Kev's own
+  answer, after ruling out red and a darker colour.
+· WHETHER THE CONFIRMATION USES THE BROWSER'S BOX — it does not.
+
 CLOSED 24 SEPTEMBER:
 · WHETHER INKYSWOT CAN TALK TO SUPABASE AT ALL — proved, first time.
 · WHERE ACCOUNT WORK HAPPENS — the app, not the front page.
@@ -1423,6 +1557,14 @@ CLOSED 24 SEPTEMBER:
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 ================================================================
+
+"THE LOCK ON THE DOOR IS THE NEXT PIECE OF WORK" (24 September 2026,
+PARKED 26 September 2026) — it was written and withdrawn the same
+session. Kev had asked for a Log Out button and got a bundle; and the
+lock guards an empty room, since nothing lives on the server yet but
+accounts. THE DECISION THAT THE APP SHOULD BE CLOSED STANDS and is kept
+in full in the live section. Only the timing has changed: it waits until
+the shelf exists.
 
 "LOGINS LATER" (locked for now 22 September 2026, OVERTAKEN 24 September
 2026) — the plan was to build the store first and add accounts afterwards.
