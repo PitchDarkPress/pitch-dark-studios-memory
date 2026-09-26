@@ -1,4 +1,12 @@
 File: inkyswot/completed.md
+
+File: inkyswot/completed.md
+Last updated: 26 September 2026 — entries for the previous session added
+at the foot. NOTHING ELSE IS CHANGED, AND NOTHING IS SHORTENED OR REMOVED.
+THE HEADLINE: LOG OUT IS BUILT AND LIVE, and the lock on the door is
+parked on purpose.
+
+[The 24 September header follows, kept as written.]
 Last updated: 24 September 2026 — entries for the previous session added
 at the foot. NOTHING ELSE IS CHANGED, AND NOTHING IS SHORTENED OR REMOVED.
 THE HEADLINE: THE PLATFORM IS CONNECTED AND THE FRONT DOOR IS LIVE.
@@ -784,3 +792,103 @@ AND THE CONFIRMATION EMAIL COMES FROM SUPABASE, NOT FROM INKYSWOT. Kev
 spotted it. Supabase's built-in sender is for testing only — a handful an
 hour — so fixing the name and the limit is one job, and it involves domain
 settings rather than code. A session of its own — 24 September 2026.
+
+--- 26 SEPTEMBER 2026 ---
+[The previous session, written up at the start of this one.]
+
+*** LOG OUT IS BUILT AND LIVE. Three versions, two real faults, and both
+faults are worth more than the button. ***
+
+WHAT WAS BUILT. One item at the foot of the sidebar, in its own section
+directly under Trash, CENTRED — the only thing that sets it apart from the
+working screens above it. Clicking it opens an InkySwot panel (Log Out /
+"Your work is saved as you type." / Cancel · Log Out) built from the
+corridor's own modal classes, so it inherits the house look with no new
+styling. It signs the writer out of Supabase and lands them at login.html.
+A fourth bolted-on block at the end of corridor.html, after the save
+guard. Corridor 151,742 characters, index.html 351,671, 16 of 16, counts
+matching at publish.
+VERIFIED END TO END: Kev clicked Log Out, got the panel, pressed Cancel
+(it closed), pressed Log Out (it signed him out and landed him at the
+front door with Chrome filling his details), and signed back in.
+Kev: "Yes and yes." Then: "Its there and it works" — 26 September 2026.
+
+HOW IT IS SET APART — AND KEV RULED OUT THE TWO OBVIOUS ANSWERS HIMSELF.
+He asked for it to be distinguished so it is not pressed by accident.
+Claude argued against RED: the danger red means a FAULT, and spending it
+on an ordinary action weakens it where it is actually needed, on the save
+guard's bar. Kev then rejected a darker colour of his own accord — "a
+darker colour doesnt work for me" — which was right, since it would read
+as disabled. HIS ANSWER: "Just centre it, that is diferant form the rest."
+It is, and it cost one line — 26 September 2026.
+
+*** FAULT ONE: THE CLOSING SCRIPT TAG INSIDE A COMMENT KILLED THE WHOLE
+PAGE. A TRAP, NOW LOCKED. ***
+Version one's opening comment described where the block should go, and in
+doing so wrote the closing script tag out in full. THE BROWSER DOES NOT
+READ COMMENTS — it saw that tag and ended the script there, so hundreds of
+lines of corridor after it never ran. My Projects drew nothing and the new
+button never appeared. Kev: "I dont know what that did but I have lose the
+single project and the button is not there."
+The console said it in one line: "Uncaught SyntaxError: Invalid or
+unexpected token" at (index):3331. THE FIX WAS ONE LINE of the comment —
+26 September 2026.
+
+*** AND THE ORDER OF WORK THAT FOLLOWED IS THE PART WORTH KEEPING. ***
+With the app blank and the project apparently gone, the first thing done
+was not a fix. One line in the console —
+localStorage.getItem('is-projects') — returned The Further Adventures of
+A. Rapscallion whole, with Kev's name on it. THE BOOK HAD NEVER BEEN AT
+RISK; the screen simply could not draw it. WHEN A PAGE DIES, PROVE THE
+WRITER'S WORK IS SAFE BEFORE FIXING ANYTHING. Reassure, then repair, in
+that order — 26 September 2026.
+
+*** FAULT TWO: THE CLASS NAME WAS GUESSED, NOT READ. ***
+Version two built the confirmation panel correctly from the corridor's own
+modal classes, read from the New Project pop-up — and then opened it by
+adding the class "active", BECAUSE CLAUDE ASSUMED THAT WAS THE PATTERN.
+It is not. Line 117 of the corridor reads
+".modal-overlay.open{display:flex}". THE CLASS IS "open". The panel was
+built, present in the page, and never shown; Kev clicked and nothing
+happened. IT COST A WHOLE STITCH AND PUBLISH CYCLE.
+It is the fourth recorded instance of the same fault — the file was to
+hand and was not read — and the first time the rule failed rather than
+worked. NOW LOCKED IN ITS OWN RIGHT: a class, an id, a function name or a
+selector is READ FROM THE FILE, never inferred from a pattern seen
+elsewhere in it — 26 September 2026.
+
+HOW BOTH WERE FOUND — by asking the live page rather than guessing again,
+which is Kev's own locked rule applied through the browser console.
+nav-trash present, so the anchor was fine. nav-logout present, so the
+block HAD run. logOutModal present, and reading class="modal-overlay
+active" — which was the whole answer. And getComputedStyle after clicking
+still returning "none", which proved the click was not opening it.
+ONE FALSE TRAIL, RECORDED: offsetParent returned the body element and
+getBoundingClientRect gave top 785, which Claude read as "the item is in
+the wrong place". It was not. The sidebar scrolls and the item was below
+the fold; Kev scrolled and there it was, exactly where it belonged.
+A MEASUREMENT IS NOT A DIAGNOSIS — 26 September 2026.
+
+THE CHROME CONFIRMATION BOX REPLACED. Version one used the browser's own
+confirm(), which Kev saw immediately: "Can we make this match the rest of
+the platform?" It could, and cheaply — the corridor already carries
+modal-overlay / modal / modal-title / modal-sub / modal-btns, read from
+the New Project pop-up, so the panel inherits the house look with no new
+styling at all. NOW A HOUSE RULE: a confirmation uses the platform's own
+panel, never the browser's box — 26 September 2026.
+
+*** THE LOCK ON THE DOOR WAS BUILT, AND WITHDRAWN. *** Kev asked for a Log
+Out button. Claude wrote the Log Out button AND the sign-in gate in one
+block, without separating them or saying so. KEV: "I thought we were
+adding a log out button and now we seem to have gone in an entirly
+diferant direction."
+THE SECOND HALF OF THE FAULT WAS WORSE THAN THE FIRST: asked what the
+extra thing was, Claude explained the bundle rather than simply
+unbundling it, and Kev had to ask twice. NOW LOCKED: BUILD THE ONE THING
+ASKED FOR, and when a bundle is pointed out, take it apart first and
+discuss it after.
+AND THE LOCK IS ALSO PARKED ON ITS MERITS. It guards an empty room —
+nothing lives on the server yet but accounts, so anyone who got past it
+would find an app reading their own browser. It waits until the shelf
+exists. That is "use wins" turned on Claude's own enthusiasm rather than
+on the build list. THE SIGN-OUT HALF OF IT IS DONE — 26 September 2026.
