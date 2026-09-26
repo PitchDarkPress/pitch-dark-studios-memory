@@ -1,4 +1,15 @@
 File: inkyswot/thinking.md
+
+File: inkyswot/thinking.md
+Last updated: 26 September 2026. Covers the previous session — the Log Out
+button. NOTHING FROM THE 24 SEPTEMBER VERSION IS SHORTENED OR REMOVED;
+today's changes sit beside what they affect.
+*** THE LOCK ON THE DOOR IS NO LONGER THE NEXT PIECE OF WORK. It was
+written and withdrawn, and it is PARKED until the shelf exists. The
+sign-out half of it is done — Log Out is live. WHAT IS OPEN NOW IS THE
+SHELF, and the email sender behind it. ***
+
+[The 24 September header follows, kept as written.]
 Last updated: 24 September 2026. Covers the previous session, written up
 at the start of this one. NOTHING FROM THE 22 SEPTEMBER VERSION IS
 SHORTENED OR REMOVED; today's changes sit beside what they affect.
@@ -35,7 +46,7 @@ after that session's files were brought current, and reached no file until
 a fortnight later.
 
 ================================================================
-SECTION A — OPEN NOW (16 September 2026, updated 22 September)
+SECTION A — OPEN NOW (16 September 2026, updated 22, 24 and 26 September)
 ================================================================
 
 --- THE SUPABASE CONNECTION — THE LIVE THREAD, AND JOB ZERO ---
@@ -156,6 +167,28 @@ placing 15 of 16 pockets in silence, the checker's zero findings looking
 like a pass that never ran, and now this. IT IS THE HOUSE FAULT. Worth a
 deliberate sweep for it rather than waiting to stumble on the fourth.
 
+--- THE LOCK ON THE DOOR — *** PARKED 26 SEPTEMBER *** ---
+*** IT WAS WRITTEN AND WITHDRAWN. NOT THE NEXT PIECE OF WORK ANY MORE.
+The three cautions below all still stand and are the reason this text is
+kept whole — read them before it is ever built. ***
+
+WHY IT WAS WITHDRAWN, AND THERE ARE TWO REASONS.
+1. KEV ASKED FOR A LOG OUT BUTTON AND GOT A BUNDLE. Claude wrote the
+   button and the gate in one block without separating them. KEV: "I
+   thought we were adding a log out button and now we seem to have gone
+   in an entirly diferant direction." He was right.
+2. AND IT IS A LOCK ON AN EMPTY ROOM. Nothing lives on the server yet but
+   accounts. Anyone who got past the gate would find an app reading their
+   own browser, so it protects nothing today — while a gate that can fail
+   is a gate that can lock Kev out of his own work, for no gain at all.
+IT WAITS UNTIL THE SHELF EXISTS. That is "use wins" turned on Claude's
+own enthusiasm rather than on the build list.
+
+AND ONE OF THE THREE CAUTIONS BELOW IS NOW ANSWERED: "signing out needs
+somewhere to live" — it has somewhere. Log Out, at the foot of the
+sidebar, centred, with its own panel. Built and live.
+
+[The 24 September text follows, kept whole.]
 --- *** THE LOCK ON THE DOOR — THE LIVE THREAD, AND THE NEXT PIECE OF
     WORK (24 September) *** ---
 
@@ -177,8 +210,27 @@ everything is the one piece that can lock Kev out of his own platform:
   back. Either hold the screen for a moment or accept a flash of the app
   before the redirect — and a held screen must say why it is held.
 · SIGNING OUT NEEDS SOMEWHERE TO LIVE. There is no sign-out control
-  anywhere in the platform yet.
-NOT DESIGNED. NOT BUILT.
+  anywhere in the platform yet. [ANSWERED 26 SEPTEMBER: there is now.]
+NOT DESIGNED. NOT BUILT. [AND NOW PARKED — see above.]
+
+--- *** THE SHELF — THE LIVE THREAD, AND WHERE THE NEXT SESSION STARTS
+    (26 September) *** ---
+
+KEV, OPENING THE PREVIOUS SESSION: "We now need to test the book
+database."
+NOTHING OF IT IS BUILT. The connection is proved and accounts exist, but
+no book has ever been near Supabase.
+ITS SHAPE IS STILL UNDECIDED, and deliberately so — Kev: "I have no idea
+how things will work on Supabase and until then I can't nail things
+down." Claude's proposal is above; the three columns that go in whatever
+the shape are above it.
+THE FIRST PIECE IS SMALL, AND IT IS THE SAME MOVE AS THE PLUG TEST: a
+table that can hold one book, and a way to put a book in it and read it
+back. Then Kev looks at it and decides what the real shape should be.
+WATCH FOR: whether the ORDER OF WORK gets away from us again. The last
+two sessions both began intending the shelf and ended somewhere else —
+accounts on the 24th, Log Out on the 26th. Both were right to do, and
+both were also detours. THE SHELF HAS NOW BEEN THE NEXT JOB THREE TIMES.
 
 --- THE EMAIL SENDER — OPEN (24 September) ---
 
@@ -561,6 +613,10 @@ CONCEPTS IS OUT OF STEP — still the old Cast / World / Plot grouping.
 
 THE SIZING SWEEP. Four house rules now. Done on the Plot Mapper and the
 Basics foot. THE CORRIDOR HAS STILL NOT BEEN SWEPT.
+NOTE 26 SEPTEMBER: and the corridor has now been opened four times
+without the sweep being done — spell check, read aloud, the save guard,
+Log Out. Each time it was "while it is in hand" and each time it was not.
+EITHER DO IT ON THE NEXT OPENING OR STOP SAYING IT WILL BE DONE THEN.
 
 --- AND A NEW ONE: WHAT "FIX BEFORE WE MOVE ON" MEANS NOW ---
 
@@ -580,6 +636,14 @@ and it did not become a snag list. One case is not a pattern yet.
 AND KEV'S COUNTERWEIGHT, SAID IN THE SAME SESSION: "we can't really
 progress the platform until we can start adding my work to a database."
 The niggles are cosmetic; the store is what everything else waits on.
+TESTED A SECOND TIME, 26 SEPTEMBER, AND THE ANSWER IS LESS COMFORTABLE.
+The session opened with "we now need to test the book database" and spent
+all of itself on a Log Out button instead — a thing Kev asked for, done
+well, and still not the store. The rule says use wins over the build
+list. IT DOES NOT SAY THE BUILD LIST NEVER GETS A TURN.
+WORTH WATCHING: the store has now been "next" for three sessions. If it
+is still next after a fourth, the pattern is the problem, not the
+individual detours.
 
 ================================================================
 SECTION B — WHAT HAPPENED TO THE 18 JUNE THINKING
@@ -609,6 +673,13 @@ signed in between visits and renews the session quietly. Writing that by
 hand is fiddly and easy to get wrong. IT IS A SCRIPT TAG IN A FILE, NOT A
 BUILD STEP, so the principle bends rather than breaks — but it is the
 first outside library the platform depends on, and worth watching.
+NOTE (26 SEPTEMBER): IT IS NOW TWO PLACES, NOT ONE. The Log Out block in
+the corridor loads the same library from the same CDN. Still a script tag
+rather than a build step, but the platform now depends on a fetch from
+cdn.jsdelivr.net in two separate files. IF THAT CDN IS EVER SLOW OR
+BLOCKED, Log Out falls back to going to the front door without telling
+Supabase first, which is the right failure — but it is worth knowing
+there is an outside thing in the chain at all.
 
 THE DCW AS THE STAGE — NOT BUILT, AND NOT NEEDED SO FAR. If it returns,
 the question it left open is still right: what does the DCW show when
@@ -768,3 +839,13 @@ RETIRED FROM THIS FILE (so nothing feels lost)
 - WHETHER THE FRONT PAGE NEEDS REWORKING NOW — closed 24 September, for
   now. It is a holding page and it is right for one. The writer's-desk
   idiom Kev showed is recorded in future.md and current-state.md.
+- WHETHER THERE IS A WAY OUT OF THE PLATFORM — closed 26 September. Log
+  Out, centred at the foot of the sidebar under Trash, with its own
+  InkySwot panel. Built, live and verified end to end.
+- HOW LOG OUT IS SET APART FROM THE WORKING SCREENS — closed
+  26 September. CENTRED. Kev's own answer, after ruling out red (it means
+  a fault) and a darker colour (it reads as disabled).
+- WHETHER A CONFIRMATION USES THE BROWSER'S BOX — closed 26 September. It
+  does not. The corridor's own modal classes, opened with "open".
+- WHEN THE LOCK ON THE DOOR IS BUILT — closed 26 September, for now: NOT
+  YET. It guards an empty room. Kept in full in Section A.
