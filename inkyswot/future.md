@@ -1,4 +1,18 @@
 File: inkyswot/future.md
+
+File: inkyswot/future.md
+Last updated: 26 September 2026. Covers the previous session — the Log Out
+button. NOTHING IS SHORTENED OR REMOVED.
+*** AND THE HONEST HEADLINE: NOTHING NEW WAS CONCEIVED. *** That session
+built one button and found two faults; it threw up no future ideas at
+all. This is recorded plainly so a future session does not go hunting for
+what it thinks it missed. THREE EXISTING ENTRIES CARRY A DATED NOTE, and
+that is the whole update.
+ONE THING STILL OUTSTANDING FROM 24 SEPTEMBER, and it is small but real:
+THE WRITER'S-DESK PICTURE HAS NOT BEEN SAVED INTO THE INKYSWOT DIVISION.
+See THE FRONT PAGE below.
+
+[The 24 September header follows, kept as written.]
 Last updated: 24 September 2026. Covers the previous session, written up
 at the start of this one. NOTHING IS SHORTENED OR REMOVED; today's
 additions sit beside what they affect.
@@ -195,6 +209,12 @@ WHEN IT IS BUILT: the picture Kev made should be saved into the InkySwot
 division under its own filename, so a future session can find it. A
 description is not a file — the same rule that cost a session over the
 Wheel.
+*** STILL NOT DONE, 26 SEPTEMBER. *** Two sessions on, the picture exists
+only in the conversation. Everything above describes it; nothing but this
+text will survive when the chat does not. IT IS A TWO-MINUTE JOB and it
+is exactly the loss the Wheel taught us about — that file had no filename
+in any database file, and a whole session went on establishing what it
+was. SAVE THE PICTURE.
 
 ================================================================
 THE STYLE METER — new, 31 August 2026. NOT STARTED.
@@ -314,6 +334,8 @@ NOTE 24 SEPTEMBER: the platform now genuinely talks to Supabase — for
 accounts. THE FILE STORE IS STILL UNTOUCHED, so "will hold them" is still
 a promise rather than a fact. But it is no longer a promise about
 something unproven.
+NOTE 26 SEPTEMBER: unchanged. Still untouched. The shelf has been the
+next job three sessions running.
 ITS NEIGHBOUR: the RIGHTS MARKETPLACE under Future Products — the same
 instinct, pointed much further off.
 
@@ -417,6 +439,7 @@ built. WORTH CHECKING ON THE DAY: the maximum size for a single uploaded
 file, which is generous but is the one limit a long audio file might meet.
 NOTE 24 SEPTEMBER: still true, and still untested — nothing has yet been
 put into the file store at all.
+NOTE 26 SEPTEMBER: still nothing.
 
 PLATFORM — FUTURE FEATURES
 Six-tone time-of-day theme system — designed, not built.
