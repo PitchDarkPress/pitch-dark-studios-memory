@@ -1,6 +1,14 @@
-File: inkyswot/completed.md
+Last updated: 29 September 2026, evening — entries for 26 September
+(evening), 27, 28 and 29 September added at the foot. NOTHING ELSE IS
+CHANGED, AND NOTHING IS SHORTENED OR REMOVED.
+WHY FOUR DAYS AT ONCE: this file and future.md were not with Claude on
+26 September evening, 27 or 28 September, so those days reached the other
+three files only. They are added now from those files' own records, dated
+as they were written there.
+THE HEADLINE: THE SHELF EXISTS, THE LIBRARY IS LIVE AS THREE LIBRARIES,
+AND AS OF 29 SEPTEMBER IT IS A WORKING ROOM.
 
-File: inkyswot/completed.md
+[The 26 September header follows, kept as written.]
 Last updated: 26 September 2026 — entries for the previous session added
 at the foot. NOTHING ELSE IS CHANGED, AND NOTHING IS SHORTENED OR REMOVED.
 THE HEADLINE: LOG OUT IS BUILT AND LIVE, and the lock on the door is
@@ -892,3 +900,136 @@ nothing lives on the server yet but accounts, so anyone who got past it
 would find an app reading their own browser. It waits until the shelf
 exists. That is "use wins" turned on Claude's own enthusiasm rather than
 on the build list. THE SIGN-OUT HALF OF IT IS DONE — 26 September 2026.
+
+--- 26 SEPTEMBER 2026, EVENING ---
+[A second session the same day, after the Log Out write-up.]
+
+*** THE SHELF BUILT AND PROVED. *** public.shelf created in Supabase: id,
+owner (filled from the signed-in account), project_id, title, body,
+added_at, deleted_at. Row level security on — a member reads, adds and
+changes only their own books — and NO DELETE GRANTED, so a book can only
+be marked deleted. Book one, The Adventures of A. Rapscallion, put up from
+its Word file on a test page (code-shelf-test.html, Kev's machine only):
+69,593 words, 383,613 characters sent, 383,613 back — EXACT. The whole
+book in one row is a TEST SHAPE, not a decision — 26 September 2026.
+
+"PLAIN TEXT FIRST" DROPPED. KEV: "Who will have their books/stories etc as
+plain text files I know I don't!!" The way in became the writer's own
+Word file, read in the browser before anything is sent — 26 September
+2026.
+
+NO PERMANENT PROJECT LABEL FOUND BY READING THE CORRIDOR. Projects are
+found by their position in a list, which moves when one is trashed or
+restored. The created stamp is fixed and unique, and serves as the label.
+Flagged, not built — 26 September 2026.
+
+TWO TRAPS RECORDED: never hand the writer a value they cannot see (the
+copy() that showed only "undefined"); and a console belongs to its tab (a
+page opened from disk has its own localStorage) — 26 September 2026.
+
+--- 27 SEPTEMBER 2026 ---
+
+*** THE LIBRARY ROOM LIVE. *** Research & Reference stopped saying Coming
+Soon. A bolted-on block at the end of the corridor reads Kev's real shelf
+from Supabase and shows book one — its facts and all 12 chapters, found by
+reading the headings, no AI, every one certain. Built through three
+stills first. Corridor 164,466, index.html 364,395, 16 of 16. A static
+still: nothing clickable — 27 September 2026.
+
+THE CHAPTER FINDER'S THREE RULES, each read off the real book: a heading
+with nothing under it is a contents entry; ISBN and copyright lines are
+never headings; the story runs from the first certain heading to the
+last — 27 September 2026.
+
+*** THE COPYRIGHT QUESTION SETTLED BY KEV. *** Anything can go on the
+shelf; the learning, the checking and The Press use only the writer's own
+work and out-of-copyright work. KEV: "I AGREE that the 'learning' should
+be limited to my work and OFC works." — 27 September 2026.
+
+THE PROJECTS IN KEV'S BROWSER LOST TO A CLEARED CACHE. Not the platform:
+Kev cleared Chrome's cache and the site's saved data went with it. The
+finished book survived because only the shelf is on the server. The
+strongest argument yet for moving projects off the browser — Kev's call —
+27 September 2026.
+
+--- 28 SEPTEMBER 2026 ---
+
+*** THE LIBRARY LIVE AS THREE LIBRARIES, IN KEV'S WORDS. *** My Library
+(Private) · Reference Library (Private) · Public Domain Library (Open to
+all). Public domain as ONE SHARED COLLECTION, curated by Kev at first — his
+idea: "What if we built a library of works that everyone could access."
+Corridor 168,402, index.html 368,331, 16 of 16 — 28 September 2026.
+
+*** A BOOK KEEPS ITS PAGES. *** The Word reader rewritten into the page
+itself (Chrome unzips the .docx), replacing mammoth, which dropped page
+breaks. Hard page breaks, page-break-before on a paragraph or its style,
+section breaks, Word's own record of where each page began, and six or
+more empty lines are all kept as page marks. Front and back matter shown a
+page at a time — 28 September 2026.
+
+GOOGLE DOCS COME IN BY PASTE — KEV: "NO. A google doc upload has to be a
+copy and paist." Proved on The Christmas Murders, 47,074 words, exact —
+28 September 2026.
+
+THE SHELF GAINED library and genre columns. Genre from the app's existing
+Basics list. The test row and stray copies marked deleted; one live copy
+of book one — 28 September 2026.
+
+THE WRITE-UP MOVED TO THE END OF THE DAY. KEV: "we are now spending more
+time, so it seems, on write ups and not on getting things done." —
+28 September 2026.
+
+--- 29 SEPTEMBER 2026 ---
+[Written up at the end of the day's work.]
+
+*** THE LIBRARY BECAME A WORKING ROOM — version five, live. ***
+Seven publishes in the day; the last, corridor 227,677 and index.html
+427,606, 16 of 16. Verified live by Kev throughout — 29 September 2026.
+
++ ADD IN THE APP — beside My Library and Reference Library: title, genre
+from the Basics list, an optional project link, and the book from a Word
+file or a paste. Saved, read straight back and checked character for
+character. The test page retired in practice — 29 September 2026.
+
+THE SECOND REAL BOOK, THROUGH THE APP: The Good, The Bad And The Elderly,
+74,249 words, Comedy / Humour. 15 chapters found, 11 certain, 4 to
+confirm. Chapter Eight at 22,233 words suggests a missed heading, for Kev
+to look at — 29 September 2026.
+
+"CHAPTER ONE." WITH A FULL STOP NOW FOUND, without letting in lines like
+"Act now, she said." (version four (b)) — 29 September 2026.
+
+SEPARATORS — added by hovering between lines ("Add a separator here"),
+removed with × after asking, and given optional descriptions. Stored on
+the page-mark line, never counted as words — 29 September 2026.
+
+HIDE A SECTION — asks first, folds the section away, nothing removed;
+Show brings it back. After three passes at Kev's direction it is a small
+box on the right between its two lines. Kev: "Perfect." — 29 September
+2026.
+
+UNDO THAT SURVIVES A REFRESH — a prev_body column keeps the version before
+each change; Undo swaps them — 29 September 2026.
+
+MAKE A COPY (not in Public Domain), MOVE TO TRASH with Undo, and a BOOKS
+part in the Trash screen with RESTORE and DELETE FOREVER. Delete Forever
+asks first and the database allows it only for a book already in Trash —
+KEV'S DECISION, amending the 26 September "never deleted" lock. Kev:
+"DELETE FOREVER! For some reason that makes me laugh. We MUST keep it."
+Then: "And it works." — 29 September 2026.
+
+THE SQL RUN: project_ids text[] default '{}', prev_body text, and the
+"delete own trashed books" policy with grant delete. Each confirmed by
+Kev's screenshot — 29 September 2026.
+
+THE LIBRARY UNDER NAVIGATE, beside My Projects and The Press, reachable
+with no project open. From Kev: "Once in TRASH, how do you get out?" —
+29 September 2026.
+
+THE LIBRARY ? WINDOW — movable, resizable, one line per thing. INKYSWOT
+TOOLTIPS in place of the browser's white box. RED HOVERS REMOVED: gold for
+anything alive, red only for faults. Kev: "We must always go with the
+colour palete." — 29 September 2026.
+
+PUBLIC DOMAIN EDITIONS AND PRIVATE HIGHLIGHTS thought through — proposals,
+not built. See thinking.md and future.md — 29 September 2026.
