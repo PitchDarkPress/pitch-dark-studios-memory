@@ -1,6 +1,71 @@
-File: inkyswot/current-state.md
+Last updated: 29 September 2026, evening.
+COVERS 29 SEPTEMBER, written up at the end of the day's work, as the rule
+now reads. NOTHING FROM THE 28 SEPTEMBER EVENING VERSION IS SHORTENED OR
+REMOVED; today's work is added beside what it affects.
 
-File: inkyswot/current-state.md
+*** THE HEADLINE, 29 SEPTEMBER: THE LIBRARY IS NOW A WORKING ROOM, NOT A
+STILL. *** + Add puts a book on the shelf from inside the app (Word file
+or paste). Separators can be added, removed and described. Sections can
+be hidden and shown. Every change can be undone, even after a refresh.
+Books can be copied, moved to Trash, restored, and DELETED FOREVER. The
+Library is also under NAVIGATE, so it can be reached from anywhere. See
+THE LIBRARY — A WORKING ROOM below.
+Corridor 227,677 (the Enclosure's count), index.html 427,606, 16 of 16.
+Published and verified live by Kev.
+*** AND A SECOND REAL BOOK WENT UP THROUGH THE APP ITSELF: The Good, The
+Bad And The Elderly, 74,249 words, Comedy / Humour. ***
+*** AND ONE LOCK WAS REVERSED BY KEV: a book CAN now be deleted for good —
+but only from Trash, only after asking, and the database itself refuses
+anything else. See locked-decisions.md. ***
+
+[The 28 September evening header follows, kept as written.]
+Last updated: 28 September 2026, evening.
+COVERS 27 SEPTEMBER (evening) AND 28 SEPTEMBER, written up together at the
+end of the 28th. KEV, 28 SEPTEMBER: "We will do the write up after todays
+session. the reason I say that is we are now spending more time, so it
+seems, on write ups and not on getting things done." SO THE RULE NOW
+READS: WRITE UP AT THE END OF THE DAY'S WORK, NOT AT THE START OF THE
+NEXT. NOTHING FROM THE 26 SEPTEMBER EVENING VERSION IS SHORTENED OR
+REMOVED.
+
+*** THE HEADLINE, 28 SEPTEMBER: THE LIBRARY IS LIVE AS THREE LIBRARIES,
+AND A BOOK NOW COMES IN FROM WORD OR GOOGLE DOCS WITH ITS PAGES KEPT. ***
+See THE LIBRARY — THREE LIBRARIES, LIVE below. Corridor 168,402 (the
+Enclosure's count), index.html 368,331, 16 of 16. Verified live by Kev.
+
+*** THE HEADLINE, 27 SEPTEMBER: THE LIBRARY ROOM IS LIVE. *** Research &
+Reference no longer says Coming Soon. It reads Kev's real shelf from
+Supabase and shows book one — its facts and all 12 chapters, found by
+reading the headings, every one certain. A static still: nothing in it is
+clickable yet. See THE LIBRARY ROOM — LIVE below.
+*** AND THE PROJECTS IN KEV'S BROWSER WERE LOST TO A CLEARED CACHE. ***
+Not caused by the platform. The finished book is safe. See THE CLEARED
+CACHE below — it is the strongest argument yet for moving projects off the
+browser.
+*** AND THE COPYRIGHT QUESTION IS SETTLED BY KEV. *** Anything can go on
+the shelf; learning, checking and The Press use only the writer's own work
+and out-of-copyright work. See locked-decisions.md.
+
+[The 26 September evening header follows, kept as written.]
+Last updated: 26 September 2026 — EVENING.
+COVERS THE EVENING SESSION OF THE SAME DAY: THE SHELF, BUILT AND PROVED.
+The earlier 26 September write-up (Log Out) was done at the start of the
+day; this session followed it. NOTHING FROM THE EARLIER VERSION IS
+SHORTENED OR REMOVED; tonight's work is added beside what it affects. The
+earlier 26 September header follows, kept as written.
+
+*** THE HEADLINE, 26 SEPTEMBER EVENING: THE SHELF EXISTS, AND A REAL BOOK
+HAS BEEN UP AND BACK. *** public.shelf was built in Supabase. Book one —
+Rapscallion, 69,593 words, straight out of a Word file — went up and came
+back EXACTLY: 383,613 characters sent, 383,613 returned. See THE SHELF —
+BUILT AND PROVED below.
+*** AND TWO FINDINGS THAT CHANGE THE PLAN. *** Projects have NO PERMANENT
+IDENTIFIER — the platform finds them by their position in a list, which
+moves. And "plain text first" was wrong — writers have Word files and
+Google Docs, not .txt. Kev: "Who will have their books/stories etc as
+plain text files I know I don't!!"
+
+[The earlier 26 September header follows, kept as written.]
 Last updated: 26 September 2026.
 COVERS THE PREVIOUS SESSION — the Log Out button, built and live. NOTHING
 FROM THE 24 SEPTEMBER VERSION IS SHORTENED OR REMOVED; today's work is
@@ -137,6 +202,690 @@ settled-do-not-reopen, such as the Proauthorism argument, which exists
 precisely so a future session cannot reopen it. SPLITTING IS THE OTHER
 ANSWER — the checker alone justifies a file of its own, as the nine files
 of May were split.
+
+================================================================
+*** THE LIBRARY — A WORKING ROOM (29 September 2026) ***
+File: corridor.html — the room block, now "THE LIBRARY ROOM — version
+five, 29 September 2026". Version four and a small four (b) went live
+earlier the same day; version three is replaced.
+Test pages, Kev's machine only: code-shelf-test.html (build 6) and
+code-library-still.html (build 15). THE TEST PAGE IS NOW RETIRED IN
+PRACTICE — + Add in the app does its job.
+================================================================
+
+KEV, OPENING THE DAY: "Hello. Right lets get on with the build." It was a
+building day from start to finish, with the write-up at the end.
+
+--- WHAT THE ROOM DOES NOW — READ FROM THE CODE ---
+
++ ADD beside My Library and Reference Library opens a panel in the room:
+  · TITLE.
+  · GENRE — read from the Basics Genre list on the same page, never a
+    second list (the 28 September lock, now built).
+  · LINK TO A PROJECT — OPTIONAL. A drop-down of the writer's projects,
+    with the open one marked "(open now)", and "Not linked" first. KEV:
+    "when a user uploads content to their library they are simply given
+    the option to link the work to a project." The link is the project's
+    created stamp, never its position in the list.
+  · THE BOOK — "From Word" (choose the .docx) or "Paste it in" (Google
+    Docs and anything else). Both readers keep where each page began, as
+    the test page did.
+  · PUT IT ON THE SHELF — saves it, READS IT STRAIGHT BACK, compares every
+    character, then shows it. Cancel goes back.
+  · The Reference Library panel carries a PLEASE NOTE box. Its wording is
+    Claude's draft and NOT YET APPROVED BY KEV: "Books by other writers
+    are kept for your own reading and research only. They are never used
+    to shape or influence your writing. Only add work you have the right
+    to keep."
+  · PUBLIC DOMAIN'S + ADD IS SHOWN QUIET, with a tooltip: "Not yet:
+    waiting on how additions here are approved." Kev's decision.
+BOOKS IN THE LIST OPEN WHEN CLICKED.
+EACH BOOK SHOWS "LINKED TO" with its projects as tags, or "Not linked to
+a project". SHOWN, NOT YET EDITABLE — that is the next build.
+
+SEPARATORS in front and back matter (Kev: "Also the add/delete the
+seperators"):
+  · HOVER BETWEEN TWO LINES and a dashed gold line appears with "Add a
+    separator here" (Kev asked for the words, matching the other one).
+  · × ON A SEPARATOR removes it — AFTER ASKING, in the platform's own
+    panel: "The two sections either side of it will join into one."
+  · A DESCRIPTION on any section, optional (Kev: "users should be able to
+    add a decrisption to the seperators if they wish"). Press it to write;
+    Enter keeps it, Escape leaves it. On an empty separator it shows
+    "Add a description" on hover. Kev found the first version "a bit
+    twitchy, hard to highlight"; it was made easier to catch. Kev:
+    "That's much better."
+HOW IT IS STORED: a separator and its description live ON THE PAGE-MARK
+LINE ITSELF — the form feed or vertical tab, then the words. So they
+travel with the text, they are never counted as words, and the chapter
+finder never reads them as headings.
+
+HIDE A SECTION (was going to be "delete"; Kev: "perhaps it just
+colapsises"). "Hide this section" appears on hover at a section's top
+right. It ASKS FIRST ("It folds away to a single line. Nothing is
+removed…"), then folds the section away.
+NOTHING IS REMOVED: the section's page mark carries an invisible flag —
+U+2063 straight after the form feed or vertical tab — and Show simply
+takes the flag away.
+HOW IT LOOKS, AFTER THREE PASSES, ALL KEV'S:
+  1. A full-size line reading "Hidden section: …" with a Show button.
+     Kev: "Its a little intrusive. needs to be thinner. As small as the
+     COPYRIGHT NOTICE text."
+  2. Slimmed to 11px monospace, Show as a gold dashed-underlined word.
+     Kev: "the hidden sections still need to be thinner and smaller."
+  3. NOW: A SMALL BOX ON THE RIGHT, between the section's two separator
+     lines. The name in 9px dim capitals, Show in gold. Both lines keep
+     their ×. The line above no longer repeats the name. Kev asked for it
+     right-justified "as in the image" and "in a box so that the lines
+     above and below can be removed". Kev: "Perfect."
+  The name shown is the section's description, or else its first line
+  (up to 48 characters).
+
+UNDO. Every change to a book's text writes the version before it into a
+new column, prev_body. "Undo last change" swaps the two — SO UNDO
+SURVIVES A REFRESH. Pressing Undo again puts the change back. After each
+change a gold bar at the top says what happened, with its own Undo.
+EVERY CHANGE IS READ BACK: the save asks for the text back and compares
+it; if it differs, a red bar says so and nothing is claimed.
+
+MAKE A COPY (not in the Public Domain Library): a new, separate book with
+the same words, titled "… (copy)", same library, genre and links. The
+original is untouched, and the copy is checked character for character.
+
+MOVE TO TRASH. KEV: "The better idea fore deletion is to just add it to
+the TRASH. It already exists and this allows the users to retrieve it
+later if required." Moving a book sets deleted_at; an Undo is offered
+straight afterwards.
+THE TRASH SCREEN GAINS A "BOOKS" PART beneath the corridor's own projects:
+each book with its library, genre and date trashed, and two buttons —
+RESTORE and DELETE FOREVER. The Trash subtitle now reads "Deleted projects
+and books. Nothing here is gone yet." And the corridor's "Trash is empty"
+line is taken away when there are books in it, because it would be
+untrue.
+DELETE FOREVER. KEV: "We will need an empty TRASH OR a permanently delete
+this work." It asks first in the platform's own panel ("… will be removed
+for good. This cannot be undone."). The code asks the database to delete
+only a row that is ALREADY IN TRASH, and the database's own rule allows
+nothing else (see THE SHELF, NOW below). Kev, on the panel's title:
+"DELETE FOREVER! For some reason that makes me laugh. We MUST keep it."
+Kev: "And it works."
+BUILT AS A WRAPPER, NOT AN EDIT: the block wraps the corridor's own
+renderTrash so the books are drawn beneath the projects every time. The
+corridor's Trash code is untouched.
+
+THE LIBRARY UNDER NAVIGATE. Kev: "Once in TRASH, how do you get out?" —
+and then "Dont forget the sidebar change". A book belongs to the writer,
+not to one project, so the Library needs a door that does not depend on
+having a project open. A "Library" item is inserted under NAVIGATE
+straight after The Press. Opened from there, or with no project open, it
+lights "Library" and the header reads "Library". Research & Reference
+inside a project still opens the same room.
+
+THE LIBRARY ? WINDOW moves, resizes and closes (× or Escape); no scrim,
+the page stays live. ONE LINE PER THING in the room: My Library,
+Reference Library, Public Domain Library, + Add, Linked to, Front and
+Back Matter, Separators, Descriptions, Hide this section, Make a copy,
+Move to Trash, Undo last change, Chapters. KEV: "We need to start getting
+into the habit of adding the explanation '?' so that users understand
+what everything does." AND: "the help needs some work but dont worry
+about that now." The wording is a first pass.
+The pill sits at the top right (top 8px) and above the undo bar.
+
+INKYSWOT TOOLTIPS. Kev, on the browser's own white tooltip: "Not very
+InkySwot." Every control with a tip now shows a small gold-bordered dark
+panel in mono capitals instead.
+
+THE PALETTE, HELD. Kev: "We must always go with the colour palete." The
+× on a separator and "Move to Trash" had turned RED on hover. Both are now
+GOLD. RED IS KEPT FOR REAL FAULTS ONLY — the failure bars.
+
+"CHAPTER ONE." WITH A FULL STOP NOW COUNTS (version four (b)). The rule
+that a heading has no full stop had missed a real one. A new rule
+(NUMBERED) accepts a full stop after Chapter / Part / Book / Act / Stave
+plus a number, a Roman numeral or a number word — and after Prologue,
+Epilogue or Interlude — WITHOUT letting in lines like "Act now, she
+said." or "Book it."
+
+--- *** THE SECOND BOOK — THROUGH THE APP *** ---
+
+THE GOOD, THE BAD AND THE ELDERLY, 74,249 words, genre Comedy / Humour,
+put up through + Add in the live app. KEV: "It works BUT because there is
+no front matter it is taking C1 as that."
+CHAPTER RESULT, KEV'S SCREENSHOT: 15 found, 11 certain, 4 to confirm —
+the queries include lines such as "TO HERE....." and "'FROST'".
+AND ONE THING TO LOOK AT: CHAPTER EIGHT READS 22,233 WORDS, far longer
+than the rest. Most likely a heading after it that the finder did not
+recognise, so two or more chapters have run together. KEV TO CHECK WHAT
+FOLLOWS CHAPTER EIGHT IN THE WORD FILE. Not investigated.
+RAPSCALLION, UNCHANGED: 12 of 12 certain; front matter in four sections.
+
+--- *** THE SHELF, NOW *** ---
+
+TWO NEW COLUMNS AND A DELETE RULE, run in the SQL Editor today. Kev sent
+the screenshots of "Success" and then a select showing the result:
+    project_ids  text[], default '{}' — the projects a book is linked
+                 to, as created stamps. More than one allowed. It
+                 replaces the single project_id, which is left in place
+                 and no longer used.
+    prev_body    text — the version before the last change, for Undo.
+    A DELETE POLICY:
+      "delete own trashed books" … using (owner = auth.uid() and
+      deleted_at is not null)
+    and grant delete to signed-in members.
+A MEMBER CAN NOW DELETE ONLY THEIR OWN BOOK, AND ONLY ONCE IT IS IN
+TRASH. That keeps the spirit of the 26 September lock — nothing vanishes
+by accident or by a fault in the code — while giving the writer the final
+say. It is Kev's decision; see locked-decisions.md.
+WHAT IS ON THE SHELF, as far as today shows: Rapscallion; a copy of
+Rapscallion made to test Make a copy; The Good, The Bad And The Elderly.
+One old Rapscallion test copy was deleted forever from Trash to test it.
+The Christmas Murders row, put up by mistake on 28 September and hidden
+by SQL, was also deleted forever. NOT CHECKED WITH A SELECT at the end of
+the day — if it matters, run one.
+
+--- *** FOUR TRAPS AND NOTES FROM TODAY *** ---
+
+· COPILOT'S COMMIT MESSAGES. GitHub's commit box fills in a message
+  suggested by Copilot. Once today it read "Hello to Goodbye", which had
+  nothing to do with the change. Kev: "why did it say that?" It is a
+  guess from the file, not a record. READ IT BEFORE COMMITTING and
+  replace it if it is wrong. (Tonight's, "Refactor hidden section display
+  and styles", was right and was kept.)
+· THE ENCLOSURE'S COUNT. The Enclosure counts the corridor WITHOUT Windows
+  line endings, and the repository's copy comes out 7 characters shorter
+  than Claude's file. SO THE NUMBER TO EXPECT IS: Claude's length, minus
+  the number of line endings, plus 7. Worked every time today.
+· "WHAT? tell me the prev_body SQL said 'Success'". An instruction was
+  given unclearly and Kev could not tell what he was meant to check. ONE
+  STEP, SAID PLAINLY: what to paste, and what the screen should say.
+· A SCREENSHOT THAT DID NOT MATCH THE CODE. After the 11px version went
+  live, Kev's screenshot showed the hidden section as a box on the right
+  with no "Hidden section:" words — which Claude's copy of the code does
+  not draw. Not explained. The box version has replaced that row since,
+  so it no longer matters, but it is recorded rather than forgotten.
+  NOTICED, NOT INVESTIGATED.
+
+--- STILL TO DO IN THE LIBRARY ---
+
+· EDITING A BOOK'S PROJECT LINKS — the next build, offered tonight: a ×
+  on each "Linked to" tag, and a "+ Link to a project" tag listing the
+  projects not yet linked. Removing a link asks first. STILL FIRST.
+· CONFIRMING OR DISMISSING THE ? CHAPTERS — the finder asks; there is no
+  way yet to answer.
+· GENRE SUB-HEADINGS under each library.
+· THE PUBLIC DOMAIN LIBRARY — the shared table, how additions are
+  approved, and stopping duplicates (Claude's proposal: check title,
+  author and the opening words). See future.md for editions and
+  highlights.
+· THE LIBRARY ? HELP WORDING — "dont worry about that now".
+· WHETHER TRASH'S DELETE FOREVER BUTTONS TURN GOLD. They use the
+  corridor's own perm-delete-btn, which is red. Red is for faults;
+  deleting for good is an action. KEV'S CALL.
+· THE THEATRE — still asked and not answered.
+· WHETHER THE ORIGINAL WORD FILE IS KEPT — still open.
+
+================================================================
+*** THE LIBRARY — THREE LIBRARIES, LIVE (28 September 2026) ***
+File: corridor.html — the room block, now "THE LIBRARY ROOM — version
+three, 28 September 2026". Replaces versions one (live 27th) and two
+(written, never published).
+Test pages, Kev's machine only: code-shelf-test.html (build 6) and
+code-library-still.html (build 7).
+================================================================
+
+--- THE THREE LIBRARIES, IN KEV'S WORDS ---
+
+Kev rejected "My Work / Reference Works / Public Domain Works" himself —
+"They don't sound very inviting do they?" — and wrote the room's words:
+  MY LIBRARY (Private)
+    Your books — finished, unfinished and everything in between.
+    InkySwot uses these for reference and continuity.
+  REFERENCE LIBRARY (Private)
+    Books by other writers, kept for reading and research.
+    Please Note: these are never used to shape or influence your writing.
+  PUBLIC DOMAIN LIBRARY (Open to all)
+    Copyright-free classics, available to every InkySwot writer.
+    Read them, study them, or create your own editions.
+USED WORD FOR WORD. The Reference Library line carries the copyright
+decision as a description, not a warning. "Private" is quiet grey; "Open
+to all" is gold, as the one that reaches beyond the writer.
+PUBLIC DOMAIN IS ONE SHARED COLLECTION (Kev's idea, 28 September, from
+his iPad: "What if we built a library of works that everyone could
+access."). One copy every member reads, curated by Kev at first — not a
+copy on each writer's shelf. NOT BUILT; the heading and its lines are.
+THE THEATRE IS DELIBERATELY NOT IN IT. Kev: "we now have to be careful
+about the design of the entire Library. Remember the theatre of the
+thing." Agreed: structure now, the look in the theatre pass. The
+Library's look has been tried and rejected before (spines, drawer, pills,
+folders) — see THE LIBRARY below. What theatre Kev pictures was asked and
+not yet answered.
+
+--- WHAT THE ROOM SHOWS ---
+
+The Book (four boxes, slimmer; the date in numerals — Kev: "That way those
+4 boxes can be made slimmer") · Front Matter · Chapters · Back Matter.
+Front and back matter are BIGGER TEXT (21px, the Basics field size) and
+split A PAGE AT A TIME with a rule between — Kev: "there should be a space
+between each section not each line". Lines within a section sit tight.
+Claude first read that as "space between lines" and built it wrong; the
+correction was Kev's.
+Rapscallion as it now shows: front matter in four sections (title page ·
+copyright page · dedication "To Sara / WHO ELSE" · contents); 12
+chapters, 12 certain; back matter in its sections.
+
+--- *** HOW A BOOK KEEPS ITS PAGES — THE WORD READER *** ---
+
+The first reader (mammoth, from a CDN) kept the words and DROPPED THE PAGE
+BREAKS, so the title page ran into the copyright page with nothing to
+find between them. REPLACED WITH A READER WRITTEN INTO THE PAGE: Chrome
+unpacks the .docx itself (it is a zip) — ONE OUTSIDE LIBRARY FEWER, not
+one more. The package registry was blocked from Claude's side, which
+forced the better answer.
+IT MARKS A NEW PAGE WITH A FORM FEED ON ITS OWN LINE for: a page break,
+"page break before" on the paragraph OR ON ITS STYLE (a chapter heading
+style), and a section break that starts a new page.
+AND A QUIETER MARK, A VERTICAL TAB, for two more kinds, found only by
+looking at Kev's real file:
+  1. WORD'S OWN RECORD OF WHERE EACH PAGE BEGAN when it last saved
+     (lastRenderedPageBreak). Kev's title page has NO break at all — the
+     coat of arms fills the page and the copyright runs over. KEPT ONLY
+     WHERE A PAGE BEGINS AT THE START OF A PARAGRAPH, so no sentence is
+     ever split. Kev's book: 88 of them.
+  2. SIX OR MORE EMPTY LINES IN A ROW — the writer pressing Enter until
+     the text reaches the next page. Kev's dedication page and the blank
+     page after it are exactly that. Nobody does it inside a story.
+     Two more found on Rapscallion: 90 in all.
+BOTH WERE DIAGNOSED BY KEV SHOWING WORD'S ¶ MARKS, not by guessing.
+The chapter finder ignores both marks. Word's own saved word count is shown
+for reference only when present; on Rapscallion it said 56,786 against
+69,605 read — TWO SEPARATE READERS AGREED WITHIN 12 WORDS (69,593 and
+69,605), so Word's stored figure is taken to be stale. Not checked in
+Word itself.
+A BONUS NOT YET USED: Word's page record gives the book's real page
+numbers — "he was dark on page 142" becomes possible for the check.
+NOT HANDLED: text boxes (skipped), older .doc, Pages, PDF.
+
+--- *** GOOGLE DOCS COMES IN BY PASTE — KEV'S RULE *** ---
+
+Claude proposed File → Download → Word. KEV: "NO. A google doc upload has
+to be a copy and paist." So the test page has a PASTE BOX under the file
+picker. It reads the clipboard's formatted copy (paragraphs, headings, a
+hidden hr or a page-break style as a page break) and falls back to plain
+words, saying so. The empty-lines rule works on a paste too. It is the way
+in for everything that is not a Word file — Pages, Scrivener, an email.
+TESTED ON A REAL GOOGLE DOC: The Christmas Murders, 47,074 words, up and
+back exact (the same count the checker measured in August). 0 page breaks
+— CORRECT: Kev's screenshot showed that book uses blank lines, not page
+breaks. 7 section gaps from the empty-lines rule, likely the act openings.
+FOR LATER: that book is built of ACTS AND LETTERS ("Letter A"). The finder
+treats ACT as a heading; letters would count as text. Noted, not fixed.
+
+--- *** THE SHELF, NOW *** ---
+
+ONE LIVE ROW: The Adventures of A. Rapscallion, 380,344 characters, 14
+page breaks, 90 other page starts, added 28/09/2026 16:46 (Supabase shows
+15:46 — it keeps UTC). The file used was "...FINAL FILE 02 - 02 - 26 -
+FINAL VERSION"; the "10 - 02 - 26 - VERY FINAL VERSION" gives the
+identical numbers.
+FOUR ROWS MARKED DELETED, none removed: Saturday's test copy, two
+intermediate copies of today, and The Christmas Murders — put up by
+mistake under Rapscallion's title and label, hidden by SQL matched on its
+own last line. THE TEST PAGE'S "YOUR SHELF NOW" PANEL has a Mark deleted
+button for every copy but the newest.
+TWO NEW COLUMNS, added 28 September:
+    alter table public.shelf
+      add column library text not null default 'mine'
+        check (library in ('mine', 'reference')),
+      add column genre text;
+Public domain is NOT a value here — it lives in its own shared collection.
+Book one is 'mine'. GENRE COMES FROM THE APP'S EXISTING GENRE LIST (the one
+Basics uses), chosen when a book goes up — Kev: "We will use the lists
+that already exist on the app." Book one's is empty for now.
+THE PROJECT LABEL ON THE ROW IS STILL THE TYPED WORD "Rapscallion". The
+app will fill it itself when + Add is built inside the platform.
+
+--- *** TWO TRAPS FROM TODAY *** ---
+
+· A SCREENSHOT OF THE WRONG COPY. Kev opened code-library-still (4) — build
+  5 — and it looked wrong in a way build 6 could not. Diagnosed from the
+  back matter's behaviour, not by guessing. TEST PAGES CARRY A BUILD STAMP
+  FOR EXACTLY THIS; ASK FOR IT FIRST. And Chrome numbers repeat downloads
+  (4), (5) — the newest is not always the one opened.
+· THE UPDATE THAT REPORTS NOTHING. Supabase's SQL Editor says "Success. No
+  rows returned" for an update whether it changed one row or none. And a
+  Google Doc's apostrophes are curly, so a match on "Kevin's" can miss.
+  AFTER ANY UPDATE, RUN A SELECT AND LOOK.
+
+--- STILL TO DO IN THE LIBRARY ---
+
+· + ADD inside the app — the file picker and the paste box, the library
+  and genre chosen, the project label filled in by the app.
+· THE SEPARATORS, EDITABLE. Kev: "Should we give users the ability to
+  add/remove separators?" Claude's view: yes — the buddy system says
+  visible, correctable, reversible, and a separator is not one of the
+  writer's words, so moving one never touches the text. A faint + between
+  lines, a small x on each rule. AFTER THE STILL, not yet. Not built.
+· THE PUBLIC DOMAIN COLLECTION — its own table, readable by every member.
+· GENRE SUB-HEADINGS under each library, from the Basics list.
+· WHETHER TO KEEP THE ORIGINAL WORD FILE — still open.
+
+================================================================
+*** THE LIBRARY ROOM — LIVE (27 September 2026) ***
+File: corridor.html — a self-contained block at the very end of the
+script, after LOG OUT, stamped "THE LIBRARY ROOM — version one".
+Test pages: code-library-still.html (builds 1–3, Kev's machine only).
+================================================================
+
+KEV, OPENING THE SESSION, after the previous one ended in a write-up:
+"All we seem to do is one thing then we save documents. Lets get on with
+it." Fair. The session built, looked, fixed and published in one sitting.
+
+--- HOW IT GOT THERE: THREE STILLS, THEN THE PLATFORM ---
+
+BUILD 1 — the room as a standalone page reading the real shelf, laid out
+like Characters: the list on the left, the book on the right. Kev's own
+insight from REBUILD-5 — "Damn we already have it" — followed to its end
+at last.
+BUILD 2 — THE CHAPTER FINDER, no AI. A short line, alone, no full stop:
+CHAPTER / Part / Prologue / Epilogue / Stave and the like are CERTAIN (gold
+tick); a bare number or a short line in capitals is UNSURE (grey query). A
+number or "Chapter Two" on one line with its title on the next are joined.
+First run on Rapscallion: 32 found — right chapters, wrong count.
+BUILD 3 — three fixes, each read off the real result, not guessed:
+  1. A HEADING WITH NOTHING UNDER IT IS A CONTENTS ENTRY, not a chapter.
+     The contents page had produced a second set of twelve with 0 words.
+  2. ISBN AND COPYRIGHT LINES ARE NEVER HEADINGS.
+  3. THE STORY RUNS FROM THE FIRST CERTAIN HEADING TO THE LAST. Anything
+     outside it is the pages at either end of the book.
+RESULT: 12 CHAPTERS · 12 CERTAIN · 0 TO CONFIRM. Eleven chapters and the
+Epilogue, each with its subtext and a word count (3,652 to 9,482).
+Kev's contents page, laid beside the headings, disagrees in three places —
+Chapter 9 ("A Most Perilous of Enterprises" / "A Most Perilous
+Enterprise"), Chapter 10 ("Plans…" / "Dangerous Plans…"), and the
+Epilogue's subtext. FOUND BY READING, NO AI. A first small taste of the
+check Kev wants for book two.
+
+--- INTO THE PLATFORM ---
+
+BUILT AS A BOLTED-ON BLOCK, NOT A POCKET, and deliberately: a pocket file's
+format had not been seen that session, and the rule is read, never guess.
+The block builds its own screen beside Coming Soon, carries its own styles
+in the corridor's colours, and points nav-research at itself. NO NEW
+POCKET, NO CHANGE TO THE ENCLOSURE. Delete the block and the corridor is
+exactly as it was.
+IT BORROWS THE SUPABASE LIBRARY THE LOG OUT BLOCK ALREADY FETCHES, waiting
+up to ten seconds for it; if it never comes, the room says so in red.
+Signed out, it says so in red. It never sits blank.
+TESTED IN A BROWSER BEFORE HANDING OVER: opens, lights its nav item, closes
+when another screen is chosen, fails loud with no connection. No errors.
+STITCH: corridor 164,466 characters (the Enclosure's count, which ignores
+Windows line endings — Claude's own count of 165,664 included them), 16 of
+16, index.html 364,395. Published; both counts matched. VERIFIED LIVE by
+Kev's screenshot inside the Rapscallion project.
+
+--- VERSION TWO — WRITTEN, NOT PUBLISHED ---
+
+Kev asked the right question of the live room: "Are we happy about the
+information that the shelf is picking up. As all the front matter is not
+being recorded." THE ANSWER: IT IS ALL RECORDED — every one of 383,613
+characters is on the shelf. The room simply was not SHOWING it.
+Version two shows the book in its own order: THE BOOK · FRONT MATTER
+(everything before chapter one, exactly as it reads) · CHAPTERS (the story
+only) · BACK MATTER (everything after the Epilogue — Kev: "then we will
+need a back matter section too"). Front Matter replaces The Opening.
+Corridor 164,929 characters by the Enclosure's count. Tested on a stand-in
+shelf. *** HANDED OVER, NOT YET COMMITTED OR PUBLISHED. ***
+AND THE SUBTEXTS WERE NEVER MISSING. Claude suspected they were; the Word
+file showed each one sits on its own line under the heading, exactly where
+the finder looks. Claude was wrong to suspect it.
+
+--- WHAT THE SHELF DOES NOT KEEP ---
+
+THE WORDS ONLY. The copyright page's QR code, and all bold, centring and
+fonts, were not stored — mammoth reads text. Right for finding chapters
+and checking facts; not "the book as made". THE ANSWER, IF WANTED, IS THE
+OPEN QUESTION ALREADY HERE: keep the original .docx in the file store.
+Flagged, not decided.
+
+--- STILL TO DO IN THE ROOM ---
+
+· THE LIST'S NAME. "The Shelf" was Claude's working word. Kev: "I am not
+  sure about the name." Its answer waits on the headings below.
+· THREE MAIN HEADINGS — My Work · Public Domain · Other Works — AND UNDER
+  EACH, GENRE SUB-HEADINGS. Kev: "then we will need sub headings as in the
+  type we have already have when you start a new project." READ FROM THE
+  FILE, pockets/project-overview.html: the list is the GENRE list on
+  Basics, 49 types, 14 greyed as coming. (The New Project pop-up itself
+  holds only Title and Author.) Claude's proposal: show only sub-headings
+  that hold a book — 147 mostly empty lines would be a wall.
+· THE SQL FOR IT IS WRITTEN AND NOT RUN:
+    alter table public.shelf
+      add column kind text not null default 'mine'
+        check (kind in ('mine', 'public', 'others')),
+      add column genre text;
+· BOOK ONE'S GENRE — Kev to say.
+· + ADD — putting a Word file up from inside the app, labelled with the
+  open project's created stamp automatically. Proposed, not built.
+
+================================================================
+*** THE CLEARED CACHE — THE PROJECTS IN THE BROWSER WERE LOST
+    (27 September 2026). A TRAP, AND IT HAPPENED. ***
+================================================================
+
+After publishing the room, My Projects showed "No projects yet."
+THE ORDER OF WORK THE RULE DEMANDS WAS FOLLOWED: prove the work is safe
+before touching anything. localStorage.getItem('is-projects') — null.
+Object.keys(localStorage) — only 'is-tone', which the page writes itself
+on load. THE STORE WAS EMPTY BEFORE THE PAGE OPENED: no projects, no Trash,
+no prompt count, no sign-in. The corridor was searched — nothing in it
+ever clears or removes saved data. Not the platform.
+THEN KEV: "I cleared the cashe." Chrome's clear takes each site's saved
+data with it, and the projects lived there.
+WHAT WAS LOST: the project record "The Further Adventures of A.
+Rapscallion. This is a test" — its Basics fields and whatever its screens
+held. WHAT WAS NOT: the finished book (Word file on D:, and the shelf),
+and book two's writing, which was never in the platform.
+A RESCUE WAS STARTED AND STOPPED. Chrome's files on disk
+(Profile 1\Local Storage\leveldb) can hold cleared data until Chrome tidies
+them; 000016, 124KB, last written 21:02, was the likely holder. Kev
+stopped it: "I know I have Rapscallion saved elsewhere." His call.
+A NEW RAPSCALLION PROJECT WAS CREATED to reach the Library room. The old
+row on the shelf is labelled "Rapscallion", so nothing links it to the new
+project's created stamp either — THE TEST ROW STILL NEEDS RELABELLING OR
+MARKING DELETED.
+*** THE LESSON, AND IT IS THE ONE THESE FILES HAVE WARNED OF SINCE
+16 SEPTEMBER: "CLEAR THE BROWSER DATA AND THE LOT IS GONE." It went, with
+no warning, from an ordinary tidy-up. Only the shelf survived, because
+only the shelf is on the server. THE STRONGEST ARGUMENT YET FOR MOVING
+PROJECTS OFF THE BROWSER, and for an export in the meantime. Not decided;
+Kev's call. ***
+AND A SMALLER ONE: the app let Kev in with no sign-in at all. That is the
+parked lock on the door, working as parked.
+
+================================================================
+*** THE SHELF — BUILT AND PROVED (26 September 2026, evening) ***
+Table: public.shelf, in the InkySwot Supabase project.
+Test page: code-shelf-test.html (throwaway, opened from Kev's machine,
+never published). Build stamp "SHELF TEST · BUILD 1 · 26 SEP".
+================================================================
+
+KEV, OPENING IT: "The shelf." After three sessions of it being next, it
+was built.
+
+--- THE TABLE, AS BUILT ---
+
+Pasted whole into the SQL Editor; Supabase answered "Success. No rows
+returned."
+  id          uuid, primary key, made automatically
+  owner       uuid, NOT NULL, fills itself from the signed-in account
+              (auth.uid()), tied to auth.users, removed if the account is
+  project_id  text — which project the book belongs to. MAY BE EMPTY for
+              now; see NO PERMANENT PROJECT LABEL below
+  title       text, NOT NULL
+  body        text — THE WHOLE BOOK IN ONE ROW. A TEST SHAPE ONLY
+  added_at    timestamptz, stamped on arrival
+  deleted_at  timestamptz — empty while the book is on the shelf
+ROW LEVEL SECURITY ON, three rules: a member can READ, ADD and CHANGE only
+their own books.
+THE TABLE WAS OPENED BY HAND, because "automatically expose new tables"
+is off: grant select, insert, update to authenticated. *** NO DELETE IS
+GRANTED AT ALL. *** A book can only be marked deleted, never removed. That
+is the deleted-marker agreed 24 September, enforced by the database rather
+than by good intentions.
+
+THE THREE THINGS AGREED 24 SEPTEMBER ARE ALL IN IT: whose book (owner),
+which project (project_id), when it arrived and whether it is deleted
+(added_at, deleted_at).
+
+--- *** THE BODY COLUMN IS NOT THE PROPOSED SHAPE *** ---
+
+The whole book sits in one row because that is the simplest thing that
+can be put in, read back and looked at — the plug test's logic again. IT
+IS NOT A DECISION AGAINST CHAPTER ROWS. Kev asked "Is this the best way to
+do it?" The answer given: for a first step, yes; as the finished shelf,
+no, and it was never meant to be.
+THE UNCERTAIN PART IS ALSO THE CHEAPEST PART TO CHANGE. If chapters get
+rows of their own, a chapters table hangs off this one and body is simply
+dropped. The book's own row — title, owner, project, dates — stays.
+Postgres allows about 1GB in a single text field, so a novel fits with
+room to spare. THAT ANSWERS HALF OF "TWO THINGS TO VERIFY" in the Supabase
+section: a single row holds a whole novel, and a real one has now been up
+and back. The file store's upload limit is still unverified — nothing has
+gone into the file store.
+
+--- *** NO PERMANENT PROJECT LABEL — FOUND BY READING THE CORRIDOR *** ---
+
+Read from corridor.html, fresh, before building anything that needed it:
+THE PLATFORM FINDS A PROJECT BY ITS POSITION IN THE LIST. openProject(i)
+takes a number, and every screen then finds its project by
+currentProject.index. THAT NUMBER IS NOT FIXED. Trash a project and every
+one after it moves up a place; restore one and it goes back at the end.
+"PROJECT 2" CAN BE A DIFFERENT BOOK FROM ONE DAY TO THE NEXT. A shelf
+label built on it would, sooner or later, attach a book to the wrong
+project.
+WHAT CAN SERVE INSTEAD: createProject stamps every project with
+"created", the moment it was made, to the thousandth of a second. It
+never changes and no two projects share it. If projects are later given a
+proper identifier — as chapters and scenes were on 1 September — each can
+take its created value as that identifier, and nothing on the shelf needs
+relabelling.
+CHECKED ON THE LIVE APP: is-projects holds ONE project, The Further
+Adventures of A. Rapscallion, created 15 September (2026-09-15T10:4…), so
+it carries the value.
+THE CORRIDOR WAS NOT TOUCHED. Giving projects a proper identifier is a
+separate job and KEV'S CALL. It is flagged, not built.
+
+--- *** WORD FILES, NOT PLAIN TEXT *** ---
+
+The test page was about to ask for a .txt file, because that was easiest
+to build. KEV: "I can see a problem already. Who will have their
+books/stories etc as plain text files I know I don't!!" RIGHT, AND IT WAS
+CLAUDE'S CONVENIENCE DRESSED AS A PLAN. Nobody keeps a finished novel as
+.txt.
+Kev then: "I have books in Word and in Google docs." ONE ROUTE COVERS
+BOTH: Google Docs hands any document over as Word — File → Download →
+Microsoft Word (.docx). So the page reads .docx, and Google Docs users take
+one extra click, which the real room will print beside the picker.
+THE READER IS mammoth.js, loaded from cdn.jsdelivr.net. It turns the Word
+file into text IN THE BROWSER, ON THE WRITER'S MACHINE, before anything is
+sent. It is the THIRD outside library in the chain — but so far only on a
+test page, not in the platform.
+Kev: "Do what you have to do." Taken as agreement to the route, not as a
+ruling on formats forever. Older .doc, Pages and PDF are not handled; the
+page says so in red if handed one.
+
+--- THE TEST PAGE ---
+
+Five things, in order: SIGN IN on the page (a page opened from disk does
+not share app.inkyswot.com's session); PICK THE WORD FILE (read locally,
+word count shown before anything goes up); PUT IT ON THE SHELF; READ IT
+STRAIGHT BACK and compare character for character; SHOW THE SHELF'S COUNT
+before and after, so a second press cannot make a duplicate unseen.
+House rules kept: build stamp in the corner, engine inside the page,
+failures in the danger red, news in gold, the show/hide control saying
+what pressing it will do.
+
+--- *** THE RESULT *** ---
+
+Signed in as kev@kevinmartinmedia.com. Shelf count before: 0.
+File: RAPSCALLION B1 5X8 FINAL FILE 02 - 02 - 26 - FINAL VERSION.docx
+  Words                69,593
+  Characters sent      383,613
+  Characters back      383,613
+  Match                EXACT — every character came back
+  Owner                filled in by itself (Kev's account identifier)
+  Added                26/09/2026, 19:21:37
+  Deleted marker       empty (on the shelf)
+  Shelf count after    1
+THE SHELF WORKS. The security let Kev see his own shelf, the owner filled
+itself in, and the book survived the round trip untouched.
+
+TWO THINGS THE RESULT SHOWED. NEITHER IS A FAULT; BOTH ARE WORTH KEEPING.
+1. THE FIRST LINE CAME BACK AS JUST "The". The book's title is split over
+   two lines in the Word file. THAT IS EXACTLY THE KIND OF HEADING THE
+   CHAPTER SPLIT WILL MEET — "a number on one line and the title on the
+   next" was already on the list of where it struggles. Now there is a
+   real example rather than a guessed one.
+2. THE LAST LINE IS IN A LETTER-SWAP CIPHER (ROT13). It decodes to the
+   Marcus Aurelius line about waking each morning to the privilege of
+   being alive. Presumed deliberate; not asked. Either way it proves the
+   shelf keeps exactly what the writer wrote, oddities included.
+
+--- *** THE ROW NOW ON THE SHELF IS A TEST ROW *** ---
+
+Title "The Adventures of A. Rapscallion". PROJECT LABEL "Rapscallion" —
+NOT THE PROJECT'S created VALUE. See the trap below for why. When the real
+room is built, THIS ROW NEEDS EITHER RELABELLING WITH THE PROJECT'S created
+VALUE OR MARKING DELETED AND PUTTING UP AGAIN. It must not quietly become
+the real record with a label nothing else recognises.
+
+--- *** THE LABEL THAT COST TEN MINUTES — A TRAP. NEVER SHORTEN THIS. *** ---
+
+To fill the Project label box, Claude had Kev run copy(...) in the
+console, which puts the value on the clipboard AND SHOWS NOTHING BUT
+"undefined". Kev: "I dont know what I am meant to paiste." Then: "What is
+sittingh in my clipboard?" A VALUE THE WRITER CANNOT SEE IS NOT A STEP.
+Then, asked to print it instead, Kev ran the line in the console of the
+TEST PAGE, not the app. It answered 2026-07-09T11:15:04.735Z — a project
+from July, not the 15 September one.
+WHY: A CONSOLE BELONGS TO THE TAB IT IS OPEN ON. A page opened from disk
+(file:///…) has ITS OWN localStorage, entirely separate from
+app.inkyswot.com's. It held an old project from some copy of the platform
+opened off the disk months ago. Paste that and book one would have been
+labelled for a project that does not exist in the app.
+KEV: "You are making this TOO complicated." HE WAS RIGHT. For a test the
+label only has to be SOMETHING, so it became the word "Rapscallion". And in
+the real room THE APP FILLS THE LABEL ITSELF — the writer never types it.
+THE LESSONS: (1) never hand the writer a value they cannot see; (2) before
+reading anything from the console, check which page the console is
+attached to — the red "Unsafe attempt to load URL file:///…" line is the
+giveaway; (3) when a test step is getting complicated, ask what the test
+actually needs, and it is usually less.
+
+--- NOTICED, NOT INVESTIGATED ---
+
+THE MAN WHO LEARNT TO FLY IS NOT IN is-projects on the live app — only
+Rapscallion is. These files say it is "one real book in the Plot Mapper
+already". It may be in Trash or in another browser. Kev will know. Nothing
+about the shelf depends on it, and nothing was assumed.
+AND public.connection_test FROM THE PLUG TEST IS STILL THERE. A one-line
+deletion, not yet done.
+AND THE SHELF HAS NOT YET BEEN LOOKED AT FROM SUPABASE'S SIDE. Offered:
+Table Editor → shelf, to see the book as one row the way the database
+holds it. Worth doing before the shape is decided.
+
+--- WHERE THIS LEAVES IT, AND WHAT IS NEXT ---
+
+THE SHELF EXISTS AND HOLDS ONE BOOK. THE PLATFORM DOES NOT KNOW. Nothing
+in the app reads or writes it yet; only the test page does.
+NEXT: THE LIBRARY ROOM. Research & Reference stops saying Coming Soon and
+becomes a screen showing what is on the writer's shelf, starting with
+book one. BY THE HOUSE RULE IT STARTS AS A STATIC STILL — the room drawn,
+the real shelf in it, nothing clickable. What Kev sees decides the next
+move. Putting books up from inside the app comes after.
+IT WILL NEED THE APP TO LABEL BOOKS WITH THE RIGHT PROJECT BY ITSELF,
+which means the permanent project label above. A small corridor job, and
+Kev's call when.
 
 ================================================================
 *** THE LOG OUT BUTTON — BUILT AND LIVE (26 September 2026) ***
@@ -292,6 +1041,9 @@ it went in. Kev's words: it works.
 IT USED A THROWAWAY TABLE, public.connection_test, deliberately opened to
 anyone with the publishable key. NOTHING REAL EVER WENT IN IT. *** IT IS
 STILL THERE AND SHOULD BE DELETED next time Supabase is open. ***
+UPDATED 26 SEPTEMBER EVENING: STILL THERE. Supabase was open all evening
+for the shelf, and the deletion was mentioned but deliberately kept out of
+the shelf's own step.
 
 --- *** THE SECRET KEY TRAP — READ THIS BEFORE ASKING FOR ANY KEY *** ---
 
@@ -729,6 +1481,11 @@ TWO THINGS TO VERIFY ON SUPABASE'S OWN PAGES BEFORE BUILDING, NOT
 TRUSTED FROM A SEARCH: the maximum size of a single uploaded file on the
 free tier, and whether there is a practical ceiling on a single text row
 worth respecting.
+UPDATED 26 SEPTEMBER EVENING: THE ROW HALF IS ANSWERED IN PRACTICE.
+Postgres allows about 1GB in one text field, and a real 69,593-word novel
+went up and came back exact in a single row. Whether one-row-per-book is
+SLOW to work with is a different question, and still the reason chapter
+rows were proposed. The file-store limit is still unverified.
 
 *** AND THREE THINGS THAT GO IN FROM THE FIRST DAY, WHATEVER SHAPE THE
 SHELF TAKES — AGREED 24 SEPTEMBER. *** Kev asked the right question:
@@ -745,6 +1502,12 @@ later. THESE THREE ARE PAINFUL TO RETROFIT:
 NOTHING ELSE. The chapter-finding, the muster, the check and the search
 can all be added to a shelf that already works without disturbing what is
 on it.
+*** BUILT 26 SEPTEMBER EVENING. *** All three are columns in public.shelf,
+and the deleted-marker is enforced: signed-in members were granted no
+delete at all. See THE SHELF — BUILT AND PROVED at the head of this file.
+AND ONE OF THE THREE HIT A SNAG: "which project" has nothing permanent to
+point at, because projects are found by their position in a list. The
+created timestamp serves for now. See NO PERMANENT PROJECT LABEL.
 
 --- WHY SUPABASE, OVER THE ALTERNATIVES ---
 
@@ -844,6 +1607,9 @@ AND THE PAUSING NOTE BELOW IS NOW ANSWERED IN PART: signing in touches
 Supabase, so opening the app through the front door IS activity.
 THE NEXT JOB IS THE SHELF ITSELF — somewhere for a book to live, and a
 way to put one there. SMALL, BECAUSE ONLY THE LIBRARY MOVES.
+*** DONE 26 SEPTEMBER EVENING. *** The shelf exists and book one has been
+up and back exactly. THE PROJECTS STILL LIVE IN localStorage; only the
+shelf is on the server. The next job is the Library room.
 IT IS INFRASTRUCTURE, NOT A POCKET — the first thing hit in this rebuild
 that cannot be done by writing a screen. KEV: "Let's go slow."
 
@@ -932,10 +1698,16 @@ would look at them the next day:
 --- THE RUN, AS IT NOW STANDS ---
   0. THE SHELF — Supabase. Its shape is NOT DECIDED; see Claude's
      proposal in the Supabase section.
+     [BUILT 26 SEPTEMBER EVENING in its simplest form — one row per book,
+     the whole text in it. The finished shape is still not decided.]
   1. THE ROOM — pockets/research.html replaces the Coming Soon. STATIC
      STILL FIRST.
   2. THE WAY IN — a file picker. PLAIN TEXT FIRST; Word and PDF can
      follow.
+     [OVERTAKEN 26 SEPTEMBER EVENING. WORD FIRST, NOT PLAIN TEXT. Kev:
+     "Who will have their books/stories etc as plain text files I know I
+     don't!!" Word (.docx) is read in the browser; Google Docs come in as
+     Word via File → Download. Proved on the test page with Rapscallion.]
   3. THE CHAPTER SPLIT — find the headings. No AI. Both the shelf and the
      Plot Mapper want it.
   4. THE FACTUAL LAYER ON THE CARDS — before the read, because the read
@@ -1906,10 +2678,28 @@ PitchDarkPress/inkyswot — the front page, index.html, published by GitHub
   Pages to inkyswot.com. Slower to deploy than Vercel.
 LAST STITCH, 22 SEPTEMBER: corridor.html 147,527 characters, index.html
 347,456 characters, 16 of 16 pockets placed.
+AND ON SUPABASE, 26 SEPTEMBER EVENING: public.shelf, beside public.members
+and the throwaway public.connection_test. The shelf test page,
+code-shelf-test.html, lives on Kev's own machine, not in any repository.
+Nothing was stitched or published tonight.
 
 THE CORRIDOR'S SCRIPT NOW ENDS WITH FOUR BOLTED-ON BLOCKS, in this
 order: SPELL CHECK, READ ALOUD, THE SAVE GUARD, LOG OUT (added
-26 September; corridor 151,742 characters). Each is self-contained and
+26 September; corridor 151,742 characters).
+UPDATED 27 SEPTEMBER: FIVE. THE LIBRARY ROOM follows LOG OUT. Live as
+version one (corridor 164,466, index.html 364,395, 16 of 16). Version two
+is written and not yet published.
+UPDATED 28 SEPTEMBER: THE LIBRARY ROOM IS NOW VERSION THREE, live.
+Corridor 168,402, index.html 368,331, 16 of 16. Version two was never
+published.
+UPDATED 29 SEPTEMBER: THE LIBRARY ROOM IS NOW VERSION FIVE, live. Seven
+publishes today; the stitch log reads, in order: 199,329 / 399,258 ·
+200,138 / 400,067 · 219,269 / 419,198 · 221,563 / 421,492 · 227,265 /
+427,194 · 227,227 / 427,156 · 227,677 / 427,606 (corridor / index.html,
+16 of 16 every time, counts matching at publish every time). THE LAST:
+CORRIDOR 227,677, INDEX.HTML 427,606. The block also wraps the corridor's
+renderTrash and adds the Library item under NAVIGATE; the corridor's own
+code is untouched. Each is self-contained and
 each reaches back to improve something already in the file. THAT IS THE
 CORRIDOR'S PATTERN FOR A SMALL, SAFE CHANGE, and it is the right route
 whenever a whole-file rewrite of the corridor would be riskier than the
@@ -2021,6 +2811,10 @@ has to be just that." And: "we move as little as possible." ***
 THE SHELF'S SHAPE IS NOT DECIDED. Claude has proposed one — see the
 Supabase section — but Kev: "I have no idea how things will work on
 Supabase and until then I can't nail things down."
+UPDATED 26 SEPTEMBER EVENING: THE SHELF NOW EXISTS in its simplest form,
+and holds book one. Its SHAPE is still not decided — but there is now
+something real to look at before deciding it, which is what Kev asked for.
+THE ROOM IS THE NEXT JOB. Static still first.
 
 AND IT IS WHERE THE IMPORT LIVES — Kev's reasoning, and it is the right
 one: the shelf will hold more than his own previous books, and the moment
@@ -2168,6 +2962,20 @@ FROM 26 SEPTEMBER (from Log Out):
   ANYTHING. One line in the console does it, and it removes the only fear
   that matters.
 
+FROM 29 SEPTEMBER (from the Library):
+- ALWAYS THE PALETTE. Kev: "We must always go with the colour palete."
+  GOLD FOR ANYTHING ALIVE, INCLUDING HOVERS ON ACTIONS THAT REMOVE THINGS.
+  RED ONLY FOR A REAL FAULT.
+- TOOLTIPS ARE INKYSWOT'S OWN — a small dark panel with a gold border, mono
+  capitals — never the browser's white box. Kev: "Not very InkySwot."
+- EVERY SCREEN'S ? WINDOW HAS ONE LINE PER THING ON THE SCREEN. Kev: "We
+  need to start getting into the habit of adding the explanation '?'".
+- ANYTHING THAT REMOVES OR JOINS ASKS FIRST, in the platform's own panel —
+  removing a separator, hiding a section, deleting forever. Adding does
+  not ask.
+- A HIDDEN THING IS A SMALL BOX ON THE RIGHT, not a line across the page.
+  Kev: "Perfect."
+
 FROM 24 SEPTEMBER (from the front door):
 - A REAL FAILURE IS SAID IN THE DANGER RED, NEWS IS SAID IN GOLD. One
   message line per form, so a failure can never be mistaken for progress.
@@ -2196,6 +3004,14 @@ DONE 24 SEPTEMBER: THE CONNECTION PROVED, THE MEMBERS TABLE BUILT, AND
 THE FRONT DOOR LIVE. Kev is member 1.
 DONE 26 SEPTEMBER: LOG OUT — centred at the foot of the sidebar, with its
 own InkySwot confirmation panel. Live and verified.
+DONE 26 SEPTEMBER EVENING: THE SHELF, built and proved with book one.
+DONE 27–28 SEPTEMBER: THE LIBRARY ROOM, live as three libraries, with
+books keeping their pages.
+DONE 29 SEPTEMBER: + ADD IN THE APP, SEPARATORS, HIDE, UNDO, COPY, TRASH
+AND DELETE FOREVER, THE LIBRARY UNDER NAVIGATE. Live and verified.
+NEXT, AS OFFERED 29 SEPTEMBER: EDITING A BOOK'S PROJECT LINKS, still
+first. (Items 0 and 1 below are therefore largely done; the list is kept
+as written.)
 
 0a. THE LOCK ON THE DOOR. *** PARKED 26 SEPTEMBER, DELIBERATELY. *** It
    was written and withdrawn: Kev had asked for a Log Out button, and it
