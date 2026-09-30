@@ -1,6 +1,38 @@
-File: inkyswot/thinking.md
+Last updated: 29 September 2026, evening. Covers 29 September, written
+up at the end of the day's work. NOTHING FROM THE 28 SEPTEMBER EVENING
+VERSION IS SHORTENED OR REMOVED.
+*** UPDATED 29 SEPTEMBER EVENING: THE LIBRARY IS A WORKING ROOM. + Add,
+separators, hiding, undo, copy, Trash and Delete Forever are built and
+live, and the Library is under NAVIGATE. OPEN NOW: editing a book's
+project links (next), answering the chapter queries, the Public Domain
+Library and how its additions are approved, public-domain editions and
+private highlights, genre sub-headings, the theatre, and projects leaving
+the browser. ***
 
-File: inkyswot/thinking.md
+[The 28 September evening header follows, kept as written.]
+Last updated: 28 September 2026, evening. Covers 27 and 28 September,
+written up together at the end of the 28th. NOTHING FROM THE 26 SEPTEMBER
+EVENING VERSION IS SHORTENED OR REMOVED.
+*** UPDATED 28 SEPTEMBER EVENING: THE LIBRARY IS LIVE AS THREE LIBRARIES,
+AND BOOKS COME IN FROM WORD OR BY PASTE WITH THEIR PAGES KEPT. OPEN NOW:
++ Add inside the app, editable separators, the shared public-domain
+collection, genre sub-headings, the theatre, and projects leaving the
+browser. ***
+*** THE LIBRARY ROOM IS LIVE AS A STILL. WHAT IS OPEN NOW: the three
+headings and their genre sub-headings, the list's name, + Add, whether
+projects leave the browser after the cleared cache, and Kev's new idea — a
+shared public-domain library for everyone. ***
+
+[The 26 September evening header follows, kept as written.]
+Last updated: 26 September 2026, EVENING. Covers the evening session —
+THE SHELF, BUILT AND PROVED. NOTHING FROM THE EARLIER 26 SEPTEMBER VERSION
+IS SHORTENED OR REMOVED; tonight's changes sit beside what they affect.
+*** THE SHELF IS NO LONGER THE OPEN THREAD. It exists, and book one has
+been up and back exactly. WHAT IS OPEN NOW IS THE LIBRARY ROOM, the
+permanent project label it will need, and the shelf's real shape — which
+can now be decided by looking at something real. ***
+
+[The earlier 26 September header follows, kept as written.]
 Last updated: 26 September 2026. Covers the previous session — the Log Out
 button. NOTHING FROM THE 24 SEPTEMBER VERSION IS SHORTENED OR REMOVED;
 today's changes sit beside what they affect.
@@ -231,6 +263,183 @@ WATCH FOR: whether the ORDER OF WORK gets away from us again. The last
 two sessions both began intending the shelf and ended somewhere else —
 accounts on the 24th, Log Out on the 26th. Both were right to do, and
 both were also detours. THE SHELF HAS NOW BEEN THE NEXT JOB THREE TIMES.
+*** CLOSED 26 SEPTEMBER EVENING. THE SHELF WAS BUILT. *** The fourth time
+it was next, it got its turn. Kev opened with two words — "The shelf." —
+and the session stayed on it. Full account in current-state.md. The text
+above is kept as the record.
+
+--- *** A SHARED PUBLIC-DOMAIN LIBRARY — KEV'S IDEA (28 September) *** ---
+
+KEV, FROM HIS IPAD: "What if we built a library of works that everyone
+could access." It follows straight from the copyright decision: public
+domain is exactly what the platform may learn from and republish.
+WHAT MAKES IT GOOD: a writer finds Dickens already on the shelf, filed and
+chapter-split, instead of each writer uploading their own copy.
+CLAUDE'S NOTES, NOT DECIDED:
+· IT NEED NOT BE BUILT FROM NOTHING. Project Gutenberg holds over 70,000
+  out-of-copyright books; Standard Ebooks offers corrected editions of
+  many classics. Their own terms on reuse want reading before anything is
+  drawn from them.
+· "OUT OF COPYRIGHT" DEPENDS ON THE COUNTRY. The UK generally counts
+  seventy years from the author's death; the US goes by publication date.
+  A book can be free in one and not the other.
+· ONE SHARED COPY, NOT A COPY PER WRITER. Its own table, readable by every
+  member, separate from the private shelf.
+KEV: "Let's sort out the details when I am back on my pc later." THE NEXT
+CONVERSATION ABOUT IT STARTS HERE.
+SORTED 28 SEPTEMBER, AT THE PC: one shared collection, its own table,
+curated by Kev at first; the private shelf holds only My Library and
+Reference Library. Kev: "Yes it does but we need to be mindful of names."
+The names and their lines are his, and locked. NOT BUILT.
+
+--- *** WHERE THE NEXT SESSION STARTS (29 September evening) *** ---
+
+EDITING A BOOK'S PROJECT LINKS. Offered at the end of the day and not yet
+started: a small × on each "Linked to" tag, and a "+ Link to a project"
+tag listing the projects the book is not yet linked to. Choosing one
+saves at once; removing one asks first. Gold throughout; InkySwot
+tooltips. A STILL FIRST, as always. It finishes what Kev asked for on
+links: "add/change/remove that link".
+THEN, IN SOME ORDER KEV CHOOSES: answering the chapter ? marks; genre
+sub-headings; the Public Domain Library.
+AND KEV HAS ONE THING TO LOOK AT: what follows Chapter Eight in The Good,
+The Bad And The Elderly (22,233 words in one chapter).
+
+--- *** PUBLIC DOMAIN EDITIONS — WHAT HAPPENS WHEN A BETTER COPY TURNS UP
+    (29 September) *** ---
+
+KEV: "The Public Domain Library is now a bit of a problem with deletion.
+What if I upload work and then find what I think is a better version?"
+The difficulty: the collection is SHARED. Other writers may have linked a
+book to their projects, or be checking against it. Deleting it would pull
+it out from under them.
+CLAUDE'S PROPOSAL, WHICH KEV SHARED ("This is my thinking too"), NOT
+BUILT AND NOT LOCKED:
+· REPLACING MEANS ADDING THE BETTER EDITION, not overwriting the old one.
+· The old edition is RETIRED, NOT DELETED: new writers see only the new
+  one; writers already linked to the old one keep it, with a quiet note
+  that a newer edition exists.
+· So nobody's work changes under them without their say — the buddy
+  system again.
+
+--- *** HIGHLIGHTS ON A SHARED TEXT — KEV'S "BUT" (29 September) *** ---
+
+KEV: "BUT there is still the problem.. … at some point we are going to
+have to allow the marking of text. SO: I see a line/phrase/etc in a
+public so I highlight it (We will add this function later), what happens
+then?"
+CLAUDE'S PROPOSAL, NOT DECIDED: A HIGHLIGHT IS NEVER WRITTEN INTO THE
+SHARED BOOK. It is a PRIVATE LAYER belonging to the writer, laid over the
+text. Other writers never see it, and the book itself never changes.
+THE HARD PART, AND IT IS NOT NEW: a highlight must be anchored to the
+PHRASE, not to a position ("characters 14 to 22"), or it drifts when an
+edition changes. THAT IS EXACTLY THE VANISHING TINTS PROBLEM (Section A
+below) — the same fix serves both. SOLVE IT ONCE.
+Kev: "ALL GOOD STUFF." Nothing built.
+
+--- THE LIBRARY'S DAY, IN ONE PARAGRAPH (29 September) ---
+
+Almost everything on the 28 September "next" list below was done: + Add in
+the app, editable separators with descriptions, hiding (Kev's "perhaps it
+just colapsises"), undo that survives a refresh, copies, Trash with
+Restore and Delete Forever, the Library under NAVIGATE, InkySwot
+tooltips, and the palette held. WHAT DROVE IT WAS USE: nearly every
+change came from Kev looking at the live screen — the missing words on the
+hover line, the red hover, the white tooltip, the hidden line too big
+twice, "how do you get out of Trash?". "USE WINS" WORKING AS INTENDED, and
+it did not become a snag list: each was small, done and published.
+ONE PATTERN TO WATCH: CLAUDE OVER-BUILDING THE FIRST VERSION. On project
+links Kev said "You are making this all very complicated." Same shape as
+the Log Out bundle on 26 September. Build the one thing asked for.
+
+--- WHERE THE NEXT SESSION STARTS (28 September evening) ---
+*** LARGELY DONE 29 SEPTEMBER. *** + Add is built and the test page
+retired in practice; editable separators are built. The Public Domain
+collection and genre sub-headings remain. Projects and the browser: still
+not discussed. The text below is kept as the record.
+
++ ADD INSIDE THE APP is the natural next piece: the file picker and the
+paste box brought into the Library, the library and genre chosen as the
+book goes up, and the project label filled in by the app from the open
+project's created stamp. It retires the test page.
+THEN, in some order Kev chooses: editable separators; the Public Domain
+collection; genre sub-headings.
+AND STILL OPEN, not to be forgotten: whether projects leave the browser
+after the cleared cache.
+
+--- THE LIBRARY ROOM'S HEADINGS — WHERE 27 SEPTEMBER STOPPED ---
+
+Kev stopped as it was "about to get 'complicated'". The pieces on the
+table: three main headings (My Work · Public Domain · Other Works), Genre
+sub-headings under each from the Basics list, the SQL for kind and genre
+(written, not run), book one's genre (Kev's to give), the list's name
+(open). Version two of the room (Front and Back Matter) is written and not
+yet published.
+AND THE SHARED LIBRARY ABOVE MAY CHANGE THE PUBLIC DOMAIN HEADING: if
+public-domain works live in one shared collection, a writer's own shelf
+might only need My Work and Other Works. WORTH SETTLING BEFORE THE SQL IS
+RUN.
+
+--- PROJECTS AND THE BROWSER — REOPENED BY WHAT HAPPENED ---
+[Still open 28 September; not discussed today.]
+
+The cleared cache took every project. "Move as little as possible" was
+right on 22 September; the 27th is new evidence. Two possible answers,
+neither decided: move projects to Supabase too, or give the writer an
+export so a copy exists outside the browser. KEV'S CALL.
+
+--- *** THE LIBRARY ROOM — THE LIVE THREAD, AND WHERE THE NEXT SESSION
+    STARTS (26 September, evening) *** ---
+
+THE SHELF WORKS AND THE PLATFORM DOES NOT KNOW IT EXISTS. Only a test page
+on Kev's machine reads and writes it.
+THE NEXT PIECE: Research & Reference stops saying Coming Soon and shows
+what is on the writer's shelf, starting with book one. STATIC STILL FIRST
+— the room drawn, the real shelf in it, nothing clickable. What Kev sees
+decides the next move. Putting books up from inside the app follows.
+THE REBUILD-5 DRAWING (three rows growing rightwards) is the room's agreed
+shape, but it was drawn for folders of research, not for a shelf of
+books. HOW THE TWO SIT TOGETHER IN ONE ROOM IS NOT WORKED OUT. Worth
+putting to Kev as a still, not as a question.
+
+--- A PERMANENT LABEL FOR EACH PROJECT — OPEN, KEV'S CALL ---
+
+Found by reading the corridor: projects are known by position, and
+position moves. The created timestamp is fixed and unique. CLAUDE'S
+WORKING IDEA: give every project an id, as chapters and scenes got on
+1 September, and let each existing project take its created value as that
+id, so nothing on the shelf ever needs relabelling. The real room needs
+SOMETHING permanent to label books with, so this comes before or with it.
+A bolted-on block, the corridor's usual pattern for a small, safe change.
+NOT DESIGNED. NOT BUILT.
+AND IF IT IS DONE, THE SIZING SWEEP IS OWED ON THE SAME OPENING — or the
+promise to do it then should stop being made. See THE SIZING SWEEP.
+
+--- THE SHELF'S REAL SHAPE — NOW DECIDABLE ---
+
+Kev, 22 September: "until then I can't nail things down." THERE IS NOW A
+"THEN". One book sits in one row. The next honest step is for Kev to LOOK
+at it — Table Editor → shelf — and see a 383,613-character cell for
+himself. Chapter rows remain Claude's proposal; nothing tonight argued
+against them, and nothing proved them either.
+AND THE FIRST CHAPTER-SPLIT EVIDENCE ARRIVED BY ACCIDENT: the book's first
+line came back as just "The" — the title is split over two lines in the
+Word file. A real instance of "a number on one line and the title on the
+next". When the split is built, RUN IT ON THIS FILE FIRST.
+
+--- WORD, NOT PLAIN TEXT — AND WHAT IS STILL OUTSIDE IT ---
+
+Kev corrected the plan on the spot, and rightly. The route is .docx, with
+Google Docs via File → Download. STILL UNHANDLED: older .doc, Pages, PDF,
+and anything with the story in text boxes, tables or tracked changes —
+mammoth reads the main text and leaves some of that behind. NOT A
+PROBLEM FOR KEV'S OWN FILES, as far as tonight shows. Worth knowing before
+another writer ever uses it.
+AND KEEP THE ORIGINAL? The proposal had the untouched original in the file
+store "as the record of what was handed over". The test sent only the
+text. Whether the .docx itself should be kept is still open — and it is
+the only thing that would put anything in the file store.
+
 
 --- THE EMAIL SENDER — OPEN (24 September) ---
 
@@ -309,6 +518,9 @@ THE SIX STAGES, AGREED IN SHAPE:
      what is on the shelf, allows removal. STATIC STILL FIRST.
   2. THE WAY IN — a file picker. PLAIN TEXT FIRST. Word and PDF are
      packed formats needing their own machinery and can follow.
+     [OVERTAKEN 26 SEPTEMBER EVENING: WORD FIRST. Kev: "Who will have
+     their books/stories etc as plain text files I know I don't!!" The
+     "machinery" turned out to be one library, and it worked first time.]
   3. THE CHAPTER SPLIT — find the headings, build the Plot Mapper's
      chapters. NO AI AT ALL, costs nothing, more reliable than anything
      the AI does. Probably the first thing built.
@@ -348,6 +560,8 @@ wants stories by other people "for style and tone", which is what every
 writer has always done by reading. The difference is between a writer
 learning from a book and a machine extracting from one.
 TAKE THE POSITION BEFORE SOMEBODY DOES IT, NOT AFTER.
+*** TAKEN, 27 SEPTEMBER. *** Stored, yes; learned from, checked against or
+republished, never. Kev's decision; see locked-decisions.md.
 NOTE: the confirm-or-appear half of this question IS NOW CLOSED. The
 writer always confirms. See the muster.
 
@@ -542,6 +756,10 @@ a week on real writing before the rest. DEFERRED at Kev's own suggestion,
 and rightly: the platform's flow and missing sections come first.
 
 --- THE VANISHING TINTS — STILL OPEN, STILL NOT A SEPARATE JOB ---
+NOTE 29 SEPTEMBER: A THIRD THING NOW NEEDS THE SAME FIX — private
+highlights on public-domain texts, which must follow a phrase across
+editions. The Plot Mapper's tints, the cards, and the highlights: ONE
+ANCHORING SOLUTION, built once.
 
 A mark is held as "characters 14 to 22 of this paragraph". Edit the words
 and the numbers point at the wrong place. readBack() DROPS the marks on
@@ -644,6 +862,8 @@ list. IT DOES NOT SAY THE BUILD LIST NEVER GETS A TURN.
 WORTH WATCHING: the store has now been "next" for three sessions. If it
 is still next after a fourth, the pattern is the problem, not the
 individual detours.
+ANSWERED 26 SEPTEMBER EVENING: IT WAS NOT. The fourth session built it.
+The detours were detours, not a pattern.
 
 ================================================================
 SECTION B — WHAT HAPPENED TO THE 18 JUNE THINKING
@@ -680,6 +900,11 @@ cdn.jsdelivr.net in two separate files. IF THAT CDN IS EVER SLOW OR
 BLOCKED, Log Out falls back to going to the front door without telling
 Supabase first, which is the right failure — but it is worth knowing
 there is an outside thing in the chain at all.
+NOTE (26 SEPTEMBER, EVENING): AND A THIRD LIBRARY IS COMING. The shelf
+test reads Word files with mammoth.js from the same CDN. So far it is only
+on a test page. When the Library room takes Word files, the platform will
+depend on it too — and a failure to load must say so in red, as the test
+page does, rather than leaving a picker that silently does nothing.
 
 THE DCW AS THE STAGE — NOT BUILT, AND NOT NEEDED SO FAR. If it returns,
 the question it left open is still right: what does the DCW show when
@@ -847,5 +1072,24 @@ RETIRED FROM THIS FILE (so nothing feels lost)
   a fault) and a darker colour (it reads as disabled).
 - WHETHER A CONFIRMATION USES THE BROWSER'S BOX — closed 26 September. It
   does not. The corridor's own modal classes, opened with "open".
+- THE LIBRARY ROOM NOT EXISTING — closed 27 September. Live as a still.
+- SOMEONE ELSE'S NOVEL AS A STYLE SOURCE — closed 27 September. It may be
+  stored, never learned from, checked against or republished. Kev's call.
+- WHETHER THE CHAPTER SPLIT WORKS ON A REAL BOOK — closed 27 September.
+  12 of 12 on Rapscallion.
+- THE SHELF NOT EXISTING — closed 26 September, evening. public.shelf is
+  built; book one went up and came back exactly.
+- PLAIN TEXT FIRST — closed 26 September, evening. Word first; Google
+  Docs via download.
+- WHETHER A WHOLE NOVEL FITS IN ONE ROW — closed 26 September, evening.
+  It does. Whether it should live that way is still open.
 - WHEN THE LOCK ON THE DOOR IS BUILT — closed 26 September, for now: NOT
   YET. It guards an empty room. Kept in full in Section A.
+- WHETHER WRITERS CAN ADD AND REMOVE SEPARATORS — closed 29 September.
+  They can, and describe them.
+- HOW A BOOK LEAVES THE SHELF — closed 29 September. Trash first, with
+  Restore; Delete Forever from there. Kev's decision.
+- HOW THE LIBRARY IS REACHED WITHOUT A PROJECT OPEN — closed
+  29 September. Under NAVIGATE.
+- + ADD INSIDE THE APP — closed 29 September. Built; The Good, The Bad
+  And The Elderly went up through it.
