@@ -1,6 +1,14 @@
-File: inkyswot/future.md
+Last updated: 29 September 2026, evening. Covers 26 September (evening)
+to 29 September. NOTHING IS SHORTENED OR REMOVED.
+WHY FOUR DAYS AT ONCE: this file was not with Claude on 26 September
+evening, 27 or 28 September. Those days are added now from the other
+files' records.
+NEW: THE PUBLIC DOMAIN LIBRARY — one shared collection for every writer
+(Kev's idea, 28 September), with two proposals from 29 September: how a
+better edition replaces an old one, and private highlights on a shared
+text. Existing entries carry dated notes where these days touched them.
 
-File: inkyswot/future.md
+[The 26 September header follows, kept as written.]
 Last updated: 26 September 2026. Covers the previous session — the Log Out
 button. NOTHING IS SHORTENED OR REMOVED.
 *** AND THE HONEST HEADLINE: NOTHING NEW WAS CONCEIVED. *** That session
@@ -153,9 +161,66 @@ they do. ***
 import is built; it is being worked out, and its shape is subject to
 change. The point that the other three inherit whatever it does still
 stands.]
+NOTE 26 SEPTEMBER EVENING – 29 SEPTEMBER: THE FIRST OF THE FOUR IS NOW
+PARTLY REAL. Books go up from Word or by paste, keep their pages, and are
+split into chapters by reading the headings, no AI. Two real books are on
+the shelf. MY LIBRARY'S OWN LINE NOW SAYS WHAT THIS ENTRY IS FOR:
+"InkySwot uses these for reference and continuity." The CHECK itself —
+the part that needs the factual layer — is still not started.
+AND ONE GIFT NOT YET USED (28 September): Word's own record of where each
+page began gives a book's real page numbers, so a ping could one day say
+"he was dark on page 142".
 THE OPEN QUESTION THAT RAN ACROSS ALL FOUR IS NOW ANSWERED: THE WRITER
 CONFIRMS. Nothing lands in Characters until it has been seen and ticked.
 See the muster in current-state.md and the lock in locked-decisions.md.
+
+================================================================
+THE PUBLIC DOMAIN LIBRARY — one shared collection for every writer
+Conceived 28 September 2026 (Kev, from his iPad). Editions and highlights
+thought through 29 September. HEADING LIVE; COLLECTION NOT STARTED.
+================================================================
+
+KEV: "What if we built a library of works that everyone could access."
+It follows straight from the copyright decision of 27 September: public
+domain is exactly what the platform may learn from, check against and
+republish.
+WHAT IS DECIDED (28 September, locked): ONE SHARED COLLECTION, not a copy
+on every writer's shelf; its own table, readable by every member; curated
+by Kev at first. The room already shows its heading and Kev's lines —
+"Copyright-free classics, available to every InkySwot writer. Read them,
+study them, or create your own editions." Its + Add is shown quiet.
+
+STILL OPEN:
+· WHETHER ADDITIONS WAIT FOR KEV'S APPROVAL. The + Add waits on this.
+· STOPPING DUPLICATES. Kev: "We will need to work out a way to stop
+  duplication of book in this section." Claude's proposal: compare the
+  title, the author and the book's opening words before anything goes up.
+· WHERE BOOKS COME FROM. Project Gutenberg (over 70,000 books) and
+  Standard Ebooks (corrected editions) exist; their reuse terms want
+  reading first. And "out of copyright" depends on the country — the UK
+  counts seventy years from the author's death, the US goes by
+  publication date.
+
+EDITIONS — WHEN A BETTER COPY TURNS UP (29 September). Kev: "What if I
+upload work and then find what I think is a better version?" The
+collection is shared, so deleting a book would pull it from under writers
+linked to it. PROPOSAL, SHARED BY KEV ("This is my thinking too"): add the
+better edition; RETIRE the old one rather than delete it. New writers see
+only the new one; writers already linked keep theirs, with a quiet note
+that a newer edition exists.
+
+HIGHLIGHTS ON A SHARED TEXT (29 September). Kev: "at some point we are
+going to have to allow the marking of text… I highlight it (We will add
+this function later), what happens then?" PROPOSAL: a highlight is a
+PRIVATE LAYER belonging to the writer, never written into the shared book.
+It must be anchored to the PHRASE, not a position, or it drifts between
+editions — THE SAME FIX AS THE VANISHING TINTS on the Plot Mapper. Solve
+it once for both.
+
+AND WHAT IT OPENS FOR THE PRESS. Kev's own example on 27 September:
+republishing A Christmas Carol, with illustrations. A shared, chapter-split
+public-domain collection is the natural source for "create your own
+editions" — and the ILLUSTRATION LIBRARY below is what would dress one.
 
 ================================================================
 THE FRONT PAGE — A WRITER'S DESK AT NIGHT
@@ -215,6 +280,8 @@ text will survive when the chat does not. IT IS A TWO-MINUTE JOB and it
 is exactly the loss the Wheel taught us about — that file had no filename
 in any database file, and a whole session went on establishing what it
 was. SAVE THE PICTURE.
+NOTE 29 SEPTEMBER: NOT RAISED SINCE. Whether it has been saved is not
+known here — worth a one-line check with Kev.
 
 ================================================================
 THE STYLE METER — new, 31 August 2026. NOT STARTED.
@@ -336,6 +403,10 @@ a promise rather than a fact. But it is no longer a promise about
 something unproven.
 NOTE 26 SEPTEMBER: unchanged. Still untouched. The shelf has been the
 next job three sessions running.
+NOTE 29 SEPTEMBER: the SHELF now exists and holds books, but in the
+database, not the file store. THE FILE STORE IS STILL UNTOUCHED. The
+Public Domain Library's "create your own editions" gives this entry a
+second reason to exist.
 ITS NEIGHBOUR: the RIGHTS MARKETPLACE under Future Products — the same
 instinct, pointed much further off.
 
@@ -439,7 +510,8 @@ built. WORTH CHECKING ON THE DAY: the maximum size for a single uploaded
 file, which is generous but is the one limit a long audio file might meet.
 NOTE 24 SEPTEMBER: still true, and still untested — nothing has yet been
 put into the file store at all.
-NOTE 26 SEPTEMBER: still nothing.
+NOTE 26 SEPTEMBER: still nothing. NOTE 29 SEPTEMBER: still nothing in the file store; books
+live in the database.
 
 PLATFORM — FUTURE FEATURES
 Six-tone time-of-day theme system — designed, not built.
