@@ -1,6 +1,29 @@
-File: inkyswot/locked-decisions.md
+Last updated: 29 September 2026, evening — ADD-ONLY update. Covers
+29 September. NOTHING HAS BEEN SHORTENED, DELETED OR MOVED. ADDED: the
+Library's working rules (links, separators, hiding, Trash, Delete
+Forever, the Library under NAVIGATE), three house-style locks, one
+working-practice trap, and the day's open questions. AMENDED IN PLACE:
+"A BOOK IS NEVER DELETED FROM THE SHELF, ONLY MARKED" — reversed by Kev
+for books already in Trash. Its wording is kept where it was, with the
+amendment beside it, and it is recorded at the foot.
 
-File: inkyswot/locked-decisions.md
+[The 28 September evening header follows, kept as written.]
+Last updated: 28 September 2026, evening — ADD-ONLY update. Covers
+27 September and 28 September together. NOTHING HAS BEEN SHORTENED,
+DELETED OR MOVED. ADDED: the copyright decision, the three libraries, the
+two ways in, the page-keeping rules, the write-up timing, traps, and open
+questions.
+
+[The 26 September evening header follows, kept as written.]
+Last updated: 26 September 2026, EVENING — ADD-ONLY update. Covers the
+evening session: THE SHELF, built and proved. NOTHING HAS BEEN SHORTENED,
+DELETED OR MOVED. ADDED: two locks under THE LIBRARY AND THE IMPORT, two
+working-practice locks (one a trap), and three open questions. AMENDED IN
+PLACE: the import's "plain text first", with the original kept.
+WHAT THIS UPDATE DELIBERATELY DOES NOT DO: lock the shelf's shape. The
+whole book in one row is a TEST SHAPE, not a decision.
+
+[The earlier 26 September header follows, kept as written.]
 Last updated: 26 September 2026 — ADD-ONLY update. Covers the previous
 session: the Log Out button, built and live. NOTHING HAS BEEN SHORTENED,
 DELETED OR MOVED. ADDED: one lock under ACCOUNTS AND THE FRONT DOOR, two
@@ -103,6 +126,42 @@ AND SINCE 24 SEPTEMBER — LOG OUT
 - NOTHING IN A BOLTED-ON BLOCK MAY CONTAIN THE CLOSING SCRIPT TAG, EVEN
   INSIDE A COMMENT. A trap; it killed the whole page.
 - READ THE CLASS FROM THE FILE. Never guess it.
+
+AND SINCE THE MORNING OF 26 SEPTEMBER — THE SHELF
+- THE SHELF EXISTS. public.shelf, built and proved with a real book.
+- A BOOK IS NEVER DELETED FROM THE SHELF, ONLY MARKED. No delete granted.
+  AMENDED 29 SEPTEMBER BY KEV: a book in Trash CAN be deleted forever.
+- THE WAY IN IS THE WRITER'S OWN FILE. Word, not plain text.
+- NEVER HAND THE WRITER A VALUE THEY CANNOT SEE.
+- A CONSOLE BELONGS TO ITS TAB. A trap.
+
+AND SINCE 26 SEPTEMBER — THE LIBRARY ROOM AND COPYRIGHT
+- THE LIBRARY ROOM IS LIVE, as a still. Research & Reference shows the shelf.
+- ANYTHING CAN GO ON THE SHELF; ONLY THE WRITER'S OWN WORK AND OUT-OF-
+  COPYRIGHT WORK ARE LEARNED FROM, CHECKED AGAINST OR REPUBLISHED. Settled.
+- EVERY BOOK SAYS WHAT KIND OF WORK IT IS. My Work · Public Domain · Other
+  Works.
+- A HEADING WITH NOTHING UNDER IT IS NOT A CHAPTER.
+
+AND ON 28 SEPTEMBER
+- THREE LIBRARIES, IN KEV'S WORDS: My Library · Reference Library ·
+  Public Domain Library. Public domain is ONE SHARED COLLECTION.
+- WORD FILES ARE CHOSEN; GOOGLE DOCS ARE PASTED. Kev's rule.
+- A BOOK KEEPS ITS PAGES. Front and back matter show a page at a time.
+- THE WRITE-UP HAPPENS AT THE END OF THE DAY'S WORK.
+
+AND ON 29 SEPTEMBER
+- A BOOK CAN BE LINKED TO A PROJECT — OPTIONALLY, AND TO MORE THAN ONE.
+- A BOOK GOES TO TRASH, AND FROM TRASH CAN BE DELETED FOREVER. Amends the
+  26 September lock; see below.
+- SEPARATORS CAN BE ADDED, REMOVED AND DESCRIBED. They are not the
+  writer's words.
+- A SECTION IS HIDDEN, NEVER DELETED.
+- EVERY CHANGE TO A BOOK CAN BE UNDONE, EVEN AFTER A REFRESH.
+- THE LIBRARY IS UNDER NAVIGATE. A book belongs to the writer.
+- ALWAYS THE PALETTE. Gold for anything alive; red only for real faults.
+- TOOLTIPS ARE INKYSWOT'S OWN.
+- GENRE COMES FROM THE APP'S EXISTING LIST.
 
 ================================================================
 LIVE LOCKED DECISIONS
@@ -385,6 +444,8 @@ already exists." HOW THOSE TWO FIT TOGETHER IS STILL BEING BUILT ON, and
 is in thinking.md as a working idea, NOT here.
 AND THE CHAPTER SPLIT AND THE ONE-PASS READ ABOVE are Claude's working
 ideas about mechanics, not decisions of Kev's. They stand as ideas only.
+AMENDED 26 SEPTEMBER EVENING: the outline's "PLAIN TEXT FIRST" for the
+way in is overtaken. See THE WAY IN IS THE WRITER'S OWN FILE below.
 
 NOTHING LANDS IN THE WRITER'S WORK UNTIL THE WRITER HAS SEEN IT AND SAID
 SO — LOCKED (16 September 2026)
@@ -402,6 +463,194 @@ REVERSIBLE. That is Proauthorism stated as a working relationship rather
 than as a declaration.
 NOTE 22 SEPTEMBER: THIS HOLDS HOWEVER THE IMPORT IS FINALLY SHAPED,
 because it is not really about the import — it is about the platform.
+
+THE SHELF EXISTS, AND A BOOK IS NEVER DELETED FROM IT, ONLY MARKED —
+LOCKED AND BUILT (26 September 2026)
+public.shelf, in Supabase. Row level security on: a member reads, adds
+and changes only their own books. Signed-in members are granted select,
+insert and update — AND NO DELETE. The deleted-marker agreed 24 September
+is enforced by the database itself, so nothing on a shelf can vanish by
+accident or by a fault in the platform's code.
+PROVED 26 September with book one: 383,613 characters up, 383,613 back,
+exact.
+*** AMENDED 29 SEPTEMBER — KEV'S DECISION. A BOOK IN TRASH CAN NOW BE
+DELETED FOREVER. *** The wording above is kept as the record. KEV: "We
+will need an empty TRASH OR a permanently delete this work." Trash alone
+is not enough: a writer must be able to get rid of something for good.
+WHAT STILL HOLDS FROM THE LOCK ABOVE, AND IT IS THE PART THAT MATTERED:
+NOTHING VANISHES BY ACCIDENT OR BY A FAULT IN THE CODE. A delete policy
+lets a member delete ONLY their own book, and ONLY once it is already in
+Trash ("delete own trashed books": owner = auth.uid() and deleted_at is
+not null). So a book is always marked first; the permanent step is a
+second, separate act, asked for in the platform's own panel, and the
+database refuses it for anything not in Trash.
+*** WHAT IS NOT LOCKED: THE SHAPE. *** The whole book in one row is a test
+shape. Chapter rows are still Claude's proposal, and Kev decides after
+seeing the thing work. Subject to change, like every lock in this block.
+
+THE WAY IN IS THE WRITER'S OWN FILE, NOT PLAIN TEXT — LOCKED FOR NOW
+(26 September 2026)
+KEV: "Who will have their books/stories etc as plain text files I know I
+don't!!" He is right: "plain text first" was Claude's convenience, not
+anything a writer has. KEV HAS BOOKS IN WORD AND IN GOOGLE DOCS.
+THE ROUTE, CLAUDE'S PROPOSAL AND ACCEPTED ("Do what you have to do"): read
+Word (.docx) in the browser, on the writer's machine, before anything is
+sent. Google Docs come in as Word — File → Download → Microsoft Word
+(.docx) — and the room says so beside the picker. ONE WAY IN, NOT TWO.
+The principle is Kev's and it stands however the route changes: TAKE THE
+FILE THE WRITER ACTUALLY HAS.
+
+THREE LIBRARIES, IN KEV'S WORDS — LOCKED (28 September 2026)
+MY LIBRARY (Private) — "Your books — finished, unfinished and everything
+in between. InkySwot uses these for reference and continuity."
+REFERENCE LIBRARY (Private) — "Books by other writers, kept for reading
+and research. Please Note: these are never used to shape or influence your
+writing."
+PUBLIC DOMAIN LIBRARY (Open to all) — "Copyright-free classics, available
+to every InkySwot writer. Read them, study them, or create your own
+editions."
+Kev's wording, used word for word. Kev on the first names Claude drafted:
+"They don't sound very inviting do they?"
+PUBLIC DOMAIN IS ONE SHARED COLLECTION, not a copy on each shelf — Kev's
+idea of 28 September, agreed: "Yes it does." Curated by Kev at first. The
+private shelf therefore knows only two libraries: 'mine' and 'reference'.
+THE THEATRE COMES LATER. Structure now; the look in the theatre pass.
+
+WORD FILES ARE CHOSEN; GOOGLE DOCS ARE PASTED — LOCKED (28 September 2026)
+KEV: "NO. A google doc upload has to be a copy and paist." Claude had
+proposed downloading as Word; overruled. The paste box is also the way in
+for anything that is not a Word file. Proved on a real Google Doc.
+
+A BOOK KEEPS ITS PAGES — LOCKED AND BUILT (28 September 2026)
+When a book goes up, where each new page began goes with it, as a mark
+that is never one of the writer's words. Front and back matter are shown a
+page at a time; lines within a page sit together. Kev: "there should be a
+space between each section not each line so that it is clear, for
+instance, when the title information ends and the copyright info starts."
+The rules that find a page, and why each exists, are in current-state.md.
+THE ONE THAT MATTERS AS A PRINCIPLE: SIX OR MORE EMPTY LINES ARE THE
+WRITER'S OWN "NEW PAGE", and are read as they meant it.
+
+GENRE COMES FROM THE APP'S EXISTING LIST — LOCKED (28 September 2026)
+Kev: "We will use the lists that already exist on the app." The Basics
+Genre list, chosen when a book goes up. Never a second list.
+
+A BOOK CAN BE LINKED TO A PROJECT — OPTIONALLY, AND TO MORE THAN ONE —
+LOCKED (29 September 2026)
+KEV: "when a user uploads content to their library they are simply given
+the option to link the work to a project. that link stays there until
+used and the they will be given the option add/change/remove that link so
+they can add that work to more than one project or take it off a project
+and add it to another."
+And earlier: "The user should be given the option to do this when they
+upload or later when it becomes necessary for their work."
+SO: the link is offered at + Add and can be left empty; it can be added,
+changed or removed later from the book; a book can serve several
+projects. KEV, ON CLAUDE'S FIRST, FULLER VERSION: "You are making this all
+very complicated." The link is a simple option, nothing more.
+THE LINK IS THE PROJECT'S created STAMP, never its position in the list.
+Stored in project_ids (text[]). BUILT AT + ADD; EDITING LATER IS NOT YET
+BUILT.
+
+A BOOK GOES TO TRASH, AND FROM TRASH CAN BE DELETED FOREVER — LOCKED AND
+BUILT (29 September 2026)
+KEV: "The better idea fore deletion is to just add it to the TRASH. It
+already exists and this allows the users to retrieve it later if
+required." Then: "We will need an empty TRASH OR a permanently delete this
+work."
+Move to Trash marks the book (with an Undo straight after); Trash lists it
+under BOOKS with RESTORE and DELETE FOREVER; Delete Forever asks first in
+the platform's own panel and cannot be undone. The database allows it
+only for a book already in Trash.
+THE TITLE STAYS. Kev: "DELETE FOREVER! For some reason that makes me
+laugh. We MUST keep it."
+This amends "A BOOK IS NEVER DELETED FROM THE SHELF, ONLY MARKED" above.
+
+SEPARATORS ARE THE WRITER'S TO ADD, REMOVE AND DESCRIBE — LOCKED AND BUILT
+(29 September 2026)
+Kev raised it on 28 September; built today. A separator is not one of the
+writer's words, so moving one never changes the text: it lives on the
+page-mark line, never counted as a word, never read as a heading. A
+description is optional (Kev: "if they wish"). Removing one asks first.
+
+A SECTION IS HIDDEN, NEVER DELETED — LOCKED AND BUILT (29 September 2026)
+KEV: "its gone. We need an ARE YOU SURE Y/N and some way of putting it
+back. perhpas it just colapsises". So a section folds away and nothing is
+removed; it asks first; Show brings it back. The flag is an invisible
+character on the section's page mark.
+HOW IT SHOWS: a small box on the right, between the section's two lines,
+with the name and Show. Kev: "Perfect."
+
+EVERY CHANGE TO A BOOK CAN BE UNDONE, EVEN AFTER A REFRESH — LOCKED AND
+BUILT (29 September 2026)
+The version before each change is kept in prev_body; Undo swaps the two.
+It is the buddy system's "visible, correctable, reversible", built into
+the database rather than held in the page.
+
+A COPY IS A SEPARATE BOOK — LOCKED AND BUILT (29 September 2026)
+Kev asked for the ability "to clone/copy works" — "not in the Out of copyright
+section". Make a copy exists in My Library and Reference Library only. The
+original is never touched.
+
+THE LIBRARY IS UNDER NAVIGATE — LOCKED AND BUILT (29 September 2026)
+Kev: "Once in TRASH, how do you get out?" and "Dont forget the sidebar
+change". A book belongs to the writer, not to one project, so the Library
+has its own door beside My Projects and The Press, reachable with no
+project open. Research & Reference inside a project opens the same room.
+
+*** ANYTHING CAN GO ON THE SHELF; ONLY THE WRITER'S OWN WORK AND
+OUT-OF-COPYRIGHT WORK ARE LEARNED FROM, CHECKED AGAINST OR REPUBLISHED —
+LOCKED (27 September 2026). KEV'S DECISION, AND SETTLED. ***
+KEV: "I think we need to settle this now. Otherwise I can see problems
+later on." His reasoning: "We won't be able to stop it so let us at least
+make it tidy" — people will upload what they like, and a shelf that cannot
+file it will get in a mess and harm InkySwot's credibility. And "there is
+a mountain of out of copyright work that a user can legitimately upload" —
+with his own wish to republish A Christmas Carol, with illustrations, as
+the example.
+SO: ALL WORKS MAY BE UPLOADED, with a box reminding the writer of
+copyright. THE LEARNING, THE CHECKING AND THE PRESS USE ONLY MY WORK AND
+PUBLIC DOMAIN — NEVER OTHER WORKS, which are stored for the writer's own
+reference only. Kev: "I AGREE that the 'learning' should be limited to my
+work and OFC works."
+HOW IT WAS REACHED, KEPT BECAUSE IT MATTERS: Claude first argued "own work
+only for now", then agreed with Kev fast. Kev asked: "Do you really agree
+or are you just saying what you want me to hear?" THE HONEST ANSWER WAS
+"PARTLY" — the public-domain point genuinely changed Claude's mind; the
+"we can't stop it" point holds for STORING but not for what the platform
+DOES with what is stored. That distinction is the lock. Kev: "Really i was
+just making sure we were, sorry, on the same page." And in closing: "I am
+so glad that I created Proauthorism as it has helped to clear up many
+thought processes." It did: once the writer's own voice is what is
+protected, the line draws itself.
+THE REMINDER BOX DOES NOT TAKE RESPONSIBILITY OFF INKYSWOT. A platform that
+hosts uploads normally also needs terms of use and a way to take material
+down on a rights holder's complaint. Claude is not a lawyer; THE WORDING
+AND THE TERMS WANT PROPER ADVICE BEFORE LAUNCH.
+THIS CLOSES "WHETHER SOMEONE ELSE'S NOVEL MAY BE USED AS A STYLE SOURCE",
+below. It may not. It may be stored.
+
+EVERY BOOK SAYS WHAT KIND OF WORK IT IS — LOCKED IN PRINCIPLE (27 September
+2026)
+The tidiness Kev asked for needs a label: My Work · Public Domain · Other
+Works, chosen by the writer when a book goes up, and the list grouped
+under those three. THE LABEL IS WHAT MAKES THE LINE ABOVE ENFORCEABLE.
+Under each, GENRE SUB-HEADINGS, from the same Genre list Basics uses — Kev.
+THE SQL IS WRITTEN AND NOT RUN (see current-state.md). How empty
+sub-headings show is Claude's proposal, not decided.
+
+THE LIBRARY ROOM IS LIVE AS A STILL — LOCKED AND BUILT (27 September 2026)
+A bolted-on block at the end of the corridor, not a pocket. The book is
+shown in its own order: The Book · Front Matter · Chapters · Back Matter
+(version two, written, not yet published). NOTHING IN IT IS CLICKABLE YET.
+
+A HEADING WITH NOTHING UNDER IT IS NOT A CHAPTER — LOCKED (27 September
+2026)
+The chapter finder's three rules, each read off Rapscallion rather than
+guessed: a heading with no words beneath it is a contents entry; ISBN and
+copyright lines are never headings; the story runs from the first certain
+heading to the last, and the rest is front and back matter. Twelve found,
+twelve certain.
 
 SOMEONE ELSE'S NOVEL AS A STYLE SOURCE IS NOT SETTLED — RAISED, NOT
 LOCKED (16 September 2026)
@@ -438,6 +687,81 @@ Adventures of A. Rapscallion whole, with Kev's name on it. The book had
 never been at risk; the screen simply could not draw it.
 A MINUTE SPENT PROVING IT COSTS NOTHING AND REMOVES THE ONLY FEAR THAT
 MATTERS. Reassure, then repair. In that order, every time.
+
+*** READ COPILOT'S COMMIT MESSAGE BEFORE COMMITTING — LOCKED
+(29 September 2026). A TRAP. ***
+GitHub's commit box fills itself with a message suggested by Copilot. It
+is a guess from the file, not a record of the change. Once today it read
+"Hello to Goodbye". A wrong message in the history is a false record, and
+the history is one of the places a future session looks. Replace it when
+it is wrong; keep it when it is right.
+
+THE ENCLOSURE'S NUMBER IS PREDICTABLE — LOCKED (29 September 2026)
+The Enclosure counts the corridor without Windows line endings, and the
+repository copy runs 7 characters shorter than Claude's file. Expected
+count = Claude's length − line endings + 7. Give Kev that number BEFORE
+he stitches, so a mismatch is seen at once.
+
+THE WRITE-UP HAPPENS AT THE END OF THE DAY'S WORK — LOCKED (28 September
+2026). AMENDS "UPDATE THE DATABASE AT THE END OF EVERY SESSION".
+KEV: "We will do the write up after todays session. the reason I say that
+is we are now spending more time, so it seems, on write ups and not on
+getting things done." The rule stands; its timing moves. When a day's work
+ends without one, the next day still does it — but at its END, with that
+day's work, not before starting.
+
+*** ASK FOR THE BUILD STAMP BEFORE READING A TEST PAGE'S SCREENSHOT —
+LOCKED (28 September 2026). A TRAP. ***
+Kev opened an older copy of the still (Chrome had saved several as (4),
+(5)…) and its behaviour looked like a fault in the newer one. Test pages
+carry a build stamp for exactly this. Read it first.
+
+*** AFTER ANY UPDATE IN THE SQL EDITOR, SELECT AND LOOK — LOCKED
+(28 September 2026). A TRAP. ***
+Supabase answers "Success. No rows returned" to an update whether it
+changed one row or none. A match on text can also miss — Google Docs turns
+apostrophes curly. The only proof is a select afterwards.
+
+*** CLEARING THE BROWSER CLEARS THE PROJECTS — A TRAP, AND IT HAPPENED
+(27 September 2026). NEVER SHORTEN THIS. ***
+Kev cleared Chrome's cache; every project in the app went with it, with no
+warning. The platform keeps projects in the browser's own store, and
+Chrome's clear takes that store. The shelf survived because only the shelf
+is on the server.
+WHEN MY PROJECTS IS SUDDENLY EMPTY: prove what is there before anything
+else — Object.keys(localStorage) in the app's own console. Only 'is-tone'
+means the store was empty before the page loaded. Then ask what happened
+to the browser. AND DO NOT CREATE A PROJECT until it is known, because a
+new save writes over what a rescue might recover.
+UNTIL PROJECTS LEAVE THE BROWSER, A WRITER'S WORK IS ONE TIDY-UP FROM GONE.
+
+NEVER HAND THE WRITER A VALUE THEY CANNOT SEE — LOCKED (26 September
+2026, evening)
+To label book one, Claude had Kev run copy(...) in the console. It put
+the project's created value on the clipboard and SHOWED NOTHING BUT
+"undefined". Kev: "I dont know what I am meant to paiste." Then: "What is
+sittingh in my clipboard?" Then: "You are making this TOO complicated."
+HE WAS RIGHT THREE TIMES. A step the writer cannot check is not a step.
+If a value matters, PRINT IT where it can be read; if it does not matter,
+DO NOT ASK FOR IT. For the test the label only had to be something, so it
+became the word "Rapscallion" — and in the real room the app fills the
+label itself.
+THE SAME SHAPE AS BUILD THE ONE THING ASKED FOR: when a step gets
+complicated, ask what it actually needs. It is usually less.
+
+*** A CONSOLE BELONGS TO ITS TAB — LOCKED (26 September 2026, evening).
+A TRAP. NEVER SHORTEN THIS. ***
+Asked to print the project's label, Kev ran the line in the console of
+the TEST PAGE, opened from disk, not the app. It answered
+2026-07-09T11:15:04.735Z — a July project. The real one was made on
+15 September.
+A PAGE OPENED FROM DISK (file:///…) HAS ITS OWN localStorage, entirely
+separate from app.inkyswot.com's. It held some old copy of the platform's
+data from months ago. Pasted in, it would have labelled book one for a
+project that does not exist in the app.
+BEFORE TRUSTING ANYTHING READ FROM THE CONSOLE, CHECK WHICH PAGE IT IS
+ATTACHED TO. The giveaway here was the red "Unsafe attempt to load URL
+file:///…" at the top of it.
 
 READ THE CLASS FROM THE FILE — LOCKED (26 September 2026)
 Version two of the Log Out block built its panel from the corridor's own
@@ -1455,6 +1779,16 @@ ADDED 24 SEPTEMBER, from the front door:
   message line per form, so a failure cannot be mistaken for progress.
 - A SHOW/HIDE CONTROL SAYS WHAT PRESSING IT WILL DO, not what state it is
   in, and it has a fixed width so the box does not jump.
+FROM 29 SEPTEMBER:
+- ALWAYS THE PALETTE. Kev: "We must always go with the colour palete."
+  Gold for anything alive, hovers included; red ONLY for a real fault.
+  The red hovers on × and Move to Trash were removed for this.
+- TOOLTIPS ARE INKYSWOT'S OWN, never the browser's white box. Kev: "Not
+  very InkySwot."
+- EVERY SCREEN HAS A ? PILL WITH A MOVABLE WINDOW, ONE LINE PER THING. Kev:
+  "We need to start getting into the habit of adding the explanation '?'
+  so that users understand what everything does."
+- ANYTHING THAT REMOVES OR JOINS ASKS FIRST, in the platform's own panel.
 
 ================================================================
 OPEN — NOT YET DECIDED
@@ -1471,6 +1805,59 @@ Notes field (reuse the existing one, or a separate list of short lines);
 which wins when facts and prose disagree; how many fields show at once.
 Kev asked for the list to be comprehensive and for a notes section on
 every record. (New, 22 September.)
+*** A PERMANENT LABEL FOR EACH PROJECT. *** Found 26 September evening by
+reading corridor.html: projects are found by their POSITION in a list
+(openProject(i), currentProject.index), and positions move when a project
+is trashed or restored. A shelf label built on it would eventually point
+at the wrong book. The created timestamp is fixed and unique and serves
+for now; a proper identifier could take its value so nothing needs
+relabelling. A corridor job. KEV'S CALL WHEN. (New, 26 September.)
+*** THE TEST ROW ON THE SHELF. *** Book one is on the shelf labelled
+"Rapscallion", not with the project's created value. When the room is
+built it must be relabelled or marked deleted and put up again — not
+quietly kept as the real record. (New, 26 September.)
+*** WHERE THE MAN WHO LEARNT TO FLY IS. *** Not in is-projects on the live
+app; only Rapscallion is. Possibly in Trash or another browser. Noticed,
+not investigated, nothing assumed. (New, 26 September.)
+*** WHETHER PROJECTS MOVE OFF THE BROWSER, OR GAIN AN EXPORT MEANWHILE. ***
+Raised by the cleared cache, 27 September. Kev's own 22 September rule —
+"move as little as possible" — was right on what was known then; what
+happened on the 27th is new evidence. KEV'S CALL. (New, 27 September.)
+*** WHETHER THE ORIGINAL WORD FILE IS KEPT. *** The shelf holds the words
+only — no QR code, no formatting. Keeping the .docx in the file store
+would keep the book as made. (New, 27 September.)
+*** THE LIST'S NAME IN THE LIBRARY ROOM. *** "The Shelf" was Claude's
+working word; Kev is not sure. Waits on the three headings. (New,
+27 September.)
+*** A SHARED PUBLIC-DOMAIN LIBRARY FOR EVERYONE. *** Kev, 28 September:
+"What if we built a library of works that everyone could access." An
+idea, to be sorted into details at the PC. See future.md / thinking.md.
+(New, 28 September.)
+*** WHETHER WRITERS CAN ADD AND REMOVE SEPARATORS. *** Kev raised it,
+28 September. Claude's view: yes, after the still — a separator is not one
+of the writer's words. (New, 28 September.)
+*** WHAT THEATRE KEV PICTURES FOR THE LIBRARY. *** Asked, not answered.
+(New, 28 September.)
+*** HOW A BOOK OF LETTERS OR ACTS IS SPLIT. *** The Christmas Murders is
+built of Acts and Letters. (New, 28 September.)
+*** WHETHER PUBLIC DOMAIN ADDITIONS WAIT FOR KEV'S APPROVAL. *** Its
++ Add is shown quiet until this is decided. And how duplicates are
+stopped — Claude's proposal: compare title, author and opening words.
+(New, 29 September.)
+*** THE REFERENCE LIBRARY'S "PLEASE NOTE" WORDING. *** In the + Add panel
+as Claude's draft: "Books by other writers are kept for your own reading
+and research only. They are never used to shape or influence your
+writing. Only add work you have the right to keep." Not approved.
+(New, 29 September.)
+*** WHETHER TRASH'S DELETE FOREVER BUTTONS BECOME GOLD. *** They use the
+corridor's own red perm-delete-btn. Under "always the palette", red is
+for faults. KEV'S CALL. (New, 29 September.)
+*** PUBLIC DOMAIN EDITIONS AND PRIVATE HIGHLIGHTS. *** Claude's
+proposals, agreed in thinking by Kev ("This is my thinking too"), not
+built and not locked. See future.md. (New, 29 September.)
+*** WHAT FOLLOWS CHAPTER EIGHT IN THE GOOD, THE BAD AND THE ELDERLY. ***
+22,233 words in one chapter suggests a missed heading. Kev to look.
+(New, 29 September.)
 WHICH EMAIL SERVICE SENDS INKYSWOT'S MAIL. The confirmation email
 currently comes from Supabase, whose built-in sender is FOR TESTING ONLY —
 a handful an hour, and it carries their name not InkySwot's. Kev spotted
@@ -1488,6 +1875,10 @@ connects, and how it behaves on a bad connection, is still open.
 UPDATED 24 SEPTEMBER: THE CONNECTION ITSELF IS NO LONGER OPEN. It is
 proved and in use for accounts. What remains open is the LIBRARY's own
 connection and its behaviour on a bad connection.
+UPDATED 26 SEPTEMBER EVENING: THE LIBRARY'S CONNECTION IS PROVED TOO —
+public.shelf, one real book up and back exact, from a test page. The
+platform itself does not yet read or write the shelf. Behaviour on a bad
+connection is still open.
 WHETHER SOMEONE ELSE'S NOVEL MAY BE USED AS A STYLE SOURCE. Raised
 16 September, deliberately not settled.
 WHETHER THE IMPORT COUNTS AGAINST THE PROMPT ALLOWANCE. Claude's view is
@@ -1545,6 +1936,36 @@ CLOSED 26 SEPTEMBER:
   answer, after ruling out red and a darker colour.
 · WHETHER THE CONFIRMATION USES THE BROWSER'S BOX — it does not.
 
+CLOSED 29 SEPTEMBER:
+· WHETHER WRITERS CAN ADD AND REMOVE SEPARATORS — they can, and describe
+  them. Built.
+· HOW A BOOK IS DELETED — to Trash first; Delete Forever from there.
+· HOW THE LIBRARY IS REACHED WITHOUT A PROJECT — under NAVIGATE.
+· + ADD INSIDE THE APP — built; a second real book went up through it.
+· HOW A BOOK IS LINKED TO PROJECTS — optionally, and to several.
+
+CLOSED 28 SEPTEMBER:
+· THE LIST'S NAME — three libraries in Kev's words; "The Shelf" is gone.
+· HOW GOOGLE DOCS COMES IN — by paste.
+· WHERE PUBLIC DOMAIN WORKS LIVE — one shared collection.
+· HOW A BOOK KEEPS ITS PAGES — built.
+· WHERE GENRES COME FROM — the app's existing list.
+· THE TEST ROW ON THE SHELF — marked deleted; one live copy of book one.
+
+CLOSED 27 SEPTEMBER:
+· WHETHER SOMEONE ELSE'S NOVEL MAY BE USED AS A STYLE SOURCE — it may not.
+  It may be stored for reference. Kev's decision; see above.
+· WHETHER THE LIBRARY ROOM EXISTS — it does, live, as a still.
+· WHETHER THE CHAPTER SPLIT WORKS ON A REAL BOOK — it does on Rapscallion:
+  12 found, 12 certain.
+
+CLOSED 26 SEPTEMBER, EVENING:
+· WHETHER A BOOK CAN LIVE ON SUPABASE AT ALL — it can. Book one, exact.
+· WHETHER A WHOLE NOVEL FITS IN ONE ROW — it does. Whether it SHOULD live
+  that way is the shape question, still open.
+· WHAT FILE THE WAY IN TAKES — Word, with Google Docs via download. Not
+  plain text.
+
 CLOSED 24 SEPTEMBER:
 · WHETHER INKYSWOT CAN TALK TO SUPABASE AT ALL — proved, first time.
 · WHERE ACCOUNT WORK HAPPENS — the app, not the front page.
@@ -1557,6 +1978,14 @@ CLOSED 24 SEPTEMBER:
 ================================================================
 SUPERSEDED LOCKS — HISTORY, DO NOT BUILD
 ================================================================
+
+"A BOOK IS NEVER DELETED FROM THE SHELF, ONLY MARKED. NO DELETE GRANTED"
+(26 September 2026, AMENDED 29 September 2026) — Kev: "We will need an
+empty TRASH OR a permanently delete this work." A book in Trash can now be
+deleted forever. What the lock protected still holds: the database lets a
+member delete only their own book and only once it is in Trash, so
+nothing can vanish in one step or by a fault. Kept in full in the live
+section with the amendment beside it.
 
 "THE LOCK ON THE DOOR IS THE NEXT PIECE OF WORK" (24 September 2026,
 PARKED 26 September 2026) — it was written and withdrawn the same
